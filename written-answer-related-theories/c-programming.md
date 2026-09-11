@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 4 subtopics · 20 theories
+**Table of Contents** — 9 subtopics · 32 theories
 
 1. **[Basic Programs & Control Statements](#basic-programs--control-statements)**
    - [C Program Structure and the Compilation Process](#c-program-structure-and-the-compilation-process)
@@ -28,6 +28,28 @@
    - [Variables, Scope, Lifetime and Storage Classes](#variables-scope-lifetime-and-storage-classes)
    - [Structure, Union and Array — Differences](#structure-union-and-array--differences)
    - [Types of Errors in Programming](#types-of-errors-in-programming)
+
+5. **[Flowcharts & Algorithms](#flowcharts--algorithms)**
+   - [Algorithm — Definition and Ways of Expressing It](#algorithm--definition-and-ways-of-expressing-it)
+   - [Flowchart Symbols and Rules](#flowchart-symbols-and-rules)
+   - [Worked Flowcharts and Algorithms](#worked-flowcharts-and-algorithms)
+   - [Pseudocode — How to Write It](#pseudocode--how-to-write-it)
+
+6. **[String Manipulation & Algorithms](#string-manipulation--algorithms)**
+   - [Strings in C and the Null Terminator](#strings-in-c-and-the-null-terminator)
+   - [Classic String Programs](#classic-string-programs)
+   - [IPv4 Address Validation and Classification](#ipv4-address-validation-and-classification)
+
+7. **[File Handling](#file-handling)**
+   - [File Handling in C](#file-handling-in-c)
+
+8. **[Pointers](#pointers)**
+   - [Pointers in C — Concept and Advantages](#pointers-in-c--concept-and-advantages)
+   - [Dynamic Memory Allocation](#dynamic-memory-allocation)
+   - [Array vs Pointer](#array-vs-pointer)
+
+9. **[Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs)**
+   - [Command Line Arguments in C](#command-line-arguments-in-c)
 
 <!-- TOC END -->
 
@@ -2452,3 +2474,1325 @@ The code compiles but the **linker cannot resolve a reference**.
 - [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5259)
 - [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6187)
 - [Find the error of given code](../written-answers/c-programming.md?plain=1#L6337)
+
+## Flowcharts & Algorithms
+
+### Algorithm — Definition and Ways of Expressing It
+
+An **algorithm** is a **finite sequence of well-defined, unambiguous steps** that solves a problem or performs a computation, taking some input and producing the required output in a finite time.
+
+#### The five characteristics
+
+| # | Property | Meaning |
+|---|---|---|
+| 1 | **Input** | Zero or more inputs are supplied |
+| 2 | **Output** | At least one output is produced |
+| 3 | **Definiteness** | Every step is **clear and unambiguous** |
+| 4 | **Finiteness** | It **terminates** after a finite number of steps |
+| 5 | **Effectiveness** | Every step is basic enough to be carried out exactly |
+
+#### The three ways of expressing an algorithm
+
+> *(A directly asked question: "Name three methods of expressing an algorithm.")*
+
+| # | Method | Description | Advantage | Disadvantage |
+|---|---|---|---|---|
+| 1 | **Natural language (step form)** | Numbered steps in plain English or Bangla | Easiest to read for anyone | Can be **ambiguous**, verbose |
+| 2 | **Pseudocode** | Structured English using programming-like keywords (`IF`, `WHILE`, `READ`, `PRINT`) | **Precise yet language-independent**; converts easily to code | Not executable; no fixed standard |
+| 3 | **Flowchart** | A **diagram** using standard symbols joined by arrows | **Visual**, shows the flow of control at a glance | Hard to draw and modify for large programs |
+
+*(Some books add a fourth: the **programming language implementation** itself.)*
+
+**The same algorithm in all three forms — find the larger of two numbers:**
+
+**Step form:**
+```
+Step 1: Start
+Step 2: Read A and B
+Step 3: If A > B then print A, otherwise print B
+Step 4: Stop
+```
+
+**Pseudocode:**
+```
+BEGIN
+    READ A, B
+    IF A > B THEN
+        PRINT A
+    ELSE
+        PRINT B
+    ENDIF
+END
+```
+
+**Flowchart:**
+```mermaid
+flowchart TD
+    S(["Start"]) --> I[/"Read A, B"/]
+    I --> D{"A > B ?"}
+    D -->|Yes| P1[/"Print A"/]
+    D -->|No| P2[/"Print B"/]
+    P1 --> E(["Stop"])
+    P2 --> E
+```
+
+**Previous Year Question List from this Topic:**
+
+- [Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.](../written-answers/c-programming.md?plain=1#L9776)
+- [Write an Algorithm to check a number is Prime or not Prime.](../written-answers/c-programming.md?plain=1#L9841)
+- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L9994)
+- [Answer the following Questions](../written-answers/c-programming.md?plain=1#L4050)
+
+
+---
+
+### Flowchart Symbols and Rules
+
+A **flowchart** is a **pictorial representation of an algorithm** using standard symbols connected by arrows showing the flow of control.
+
+#### The standard symbols
+
+| Symbol | Shape | Name | Purpose |
+|---|---|---|---|
+| ⬭ | **Oval / Rounded rectangle** | **Terminal** | **Start** and **Stop** — every flowchart has exactly one Start and at least one Stop |
+| ▱ | **Parallelogram** | **Input / Output** | `READ`, `INPUT`, `PRINT`, `DISPLAY` |
+| ▭ | **Rectangle** | **Process** | Any calculation or assignment: `sum = a + b` |
+| ◇ | **Diamond / Rhombus** | **Decision** | A condition with **Yes/No** (True/False) branches |
+| ⬯ | **Circle** | **Connector** | Joins parts of a flowchart on the same page |
+| ⌂ | **Pentagon** | **Off-page connector** | Continues on another page |
+| → | **Arrow** | **Flow line** | Shows the direction of control |
+| ▭▯ | **Double-sided rectangle** | **Predefined process** | A call to a subroutine/function |
+| ▱ slanted | **Document** | Printed output |
+
+#### Rules for drawing a flowchart
+
+1. Exactly **one Start** and at least one **Stop**.
+2. Flow normally goes **top to bottom and left to right**.
+3. Every symbol (except Start/Stop) has **one entry**; only the **Decision** symbol has **more than one exit**.
+4. Use **arrows** on every connector to show the direction.
+5. Keep the text inside symbols **short and clear**.
+6. Avoid crossing flow lines — use **connectors** instead.
+7. Every path must eventually reach a **Stop**.
+8. A loop must have a **decision** that can become false.
+
+#### The three control structures in flowchart form
+
+> *(A directly asked question: "Three types of control statements and their graphical presentation.")*
+
+**1. Sequence** — statements executed one after another.
+
+```mermaid
+flowchart TD
+    A["Statement 1"] --> B["Statement 2"] --> C["Statement 3"]
+```
+
+**2. Selection (decision / branching)** — `if`, `if-else`, `switch`.
+
+```mermaid
+flowchart TD
+    A{"Condition ?"} -->|True| B["Statement A"]
+    A -->|False| C["Statement B"]
+    B --> D["Continue"]
+    C --> D
+```
+
+**3. Iteration (loop / repetition)** — `for`, `while`, `do-while`.
+
+```mermaid
+flowchart TD
+    A["Initialise"] --> B{"Condition ?"}
+    B -->|True| C["Loop body"]
+    C --> D["Update"]
+    D --> B
+    B -->|False| E["Exit"]
+```
+
+> **Structured programming theorem:** every computable algorithm can be written using **only these three structures** — sequence, selection and iteration. No `goto` is ever necessary.
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L9994)
+- [Three types of control statements and their graphical presentation using flowchart or flow graph.](../written-answers/c-programming.md?plain=1#L10010)
+- [(ক) Loop কী? প্রবাহচিত্রসহ এর গঠন ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L10041)
+
+
+---
+
+### Worked Flowcharts and Algorithms
+
+#### 1. Print the numbers 1 to 100 (and 1 to N)
+
+```
+Step 1: Start
+Step 2: Set i = 1
+Step 3: If i > 100, go to Step 7
+Step 4: Print i
+Step 5: i = i + 1
+Step 6: Go to Step 3
+Step 7: Stop
+```
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> A["i = 1"]
+    A --> C{"i <= 100 ?"}
+    C -->|Yes| P[/"Print i"/]
+    P --> INC["i = i + 1"]
+    INC --> C
+    C -->|No| E(["Stop"])
+```
+
+#### 2. Print the odd numbers from 1 to N
+
+```
+Step 1: Start
+Step 2: Read N
+Step 3: Set i = 1
+Step 4: If i > N, go to Step 8
+Step 5: Print i
+Step 6: i = i + 2          ← stepping by 2 keeps i odd
+Step 7: Go to Step 4
+Step 8: Stop
+```
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read N"/]
+    R --> A["i = 1"]
+    A --> C{"i <= N ?"}
+    C -->|Yes| P[/"Print i"/]
+    P --> INC["i = i + 2"]
+    INC --> C
+    C -->|No| E(["Stop"])
+```
+
+*(The alternative is `i = i + 1` with a test `if (i % 2 != 0)` inside — correct but does twice the work.)*
+
+#### 3. Sum of the series 1 + 3 + 5 + … + N
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read N"/]
+    R --> A["sum = 0<br/>i = 1"]
+    A --> C{"i <= N ?"}
+    C -->|Yes| P["sum = sum + i"]
+    P --> INC["i = i + 2"]
+    INC --> C
+    C -->|No| O[/"Print sum"/]
+    O --> E(["Stop"])
+```
+
+#### 4. Factorial of a number
+
+```
+Step 1: Start
+Step 2: Read N
+Step 3: Set fact = 1, i = 1
+Step 4: If i > N, go to Step 8
+Step 5: fact = fact * i
+Step 6: i = i + 1
+Step 7: Go to Step 4
+Step 8: Print fact
+Step 9: Stop
+```
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read N"/]
+    R --> A["fact = 1<br/>i = 1"]
+    A --> C{"i <= N ?"}
+    C -->|Yes| M["fact = fact * i"]
+    M --> INC["i = i + 1"]
+    INC --> C
+    C -->|No| O[/"Print fact"/]
+    O --> E(["Stop"])
+```
+
+#### 5. GCD (HCF) of two numbers — Euclid's algorithm
+
+```
+Step 1: Start
+Step 2: Read A and B
+Step 3: While B ≠ 0, repeat:
+            r = A mod B
+            A = B
+            B = r
+Step 4: Print A       ← A now holds the GCD
+Step 5: Stop
+```
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read A, B"/]
+    R --> C{"B != 0 ?"}
+    C -->|Yes| P["r = A mod B<br/>A = B<br/>B = r"]
+    P --> C
+    C -->|No| O[/"Print A as GCD"/]
+    O --> E(["Stop"])
+```
+
+**Trace for A = 48, B = 18:** (48,18) → r = 12 → (18,12) → r = 6 → (12,6) → r = 0 → (6,0) → **GCD = 6** ✅
+
+#### 6. Check whether a number is prime
+
+```
+Step 1: Start
+Step 2: Read N
+Step 3: If N <= 1, print "Not Prime", go to Step 9
+Step 4: Set i = 2, flag = 1
+Step 5: If i * i > N, go to Step 8
+Step 6: If N mod i = 0, set flag = 0 and go to Step 8
+Step 7: i = i + 1, go to Step 5
+Step 8: If flag = 1 print "Prime", else print "Not Prime"
+Step 9: Stop
+```
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read N"/]
+    R --> Z{"N <= 1 ?"}
+    Z -->|Yes| NP[/"Print Not Prime"/]
+    Z -->|No| A["i = 2, flag = 1"]
+    A --> C{"i * i <= N ?"}
+    C -->|Yes| D{"N mod i = 0 ?"}
+    D -->|Yes| F["flag = 0"]
+    D -->|No| INC["i = i + 1"]
+    INC --> C
+    C -->|No| G{"flag = 1 ?"}
+    F --> G
+    G -->|Yes| PR[/"Print Prime"/]
+    G -->|No| NP
+    PR --> E(["Stop"])
+    NP --> E
+```
+
+#### 7. Quadratic equation ax² + bx + c = 0
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read a, b, c"/]
+    R --> D["D = b*b - 4*a*c"]
+    D --> C1{"D > 0 ?"}
+    C1 -->|Yes| R1[/"Two distinct real roots<br/>(-b ± √D) / 2a"/]
+    C1 -->|No| C2{"D = 0 ?"}
+    C2 -->|Yes| R2[/"Two equal real roots<br/>-b / 2a"/]
+    C2 -->|No| R3[/"Complex roots<br/>-b/2a ± (√-D / 2a)i"/]
+    R1 --> E(["Stop"])
+    R2 --> E
+    R3 --> E
+```
+
+#### 8. A user login system
+
+> Requirements: take a username and password, check them, allow **3 attempts**, then lock the account.
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> INIT["attempts = 0"]
+    INIT --> IN[/"Read username, password"/]
+    IN --> CHK{"Credentials<br/>valid ?"}
+    CHK -->|Yes| OK[/"Display 'Login successful'"/]
+    OK --> HOME["Open the home page"]
+    HOME --> E(["Stop"])
+    CHK -->|No| INC["attempts = attempts + 1"]
+    INC --> MAX{"attempts >= 3 ?"}
+    MAX -->|No| MSG[/"Display 'Invalid credentials.<br/>Please try again'"/]
+    MSG --> IN
+    MAX -->|Yes| LOCK[/"Display 'Account locked.<br/>Contact the administrator'"/]
+    LOCK --> E
+```
+
+**Step form:**
+```
+Step 1 : Start
+Step 2 : Set attempts = 0
+Step 3 : Read username and password
+Step 4 : Search the user record in the database
+Step 5 : If the username exists AND the (hashed) password matches:
+              Display "Login successful", open the home page, go to Step 9
+Step 6 : attempts = attempts + 1
+Step 7 : If attempts < 3, display "Invalid credentials" and go to Step 3
+Step 8 : Display "Account locked", notify the administrator
+Step 9 : Stop
+```
+
+**Points worth adding for full marks:** passwords must be stored as a **salted hash**, never in plain text; the error message should **not reveal** whether it was the username or the password that was wrong (this prevents username enumeration); and the lockout should be **time-based** to resist brute-force attacks.
+
+#### 9. Sort five numbers in ascending order
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> R[/"Read 5 numbers into a[0..4]"/]
+    R --> I["i = 0"]
+    I --> C1{"i < 4 ?"}
+    C1 -->|No| PR[/"Print the sorted array"/]
+    C1 -->|Yes| J["j = 0"]
+    J --> C2{"j < 4 - i ?"}
+    C2 -->|No| INCI["i = i + 1"]
+    INCI --> C1
+    C2 -->|Yes| CMP{"a[j] > a[j+1] ?"}
+    CMP -->|Yes| SW["swap a[j], a[j+1]"]
+    CMP -->|No| INCJ["j = j + 1"]
+    SW --> INCJ
+    INCJ --> C2
+    PR --> E(["Stop"])
+```
+
+**Previous Year Question List from this Topic:**
+
+- [Draw and clearly describe a step-by-step flowchart for a User Login system. Your login must include: Taking a Username and Password as input. Checking the datab…](../written-answers/c-programming.md?plain=1#L9657)
+- [Draw a Flow chart for print odd number for 1 to N.](../written-answers/c-programming.md?plain=1#L9689)
+- [১ থেকে ১০০ পর্যন্ত নাম্বার প্রদর্শনের ফ্লোচার্ট আক।](../written-answers/c-programming.md?plain=1#L9712)
+- [দুইটি সংখ্যার গ.সা.গু নির্ণয়ের জন্য ফ্লোচার্ট অঙ্কন করুন ও অ্যালগরিদম লিখুন।](../written-answers/c-programming.md?plain=1#L9738)
+- [Write Algorithm and flowchart to find odd numbers between 1 to n where n is a positive integer.](../written-answers/c-programming.md?plain=1#L9776)
+- [Write Algorithm and flowchart for printing 1+3+5+ \dots + N.](../written-answers/c-programming.md?plain=1#L9808)
+- [Write an Algorithm to check a number is Prime or not Prime.](../written-answers/c-programming.md?plain=1#L9841)
+- [Write down the algorithm and draw the flowchart of Quadratic equation.](../written-answers/c-programming.md?plain=1#L9886)
+- [Draw a flowchart and write algorithm for finding Factorial value of an integer number.](../written-answers/c-programming.md?plain=1#L9929)
+- [Draw a flowchart of the following series: 1+3+5+7+\dots+N](../written-answers/c-programming.md?plain=1#L9967)
+- [Draw flowchart to input five positive numbers and sort them is ascending order.](../written-answers/c-programming.md?plain=1#L10170)
+
+
+---
+
+### Pseudocode — How to Write It
+
+**Pseudocode** is an **informal, structured description of an algorithm** that uses the control structures of programming but the vocabulary of English. It is **not tied to any language** and is **not executable**.
+
+#### The standard keywords
+
+| Purpose | Keywords |
+|---|---|
+| Start / end | `BEGIN … END` |
+| Input / output | `READ`, `INPUT`, `GET` / `PRINT`, `DISPLAY`, `OUTPUT` |
+| Assignment | `SET x = 5` or `x ← 5` |
+| Selection | `IF … THEN … ELSE … ENDIF` · `CASE … OF` |
+| Iteration | `WHILE … ENDWHILE` · `FOR i = 1 TO n … ENDFOR` · `REPEAT … UNTIL` |
+| Function | `FUNCTION name(params) … RETURN value … ENDFUNCTION` |
+
+#### Rules
+
+1. **One statement per line.**
+2. **Indent** the body of every block consistently — indentation carries the structure.
+3. Write keywords in **CAPITALS** to make them stand out.
+4. Be **specific enough to translate directly to code**, but do not use real syntax (no semicolons, no braces).
+5. Keep it **language independent**.
+
+#### Example 1 — find all factors of a positive number
+
+```
+BEGIN
+    READ n
+    IF n <= 0 THEN
+        PRINT "Please enter a positive number"
+        EXIT
+    ENDIF
+
+    PRINT "Factors of", n, "are:"
+    FOR i = 1 TO n
+        IF n MOD i = 0 THEN          // i divides n exactly
+            PRINT i
+        ENDIF
+    ENDFOR
+END
+```
+*(An **O(√n)** improvement: loop `i` only to √n and print both `i` and `n/i` each time a factor is found.)*
+
+#### Example 2 — find all pairs in an array whose sum equals a given value
+
+```
+BEGIN
+    READ n                            // number of elements
+    READ value                        // the target sum
+    DECLARE pairs[n]
+
+    FOR i = 0 TO n-1                  // read the array
+        READ pairs[i]
+    ENDFOR
+
+    SET found = FALSE
+    FOR i = 0 TO n-2
+        FOR j = i+1 TO n-1            // j starts AFTER i so no pair repeats
+            IF pairs[i] + pairs[j] = value THEN
+                PRINT "(", pairs[i], ",", pairs[j], ")"
+                SET found = TRUE
+            ENDIF
+        ENDFOR
+    ENDFOR
+
+    IF found = FALSE THEN
+        PRINT "No pair found"
+    ENDIF
+END
+```
+**Complexity: O(n²)** with the nested loops. *(An **O(n)** solution uses a hash set: for each element, check whether `value − element` has already been seen.)*
+
+**Previous Year Question List from this Topic:**
+
+- [Write a pesudcode that takes in one positive number only and returns the factor for that number.](../written-answers/c-programming.md?plain=1#L10076)
+- [Write down the psudo-code that accepts i, n is integer and value as input, store all n integers in an array, called pairs and return all pairs where the summati…](../written-answers/c-programming.md?plain=1#L10115)
+- [(খ) Algorithm কি? Algorithm প্রকাশের তিনটি পদ্ধতির নাম লিখুন।](../written-answers/c-programming.md?plain=1#L9994)
+
+
+---
+
+## String Manipulation & Algorithms
+
+### Strings in C and the Null Terminator
+
+In C there is **no string data type**. A string is simply a **one-dimensional array of characters terminated by the null character `'\0'`**.
+
+```c
+char s1[] = "Hello";                                 /* compiler adds '\0' → size 6 */
+char s2[6] = {'H','e','l','l','o','\0'};             /* exactly equivalent */
+char s3[10] = "Hi";                                  /* 'H','i','\0' then 7 unused bytes */
+char *s4 = "Hello";                                  /* pointer to a STRING LITERAL —
+                                                        read-only, do NOT modify it */
+```
+
+#### The purpose of `'\0'`
+
+> ### "What is the purpose of the `'\0'` character in C?"
+>
+> `'\0'` is the **null character** — a byte whose value is **0** — and it marks the **END of a string**.
+>
+> **Why it is essential:** C does **not store the length** of a string anywhere. A `char` array is just bytes in memory with no size attached. The null terminator is the **only** way any function can know where the string stops.
+>
+> **What depends on it:**
+> 1. **`strlen()`** counts characters until it meets `'\0'`.
+> 2. **`printf("%s", s)`** prints characters until it meets `'\0'`.
+> 3. **`strcpy`, `strcat`, `strcmp`** — every string function scans for it.
+> 4. A `for` loop `while (s[i] != '\0')` is the standard manual traversal.
+>
+> **What happens without it:** the function **keeps reading past the end of the array** into whatever memory follows — printing garbage, crashing with a segmentation fault, or creating a **buffer-overflow security vulnerability**. This is the root cause of a large share of real-world exploits.
+>
+> **Key facts:** `'\0'` is **not** the character `'0'` (whose ASCII value is 48) and **not** the string `"0"`. Its value is **0**, so it is also "false" in a condition — which is why `while (*s)` works as a loop test. A string of length n needs an array of **n + 1** bytes.
+
+```c
+char s[] = "Hello";
+printf("%zu\n", strlen(s));      /* 5 — characters, NOT counting '\0' */
+printf("%zu\n", sizeof(s));      /* 6 — bytes, INCLUDING '\0'        */
+```
+
+#### Reading strings safely
+
+```c
+char name[50];
+scanf("%s", name);               /* stops at the first SPACE; no & needed
+                                    (an array name is already an address) */
+scanf("%49s", name);             /* ✅ SAFER — limits the length */
+fgets(name, sizeof(name), stdin);/* ✅ BEST — reads a whole line WITH spaces
+                                    (but keeps the trailing '\n') */
+gets(name);                      /* ❌ NEVER USE — removed from the C standard,
+                                    it cannot be used safely */
+```
+
+#### The standard string library (`<string.h>`)
+
+| Function | Purpose |
+|---|---|
+| `strlen(s)` | Length, excluding `'\0'` |
+| `strcpy(d, s)` | Copy s into d |
+| `strncpy(d, s, n)` | Copy at most n characters (safer) |
+| `strcat(d, s)` | Append s to the end of d |
+| `strcmp(a, b)` | Compare: **0** if equal, <0 if a<b, >0 if a>b |
+| `strcmpi` / `stricmp` | Case-insensitive compare (non-standard) |
+| `strrev(s)` | Reverse (non-standard, Turbo C only) |
+| `strchr(s, c)` | First occurrence of character c |
+| `strstr(s, sub)` | First occurrence of the substring |
+| `strtok(s, delim)` | Split into tokens |
+
+*(From `<ctype.h>`: `toupper`, `tolower`, `isalpha`, `isdigit`, `isspace`, `isupper`, `islower`.)*
+
+**Previous Year Question List from this Topic:**
+
+- [What is the purpose of '\0' character in C?](../written-answers/c-programming.md?plain=1#L10475)
+- [(c) Write down a program to find length of a string without using any library function.](../written-answers/c-programming.md?plain=1#L10498)
+
+
+---
+
+### Classic String Programs
+
+#### 1. Length of a string without any library function
+
+```c
+int myStrlen(char s[]) {
+    int len = 0;
+    while (s[len] != '\0')        /* count until the null terminator */
+        len++;
+    return len;
+}
+```
+**Time: O(n).**
+
+#### 2. Reverse a string without a library function
+
+```c
+void myStrrev(char s[]) {
+    int len = myStrlen(s);
+    for (int i = 0, j = len - 1; i < j; i++, j--) {   /* two pointers meeting */
+        char t = s[i];
+        s[i] = s[j];
+        s[j] = t;
+    }
+}
+```
+**Time: O(n), Space: O(1)** — done **in place**. Only `len/2` swaps are needed.
+
+#### 3. Check whether a string is a palindrome
+
+> A **palindrome** reads the same forwards and backwards: `madam`, `level`, `racecar`.
+
+```c
+int isPalindrome(char s[]) {
+    int i = 0, j = myStrlen(s) - 1;
+    while (i < j) {
+        if (s[i] != s[j]) return 0;      /* mismatch → not a palindrome */
+        i++;  j--;
+    }
+    return 1;
+}
+```
+**Time: O(n), Space: O(1)** — better than reversing into a second buffer, which costs O(n) extra space.
+
+**For a palindrome *number*:**
+```c
+int isPalinNum(int n) {
+    int rev = 0, orig = n;
+    while (n > 0) { rev = rev * 10 + n % 10; n /= 10; }
+    return rev == orig;
+}
+```
+
+#### 4. Convert lower case to upper case (and back)
+
+```c
+void toUpper(char s[]) {
+    for (int i = 0; s[i] != '\0'; i++)
+        if (s[i] >= 'a' && s[i] <= 'z')
+            s[i] = s[i] - 32;          /* 'a'(97) - 32 = 'A'(65) */
+}
+
+void toLower(char s[]) {
+    for (int i = 0; s[i] != '\0'; i++)
+        if (s[i] >= 'A' && s[i] <= 'Z')
+            s[i] = s[i] + 32;
+}
+
+/* a single character */
+char c;
+scanf("%c", &c);
+printf("%c", (c >= 'a' && c <= 'z') ? c - 32 : c);
+```
+> **The magic number 32** is the fixed ASCII gap: `'a'` = 97, `'A'` = 65, and 97 − 65 = **32**. The `if` guard is essential — without it, digits and punctuation would be corrupted.
+
+#### 5. Count the occurrences of a character
+
+```c
+int countChar(char s[], char target) {
+    int count = 0;
+    for (int i = 0; s[i] != '\0'; i++)
+        if (s[i] == target) count++;
+    return count;
+}
+
+int main() {
+    char str[] = "Bangladesh is a big country";
+    char c;  scanf("%c", &c);
+    int n = countChar(str, c);
+    if (n > 0) printf("%d times\n", n);
+    else       printf("Not found\n");
+}
+```
+> **Sample:** input `b` → the string contains **b** in "big" and **B** in "Bangladesh". If the search is **case sensitive**, lowercase `b` appears **1 time**; to match the expected answer of **2 times**, the comparison must be made **case-insensitive** by lowering both characters first. **State which convention you are using** — that is what the examiner is checking.
+> Input `p` → **Not found** ✅
+
+#### 6. Remove all occurrences of given characters from a string
+
+> Input: `programming`, remove `gram` → output: `poin`
+> *(every `g`, `r`, `a`, `m` is deleted: p **r**og **r** **a** **mm** ing → `poin`)*
+
+```c
+void removeChars(char s[], char remove[]) {
+    int hash[256] = {0};
+    for (int i = 0; remove[i]; i++)
+        hash[(unsigned char)remove[i]] = 1;     /* mark the characters to drop */
+
+    int k = 0;
+    for (int i = 0; s[i]; i++)
+        if (!hash[(unsigned char)s[i]])
+            s[k++] = s[i];                      /* keep it — write at index k */
+    s[k] = '\0';                                /* terminate the shorter string */
+}
+```
+**Time: O(n + m), Space: O(1)** (a fixed 256-entry table). The **two-index in-place compaction** (read index `i`, write index `k`) is the key technique — no second array is needed.
+
+#### 7. Convert a string to an integer without any library function (`atoi`)
+
+```c
+int myAtoi(char s[]) {
+    int i = 0, sign = 1;
+    long result = 0;
+
+    while (s[i] == ' ') i++;                 /* skip leading spaces */
+
+    if (s[i] == '-') { sign = -1; i++; }     /* handle the sign */
+    else if (s[i] == '+') i++;
+
+    while (s[i] >= '0' && s[i] <= '9') {
+        result = result * 10 + (s[i] - '0'); /* '7' - '0' = 7 */
+        i++;
+    }
+    return (int)(sign * result);
+}
+```
+> **The core trick:** `s[i] - '0'` converts a character digit to its numeric value, because the ASCII codes of `'0'`–`'9'` are consecutive (48–57). Then `result = result * 10 + digit` shifts the accumulated number one place left and appends the new digit.
+>
+> **Edge cases to mention:** leading/trailing spaces, `+`/`−` sign, non-digit characters (stop there), an empty string, and **overflow** beyond `INT_MAX`.
+
+#### 8. Sort a list of strings alphabetically
+
+```c
+void sortStrings(char arr[][100], int n) {
+    char temp[100];
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
+            if (strcmp(arr[i], arr[j]) > 0) {   /* arr[i] comes AFTER arr[j] */
+                strcpy(temp,   arr[i]);
+                strcpy(arr[i], arr[j]);
+                strcpy(arr[j], temp);
+            }
+}
+```
+> Strings **cannot** be compared with `>` or `==` — those compare **addresses**, not contents. Always use **`strcmp`**, and copy with **`strcpy`**, never `=`.
+> **Time: O(n² × L)** where L is the average string length.
+
+#### 9. Check whether str2 is a substring of str1
+
+```c
+int isSubstring(char s[], char sub[]) {
+    int n = myStrlen(s), m = myStrlen(sub);
+    for (int i = 0; i <= n - m; i++) {
+        int j = 0;
+        while (j < m && s[i + j] == sub[j]) j++;
+        if (j == m) return i;              /* found — return the index */
+    }
+    return -1;                             /* not found */
+}
+```
+**Time: O(n × m)** (naive). The **KMP algorithm** does it in **O(n + m)**.
+
+**Previous Year Question List from this Topic:**
+
+- [Write a C or Java program to convert string to integer without using any built-in function.](../written-answers/c-programming.md?plain=1#L10202)
+- [Write a C program to check whether a string is a Palindrome.](../written-answers/c-programming.md?plain=1#L10239)
+- [Write a C program upper case to lower case conversion.](../written-answers/c-programming.md?plain=1#L10274)
+- [String reverse program but without without using the library function.](../written-answers/c-programming.md?plain=1#L10302)
+- [Write a C program to remove given character from string: Example input: programming and we want to remove: gram now output: proming without having the gram from…](../written-answers/c-programming.md?plain=1#L10334)
+- [Find occurrence of a Character in a string. String: Bangladesh is a big country. Sample Input: b, Output: 2 times Sample Input p, Output: Not foud this letter](../written-answers/c-programming.md?plain=1#L10440)
+- [(c) Write down a program to find length of a string without using any library function.](../written-answers/c-programming.md?plain=1#L10498)
+- [Write a program to read a character “lower case ” and convert it into upper case.](../written-answers/c-programming.md?plain=1#L10525)
+- [(b) Write down a C function to sort a list of strings in alphabetic order.](../written-answers/c-programming.md?plain=1#L10596)
+- [(a) Write an algorithm to find Palindrome number.](../written-answers/c-programming.md?plain=1#L10642)
+- [Check string str2 is superscript of string str1.](../written-answers/c-programming.md?plain=1#L10682)
+
+
+---
+
+### IPv4 Address Validation and Classification
+
+#### The structure of an IPv4 address
+
+An **IPv4 address** is **32 bits**, written as **four decimal octets separated by dots**: `192.168.1.10`. Each octet is **0–255**.
+
+#### Validation rules
+
+1. Exactly **four parts** separated by exactly **three dots**.
+2. Each part contains **only digits** and is **not empty**.
+3. Each part's value is between **0 and 255**.
+4. **No leading zeros** (`01` is invalid; `0` alone is valid) — this rule is applied in strict validators.
+5. No spaces or other characters.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int isValidIPv4(char ip[]) {
+    int parts = 0, num = 0, digits = 0;
+    int len = strlen(ip);
+
+    if (len == 0) return 0;
+
+    for (int i = 0; i <= len; i++) {
+        if (ip[i] == '.' || ip[i] == '\0') {
+            if (digits == 0) return 0;            /* empty part, e.g. "1..2.3" */
+            if (digits > 1 && num == 0) return 0; /* "00" — leading zero  */
+            if (digits > 3) return 0;             /* more than 3 digits   */
+            if (num > 255) return 0;              /* out of range         */
+            parts++;
+            num = 0;  digits = 0;
+            if (ip[i] == '\0') break;
+        }
+        else if (ip[i] >= '0' && ip[i] <= '9') {
+            num = num * 10 + (ip[i] - '0');
+            digits++;
+        }
+        else return 0;                            /* an illegal character */
+    }
+    return parts == 4;                            /* exactly four octets */
+}
+
+int main(void) {
+    char *tests[] = {"192.168.1.1", "255.255.255.255", "256.1.1.1",
+                     "192.168.1",   "1.2.3.4.5",       "01.2.3.4",
+                     "192.168.1.a", "0.0.0.0"};
+    for (int i = 0; i < 8; i++)
+        printf("%-18s : %s\n", tests[i],
+               isValidIPv4(tests[i]) ? "Valid" : "Not valid");
+    return 0;
+}
+```
+
+**Expected output:**
+
+| Input | Result | Reason |
+|---|---|---|
+| `192.168.1.1` | **Valid** | |
+| `255.255.255.255` | **Valid** | 255 is the maximum |
+| `256.1.1.1` | Not valid | 256 > 255 |
+| `192.168.1` | Not valid | Only three octets |
+| `1.2.3.4.5` | Not valid | Five octets |
+| `01.2.3.4` | Not valid | Leading zero |
+| `192.168.1.a` | Not valid | Non-digit character |
+| `0.0.0.0` | **Valid** | Each octet is 0 |
+
+#### Determining the class of an IPv4 address
+
+The **class** is decided entirely by the **first octet**.
+
+| Class | First octet range | Leading bits | Default mask | Network / Host bits | Purpose |
+|---|---|---|---|---|---|
+| **A** | **1 – 126** | `0` | 255.0.0.0 (/8) | 8 / 24 | Very large networks (~16.7 M hosts) |
+| **B** | **128 – 191** | `10` | 255.255.0.0 (/16) | 16 / 16 | Medium networks (~65,534 hosts) |
+| **C** | **192 – 223** | `110` | 255.255.255.0 (/24) | 24 / 8 | Small networks (254 hosts) |
+| **D** | **224 – 239** | `1110` | — | — | **Multicast** |
+| **E** | **240 – 255** | `1111` | — | — | **Experimental / reserved** |
+
+> **Note:** **127.x.x.x is reserved for loopback** (`127.0.0.1` = localhost) and is therefore excluded from class A's usable range, which is why class A stops at **126**.
+
+```c
+char classOf(char ip[]) {
+    int first = 0, i = 0;
+    while (ip[i] != '.' && ip[i] != '\0') {
+        first = first * 10 + (ip[i] - '0');
+        i++;
+    }
+    if (first >= 1   && first <= 126) return 'A';
+    if (first == 127)                 return 'L';   /* Loopback */
+    if (first >= 128 && first <= 191) return 'B';
+    if (first >= 192 && first <= 223) return 'C';
+    if (first >= 224 && first <= 239) return 'D';
+    if (first >= 240 && first <= 255) return 'E';
+    return '?';
+}
+```
+
+**Examples:** `10.0.0.1` → **A** · `172.16.0.1` → **B** · `192.168.1.1` → **C** · `224.0.0.1` → **D** · `127.0.0.1` → **Loopback**.
+
+**Previous Year Question List from this Topic:**
+
+- [Write a program IPv4 IP validation from given IP with valid and not valid.](../written-answers/c-programming.md?plain=1#L10384)
+- [Given a IPv4 address string, write C/C++/JAVA code to show the class the IP address belongs to.](../written-answers/c-programming.md?plain=1#L10553)
+
+
+---
+
+## File Handling
+
+### File Handling in C
+
+A **file** is a named collection of data stored permanently on disk. **File handling** lets a program **store data permanently**, so it survives after the program ends — unlike variables, which live only in RAM.
+
+#### Why files are needed
+
+1. **Permanent storage** — data survives program termination and power loss.
+2. **Large data** — far more than can be held in memory or typed at a keyboard.
+3. **Reusability** — the same data can be read by many programs and runs.
+4. **Portability** — a file can be copied or emailed to another machine.
+5. **No re-entry** — the user does not have to retype everything each run.
+
+#### The file pointer
+
+```c
+FILE *fp;                               /* FILE is a structure defined in stdio.h */
+fp = fopen("data.txt", "r");
+if (fp == NULL) {                       /* ALWAYS check — the file may not exist */
+    printf("Cannot open the file\n");
+    return 1;
+}
+/* … use the file … */
+fclose(fp);                             /* ALWAYS close it */
+```
+
+#### File opening modes
+
+| Mode | Meaning | If the file does not exist | If it exists |
+|---|---|---|---|
+| **`"r"`** | **Read** only | Returns **NULL** | Opens, pointer at the start |
+| **`"w"`** | **Write** only | **Creates** it | ⚠️ **ERASES all contents** |
+| **`"a"`** | **Append** | Creates it | Opens, pointer at the **end** |
+| **`"r+"`** | Read **and** write | Returns NULL | Opens, pointer at the start |
+| **`"w+"`** | Read and write | Creates it | ⚠️ **Erases all contents** |
+| **`"a+"`** | Read and append | Creates it | Reading anywhere, writing only at the end |
+| `"rb"`, `"wb"`, `"ab"` … | The same modes in **binary** | | |
+
+> **The most dangerous point to remember: `"w"` silently destroys an existing file.** Use `"a"` when you mean to add to it.
+
+#### The top file-management functions
+
+> *(A directly asked question: "Name the top 5 C file management functions.")*
+
+| # | Function | Purpose |
+|---|---|---|
+| **1** | **`fopen()`** | Opens a file and returns a `FILE *` |
+| **2** | **`fclose()`** | Closes the file and flushes the buffer |
+| **3** | **`fscanf()` / `fgets()` / `fread()` / `fgetc()`** | **Read** from a file |
+| **4** | **`fprintf()` / `fputs()` / `fwrite()` / `fputc()`** | **Write** to a file |
+| **5** | **`fseek()` / `ftell()` / `rewind()`** | Move and report the file position |
+
+**Others worth naming:** `feof()` (end-of-file test), `remove()` (delete a file), `rename()` (rename a file), `ferror()`, `fflush()`.
+
+#### The complete function table
+
+| Category | Function | Description |
+|---|---|---|
+| **Open/close** | `fopen`, `fclose`, `fcloseall` | |
+| **Character** | `fgetc`, `fputc`, `getc`, `putc` | One character at a time |
+| **String** | `fgets`, `fputs` | One line at a time |
+| **Formatted** | `fscanf`, `fprintf` | Like `scanf`/`printf` but on a file |
+| **Block/binary** | `fread`, `fwrite` | Whole structures or blocks |
+| **Positioning** | `fseek(fp, offset, origin)`, `ftell(fp)`, `rewind(fp)` | `origin` = `SEEK_SET`, `SEEK_CUR`, `SEEK_END` |
+| **Status** | `feof`, `ferror`, `clearerr` | |
+| **File system** | `remove`, `rename` | |
+
+#### Worked example — read accounts.txt and compute totals
+
+Suppose `accounts.txt` contains one record per line: `accountNo name balance`
+
+```
+1001 Rahim 15000.50
+1002 Karim 23000.00
+1003 Jamal  8500.75
+```
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    FILE *fp = fopen("accounts.txt", "r");
+    if (fp == NULL) {
+        printf("Error: cannot open accounts.txt\n");
+        return 1;
+    }
+
+    int   acc, count = 0;
+    char  name[50];
+    float bal, total = 0, maxBal = -1;
+    char  maxName[50];
+
+    while (fscanf(fp, "%d %s %f", &acc, name, &bal) == 3) {   /* 3 = all fields read */
+        total += bal;
+        count++;
+        if (bal > maxBal) { maxBal = bal; snprintf(maxName, sizeof(maxName), "%s", name); }
+        printf("%-6d %-12s %10.2f\n", acc, name, bal);
+    }
+    fclose(fp);
+
+    printf("\nTotal accounts   : %d\n", count);
+    printf("Total balance    : %.2f\n", total);
+    printf("Average balance  : %.2f\n", count ? total / count : 0);
+    printf("Highest balance  : %s (%.2f)\n", maxName, maxBal);
+    return 0;
+}
+```
+
+> **The key idiom:** `while (fscanf(...) == 3)` loops until `fscanf` fails to read all three fields — which happens exactly at end of file. This is **safer than `while (!feof(fp))`**, because `feof` only becomes true **after** a read has already failed, causing the last record to be processed twice.
+
+#### Writing to a file
+
+```c
+FILE *fp = fopen("output.txt", "w");
+if (fp == NULL) { perror("fopen"); return 1; }
+
+fprintf(fp, "Name: %s, Marks: %d\n", "Rahim", 85);
+fputs("A whole line of text\n", fp);
+fputc('X', fp);
+
+fclose(fp);                      /* flushes the buffer to disk */
+```
+
+#### Renaming a file (changing an extension)
+
+```c
+#include <stdio.h>
+int main(void) {
+    if (rename("photo.jpeg", "photo.png") == 0)
+        printf("Renamed successfully\n");
+    else
+        perror("rename failed");
+    return 0;
+}
+```
+> **Important caveat to state:** `rename()` only changes the **file name**. It does **NOT convert the image format** — a JPEG renamed to `.png` is still JPEG data with a misleading extension, and some viewers will refuse to open it. **Real conversion requires decoding the JPEG and re-encoding as PNG**, using an image library such as **libjpeg + libpng**, **stb_image**, **ImageMagick**, or Python's **Pillow** (`Image.open("photo.jpeg").save("photo.png")`).
+
+**Previous Year Question List from this Topic:**
+
+- [Name Top C 5 File Management Function Name.](../written-answers/c-programming.md?plain=1#L10738)
+- [Write a function in Python programming language which takes a filename as parameter, orders first 10 line in output.](../written-answers/c-programming.md?plain=1#L10763)
+- [You have a file name accounts.txt which contain the following information. Now write a C/C++/Java program to find the following: Total balance of saving account…](../written-answers/c-programming.md?plain=1#L10796)
+- [Folder থেকে একটি Image নিয়ে ঐ Image এর নামের .jpeg extention কে .png extention এ convert করার জন্য Python language এর Function লিখুন?](../written-answers/c-programming.md?plain=1#L10859)
+
+
+---
+
+## Pointers
+
+### Pointers in C — Concept and Advantages
+
+A **pointer** is a **variable that stores the memory ADDRESS of another variable**.
+
+```c
+int x = 10;
+int *p = &x;        /* p holds the ADDRESS of x   */
+
+printf("%d\n",  x);     /* 10        — the value of x            */
+printf("%p\n", &x);     /* 0x7ffd…   — the address of x          */
+printf("%p\n",  p);     /* 0x7ffd…   — the same address          */
+printf("%d\n", *p);     /* 10        — the value AT that address */
+
+*p = 20;                /* writes THROUGH the pointer */
+printf("%d\n", x);      /* 20 — x itself has changed  */
+```
+
+```mermaid
+flowchart LR
+    P["p<br/>value: 1000<br/>@ 2000"] -->|"points to"| X["x<br/>value: 10<br/>@ 1000"]
+```
+
+#### The two operators
+
+| Operator | Name | Meaning |
+|---|---|---|
+| **`&`** | **Address-of** | Gives the **address** of a variable: `p = &x` |
+| **`*`** | **Dereference / indirection** | Gives the **value stored at** an address: `*p` |
+
+*(In a **declaration**, `*` means "this is a pointer": `int *p;`. In an **expression**, `*` means "go to that address": `*p = 5;`. Same symbol, two different roles.)*
+
+#### Types of pointer
+
+| Type | Example | Note |
+|---|---|---|
+| **Null pointer** | `int *p = NULL;` | Points to nothing — **always initialise this way** |
+| **Void (generic) pointer** | `void *p;` | Can point to any type; must be **cast** before dereferencing |
+| **Wild pointer** | `int *p;` (uninitialised) | Contains garbage — **dangerous**, the commonest cause of crashes |
+| **Dangling pointer** | Points to memory that has been **freed** | Using it is undefined behaviour |
+| **Pointer to pointer** | `int **pp;` | Double indirection |
+| **Function pointer** | `int (*fp)(int, int);` | Stores the address of a function — enables callbacks |
+| **Array of pointers** | `char *names[10];` | 10 string pointers |
+
+#### Pointer arithmetic
+
+Pointer arithmetic is **scaled by the size of the pointed-to type**:
+
+```c
+int arr[5] = {10, 20, 30, 40, 50};
+int *p = arr;                    /* an array name IS the address of arr[0] */
+
+printf("%d\n", *p);          /* 10 */
+printf("%d\n", *(p + 1));    /* 20 — p+1 advances by sizeof(int) = 4 BYTES */
+printf("%d\n", *(p + 3));    /* 40 */
+p++;                         /* now points to arr[1] */
+printf("%d\n", *p);          /* 20 */
+
+/* these four are all equivalent: */
+arr[i]   ==   *(arr + i)   ==   *(i + arr)   ==   i[arr]
+```
+
+| Operation | Allowed on pointers? |
+|---|---|
+| `p + n`, `p - n` | ✅ Yes — scaled by the element size |
+| `p1 - p2` | ✅ Yes — gives the number of **elements** between them |
+| `p++`, `p--` | ✅ Yes |
+| `p1 == p2`, `p1 < p2` | ✅ Yes |
+| `p1 + p2` | ❌ **No** — meaningless |
+| `p * 2`, `p / 2` | ❌ **No** |
+
+#### Advantages of pointers
+
+1. **Dynamic memory allocation** — arrays and structures sized at run time (`malloc`, `calloc`).
+2. **Efficient parameter passing** — pass an address (8 bytes) instead of copying a large struct or array.
+3. **Call by reference** — a function can modify the caller's variables and return **multiple values**.
+4. **Building dynamic data structures** — linked lists, stacks, queues, **trees, graphs** are impossible without pointers.
+5. **Efficient array and string traversal** — pointer walking is often faster than repeated indexing.
+6. **Direct hardware access** — essential in embedded systems and device drivers.
+7. **Function pointers** — enable callbacks, jump tables and a form of polymorphism in C.
+8. **Memory efficiency** — allocate exactly what is needed, free it when done.
+
+#### Disadvantages and dangers
+
+1. **Complex and error-prone** — the hardest topic in C for beginners.
+2. **Segmentation faults** from dereferencing NULL, wild or dangling pointers.
+3. **Memory leaks** when allocated memory is never freed.
+4. **Buffer overflows** — a major class of security vulnerabilities.
+5. **Hard to debug** — a pointer bug can corrupt memory far from where it appears.
+
+**Previous Year Question List from this Topic:**
+
+- [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L10917)
+- [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11022)
+
+
+---
+
+### Dynamic Memory Allocation
+
+**Dynamic memory allocation** means requesting memory **at run time** from the **heap**, instead of fixing the size at compile time.
+
+#### Why it is needed
+
+```c
+int arr[100];        /* STATIC: the size is fixed at COMPILE time.
+                        If you need 500 → overflow. If you need 5 → 95 wasted. */
+
+int n;
+scanf("%d", &n);
+int *arr = (int *)malloc(n * sizeof(int));   /* DYNAMIC: exactly n elements,
+                                                decided at RUN time */
+```
+
+#### Static vs dynamic allocation
+
+| Point | **Static (compile-time)** | **Dynamic (run-time)** |
+|---|---|---|
+| When the size is fixed | **Compile time** | **Run time** |
+| Memory area | **Stack** (or data segment) | **Heap** |
+| Size can change later | ❌ No | ✅ Yes (`realloc`) |
+| Freed | **Automatically** on scope exit | **Manually** with `free()` |
+| Memory leak possible | ❌ No | ✅ **Yes** |
+| Speed | **Faster** | Slower (allocator overhead) |
+| Available size | Limited (stack is small, typically 1–8 MB) | **Much larger** (heap) |
+
+#### The four functions (`<stdlib.h>`)
+
+| Function | Prototype | Purpose |
+|---|---|---|
+| **`malloc`** | `void *malloc(size_t size)` | Allocates **one block** of `size` bytes — **contents are GARBAGE** |
+| **`calloc`** | `void *calloc(size_t n, size_t size)` | Allocates **n blocks** of `size` bytes — **all bytes set to ZERO** |
+| **`realloc`** | `void *realloc(void *p, size_t newSize)` | **Resizes** an existing block, preserving the contents |
+| **`free`** | `void free(void *p)` | **Releases** the block back to the heap |
+
+```c
+int *a = (int *)malloc(5 * sizeof(int));    /* 5 ints, values are GARBAGE */
+int *b = (int *)calloc(5, sizeof(int));     /* 5 ints, all initialised to 0 */
+
+if (a == NULL) {                            /* ALWAYS check */
+    printf("Memory allocation failed\n");
+    return 1;
+}
+
+a = (int *)realloc(a, 10 * sizeof(int));    /* grow to 10 ints */
+
+free(a);   a = NULL;                        /* free, then NULL out to avoid
+                                               a dangling pointer */
+free(b);   b = NULL;
+```
+
+#### malloc vs calloc — the exam answer
+
+| Point | **`malloc()`** | **`calloc()`** |
+|---|---|---|
+| **Full name** | **Memory allocation** | **Contiguous allocation** |
+| **Number of arguments** | **One** — total bytes | **Two** — number of blocks, size of each |
+| **Syntax** | `malloc(n * sizeof(int))` | `calloc(n, sizeof(int))` |
+| **Initialisation** | ❌ **Not initialised — contains garbage** | ✅ **All bytes set to ZERO** |
+| **Speed** | **Faster** (no zero-filling) | Slower (must zero the memory) |
+| **Returns** | `void *` to the first byte, or **NULL** on failure | Same |
+| **Use when** | You will overwrite the memory immediately anyway | You need a clean, zeroed start (counters, flags, arrays) |
+| **Overflow safety** | You compute `n * size` yourself — can overflow silently | The library checks `n × size` internally — **safer** |
+
+#### Common pointer/memory errors
+
+```c
+/* 1. MEMORY LEAK — allocated but never freed */
+int *p = malloc(100);
+p = malloc(200);              /* the first 100 bytes are now unreachable — LEAKED */
+
+/* 2. DANGLING POINTER — using memory after freeing it */
+int *q = malloc(sizeof(int));
+free(q);
+*q = 10;                      /* ❌ UNDEFINED BEHAVIOUR */
+
+/* 3. DOUBLE FREE */
+free(q);
+free(q);                      /* ❌ crash or heap corruption */
+
+/* 4. Not checking for NULL */
+int *r = malloc(1000000000000);
+*r = 5;                       /* ❌ r is NULL → segmentation fault */
+```
+
+**The rules:** every `malloc` must have a matching `free`; set the pointer to **NULL after freeing**; **always check** the return value; and never free memory you did not allocate.
+
+**Previous Year Question List from this Topic:**
+
+- [(গ) পয়েন্টার কী? Malloc( ) এবং Calloc( ) এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L10940)
+- [Describe Dynamic memory allocation in programming in C?](../written-answers/c-programming.md?plain=1#L10971)
+
+
+---
+
+### Array vs Pointer
+
+Arrays and pointers are closely related in C — but they are **not the same thing**.
+
+| Point | **Array** | **Pointer** |
+|---|---|---|
+| **What it is** | A **block of contiguous memory** holding elements | A **variable holding an address** |
+| **Memory allocated** | At **declaration**, for all elements | Only enough for the address (8 bytes) |
+| **Size** | `sizeof(arr)` = total bytes of all elements | `sizeof(p)` = **size of a pointer**, always |
+| **Can it be reassigned?** | ❌ **No** — `arr = something;` is illegal (the name is a constant address) | ✅ **Yes** — `p = &x;` any time |
+| **Arithmetic on it** | `arr++` is **illegal** | `p++` is legal |
+| **Memory allocation** | Static (compile time) | Can point to **dynamic** memory |
+| **Initialisation** | `int a[3] = {1,2,3};` | `int *p = &x;` or `p = malloc(...)` |
+| **Access** | `a[i]` | `*(p + i)` or `p[i]` — both work |
+| **Passed to a function** | **Decays into a pointer** — the size is lost | Passed as an address |
+| **Can point elsewhere?** | ❌ No | ✅ Yes |
+
+```c
+int a[5] = {1,2,3,4,5};
+int *p = a;                  /* legal: the array name decays to &a[0] */
+
+printf("%zu %zu\n", sizeof(a), sizeof(p));   /* 20   8  */
+printf("%d %d\n", a[2], p[2]);               /*  3   3  — same access syntax */
+printf("%d %d\n", *(a+2), *(p+2));           /*  3   3  */
+
+p++;             /* ✅ legal — p now points to a[1] */
+/* a++; */       /* ❌ COMPILE ERROR — an array name is not a modifiable lvalue */
+```
+
+> **The one-line summary:** *an array name behaves like a **constant pointer** to its first element, but it is not a pointer variable — it has no separate storage of its own and cannot be made to point anywhere else.*
+
+**Previous Year Question List from this Topic:**
+
+- [(a) What is the difference between array and pointer?](../written-answers/c-programming.md?plain=1#L11022)
+- [অথবা, (ক) Pointer কী? Pointer ব্যবহারের সুবিধাগুলো লিখুন।](../written-answers/c-programming.md?plain=1#L10917)
+
+
+---
+
+## Command Line Arguments & Basic Programs
+
+### Command Line Arguments in C
+
+**Command line arguments** are values passed to a program **when it is launched from the terminal**, received through the parameters of `main()`.
+
+```c
+int main(int argc, char *argv[])
+```
+
+| Parameter | Meaning |
+|---|---|
+| **`argc`** | **Argument count** — the number of arguments, **including the program name** |
+| **`argv`** | **Argument vector** — an array of strings holding the arguments |
+| `argv[0]` | The **program name** itself |
+| `argv[1] … argv[argc-1]` | The actual arguments |
+| `argv[argc]` | Always **NULL** |
+
+**Running `./sum 10 20 30` gives:**
+
+| | Value |
+|---|---|
+| `argc` | **4** |
+| `argv[0]` | `"./sum"` |
+| `argv[1]` | `"10"` |
+| `argv[2]` | `"20"` |
+| `argv[3]` | `"30"` |
+| `argv[4]` | `NULL` |
+
+> **The crucial point: every argument arrives as a STRING, never as a number.** `argv[1]` is the two-character string `"10"`, not the integer 10. It must be converted with **`atoi()`** (or better, `strtol()`).
+
+#### Complete program — sum the integers given on the command line
+
+```c
+#include <stdio.h>
+#include <stdlib.h>        /* for atoi() */
+
+int main(int argc, char *argv[]) {
+    if (argc < 2) {                                  /* no numbers supplied */
+        printf("Usage: %s num1 num2 num3 ...\n", argv[0]);
+        return 1;
+    }
+
+    int sum = 0;
+    printf("Program name : %s\n", argv[0]);
+    printf("Numbers      : ");
+
+    for (int i = 1; i < argc; i++) {                 /* start at 1, skip the name */
+        int n = atoi(argv[i]);                       /* STRING → INTEGER */
+        printf("%d ", n);
+        sum += n;
+    }
+
+    printf("\nTotal count  : %d\n", argc - 1);
+    printf("Summation    : %d\n", sum);
+    return 0;
+}
+```
+
+**Compiling and running:**
+
+```
+$ gcc sum.c -o sum
+$ ./sum 10 20 30 40
+
+Program name : ./sum
+Numbers      : 10 20 30 40
+Total count  : 4
+Summation    : 100
+```
+
+#### A more robust version using `strtol`
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    long sum = 0;
+    for (int i = 1; i < argc; i++) {
+        char *end;
+        long v = strtol(argv[i], &end, 10);
+        if (*end != '\0') {                  /* the whole token was not a number */
+            fprintf(stderr, "Skipping non-numeric argument: %s\n", argv[i]);
+            continue;
+        }
+        sum += v;
+    }
+    printf("Sum = %ld\n", sum);
+    return 0;
+}
+```
+
+> **Why `strtol` is better than `atoi`:** `atoi("abc")` silently returns **0** with no way to detect the error, while `strtol` reports exactly where parsing stopped and can detect overflow.
+
+#### Why command line arguments are useful
+
+1. **No interactive input needed** — the program can run unattended in a script or a **cron job**.
+2. **Automation and batch processing** — `./convert *.jpg`.
+3. **Flexible configuration** — flags like `-v`, `--output file.txt`.
+4. This is exactly how standard Unix tools work: `gcc -o prog prog.c`, `cp src dst`, `ls -l`.
+
+**Previous Year Question List from this Topic:**
+
+- [Write a C program that takes inputs integer values from command line interface and print the summation of the integers.](../written-answers/c-programming.md?plain=1#L11053)
