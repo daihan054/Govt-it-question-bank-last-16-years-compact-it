@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 10 theories
+**Table of Contents** — 9 subtopics · 19 theories
 
 1. **[Cloud Service Models](#cloud-service-models)**
    - [Cloud Computing — Definition, Characteristics and Deployment Models](#cloud-computing--definition-characteristics-and-deployment-models)
@@ -16,6 +16,27 @@
    - [Cloud Storage vs Traditional Storage](#cloud-storage-vs-traditional-storage)
    - [Types of Cloud Storage](#types-of-cloud-storage)
    - [Cloud Databases (DBaaS)](#cloud-databases-dbaas)
+
+4. **[Cluster, Grid & Distributed Computing](#cluster-grid--distributed-computing)**
+   - [Centralized vs Distributed Computing](#centralized-vs-distributed-computing)
+   - [Cluster Computing vs Grid Computing](#cluster-computing-vs-grid-computing)
+   - [MapReduce and Parallel Data Processing](#mapreduce-and-parallel-data-processing)
+
+5. **[Scalability (Horizontal & Vertical Scaling)](#scalability-horizontal--vertical-scaling)**
+   - [Horizontal vs Vertical Scaling](#horizontal-vs-vertical-scaling)
+   - [Scalability vs Elasticity](#scalability-vs-elasticity)
+
+6. **[Edge Computing & Fog Computing](#edge-computing--fog-computing)**
+   - [Edge Computing and Fog Computing](#edge-computing-and-fog-computing)
+
+7. **[Virtualization & Resource Allocation](#virtualization--resource-allocation)**
+   - [Calculating VM Capacity from Physical Resources](#calculating-vm-capacity-from-physical-resources)
+
+8. **[High Availability & System Redundancy](#high-availability--system-redundancy)**
+   - [High Availability, Redundancy and Fault Tolerance](#high-availability-redundancy-and-fault-tolerance)
+
+9. **[Cloud Security & Compliance](#cloud-security--compliance)**
+   - [Cloud Security Assessment, Audit and Compliance Posture](#cloud-security-assessment-audit-and-compliance-posture)
 
 <!-- TOC END -->
 
@@ -858,3 +879,635 @@ flowchart TD
 **Previous Year Question List from this Topic:**
 
 - [Describe the cloud base database briefly.](../written-answers/cloud-computing.md?plain=1#L665)
+
+## Cluster, Grid & Distributed Computing
+
+### Centralized vs Distributed Computing
+
+#### Centralized computing
+
+In **centralized computing**, **all processing, data and control reside on a single central computer** (a mainframe or one powerful server). Users connect through **dumb terminals** or thin clients that do no real work themselves.
+
+```mermaid
+flowchart TD
+    T1["Terminal 1"] --> C["CENTRAL SERVER<br/>all processing + all data"]
+    T2["Terminal 2"] --> C
+    T3["Terminal 3"] --> C
+    T4["Terminal 4"] --> C
+```
+
+**Examples:** an old bank **mainframe** with branch terminals; a university lab where all software runs on one server; a traditional single-server database application.
+
+#### Distributed computing
+
+In **distributed computing**, the work is **spread across many independent computers connected by a network**, which coordinate by passing messages and appear to the user as **a single coherent system**.
+
+```mermaid
+flowchart TD
+    U["User"] --> N["Network"]
+    N --> N1["Node 1<br/>processing + data"]
+    N --> N2["Node 2<br/>processing + data"]
+    N --> N3["Node 3<br/>processing + data"]
+    N --> N4["Node 4<br/>processing + data"]
+    N1 <--> N2
+    N2 <--> N3
+    N3 <--> N4
+```
+
+**Examples:** the **Internet** and the **World Wide Web**; **Google Search** (thousands of servers answering one query); **Hadoop / Spark** clusters; **blockchain** networks; **DNS**; a bank's **ATM network**; cloud platforms such as AWS.
+
+#### Comparison
+
+| Point | **Centralized Computing** | **Distributed Computing** |
+|---|---|---|
+| **Processing location** | One central machine | **Many machines** |
+| **Data storage** | One central database | Distributed / replicated |
+| **Control** | Single point of control — simple | Coordinated across nodes — complex |
+| **Single point of failure** | ❌ **Yes** — the server dies, everything stops | ✅ **No** — other nodes keep working |
+| **Scalability** | **Vertical only** — buy a bigger machine | **Horizontal** — add more machines |
+| **Performance** | Limited by one machine | **Much higher** — parallel processing |
+| **Cost** | Very expensive high-end hardware | **Cheaper commodity hardware** |
+| **Maintenance** | **Easy** — one machine to manage | Hard — many machines, network issues |
+| **Data consistency** | **Easy** — one copy | **Hard** — replication and synchronisation |
+| **Security** | Easier to secure one perimeter | Larger attack surface |
+| **Latency** | Depends on the link to the centre | Data can be placed near the user |
+| **Examples** | Mainframe + terminals, a single-server app | Internet, Google, Hadoop, blockchain, cloud |
+
+#### Characteristics of distributed processing
+
+1. **Resource sharing** — hardware, data and software shared across nodes.
+2. **Concurrency** — many nodes work simultaneously.
+3. **Scalability** — capacity grows by adding nodes.
+4. **Fault tolerance** — failure of one node does not stop the system.
+5. **Transparency** — the user sees one system, not many (location, replication and failure transparency).
+6. **Openness** — built on standard protocols so heterogeneous machines can join.
+7. **No global clock** — nodes coordinate by message passing, which is why distributed algorithms are hard.
+
+#### Advantages of distributed processing
+
+- **Higher performance** through parallelism.
+- **Reliability and fault tolerance** — no single point of failure.
+- **Incremental, cheap scalability** using commodity machines.
+- **Geographic distribution** — services close to users, lower latency.
+- **Resource sharing** across the organisation.
+- **Cost effectiveness** compared with one giant machine.
+
+**Disadvantages:** complex to design and debug; **network dependency** and network failures; **data consistency** problems (see the CAP theorem); security is harder across many nodes; and coordination overhead.
+
+**Previous Year Question List from this Topic:**
+
+- [(ক) উদাহরণসহ distributed এবং centralized computing -এর সংজ্ঞা লিখুন।](../written-answers/cloud-computing.md?plain=1#L693)
+- [(খ) Distributed processing কী? উহার বৈশিষ্ট্য ও সুবিধাগুলো লিখুন।](../written-answers/cloud-computing.md?plain=1#L794)
+
+
+---
+
+### Cluster Computing vs Grid Computing
+
+| Point | **Cluster Computing** | **Grid Computing** |
+|---|---|---|
+| **Definition** | Many **similar computers in one location**, tightly connected, acting as **one machine** | Many **geographically dispersed, heterogeneous** machines pooled over a WAN/Internet |
+| **Location** | **Same place** — one room or data centre | **Distributed worldwide** |
+| **Hardware** | **Homogeneous** — same OS, similar specs | **Heterogeneous** — any OS, any hardware |
+| **Coupling** | **Tightly coupled** | **Loosely coupled** |
+| **Network** | **High-speed LAN** (Infiniband, 10 GbE) | **Internet / WAN** — slower, higher latency |
+| **Ownership** | **One organisation** owns everything | **Many organisations** share resources |
+| **Administration** | **Centralised**, single administrator | **Decentralised**, each site manages itself |
+| **Scheduling** | A central scheduler assigns jobs | Distributed brokers negotiate |
+| **Nodes dedicated?** | **Yes** — dedicated to the cluster | **No** — machines often donate spare cycles |
+| **Best for** | **Tightly coupled** parallel jobs needing fast inter-node communication | **Loosely coupled** jobs that split into independent pieces |
+| **Examples** | Hadoop cluster, a supercomputer, a web-server farm, database cluster | **SETI@home**, **Folding@home**, CERN's **Worldwide LHC Computing Grid**, BOINC |
+
+```mermaid
+flowchart TD
+    subgraph CL["Cluster — one site, one owner"]
+        M["Master / Scheduler"] --> C1["Node 1"]
+        M --> C2["Node 2"]
+        M --> C3["Node 3"]
+        M --> C4["Node 4"]
+    end
+    subgraph GR["Grid — many sites, many owners"]
+        B["Grid Broker"] -.->|Internet| G1["University A cluster"]
+        B -.->|Internet| G2["Lab B servers"]
+        B -.->|Internet| G3["Volunteer PCs"]
+    end
+```
+
+**Where cloud computing fits:** cloud computing evolved from both. It uses **clusters** inside each data centre, is **grid-like** in spanning many regions, and adds what neither had — **virtualization, self-service provisioning, elasticity and pay-per-use billing**.
+
+| Point | Cluster | Grid | **Cloud** |
+|---|---|---|---|
+| Virtualization | Rare | Rare | ✅ **Core** |
+| Self-service | No | No | ✅ **Yes** |
+| Pay-per-use | No | No | ✅ **Yes** |
+| Elastic scaling | Limited | Limited | ✅ **Automatic** |
+
+**Previous Year Question List from this Topic:**
+
+- [Difference between cluster computing and grid computing.](../written-answers/cloud-computing.md?plain=1#L718)
+
+
+---
+
+### MapReduce and Parallel Data Processing
+
+**MapReduce** is a programming model for processing **very large datasets in parallel across a distributed cluster**. It was introduced by Google and is the core of **Apache Hadoop**.
+
+#### The two phases
+
+| Phase | What it does |
+|---|---|
+| **Map** | Each node processes its **local chunk** of data and emits intermediate **(key, value)** pairs |
+| **Shuffle & Sort** | The framework **groups all values by key** and sends each key's group to one reducer |
+| **Reduce** | Each reducer **aggregates** all the values for its key and emits the final result |
+
+#### Worked example — counting colours (green, red, yellow, blue) across a distributed system
+
+> **Problem:** data containing the colours green, red, yellow and blue is spread across several servers. Count how many of each colour there are, in parallel.
+
+```mermaid
+flowchart LR
+    subgraph INPUT["1. INPUT SPLIT"]
+        S1["Server 1<br/>red, green, red, blue"]
+        S2["Server 2<br/>blue, yellow, green, green"]
+        S3["Server 3<br/>red, yellow, blue, red"]
+    end
+    subgraph MAP["2. MAP — emit (colour, 1)"]
+        M1["(red,1)(green,1)<br/>(red,1)(blue,1)"]
+        M2["(blue,1)(yellow,1)<br/>(green,1)(green,1)"]
+        M3["(red,1)(yellow,1)<br/>(blue,1)(red,1)"]
+    end
+    subgraph SHUF["3. SHUFFLE & SORT — group by key"]
+        G1["red → 1,1,1,1"]
+        G2["green → 1,1,1"]
+        G3["blue → 1,1,1"]
+        G4["yellow → 1,1"]
+    end
+    subgraph RED["4. REDUCE — sum the values"]
+        R1["red = 4"]
+        R2["green = 3"]
+        R3["blue = 3"]
+        R4["yellow = 2"]
+    end
+    S1 --> M1 --> G1
+    S2 --> M2 --> G2
+    S3 --> M3 --> G3
+    M3 --> G4
+    G1 --> R1
+    G2 --> R2
+    G3 --> R3
+    G4 --> R4
+```
+
+**The Mapper (runs in parallel on every server):**
+
+```
+map(key, record):
+    for each colour in record:
+        emit(colour, 1)
+```
+
+**The Reducer (one per distinct colour):**
+
+```
+reduce(colour, list_of_counts):
+    total = 0
+    for c in list_of_counts:
+        total = total + c
+    emit(colour, total)
+```
+
+**Final output:** `red = 4, green = 3, blue = 3, yellow = 2` (total 12 items).
+
+#### Optional optimisation — the Combiner
+
+A **Combiner** is a "mini-reducer" that runs **on the mapper node** before the shuffle, doing a local aggregation. Server 1 would send `(red,2)(green,1)(blue,1)` instead of four separate pairs — dramatically reducing network traffic, which is usually the bottleneck.
+
+#### Why MapReduce works well
+
+| Advantage | Reason |
+|---|---|
+| **Massive parallelism** | Every mapper runs independently on its own data chunk |
+| **Data locality** | The computation is **sent to the data**, not the data to the computation |
+| **Fault tolerance** | If a node dies, its task is simply re-run on another node |
+| **Scalability** | Add more nodes to process more data — near-linear scaling |
+| **Simplicity** | The programmer writes only `map` and `reduce`; the framework handles distribution, scheduling, shuffling and failures |
+
+**Limitations:** heavy **disk I/O** between phases makes it slow for iterative algorithms; it is **batch-only** (not real-time); and complex multi-step jobs become awkward. This is why **Apache Spark**, which keeps intermediate data **in memory**, has largely replaced classic MapReduce for analytics and machine learning — typically running 10–100× faster.
+
+**Previous Year Question List from this Topic:**
+
+- [Imagine data in a system is green, red, yellow and blue in the system using distributed server in parallel. Design the system using reduce map.](../written-answers/cloud-computing.md?plain=1#L737)
+
+
+---
+
+## Scalability (Horizontal & Vertical Scaling)
+
+### Horizontal vs Vertical Scaling
+
+**Scalability** is a system's ability to **handle increased load** by adding resources. There are exactly **two ways** to do it.
+
+```mermaid
+flowchart TD
+    subgraph VERT["VERTICAL SCALING — Scale UP"]
+        V1["Server<br/>4 cores<br/>16 GB RAM"] -->|upgrade the SAME machine| V2["Server<br/>32 cores<br/>256 GB RAM"]
+    end
+    subgraph HORZ["HORIZONTAL SCALING — Scale OUT"]
+        H0["Load Balancer"]
+        H0 --> H1["Server 1"]
+        H0 --> H2["Server 2"]
+        H0 --> H3["Server 3"]
+        H0 --> H4["Server 4 (added)"]
+    end
+```
+
+#### Server-rack view
+
+```mermaid
+flowchart LR
+    subgraph RACK1["Vertical scaling — one slot, bigger box"]
+        A1["Rack slot 1: Server<br/>⬆ add CPUs, RAM, disks"]
+        A2["Rack slot 2: empty"]
+        A3["Rack slot 3: empty"]
+    end
+    subgraph RACK2["Horizontal scaling — more boxes"]
+        B1["Rack slot 1: Server A"]
+        B2["Rack slot 2: Server B"]
+        B3["Rack slot 3: Server C"]
+        B4["Rack slot 4: Server D"]
+    end
+```
+
+- **Vertical scaling (scale up)** = make **one machine more powerful** — add CPU cores, RAM, faster disks. The rack still holds **one** server, just a bigger one.
+- **Horizontal scaling (scale out)** = **add more machines** of the same size and put a **load balancer** in front. The rack fills up with **more servers**.
+
+#### Comparison
+
+| Point | **Vertical Scaling (Scale Up)** | **Horizontal Scaling (Scale Out)** |
+|---|---|---|
+| **Method** | Add more power to **one** machine | Add **more machines** |
+| **Hardware limit** | ❌ **Yes** — you eventually hit the biggest available server | ✅ **Practically unlimited** |
+| **Downtime to scale** | **Usually required** (reboot to add hardware) | **None** — add a node to the pool |
+| **Cost curve** | Grows **exponentially** — high-end hardware is disproportionately expensive | Grows **linearly** — commodity servers |
+| **Single point of failure** | ❌ **Yes** — one machine | ✅ **No** — the load balancer distributes traffic |
+| **Complexity** | **Simple** — no code changes | **Complex** — needs load balancing, stateless design, distributed data |
+| **Load balancer needed** | No | **Yes** |
+| **Data consistency** | **Easy** — one copy | **Hard** — replication and synchronisation |
+| **Best for** | Databases (traditional RDBMS), legacy monolithic apps | **Web servers, microservices, stateless APIs, cloud-native apps** |
+| **Also called** | Scale up / vertical growth | Scale out / horizontal growth |
+| **Example** | Upgrade a server from 16 GB to 128 GB RAM | Run 10 web servers behind an Nginx load balancer |
+
+> **The cloud strongly prefers horizontal scaling**, because it is elastic, has no ceiling, and gives high availability for free. To scale horizontally, applications must be designed **stateless** — session data goes into Redis or a database, never into the server's local memory.
+
+**Previous Year Question List from this Topic:**
+
+- [Server rack digram to draw horizontal and vertical scalling.](../written-answers/cloud-computing.md?plain=1#L823)
+
+
+---
+
+### Scalability vs Elasticity
+
+These two words are constantly confused, and the difference is a favourite short question.
+
+| Point | **Scalability** | **Elasticity** |
+|---|---|---|
+| **Definition** | The system's **ability to GROW** to handle increased load | The ability to **automatically add AND REMOVE** resources **in real time** as demand changes |
+| **Direction** | Mainly **one way — up/out** | **Both ways — out and back in** |
+| **Timing** | **Planned**, over days/weeks/months | **Immediate**, within seconds/minutes |
+| **Trigger** | A human decision, based on growth forecasts | **Automatic**, based on live metrics (CPU %, request rate) |
+| **Purpose** | Meet **long-term** growth | Match **short-term** fluctuation and **save cost** |
+| **Cost effect** | Capacity (and cost) stays at the new level | **Cost falls again** when demand drops |
+| **Key requirement** | Architecture that can accept more resources | **Auto-scaling** + pay-per-use billing |
+| **Analogy** | Building more lanes on a highway because traffic is growing every year | Opening extra toll booths during rush hour and closing them at night |
+
+**A concrete example — an e-commerce site:**
+- **Scalability:** the company grows from 10,000 to 1,000,000 customers over two years, so the architecture is rebuilt to run on 50 servers instead of 2. *Permanent growth.*
+- **Elasticity:** during a one-day Eid sale, traffic jumps 10×, so **auto-scaling** launches 30 extra instances at 9 a.m. and **terminates them at midnight** when traffic falls. The company pays for those 30 servers **only for 15 hours**. *Temporary, automatic, reversible.*
+
+> **In one line:** **scalability is the *capability* to handle growth; elasticity is the *automatic, two-way, real-time exercise* of that capability.** Elasticity requires scalability, but scalability does not require elasticity — an on-premises data centre can be scalable but is rarely elastic, because you cannot return the servers you bought.
+
+**Previous Year Question List from this Topic:**
+
+- [Difference between elasticity and scalability of resources in the cloud.](../written-answers/cloud-computing.md?plain=1#L867)
+
+
+---
+
+## Edge Computing & Fog Computing
+
+### Edge Computing and Fog Computing
+
+**Edge computing** processes data **near where it is generated** — at or close to the device — instead of sending everything to a distant central cloud.
+
+```mermaid
+flowchart TD
+    subgraph TRAD["Traditional cloud model"]
+        D1["IoT devices / sensors"] -->|"all raw data, high latency"| CC1["Central Cloud<br/>(far away)"]
+        CC1 -->|"response"| D1
+    end
+    subgraph EDGE["Edge computing model"]
+        D2["IoT devices / sensors"] -->|"milliseconds"| E["EDGE server<br/>(on site / nearby)"]
+        E -->|"instant response"| D2
+        E -->|"only summarised data"| CC2["Central Cloud<br/>(storage, analytics, training)"]
+    end
+```
+
+#### Why edge servers are needed
+
+1. **Ultra-low latency.** A self-driving car cannot wait 200 ms for a cloud round trip to decide whether to brake — it needs an answer in **single-digit milliseconds**. Processing must happen locally.
+2. **Bandwidth saving.** A single HD CCTV camera generates gigabytes per hour. Sending every frame to the cloud is impossibly expensive; an edge server analyses the video locally and uploads **only the alerts**.
+3. **Reliability / offline operation.** A factory, a ship or a remote substation must keep working when the internet link drops. Edge processing continues regardless.
+4. **Privacy and compliance.** Sensitive data (patient vitals, faces, financial records) can be processed **locally** and never leave the premises — which satisfies data-residency laws.
+5. **Real-time decisions.** Industrial control, robotics, AR/VR and gaming all require instant local responses.
+6. **Reduced cloud cost.** Less data transferred and less cloud compute consumed.
+7. **Scalability.** Millions of IoT devices would overwhelm any central cloud; the edge absorbs the load.
+
+#### The three-layer architecture
+
+```mermaid
+flowchart TD
+    L1["☁️ CLOUD LAYER<br/>Long-term storage · Big-data analytics · ML model training<br/>Latency: 100 ms – seconds"]
+    L2["🌫️ FOG LAYER<br/>Local gateways, routers, micro data centres<br/>Latency: 10 – 100 ms"]
+    L3["📱 EDGE LAYER<br/>Devices, sensors, cameras, controllers, edge servers<br/>Latency: 1 – 10 ms"]
+    L3 --> L2 --> L1
+    L1 -.->|"models, policies, commands"| L2 -.-> L3
+```
+
+#### Edge vs Fog vs Cloud computing
+
+| Point | **Edge Computing** | **Fog Computing** | **Cloud Computing** |
+|---|---|---|---|
+| **Where processing happens** | **On or beside the device** | On **local gateways / routers / micro data centres** between device and cloud | In **large, distant data centres** |
+| **Distance from the data source** | Closest (metres) | Near (same building, campus or city) | Farthest (hundreds–thousands of km) |
+| **Latency** | **Lowest (1–10 ms)** | Low (10–100 ms) | **Highest (100 ms+)** |
+| **Computing power** | **Limited** | Moderate | **Virtually unlimited** |
+| **Storage** | Very small, temporary | Moderate, short-term | **Massive, permanent** |
+| **Bandwidth used** | **Minimal** | Moderate | **High** |
+| **Works without internet?** | ✅ Yes | Partly | ❌ No |
+| **Number of nodes** | Millions | Thousands | Few large centres |
+| **Best for** | Instant control loops, sensor filtering, on-device AI inference | Local aggregation across many devices, site-wide coordination | Big-data analytics, ML **training**, long-term archives |
+| **Coined by** | — | **Cisco** | — |
+| **Example** | A camera that detects a face on-device; an ECU braking a car | A factory gateway aggregating 500 sensors; a smart-city traffic hub | AWS, Azure, Google Cloud |
+
+> **The essential relationship:** they are **complementary layers, not competitors.** Edge handles *"decide now"*, fog handles *"coordinate locally"*, and cloud handles *"remember everything and learn from it"*.
+
+#### Applications of edge computing
+
+| Sector | Application |
+|---|---|
+| **Autonomous vehicles** | Instant obstacle detection and braking decisions |
+| **Smart manufacturing (Industry 4.0)** | Machine-fault prediction and robotic control on the factory floor |
+| **Healthcare** | Patient monitors that raise an alarm locally, without cloud latency |
+| **Retail** | Smart checkout, shelf cameras, in-store analytics |
+| **Telecom / 5G** | **MEC (Multi-access Edge Computing)** at base stations |
+| **Smart cities** | Adaptive traffic signals, surveillance analytics |
+| **Energy** | Substation monitoring and protection; smart-grid control |
+| **Gaming / AR / VR** | Rendering close to the user to keep motion latency low |
+| **CDN** | Caching web content at points of presence near users |
+
+**Previous Year Question List from this Topic:**
+
+- [What is the need of edge server?](../written-answers/cloud-computing.md?plain=1#L897)
+- [(গ) Edge Computing এর ধারণা সংক্ষেপে উপস্থাপন করুন।](../written-answers/cloud-computing.md?plain=1#L918)
+
+
+---
+
+## Virtualization & Resource Allocation
+
+### Calculating VM Capacity from Physical Resources
+
+A very common numerical question: given a physical server's specification and a VM's requirement, **how many VMs can be created?**
+
+#### The method
+
+> **For each resource independently, compute:**
+> **Maximum VMs by that resource = Total available ÷ Required per VM**
+>
+> **The final answer is the MINIMUM of those values** — because the **most constrained resource (the bottleneck)** decides the limit. A VM cannot run on CPU alone; it needs *all* its resources simultaneously.
+
+#### Worked example
+
+> **A physical server has 32 CPU cores, 96 GB RAM and 4 TB storage. Each VM requires 4 CPU cores, 16 GB RAM and 500 GB storage. How many VMs can be created?**
+
+| Resource | Available | Per VM | Maximum VMs |
+|---|---|---|---|
+| **CPU** | 32 cores | 4 cores | 32 ÷ 4 = **8** |
+| **RAM** | 96 GB | 16 GB | 96 ÷ 16 = **6** ← **bottleneck** |
+| **Storage** | 4 TB = 4096 GB | 500 GB | 4096 ÷ 500 = 8.19 → **8** |
+
+> ### ✅ **Answer: 6 virtual machines** — because **RAM is the limiting resource**.
+
+**Resource utilisation after creating 6 VMs:**
+
+| Resource | Used | Total | Utilisation | Left over |
+|---|---|---|---|---|
+| CPU | 6 × 4 = 24 cores | 32 | **75 %** | **8 cores idle** |
+| RAM | 6 × 16 = 96 GB | 96 | **100 %** | **0 GB** |
+| Storage | 6 × 500 = 3000 GB | 4096 | **73 %** | **1096 GB** |
+
+**Points worth adding in the answer:**
+1. **RAM is the bottleneck**; 8 CPU cores and about 1 TB of storage are stranded.
+2. **To improve utilisation**, upgrade the RAM to **128 GB**, which would allow **8 VMs** and balance all three resources (8 × 4 = 32 cores ✅, 8 × 16 = 128 GB ✅, 8 × 500 = 4000 GB ✅).
+3. **In practice the number is lower**, because the **hypervisor itself consumes resources** — typically reserve about **1–2 CPU cores and 4–8 GB RAM** for the host. With 8 GB reserved, only (96 − 8) ÷ 16 = 5 VMs would be safe.
+4. **Over-commitment:** hypervisors allow CPU over-commitment (allocating more virtual cores than physical ones), because VMs are rarely all busy at once — ratios of 2:1 to 4:1 are common. **Memory over-commitment is far riskier** and relies on ballooning, page sharing and swapping, which hurt performance.
+5. Also budget for **storage overhead** — snapshots, swap files and thin-provisioning growth.
+
+#### The general formula
+
+> **Number of VMs = MIN( CPU_total/CPU_vm , RAM_total/RAM_vm , Storage_total/Storage_vm )**
+> *(then subtract the hypervisor's own reservation, and round DOWN)*
+
+Remember the unit conversions: **1 TB = 1024 GB**, **1 GB = 1024 MB**. *(The example above used 4 TB = 4096 GB.)*
+
+**Previous Year Question List from this Topic:**
+
+- [A physical server has 32 CPU cores, 96\text{ GB} RAM, and 4\text{ TB} storage. Each virtual machine (VM) requires 4 CPU cores, 16\text{ GB} RAM, and 500\text{ G…](../written-answers/cloud-computing.md?plain=1#L944)
+
+
+---
+
+## High Availability & System Redundancy
+
+### High Availability, Redundancy and Fault Tolerance
+
+**High Availability (HA)** is the design goal of keeping a service **running continuously with minimal downtime**, even when individual components fail.
+
+#### Availability expressed in "nines"
+
+| Availability | Downtime per year | Downtime per month | Typical use |
+|---|---|---|---|
+| 99 % ("two nines") | 3.65 days | 7.2 hours | Internal tools |
+| 99.9 % ("three nines") | **8.77 hours** | 43.8 minutes | Standard web services |
+| 99.99 % ("four nines") | **52.6 minutes** | 4.38 minutes | Business-critical systems |
+| 99.999 % ("five nines") | **5.26 minutes** | 26 seconds | Telecom, banking core, emergency services |
+
+> **Availability = MTBF / (MTBF + MTTR)**
+> where **MTBF** = Mean Time Between Failures and **MTTR** = Mean Time To Repair.
+> So availability improves either by **failing less often** or by **recovering faster** — and in practice, *reducing MTTR through automation* is usually the cheaper lever.
+
+#### The core principles
+
+| Principle | Meaning |
+|---|---|
+| **Redundancy** | Have **more than one** of every critical component — no **single point of failure (SPOF)** |
+| **Failover** | Automatically switch to the standby when the primary fails |
+| **Load balancing** | Spread traffic across healthy instances and stop sending it to sick ones |
+| **Health checks** | Continuously probe each instance to detect failure within seconds |
+| **Replication** | Keep synchronised copies of the data |
+| **Geographic distribution** | Spread across **availability zones** and **regions** so one site's disaster is survivable |
+| **Monitoring & alerting** | Detect and escalate problems before users notice |
+| **Graceful degradation** | Keep core functions working even when extras fail |
+
+#### Redundancy models
+
+| Model | Description | Cost | Failover time |
+|---|---|---|---|
+| **Active-Passive (hot standby)** | One server serves traffic; an identical standby waits, fully synchronised | Medium | Seconds |
+| **Active-Active** | **All** servers serve traffic simultaneously behind a load balancer | Higher | **Instant** — the load balancer just stops using the dead node |
+| **N + 1** | N servers needed for the load, plus 1 spare | Low overhead | Fast |
+| **2N** | A complete duplicate of the entire system | **Highest** | Instant |
+
+#### Worked design — keeping a DNS service available if one physical server fails
+
+> **Scenario:** a submarine-cable operator must ensure a **DNS service stays available even if one physical server fails**. How should the VMs/containers be placed?
+
+**The single most important rule: ANTI-AFFINITY.**
+
+> **Never place both replicas of a service on the same physical host.** If VM1 and VM2 both sit on Server A, then when Server A dies **both** die — and you have redundancy on paper but none in reality.
+
+```mermaid
+flowchart TD
+    LB["Anycast IP / Load Balancer<br/>with health checks"]
+    LB --> S1["PHYSICAL SERVER A"]
+    LB --> S2["PHYSICAL SERVER B"]
+    S1 --> V1["DNS VM / container 1<br/>(primary)"]
+    S2 --> V2["DNS VM / container 2<br/>(secondary)"]
+    V1 <-->|"zone transfer / replication"| V2
+    S1 -.->|"if Server A fails"| X["❌ VM1 lost"]
+    X -.->|"traffic automatically<br/>shifts to VM2"| V2
+```
+
+**The design, point by point:**
+
+1. **Run at least two DNS instances** (VMs or containers) — a primary and a secondary.
+2. **Place them on DIFFERENT physical servers** using an **anti-affinity rule** in the hypervisor or Kubernetes (`podAntiAffinity` with `topologyKey: kubernetes.io/hostname`). This is the answer the question is fishing for.
+3. **Better still, place them in different racks** — so a rack-level power or switch failure is also survivable. Best of all, **different availability zones or buildings**.
+4. **Use Anycast or a load balancer with health checks** so clients are automatically steered to the surviving instance within seconds.
+5. **Configure both as authoritative** with **automatic zone transfers** (AXFR/IXFR), so the data stays synchronised.
+6. **Publish both in the NS records** — the DNS protocol itself has built-in client-side failover: a resolver that gets no answer from one nameserver tries the next.
+7. **Remove other single points of failure** — dual power supplies on separate feeds, dual network paths to separate switches, and redundant storage (RAID).
+8. **Monitor and alert** on the health of both instances, and **test failover regularly** (a redundancy plan that has never been tested is not a plan).
+
+**Why DNS is a good example:** DNS was designed for redundancy from the start. Multiple NS records, short TTLs and stateless UDP queries make it one of the easiest services to make highly available — as long as you avoid the anti-affinity mistake.
+
+**Previous Year Question List from this Topic:**
+
+- [High-Availability Design: (BSCCPL AME 21-08-2026 (BUET)) A submarine cable operator wants to ensure that a DNS service remains available even if one physical se…](../written-answers/cloud-computing.md?plain=1#L983)
+
+
+---
+
+## Cloud Security & Compliance
+
+### Cloud Security Assessment, Audit and Compliance Posture
+
+#### The shared responsibility model — the foundation
+
+```mermaid
+flowchart TD
+    subgraph PROV["☁️ The PROVIDER is responsible for<br/>SECURITY **OF** THE CLOUD"]
+        P1["Physical data centres"]
+        P2["Hardware & network infrastructure"]
+        P3["Hypervisor / virtualization layer"]
+        P4["Managed service software"]
+    end
+    subgraph CUST["👤 The CUSTOMER is responsible for<br/>SECURITY **IN** THE CLOUD"]
+        C1["Data & encryption keys"]
+        C2["Identity & access management (IAM)"]
+        C3["OS patching (for IaaS)"]
+        C4["Network and firewall configuration"]
+        C5["Application code & secrets"]
+    end
+```
+
+> **The overwhelming majority of real cloud breaches come from the customer's side** — a public S3 bucket, an over-permissive IAM role, a hard-coded key in a public repository — **not** from the provider's infrastructure.
+
+#### What "cloud security posture" means
+
+**Cloud Security Posture** is the **overall security health of a cloud environment** — how well its configurations, identities, data protections and monitoring match security best practice and regulatory requirements at any moment. Tools that measure it continuously are called **CSPM (Cloud Security Posture Management)**.
+
+#### How assessment and audit reports help
+
+**Assessment** = a point-in-time or continuous **technical evaluation** of the environment.
+**Audit** = a **formal, independent verification** against a standard, producing a report.
+
+| # | How they help | Explanation |
+|---|---|---|
+| 1 | **Detect misconfigurations** | Automated scans find publicly readable storage buckets, open security groups (`0.0.0.0/0` on port 22), unencrypted volumes, disabled logging — the leading cause of cloud breaches |
+| 2 | **Find excessive permissions** | IAM analysis reveals unused accounts, over-broad roles and violations of **least privilege**, plus missing MFA on privileged accounts |
+| 3 | **Identify unpatched vulnerabilities** | Vulnerability scanning of VM images, containers and dependencies surfaces known CVEs before attackers use them |
+| 4 | **Verify encryption** | Confirms data is encrypted **at rest and in transit** and that keys are rotated and properly managed |
+| 5 | **Reveal shadow IT and unused assets** | Inventory discovery finds resources nobody remembered — forgotten test VMs, orphaned snapshots, unmanaged accounts — which are prime attack targets |
+| 6 | **Provide an audit trail** | Logs (**AWS CloudTrail**, Azure Monitor) record **who did what, when and from where** — essential for forensics and for proving accountability |
+| 7 | **Measure compliance against standards** | Automated checks map the environment to **ISO 27001, SOC 2, PCI-DSS, HIPAA, GDPR, CIS Benchmarks**, and the local **Bangladesh ICT Act / Cyber Security Act** |
+| 8 | **Prioritise remediation** | Findings are scored by risk (CVSS, business impact) so limited effort goes to the most dangerous issues first |
+| 9 | **Prove compliance to regulators and customers** | A clean independent audit report is what a bank regulator, a client or an insurer actually asks to see |
+| 10 | **Detect configuration drift** | Continuous assessment catches the moment a secure setting is changed, instead of discovering it a year later |
+| 11 | **Support incident response** | Baseline assessments make it possible to tell *normal* from *anomalous* during an incident |
+| 12 | **Drive continuous improvement** | Trending the findings over time shows whether security is genuinely getting better |
+
+#### Types of assessment
+
+| Type | Description |
+|---|---|
+| **Vulnerability assessment** | Automated scanning for known weaknesses |
+| **Penetration testing** | Authorised simulated attack to prove exploitability |
+| **Configuration / CSPM review** | Checks settings against CIS Benchmarks and provider best practice |
+| **Compliance audit** | Formal verification against ISO 27001, SOC 2, PCI-DSS, etc. |
+| **Risk assessment** | Identifies assets, threats, likelihood and business impact |
+| **Third-party / vendor assessment** | Evaluates the provider's own certifications and SOC 2 report |
+
+#### The assessment → compliance cycle
+
+```mermaid
+flowchart LR
+    A["1 . Inventory<br/>discover every asset"] --> B["2 . Assess<br/>scan configs, IAM, data, vulnerabilities"]
+    B --> C["3 . Analyse & prioritise<br/>score findings by risk"]
+    C --> D["4 . Report<br/>findings, evidence, recommendations"]
+    D --> E["5 . Remediate<br/>fix and harden"]
+    E --> F["6 . Verify<br/>re-scan to confirm"]
+    F --> G["7 . Monitor continuously<br/>detect drift"]
+    G --> B
+```
+
+#### Major cloud security threats to be able to name
+
+1. **Data breaches** and data loss.
+2. **Misconfiguration** — the single biggest real-world cause.
+3. **Weak identity and access management**; stolen or leaked credentials.
+4. **Insecure APIs and interfaces.**
+5. **Account hijacking.**
+6. **Insider threats.**
+7. **DDoS attacks.**
+8. **Insufficient logging and monitoring** — breaches going undetected for months.
+9. **Shared-technology / multi-tenancy vulnerabilities** (hypervisor escape).
+10. **Supply-chain attacks** via compromised images or dependencies.
+11. **Lack of a cloud security strategy**, and **vendor lock-in** risk.
+
+#### Best practices
+
+- Enforce **least privilege** and **MFA** on every account; eliminate long-lived root keys.
+- **Encrypt everything**, at rest and in transit, with managed keys (KMS) and rotation.
+- Enable **logging and monitoring** everywhere (CloudTrail, VPC flow logs, SIEM).
+- Use **network segmentation**, private subnets and security groups; expose nothing by default.
+- Automate with **Infrastructure as Code** and scan the templates before deployment (shift-left security).
+- Run **continuous CSPM** rather than annual audits alone.
+- Keep an **incident response plan** and **test backups by actually restoring them**.
+- Understand exactly **where the shared responsibility line sits** for each service you use.
+
+**Previous Year Question List from this Topic:**
+
+- [How do assessment and audit reports help detect vulnerabilities and ensure compliance to cloud security posture?](../written-answers/cloud-computing.md?plain=1#L1021)
