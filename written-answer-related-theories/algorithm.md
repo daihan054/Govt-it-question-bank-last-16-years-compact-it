@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 6 subtopics · 35 theories
+**Table of Contents** — 7 subtopics · 41 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -47,6 +47,14 @@
    - [Dynamic Programming and the Principle of Optimality](#dynamic-programming-and-the-principle-of-optimality)
    - [Greedy Algorithms](#greedy-algorithms)
    - [Divide and Conquer vs Dynamic Programming vs Greedy](#divide-and-conquer-vs-dynamic-programming-vs-greedy)
+
+7. **[Graph Theory & Isomorphism](#graph-theory--isomorphism)**
+   - [Graph Theory — Basic Terminology and Types](#graph-theory--basic-terminology-and-types)
+   - [Graph Isomorphism](#graph-isomorphism)
+   - [Graph Colouring, Chromatic Number, Bipartite Graphs and Cliques](#graph-colouring-chromatic-number-bipartite-graphs-and-cliques)
+   - [Trees and the n − 1 Edge Property](#trees-and-the-n--1-edge-property)
+   - [Eulerian and Hamiltonian Paths and Circuits](#eulerian-and-hamiltonian-paths-and-circuits)
+   - [Graph Connectivity — Connected, Strongly and Weakly Connected](#graph-connectivity--connected-strongly-and-weakly-connected)
 
 <!-- TOC END -->
 
@@ -2898,3 +2906,410 @@ flowchart TD
 - [(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?](../written-answers/algorithm.md?plain=1#L2817)
 - [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
 - [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
+
+## Graph Theory & Isomorphism
+
+### Graph Theory — Basic Terminology and Types
+
+A **graph** **G = (V, E)** is a collection of **vertices (nodes) V** joined by **edges (links) E**. Graphs model anything made of *things* and *connections*: road networks, social networks, computer networks, dependencies, circuits.
+
+#### Basic terminology
+
+| Term | Meaning |
+|---|---|
+| **Vertex / Node** | A point in the graph |
+| **Edge** | A connection between two vertices |
+| **Adjacent vertices** | Two vertices joined by an edge |
+| **Incident** | An edge is *incident* on the vertices it joins |
+| **Degree, deg(v)** | Number of edges touching a vertex. In a **directed** graph: **in-degree** and **out-degree** |
+| **Path** | A sequence of vertices where each consecutive pair is joined by an edge |
+| **Simple path** | A path with no repeated vertex |
+| **Cycle** | A path that starts and ends at the same vertex |
+| **Walk / Trail** | A walk may repeat anything; a **trail** may not repeat an **edge** |
+| **Loop / Self-loop** | An edge from a vertex to itself |
+| **Parallel / Multiple edges** | Two or more edges joining the same pair of vertices |
+| **Simple graph** | No loops and no parallel edges |
+| **Subgraph** | A graph formed from a subset of V and E |
+| **Isolated vertex** | A vertex of degree 0 |
+| **Pendant / Leaf vertex** | A vertex of degree 1 |
+
+#### The Handshaking Lemma
+
+> **Σ deg(v) = 2 × |E|** — the sum of all vertex degrees equals **twice** the number of edges.
+
+**Why:** every edge contributes exactly 1 to the degree of each of its two endpoints, so it is counted twice.
+
+**Consequence:** the number of vertices of **odd degree is always even**.
+
+#### Types of graph
+
+| Type | Description |
+|---|---|
+| **Undirected** | Edges have no direction — (u,v) is the same as (v,u) |
+| **Directed (digraph)** | Edges have direction — u → v |
+| **Weighted** | Each edge carries a number (cost, distance, capacity) |
+| **Complete graph Kₙ** | Every pair of vertices is joined. Has **n(n−1)/2** edges |
+| **Regular graph** | Every vertex has the **same degree** |
+| **Bipartite** | Vertices split into two sets with all edges going between the sets |
+| **Tree** | Connected and **acyclic**; has exactly **n − 1** edges |
+| **Forest** | A collection of disjoint trees |
+| **DAG** | **Directed Acyclic Graph** — directed with no cycle |
+| **Cyclic graph Cₙ** | A single cycle through all n vertices |
+| **Planar graph** | Can be drawn on paper with **no edges crossing** |
+| **Null / Empty graph** | Vertices but no edges |
+| **Multigraph** | Parallel edges and/or loops allowed |
+| **Sparse vs Dense** | E ≈ V vs E ≈ V² |
+
+#### Some useful counting facts
+
+| Fact | Formula |
+|---|---|
+| Maximum edges in a simple **undirected** graph | **n(n−1)/2** |
+| Maximum edges in a simple **directed** graph | **n(n−1)** |
+| Edges in a **tree** with n vertices | **n − 1** |
+| Edges in a **complete bipartite graph** K_{m,n} | **m × n** |
+| Minimum edges to keep n vertices connected | **n − 1** |
+| Number of labelled trees on n vertices (**Cayley's formula**) | **n^(n−2)** |
+
+**Previous Year Question List from this Topic:**
+
+- [(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique](../written-answers/algorithm.md?plain=1#L2931)
+- [True False with explanation about Graph related (Two).](../written-answers/algorithm.md?plain=1#L3014)
+- [State whether the following are True or False:](../written-answers/algorithm.md?plain=1#L3026)
+
+
+---
+
+### Graph Isomorphism
+
+Two graphs **G₁** and **G₂** are **isomorphic** (written **G₁ ≅ G₂**) if there is a **one-to-one and onto mapping (bijection)** between their vertex sets that **preserves adjacency**:
+
+> **u and v are adjacent in G₁ ⟺ f(u) and f(v) are adjacent in G₂.**
+
+**In plain words:** the two graphs are **structurally identical** — one is just the other with the vertices **relabelled** or **redrawn**. The picture may look completely different while the underlying structure is the same.
+
+#### The checking procedure
+
+Check these **invariants** — properties that must be equal if the graphs are isomorphic:
+
+| # | Invariant | Must match? |
+|---|---|---|
+| 1 | Number of **vertices** | ✅ |
+| 2 | Number of **edges** | ✅ |
+| 3 | **Degree sequence** (the sorted list of degrees) | ✅ |
+| 4 | Number of **connected components** | ✅ |
+| 5 | Number of **cycles of each length** (girth, triangle count) | ✅ |
+| 6 | Whether the graph is **bipartite / planar / connected** | ✅ |
+| 7 | The **chromatic number** | ✅ |
+| 8 | Eigenvalues of the adjacency matrix | ✅ |
+
+> **The crucial asymmetry — state this in the exam:**
+> - If **any** invariant **differs** → the graphs are **definitely NOT isomorphic**. One mismatch is a complete proof.
+> - If **all** invariants **match** → this is **not** a proof of isomorphism. You must **exhibit an actual vertex mapping** and verify that every edge is preserved.
+
+#### Worked example
+
+**G₁:** vertices {A, B, C, D}, edges {A–B, B–C, C–D, D–A}
+**G₂:** vertices {1, 2, 3, 4}, edges {1–2, 2–4, 4–3, 3–1}
+
+| Check | G₁ | G₂ | Match? |
+|---|---|---|---|
+| Vertices | 4 | 4 | ✅ |
+| Edges | 4 | 4 | ✅ |
+| Degree sequence | (2,2,2,2) | (2,2,2,2) | ✅ |
+| Structure | A 4-cycle | A 4-cycle | ✅ |
+
+**The mapping:** A→1, B→2, C→4, D→3.
+Verify: A–B → 1–2 ✅ · B–C → 2–4 ✅ · C–D → 4–3 ✅ · D–A → 3–1 ✅
+
+> **Conclusion: the graphs ARE isomorphic**, because the mapping A→1, B→2, C→4, D→3 preserves every edge.
+
+#### How to write the one-sentence justification
+
+- **If isomorphic:** *"The graphs are isomorphic, because the bijection A→1, B→2, C→4, D→3 maps every edge of G₁ onto an edge of G₂ and vice versa."*
+- **If not isomorphic:** *"The graphs are not isomorphic, because their degree sequences differ — G₁ has (3,3,2,2) while G₂ has (3,2,2,2,1)."*
+  *(Any single mismatched invariant — edge count, degree sequence, triangle count, connectivity — is sufficient.)*
+
+**Complexity note:** no polynomial-time algorithm for general graph isomorphism is known, yet the problem has never been proved NP-complete. It sits in a special class often called **GI**, and is one of the few natural problems suspected to be neither in P nor NP-complete.
+
+**Previous Year Question List from this Topic:**
+
+- [Determine whether the following pair of graphs are isomorphic, and justify your answer in one sentence.](../written-answers/algorithm.md?plain=1#L2913)
+
+
+---
+
+### Graph Colouring, Chromatic Number, Bipartite Graphs and Cliques
+
+#### Graph colouring and the chromatic number
+
+**Graph colouring** assigns a colour to every vertex such that **no two adjacent vertices share the same colour**. This is called a **proper colouring**.
+
+> The **chromatic number χ(G)** is the **minimum number of colours** needed for a proper colouring of G.
+
+| Graph | χ(G) | Why |
+|---|---|---|
+| Null graph (no edges) | **1** | Nothing is adjacent |
+| **Bipartite graph** (including trees, even cycles) | **2** | Colour the two sides differently |
+| **Complete graph Kₙ** | **n** | Every vertex touches every other |
+| **Odd cycle** C₃, C₅, C₇ … | **3** | An odd cycle cannot be 2-coloured |
+| Even cycle C₄, C₆ … | **2** | |
+| Any **planar** graph | **≤ 4** | The **Four Colour Theorem** |
+
+**Bounds:** **ω(G) ≤ χ(G) ≤ Δ(G) + 1**, where ω is the clique number and Δ is the maximum degree (**Brooks' theorem**).
+
+**Applications of graph colouring**
+
+| Application | Vertices | Edges mean | Colours are |
+|---|---|---|---|
+| **Exam timetabling** | Exams | Two exams share a student | Time slots |
+| **Register allocation** in compilers | Variables | Two variables are live at the same time | CPU registers |
+| **Radio frequency assignment** | Transmitters | Two towers are close enough to interfere | Frequencies |
+| **Map colouring** | Countries | Countries share a border | Map colours |
+| **Sudoku** | Cells | Cells in the same row/column/box | Digits 1–9 |
+
+#### Bipartite graphs
+
+A graph is **bipartite** if its vertices can be divided into two **disjoint** sets **U** and **V** such that **every edge joins a vertex of U to a vertex of V** — no edge lies inside a set.
+
+```mermaid
+flowchart LR
+    subgraph U["Set U"]
+        U1((u1))
+        U2((u2))
+        U3((u3))
+    end
+    subgraph V["Set V"]
+        V1((v1))
+        V2((v2))
+    end
+    U1 --- V1
+    U1 --- V2
+    U2 --- V1
+    U3 --- V2
+```
+
+**Three equivalent definitions** (all worth quoting):
+1. The vertices can be split into two independent sets.
+2. **χ(G) = 2** — the graph is 2-colourable.
+3. **The graph contains no cycle of odd length.**
+
+**How to test:** run **BFS** from any vertex, colouring each level alternately. If you ever find an edge joining two vertices of the same colour, the graph is **not** bipartite. **Time: O(V + E).**
+
+**Complete bipartite graph K_{m,n}:** every vertex of U joined to every vertex of V — it has **m × n** edges.
+
+**Examples:** students ↔ courses (edge = "is enrolled"); job applicants ↔ jobs; a chessboard's black and white squares; any **tree**.
+
+#### Cliques
+
+A **clique** is a subset of vertices in which **every pair is adjacent** — i.e. a **complete subgraph**.
+
+| Term | Meaning |
+|---|---|
+| **Clique of size k** | k vertices, all mutually adjacent; it has **k(k−1)/2** edges |
+| **Maximal clique** | A clique that cannot be extended by adding any vertex |
+| **Maximum clique** | The **largest** clique in the graph |
+| **Clique number ω(G)** | The size of the maximum clique |
+
+**Example:** in a social network, a clique is a group of people who **all** know each other.
+
+> **Complexity:** finding the **maximum clique is NP-complete** — one of Karp's original 21 NP-complete problems. So is deciding whether a clique of size k exists.
+
+**Related concept — Independent Set:** the opposite of a clique; a set of vertices with **no** edges between them. A clique in G is exactly an independent set in the **complement** graph Ḡ.
+
+**Previous Year Question List from this Topic:**
+
+- [(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique](../written-answers/algorithm.md?plain=1#L2931)
+
+
+---
+
+### Trees and the n − 1 Edge Property
+
+A **tree** is a **connected** graph with **no cycle**.
+
+#### Equivalent definitions
+
+For a graph T with n vertices, the following are **all equivalent** — each one implies the others:
+
+1. T is **connected** and **acyclic**.
+2. T is connected and has exactly **n − 1 edges**.
+3. T is acyclic and has exactly **n − 1 edges**.
+4. There is **exactly one simple path** between every pair of vertices.
+5. T is connected, but **removing any edge disconnects it** (every edge is a bridge).
+6. T is acyclic, but **adding any edge creates exactly one cycle**.
+
+#### Theorem: a tree with n vertices has exactly n − 1 edges
+
+**Proof by mathematical induction on n.**
+
+**Base case (n = 1):** a tree with a single vertex has **0** edges, and 1 − 1 = 0 ✅
+
+**Inductive hypothesis:** assume every tree with **k** vertices has exactly **k − 1** edges.
+
+**Inductive step (n = k + 1):** let T be any tree with k + 1 vertices.
+
+*First, T must have a leaf (a vertex of degree 1).* Suppose not — then every vertex has degree ≥ 2. Start at any vertex and keep walking along unused edges; since every vertex has another edge to leave by, the walk never stops, but the graph is finite, so some vertex must repeat — which creates a **cycle**. That contradicts T being a tree. **So a leaf v exists.**
+
+*Now remove that leaf.* Delete v and its single edge, giving a graph **T′** with **k** vertices.
+- T′ is still **connected**: v had degree 1, so no path between two other vertices ever passed *through* v.
+- T′ is still **acyclic**: removing things cannot create a cycle.
+- Therefore **T′ is a tree with k vertices**, and by the hypothesis it has **k − 1 edges**.
+
+*Put the leaf back:* T has T′'s edges plus the one edge to v:
+
+> **Edges of T = (k − 1) + 1 = k = (k + 1) − 1** ✅
+
+By the principle of mathematical induction, **every tree with n vertices has exactly n − 1 edges. ∎**
+
+#### Related counts
+
+| Statement | Value |
+|---|---|
+| Edges in a tree with n vertices | **n − 1** |
+| Sum of degrees in a tree | 2(n − 1) |
+| A forest with n vertices and c components | **n − c** edges |
+| Minimum number of leaves in a tree with n ≥ 2 vertices | **2** |
+| Edges in a spanning tree of any connected graph | **n − 1** |
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) দেখান যে, n সংখ্যক vertex এর একটি tree এর ঠিক n-1 সংখ্যক edge আছে।](../written-answers/algorithm.md?plain=1#L2953)
+- [True False with explanation about Graph related (Two).](../written-answers/algorithm.md?plain=1#L3014)
+- [State whether the following are True or False:](../written-answers/algorithm.md?plain=1#L3026)
+
+
+---
+
+### Eulerian and Hamiltonian Paths and Circuits
+
+#### Eulerian path and circuit
+
+These come from Euler's 1736 solution of the **Seven Bridges of Königsberg** problem — the birth of graph theory.
+
+| Term | Definition |
+|---|---|
+| **Eulerian path (trail)** | A path that uses **every EDGE exactly once** (vertices may repeat) |
+| **Eulerian circuit (cycle)** | An Eulerian path that **starts and ends at the same vertex** |
+| **Eulerian graph** | A graph that has an Eulerian circuit |
+
+#### Necessary and sufficient conditions — undirected graph
+
+> **A connected graph has an EULERIAN CIRCUIT if and only if every vertex has EVEN degree.**
+>
+> **A connected graph has an EULERIAN PATH (but not a circuit) if and only if it has exactly TWO vertices of ODD degree.** The path must then **start at one odd vertex and end at the other**.
+
+| Number of odd-degree vertices | Result |
+|---|---|
+| **0** | ✅ Eulerian **circuit** (and therefore also a path) |
+| **2** | ✅ Eulerian **path** only, between the two odd vertices |
+| **Any other number (4, 6, …)** | ❌ **Neither** |
+
+*(A graph can never have an odd number of odd-degree vertices — the Handshaking Lemma forbids it.)*
+
+**Why the condition is necessary:** every time the path enters a vertex it must also leave it, using two edges. So each intermediate visit consumes an even number of edges — every vertex must have even degree, except the start and end of an open path, which are entered/left one extra time.
+
+**Directed graphs:** an Eulerian circuit exists iff the graph is connected and **in-degree = out-degree for every vertex**. An Eulerian path exists iff exactly one vertex has out-degree − in-degree = 1 (the start), one has in-degree − out-degree = 1 (the end), and all others are balanced.
+
+**Finding one:** **Hierholzer's algorithm** in **O(E)**, or Fleury's algorithm.
+
+#### Hamiltonian path and circuit
+
+| Term | Definition |
+|---|---|
+| **Hamiltonian path** | A path that visits **every VERTEX exactly once** |
+| **Hamiltonian circuit** | A Hamiltonian path that returns to the starting vertex |
+
+**Sufficient conditions** (not necessary):
+- **Dirac's theorem:** if n ≥ 3 and every vertex has degree ≥ **n/2**, a Hamiltonian circuit exists.
+- **Ore's theorem:** if deg(u) + deg(v) ≥ n for every pair of **non-adjacent** u, v, a Hamiltonian circuit exists.
+
+#### Eulerian vs Hamiltonian — the key contrast
+
+| Point | **Eulerian** | **Hamiltonian** |
+|---|---|---|
+| Visits every … | **EDGE** exactly once | **VERTEX** exactly once |
+| Simple test exists? | ✅ **Yes** — just check the degrees | ❌ **No** |
+| Complexity of deciding | **O(V + E)** — easy | **NP-complete** — hard |
+| Related real problem | Chinese Postman / route inspection, DNA sequencing | **Travelling Salesman Problem** |
+
+> **Memory hook:** **E**ulerian = **E**dges. Hamiltonian = vertices (think of Hamilton's "Icosian game", where you visit *cities*).
+
+**Previous Year Question List from this Topic:**
+
+- [(b) Define Eulerian path. What are the necessary and sufficient conditions for the Eulerian path? Expalin.](../written-answers/algorithm.md?plain=1#L2976)
+
+
+---
+
+### Graph Connectivity — Connected, Strongly and Weakly Connected
+
+#### Undirected graphs
+
+| Term | Meaning |
+|---|---|
+| **Connected graph** | There is a path between **every pair** of vertices |
+| **Disconnected** | At least one pair has no path between them |
+| **Connected component** | A maximal connected piece of the graph |
+| **Bridge / Cut edge** | An edge whose removal **increases** the number of components |
+| **Articulation point / Cut vertex** | A vertex whose removal disconnects the graph |
+
+Connectivity is checked with a single **BFS or DFS**: if one traversal from any vertex reaches all V vertices, the graph is connected. **O(V + E)**.
+
+#### Directed graphs
+
+For directed graphs the direction of the edges matters, giving two levels of connectivity:
+
+| Term | Definition |
+|---|---|
+| **Strongly connected** | For **every ordered pair (u, v)** there is a directed path from u to v **AND** from v to u. Every vertex can reach every other, respecting the arrow directions |
+| **Weakly connected** | The graph becomes connected if you **ignore the edge directions** (treat it as undirected), but it is not strongly connected |
+| **Strongly Connected Component (SCC)** | A maximal set of vertices that is strongly connected among itself |
+
+```mermaid
+flowchart LR
+    subgraph SC["Strongly connected — you can get anywhere from anywhere"]
+        A((A)) --> B((B))
+        B --> C((C))
+        C --> A
+    end
+    subgraph WC["Weakly connected only — no way back from C"]
+        D((A)) --> E((B))
+        E --> F((C))
+    end
+```
+
+In the right-hand graph you can reach C from A, but there is **no directed path from C back to A**, so it is only **weakly** connected.
+
+> ### "What is a strongly connected graph?"
+> A **directed graph is strongly connected** if there exists a **directed path from every vertex to every other vertex** — that is, for any two vertices u and v, you can travel u → v *and* v → u following the edge directions. Equivalently, the whole graph forms a **single strongly connected component**.
+
+**How to test strong connectivity — Kosaraju's method, O(V + E):**
+1. Run **DFS** from any vertex v. If it does not reach all vertices → **not** strongly connected.
+2. **Reverse** every edge of the graph (the transpose Gᵀ).
+3. Run **DFS** from the **same** vertex v on Gᵀ. If it reaches all vertices → the graph **is strongly connected**.
+
+*(Step 1 proves v can reach everyone; step 3 proves everyone can reach v. Together these give a path between any pair, through v.)*
+
+Other algorithms for finding **all** SCCs: **Kosaraju's**, **Tarjan's** (single DFS), and **Gabow's** — all O(V + E).
+
+#### Some True/False statements to know
+
+| Statement | Verdict | Reason |
+|---|---|---|
+| Every strongly connected graph is weakly connected | **True** | Strong connectivity is the stronger condition |
+| Every weakly connected graph is strongly connected | **False** | See the counter-example above |
+| A tree with n vertices has n−1 edges | **True** | Proved by induction |
+| A graph with n vertices and n−1 edges must be a tree | **False** | It must also be **connected**; otherwise it could be a cycle plus an isolated vertex |
+| DFS can be used to detect a cycle in a directed graph | **True** | Look for a back edge to a vertex on the recursion stack |
+| DFS always finds the shortest path | **False** | Only BFS does (unweighted graphs) |
+| A complete graph Kₙ has n(n−1)/2 edges | **True** | Every pair is joined |
+| Every graph has an even number of odd-degree vertices | **True** | Handshaking Lemma |
+| A graph with all even degrees has an Eulerian circuit | **True** | Provided it is connected |
+| Topological sorting is possible for any directed graph | **False** | Only for a **DAG** — a cycle makes it impossible |
+
+**Previous Year Question List from this Topic:**
+
+- [(c) What is a strongly connected graph?](../written-answers/algorithm.md?plain=1#L2999)
+- [True False with explanation about Graph related (Two).](../written-answers/algorithm.md?plain=1#L3014)
+- [State whether the following are True or False:](../written-answers/algorithm.md?plain=1#L3026)
