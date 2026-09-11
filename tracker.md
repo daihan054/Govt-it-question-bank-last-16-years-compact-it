@@ -38,7 +38,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ---
 
-## Progress — 17 of 24 files done
+## Progress — 18 of 24 files done
 
 | # | File | Status | New theories | Note |
 |---|---|---|---|---|
@@ -56,7 +56,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 | 12 | web-technology.md | ✅ done | 3 | PHP syntax, web servers/CMS, XML/XSLT |
 | | **REMAINING (11 files)** | | | |
 | 14 | c-programming.md | ✅ done | 4 | data types/identifiers, escape sequences, arrays, pointer decls |
-| 15 | computer-fundamental.md | ⬜ pending | | 171 MCQs, 6 subtopics |
+| 15 | computer-fundamental.md | ✅ done | 4 | display/output devices, PC internals, early machines & units, software categories |
 | 16 | computer-network-security.md | ✅ done | 4 | steganography/ciphers, virus types, cyber ethics/law, secure protocols |
 | 17 | computer-networks.md | ⬜ pending | | 340 MCQs, 13 subtopics — **largest IT file** |
 | 18 | dld.md | ✅ done | 2 | bitwise ops/masking, character encoding & data units |
@@ -74,7 +74,7 @@ A new `##` section is created by appending a fragment starting with `\n---\n\n##
 
 ## ▶ RESUME HERE
 
-**Next file: `computer-fundamental.md`.**
+**Next file: `electrical-and-electronics.md`.**
 
 The per-file loop:
 
