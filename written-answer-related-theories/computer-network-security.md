@@ -1021,12 +1021,27 @@ flowchart TD
 > **Ciphertext C = 26**
 
 **Step 7 — decrypt C = 26:**
-> P = 26³⁷ mod 77
-> Using modular exponentiation (26² = 676 mod 77 = 60; 26⁴ = 60² = 3600 mod 77 = 55; 26⁸ = 55² = 3025 mod 77 = 44; 26¹⁶ = 44² = 1936 mod 77 = 12; 26³² = 12² = 144 mod 77 = 67)
-> 26³⁷ = 26³² × 26⁴ × 26¹ = 67 × 55 × 26 mod 77
-> 67 × 55 = 3685 mod 77 = 3685 − 3619 = 66 · 66 × 26 = 1716 mod 77 = 1716 − 1694 = **22**
 
-*(Note: with these particular small numbers the arithmetic must be done very carefully; the standard textbook set p = 3, q = 11, n = 33, φ = 20, e = 7, d = 3 gives a cleaner check: encrypting P = 2 gives C = 2⁷ mod 33 = 128 mod 33 = **29**, and decrypting gives 29³ mod 33 = 24389 mod 33 = **2** ✅ — use that set if you must show the full arithmetic under time pressure.)*
+> P = 26³⁷ mod 77
+
+Use **repeated squaring** (write 37 = 32 + 4 + 1):
+
+| Power | Working | Result mod 77 |
+|---|---|---|
+| 26¹ | — | **26** |
+| 26² | 26 × 26 = 676; 676 − (77 × 8 = 616) | **60** |
+| 26⁴ | 60² = 3600; 3600 − (77 × 46 = 3542) | **58** |
+| 26⁸ | 58² = 3364; 3364 − (77 × 43 = 3311) | **53** |
+| 26¹⁶ | 53² = 2809; 2809 − (77 × 36 = 2772) | **37** |
+| 26³² | 37² = 1369; 1369 − (77 × 17 = 1309) | **60** |
+
+> 26³⁷ = 26³² × 26⁴ × 26¹ = 60 × 58 × 26 mod 77
+> 60 × 58 = 3480; 3480 − (77 × 45 = 3465) = **15**
+> 15 × 26 = 390; 390 − (77 × 5 = 385) = **5**
+
+> ### ✅ **Decrypted P = 5** — exactly the original message. The round trip works.
+
+*(A smaller set that is quicker to compute under exam pressure: **p = 3, q = 11 → n = 33, φ = 20, e = 7, d = 3**. Encrypting P = 2 gives C = 2⁷ mod 33 = 128 mod 33 = **29**; decrypting gives 29³ mod 33 = 24389 mod 33 = **2** ✅)*
 
 #### Why RSA is secure
 
