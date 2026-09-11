@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 15 theories
+**Table of Contents** — 4 subtopics · 20 theories
 
 1. **[Basic Programs & Control Statements](#basic-programs--control-statements)**
    - [C Program Structure and the Compilation Process](#c-program-structure-and-the-compilation-process)
@@ -21,6 +21,13 @@
    - [Call by Value vs Call by Reference (Parameter Passing)](#call-by-value-vs-call-by-reference-parameter-passing)
    - [Recursion — Concept, Base Case and the Recursion Tree](#recursion--concept-base-case-and-the-recursion-tree)
    - [Classic Recursive Problems](#classic-recursive-problems)
+
+4. **[Operators, Data Types & Language Concepts](#operators-data-types--language-concepts)**
+   - [Data Types in C](#data-types-in-c)
+   - [Operators in C](#operators-in-c)
+   - [Variables, Scope, Lifetime and Storage Classes](#variables-scope-lifetime-and-storage-classes)
+   - [Structure, Union and Array — Differences](#structure-union-and-array--differences)
+   - [Types of Errors in Programming](#types-of-errors-in-programming)
 
 <!-- TOC END -->
 
@@ -2012,3 +2019,436 @@ int rowSum(int a[][100], int row, int col) {
 - [Write Algorithm of Fibonacci series.](../written-answers/c-programming.md?plain=1#L8723)
 - [Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.](../written-answers/c-programming.md?plain=1#L8781)
 - [a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. (5 marks)](../written-answers/c-programming.md?plain=1#L8826)
+
+## Operators, Data Types & Language Concepts
+
+### Data Types in C
+
+A **data type** tells the compiler **what kind of value** a variable holds, **how much memory** to reserve, and **which operations** are legal on it.
+
+```mermaid
+flowchart TD
+    A["C Data Types"] --> B["1 . Primary / Basic"]
+    A --> C["2 . Derived"]
+    A --> D["3 . User-defined"]
+    A --> E["4 . Void"]
+    B --> B1["int"]
+    B --> B2["char"]
+    B --> B3["float"]
+    B --> B4["double"]
+    C --> C1["Array"]
+    C --> C2["Pointer"]
+    C --> C3["Function"]
+    D --> D1["structure"]
+    D --> D2["union"]
+    D --> D3["enum"]
+    D --> D4["typedef"]
+```
+
+#### 1. Primary (basic / fundamental) data types
+
+| Type | Size | Range | Format | Use |
+|---|---|---|---|---|
+| **`char`** | 1 byte | −128 to 127 | `%c` | A single character |
+| **`unsigned char`** | 1 byte | 0 to 255 | `%c` | Byte data |
+| **`short int`** | 2 bytes | −32,768 to 32,767 | `%hd` | Small integers |
+| **`int`** | **4 bytes** | −2,147,483,648 to 2,147,483,647 | `%d` | **The default integer** |
+| **`unsigned int`** | 4 bytes | 0 to 4,294,967,295 | `%u` | Counts, sizes (never negative) |
+| **`long int`** | 4 or 8 bytes | platform dependent | `%ld` | Larger integers |
+| **`long long int`** | 8 bytes | ±9.22 × 10¹⁸ | `%lld` | Very large integers |
+| **`float`** | 4 bytes | ±3.4 × 10³⁸, ~**6–7** digits precision | `%f` | Single-precision reals |
+| **`double`** | 8 bytes | ±1.7 × 10³⁰⁸, ~**15–16** digits | `%lf` | **Default for reals** |
+| **`long double`** | 10/12/16 bytes | larger still | `%Lf` | Scientific computing |
+
+*(Sizes are for a typical 32/64-bit compiler. The C standard only guarantees `char` ≤ `short` ≤ `int` ≤ `long` ≤ `long long`. Always use `sizeof` to be sure.)*
+
+#### 2. Derived data types
+
+| Type | Meaning | Example |
+|---|---|---|
+| **Array** | A collection of same-type elements | `int a[10];` |
+| **Pointer** | Holds a memory address | `int *p;` |
+| **Function** | A named block returning a type | `int f(int);` |
+
+#### 3. User-defined data types
+
+| Type | Purpose | Example |
+|---|---|---|
+| **`struct`** | Group **different** types into one record | `struct Student { int roll; char name[50]; float cgpa; };` |
+| **`union`** | Like a struct, but **all members share one memory location** | `union U { int i; float f; };` |
+| **`enum`** | Named integer constants | `enum Day { SUN, MON, TUE };` (SUN = 0, MON = 1 …) |
+| **`typedef`** | Creates an alias for an existing type | `typedef unsigned int uint;` |
+
+#### 4. The `void` type
+
+`void` means "**no type / no value**". Three uses: a function that returns nothing (`void f()`), a function that takes nothing (`int f(void)`), and the **generic pointer** `void *`.
+
+#### Type modifiers and qualifiers
+
+| Keyword | Effect |
+|---|---|
+| **`signed`** / **`unsigned`** | Allow or forbid negative values (unsigned doubles the positive range) |
+| **`short`** / **`long`** | Decrease or increase the size |
+| **`const`** | The value cannot be changed after initialisation |
+| **`volatile`** | Tells the compiler the value may change unexpectedly (hardware registers, ISRs) — do not optimise it away |
+| **`static`** | Local: keeps its value between calls. Global/function: restricts visibility to this file |
+| **`extern`** | Declares a variable defined in **another file** |
+| **`register`** | A hint to keep the variable in a CPU register (largely ignored by modern compilers) |
+
+#### Type conversion
+
+```c
+/* IMPLICIT (automatic) — the compiler promotes the smaller type */
+int i = 10;  float f = 3.5;
+float r = i + f;              /* i → 10.0, result 13.5 */
+
+/* EXPLICIT (type casting) — the programmer forces it */
+int a = 7, b = 2;
+float avg = (float)a / b;     /* 3.5 — without the cast it would be 3 */
+int n = (int)3.99;            /* 3 — truncates, does NOT round */
+```
+
+**Previous Year Question List from this Topic:**
+
+- [(খ) আমি কী ৩২৬৭৮ মান সংরক্ষণ করতে ‘int’ ডাটা টাইপ ব্যবহার করতে পারি? না পারলে কেন?](../written-answers/c-programming.md?plain=1#L8974)
+- [Write some default data type in C.](../written-answers/c-programming.md?plain=1#L9217)
+- [Using examples explain data types used in C language.](../written-answers/c-programming.md?plain=1#L9558)
+- [(ক) C ভাষায় ব্যবহৃত বিভিন্ন ধরনের Data Type বর্ণনা করুন।](../written-answers/c-programming.md?plain=1#L877)
+
+
+---
+
+### Operators in C
+
+An **operator** performs an operation on one or more **operands**.
+
+#### The categories
+
+| Category | Operators | Note |
+|---|---|---|
+| **Arithmetic** | `+` `-` `*` `/` `%` | `%` works on **integers only** |
+| **Relational** | `==` `!=` `>` `<` `>=` `<=` | Result is 1 (true) or 0 (false) |
+| **Logical** | `&&` `\|\|` `!` | **Short-circuit** evaluation |
+| **Bitwise** | `&` `\|` `^` `~` `<<` `>>` | Operate bit by bit |
+| **Assignment** | `=` `+=` `-=` `*=` `/=` `%=` `&=` `\|=` `^=` `<<=` `>>=` | Right-to-left associative |
+| **Increment / Decrement** | `++` `--` | Prefix and postfix forms differ |
+| **Conditional (ternary)** | `? :` | The only **three-operand** operator |
+| **Special** | `sizeof` `&` `*` `.` `->` `,` `()` `[]` | |
+
+#### Bitwise operators — worth knowing for tracing questions
+
+```c
+int a = 12;    /* binary 1100 */
+int b = 10;    /* binary 1010 */
+
+a & b   /* 1000 = 8   — AND: 1 only if BOTH bits are 1 */
+a | b   /* 1110 = 14  — OR : 1 if EITHER bit is 1      */
+a ^ b   /* 0110 = 6   — XOR: 1 if the bits DIFFER      */
+~a      /* -13        — NOT: flips every bit (2's complement) */
+a << 2  /* 110000 = 48 — left shift  = multiply by 2^2 */
+a >> 2  /* 11 = 3      — right shift = divide by 2^2   */
+```
+
+**Common bitwise idioms:**
+
+| Task | Expression |
+|---|---|
+| Check if n is **even** | `(n & 1) == 0` |
+| Multiply by 2 | `n << 1` |
+| Divide by 2 | `n >> 1` |
+| Set bit k | `n \| (1 << k)` |
+| Clear bit k | `n & ~(1 << k)` |
+| Toggle bit k | `n ^ (1 << k)` |
+| Test bit k | `(n >> k) & 1` |
+| Swap without a temp | `a^=b; b^=a; a^=b;` |
+
+#### Order of evaluation questions
+
+```c
+int a = 5, b = 3, c = 2;
+int x = a + b * c;              /* 5 + 6  = 11 */
+int y = (a + b) * c;            /* 8 * 2  = 16 */
+int z = a > b == 1;             /* (a>b)=1, then 1==1 → 1 */
+int w = a & b == 3;             /* == binds TIGHTER than & →  a & (b==3) = 5 & 1 = 1 */
+```
+> **The last line is the classic trap:** `==` has **higher precedence than the bitwise `&`**, so `a & b == 3` means `a & (b == 3)`, **not** `(a & b) == 3`. Always parenthesise when mixing bitwise and comparison operators.
+
+**Previous Year Question List from this Topic:**
+
+- [(গ) ‘++i’ এবং ‘i++’ অভিব্যক্তি দুটির মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L8994)
+- [Short question: (i) Difference between ++i and i++ (ii) Difference between Overloading and Overriding (iii) Polymorphism in Java (iv) String variable (v) Contro…](../written-answers/c-programming.md?plain=1#L9260)
+- [উদাহরণসহ i++ and ++i এর মধ্যে পার্থক্য লিখুন। Nested if কী?](../written-answers/c-programming.md?plain=1#L9416)
+- [Which of the following is the correct order of evaluation?](../written-answers/c-programming.md?plain=1#L9490)
+
+
+---
+
+### Variables, Scope, Lifetime and Storage Classes
+
+#### The four storage classes
+
+| Storage class | Stored in | Default value | Scope | Lifetime |
+|---|---|---|---|---|
+| **`auto`** (the default for locals) | **Stack** | **Garbage** | Block | Until the block exits |
+| **`register`** | CPU register (hint) | Garbage | Block | Until the block exits |
+| **`static`** | **Data segment** | **0** | Block (or file, for globals) | **The whole program** |
+| **`extern`** | Data segment | 0 | **Global, across files** | The whole program |
+
+#### Local vs Global variables
+
+```c
+#include <stdio.h>
+int g = 10;                     /* GLOBAL — outside every function */
+
+void f() {
+    int l = 20;                 /* LOCAL — inside the function */
+    printf("%d %d\n", g, l);
+}
+int main() {
+    f();
+    printf("%d\n", g);
+    /* printf("%d", l); */      /* ❌ ERROR — l is not visible here */
+}
+```
+
+| Point | **Local variable** | **Global variable** |
+|---|---|---|
+| **Declaration** | Inside a function or block | Outside all functions |
+| **Scope (visibility)** | Only within that block | **Entire program / file** |
+| **Lifetime** | Created at entry, destroyed at exit | Entire program execution |
+| **Default value** | **Garbage** (undefined) | **Zero** |
+| **Memory area** | **Stack** | **Data / BSS segment** |
+| **Who can access it** | Only its own function | **Every** function |
+| **Name collisions** | The local **shadows** the global of the same name | — |
+| **Advantage** | Safe, isolated, memory freed automatically | Easy sharing between functions |
+| **Disadvantage** | Cannot be shared | Any function can change it → **hard to debug**, and it occupies memory for the whole run |
+| **Best practice** | **Prefer locals** | Use rarely; prefer passing parameters |
+
+#### The `static` keyword — two different meanings
+
+```c
+/* 1. static LOCAL variable — keeps its value between calls */
+void counter() {
+    static int count = 0;       /* initialised only ONCE */
+    count++;
+    printf("%d ", count);
+}
+/* counter(); counter(); counter();  →  1 2 3 */
+
+/* 2. static GLOBAL variable or function — visible only in THIS source file
+      (internal linkage — hides it from other .c files) */
+static int fileOnly = 5;
+static void helper() { }
+```
+
+**Previous Year Question List from this Topic:**
+
+- [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8939)
+
+
+---
+
+### Structure, Union and Array — Differences
+
+#### Structure
+
+A **structure** groups **variables of different data types** under one name, as a single record.
+
+```c
+struct Student {
+    int   roll;
+    char  name[50];
+    float cgpa;
+};
+
+struct Student s1 = {101, "Rahim", 3.75};
+printf("%s scored %.2f", s1.name, s1.cgpa);     /* '.' for a variable,
+                                                   '->' for a pointer */
+```
+
+#### Nested structure
+
+A **nested structure** is a structure that contains **another structure as a member**. It is used when a field is itself a compound piece of information.
+
+```c
+struct Date {
+    int day, month, year;
+};
+
+struct Employee {
+    int   id;
+    char  name[50];
+    struct Date joiningDate;        /* ← a structure INSIDE a structure */
+    struct Date dob;
+};
+
+struct Employee e = {101, "Karim", {15, 7, 2020}, {2, 3, 1995}};
+printf("%d-%d-%d", e.joiningDate.day,             /* chained dot operator */
+                   e.joiningDate.month,
+                   e.joiningDate.year);
+```
+
+**Why nesting helps:** `Date` is defined **once** and reused for both `joiningDate` and `dob`. It keeps related fields grouped, improves readability, and models real-world hierarchy (a Company contains Departments, which contain Employees, who have an Address).
+
+#### Union
+
+A **union** looks like a structure but **all members share the SAME memory location**, so its size equals the size of its **largest** member and **only one member holds a valid value at a time**.
+
+```c
+union Data {
+    int   i;        /* 4 bytes */
+    float f;        /* 4 bytes */
+    char  str[20];  /* 20 bytes */
+};                  /* sizeof(union Data) = 20, NOT 28 */
+
+union Data d;
+d.i = 10;
+printf("%d\n", d.i);      /* 10 — correct */
+d.f = 3.14;               /* this OVERWRITES the same memory */
+printf("%d\n", d.i);      /* garbage — i was destroyed by writing f */
+```
+
+#### Structure vs Union
+
+| Point | **Structure** | **Union** |
+|---|---|---|
+| **Keyword** | `struct` | `union` |
+| **Memory** | Each member has its **own** memory | **All members share ONE** memory block |
+| **Size** | **Sum** of all members (+ padding) | Size of the **largest** member |
+| **Members valid at once** | **All** | **Only one** |
+| **Writing one member** | Does not affect the others | **Destroys** the others |
+| **Memory efficiency** | Uses more | **Uses less** |
+| **Used when** | You need **all** fields together (a student record) | You need **only one** field at a time (a variant/tagged value, hardware registers, memory-constrained systems) |
+| **Initialisation** | Several members can be initialised | Only the **first** member can be initialised |
+
+#### Array vs Structure
+
+| Point | **Array** | **Structure** |
+|---|---|---|
+| **Data types held** | **Same type only** (homogeneous) | **Different types** (heterogeneous) |
+| **Keyword** | none — `int a[10];` | `struct` |
+| **Element access** | By **index**: `a[0]`, `a[1]` | By **member name**: `s.roll`, `s.name` |
+| **Memory** | Always **contiguous** | Contiguous, but may contain **padding** for alignment |
+| **Size** | `n × sizeof(type)` | Sum of members + padding |
+| **Can be assigned wholesale** | ❌ No (`a = b;` is illegal) | ✅ **Yes** (`s1 = s2;` is legal) |
+| **Can be passed by value** | ❌ No — decays to a pointer | ✅ **Yes** |
+| **Can a function return it** | ❌ No | ✅ **Yes** |
+| **Traversal** | Easy — a loop over indices | No index; each member is accessed by name |
+| **Use case** | A list of 50 marks | One student's roll, name and CGPA together |
+| **Example** | `int marks[50];` | `struct Student { int roll; char name[30]; };` |
+
+> **They combine naturally:** `struct Student class[60];` is an **array of structures** — the standard way to hold records for a whole class.
+
+**Previous Year Question List from this Topic:**
+
+- [What will occur when an array is declared without size?](../written-answers/c-programming.md?plain=1#L8914)
+- [What is the main difference between structure and array in C programming? Explain with examples.](../written-answers/c-programming.md?plain=1#L9027)
+- [Difference between array and structure data type.](../written-answers/c-programming.md?plain=1#L9062)
+- [What is nested structure in C programming? Explain with example.](../written-answers/c-programming.md?plain=1#L9144)
+- [(ii) C Programming Language এ Array and Structure এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L9187)
+- [Write the difference between Structure and Array.](../written-answers/c-programming.md?plain=1#L9237)
+- [(খ) C প্রোগ্রামিং ল্যাঙ্গুয়েজে Structure ও Union এর মধ্যে পার্থক্য কী? উদাহরণসহ লিখুন।](../written-answers/c-programming.md?plain=1#L9454)
+
+
+---
+
+### Types of Errors in Programming
+
+Errors are classified by **when** they are detected.
+
+```mermaid
+flowchart TD
+    A["Errors in a program"] --> B["1 . Compile-time"]
+    A --> C["2 . Run-time"]
+    A --> D["3 . Logical"]
+    A --> E["4 . Linker"]
+    B --> B1["Syntax errors"]
+    B --> B2["Semantic / type errors"]
+```
+
+#### 1. Compile-time errors
+
+Detected by the **compiler**; the program **does not build**.
+
+| Sub-type | Cause | Example |
+|---|---|---|
+| **Syntax error** | Violation of the grammar of the language | Missing `;`, unbalanced `{}`, misspelled keyword (`itn x;`) |
+| **Semantic / type error** | Grammatically valid but meaningless | `int x = "hello";` · calling an undeclared function · wrong number of arguments |
+
+```c
+int main() {
+    int x = 10
+    printf("%d", x);        /* ERROR: expected ';' before 'printf' */
+}
+```
+
+#### 2. Run-time errors
+
+The program compiles and starts, then **crashes or misbehaves during execution**.
+
+| Error | Cause |
+|---|---|
+| **Division by zero** | `int x = 10 / 0;` |
+| **Segmentation fault** | Dereferencing a NULL or wild pointer |
+| **Array index out of bounds** | `a[10]` on a 5-element array |
+| **Stack overflow** | Infinite or too-deep recursion |
+| **Memory leak / out of memory** | `malloc` without `free` |
+| **File not found** | `fopen` returns NULL and the code does not check |
+| **Integer overflow** | Exceeding the type's range |
+
+```c
+/* Pseudocode example of a run-time error */
+READ n
+READ divisor
+result = n / divisor          /* ← if divisor is 0, the program CRASHES here.
+                                 It compiles perfectly; the error appears only
+                                 when the user enters 0 at run time. */
+PRINT result
+```
+
+#### 3. Logical errors
+
+The program **compiles and runs perfectly but produces the WRONG answer**. These are **the hardest to find**, because the computer reports nothing.
+
+```c
+/* intended: the average of three numbers */
+avg = a + b + c / 3;       /* WRONG — precedence: only c is divided */
+avg = (a + b + c) / 3;     /* CORRECT */
+
+for (i = 1; i < 10; i++)   /* WRONG if you meant 1 to 10 — stops at 9 */
+for (i = 1; i <= 10; i++)  /* CORRECT */
+
+if (x = 5)                 /* WRONG — assigns instead of comparing */
+if (x == 5)                /* CORRECT */
+```
+
+#### 4. Linker errors
+
+The code compiles but the **linker cannot resolve a reference**.
+
+| Error | Cause |
+|---|---|
+| `undefined reference to 'foo'` | The function was declared and called but never defined |
+| `undefined reference to 'main'` | No `main()` function |
+| `undefined reference to 'sqrt'` | Forgot to link the maths library (`gcc prog.c -lm`) |
+
+#### Summary comparison
+
+| Point | **Compile-time** | **Run-time** | **Logical** |
+|---|---|---|---|
+| **Detected by** | Compiler | The operating system / CPU during execution | **A human**, by testing |
+| **Program builds?** | ❌ No | ✅ Yes | ✅ Yes |
+| **Program runs?** | ❌ No | Starts, then **crashes** | ✅ **Runs to completion** |
+| **Message shown** | Clear error with a line number | A crash message or exception | **None** |
+| **Difficulty to fix** | **Easiest** | Medium | **Hardest** |
+| **Example** | Missing semicolon | Division by zero | Wrong formula |
+
+**How to prevent and find them:** compile with warnings on (`gcc -Wall -Wextra`); validate every input; check the return value of `malloc`, `fopen` and `scanf`; use a **debugger (gdb)** and **print statements**; write **test cases** with known expected outputs, including boundary values; and do **code reviews**.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the types of errors which can occur the execution of a program.](../written-answers/c-programming.md?plain=1#L9080)
+- [Coding এর সময় সংঘটিত ভুলসমূহ উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L9378)
+- [(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।](../written-answers/c-programming.md?plain=1#L5259)
+- [a) Using Pseudocode give an example of run time error.](../written-answers/c-programming.md?plain=1#L6187)
+- [Find the error of given code](../written-answers/c-programming.md?plain=1#L6337)
