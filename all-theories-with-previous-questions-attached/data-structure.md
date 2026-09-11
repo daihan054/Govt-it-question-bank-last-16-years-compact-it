@@ -1,10 +1,11 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 13 theories
+**Table of Contents** — 8 subtopics · 15 theories
 
 1. **[Tree](#tree)**
    - [Tree — Terminology and Types](#tree--terminology-and-types)
    - [Binary Tree Traversal](#binary-tree-traversal)
    - [Expression Trees and Notation Conversion](#expression-trees-and-notation-conversion)
+   - [Counting Formulas for Trees — Catalan Numbers, Nodes, Leaves and Height](#counting-formulas-for-trees--catalan-numbers-nodes-leaves-and-height)
 
 2. **[Stack](#stack)**
    - [Stack — Concept and Operations](#stack--concept-and-operations)
@@ -29,6 +30,7 @@
 
 8. **[Linear Data Structures (Arrays, Stacks, Queues, Linked Lists)](#linear-data-structures-arrays-stacks-queues-linked-lists)**
    - [Linear vs Non-Linear Data Structures](#linear-vs-non-linear-data-structures)
+   - [Queue Variants and Implementations — Circular Queue, Deque, and a Queue from Two Stacks](#queue-variants-and-implementations--circular-queue-deque-and-a-queue-from-two-stacks)
 
 <!-- TOC END -->
 
@@ -187,6 +189,17 @@ A **B-Tree** is a **self-balancing m-way search tree** in which a node may hold 
 - [(ক) B-tree data structure কী? এর প্রয়োগ ব্যাখ্যা করুন।](../written-answers/data-structure.md?plain=1#L912)
 - [Mathematically derive the maximum and minimum height of a binary tree consisting of n nodes. Note that the height of a tree with a single node is considered as…](../written-answers/data-structure.md?plain=1#L1317)
 - [(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.](../written-answers/data-structure.md?plain=1#L1387)
+
+**Previous Year MCQ List from this Topic:**
+
+- [To represent hierarchical relationship between element, which data Structure is suitable?](../mcq-answers/data-structure.md?plain=1#L236)
+- [Which data structure is suitable to represent hierarchical relationship between elements?](../mcq-answers/data-structure.md?plain=1#L495)
+- [How many children does a binary tree have?](../mcq-answers/data-structure.md?plain=1#L504)
+- [In which tree structure left to right subtree height differs not more than 1?](../mcq-answers/data-structure.md?plain=1#L582)
+- [Maximum how many nodes can be placed in a binary Tree of N levels?](../mcq-answers/data-structure.md?plain=1#L591)
+- [Complete Binary tree যার height n, তার মধ্যে node কতটি?](../mcq-answers/data-structure.md?plain=1#L609)
+- [Which of the following is not a linear data structure? ( নিচের কোনটি linear data structure নয়?)](../mcq-answers/data-structure.md?plain=1#L646)
+
 
 
 ---
@@ -366,6 +379,16 @@ int sumNodes(Node* root) {
 - [(b) Draw a binary tree of 5 elements. Now list out the elements in (i) Pre-order (ii) Post order and (iii) Inorder traversal of the tree.](../written-answers/data-structure.md?plain=1#L1262)
 - [Construct a full binary tree from the given inorder and preorder traversal as follows:](../written-answers/data-structure.md?plain=1#L1445)
 - [Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.](../written-answers/data-structure.md?plain=1#L1521)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual or…](../mcq-answers/data-structure.md?plain=1#L459)
+- [Level order traversal of a rooted tree can be done by starting from root and performing-](../mcq-answers/data-structure.md?plain=1#L486)
+- [The Post-order traversal of a binary tree is 8, 9, 6, 7, 4, 5, 2, 3, 1, The In-order traversal of the same tree is 8, 6, 9, 4, 7, 2, 5, 1, 3. What is the height…](../mcq-answers/data-structure.md?plain=1#L546)
+- [The pre order traversal of binary tree is 40, 20, 10, 30, 60, 50, 70. Which one of the is the post-order traversal of the tree?](../mcq-answers/data-structure.md?plain=1#L555)
+- [Suppose we have a Binary Search Tree where each node has an integer value. Which of the following tree traversal techniques can give us a sorted list (in ascend…](../mcq-answers/data-structure.md?plain=1#L564)
+- [Which of the following is false about a binary search tree?](../mcq-answers/data-structure.md?plain=1#L627)
+
 
 
 ---
@@ -548,6 +571,174 @@ Evaluate **`3 2 * 2 ↑`** (where ↑ is exponentiation):
 - [(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -](../written-answers/data-structure.md?plain=1#L2582)
 - [Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$](../written-answers/data-structure.md?plain=1#L3059)
 
+**Previous Year MCQ List from this Topic:**
+
+- [নিচের কোনটি একটি valid postfix expression?](../mcq-answers/data-structure.md?plain=1#L65)
+- [Which data structure required evaluating a postfix expression is?](../mcq-answers/data-structure.md?plain=1#L110)
+- [Which Data structure is needed to convert infix notation to postfix notation?](../mcq-answers/data-structure.md?plain=1#L265)
+- [Find the output of the following prefix expression *+2-2 \text{ } 1/4 \text{ } 2+-531](../mcq-answers/data-structure.md?plain=1#L274)
+- [What is the prefix conversion of the expression \text{A}+(\text{B}-\text{C})*\text{D}?](../mcq-answers/data-structure.md?plain=1#L298)
+- [What is postfix expression of the string, a+(b-c)*d?](../mcq-answers/data-structure.md?plain=1#L331)
+
+
+---
+
+### Counting Formulas for Trees — Catalan Numbers, Nodes, Leaves and Height
+
+> Tree questions in MCQ papers are overwhelmingly **counting** questions: *how many nodes, how many leaves, how tall, how many different trees?* Every one of them comes from a short list of formulas, and the **only real difficulty is the two competing conventions for "height" and "level".**
+
+#### ⚠️ First — settle the CONVENTION, or every answer will be wrong
+
+| Convention | Root is at | A single node has | n levels ↔ height h |
+|---|---|---|---|
+| ⭐ **HEIGHT counted in EDGES** (the usual academic convention) | **height 0** | height **0** | **h = n − 1** |
+| ⭐ **LEVELS counted in NODES** (common in Bangladeshi papers) | **level 1** | 1 level | **n = h + 1** |
+
+> **This is why two apparently contradictory MCQ answers are BOTH correct:**
+> ```
+>    "Maximum nodes in a binary tree of N LEVELS"        →  2^N − 1
+>    "Nodes in a complete binary tree of HEIGHT n"       →  2^(n+1) − 1
+> ```
+> They are the **same formula**: substituting N = n + 1 into 2^N − 1 gives 2^(n+1) − 1. ⭐ **Read the question carefully for the word "level" versus "height", and state the convention you are using.**
+
+#### The core formulas for a BINARY tree
+
+| Quantity | Formula |
+|---|---|
+| ⭐ **Maximum nodes at level L** (root = level 1) | **2^(L−1)** |
+| ⭐ **Maximum nodes in a tree of N LEVELS** | ### **2^N − 1** |
+| ⭐ **Maximum nodes in a tree of HEIGHT h** (root = 0) | ### **2^(h+1) − 1** |
+| ⭐ **MINIMUM nodes in a tree of height h** | ### **h + 1** (a single chain — each level has one node) |
+| **Minimum HEIGHT for n nodes** | **⌈log₂(n+1)⌉ − 1** |
+| **Maximum height for n nodes** | **n − 1** (a degenerate/skewed tree) |
+| **Maximum LEAVES in a tree of height h** | **2^h** |
+| ⭐ **In a FULL binary tree** (every node has **0 or 2** children), with L leaves and I internal nodes | ### **L = I + 1**, and total **n = 2I + 1** (always **ODD**) |
+| ⭐ **Leaves of a complete k-ary tree with n internal nodes** | ### **n(k − 1) + 1** |
+| **Number of NULL/external links in a binary tree with n nodes** | **n + 1** |
+| **Edges in any tree with n nodes** | **n − 1** |
+
+#### ⭐ Number of distinct binary trees — the Catalan number
+
+> ### **The number of DIFFERENT BINARY TREES that can be formed with n UNLABELLED nodes is the nth CATALAN NUMBER:**
+>
+> ### **Cₙ = (2n)! / [ (n+1)! · n! ]  =  C(2n, n) / (n + 1)**
+
+| n | 1 | 2 | ⭐ **3** | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| **Cₙ — number of binary trees** | 1 | 2 | ⭐ **5** | 14 | 42 | 132 |
+
+**Worked example — n = 3 unlabelled nodes:**
+```
+   C₃ = (2×3)! / (4! × 3!) = 720 / (24 × 6) = 720 / 144 = 5
+
+   The five shapes:
+
+     o        o         o        o          o
+      \        \       / \      /          /
+       o        o     o   o    o          o
+        \      /                \        /
+         o    o                  o      o
+```
+> ### ✅ **5 distinct binary trees with 3 unlabelled nodes.**
+
+| Variation of the question | Formula |
+|---|---|
+| **Unlabelled** binary trees with n nodes | ⭐ **Cₙ** |
+| **LABELLED** binary trees with n nodes | **Cₙ × n!** |
+| **Binary SEARCH trees** with n distinct keys | ⭐ **Cₙ** — the same, because the BST shape determines the key placement uniquely |
+| **Labelled trees** (general, not binary) on n vertices | **n^(n−2)** — *Cayley's formula* |
+
+#### Worked example — the maximum-height question
+
+> **A binary tree has 11 nodes, and every node has exactly either ZERO or TWO children. What is the MAXIMUM height of the tree?**
+
+```
+Step 1 — this is a FULL binary tree, so use L = I + 1 with L + I = 11:
+
+        I + 1 + I = 11   ⇒   2I = 10   ⇒   I = 5 internal nodes, L = 6 leaves
+
+Step 2 — to make the tree as TALL as possible, chain the internal nodes
+         one per level, giving each a leaf as its second child:
+
+              o          level 0   (internal 1)
+             / \
+            L   o        level 1   (internal 2)
+               / \
+              L   o      level 2   (internal 3)
+                 / \
+                L   o    level 3   (internal 4)
+                   / \
+                  L   o  level 4   (internal 5)
+                     / \
+                    L   L level 5
+
+Step 3 — the deepest leaves sit at level 5.
+```
+> ### ✅ **Maximum height = 5** (counting edges, root at 0 — equivalently 6 levels).
+>
+> **The reasoning to state: a FULL binary tree with n nodes has (n−1)/2 internal nodes, and the tallest arrangement chains every internal node one per level.** *(The MINIMUM height for the same 11 nodes would be 3, achieved by the most balanced shape.)*
+
+#### Worked example — leaves of a k-ary tree
+
+> **In a complete k-ary tree every internal node has exactly k children. How many leaves are there with n internal nodes?**
+```
+   Total children produced by the n internal nodes  =  n × k
+   Of those children, n are themselves the internal nodes
+        (every node except the ROOT is somebody's child)
+
+   Leaves = (total nodes) − (internal nodes)
+          = (nk + 1) − n            ← the "+1" is the ROOT, which is nobody's child
+          = nk − n + 1
+          = n(k − 1) + 1
+```
+> ### ✅ **Leaves = n(k − 1) + 1**
+> **Check with a binary tree (k = 2):** leaves = n(2−1) + 1 = **n + 1** — which is exactly the full-binary-tree rule **L = I + 1** ✓
+
+#### Array representation of a binary tree
+
+> ### **Store the tree LEVEL BY LEVEL in an array. For a parent at index i (1-BASED):**
+> ### **left child = 2i · right child = 2i + 1 · parent = ⌊i / 2⌋**
+
+```
+   Tree:            Array (1-based):
+        A               index: 1  2  3  4  5  6  7
+       / \              value: A  B  C  D  E  F  G
+      B   C
+     / \ / \            A is at 1 → children at 2 (B) and 3 (C)
+    D  E F  G           B is at 2 → children at 4 (D) and 5 (E)
+                        E is at 5 → parent at ⌊5/2⌋ = 2 (B) ✓
+```
+> ⚠️ **For a 0-BASED array the formulas shift to: left = 2i + 1, right = 2i + 2, parent = ⌊(i−1)/2⌋.** Papers almost always intend the **1-based** form (2n and 2n+1) — but check the indexing the question uses.
+>
+> **Why this representation matters: it wastes no space only for a COMPLETE binary tree**, which is exactly why **binary HEAPS are stored this way** — no pointers at all, and child/parent lookup is pure arithmetic. For a sparse or skewed tree the array would be mostly empty, so linked representation is used instead.
+
+#### The tree-search complexity summary
+
+| Structure | Search | Insert | Delete | Note |
+|---|---|---|---|---|
+| ⭐ **BST (balanced)** | **O(log n)** | O(log n) | O(log n) | ⭐ **Degenerates to O(n) if the tree becomes skewed** |
+| **BST (worst case / skewed)** | ⚠️ **O(n)** | O(n) | O(n) | Inserting sorted data produces exactly this |
+| ⭐ **AVL tree** | **O(log n) guaranteed** | O(log n) | O(log n) | ⭐ **Left and right subtree heights differ by at most 1** |
+| **B / B+ tree** | **O(log n)** | O(log n) | O(log n) | ⭐ **Used for DATABASE and file-system INDEXING** — high fan-out means few disk reads |
+| ⭐ **Hash table** | ⭐ **O(1) average** | O(1) | O(1) | ⭐ **Best when only ACCESS TIME matters**; but no ordered traversal |
+
+> ### **Two frequently paired MCQs:** *"Access time of a symbol table is LOGARITHMIC if implemented by…"* → ### ✅ **a SEARCH TREE (BST/AVL)**; *"…best if access time is to be MINIMUM"* → ### ✅ **a HASH TABLE** (O(1) average). **Tree = ordered and logarithmic; hash = unordered and constant.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [The maximum number of binary trees that can be formed with three unlabeled nodes is-](../mcq-answers/data-structure.md?plain=1#L83)
+- [Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be-](../mcq-answers/data-structure.md?plain=1#L477)
+- [A B* tree can contain a maximum of 7 pointers in a node. What is the minimum number keys in leaves?](../mcq-answers/data-structure.md?plain=1#L513)
+- [In a completer k-array, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is-](../mcq-answers/data-structure.md?plain=1#L522)
+- [What is the minimum node for binary tree?](../mcq-answers/data-structure.md?plain=1#L540)
+- [If we represent a binary tree using array, what will be the children of node “n”-](../mcq-answers/data-structure.md?plain=1#L573)
+- [Maximum how many nodes can be placed in a binary Tree of N levels?](../mcq-answers/data-structure.md?plain=1#L591)
+- [Complete Binary tree যার height n, তার মধ্যে node কতটি?](../mcq-answers/data-structure.md?plain=1#L609)
+- [How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?](../mcq-answers/data-structure.md?plain=1#L678)
+- [Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be—( ১১টি নো…](../mcq-answers/data-structure.md?plain=1#L707)
+
+
+
 
 ---
 
@@ -665,6 +856,25 @@ int peek(void) {
 - [Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।](../written-answers/data-structure.md?plain=1#L2982)
 - [১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।](../written-answers/data-structure.md?plain=1#L2860)
 
+**Previous Year MCQ List from this Topic:**
+
+- [LIFO data structure কোনটি?](../mcq-answers/data-structure.md?plain=1#L47)
+- [The term push and pop related to -](../mcq-answers/data-structure.md?plain=1#L164)
+- [The Term push and Pop is related to the](../mcq-answers/data-structure.md?plain=1#L182)
+- [When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---](../mcq-answers/data-structure.md?plain=1#L227)
+- [Which one of the following is an application of Stack Data Structure?](../mcq-answers/data-structure.md?plain=1#L247)
+- [In data structure use recursion?](../mcq-answers/data-structure.md?plain=1#L292)
+- [Which of the following data structures follows the LIFO principle?](../mcq-answers/data-structure.md?plain=1#L313)
+- [A stack is also called-](../mcq-answers/data-structure.md?plain=1#L322)
+- [Which one is the characteristics of Stack ADT?](../mcq-answers/data-structure.md?plain=1#L375)
+- [The term push and pop are related to the-](../mcq-answers/data-structure.md?plain=1#L403)
+- [Pushing an element into stack already having five elements and stack size of 5 then stack becomes-](../mcq-answers/data-structure.md?plain=1#L421)
+- [Which is correct for stack?](../mcq-answers/data-structure.md?plain=1#L430)
+- [Find the correct arranged data after stack operation push (1), push (2), pop, push (1), push (2), pop, pop, pop, push (2), pop.](../mcq-answers/data-structure.md?plain=1#L439)
+- [Stack operations are—](../mcq-answers/data-structure.md?plain=1#L448)
+- [a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।](../mcq-answers/data-structure.md?plain=1#L683)
+
+
 
 ---
 
@@ -764,6 +974,16 @@ POP():
 - [Difference between LIFO and FIFO in data structure.](../written-answers/data-structure.md?plain=1#L2460)
 - [(a) Compare Stack and Queue in context with data structure. (5 marks)](../written-answers/data-structure.md?plain=1#L5986)
 - [Different data structures are used based on how data needs to be accessed and processed. Compare Stack and Queue in terms of how they handle data. Then, provide…](../written-answers/data-structure.md?plain=1#L5999)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the data structure is linear type?](../mcq-answers/data-structure.md?plain=1#L29)
+- [In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance…](../mcq-answers/data-structure.md?plain=1#L340)
+- [Suppose you are implementing a Queue of size N using a non-circular linked list having a front and a rare pointer as shown in the figure. The enqueue operation…](../mcq-answers/data-structure.md?plain=1#L358)
+- [What will be the state of a queue after executing the following operation?](../mcq-answers/data-structure.md?plain=1#L384)
+- [Which data structure follows FIFO (First In First Out) principle? ( কোন ডেটা স্ট্রাকচার FIFO (First In First Out) নীতি মেনে চলে? )](../mcq-answers/data-structure.md?plain=1#L664)
+- [In the priority queue, insertion and deletion take place at –](../mcq-answers/data-structure.md?plain=1#L861)
+
 
 
 ---
@@ -877,6 +1097,11 @@ int main(void) {
 - [Write a C/C++ program to check Balanced parentheses in an Expression.](../written-answers/data-structure.md?plain=1#L2630)
 - [Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:](../written-answers/data-structure.md?plain=1#L2737)
 - [Write a Program to check for balanced parenthesis in an expression.](../written-answers/data-structure.md?plain=1#L2891)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The data structure required to check whether an expression contains balanced parenthesis is-](../mcq-answers/data-structure.md?plain=1#L412)
+
 
 
 ---
@@ -1054,6 +1279,18 @@ void printReverse(struct Node *head) {
 - [In a doubly linked list write the function of Traversing from the tail.](../written-answers/data-structure.md?plain=1#L4066)
 - [(খ) Linked list কী?](../written-answers/data-structure.md?plain=1#L4161)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Linked list এ ন্যূনতম দুইটি field থাকে। একটি হচ্ছে data field, তবে অন্যটি কি?](../mcq-answers/data-structure.md?plain=1#L56)
+- [Which one is less costly for insertion at a particular position?](../mcq-answers/data-structure.md?plain=1#L101)
+- [Link List can be implemented by using?](../mcq-answers/data-structure.md?plain=1#L119)
+- [Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to…](../mcq-answers/data-structure.md?plain=1#L761)
+- [In a doubly linked list, the number of pointers affected for an insertion operation will be-](../mcq-answers/data-structure.md?plain=1#L770)
+- [The minimum number of fields with each node of doubly linked list is](../mcq-answers/data-structure.md?plain=1#L788)
+- [What does following function do for a given Linked List with first node as head?](../mcq-answers/data-structure.md?plain=1#L797)
+- [Link list can be implement using?](../mcq-answers/data-structure.md?plain=1#L823)
+
+
 
 ---
 
@@ -1113,6 +1350,21 @@ void printReverse(struct Node *head) {
 - [(a) Computer and contrast between array and linked list.](../written-answers/data-structure.md?plain=1#L3727)
 - [(a) What are the differences between linked list and array data structure?](../written-answers/data-structure.md?plain=1#L3896)
 - [(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).](../written-answers/data-structure.md?plain=1#L3936)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Array data structure এ কোন ধরনের data রাখা যায়?](../mcq-answers/data-structure.md?plain=1#L38)
+- [Which one is less costly for insertion at a particular position?](../mcq-answers/data-structure.md?plain=1#L101)
+- [An array contains the following letters, Color = {E, L, E, C, T, I, O, N}. The value of the variable, E=3, Color(E) points to which value?](../mcq-answers/data-structure.md?plain=1#L137)
+- [The operation of processing each element in the list is known as-----](../mcq-answers/data-structure.md?plain=1#L146)
+- [The operation of processing each element in the list is known as-](../mcq-answers/data-structure.md?plain=1#L200)
+- [What is the worst case time complexity of inserting n elements into an empty linked list, if the linked list needs to be maintained in sorted order?](../mcq-answers/data-structure.md?plain=1#L743)
+- [In the worst case, the number of comparisons needed to search a singly linked list oflength n for a given element is-](../mcq-answers/data-structure.md?plain=1#L752)
+- [The time required to search an element in a linked list of length n is-](../mcq-answers/data-structure.md?plain=1#L779)
+- [Suppose you want to insert n elements into an empty linked list while maintaining the sorted order. What is the worst-case time complexity?](../mcq-answers/data-structure.md?plain=1#L814)
+- [What is the time complexity to count the number of elements in the linked list?](../mcq-answers/data-structure.md?plain=1#L832)
+- [b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?](../mcq-answers/data-structure.md?plain=1#L688)
+
 
 
 ---
@@ -1290,6 +1542,16 @@ DELETE(root, key):
 - [Write an algorithm to find a node in a binary search tree.](../written-answers/data-structure.md?plain=1#L4621)
 - [Complexity of BST (Binary Search Tree) best and worst case.](../written-answers/data-structure.md?plain=1#L4701)
 - [What is Binary Search Tree? Explain the complexity of BST?](../written-answers/data-structure.md?plain=1#L4767)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual or…](../mcq-answers/data-structure.md?plain=1#L459)
+- [A binary search tree is constructed by inserting the numbers, 60 25 72 15 30 68 13 18 in order. The number of nodes in the left sub tree is-](../mcq-answers/data-structure.md?plain=1#L468)
+- [Access time of the symbolic table will be logarithmic if it is implemented by-](../mcq-answers/data-structure.md?plain=1#L531)
+- [Suppose we have a Binary Search Tree where each node has an integer value. Which of the following tree traversal techniques can give us a sorted list (in ascend…](../mcq-answers/data-structure.md?plain=1#L564)
+- [Binary Search Tree-এর Time complexity কত?](../mcq-answers/data-structure.md?plain=1#L618)
+- [Which of the following is false about a binary search tree?](../mcq-answers/data-structure.md?plain=1#L627)
+
 
 
 ---
@@ -1478,6 +1740,13 @@ HEAP_SORT(A, n):
 - [Heapify the MAX heap tree.](../written-answers/data-structure.md?plain=1#L5363)
 - [Draw (max/min) heap binay tree using 11 nodes.](../written-answers/data-structure.md?plain=1#L5448)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?](../mcq-answers/data-structure.md?plain=1#L600)
+- [Which data structure is preferred for Priority Queue?](../mcq-answers/data-structure.md?plain=1#L843)
+- [What is the best way to implement priority queue?](../mcq-answers/data-structure.md?plain=1#L852)
+
+
 
 ---
 
@@ -1663,6 +1932,12 @@ flowchart LR
 - [Given Hash function h(x) = x\%11. Find the location of keys 22, 44, 73, 55, 18, 8, 31, 32. Use linear probing as collision resolution technique.](../written-answers/data-structure.md?plain=1#L5823)
 - [(b) What is hash table? What are the advantages of using hash table.](../written-answers/data-structure.md?plain=1#L5920)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is-](../mcq-answers/data-structure.md?plain=1#L872)
+- [Which of the following symbol table implementation is best suited if access time is to be minimum?](../mcq-answers/data-structure.md?plain=1#L881)
+
+
 
 ## Tree Data Structures (BST, AVL, B-Tree, Heaps)
 
@@ -1717,6 +1992,16 @@ An AVL tree restores balance after an insertion using **rotations**. The **balan
 - [Complexity of BST (Binary Search Tree) best and worst case.](../written-answers/data-structure.md?plain=1#L4701)
 - [What is Binary Search Tree? Explain the complexity of BST?](../written-answers/data-structure.md?plain=1#L4767)
 - [অথবা, (ক) Heap data structure কী? কোন ক্ষেত্রে Heap ব্যবহার করা হয়?](../written-answers/data-structure.md?plain=1#L5016)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following data structure are index structures?](../mcq-answers/data-structure.md?plain=1#L155)
+- [Which data structure is used for indexing?](../mcq-answers/data-structure.md?plain=1#L173)
+- [Access time of the symbolic table will be logarithmic if it is implemented by-](../mcq-answers/data-structure.md?plain=1#L531)
+- [In which tree structure left to right subtree height differs not more than 1?](../mcq-answers/data-structure.md?plain=1#L582)
+- [Max-Heap data structure এর সবচেয়ে বড় নম্বরটি কোথায় থাকে?](../mcq-answers/data-structure.md?plain=1#L600)
+- [Which of the following symbol table implementation is best suited if access time is to be minimum?](../mcq-answers/data-structure.md?plain=1#L881)
+
 
 
 ---
@@ -1790,3 +2075,134 @@ flowchart TD
 - [(a) Compare Stack and Queue in context with data structure. (5 marks)](../written-answers/data-structure.md?plain=1#L5986)
 - [Different data structures are used based on how data needs to be accessed and processed. Compare Stack and Queue in terms of how they handle data. Then, provide…](../written-answers/data-structure.md?plain=1#L5999)
 - [(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).](../written-answers/data-structure.md?plain=1#L3936)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is a non linear data structure?](../mcq-answers/data-structure.md?plain=1#L20)
+- [Which of the data structure is linear type?](../mcq-answers/data-structure.md?plain=1#L29)
+- [Which of the following data structure is non-linear type?](../mcq-answers/data-structure.md?plain=1#L74)
+- [Which following data structure is linear type?](../mcq-answers/data-structure.md?plain=1#L128)
+- [Which of the following data structure is non-linear type?](../mcq-answers/data-structure.md?plain=1#L191)
+- [Which is not linear?](../mcq-answers/data-structure.md?plain=1#L218)
+- [To represent hierarchical relationship between element, which data Structure is suitable?](../mcq-answers/data-structure.md?plain=1#L236)
+- [Which of the following is not a linear data structure? ( নিচের কোনটি linear data structure নয়?)](../mcq-answers/data-structure.md?plain=1#L646)
+
+
+---
+
+### Queue Variants and Implementations — Circular Queue, Deque, and a Queue from Two Stacks
+
+> A **QUEUE is a linear FIFO (First-In First-Out) structure**: insertion happens at the **REAR (enqueue)** and deletion at the **FRONT (dequeue)**. Several variants and implementation tricks are examined repeatedly.
+
+#### The four types of queue
+
+| Type | Description | Insert / Delete |
+|---|---|---|
+| **Simple (linear) queue** | The basic FIFO | Rear / Front |
+| ⭐ **CIRCULAR queue (ring buffer)** | ⭐ **The rear WRAPS AROUND to the start of the array** when it reaches the end | Rear / Front |
+| ⭐ **DEQUE (Double-Ended Queue)** | ⭐ **Insertion AND deletion are allowed at BOTH ends** | Both ends |
+| ⭐ **PRIORITY queue** | ⭐ **Elements are served by PRIORITY, not by arrival order** | By priority |
+
+#### ⭐ Why the CIRCULAR queue exists — the "false full" problem
+
+```
+   LINEAR array queue, size 5, after 5 enqueues and 3 dequeues:
+
+        index:   0    1    2    3    4
+                [ -  ][ -  ][ C  ][ D  ][ E  ]
+                              ↑              ↑
+                            FRONT          REAR
+
+   ⚠️ REAR is at the last index, so the queue reports "FULL" and
+      refuses an enqueue — even though slots 0 and 1 ARE FREE.
+      That wasted space is the FALSE FULL (or "queue overflow by
+      drift") problem.
+
+   CIRCULAR queue — the rear simply WRAPS:
+
+        rear = (rear + 1) % SIZE          front = (front + 1) % SIZE
+
+        index:   0    1    2    3    4
+                [ F  ][ -  ][ C  ][ D  ][ E  ]
+                  ↑      ↑
+                REAR   (free)            FRONT = 2
+```
+
+| Condition | Circular queue test |
+|---|---|
+| **EMPTY** | `front == -1` (or a separate count == 0) |
+| ⭐ **FULL** | `(rear + 1) % SIZE == front` — *leaving one slot unused so full and empty can be told apart* |
+| **Enqueue** | `rear = (rear + 1) % SIZE` |
+| **Dequeue** | `front = (front + 1) % SIZE` |
+
+> **Uses of the circular queue:** **CPU scheduling (round-robin)**, **keyboard and I/O buffers**, **network packet buffers**, **streaming/ring buffers** — anywhere a fixed block of memory must be reused indefinitely.
+
+#### The Deque
+
+> ### **A DEQUE (Double-Ended Queue) allows INSERTION and DELETION at BOTH the front and the rear.**
+>
+> ### **Because of that, a deque can behave as EITHER a STACK or a QUEUE** — which is exactly what the MCQ *"which data structure can be used both as a stack and as a queue?"* is testing. ### ✅ **DEQUE.**
+
+| Restriction | Result |
+|---|---|
+| Use **one end only** (push/pop at the same end) | Behaves as a **STACK (LIFO)** |
+| Insert at rear, delete at front | Behaves as a **QUEUE (FIFO)** |
+| **Input-restricted deque** | Insertion at **one** end only; deletion at both |
+| **Output-restricted deque** | Deletion at **one** end only; insertion at both |
+
+#### ⭐ Implementing a QUEUE using STACKS
+
+> ### **The minimum number of STACKS needed to implement a QUEUE is TWO.**
+
+**Why two, and not one:** a stack is **LIFO** and a queue is **FIFO** — exactly opposite orders. **Reversing the order once turns LIFO into FIFO**, and a single stack cannot hold the reversed copy while also being the source. **Popping everything from stack 1 into stack 2 reverses the sequence**, so the oldest element ends up on top of stack 2 — which is precisely the front of the queue.
+
+```mermaid
+flowchart LR
+    A["ENQUEUE x<br/>→ push onto STACK 1"] --> B["STACK 1<br/>(newest on top)"]
+    C["DEQUEUE<br/>→ if STACK 2 is EMPTY,<br/>pop everything from<br/>STACK 1 into STACK 2<br/>(this REVERSES the order),<br/>then pop STACK 2"] --> D["STACK 2<br/>(OLDEST on top)"]
+    B -.->|"transfer, once, only when<br/>stack 2 runs empty"| D
+```
+
+**The trace:**
+```
+   enqueue 1, 2, 3          S1: [1,2,3]  (3 on top)      S2: []
+   dequeue → S2 is empty, so move all:
+                            S1: []                        S2: [3,2,1]  (1 on top)
+              pop S2 → 1  ✅ the FIRST element in — correct FIFO
+   dequeue → pop S2 → 2  ✅
+   enqueue 4                S1: [4]                       S2: [3]
+   dequeue → S2 not empty, pop S2 → 3  ✅
+   dequeue → S2 empty, move S1 → S2: [4];  pop → 4  ✅
+```
+
+| Point | Detail |
+|---|---|
+| **Enqueue cost** | **O(1)** always |
+| **Dequeue cost** | **O(n) worst case** (when a transfer happens), but ⭐ **O(1) AMORTISED** — each element is moved between the stacks **at most once** |
+| ⚠️ **The critical rule** | ⭐ **Only transfer when stack 2 is EMPTY.** Transferring on every dequeue would scramble the order and make it O(n) every time |
+
+> **The mirror problem: implementing a STACK using QUEUES also needs TWO queues** (or one queue with a rotation trick), for the same reason — one order reversal is required.
+
+#### Other standard stack/queue applications worth naming
+
+| Application | Structure | Why |
+|---|---|---|
+| ⭐ **Expression conversion (infix → postfix/prefix) and evaluation** | **STACK** | Operators must be held and released in reverse precedence order |
+| ⭐ **Checking BALANCED PARENTHESES** | **STACK** | Push on an opening bracket, pop and match on a closing one; balanced ⇔ the stack ends empty |
+| ⭐ **Recursion / function calls** | **STACK** — the **call stack** | The most recently called function must return first |
+| **Undo / redo** | Stack | Last action undone first |
+| **Backtracking, DFS** | Stack | |
+| **Browser back button** | Stack | |
+| ⭐ **CPU scheduling, print spooling, BFS, I/O buffers** | **QUEUE** | Fairness — first come, first served |
+| ⭐ **Serving VIP customers before ordinary ones** | ⭐ **PRIORITY QUEUE** | Order of service is by priority, not arrival |
+
+> ### **The two classic "overflow" MCQs:** pushing onto a stack that is **already at its maximum size** causes ⭐ **OVERFLOW**; popping from an **empty** stack causes ⭐ **UNDERFLOW**. The same two terms apply to a queue that is full or empty. *(In a linear array queue, remember the **false full** condition above — the queue may report overflow while free slots exist, which is the whole reason the circular queue was invented.)*
+
+**Previous Year MCQ List from this Topic:**
+
+- [The minimum number of stacks needed to implement a queue is](../mcq-answers/data-structure.md?plain=1#L256)
+- [Which data structure allows insertion and deletion of elements from both ends?](../mcq-answers/data-structure.md?plain=1#L283)
+- [In a shop, customers are provided the service as a first come first serve policy. But some special customers can be served at any time based on their importance…](../mcq-answers/data-structure.md?plain=1#L340)
+- [Which of the following data structures can be used both as Stack and Queue?](../mcq-answers/data-structure.md?plain=1#L349)
+- [The minimum number of stacks needed to implement a queue is—( একটি কিউ (Queue) ইমপ্লিমেন্ট করার জন্য সর্বনিম্ন কয়টি স্ট্যাক (Stack) প্রয়োজন? )](../mcq-answers/data-structure.md?plain=1#L698)
+- [In the priority queue, insertion and deletion take place at –](../mcq-answers/data-structure.md?plain=1#L861)
