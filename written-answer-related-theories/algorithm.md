@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 5 subtopics · 31 theories
+**Table of Contents** — 6 subtopics · 35 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -41,6 +41,12 @@
    - [Asymptotic Notations — Big O, Big Omega and Big Theta](#asymptotic-notations--big-o-big-omega-and-big-theta)
    - [How to Find the Complexity of a Piece of Code](#how-to-find-the-complexity-of-a-piece-of-code)
    - [Recurrence Relations and How to Solve Them](#recurrence-relations-and-how-to-solve-them)
+
+6. **[Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms)**
+   - [Divide and Conquer](#divide-and-conquer)
+   - [Dynamic Programming and the Principle of Optimality](#dynamic-programming-and-the-principle-of-optimality)
+   - [Greedy Algorithms](#greedy-algorithms)
+   - [Divide and Conquer vs Dynamic Programming vs Greedy](#divide-and-conquer-vs-dynamic-programming-vs-greedy)
 
 <!-- TOC END -->
 
@@ -2564,3 +2570,331 @@ T(n) = 3^(n-1) · 1 + 2 · (3^(n-1) - 1)/2
 - [Recurrence equation of binary search and solve it.](../written-answers/algorithm.md?plain=1#L2503)
 - [Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.](../written-answers/algorithm.md?plain=1#L2626)
 - [(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?](../written-answers/algorithm.md?plain=1#L335)
+
+## Dynamic Programming & Greedy Algorithms
+
+### Divide and Conquer
+
+**Divide and Conquer** solves a problem by breaking it into **smaller independent sub-problems of the same type**, solving them recursively, and then **combining** their answers.
+
+#### The three steps
+
+```mermaid
+flowchart TD
+    A["Problem of size n"] --> B["1 . DIVIDE<br/>split into smaller sub-problems"]
+    B --> C["Sub-problem 1"]
+    B --> D["Sub-problem 2"]
+    C --> E["2 . CONQUER<br/>solve recursively"]
+    D --> E
+    E --> F["3 . COMBINE<br/>merge the sub-solutions"]
+    F --> G["Solution to the original problem"]
+```
+
+1. **Divide** the problem into two or more sub-problems of the same kind.
+2. **Conquer** — solve each sub-problem recursively (directly if it is small enough — the **base case**).
+3. **Combine** the sub-solutions into the solution of the original problem.
+
+#### Key characteristic
+
+> In Divide and Conquer, the sub-problems are **disjoint / independent** — they do **not overlap** and no sub-problem is ever solved twice.
+
+#### Classic examples
+
+| Problem | Divide | Combine |
+|---|---|---|
+| **Merge Sort** | Split the array in half | **Merge** the two sorted halves — O(n) |
+| **Quick Sort** | **Partition** around a pivot | Nothing to do — the array is already in place |
+| **Binary Search** | Halve the range | Nothing — only one half is searched |
+| **Strassen's matrix multiplication** | Split each matrix into four n/2 × n/2 blocks | Add and subtract the seven products |
+| **Karatsuba multiplication** | Split the digits | Combine with shifts and additions |
+| **Closest pair of points** | Split by a vertical line | Check the strip near the line |
+| **Tower of Hanoi** | Move n−1 discs, then the largest | — |
+
+#### Advantages and disadvantages
+
+**Advantages:** solves hard problems elegantly; often reduces complexity dramatically (O(n²) → O(n log n)); naturally **parallelisable**; makes good use of the **cache** because sub-problems fit in it.
+
+**Disadvantages:** recursion has **function-call overhead**; may use **O(log n) or O(n) stack space**; it is **inefficient when sub-problems overlap** — that is exactly the case where Dynamic Programming should be used instead.
+
+**Previous Year Question List from this Topic:**
+
+- [Write down the difference between Divide and Conquer and Dynamic Programming.](../written-answers/algorithm.md?plain=1#L2783)
+- [(a) How does dynamic programming relate with divide and conquer approach?](../written-answers/algorithm.md?plain=1#L2799)
+- [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
+- [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
+- [(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L3888)
+- [Which short uses divide and conquer technique?](../written-answers/algorithm.md?plain=1#L388)
+
+
+---
+
+### Dynamic Programming and the Principle of Optimality
+
+**Dynamic Programming (DP)** solves a problem by breaking it into **overlapping sub-problems**, solving **each sub-problem only once**, and **storing** the result so it is never recomputed.
+
+It was invented by **Richard Bellman** in the 1950s.
+
+#### The two conditions a problem must satisfy
+
+A problem can be solved by DP **only if** it has both:
+
+| Property | Meaning |
+|---|---|
+| **1. Optimal substructure** | An optimal solution to the problem **contains optimal solutions to its sub-problems** |
+| **2. Overlapping sub-problems** | The same sub-problem is solved **again and again** by a naive recursion |
+
+#### The Principle of Optimality
+
+> **Bellman's Principle of Optimality:**
+> *An optimal policy has the property that, whatever the initial state and the initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.*
+
+**In simple words:** if a sequence of decisions is optimal, then **every sub-sequence of it must also be optimal**.
+
+**Illustration:** if the shortest path from **Dhaka to Chittagong** passes through **Comilla**, then the Dhaka → Comilla portion of that path **must itself be the shortest** Dhaka-to-Comilla path. If a shorter Dhaka → Comilla route existed, you could substitute it and get an even shorter Dhaka → Chittagong path — contradicting the assumption that the original was shortest.
+
+This is precisely what makes DP valid: you can **build the optimal answer for a big problem out of stored optimal answers to smaller ones**.
+
+> **Counter-example — where the principle fails:** the **longest simple path** problem does *not* have optimal substructure. The longest simple path from A to C may not contain the longest simple path from A to B, because reusing it might force a vertex to repeat. That is why the longest-path problem is NP-hard and DP cannot solve it directly.
+
+#### The two ways to implement DP
+
+| | **Memoization (Top-Down)** | **Tabulation (Bottom-Up)** |
+|---|---|---|
+| **Direction** | Start from the **original problem** and recurse down | Start from the **smallest sub-problem** and build up |
+| **Implementation** | **Recursion + a cache/lookup table** | **Iteration + a table (array)** |
+| **Which sub-problems are solved** | **Only those actually needed** | **All** of them |
+| **Overhead** | Function-call and stack overhead | No recursion overhead — usually **faster** |
+| **Risk** | Stack overflow on deep recursion | None |
+| **Easier to write from a recurrence** | **Yes** | Needs the right ordering |
+| **Space optimisation** | Harder | **Easy** (often reduce a 2-D table to 1-D) |
+
+#### Worked comparison — Fibonacci
+
+**Naive recursion — O(2ⁿ), exponential:**
+
+```
+Fib(n):
+    if n <= 1: return n
+    return Fib(n-1) + Fib(n-2)
+```
+
+```mermaid
+flowchart TD
+    A["Fib(5)"] --> B["Fib(4)"]
+    A --> C["Fib(3) ①"]
+    B --> D["Fib(3) ②"]
+    B --> E["Fib(2) ①"]
+    D --> F["Fib(2) ②"]
+    D --> G["Fib(1)"]
+    C --> H["Fib(2) ③"]
+    C --> I["Fib(1)"]
+```
+Notice **Fib(3) is computed twice and Fib(2) three times** — that is the *overlapping sub-problems* property, and it is what makes the naive version exponential.
+
+**Memoization (top-down) — O(n):**
+
+```
+memo = array of size n+1, filled with -1
+
+FibMemo(n):
+    if n <= 1:            return n
+    if memo[n] != -1:     return memo[n]        // already computed
+    memo[n] = FibMemo(n-1) + FibMemo(n-2)
+    return memo[n]
+```
+
+**Tabulation (bottom-up) — O(n) time, O(n) space:**
+
+```
+FibTab(n):
+    if n <= 1: return n
+    dp[0] = 0;  dp[1] = 1
+    for i = 2 to n:
+        dp[i] = dp[i-1] + dp[i-2]
+    return dp[n]
+```
+
+**Space-optimised — O(n) time, O(1) space:**
+
+```
+FibOpt(n):
+    if n <= 1: return n
+    a = 0;  b = 1
+    for i = 2 to n:
+        c = a + b
+        a = b
+        b = c
+    return b
+```
+
+| Version | Time | Space |
+|---|---|---|
+| Naive recursion | **O(2ⁿ)** | O(n) stack |
+| Memoization | **O(n)** | O(n) table + O(n) stack |
+| Tabulation | **O(n)** | O(n) |
+| Space-optimised | **O(n)** | **O(1)** |
+
+#### Classic DP problems
+
+| Problem | Complexity |
+|---|---|
+| Fibonacci numbers | O(n) |
+| **0/1 Knapsack** | O(n·W) |
+| Longest Common Subsequence (LCS) | O(m·n) |
+| Longest Increasing Subsequence | O(n log n) |
+| **Matrix Chain Multiplication** | O(n³) |
+| Edit Distance (Levenshtein) | O(m·n) |
+| Coin Change / Rod Cutting | O(n·amount) |
+| **Floyd-Warshall** all-pairs shortest path | O(V³) |
+| **Bellman-Ford** shortest path | O(V·E) |
+| Subset Sum / Partition | O(n·sum) |
+| **Kadane's** maximum subarray | O(n) |
+
+**Previous Year Question List from this Topic:**
+
+- [State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?](../written-answers/algorithm.md?plain=1#L2751)
+- [Write down the difference between Divide and Conquer and Dynamic Programming.](../written-answers/algorithm.md?plain=1#L2783)
+- [(a) How does dynamic programming relate with divide and conquer approach?](../written-answers/algorithm.md?plain=1#L2799)
+- [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
+- [What is Dynamic programming? Explain with example.](../written-answers/algorithm.md?plain=1#L3586)
+- [Write down the Algorithm for determining Fibonacci number through dynamic programming.](../written-answers/algorithm.md?plain=1#L3647)
+
+
+---
+
+### Greedy Algorithms
+
+A **greedy algorithm** builds a solution **piece by piece**, always choosing the option that **looks best right now** (the *locally optimal* choice), and **never reconsidering** that choice.
+
+> The greedy motto: **"take the best you can see at this moment, and never look back."**
+
+#### The two properties a problem needs for greedy to be correct
+
+| Property | Meaning |
+|---|---|
+| **1. Greedy-choice property** | A **globally optimal** solution can be reached by making **locally optimal** choices. *(This is the crucial one, and it must be **proved**.)* |
+| **2. Optimal substructure** | An optimal solution contains optimal solutions to its sub-problems *(shared with DP)* |
+
+#### Does a greedy algorithm always give the optimal solution?
+
+> ### ❌ **No.** Greedy gives the optimal answer **only when the greedy-choice property holds and can be proved** for that specific problem. Otherwise it gives a solution that is merely *good*, not best.
+
+**A clear counter-example — the coin change problem.**
+
+Coin denominations {1, 7, 10}, target **15**.
+- **Greedy:** take the largest coin ≤ 15 → 10, remainder 5 → 1, 1, 1, 1, 1 → **6 coins** (10 + 1×5).
+- **Optimal (DP):** **7 + 7 + 1 = 3 coins.**
+
+Greedy fails here. But with the coin set {1, 5, 10, 25, 50} (the standard "canonical" system used in most currencies) greedy **is** optimal — which shows the answer depends entirely on the problem instance.
+
+**A second counter-example — the 0/1 Knapsack.** Taking items by highest value/weight ratio is optimal for the *fractional* knapsack, but **not** for 0/1, because you cannot cut an item and the leftover capacity is wasted.
+
+#### When does the greedy approach achieve the optimal solution?
+
+Greedy is provably optimal when:
+1. The **greedy-choice property** can be proved (usually by an **exchange argument**: show that any optimal solution can be transformed into one containing the greedy choice, without becoming worse).
+2. The problem has **optimal substructure**.
+3. Formally, when the problem's structure forms a **matroid** — a mathematical structure on which the greedy algorithm is guaranteed optimal (this is the deep reason Kruskal's MST algorithm works).
+
+**Problems where greedy IS optimal:**
+
+| Problem | Greedy rule |
+|---|---|
+| **Fractional Knapsack** | Take items in decreasing order of **value/weight** ratio |
+| **Activity Selection** | Always pick the activity that **finishes earliest** |
+| **Kruskal's MST** | Always add the cheapest edge that makes no cycle |
+| **Prim's MST** | Always add the cheapest edge leaving the current tree |
+| **Dijkstra's shortest path** | Always finalise the nearest unvisited vertex *(non-negative weights)* |
+| **Huffman coding** | Always merge the two least-frequent symbols |
+| **Job sequencing with deadlines** | Take the highest-profit job that still fits |
+| **Coin change with a canonical coin system** | Take the largest coin that fits |
+
+**Problems where greedy FAILS:**
+
+| Problem | Why greedy fails | Correct method |
+|---|---|---|
+| **0/1 Knapsack** | Cannot split an item; leftover capacity is wasted | **Dynamic Programming** |
+| **Coin change (arbitrary denominations)** | The large coin may block a better combination | **Dynamic Programming** |
+| **Longest path in a graph** | No optimal substructure | NP-hard |
+| **Travelling Salesman** | Nearest-neighbour can be arbitrarily bad | DP / approximation |
+
+#### Advantages and disadvantages
+
+**Advantages:** very **simple** to design and code; **fast** — usually O(n log n) dominated by a sort; **low memory** (no big table); works well as a **heuristic** even when not provably optimal.
+
+**Disadvantages:** **often not optimal**; correctness must be **proved** case by case; cannot fix an earlier bad decision; not applicable to most optimisation problems.
+
+**Previous Year Question List from this Topic:**
+
+- [(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?](../written-answers/algorithm.md?plain=1#L2817)
+- [Greedy algorithm উদাহরণসহ ব্যাখ্যা করুন।](../written-answers/algorithm.md?plain=1#L2869)
+- [(খ) Greedy Algorithm কাকে বলে? দুটি এমন সমস্যা বর্ণনা করুন যা Greedy Algorithm দিয়ে সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L2891)
+- [(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।](../written-answers/algorithm.md?plain=1#L2766)
+
+
+---
+
+### Divide and Conquer vs Dynamic Programming vs Greedy
+
+This three-way comparison is one of the most repeated questions in the whole subject.
+
+```mermaid
+flowchart TD
+    P["A problem broken into sub-problems"] --> A{Do the sub-problems<br/>OVERLAP?}
+    A -->|No — independent| B["DIVIDE & CONQUER<br/>solve each once, combine"]
+    A -->|Yes — repeated| C{Can one locally best choice<br/>be proved globally best?}
+    C -->|No — must try all choices| D["DYNAMIC PROGRAMMING<br/>store and reuse sub-results"]
+    C -->|Yes| E["GREEDY<br/>take the best choice now, never revisit"]
+```
+
+#### Divide and Conquer vs Dynamic Programming
+
+| Point | **Divide and Conquer** | **Dynamic Programming** |
+|---|---|---|
+| **Sub-problems** | **Independent / disjoint** — never repeat | **Overlapping** — the same sub-problem recurs |
+| **Each sub-problem solved** | Exactly once (because they never repeat) | **Once and stored**; reused afterwards |
+| **Stores results?** | **No** | **Yes** — in a memo table or DP array |
+| **Approach** | Usually **top-down** recursive | **Bottom-up** (tabulation) or top-down with memoization |
+| **Extra memory** | Usually only the recursion stack | **Extra table** — O(n) or O(n²) |
+| **Recomputation** | None needed | Avoided by storing |
+| **Efficiency gain** | From splitting the problem | From **not recomputing** |
+| **Examples** | Merge sort, Quick sort, Binary search, Strassen's | 0/1 Knapsack, LCS, Fibonacci, Floyd-Warshall, Matrix chain |
+
+> **How are they related?** DP is an **extension of Divide and Conquer**. Both break a problem into sub-problems and use optimal substructure. The difference is that DP adds **memoization** to cope with **overlapping** sub-problems. If you apply plain Divide and Conquer to a problem with overlapping sub-problems (like Fibonacci), you get exponential blow-up; DP fixes exactly that.
+
+#### Greedy vs Dynamic Programming
+
+| Point | **Greedy** | **Dynamic Programming** |
+|---|---|---|
+| **Choice made** | **One** locally best choice at each step | **Tries all** choices and keeps the best |
+| **Revisits a decision?** | **Never** | Effectively yes — all options are compared |
+| **Needs which property** | **Greedy-choice property** + optimal substructure | **Overlapping sub-problems** + optimal substructure |
+| **Result** | **Not always optimal** | **Always optimal** (if the recurrence is correct) |
+| **Speed** | **Faster** — typically O(n log n) | Slower — typically O(n²) or O(n·W) |
+| **Memory** | **O(1)–O(n)** — no table | **O(n)–O(n²)** — needs a table |
+| **Direction** | Top-down, in one pass | Bottom-up (usually) |
+| **Ease of design** | Easy to write, **hard to prove correct** | Harder to write, correctness follows from the recurrence |
+| **Examples** | Fractional Knapsack, Activity Selection, Kruskal, Prim, Dijkstra, Huffman | **0/1 Knapsack**, LCS, Matrix chain, Floyd-Warshall, Bellman-Ford |
+
+#### The name-the-technique quick table
+
+| Problem | Technique |
+|---|---|
+| **Matrix multiplication** (naive / Strassen's) | **Divide and Conquer** |
+| **Matrix Chain Multiplication** (optimal parenthesisation) | **Dynamic Programming** |
+| **0/1 Knapsack** | **Dynamic Programming** |
+| **Fractional Knapsack** | **Greedy** |
+| Merge sort, Quick sort, Binary search | Divide and Conquer |
+| Kruskal, Prim, Dijkstra, Huffman | Greedy |
+| Floyd-Warshall, Bellman-Ford, LCS, Edit distance | Dynamic Programming |
+| N-Queens, Sudoku, subset generation | Backtracking |
+
+**Previous Year Question List from this Topic:**
+
+- [State the Principle of Optimality in Dynamic Programming. How does it distinguish Dynamic Programming from Greedy Algorithms?](../written-answers/algorithm.md?plain=1#L2751)
+- [(খ) Greedy Method ও Dynamic Algorithm এর মধ্যে পার্থক্য লিখুন।](../written-answers/algorithm.md?plain=1#L2766)
+- [Write down the difference between Divide and Conquer and Dynamic Programming.](../written-answers/algorithm.md?plain=1#L2783)
+- [(a) How does dynamic programming relate with divide and conquer approach?](../written-answers/algorithm.md?plain=1#L2799)
+- [(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?](../written-answers/algorithm.md?plain=1#L2817)
+- [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
+- [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
