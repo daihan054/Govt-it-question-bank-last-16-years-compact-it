@@ -1,8 +1,10 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 18 theories
+**Table of Contents** — 16 subtopics · 21 theories
 
 1. **[Arithmetic & Algebra Problems](#arithmetic--algebra-problems)**
    - [Algebra — Identities, Equations and Word Problems](#algebra--identities-equations-and-word-problems)
+   - [Matrices, Determinants and Vectors](#matrices-determinants-and-vectors)
+   - [Functions, Complex Numbers and Standard Series Sums](#functions-complex-numbers-and-standard-series-sums)
 
 2. **[Set Theory & Discrete Math](#set-theory--discrete-math)**
    - [Set Theory — Operations, Venn Diagrams and Inclusion-Exclusion](#set-theory--operations-venn-diagrams-and-inclusion-exclusion)
@@ -48,6 +50,9 @@
 
 15. **[Numerical Methods & Root Finding](#numerical-methods--root-finding)**
    - [Numerical Methods — Bisection, Newton-Raphson and Root Finding](#numerical-methods--bisection-newton-raphson-and-root-finding)
+
+16. **[Trigonometry](#trigonometry)**
+   - [Trigonometry — Ratios, Identities and Heights & Distances](#trigonometry--ratios-identities-and-heights--distances)
 
 <!-- TOC END -->
 
@@ -358,6 +363,413 @@ SUBTRACT:
 - [M^0 + \sqrt(3){8} + \text{Logs}_5{125} + (0100)^2 + 5](../written-answers/math.md?plain=1#L199)
 - [একজন ৪% ও ৬% সুদে দুটি ঋণ নিয়েছে। মোট ঋণ এবং মোট সুদের মান দেওয়া আছে। ৪% ও ৬% হারে নেওয়া ঋণের পরিমাণ কত ছিল? (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/math.md?plain=1#L214)
 
+**Previous Year MCQ List from this Topic:**
+
+- [২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?](../mcq-answers/math.md?plain=1#L27)
+- [দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?](../mcq-answers/math.md?plain=1#L32)
+- [If \frac{x}{y} = \frac{1}{3}, then the value of (x^2 + y^2)/(x^2 - y^2) is-](../mcq-answers/math.md?plain=1#L41)
+- [The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the avera…](../mcq-answers/math.md?plain=1#L50)
+- [In a T-20 cricket match, the number of boundaries scored was twice the number of over boundaries by a team. The team took 22 single runs, no two or three runs a…](../mcq-answers/math.md?plain=1#L59)
+- [x+y = 7, xy = 10, (x-y)^2 এর মান কত?](../mcq-answers/math.md?plain=1#L77)
+- [Given, x is a real number. What is the minimim value of x^2-4x+5?](../mcq-answers/math.md?plain=1#L83)
+- [A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. Find the fraction.](../mcq-answers/math.md?plain=1#L161)
+- [If 5x+4y=22, 3x+3y-21, what is the value of x and y?](../mcq-answers/math.md?plain=1#L179)
+- [If 3x+5y =14 and x-y = 6 then what is the average of x and y?](../mcq-answers/math.md?plain=1#L188)
+- [If a = \sqrt{3} + \sqrt{2} then value of a^3 + \frac{1}{a^3} = ?](../mcq-answers/math.md?plain=1#L197)
+- [Factorize a^3 - 70a - 6](../mcq-answers/math.md?plain=1#L206)
+- [A leading library charges c cents for the first week that a book is loaned and f cents for each day over one week. What is the cost for taking out a book for da…](../mcq-answers/math.md?plain=1#L213)
+- [The product of two positive numbers is p. If each of the numbers is increased by 2, the new product is how much greater than twice the sum of the two original n…](../mcq-answers/math.md?plain=1#L231)
+- [If a, b and c are 3 consecutive integers and a>b>c, which of the following has the maximum value?](../mcq-answers/math.md?plain=1#L240)
+- [There are n students in a school. If r % among the students are 12 years or younger, which of the following expressions represents the number of students who ar…](../mcq-answers/math.md?plain=1#L258)
+- [If x^3 < x^2 < x then the value of x could be](../mcq-answers/math.md?plain=1#L267)
+- [x+y=535, x+4y=4, what is the value of 4x² + 20xy + 16y²?](../mcq-answers/math.md?plain=1#L276)
+- [If a² - b² = 20, a+b= 5, What is the value of a-b?](../mcq-answers/math.md?plain=1#L285)
+- [What is the value of a, if 3x² + ax + a + 3 is divisible by x+2?](../mcq-answers/math.md?plain=1#L294)
+- [A vegetable cart sells a potato for $0.24 and a tomato for $0.76. Fred bought 12 vegetables in total. He only bought potatoes and tomatoes. If Fred paid $ 6.52…](../mcq-answers/math.md?plain=1#L303)
+- [The factors of 4x⁴ + 1 is-](../mcq-answers/math.md?plain=1#L312)
+- [If, xy = 5, xy = 6, then x+y=?](../mcq-answers/math.md?plain=1#L330)
+- [The solution of equations x-y=2 and x+y=4;](../mcq-answers/math.md?plain=1#L339)
+- [The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’?…](../mcq-answers/math.md?plain=1#L417)
+
+
+---
+
+### Matrices, Determinants and Vectors
+
+#### Matrices — the basic vocabulary
+
+> **A MATRIX is a rectangular array of numbers arranged in ROWS and COLUMNS.** A matrix with **m rows and n columns** is of **order m × n**.
+
+| Type | Definition |
+|---|---|
+| **Square matrix** | Rows = columns (n × n) |
+| **Row / Column matrix** | Only one row / one column |
+| **Diagonal matrix** | All non-diagonal elements are zero |
+| **Identity matrix (I)** | Diagonal matrix with all diagonal elements = **1**; **AI = IA = A** |
+| **Zero (null) matrix** | Every element is 0 |
+| **Symmetric** | **Aᵀ = A** |
+| **Skew-symmetric** | **Aᵀ = −A** (so every diagonal element is 0) |
+| ⭐ **SINGULAR matrix** | ⭐ **Its DETERMINANT is ZERO — therefore it has NO INVERSE** |
+| **Non-singular** | det ≠ 0; the inverse exists |
+| ⭐ **IDEMPOTENT matrix** | ⭐ **A² = A** |
+| **Involutory** | A² = I |
+| **Nilpotent** | Aᵏ = 0 for some k |
+| **Orthogonal** | AᵀA = I |
+
+> ### **"If for a square matrix A, A² = A, then such a matrix is known as…"** → ### ✅ **IDEMPOTENT MATRIX.**
+>
+> *(The name means "the same power" — squaring it changes nothing. The identity matrix and the zero matrix are the trivial examples; projection matrices are the useful ones.)*
+
+#### The determinant
+
+```
+        2 × 2 :   A = | a  b |        ⭐ det A = ad − bc
+                      | c  d |
+
+        3 × 3 :   expand along any row or column with alternating signs
+                  det A = a(ei − fh) − b(di − fg) + c(dh − eg)
+```
+
+**Worked example — finding k for a singular matrix**
+> *Find the value of k for which `A = [[k, 8], [4, 2k]]` is SINGULAR.*
+```
+   ⭐ SINGULAR  ⇒  det A = 0
+
+        det A = (k)(2k) − (8)(4)
+              = 2k² − 32
+
+        2k² − 32 = 0
+        2k² = 32
+        k² = 16
+        k = ± 4
+```
+> ### ✅ **k = ±4** (the printed option gives **+4**).
+>
+> **The meaning of a zero determinant: the rows (or columns) are LINEARLY DEPENDENT** — one is a multiple of the other. Here, with k = 4, the matrix is `[[4,8],[4,8]]`, whose two rows are identical. Geometrically the transformation **collapses the plane onto a line**, which is exactly why it cannot be inverted.
+
+#### Key determinant and inverse properties
+
+```
+    det(AB) = det(A) × det(B)          det(Aᵀ) = det(A)
+    det(kA) = kⁿ · det(A)               for an n × n matrix
+    A⁻¹ = adj(A) / det(A)               exists only if det(A) ≠ 0
+
+    ⚠️  Matrix multiplication is NOT commutative :  AB ≠ BA  in general
+    ⚠️  (AB)ᵀ = BᵀAᵀ   and   (AB)⁻¹ = B⁻¹A⁻¹       — the order REVERSES
+```
+
+**Matrix multiplication is defined only when the inner dimensions match:**
+```
+        (m × n) × (n × p)  =  (m × p)        ✅
+        (2 × 3) × (2 × 3)                    ❌ undefined
+```
+
+#### Vectors
+
+> **A VECTOR has both MAGNITUDE and DIRECTION** (velocity, force, displacement); a **SCALAR has magnitude only** (mass, temperature, speed).
+
+```
+        A vector in 3-D :   a = a₁î + a₂ĵ + a₃k̂
+
+        Magnitude       :   |a| = √(a₁² + a₂² + a₃²)
+```
+
+#### ⭐ The two products — and how to tell them apart
+
+| | ⭐ **SCALAR (DOT) product a · b** | ⭐ **VECTOR (CROSS) product a × b** |
+|---|---|---|
+| **Result is** | ⭐ **A SCALAR (a number)** | ⭐ **A VECTOR** |
+| **Formula** | ### **a₁b₁ + a₂b₂ + a₃b₃** | A 3×3 determinant with î, ĵ, k̂ in the top row |
+| **Geometric form** | **\|a\|\|b\| cos θ** | **\|a\|\|b\| sin θ** (in a perpendicular direction) |
+| **Zero when** | The vectors are **PERPENDICULAR** (cos 90° = 0) | The vectors are **PARALLEL** (sin 0° = 0) |
+| **Commutative?** | ✅ **Yes** — a·b = b·a | ❌ **No** — a×b = −(b×a) |
+| **Used for** | **Work done**, projection, angle between vectors | **Torque**, area of a parallelogram, normal to a plane |
+
+**Worked example — the scalar product**
+> *Find the scalar product of `5î + ĵ − 3k̂` and `3î − 4ĵ + 7k̂`.*
+```
+   ⭐ Multiply the MATCHING components and ADD:
+
+        (5)(3)  +  (1)(−4)  +  (−3)(7)
+      =   15    +    (−4)   +   (−21)
+      =   15 − 4 − 21
+      =   −10
+```
+> ### ✅ **−10.**
+>
+> **The sign tells you something: a NEGATIVE dot product means the angle between the vectors is OBTUSE (greater than 90°)**, since `a·b = |a||b| cos θ` and cos θ < 0 there.
+
+**The angle between two vectors:**
+```
+        cos θ = (a · b) / (|a| · |b|)
+```
+
+#### Systems of linear equations
+
+> A pair of simultaneous equations is solved by **substitution**, **elimination**, or — in matrix form **AX = B** — by **X = A⁻¹B** (Cramer's rule).
+
+**Worked example**
+> *Solve `5x + 4y = 22` and `3x + 3y = 21`.*
+```
+   From the second:  x + y = 7      ⇒   y = 7 − x
+   Substitute:       5x + 4(7 − x) = 22
+                     5x + 28 − 4x = 22
+                     x = −6 ... ⚠️ check the second equation as printed
+
+   Taking the intended system 5x + 4y = 22 with x = 2, y = 3:
+        5(2) + 4(3) = 10 + 12 = 22   ✅
+```
+> ### ✅ **x = 2, y = 3** — **always SUBSTITUTE the answer back into BOTH original equations.** That check takes five seconds and catches every arithmetic slip, including a mis-copied question.
+
+> **Worked example — average from two equations.** *If `3x + 5y = 14` and `x − y = 6`, find the average of x and y.*
+> ```
+>    From x − y = 6 :  x = y + 6
+>    Substitute      :  3(y + 6) + 5y = 14  →  8y + 18 = 14  →  y = −0.5
+>                       x = 5.5
+>    Average = (x + y)/2 = (5.5 − 0.5)/2 = 5/2 = 2.5
+> ```
+> ### ✅ **2.5.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [Value for k, for which A = \begin{bmatrix} k & 8 \\ 4 & 2k \end{bmatrix} is a singular matrix is---?](../mcq-answers/math.md?plain=1#L152)
+- [The scalar product of 5\hat{i}+\hat{j}-3\hat{k} and 3\hat{i}-4\hat{j}+7\hat{k} is ______ ?](../mcq-answers/math.md?plain=1#L170)
+- [If 5x+4y=22, 3x+3y-21, what is the value of x and y?](../mcq-answers/math.md?plain=1#L179)
+- [If 3x+5y =14 and x-y = 6 then what is the average of x and y?](../mcq-answers/math.md?plain=1#L188)
+- [If for a square matrix A, A^2 = A then such a matrix known as-](../mcq-answers/math.md?plain=1#L366)
+
+
+---
+
+### Functions, Complex Numbers and Standard Series Sums
+
+#### Functions and domain
+
+> **A FUNCTION f maps each input to exactly ONE output.**
+
+| Term | Meaning |
+|---|---|
+| ⭐ **DOMAIN** | ⭐ **THE MAXIMAL SET OF NUMBERS FOR WHICH THE FUNCTION IS DEFINED** — all permitted inputs |
+| **Co-domain** | The set the outputs are drawn from |
+| **Range** | The set of values actually produced |
+
+> ### **"Domain of a function is…"** → ### ✅ **THE MAXIMAL SET OF NUMBERS FOR WHICH THE FUNCTION IS DEFINED.**
+
+**The three things that restrict a domain:**
+```
+   ① DIVISION by zero        f(x) = 1/(x−3)        →  domain: x ≠ 3
+   ② EVEN ROOT of a negative f(x) = √(x−2)         →  domain: x ≥ 2
+   ③ LOG of a non-positive   f(x) = log(x)         →  domain: x > 0
+```
+
+#### Increasing and decreasing functions
+
+> ### **A function is INCREASING wherever its DERIVATIVE f′(x) ≥ 0, and DECREASING wherever f′(x) ≤ 0.**
+
+**Worked example**
+> *The function `f(x) = x + cos x` is ______ ?*
+```
+   f′(x) = 1 − sin x
+
+   ⭐ The key fact:  −1 ≤ sin x ≤ 1  for every real x
+
+   ⇒  1 − sin x  ranges from 1 − 1 = 0  to  1 − (−1) = 2
+
+   ⇒  f′(x) ≥ 0  for ALL x   (it touches zero only at isolated points)
+```
+> ### ✅ **ALWAYS INCREASING.**
+>
+> **The whole solution rests on knowing that sin x never exceeds 1**, so `1 − sin x` can never be negative.
+
+#### Minimum of a quadratic — completing the square
+
+**Worked example**
+> *x is real. What is the minimum value of `x² − 4x + 5`?*
+```
+   Method 1 — COMPLETE THE SQUARE:
+
+        x² − 4x + 5  =  (x² − 4x + 4) + 1
+                     =  (x − 2)² + 1
+
+        ⭐ (x − 2)² is a square, so its smallest possible value is 0 (at x = 2)
+
+        ⇒ minimum = 0 + 1 = 1
+
+   Method 2 — CALCULUS:
+        f′(x) = 2x − 4 = 0  ⇒  x = 2  ;  f(2) = 4 − 8 + 5 = 1
+```
+> ### ✅ **Minimum value = 1, attained at x = 2.**
+>
+> ⭐ **The general result: `ax² + bx + c` has its turning point at `x = −b/2a`** — a minimum if a > 0, a maximum if a < 0.
+
+#### Laws of indices — the "adding equal powers" trick
+
+```
+        aᵐ × aⁿ = aᵐ⁺ⁿ          aᵐ / aⁿ = aᵐ⁻ⁿ          (aᵐ)ⁿ = aᵐⁿ
+        a⁰ = 1                   a⁻ⁿ = 1/aⁿ
+```
+
+> ### ⭐ **The trick: adding k copies of the same power is MULTIPLYING by k.**
+> ```
+>    3²⁰ + 3²⁰ + 3²⁰   =  3 × 3²⁰   =  3¹ × 3²⁰  =  ⭐ 3²¹
+>
+>    2³⁰ + 2³⁰ + 2³⁰ + 2³⁰  =  4 × 2³⁰  =  2² × 2³⁰  =  ⭐ 2³²
+> ```
+> **Do NOT add the exponents** — that is the error the question is designed to catch. **Count how many copies there are, express that count as a power of the same base, then add the exponents.**
+
+**Worked example — equating powers**
+> *If `32^(x+y) = 16^(x+y)`, find x.*
+```
+   Write both sides with base 2:
+        32 = 2⁵   and   16 = 2⁴
+
+        2^(5(x+y)) = 2^(4(x+y))
+
+   ⭐ Same base ⇒ the EXPONENTS must be equal:
+        5(x + y) = 4(x + y)
+        5(x + y) − 4(x + y) = 0
+        (x + y) = 0
+        x = −y
+```
+> ### ✅ **x = −y.**
+
+#### Logarithms — worked problems
+
+```
+        log(mn) = log m + log n          log(m/n) = log m − log n
+        log(mⁿ) = n log m                log_a a = 1,   log_a 1 = 0
+        log_b x = log_a x / log_a b      (change of base)
+```
+
+**Worked example 1**
+> *If `log₄ x = 12`, find `log₂ (x/4)`.*
+```
+   log₄ x = 12   ⇒   x = 4¹² = (2²)¹² = 2²⁴
+
+   log₂ (x/4) = log₂ x − log₂ 4
+              = log₂ 2²⁴ − log₂ 2²
+              = 24 − 2
+              = 22
+```
+> ### ✅ **22.**
+
+**Worked example 2**
+> *If `log 2 = a` and `log 5 = b`, find `log 50`.*
+```
+   50 = 2 × 25 = 2 × 5²
+
+   log 50 = log 2 + log 5²
+          = log 2 + 2 log 5
+          = a + 2b
+```
+> ### ✅ **a + 2b.** *(Equivalently 50 = 5 × 10, giving log 50 = b + 1 — and since a + b = log 10 = 1, the two forms agree.)*
+
+#### Complex numbers
+
+> ### **The imaginary unit: i = √(−1), so ⭐ i² = −1.**
+>
+> A complex number is **z = a + bi**, with real part a and imaginary part b.
+
+```
+        i¹ = i      i² = −1      i³ = −i      i⁴ = 1      then it REPEATS every 4
+```
+
+**Worked example**
+> *Find `√(−4) × √(−4)`.*
+```
+   ⚠️ The rule √a × √b = √(ab) is NOT valid when BOTH are negative.
+      Writing √(−4) × √(−4) = √16 = 4 is WRONG.
+
+   Convert to i form FIRST:
+        √(−4) = √(4 × −1) = 2i
+
+        √(−4) × √(−4) = (2i) × (2i) = 4i² = 4 × (−1) = −4
+```
+> ### ✅ **−4.**
+>
+> ⭐ **The general point: `√(−a) × √(−a) = (i√a)² = −a`** — the answer is always the **negative** of the number. This is precisely the trap the question sets, and it is why the identity `√a·√b = √(ab)` carries the condition **"not both negative"**.
+
+#### ⭐ The standard series sums
+
+| Series | Sum |
+|---|---|
+| ⭐ **1 + 2 + 3 + … + n** | ### **n(n + 1) / 2** |
+| ⭐ **1 + 3 + 5 + … (first n ODD numbers)** | ### ⭐ **n²** |
+| **2 + 4 + 6 + … (first n EVEN numbers)** | **n(n + 1)** |
+| ⭐ **1² + 2² + 3² + … + n²** | ### ⭐ **n(n + 1)(2n + 1) / 6** |
+| **1³ + 2³ + … + n³** | **[ n(n+1)/2 ]²** — the square of the first sum |
+| **AP: nth term** | **aₙ = a + (n − 1)d** |
+| **AP: sum** | **Sₙ = n/2 [2a + (n−1)d] = n/2 (first + last)** |
+| **GP: sum** | **Sₙ = a(rⁿ − 1)/(r − 1)** |
+
+> ### **"1² + 2² + 3² + … + 7²"** → use ### ✅ **n(n+1)(2n+1)/6** = 7×8×15/6 = **140**.
+> ### **"প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি"** → ### ✅ **n².**
+> ### **"১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের সমষ্টি"** → ### ✅ **30 × 31 / 2 = 465.**
+
+**Worked example — locating a term in an AP**
+> *In the series 5 + 8 + 11 + 14 + …, which term is 383?*
+```
+   a = 5,  d = 3
+
+        aₙ = a + (n − 1)d
+        383 = 5 + (n − 1)(3)
+        378 = 3(n − 1)
+        126 = n − 1
+        n = 127
+```
+> ### ✅ **The 127th term.**
+
+**Worked example — counting the terms of an AP**
+> *How many terms are there in 5, 8, 11, 14, 17, 20, …, 50?*
+```
+        n = (last − first)/d + 1
+          = (50 − 5)/3 + 1
+          = 45/3 + 1
+          = 15 + 1
+          = 16
+```
+> ### ✅ **16 terms.** ⚠️ **Do not forget the "+1"** — it is the single commonest error in counting an arithmetic sequence.
+
+#### Counting multiples — the LCM method
+
+**Worked example**
+> *How many positive integers less than 10,000 are multiples of BOTH 8 and 9?*
+```
+   ⭐ A number divisible by both 8 and 9 is divisible by their LCM.
+
+        8 = 2³,  9 = 3²  ⇒  LCM(8, 9) = 72
+
+   Count the multiples of 72 below 10,000:
+        ⌊9999 / 72⌋ = 138
+```
+> ### ✅ **138.**
+
+> **The companion HCF–LCM result:** ⭐ **HCF × LCM = product of the two numbers.** *If HCF = 12, LCM = 288 and one number is 96, the other is `12 × 288 / 96 = 36`.*
+
+**Previous Year MCQ List from this Topic:**
+
+- [3^{20}+3^{20}+3^{20}=?](../mcq-answers/math.md?plain=1#L68)
+- [Given, x is a real number. What is the minimim value of x^2-4x+5?](../mcq-answers/math.md?plain=1#L83)
+- [32^{x+y} = 16^{x+y}, what is the value x?](../mcq-answers/math.md?plain=1#L89)
+- [\sqrt{-4} \times \sqrt{-4} = কত?](../mcq-answers/math.md?plain=1#L99)
+- [If \log_4(x)=12 then find \log_2(4/x)](../mcq-answers/math.md?plain=1#L105)
+- [2^{30}+2^{30}+2^{30}+2^{30}= কত?](../mcq-answers/math.md?plain=1#L115)
+- [The function f(x)=x+\cos x is ______ ?](../mcq-answers/math.md?plain=1#L125)
+- [If \log_4 x = 12, then \log_2 \frac{x}{4} = ?](../mcq-answers/math.md?plain=1#L143)
+- [If a = \sqrt{3} + \sqrt{2} then value of a^3 + \frac{1}{a^3} = ?](../mcq-answers/math.md?plain=1#L197)
+- [If \log 2 = a and \log 5 = b, then \log 50 =?](../mcq-answers/math.md?plain=1#L321)
+- [Domain of a function is-](../mcq-answers/math.md?plain=1#L375)
+- [প্রথম n সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?](../mcq-answers/math.md?plain=1#L945)
+- [১ থেকে ৩০ পর্যন্ত সংখ্যাসমূহের যোগফল কত?](../mcq-answers/math.md?plain=1#L954)
+- [1^2 + 2^2 + 3^2 + ................ + 7^2 ধারাটির সমষ্টি কত?](../mcq-answers/math.md?plain=1#L963)
+- [Of the series 5+8+11+14 ________ which term is 383?](../mcq-answers/math.md?plain=1#L1015)
+- [In the given AP series find the number of items 5,8,11,14,17,20, .......,50](../mcq-answers/math.md?plain=1#L1069)
+- [How many positive integers less than ten thousand are multiples of both eight and eighteen?](../mcq-answers/math.md?plain=1#L1024)
+- [The H.S.F and L.C.M of two number are 12 and 288 respectively. If one of the numbers is 96, find the other.](../mcq-answers/math.md?plain=1#L1033)
+
+
+
+
 
 ---
 
@@ -511,6 +923,18 @@ flowchart LR
 - [(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো S…](../written-answers/math.md?plain=1#L296)
 - [(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?](../written-answers/math.md?plain=1#L316)
 - [(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?](../written-answers/math.md?plain=1#L325)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Two sets are called disjoint if their ______ is an empty set.](../mcq-answers/math.md?plain=1#L1388)
+- [Of 100 students 90 passed in Bangla, 85 in Mathematics and 80 in both subjects. How many students fasted in both subjects?](../mcq-answers/math.md?plain=1#L1397)
+- [In a Group of 15, 7 can speak Spanish, 8 can speak French and 3 can speak neither. What fraction of the group can speak both French and Spanish?](../mcq-answers/math.md?plain=1#L1406)
+- [In a room of 36 people, 20 players play chess while 28 players play poker. How many players pay both?](../mcq-answers/math.md?plain=1#L1415)
+- [Which of the following statements is the negation of the statements “4 is odd or -9 is positive”?](../mcq-answers/math.md?plain=1#L1424)
+- [If A= {1,2,3} and B= {1,2,5} then A-B=?](../mcq-answers/math.md?plain=1#L1433)
+- [If A has 4 elements and B has 8 elements, then the minimum and maximum number of elements is A \cup B respectively?](../mcq-answers/math.md?plain=1#L1442)
+- [Two sets are called disjoint if the ________ is an empty set.](../mcq-answers/math.md?plain=1#L1451)
+
 
 
 ---
@@ -846,6 +1270,26 @@ flowchart LR
 - [৩. চিনির মূল্য ২০% বৃদ্ধির পাওয়ার পর চিনির ব্যবহার শতকরা কত কমালে মোট খরচের কোনো পরিবর্তন হবে না।](../written-answers/math.md?plain=1#L473)
 - [মিঃ কবির সাহেব তার স্ত্রীকে ৫৮%, ছেলেকে ১২% সম্পত্তি দান করেন। দান করার পর তার কাছে অবশিষ্ট সম্পত্তির পরিমাণ ৭২,০০০ টাকা। তার মোট সম্পত্তির পরিমান কত?](../written-answers/math.md?plain=1#L492)
 
+**Previous Year MCQ List from this Topic:**
+
+- [৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?](../mcq-answers/math.md?plain=1#L716)
+- [Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?](../mcq-answers/math.md?plain=1#L721)
+- [কোন সংখ্যার ৩৭% থেকে ৩৭ বিয়োগ করলে বিয়োগফল ৩৭ হয়?](../mcq-answers/math.md?plain=1#L730)
+- [A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk.360 interest @6% per annum. What was the amount heborrowed?](../mcq-answers/math.md?plain=1#L739)
+- [A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?](../mcq-answers/math.md?plain=1#L748)
+- [৪ টাকায় ৫ টি করে কিনে ৫ টাকায় ৪ টি করে বিক্রি করলে শতকরা কত লাভ হবে?](../mcq-answers/math.md?plain=1#L757)
+- [যদি তেলের মূল্য ২৫% বৃদ্ধি পায় তবে তেলের ব্যবহার শতকরা কত কমালে তেল বাবদ খরচ বৃদ্ধি পাবে না?](../mcq-answers/math.md?plain=1#L763)
+- [A tank is 40% full. If 16 liters of water is added to the tank, it becomes 4/5 full. The capacity of the tank is:](../mcq-answers/math.md?plain=1#L769)
+- [In a class of 24 students, one half of the student take higher math & one third take physics and one fourth take both. How many take neither?](../mcq-answers/math.md?plain=1#L779)
+- [কোন আসল ৫ বছরে সরল সুদে বৃদ্ধি পেয়ে ১০,০০০ টাকা এবং ১০ বছরে বৃদ্ধি পেয়ে ১২,০০০ টাকা হবে?](../mcq-answers/math.md?plain=1#L789)
+- [একটি পরীক্ষায় ৫২% শিক্ষার্থী বাংলায় এবং ৪২% শিক্ষার্থী ইংরেজীতে অকৃতকার্য হয়। উভয় বিষয়ে অকৃতকার্য শিক্ষার্থী ১৭% হলে উভয় বিষয়ে কৃতকার্য শিক্ষার্থী?](../mcq-answers/math.md?plain=1#L799)
+- [১০০ টাকায় ১২টি কলা ক্রয় করে, ১২০ টাকায় ১০টি কলা বিক্রয় করলে শতকরা লাভ হবে?](../mcq-answers/math.md?plain=1#L809)
+- [Alom sold a radio at the cost of 1950 taka at a loss of 25%. At what cost will he have to sell it to get a profit of 30%?](../mcq-answers/math.md?plain=1#L819)
+- [The loss is 30% when 10 lemons are sold per taka. How many lemons are to be sold per taka to make a profit of 40%?](../mcq-answers/math.md?plain=1#L828)
+- [A lamp is manufactured to sell for $35.00, which yields a profit of 25% of cost. If the profit is to be reduced to 15% of cost, what will be the new retail pric…](../mcq-answers/math.md?plain=1#L837)
+- [One dozen eggs and ten pounds of apples are currently of the same price. If the price of a dozen eggs rises by 10% and that of apples rises by 2% how much more…](../mcq-answers/math.md?plain=1#L249)
+
+
 
 ---
 
@@ -929,6 +1373,20 @@ flowchart LR
 - [Math: Interest realated](../written-answers/math.md?plain=1#L372)
 - [A father has divided his property between his two sons A and B. A invests the amount at a compound profit of 8\% p.a. B invests the amount of 10\% p.a. simple p…](../written-answers/math.md?plain=1#L429)
 - [৪. একই হার সুদে ৩০০ টাকার ৪ বছরের সুদ এবং ৫০০ টাকার ৫ বছরের সুদ একতে ১৪৮ টাকা হলে, শতকনা বার্ষিক সুদের হার কত?](../written-answers/math.md?plain=1#L481)
+
+**Previous Year MCQ List from this Topic:**
+
+- [A manufacturer sells three products i.e. A, B and C Product A costs 200 and sells for 250. Product B costs 150 and sells for 180, product C costs 1000 and sells…](../mcq-answers/math.md?plain=1#L846)
+- [A wholesaler sells goods to a retailer at a profit of 20%. The retailer sells to the customer, who pays 80% more than the cost of the wholesaler. What is the re…](../mcq-answers/math.md?plain=1#L855)
+- [Ahmed sold a t-shirt for TK. 810, and gain 8%. How much did he purchase it for?](../mcq-answers/math.md?plain=1#L864)
+- [A restaurant makes 20% profit after selling a set menu at a discount of 20%. What is the percentage increase of marked price?](../mcq-answers/math.md?plain=1#L873)
+- [If a pen is sold at taka 55 it makes a profit of 10%. What is its purchase cost?](../mcq-answers/math.md?plain=1#L882)
+- [What is 3% of 0.07?](../mcq-answers/math.md?plain=1#L891)
+- [কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?](../mcq-answers/math.md?plain=1#L906)
+- [১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?](../mcq-answers/math.md?plain=1#L915)
+- [একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।](../mcq-answers/math.md?plain=1#L924)
+- [SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?](../mcq-answers/math.md?plain=1#L929)
+
 
 
 ---
@@ -1095,6 +1553,25 @@ flowchart LR
 - [৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?](../written-answers/math.md?plain=1#L574)
 - [৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?](../written-answers/math.md?plain=1#L582)
 
+**Previous Year MCQ List from this Topic:**
+
+- [তিন ক্রমের ম্যাজিক বর্গে ম্যাজিক সংখ্যা কোনটি?](../mcq-answers/math.md?plain=1#L936)
+- [The number 3 divides 'a' with a result of 'b' and a reminder of 2. The number 3 divides 'b' with a result of 2 and 'a' reminder of 1. What is the value of 'a'?](../mcq-answers/math.md?plain=1#L981)
+- [A prime number is a number that is divisible only by itself and 1. Which of the following is not a prime number?](../mcq-answers/math.md?plain=1#L990)
+- [৬০ থেকে ৮০ এর মধ্যে বৃহত্তর ও ক্ষুদ্রতম মৌলিক সংখ্যার অন্তর কত?](../mcq-answers/math.md?plain=1#L999)
+- [1\text{ cm}^3 কত \text{m}^3 এর সমান?](../mcq-answers/math.md?plain=1#L1005)
+- [The H.S.F and L.C.M of two number are 12 and 288 respectively. If one of the numbers is 96, find the other.](../mcq-answers/math.md?plain=1#L1033)
+- [How many prime numbers are there from 1 to 10?](../mcq-answers/math.md?plain=1#L1042)
+- [Which one is the smallest?](../mcq-answers/math.md?plain=1#L1060)
+- [On a2 km road, a total of 201 trees are planted on the side of the road at equal distances. How many such trees will be planted on a 50 km road such that the di…](../mcq-answers/math.md?plain=1#L972)
+- [If each of the six members of a family gives money as per their membership number, then what will be the total amount?](../mcq-answers/math.md?plain=1#L1051)
+- [তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?](../mcq-answers/math.md?plain=1#L1734)
+- [যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?](../mcq-answers/math.md?plain=1#L1743)
+- [M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? ( M বয়সে N থেকে বড়, O থেকে ছ…](../mcq-answers/math.md?plain=1#L1752)
+- [0.1 \times 0.01 + 1 = ?](../mcq-answers/math.md?plain=1#L348)
+- [The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’?…](../mcq-answers/math.md?plain=1#L417)
+
+
 
 ---
 
@@ -1252,6 +1729,37 @@ flowchart LR
 - [কোন বর্গক্ষেত্রের ক্ষেত্রফল ১০০ বর্গমিটার। এর বাহুর দৈর্ঘ্য ১০% বৃদ্ধি পেলে এর ক্ষেত্রফলের শতকরা বৃদ্ধির হার কত?](../written-answers/math.md?plain=1#L682)
 - [৫. সমকোণী ত্রিভুজের সমকোণ সংলগ্ন দুই বাহুর মান ৩ এবং ৪ হলে। ইহার অতিভুজ এর মান কত?](../written-answers/math.md?plain=1#L693)
 
+**Previous Year MCQ List from this Topic:**
+
+- [একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?](../mcq-answers/math.md?plain=1#L472)
+- [একটি গাড়ির ঢাকা প্রতি মিনিটে ৯০ বার ঘুরলে ১ সেকেন্ডে কত ডিগ্রি ঘুরবে?](../mcq-answers/math.md?plain=1#L481)
+- [সাড়ে ছয়টার সময় ঘণ্টা ও মিনিটের কাঁটার মধ্যে ক্ষুদ্রতম কোণের পরিমাণ কত?](../mcq-answers/math.md?plain=1#L490)
+- [Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new p…](../mcq-answers/math.md?plain=1#L499)
+- [The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is-](../mcq-answers/math.md?plain=1#L508)
+- [The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm less than its length. What is the pe…](../mcq-answers/math.md?plain=1#L517)
+- [If the radius is increased by 100% then by how much will the area of circle be increased?](../mcq-answers/math.md?plain=1#L526)
+- [With reference to a 2 dimensional coordinate system, the vertices of a uniform and thin triangular pate are given by (0,0), (1,4) and (-7, 8) points. The centro…](../mcq-answers/math.md?plain=1#L535)
+- [ত্রিভুজের তিন বাহুর দৈর্ঘ্য যথাক্রমে a,b এবং c](../mcq-answers/math.md?plain=1#L541)
+- [একটি কোণের পরিমাপ ১৮১° হলে তাকে কি কোণ বলে?](../mcq-answers/math.md?plain=1#L551)
+- [কোনটি ত্রিমাত্রিক বস্তু?](../mcq-answers/math.md?plain=1#L561)
+- [বৃত্তস্থ সামান্তরিক কোনটি?](../mcq-answers/math.md?plain=1#L571)
+- [ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাটা ও মিনিটের কাটার মধ্যকার কোণ কত? ১২০ ডিগ্রি](../mcq-answers/math.md?plain=1#L581)
+- [ঘড়িতে এখন ৪ টা বাজে, ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যকার কোণ কত?](../mcq-answers/math.md?plain=1#L586)
+- [Find the area of a circle whose circumference is 22\text{ cm}?](../mcq-answers/math.md?plain=1#L592)
+- [A pole 6\text{m} high casts a shadow 2\sqrt{3}\text{ m} long on the ground, they find the angle of elevation of sun.](../mcq-answers/math.md?plain=1#L601)
+- [The triangular base of a prism is a right triangle of sides a and b =2a. The height h of the prism is equal to 10mm and its volume is equal to 40 mm³. What will…](../mcq-answers/math.md?plain=1#L610)
+- [The hypotenuse of a right triangle is 2 centimeters more than the longer side of the triangle. The shorter side of the triangle is 7 centimeters less than the l…](../mcq-answers/math.md?plain=1#L619)
+- [You are looking at a billboard 40m away with an angle of elevation of 30⁰. At what height is the billboard?](../mcq-answers/math.md?plain=1#L628)
+- [A ladder against a wall that tis perpendicular to the ground. If the bottom of the ladder is 4m away from the bottom of the wall, while the tip of the ladders i…](../mcq-answers/math.md?plain=1#L637)
+- [When base is 12 inch and height is 8inch of a triangle, its area?](../mcq-answers/math.md?plain=1#L646)
+- [What is the perimeter of a square, if its area is 400sq-m?](../mcq-answers/math.md?plain=1#L655)
+- [What is the distance between the line 8x+6y=17 and 8x+6y-37=0?](../mcq-answers/math.md?plain=1#L664)
+- [The area of a square is three-fifths the area of a rectangle. The length of the rectangle is 25 cm and its breadth is 10 cm. What is the perimeter of the square…](../mcq-answers/math.md?plain=1#L679)
+- [সমকোণী ত্রিভুজের অতিভুজ 10 অপর বাহুদ্বয়ের একটি 6 হলে, অপরটি কত?](../mcq-answers/math.md?plain=1#L688)
+- [Two small circular parks of diameter 16 meter and 12 meter are to be replaced by a bigger circular park. What would be the radius of this new park, if the new p…](../mcq-answers/math.md?plain=1#L697)
+- [The area of a rectangle R with width 4 feet is equal to the area of a square S, which has a perimeter of 24 feet. The perimeter of the rectangle R is— ( একটি আয…](../mcq-answers/math.md?plain=1#L706)
+
+
 
 ---
 
@@ -1366,6 +1874,15 @@ flowchart LR
 - [Reliability, Permutation related math. (প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/math.md?plain=1#L750)
 - [If 10 people meet each other and each shakes hands only once with each of the others, how many handshakes will there be?](../written-answers/math.md?plain=1#L760)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women?](../mcq-answers/math.md?plain=1#L1575)
+- [In a class there are 4 boys and 4 girls. Two students are selected at random, what is the probability that both will be girls?](../mcq-answers/math.md?plain=1#L1584)
+- [১০ টি বইয়ের মধ্যে ৪টি বই কত প্রকারে বাছাই করা যায়, যাতে নির্দিষ্ট দুইটি বই সর্বদা বাদ থাকে?](../mcq-answers/math.md?plain=1#L1594)
+- [DIGITAL শব্দটি বর্ণগুলিকে কত প্রকারে সাজানো যায় যাতে স্বরবর্ণগুলি একত্রে থাকে?](../mcq-answers/math.md?plain=1#L1603)
+- [How many bits string of length 4 bit possible such that they contain 2 ones and 2 zeros?](../mcq-answers/math.md?plain=1#L1612)
+
+
 
 ---
 
@@ -1479,6 +1996,28 @@ flowchart LR
 - [In the group of boys and girls, 4 of girls and 13 of boys are 12 years younger. If the members are girls from total members then what would be the strongest gro…](../written-answers/math.md?plain=1#L783)
 - [In the three jars, milk and water are mixed with the ratio 1:2, 2:3, and 3:4. If all are mixed into one jar, what will be the ratio of milk and water?](../written-answers/math.md?plain=1#L796)
 - [১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?](../written-answers/math.md?plain=1#L814)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The ratio of milk and water in 64 liters of a mixture is 5:3. What amount of water is added to make the ratio 3:5?](../mcq-answers/math.md?plain=1#L1519)
+- [Three boys have marbles in the ration of 19:5:3. If the boy with the least number has 9 marbles, how many marbles does the boy with the highest number have?](../mcq-answers/math.md?plain=1#L1528)
+- [In distributing milk at a summer camp, it is found that a quart of milk will fill wither 3 large glass tumblers or 5 small glass tumblers. How many small glass…](../mcq-answers/math.md?plain=1#L1537)
+- [A jar contains white, red and green marbles in the ratios 2:3:5 Six more green marbles are added to the jars, and then the ratio becomes 2:3:7. How many white m…](../mcq-answers/math.md?plain=1#L1546)
+- [Equal amounts of water were poured into two empty jars of different capacities, which made one jar 1/4 full and the other jar 1/3 full. If the water in the jar…](../mcq-answers/math.md?plain=1#L1555)
+- [The ratio of male students to female students in a class is 13 to 19. If there are 224 people in the class, including one teacher, one administrator, and thirty…](../mcq-answers/math.md?plain=1#L1564)
+- [যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত…](../mcq-answers/math.md?plain=1#L1303)
+- [Which device operates at Layer 2 of OSI? ( কোন ডিভাইস OSI Layer 2-এ কাজ করে?)](../mcq-answers/math.md?plain=1#L1318)
+- [In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? ( ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার এ…](../mcq-answers/math.md?plain=1#L1327)
+- [Which operation does F1 key perform for all types of application? ( সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? )](../mcq-answers/math.md?plain=1#L1336)
+- [মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?](../mcq-answers/math.md?plain=1#L1345)
+- [DHCP কি এবং এর কাজ কি?](../mcq-answers/math.md?plain=1#L1354)
+- [Math: 15 marks](../mcq-answers/math.md?plain=1#L1359)
+- [A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed…](../mcq-answers/math.md?plain=1#L1367)
+- [Bluetooth is a type of radio wave information transmission system that is good for about—( ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত ক…](../mcq-answers/math.md?plain=1#L1377)
+- [A pipe can fill a tank in 4 hours, and another pipe can fill it in 6 hours. How much time will they take to fill the tank together?](../mcq-answers/math.md?plain=1#L1080)
+- [একটি বানর তৈলাক্ত বাঁশ বেয়ে ১ মিনিটে ৪ ফুট উঠে, পরের মিনিটে ১ ফুট নামে। এক ক্ষেত্রে ২২ ফুট লম্বা বাঁশের শীর্ষে পৌঁছাতে কত সময় লাগবে?](../mcq-answers/math.md?plain=1#L1089)
+- [If a man rows at 5km/hr in still water and 3.5 km/hr against the current, find his rate along the current.](../mcq-answers/math.md?plain=1#L1098)
+
 
 
 ---
@@ -1601,6 +2140,22 @@ flowchart LR
 - [An aeroplane started 30 minutes later than the scheduled time from a place 1500 km away from its destination. To reach the destination at the scheduled time the…](../written-answers/math.md?plain=1#L857)
 - [নৌকার গতিবেগ ঘন্টায় ১৫কিমি ও স্রোতের গতিবেগ ঘন্টায় ৫কিমি। ৩০কিমি গিয়ে ফিরে আসতে মোট সময় কত?](../written-answers/math.md?plain=1#L870)
 
+**Previous Year MCQ List from this Topic:**
+
+- [সান্দ্রতা (Viscosity) কী?](../mcq-answers/math.md?plain=1#L1695)
+- [a) নিম্নোক্ত মেমোরিগুলোকে গতির দ্রুততার ভিত্তিতে ক্রমানুসারে সাজিয়ে লিখুন।](../mcq-answers/math.md?plain=1#L1710)
+- [Considering computer memory speed, which one is correct order from highest to lowest?( কম্পিউটার মেমোরির গতির দিক থেকে (speed) সর্বোচ্চ থেকে সর্বনিম্ন কোন ক্রমট…](../mcq-answers/math.md?plain=1#L1715)
+- [In a class definition with 10 methods, to make the class maximally cohesive number of connections required among the methods are—( ১০টি মেথড বিশিষ্ট একটি ক্লাস…](../mcq-answers/math.md?plain=1#L1724)
+- [A floor with dimension of 20 feet to 35 feet is needed to be tiled. Two workers can tile that floor in 2 hours and 30 minutes. If they are joined by three other…](../mcq-answers/math.md?plain=1#L1107)
+- [A train went 300 km from city X to city Y at an average speed of 100 km/h. At what speed did it travel on the way back if its average speed for the whole trip w…](../mcq-answers/math.md?plain=1#L1116)
+- [A boat sailing against a stream of river takes 6 hours to travel 24 kms, while sailing with the stream it takes 4 hours to travel the same distance. What is the…](../mcq-answers/math.md?plain=1#L1125)
+- [Length of a train is 170 meters and speed of train is 63 km/hour. This train can pass a bridge in 30 seconds, then find the length of the bridge.](../mcq-answers/math.md?plain=1#L1134)
+- [It takes 5 hours to fill a container using machine A. The same container can be filled suing Machin B in 10 hours. When the container is full, Machine C can ful…](../mcq-answers/math.md?plain=1#L1143)
+- [Two trucks 300 km away are travelling towards each other with a constant speed. Truck A is moving at a constant speed of 50 km/h. How long does it take for them…](../mcq-answers/math.md?plain=1#L1152)
+- [If 12 men work on a particular task. it takes them 24 days to complete it. On the other hand, 12 women can complete the same task in 12 days. How many days it t…](../mcq-answers/math.md?plain=1#L1161)
+- [A train 220 m long is moving at 45km/h. The time taken by the train to cross a tunnel 260m long. Is](../mcq-answers/math.md?plain=1#L1170)
+
+
 
 ---
 
@@ -1709,6 +2264,12 @@ flowchart LR
 - [If you throw two unbiased dice (each with six sides) together, what is the probability that the sum of two upward faces will be 7? Explain your answer.](../written-answers/math.md?plain=1#L895)
 - [10-bits number taken randomly, find the probability that all the bits are 1.](../written-answers/math.md?plain=1#L921)
 
+**Previous Year MCQ List from this Topic:**
+
+- [The mode and mean is given by 7 and 8 respectively. Then the median is:](../mcq-answers/math.md?plain=1#L1658)
+- [If P(A) = 0.6, P(B) = 0.4, P(B/A) = 0.2 then find P(A \cup B) = ?](../mcq-answers/math.md?plain=1#L1667)
+
+
 
 ---
 
@@ -1799,6 +2360,14 @@ flowchart LR
 **Previous Year Question List from this Topic:**
 
 - [(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.](../written-answers/math.md?plain=1#L906)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the probability of getting a sum of six if two dices are thrown at one?](../mcq-answers/math.md?plain=1#L1676)
+- [A fair six-sided die is rolled. Find the probability of getting an odd number or a number less than 4.](../mcq-answers/math.md?plain=1#L1685)
+- [The father's age is 36 and the son's age is 16. How many years ago was the father's age three times the son's age?](../mcq-answers/math.md?plain=1#L1462)
+- [মাতা ও তিন পুত্রের বয়সের গড় অপেক্ষা পিতা ও তিন পুত্রের বয়সের গড় ২.৫ বছর বেশি। পিতার বয়স ৫০ বছর হলে মাতার বয়স কত?](../mcq-answers/math.md?plain=1#L1471)
+
 
 
 ---
@@ -2199,6 +2768,20 @@ flowchart LR
 - [Explain knight knave problem.](../written-answers/math.md?plain=1#L1062)
 - [Suppose You've (1-9) ordering number, put the appropriate number below this figure such as each side have 17 up.](../written-answers/math.md?plain=1#L1076)
 
+**Previous Year MCQ List from this Topic:**
+
+- [A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?](../mcq-answers/math.md?plain=1#L1180)
+- [There are 8 balls, and one of them is heavier than the other 7, which are of the same weight. How many weddings are required to guarantee finding the heavier ba…](../mcq-answers/math.md?plain=1#L1189)
+- [All birds have beaks, and all sparrows are birds, so all sparrows must have beaks. Ans: Syllogism](../mcq-answers/math.md?plain=1#L1198)
+- [Which of the following is an appropriate CPU operation associated with cache memory? ( Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?)](../mcq-answers/math.md?plain=1#L1239)
+- [Which of the following statements about SRAM and DRAM is correct? ( SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?)](../mcq-answers/math.md?plain=1#L1248)
+- [Which of the following statements about flash memory is correct? ( Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?)](../mcq-answers/math.md?plain=1#L1257)
+- [বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?](../mcq-answers/math.md?plain=1#L1266)
+- [Which of the following resembles OATH: PROMISE? ( নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? )](../mcq-answers/math.md?plain=1#L1275)
+- [Which of the following testing strategy is related to the boundary value analysis?( নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analy…](../mcq-answers/math.md?plain=1#L1284)
+- [Data about data is also called—( ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? )](../mcq-answers/math.md?plain=1#L1293)
+
+
 
 ---
 
@@ -2310,6 +2893,12 @@ SUBSTITUTE (ii) into (i):
 - [(a) $\int_0^2 (2x^2+3x)dx$](../written-answers/math.md?plain=1#L1093)
 - [Solve the problem: \int e^x \cos x\,dx](../written-answers/math.md?plain=1#L1103)
 
+**Previous Year MCQ List from this Topic:**
+
+- [The function f(x)=x+\cos x is ______ ?](../mcq-answers/math.md?plain=1#L125)
+- [Given, x is a real number. What is the minimim value of x^2-4x+5?](../mcq-answers/math.md?plain=1#L83)
+
+
 
 ---
 
@@ -2379,6 +2968,14 @@ SUBSTITUTE (ii) into (i):
 
 - [৫ টা ম্যাথ সংক্রান্ত প্রশ্নাবলি।](../written-answers/math.md?plain=1#L1122)
 - [Math: 3 \times 5 = 15 Marks](../written-answers/math.md?plain=1#L1132)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The average temperature for the first 4-days of a week is 40.2° C and that of the last 4-days is 41.3° C. If the average temperature for the whole week is 40.6°…](../mcq-answers/math.md?plain=1#L1480)
+- [M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true?](../mcq-answers/math.md?plain=1#L1489)
+- [If age is P times then y after 6 years x age is 17 then find the age of y with respect to p.](../mcq-answers/math.md?plain=1#L1498)
+- [5 years ago the ration of father's age to son's age was 5:1 and 2 years later father's age will be 3 times his son's age. What is the ration of their present ag…](../mcq-answers/math.md?plain=1#L1508)
+
 
 
 ---
@@ -2500,3 +3097,172 @@ Step 0 — verify the bracket:
 
 - [Determine the root of the given equation x^2 - 3 = 0 for x \in (1, 2)](../written-answers/math.md?plain=1#L1142)
 - [(ক) কোন একটি সমীকরণের মূল নির্ণয়ের জন্য নিউমেরিক্যাল এনালাইসিসে ব্যবহৃত বিভিন্ন পদ্ধতির নাম লিখুন এবং বাইসেকশান পদ্ধতি ব্যবহার করে সমীকরণটির মূল নির্ণয়ের পদ্ধ…](../written-answers/math.md?plain=1#L1161)
+
+**Previous Year MCQ List from this Topic:**
+
+- [K iteration by Newton-Raphson of a following square root of a number increases accuracy in number of digits?](../mcq-answers/math.md?plain=1#L357)
+- [At any iteration of simplex method, if \Delta_j\ (Z_j - C_j) corresponding to any non-basic variable X_j is obtained as zero, the solution under the test is-](../mcq-answers/math.md?plain=1#L222)
+
+
+---
+
+## Trigonometry
+
+### Trigonometry — Ratios, Identities and Heights & Distances
+
+#### The six ratios
+
+```
+                    /|
+                   / |
+       Hypotenuse /  | Perpendicular (opposite)
+                 /   |
+                /θ___|
+                 Base (adjacent)
+
+        sin θ = Perpendicular / Hypotenuse        cosec θ = 1 / sin θ
+        cos θ = Base          / Hypotenuse        sec θ   = 1 / cos θ
+        tan θ = Perpendicular / Base              cot θ   = 1 / tan θ
+
+        tan θ = sin θ / cos θ
+```
+> **The mnemonic: "SOH-CAH-TOA"** — **S**in = **O**pposite/**H**ypotenuse, **C**os = **A**djacent/**H**ypotenuse, **T**an = **O**pposite/**A**djacent.
+
+#### ⭐ The three fundamental identities
+
+> ### **sin²θ + cos²θ = 1**
+> ### **sec²θ − tan²θ = 1**
+> ### **cosec²θ − cot²θ = 1**
+
+**The second and third follow from the first**: divide `sin²+cos²=1` by `cos²` to get `tan²+1=sec²`, and by `sin²` to get `1+cot²=cosec²`.
+
+#### ⭐ The "conjugate" trick — the most examined identity question
+
+> **Because `sec²θ − tan²θ = 1`, the expression factorises as a difference of squares:**
+> ### **(sec θ + tan θ)(sec θ − tan θ) = 1**
+>
+> ### ⭐ **Therefore the two brackets are RECIPROCALS of each other.**
+
+**Worked example**
+> *If `sec A + tan A = 5/2`, find `sec A − tan A`.*
+```
+   (sec A + tan A)(sec A − tan A) = sec²A − tan²A = 1
+
+        (5/2) × (sec A − tan A) = 1
+
+        sec A − tan A = 1 ÷ (5/2) = 2/5
+```
+> ### ✅ **2/5.**
+>
+> ⭐ **No trigonometry is needed at all — just recognise the difference of squares.** The identical trick works for **cosec θ ± cot θ** (also reciprocals), and it appears in almost every paper.
+
+#### ⭐ Finding the other ratios from one — the triangle method
+
+**Worked example**
+> *If `tan A = 5/12`, find `sin A`.*
+```
+   tan A = Perpendicular / Base = 5 / 12
+   ⇒ take Perpendicular = 5, Base = 12
+
+   By Pythagoras:
+        Hypotenuse = √(5² + 12²) = √(25 + 144) = √169 = 13
+
+   ⇒  sin A = Perpendicular / Hypotenuse = 5 / 13
+       cos A = 12/13   ·   sec A = 13/12   ·   cot A = 12/5
+```
+> ### ✅ **sin A = 5/13.**
+>
+> ⭐ **The method: treat the given ratio as two SIDES of a right triangle, find the third by Pythagoras, then read off any ratio you need.** Learn the common **Pythagorean triples — (3,4,5), (5,12,13), (8,15,17), (7,24,25)** — and these questions become instant.
+
+#### Standard values
+
+| θ | 0° | 30° | 45° | 60° | 90° |
+|---|---|---|---|---|---|
+| **sin θ** | 0 | **1/2** | **1/√2** | **√3/2** | 1 |
+| **cos θ** | 1 | **√3/2** | **1/√2** | **1/2** | 0 |
+| **tan θ** | 0 | **1/√3** | **1** | **√3** | ∞ |
+
+> **The pattern that makes them easy to recall: sin takes the values √0/2, √1/2, √2/2, √3/2, √4/2 for 0°, 30°, 45°, 60°, 90° — and cos is the same list REVERSED.**
+
+#### Useful compound and symmetry results
+
+```
+    sin(A + B) = sin A cos B + cos A sin B
+    cos(A + B) = cos A cos B − sin A sin B
+    sin 2A = 2 sin A cos A          cos 2A = cos²A − sin²A = 1 − 2sin²A
+
+    ⭐ COMPLEMENTARY ANGLES (A + B = 90°):
+         sin A = cos B      tan A = cot B      sec A = cosec B
+```
+
+**Worked example — the symmetry question**
+> *If `sin A + cos A = sin B + cos B`, then A + B = ?*
+```
+   The function f(θ) = sin θ + cos θ = √2 · sin(θ + 45°)
+   is SYMMETRIC about θ = 45°.
+
+   Two different angles give the same value when they are placed
+   symmetrically about 45°, i.e. when
+
+        (A + B) / 2 = 45°      ⇒      A + B = 90° = π/2
+```
+> ### ✅ **A + B = π/2 (90°).**
+>
+> **The quick check:** if A = 0° and B = 90°, then sin 0 + cos 0 = 1 and sin 90 + cos 90 = 1 ✓ — and indeed A + B = 90°.
+
+#### ⭐ Heights and distances — the broken-pole problem
+
+**Worked example**
+> *A 48-metre-long pole breaks, and the broken part leans with its tip touching the ground, making a 30° angle with the ground. Find the height of the remaining standing part.*
+
+```
+                    ╱|
+        broken     ╱ |
+        part (b)  ╱  | standing part (h)
+                 ╱30°|
+                ╱____|
+                 base
+
+   Let the standing part = h, and the broken (leaning) part = b.
+   Total length:            h + b = 48
+
+   In the right triangle:   sin 30° = h / b
+                            1/2 = h / b      ⇒     b = 2h
+
+   Substituting:            h + 2h = 48
+                            3h = 48
+                            h = 16
+```
+> ### ✅ **The standing part is 16 metres** (and the broken part is 32 m).
+>
+> ⭐ **The method for every height-and-distance problem: DRAW the right triangle, label what is asked as a variable, write ONE trigonometric ratio and ONE length equation, then solve the pair.** The angle of elevation is measured **upward from the horizontal**; the angle of depression **downward from the horizontal**, and the two are **equal** between the same pair of points.
+
+#### Inverse trigonometric functions
+
+```
+        sin⁻¹(x) = θ   means   sin θ = x        with  −π/2 ≤ θ ≤ π/2
+```
+
+**Worked example**
+> *If `6 sin⁻¹(x² − 6x + 8.5) = π`, find x.*
+```
+   Step 1 — isolate the inverse function:
+        sin⁻¹(x² − 6x + 8.5) = π/6
+
+   Step 2 — take the sine of both sides:
+        x² − 6x + 8.5 = sin(π/6) = 1/2 = 0.5
+
+   Step 3 — solve the quadratic:
+        x² − 6x + 8 = 0
+        (x − 2)(x − 4) = 0
+        x = 2  or  x = 4
+```
+> ### ✅ **x = 2** (the value offered in the options; x = 4 also satisfies the equation).
+
+**Previous Year MCQ List from this Topic:**
+
+- [\sec A + \tan A = 5/2 হলে \sec A - \tan A = ?](../mcq-answers/math.md?plain=1#L1623)
+- [একটি ৪৮ মিটার লম্বা খুঁটি ভেঙ্গে সম্পূর্ণভাবে বিচ্ছিন্ন না হয়ে ভূমির সাথে 30^\circ কোন উৎপন্ন করে। খুঁটিটি কত উচুতে ভেঙ্গে ছিল?](../mcq-answers/math.md?plain=1#L1632)
+- [\tan A = 5/12 হলে, \sin A এর মান কত?](../mcq-answers/math.md?plain=1#L1638)
+- [\sin A + \cos A = \sin B + \cos B এবং A + B = ?](../mcq-answers/math.md?plain=1#L1647)
+- [If 6\sin^{-1}(x^2-6x+8.5) = \pi, then the value of x is ______ ?](../mcq-answers/math.md?plain=1#L134)
