@@ -1,11 +1,11 @@
 # Written Question Count (Last 16 Years)
 
 Category and subcategory wise question count from every written paper in the [`written/`](../) folder.
-Sorted by count, highest first. Total **3402** questions.
+Sorted by count, highest first. Total **3418** questions.
 
 ## IT questions
 
-Total: **2839** questions.
+Total: **2855** questions.
 
 | Category | Subcategory | Questions |
 |---|---|---|
@@ -64,13 +64,14 @@ Total: **2839** questions.
 | | Relational Keys (Candidate, Super, Primary, Foreign Key) | 1 |
 | | Indexing in DBMS | 1 |
 | | Keys, Constraints & Database Objects | 0 |
-| **C Programming** | **— all subcategories —** | **284** |
-| | Basic Programs & Control Statements | 124 |
+| **C Programming** | **— all subcategories —** | **300** |
+| | Basic Programs & Control Statements | 134 |
 | | Output Tracing & Control Flow | 57 |
 | | Recursion & Functions | 39 |
 | | Operators, Data Types & Language Concepts | 25 |
 | | Flowcharts & Algorithms | 16 |
-| | String Manipulation & Algorithms | 14 |
+| | String Manipulation & Algorithms | 15 |
+| | Formula-Based Series (Practice) | 5 |
 | | File Handling | 4 |
 | | Pointers | 4 |
 | | Command Line Arguments & Basic Programs | 1 |

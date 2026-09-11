@@ -1,23 +1,24 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 284 questions
+**Table of Contents** — 10 subtopics · 300 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-124) | 124 |
+| 1 | [Basic Programs & Control Statements](#basic-programs--control-statements-134) | 134 |
 | 2 | [Output Tracing & Control Flow](#output-tracing--control-flow-57) | 57 |
 | 3 | [Recursion & Functions](#recursion--functions-39) | 39 |
 | 4 | [Operators, Data Types & Language Concepts](#operators-data-types--language-concepts-25) | 25 |
 | 5 | [Flowcharts & Algorithms](#flowcharts--algorithms-16) | 16 |
-| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-14) | 14 |
-| 7 | [File Handling](#file-handling-4) | 4 |
-| 8 | [Pointers](#pointers-4) | 4 |
-| 9 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
+| 6 | [String Manipulation & Algorithms](#string-manipulation--algorithms-15) | 15 |
+| 7 | [Formula-Based Series (Practice)](#formula-based-series-practice-5) | 5 |
+| 8 | [File Handling](#file-handling-4) | 4 |
+| 9 | [Pointers](#pointers-4) | 4 |
+| 10 | [Command Line Arguments & Basic Programs](#command-line-arguments--basic-programs-1) | 1 |
 
 <!-- TOC END -->
 
 ---
 
-## Basic Programs & Control Statements (124)
+## Basic Programs & Control Statements (134)
 1. **Write a C program to check the number in EVEN or ODD.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
 2. **Write a C/Java program to determine if a given year is a leap year nor not.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
@@ -505,6 +506,25 @@ a) What is call by reference? b) Write a program that indicate the example of re
 123. **Write a program that takes a single alphanumeric string as input. The string may contain both letters (a-z, A-Z) and digits (0-9). Your task is to calculate and print the sum of all numeric digit characters in the string.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
 124. **Write a C program that performs this matrices problem. Calculate and display the sum of the elements on the main diagonal and the sum of the elements on the anti-diagonal of the product matrix.** *[compact it 520]*
+125. **Write a program to print the common element between two arrays and the total number of elements found.** *[Bangladesh Bank Assistant Director (ICT) 2025 habib collection 1 (ET: N/A)]*
+
+126. **Find the sum of the series: $1 + \frac{1}{2} + \frac{1}{3} + \dots\dots\dots\dots + \frac{1}{n}$** *[Uttara Bank Assistant Programmer 2019 habib collection 13 (ET: N/A)]*
+
+127. **Find the sum of the series: $1^2 - 2^2 + 3^2 - 4^2 + 5^2 - \dots\dots\dots\dots \pm n^2$** *[Bangladesh Competition Commission Programmer 2019 habib collection 13, 19 (ET: N/A)]*
+
+128. **Find the number of occurrences of a digit in a number.** *[Dutch-Bangla Bank Limited 2018 habib collection 15 (ET: N/A)]*
+
+129. **Evaluate the series: $1\times3 + 2\times5 + 3\times7 + \dots\dots\dots\dots + n\times(2n+1)$** *[Dutch-Bangla Bank Limited 2018 habib collection 16 (ET: N/A)]*
+
+130. **Array - Reverse the whole array.** *[Huo Academy Coding Practice Set habib collection 48 (ET: N/A)]*
+
+131. **Array - Frequency count of elements.** *[Huo Academy Coding Practice Set habib collection 49 (ET: N/A)]*
+
+132. **Matrix - Sum of two matrices.** *[Huo Academy Coding Practice Set habib collection 52 (ET: N/A)]*
+
+133. **Matrix - Find the transpose.** *[Huo Academy Coding Practice Set habib collection 54 (ET: N/A)]*
+
+134. **Matrix - Check identity matrix.** *[Huo Academy Coding Practice Set habib collection 56 (ET: N/A)]*
 
 ## Output Tracing & Control Flow (57)
 
@@ -1424,7 +1444,7 @@ int main() {
 
 16. **Draw flowchart to input five positive numbers and sort them is ascending order.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1199 (ET: N/A)]*
 
-## String Manipulation & Algorithms (14)
+## String Manipulation & Algorithms (15)
 
 1. **Write a C or Java program to convert string to integer without using any built-in function.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1362 (ET: BUET)]*
 
@@ -1460,6 +1480,20 @@ int main() {
 |---|---|
 | str1=x str2=x^x | Yes |
 | str1=x str2=x^2 | No |
+
+15. **String - Find frequency of each character.** *[Huo Academy Coding Practice Set habib collection 60 (ET: N/A)]*
+
+## Formula-Based Series (Practice) (5)
+
+1. **Sum of Cubes — find the sum of the series $1^3 + 2^3 + 3^3 + \dots\dots\dots\dots + n^3$ using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 25 (ET: N/A)]*
+
+2. **Geometric Progression (GP) — find the sum of a geometric series using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 28 (ET: N/A)]*
+
+3. **Arithmetic Progression (AP) — find the sum of an arithmetic series using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 29 (ET: N/A)]*
+
+4. **Factorial Sum — find the sum of the series $1! + 2! + 3! + \dots\dots\dots\dots + n!$** *[Huo Academy Coding Practice Set habib collection 30 (ET: N/A)]*
+
+5. **Fibonacci Series Sum — find the sum of the first n terms of the Fibonacci series.** *[Huo Academy Coding Practice Set habib collection 31 (ET: N/A)]*
 
 ## File Handling (4)
 
