@@ -126,6 +126,14 @@ If after 5 minutes of chatting the interrogator cannot reliably say which one is
 - Intelligence here is judged by **behaviour**, not by whether the machine "really" feels anything.
 - AI needs three fuels: **Data**, **Algorithms**, and **Computing power (GPU)**.
 
+**Previous Year Question List from this Topic:**
+
+- [AI related Question (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/ai-and-ml.md?plain=1#L115)
+- [ক) Deep Blue কী?](../written-answers/ai-and-ml.md?plain=1#L229)
+- [What is Artificial Intelligence?](../written-answers/ai-and-ml.md?plain=1#L389)
+- [What is the father of AI?](../written-answers/ai-and-ml.md?plain=1#L537)
+- [Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?](../written-answers/ai-and-ml.md?plain=1#L571)
+
 ---
 
 ### Types of Artificial Intelligence
@@ -204,6 +212,11 @@ flowchart TD
 - Functionality list = Reactive → Limited Memory → Theory of Mind → Self-Aware (4 types).
 - **Everything working in 2026 is Narrow AI + Limited Memory.**
 
+**Previous Year Question List from this Topic:**
+
+- [AI related Question (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/ai-and-ml.md?plain=1#L115)
+- [ক) Deep Blue কী?](../written-answers/ai-and-ml.md?plain=1#L229)
+
 ---
 
 ### Branches and Sub-fields of Artificial Intelligence
@@ -238,6 +251,10 @@ flowchart TD
 | **Knowledge Representation** | Stores facts and relations so a machine can reason | Semantic networks, ontologies |
 | **Planning & Search** | Finds a sequence of actions to reach a goal | Route planning, game playing |
 | **Fuzzy Logic** | Handles "partly true" values instead of only 0/1 | Washing-machine and AC controllers |
+
+**Previous Year Question List from this Topic:**
+
+- [AI related Question (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/ai-and-ml.md?plain=1#L115)
 
 ---
 
@@ -300,6 +317,14 @@ Some jobs are impossible to write as rules. Try writing an `if–else` for *"is 
 9. **Traffic prediction** — Google Maps showing the fastest route.
 10. **Chatbots and customer support** — a bank's 24/7 helpdesk bot.
 
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms: 3](../written-answers/ai-and-ml.md?plain=1#L25)
+- [What is the difference between Supervised and Unsupervised learning?](../written-answers/ai-and-ml.md?plain=1#L72)
+- [What do you mean by machine learning? Name three machine learning application in our daily life?](../written-answers/ai-and-ml.md?plain=1#L833)
+- [What is Machine Learning? Mention some real-life applications.](../written-answers/ai-and-ml.md?plain=1#L976)
+- [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
+
 ---
 
 ### AI vs Machine Learning vs Deep Learning vs Data Science
@@ -331,6 +356,12 @@ Think of it as boxes inside boxes: **every** Deep Learning system is Machine Lea
 **Where does Data Science fit?** Data Science is the *broader practice* of getting value out of data — collecting, cleaning, exploring, visualising and modelling it. It **overlaps** AI/ML rather than sitting inside it: a data scientist may use Machine Learning, but may also just build a dashboard or run statistics.
 
 > **True/False trap:** *"Machine Learning is a subset of Cloud Computing that can build AI."* → **FALSE.** Machine Learning is a subset of **Artificial Intelligence**. Cloud Computing is only a *place* where ML models can be trained and hosted.
+
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms: 3](../written-answers/ai-and-ml.md?plain=1#L25)
+- [Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).](../written-answers/ai-and-ml.md?plain=1#L529)
+- [Write difference between machine learning and deep learning.](../written-answers/ai-and-ml.md?plain=1#L624)
 
 ---
 
@@ -370,6 +401,13 @@ Examples: a robot learning to walk, AlphaGo, self-driving cars, dynamic pricing.
 | Example | Diabetes prediction from labelled patient records | Customer segmentation | Game playing robot |
 
 *(A fourth type, **Semi-Supervised Learning**, uses a small amount of labelled data with a large amount of unlabelled data — useful when labelling is expensive, e.g. medical images.)*
+
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms: 3](../written-answers/ai-and-ml.md?plain=1#L25)
+- [What is the difference between Supervised and Unsupervised learning?](../written-answers/ai-and-ml.md?plain=1#L72)
+- [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
+- [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
 
 ---
 
@@ -412,6 +450,10 @@ flowchart LR
 
 **Step 7 — Deployment and monitoring.** Put the model behind an API, then keep watching for **data drift** (the real world changes, so accuracy falls) and retrain periodically.
 
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms: 3](../written-answers/ai-and-ml.md?plain=1#L25)
+
 ---
 
 ### Applications of AI — in Daily Life and in the Banking Sector
@@ -450,6 +492,13 @@ Bank and government IT exams very often ask for AI uses **specific to banking/go
 - Land-record and NID verification with computer vision.
 - Disaster (flood/cyclone) prediction from satellite and sensor data.
 - Smart traffic signals and e-challan systems.
+
+**Previous Year Question List from this Topic:**
+
+- [AI related Question (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/ai-and-ml.md?plain=1#L115)
+- [Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)](../written-answers/ai-and-ml.md?plain=1#L144)
+- [What do you mean by machine learning? Name three machine learning application in our daily life?](../written-answers/ai-and-ml.md?plain=1#L833)
+- [What is Machine Learning? Mention some real-life applications.](../written-answers/ai-and-ml.md?plain=1#L976)
 
 ---
 
@@ -504,8 +553,11 @@ flowchart TD
 - Give 3–4 risks (bias, privacy, job loss, deepfakes).
 - End with the balance: *"AI should assist human judgement, not replace human responsibility."*
 
-## Artificial Intelligence & Expert Systems
+**Previous Year Question List from this Topic:**
 
+- [Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)](../written-answers/ai-and-ml.md?plain=1#L144)
+
+## Artificial Intelligence & Expert Systems
 ### Intelligent Agents in AI
 
 Modern AI textbooks (Russell & Norvig) describe **every** AI system as an **agent**.
@@ -545,6 +597,10 @@ flowchart LR
 
 **Key point:** a rational agent is *not* an omniscient agent. It does the best it can with the information available — it is not expected to know the future.
 
+**Previous Year Question List from this Topic:**
+
+- [An artificial intelligence is an agent is an entity that continuously revious its enviornment.....](../written-answers/ai-and-ml.md?plain=1#L411)
+
 ---
 
 ### PEAS Framework (Performance, Environment, Actuators, Sensors)
@@ -582,6 +638,10 @@ Before designing any intelligent agent you must **specify the task**. The standa
 |---|---|---|---|---|
 | **Vacuum cleaner robot** | Cleanliness, battery used, time taken | Room, carpet, furniture, dust | Wheels, brushes, vacuum motor | Dirt sensor, bump sensor, camera |
 | **Part-picking robot** | Percentage of parts in the correct bin | Conveyor belt with parts, bins | Jointed arm, gripper | Camera, joint-angle sensors |
+
+**Previous Year Question List from this Topic:**
+
+- [Write PEAS for (a) Auto taxi (b) Automatic clinical test.](../written-answers/ai-and-ml.md?plain=1#L508)
 
 ---
 
@@ -627,6 +687,10 @@ flowchart TD
 
 - *Example:* a recommendation system that gets better as you watch more videos.
 
+**Previous Year Question List from this Topic:**
+
+- [An artificial intelligence is an agent is an entity that continuously revious its enviornment.....](../written-answers/ai-and-ml.md?plain=1#L411)
+
 ---
 
 ### Properties of Task Environments
@@ -644,6 +708,11 @@ The type of environment decides how hard the agent's job is. Exams ask this as *
 | 7 | **Known vs Unknown** | Does the agent know the rules of the environment? | Known = rules given; Unknown = must be learned |
 
 **The hardest environment** is one that is *partially observable, stochastic, sequential, dynamic, continuous and multi-agent* — which is exactly **driving a car in real traffic**.
+
+**Previous Year Question List from this Topic:**
+
+- [An artificial intelligence is an agent is an entity that continuously revious its enviornment.....](../written-answers/ai-and-ml.md?plain=1#L411)
+- [Write PEAS for (a) Auto taxi (b) Automatic clinical test.](../written-answers/ai-and-ml.md?plain=1#L508)
 
 ---
 
@@ -697,6 +766,10 @@ flowchart TD
 | **Scripts** | A standard sequence of events | The "restaurant script": enter → order → eat → pay |
 
 **Properties a good representation must have:** *representational adequacy, inferential adequacy, inferential efficiency,* and *acquisitional efficiency*.
+
+**Previous Year Question List from this Topic:**
+
+- [(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।](../written-answers/ai-and-ml.md?plain=1#L544)
 
 ---
 
@@ -765,6 +838,11 @@ flowchart TD
 | Data needed | Very little | Large amount |
 | Handles new/unseen cases | Poorly | Reasonably well |
 
+**Previous Year Question List from this Topic:**
+
+- [What is Artificial Intelligence?](../written-answers/ai-and-ml.md?plain=1#L389)
+- [(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।](../written-answers/ai-and-ml.md?plain=1#L544)
+
 ---
 
 ### Forward Chaining vs Backward Chaining
@@ -805,6 +883,10 @@ flowchart RL
 | Typical use | Monitoring, alarms, planning, real-time control | Diagnosis, troubleshooting, MYCIN, Prolog |
 | Efficiency | Can derive many irrelevant facts | Focused, asks only needed questions |
 
+**Previous Year Question List from this Topic:**
+
+- [(i) ‘Knowledge’ কী? Human Knowledge কে Computer এ প্রকাশ করার একটি flow diagram দেখান।](../written-answers/ai-and-ml.md?plain=1#L544)
+
 ---
 
 ### Measuring Intelligence — and Common True/False Traps
@@ -825,8 +907,16 @@ Do not confuse with **Alan Turing** (Enigma code-breaking, Turing Test) — he l
 **5. "An AI agent is an entity that continuously perceives its environment..." → the full sentence is:**
 > An intelligent agent is an entity that **perceives its environment through sensors** and **acts upon that environment through actuators**, choosing actions that maximise its performance measure.
 
-## Deep Learning & Neural Networks (ANN, CNN, RNN)
+**Previous Year Question List from this Topic:**
 
+- [What is Artificial Intelligence?](../written-answers/ai-and-ml.md?plain=1#L389)
+- [Intelligence can not be measured only by intelligence test because it is related to other subjects. (True or False)](../written-answers/ai-and-ml.md?plain=1#L523)
+- [Machine learning is a subset of cloud computing that can be built AI-Based. (True or False).](../written-answers/ai-and-ml.md?plain=1#L529)
+- [What is the father of AI?](../written-answers/ai-and-ml.md?plain=1#L537)
+- [Who is Largely credited for breaking the German Enigma codes that provided a foundation for artificial intelligence?](../written-answers/ai-and-ml.md?plain=1#L571)
+- [ক) Deep Blue কী?](../written-answers/ai-and-ml.md?plain=1#L229)
+
+## Deep Learning & Neural Networks (ANN, CNN, RNN)
 ### Biological Neuron vs Artificial Neuron
 
 A neural network is a **rough copy of the human brain**. The brain has about **86 billion** nerve cells called **neurons**; an Artificial Neural Network copies their basic idea in mathematics.
@@ -863,6 +953,12 @@ flowchart LR
 | Cell body / Soma | **Summation function** Σ(wᵢxᵢ) + b |
 | Firing threshold | **Activation function** |
 | Axon | **Output** (y) |
+
+**Previous Year Question List from this Topic:**
+
+- [What does the axon of neural network do?](../written-answers/ai-and-ml.md?plain=1#L605)
+- [What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.](../written-answers/ai-and-ml.md?plain=1#L657)
+- [What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.](../written-answers/ai-and-ml.md?plain=1#L707)
 
 ---
 
@@ -984,6 +1080,12 @@ flowchart LR
 | **GAN** (Generative Adversarial Network) | Generating new images |
 | **Transformer** | Modern NLP — BERT, GPT, ChatGPT |
 
+**Previous Year Question List from this Topic:**
+
+- [What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.](../written-answers/ai-and-ml.md?plain=1#L657)
+- [Draw the single layer of ANN.](../written-answers/ai-and-ml.md?plain=1#L688)
+- [What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.](../written-answers/ai-and-ml.md?plain=1#L707)
+
 ---
 
 ### Activation Functions in Neural Networks
@@ -1039,6 +1141,12 @@ The derivative of sigmoid is at most **0.25**. In backpropagation these derivati
 | Multi-class classification output | **Softmax** |
 | Regression output | **Linear** (no activation) |
 
+**Previous Year Question List from this Topic:**
+
+- [(c) What is activation function in Deep Neural Network? What is the usability of this?](../written-answers/ai-and-ml.md?plain=1#L580)
+- [What is artificial Neural Network (ANN)? Based on ANN, describe input & hidden layer, weight and activation function.](../written-answers/ai-and-ml.md?plain=1#L707)
+- [(c) What is activation function in Deep Neural Network? What is the usability of this?](../written-answers/ai-and-ml.md?plain=1#L48)
+
 ---
 
 ### What is Deep Learning?
@@ -1078,6 +1186,12 @@ flowchart LR
 - Long training time; high electricity cost.
 - Can **overfit** easily on small data.
 
+**Previous Year Question List from this Topic:**
+
+- [Write difference between machine learning and deep learning.](../written-answers/ai-and-ml.md?plain=1#L624)
+- [What is Deep learning?](../written-answers/ai-and-ml.md?plain=1#L639)
+- [What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.](../written-answers/ai-and-ml.md?plain=1#L657)
+
 ---
 
 ### Deep Learning vs Traditional Machine Learning
@@ -1113,6 +1227,11 @@ flowchart TD
 
 **One-line answer:** *Deep Learning is Machine Learning that uses deep neural networks to learn the features automatically, while traditional Machine Learning depends on features hand-picked by humans.*
 
+**Previous Year Question List from this Topic:**
+
+- [Write difference between machine learning and deep learning.](../written-answers/ai-and-ml.md?plain=1#L624)
+- [What is Artificial Neural Network (ANN)? Difference between deep learning technique and Traditional machine learning technique.](../written-answers/ai-and-ml.md?plain=1#L657)
+
 ---
 
 ### Convolutional Neural Network (CNN)
@@ -1147,6 +1266,10 @@ flowchart LR
 3. **Translation invariance** — a cat is recognised whether it is on the left or the right of the photo.
 
 **Famous CNNs:** LeNet-5, AlexNet (2012), VGG-16, GoogLeNet/Inception, ResNet.
+
+**Previous Year Question List from this Topic:**
+
+- [What is Deep learning?](../written-answers/ai-and-ml.md?plain=1#L639)
 
 ---
 
@@ -1214,8 +1337,11 @@ A simpler, faster variant with only **two gates**: the **Reset Gate** and the **
 
 *(Note: since 2018, **Transformers** — which use an **attention mechanism** instead of recurrence and can be trained in parallel — have replaced LSTM in most NLP tasks, including GPT and BERT.)*
 
-## Machine Learning Paradigms (Supervised vs Unsupervised)
+**Previous Year Question List from this Topic:**
 
+- [Write LSTM gates name in AI.](../written-answers/ai-and-ml.md?plain=1#L676)
+
+## Machine Learning Paradigms (Supervised vs Unsupervised)
 ### Supervised Learning in Detail
 
 **Supervised Learning** is learning **with a teacher**. The training data contains both the **input features (X)** and the **correct output label (Y)**, and the model's job is to learn the mapping **Y = f(X)** so that it can predict Y for new, unseen X.
@@ -1271,6 +1397,14 @@ flowchart LR
 - Cannot discover classes it has never been shown.
 - Risk of **overfitting** on small datasets.
 
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms:](../written-answers/ai-and-ml.md?plain=1#L739)
+- [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
+- [(b) What is the difference between supervised and unsupervised learning? Explain with examples.](../written-answers/ai-and-ml.md?plain=1#L808)
+- [Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised…](../written-answers/ai-and-ml.md?plain=1#L826)
+- [What is the difference between Supervised and Unsupervised learning?](../written-answers/ai-and-ml.md?plain=1#L72)
+
 ---
 
 ### Unsupervised Learning in Detail
@@ -1311,6 +1445,12 @@ flowchart LR
 - **No ground truth**, so accuracy cannot be measured directly.
 - Results can be **hard to interpret** — you must name the clusters yourself.
 - The output depends heavily on the chosen number of clusters and distance measure.
+
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms:](../written-answers/ai-and-ml.md?plain=1#L739)
+- [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
+- [(b) What is the difference between supervised and unsupervised learning? Explain with examples.](../written-answers/ai-and-ml.md?plain=1#L808)
 
 ---
 
@@ -1362,6 +1502,15 @@ flowchart TD
 > **Reason:** the dataset already contains the **correct answer (diabetic = Yes/No)** for the training samples. The model learns the mapping from features (glucose level, BMI, age, blood pressure) to that known label, and the output is one of **two discrete classes**, which makes it *binary classification*, not regression and not clustering.
 > *(If only a small part of the data were labelled and a large part unlabelled, you could additionally mention **Semi-Supervised Learning**.)*
 
+**Previous Year Question List from this Topic:**
+
+- [(a) Describe the following terms:](../written-answers/ai-and-ml.md?plain=1#L739)
+- [Briefly explain supervised learning, unsupervised learning & reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L792)
+- [(b) What is the difference between supervised and unsupervised learning? Explain with examples.](../written-answers/ai-and-ml.md?plain=1#L808)
+- [Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised…](../written-answers/ai-and-ml.md?plain=1#L826)
+- [What is the difference between Supervised and Unsupervised learning?](../written-answers/ai-and-ml.md?plain=1#L72)
+- [What is machine learning? Differentiate among supervised learning vs unsupervised learning vs reinforcement learning.](../written-answers/ai-and-ml.md?plain=1#L1013)
+
 ---
 
 ### Semi-Supervised and Self-Supervised Learning
@@ -1390,6 +1539,10 @@ flowchart LR
 | Semi-supervised | A small % + lots of unlabelled | When labelling is costly |
 | Self-supervised | 0 % (labels generated from the data) | Pre-training large language and vision models |
 | Unsupervised | 0 % | Discovering structure |
+
+**Previous Year Question List from this Topic:**
+
+- [Given some features of diabetic patient dataset with some labeled data. From this it can be predict whether this patient is diabetic or not. Is this supervised…](../written-answers/ai-and-ml.md?plain=1#L826)
 
 ---
 
@@ -1460,3 +1613,7 @@ Exams sometimes say *"explain supervised and unsupervised classification with su
 | Direction | Looks **backwards** at historical data | Looks **forwards** at future cases |
 | Human involvement | High — a human interprets the patterns | Low — the model runs automatically |
 | Relationship | Uses ML algorithms as tools | Is one of the tools data mining uses |
+
+**Previous Year Question List from this Topic:**
+
+- [a) Define the term "Data Mining". Explain supervised and unsupervised classification with suitable example.](../written-answers/ai-and-ml.md?plain=1#L771)
