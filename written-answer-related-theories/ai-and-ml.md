@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 57 theories
+**Table of Contents** — 11 subtopics · 60 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -77,6 +77,11 @@
    - [Overfitting — Causes, Signs and Cures](#overfitting--causes-signs-and-cures)
    - [Underfitting — Causes and Cures](#underfitting--causes-and-cures)
    - [Regularization Techniques](#regularization-techniques)
+
+11. **[Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis)**
+   - [Association Rule Mining — Support, Confidence and Lift](#association-rule-mining--support-confidence-and-lift)
+   - [The Apriori Algorithm](#the-apriori-algorithm)
+   - [Market Basket Analysis — Steps and Business Use](#market-basket-analysis--steps-and-business-use)
 
 <!-- TOC END -->
 
@@ -3308,3 +3313,212 @@ Track the validation loss every epoch and **stop training at its minimum**, keep
 
 - [In machine learning. What will happen, when a machine is highly trained up a slight trained up?](../written-answers/ai-and-ml.md?plain=1#L1243)
 - [You are a designing a machine learning model for a binary classification problem. The model has three features: f1, f2, f3. Derive the objective and loss functi…](../written-answers/ai-and-ml.md?plain=1#L924)
+
+## Association Rule Learning (Market Basket Analysis)
+
+### Association Rule Mining — Support, Confidence and Lift
+
+**Association Rule Mining** is an **unsupervised** data-mining technique that finds **relationships between items** that occur together in large transaction databases.
+
+An association rule is written as:
+
+> **{Bread, Butter} → {Milk}**
+> *"Customers who buy Bread and Butter also tend to buy Milk."*
+
+The left side is the **antecedent (LHS)**, the right side the **consequent (RHS)**.
+
+#### The three measures
+
+Assume a shop with **N** total transactions.
+
+**1. Support** — how **frequent** the itemset is.
+
+> **Support(A) = (transactions containing A) / N**
+> **Support(A → B) = (transactions containing both A and B) / N**
+
+It answers: *"Is this pattern common enough to bother with?"*
+
+**2. Confidence** — how **reliable** the rule is.
+
+> **Confidence(A → B) = Support(A ∪ B) / Support(A)**
+
+It answers: *"Of the people who bought A, what fraction also bought B?"* This is the conditional probability P(B | A).
+
+**3. Lift** — how much **better than chance** the rule is.
+
+> **Lift(A → B) = Confidence(A → B) / Support(B)**
+
+| Lift value | Meaning |
+|---|---|
+| **> 1** | A and B are **positively related** — buying A makes B *more* likely. **Useful rule** |
+| **= 1** | A and B are **independent** — no relationship |
+| **< 1** | **Negatively related** — buying A makes B *less* likely (substitutes, e.g. tea and coffee) |
+
+**Why lift is essential:** milk is bought by 80 % of customers anyway. A rule *{Anything} → {Milk}* will always have high confidence, but its lift will be about 1 — meaning it tells you nothing. **Always check lift, not just confidence.**
+
+#### Worked example
+
+A shop has **N = 1000** transactions.
+- Bread appears in **400**
+- Milk appears in **500**
+- Bread **and** Milk together appear in **300**
+
+For the rule **Bread → Milk**:
+
+| Measure | Working | Result |
+|---|---|---|
+| **Support(Bread)** | 400 / 1000 | 0.40 |
+| **Support(Milk)** | 500 / 1000 | 0.50 |
+| **Support(Bread ∪ Milk)** | 300 / 1000 | **0.30 (30 %)** |
+| **Confidence** | 0.30 / 0.40 | **0.75 (75 %)** |
+| **Lift** | 0.75 / 0.50 | **1.5** |
+
+**Interpretation:** 30 % of all customers buy both; of those who buy bread, 75 % also buy milk; and a bread-buyer is **1.5 times more likely** than an average customer to buy milk. Lift > 1, so this is a **genuinely useful rule** — put the milk near the bread.
+
+**Previous Year Question List from this Topic:**
+
+- [Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.](../written-answers/ai-and-ml.md?plain=1#L1268)
+
+
+---
+
+### The Apriori Algorithm
+
+**Apriori** is the classic algorithm for finding frequent itemsets and generating association rules. It is the **standard answer** to *"which machine learning algorithm is suitable for Market Basket Analysis?"*
+
+#### The Apriori property (why it is efficient)
+
+> **Every subset of a frequent itemset must also be frequent.**
+> Equivalently (the contrapositive, which is the useful form): **if an itemset is infrequent, then every superset of it is also infrequent** — so it can be discarded without checking.
+
+If {Bread, Milk} appears in only 2 % of transactions and your threshold is 10 %, then {Bread, Milk, Eggs} can never reach 10 % either. This **pruning** is what makes the algorithm practical.
+
+#### The steps
+
+```mermaid
+flowchart TD
+    A[1 . Set minimum support and minimum confidence] --> B[2 . Scan the database:<br/>count every single item → C1]
+    B --> C[3 . Remove items below min support → L1 frequent 1-itemsets]
+    C --> D[4 . Join L1 with itself to form candidate 2-itemsets → C2]
+    D --> E[5 . Scan the database and count C2]
+    E --> F[6 . Prune those below min support → L2]
+    F --> G{Any frequent<br/>itemsets left?}
+    G -->|Yes| H[7 . Join Lk to form Ck+1, prune using the Apriori property, repeat]
+    H --> G
+    G -->|No| I[8 . From all frequent itemsets,<br/>generate rules with confidence ≥ min confidence]
+    I --> J[9 . Rank the rules by LIFT and interpret them]
+```
+
+#### A small worked run
+
+Transactions (min support = 50 %, i.e. at least 2 out of 4):
+
+| TID | Items |
+|---|---|
+| T1 | Bread, Milk |
+| T2 | Bread, Butter, Egg |
+| T3 | Milk, Butter, Egg |
+| T4 | Bread, Milk, Butter |
+
+**Step 1 — C1 → L1 (count each item):**
+
+| Item | Count | Frequent? (≥ 2) |
+|---|---|---|
+| Bread | 3 | ✅ |
+| Milk | 3 | ✅ |
+| Butter | 3 | ✅ |
+| Egg | 2 | ✅ |
+
+**Step 2 — C2 → L2 (all pairs):**
+
+| Pair | Count | Frequent? |
+|---|---|---|
+| {Bread, Milk} | 2 | ✅ |
+| {Bread, Butter} | 2 | ✅ |
+| {Bread, Egg} | 1 | ❌ pruned |
+| {Milk, Butter} | 2 | ✅ |
+| {Milk, Egg} | 1 | ❌ pruned |
+| {Butter, Egg} | 2 | ✅ |
+
+**Step 3 — C3:** candidate {Bread, Milk, Butter} — all its subsets are frequent, so it survives pruning. Its actual count is 1 (only T4) → **infrequent**. Candidate {Bread, Butter, Egg} contains the infrequent subset {Bread, Egg}, so it is **eliminated without even counting** — that is the Apriori property at work.
+
+**Step 4 — generate rules** from L2, e.g. **Butter → Egg**: Confidence = 2/3 = 66.7 %; Support(Egg) = 2/4 = 0.5; **Lift = 0.667/0.5 = 1.33 > 1** → a useful rule.
+
+#### Advantages and disadvantages
+
+**Advantages:** simple, easy to explain, easy to implement, works on any transactional data, and the rules are directly actionable by business people.
+
+**Disadvantages:**
+- **Scans the database many times** (once per level) — slow on big data.
+- Generates a **huge number of candidate itemsets**.
+- Needs a carefully chosen minimum support; too low produces thousands of useless rules.
+- Treats all items equally, ignoring price and profit.
+
+#### Better alternatives
+
+| Algorithm | Improvement |
+|---|---|
+| **FP-Growth** (Frequent Pattern Growth) | Builds a compact **FP-tree** and needs only **two database scans**, with **no candidate generation** — much faster |
+| **ECLAT** | Uses a vertical data format and set intersections; fast and memory-efficient |
+
+**Previous Year Question List from this Topic:**
+
+- [Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.](../written-answers/ai-and-ml.md?plain=1#L1268)
+
+
+---
+
+### Market Basket Analysis — Steps and Business Use
+
+**Market Basket Analysis (MBA)** is the business application of association rule mining: analysing what customers **buy together** in a single transaction, to take retail decisions.
+
+#### The full process
+
+```mermaid
+flowchart LR
+    A[1 . Collect transaction data<br/>POS / e-commerce orders] --> B[2 . Clean & prepare<br/>one row per transaction]
+    B --> C[3 . Convert to a basket matrix<br/>transaction × item, 0/1]
+    C --> D[4 . Choose min support<br/>& min confidence]
+    D --> E[5 . Run Apriori / FP-Growth<br/>→ frequent itemsets]
+    E --> F[6 . Generate association rules]
+    F --> G[7 . Filter & rank by LIFT]
+    G --> H[8 . Interpret and act<br/>shelf layout, bundles, offers]
+    H --> I[9 . Measure the uplift in sales]
+```
+
+**Step-by-step in words**
+
+1. **Collect the data** — every transaction with the list of items in it (TID, item list).
+2. **Clean it** — remove cancelled orders and returns, merge duplicate product codes, group items into sensible categories.
+3. **Transform into a basket/binary matrix** — rows = transactions, columns = items, 1 if present.
+4. **Set thresholds** — minimum support (so you only get patterns that occur often enough to matter) and minimum confidence.
+5. **Find frequent itemsets** with **Apriori** (or FP-Growth for large data).
+6. **Generate rules** from those itemsets and compute support, confidence and lift for each.
+7. **Filter and rank**, keeping rules with **lift > 1** and enough support; discard trivial rules (bread → bread bag) and redundant ones.
+8. **Act on the rules** — see the table below.
+9. **Measure the result** with an A/B test; keep what works.
+
+#### Business actions from the rules
+
+| Finding | Action |
+|---|---|
+| Bread → Butter (lift 1.6) | Place them on **adjacent shelves**, or far apart to force a walk past other goods |
+| Laptop → Laptop bag | **Bundle offer / combo pack** |
+| Shampoo → Conditioner | **"Frequently bought together"** on the website |
+| Camera → Memory card | **Cross-sell** at checkout |
+| Item A and B both bought | Never discount **both** at the same time |
+| Seasonal pairs | Plan **inventory and stock** together |
+
+#### Beyond retail
+
+| Sector | Use |
+|---|---|
+| **Banking** | Which products a customer holds together (savings + credit card + insurance) → **cross-selling** |
+| **Healthcare** | Symptoms and diseases occurring together; drug interaction patterns |
+| **Telecom** | Service bundles customers subscribe to together |
+| **Web analytics** | Pages visited in the same session → site navigation redesign |
+| **Fraud / security** | Unusual combinations of events occurring together |
+
+**Previous Year Question List from this Topic:**
+
+- [Which Machine Learning Algorithm is suitable for the case of Market - Basket Analysis? Explain the steps involved.](../written-answers/ai-and-ml.md?plain=1#L1268)
