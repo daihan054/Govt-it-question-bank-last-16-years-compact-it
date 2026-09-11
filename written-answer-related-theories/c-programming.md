@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 2 subtopics · 11 theories
+**Table of Contents** — 3 subtopics · 15 theories
 
 1. **[Basic Programs & Control Statements](#basic-programs--control-statements)**
    - [C Program Structure and the Compilation Process](#c-program-structure-and-the-compilation-process)
@@ -15,6 +15,12 @@
    - [Increment and Decrement Operators — i++ vs ++i](#increment-and-decrement-operators--i-vs-i)
    - [Integer Arithmetic Traps — Division, Overflow and Type Promotion](#integer-arithmetic-traps--division-overflow-and-type-promotion)
    - [Common Output-Tracing Traps in C](#common-output-tracing-traps-in-c)
+
+3. **[Recursion & Functions](#recursion--functions)**
+   - [Functions in C — Declaration, Definition and Call](#functions-in-c--declaration-definition-and-call)
+   - [Call by Value vs Call by Reference (Parameter Passing)](#call-by-value-vs-call-by-reference-parameter-passing)
+   - [Recursion — Concept, Base Case and the Recursion Tree](#recursion--concept-base-case-and-the-recursion-tree)
+   - [Classic Recursive Problems](#classic-recursive-problems)
 
 <!-- TOC END -->
 
@@ -1473,3 +1479,536 @@ printf("%zu\n", sizeof(c + 1));     /* sizeof(int) = 4 — c is PROMOTED to int 
 - [(b) What is the difference between sizeof c+1 and sizeof (c+1)?](../written-answers/c-programming.md?plain=1#L8859)
 - [What is the difference between Null and Void?](../written-answers/c-programming.md?plain=1#L8880)
 - [(ক) Local variable এবং Global variable এর মধ্যে পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L8939)
+
+## Recursion & Functions
+
+### Functions in C — Declaration, Definition and Call
+
+A **function** is a **self-contained block of code that performs one specific task**, can be **called repeatedly** from anywhere in the program, and optionally **returns a value**.
+
+> Functions implement **modularity** and **code reuse** — the two ideas that make large programs manageable.
+
+#### The three parts of using a function
+
+```c
+#include <stdio.h>
+
+int add(int a, int b);        /* 1. DECLARATION (prototype) — tells the compiler
+                                    the name, return type and parameter types */
+
+int main() {
+    int result = add(5, 3);   /* 2. CALL — actual arguments 5 and 3 are passed */
+    printf("%d", result);
+    return 0;
+}
+
+int add(int a, int b) {       /* 3. DEFINITION — the actual body.
+                                    a and b are the FORMAL parameters */
+    return a + b;             /*    returns a value to the caller */
+}
+```
+
+#### Function syntax
+
+```
+return_type  function_name ( parameter_list )
+{
+        local declarations;
+        statements;
+        return expression;      /* optional if return_type is void */
+}
+```
+
+| Element | Meaning |
+|---|---|
+| **return_type** | The type of value sent back (`int`, `float`, `char`, a pointer, or **`void`** for nothing) |
+| **function_name** | A valid identifier, ideally a verb describing the action |
+| **parameter_list** | `type name, type name, …` — or **`void`** / empty if there are none |
+| **body** | The statements that do the work |
+| **`return`** | Sends a value back **and immediately exits** the function |
+
+#### Types of function
+
+| Category | Description | Example |
+|---|---|---|
+| **Library (built-in)** | Provided by C's standard library; needs a header | `printf`, `scanf`, `strlen`, `sqrt`, `malloc` |
+| **User-defined** | Written by the programmer | `add()`, `isPrime()`, `factorial()` |
+
+**By parameters and return value** — the classic four-way classification:
+
+| # | Form | Example |
+|---|---|---|
+| 1 | **No arguments, no return value** | `void greet(void) { printf("Hello"); }` |
+| 2 | **With arguments, no return value** | `void show(int n) { printf("%d", n); }` |
+| 3 | **No arguments, with return value** | `int getInput(void) { int n; scanf("%d",&n); return n; }` |
+| 4 | **With arguments, with return value** | `int add(int a, int b) { return a + b; }` ← most common |
+
+#### Advantages of using functions
+
+1. **Code reusability** — write once, call many times.
+2. **Modularity** — a large problem is split into small, manageable pieces.
+3. **Easier debugging and testing** — each function can be tested alone.
+4. **Readability** — `calculateTax()` explains itself; 40 inline lines do not.
+5. **Reduced program size** — no duplicated code.
+6. **Team work** — different people can write different functions.
+7. **Abstraction** — the caller need not know *how* the job is done.
+8. **Easier maintenance** — fix a bug in one place.
+
+#### Important rules
+
+- Every C program must have exactly one **`main()`**.
+- A function must be **declared (prototyped) before it is called**, or defined above the call.
+- The number and types of **actual arguments must match the formal parameters**.
+- A function can return **at most one value** (use pointers or a struct to return several).
+- C does **not** support nested function definitions (a function inside a function).
+- `void` means "no value": `void f(void)` takes nothing and returns nothing.
+
+**Previous Year Question List from this Topic:**
+
+- [What is function?](../written-answers/c-programming.md?plain=1#L7689)
+- [When a function is called more than one time that is called?](../written-answers/c-programming.md?plain=1#L7843)
+- [(e) Write about the syntax of function.](../written-answers/c-programming.md?plain=1#L7851)
+- [(ক) C প্রোগ্রামিং ল্যাঙ্গুয়েজে user defined function এবং library function এর পার্থক্য লিখুন।](../written-answers/c-programming.md?plain=1#L7888)
+
+
+---
+
+### Call by Value vs Call by Reference (Parameter Passing)
+
+**Parameter passing** is how arguments travel from the caller to the function. C has two mechanisms.
+
+#### Call by Value — C's default
+
+A **copy** of the argument's value is placed in the parameter. The function works on the copy, so **the original is never changed**.
+
+```c
+void swap(int a, int b) {          /* a and b are COPIES */
+    int t = a;  a = b;  b = t;
+    printf("Inside : a=%d b=%d\n", a, b);
+}
+
+int main() {
+    int x = 10, y = 20;
+    swap(x, y);
+    printf("Outside: x=%d y=%d\n", x, y);
+}
+```
+> **Output:**
+> ```
+> Inside : a=20 b=10
+> Outside: x=10 y=20     ← the swap did NOT work!
+> ```
+
+```mermaid
+flowchart LR
+    subgraph CALLER["main()"]
+        X["x = 10<br/>@1000"]
+        Y["y = 20<br/>@1004"]
+    end
+    subgraph FUNC["swap()"]
+        A["a = 10<br/>@2000 (a COPY)"]
+        B["b = 20<br/>@2004 (a COPY)"]
+    end
+    X -->|"value copied"| A
+    Y -->|"value copied"| B
+    A -.->|"changes stay here"| FUNC
+```
+
+#### Call by Reference — using pointers
+
+The **address** of the variable is passed, so the function can reach the **original memory location** and modify it.
+
+```c
+void swap(int *a, int *b) {        /* a and b hold ADDRESSES */
+    int t = *a;  *a = *b;  *b = t; /* * dereferences → touches the ORIGINAL */
+}
+
+int main() {
+    int x = 10, y = 20;
+    swap(&x, &y);                  /* & passes the ADDRESS */
+    printf("x=%d y=%d\n", x, y);
+}
+```
+> **Output:** `x=20 y=10` ✅ **the swap works.**
+
+```mermaid
+flowchart LR
+    subgraph CALLER2["main()"]
+        X2["x = 10 → 20<br/>@1000"]
+        Y2["y = 20 → 10<br/>@1004"]
+    end
+    subgraph FUNC2["swap()"]
+        A2["a = 1000<br/>(address of x)"]
+        B2["b = 1004<br/>(address of y)"]
+    end
+    A2 -->|"*a writes through"| X2
+    B2 -->|"*b writes through"| Y2
+```
+
+#### The comparison
+
+| Point | **Call by Value** | **Call by Reference** |
+|---|---|---|
+| **What is passed** | A **copy of the value** | The **address** of the variable |
+| **Original variable** | ❌ **Cannot** be modified | ✅ **Can** be modified |
+| **Memory used** | More — a separate copy per argument | Less — only an address (8 bytes) |
+| **Speed for large data** | **Slow** — copying a big struct or array is expensive | **Fast** — only an address is copied |
+| **Safety** | **Safer** — the caller's data is protected | Riskier — the function can corrupt the caller's data |
+| **Syntax at the call** | `swap(x, y);` | `swap(&x, &y);` |
+| **Syntax in the definition** | `void swap(int a, int b)` | `void swap(int *a, int *b)` |
+| **Access inside** | `a` | `*a` (dereference) |
+| **Is it C's default?** | ✅ **Yes** | ❌ Must be written explicitly with pointers |
+| **Used when** | The function only needs to read the value | The function must change the value, or return several values |
+
+> **Two essential notes:**
+> 1. **C technically has only call by value.** "Call by reference" in C is simulated by *passing a pointer by value* — the pointer itself is copied, but the copy still points at the same memory. True call-by-reference (`int &a`) exists in **C++**, not C.
+> 2. **Arrays are always effectively passed by reference.** An array name decays into a pointer to its first element, so `void f(int a[])` can modify the caller's array. This is why you never write `&` before an array name.
+
+#### Returning multiple values
+
+A C function can `return` only one value, so use pointers:
+
+```c
+void minMax(int a[], int n, int *min, int *max) {
+    *min = *max = a[0];
+    for (int i = 1; i < n; i++) {
+        if (a[i] < *min) *min = a[i];
+        if (a[i] > *max) *max = a[i];
+    }
+}
+/* call:  int lo, hi;  minMax(arr, n, &lo, &hi); */
+```
+
+**Previous Year Question List from this Topic:**
+
+- [(a) Mention two basic differences between ‘Call by Value’ and ‘Call by Reference’. Write a simple program in C to swap two integer values using ‘Call by value’.](../written-answers/c-programming.md?plain=1#L7777)
+- [(ক) Call by Value এবং Call by Reference এর মধ্যে পার্থক্য কী?](../written-answers/c-programming.md?plain=1#L7905)
+- [(ঘ) উদাহরণসহ Parameter Passing ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L7932)
+- [What are the differences between call by value and call by Reference?](../written-answers/c-programming.md?plain=1#L8059)
+- [Distinguish between Call by value and Call by referee in C/C++.](../written-answers/c-programming.md?plain=1#L8077)
+- [Difference between call by value and call by reference with example.](../written-answers/c-programming.md?plain=1#L8677)
+
+
+---
+
+### Recursion — Concept, Base Case and the Recursion Tree
+
+**Recursion** is a technique in which a **function calls itself**, directly or indirectly, to solve a problem by **reducing it to a smaller instance of the same problem**.
+
+#### The two mandatory parts
+
+| Part | Purpose | What happens without it |
+|---|---|---|
+| **1. Base case** | The **simplest case**, solved directly **without** another recursive call — it **stops** the recursion | **Infinite recursion → stack overflow → crash** |
+| **2. Recursive case** | Calls itself with a **smaller / simpler input**, moving **towards** the base case | The recursion never terminates |
+
+```c
+int factorial(int n) {
+    if (n <= 1) return 1;                  /* ← BASE CASE: stops the recursion */
+    return n * factorial(n - 1);           /* ← RECURSIVE CASE: smaller input  */
+}
+```
+
+#### How the call stack works — factorial(5)
+
+```mermaid
+flowchart TD
+    A["factorial(5)<br/>returns 5 × factorial(4)"] --> B["factorial(4)<br/>returns 4 × factorial(3)"]
+    B --> C["factorial(3)<br/>returns 3 × factorial(2)"]
+    C --> D["factorial(2)<br/>returns 2 × factorial(1)"]
+    D --> E["factorial(1)<br/>BASE CASE → returns 1"]
+    E -->|"1"| D
+    D -->|"2 × 1 = 2"| C
+    C -->|"3 × 2 = 6"| B
+    B -->|"4 × 6 = 24"| A
+    A -->|"5 × 24 = 120"| F["Answer = 120"]
+```
+
+**The two phases:** the calls **wind down** (each pushing a stack frame) until the base case is hit, then the results **unwind back up**, each frame computing its answer from the one below.
+
+| Stack depth | Call | Waiting to compute |
+|---|---|---|
+| 1 | factorial(5) | 5 × ? |
+| 2 | factorial(4) | 4 × ? |
+| 3 | factorial(3) | 3 × ? |
+| 4 | factorial(2) | 2 × ? |
+| 5 | factorial(1) | **returns 1** ← base case |
+
+#### Types of recursion
+
+| Type | Description | Example |
+|---|---|---|
+| **Direct** | A function calls itself | `f()` calls `f()` |
+| **Indirect (mutual)** | A calls B, and B calls A | `isEven()` ↔ `isOdd()` |
+| **Tail recursion** | The recursive call is the **very last** operation | `return helper(n-1, acc*n);` |
+| **Non-tail (head)** | Work remains **after** the recursive call returns | `return n * fact(n-1);` |
+| **Linear** | **One** recursive call per invocation | factorial |
+| **Tree** | **Two or more** calls per invocation | Fibonacci, tree traversal |
+
+> **Why tail recursion matters:** because nothing is pending after the call, a compiler can reuse the same stack frame (**tail-call optimisation**), turning the recursion into a loop and eliminating the stack-overflow risk.
+
+#### Advantages and disadvantages
+
+**Advantages**
+- **Shorter, cleaner code** for naturally recursive problems.
+- **Directly mirrors the mathematical definition** (factorial, Fibonacci, GCD).
+- **Essential** for trees, graphs, backtracking, divide and conquer — an iterative version would need an explicit stack.
+- Easier to **prove correct** by induction.
+
+**Disadvantages**
+- **Slower** — every call costs a function-call overhead (push/pop the stack frame).
+- **More memory** — O(depth) stack space.
+- **Stack overflow** risk on deep recursion.
+- Can be **exponentially wasteful** without memoization (naive Fibonacci).
+- **Harder to debug** and trace.
+
+#### Recursion vs Iteration
+
+| Point | **Recursion** | **Iteration (loops)** |
+|---|---|---|
+| **Mechanism** | A function calls itself | A loop repeats a block |
+| **Termination** | **Base case** | Loop **condition** |
+| **Memory** | **O(depth)** — a stack frame per call | **O(1)** — a few variables |
+| **Speed** | **Slower** — call overhead | **Faster** |
+| **Code length** | Usually **shorter and clearer** | Longer for tree-like problems |
+| **Stack overflow risk** | ✅ **Yes** | ❌ No |
+| **Best for** | Trees, graphs, backtracking, divide & conquer, mathematical definitions | Simple counted repetition, performance-critical loops |
+| **Infinite case** | Infinite recursion → **crash** | Infinite loop → program hangs |
+
+> **Any recursion can be converted to iteration** (using an explicit stack if necessary), and any iteration can be written recursively. The choice is about **clarity vs efficiency**.
+
+> ### "What is the performance of a non-recursive version of a function written recursively?"
+>
+> The iterative version is **generally faster and uses far less memory**, because it avoids the per-call overhead (pushing parameters, return address and local variables onto the stack) and needs only **O(1)** space instead of **O(n)** stack frames.
+>
+> **However, the asymptotic complexity usually stays the same** — iterative `factorial` and recursive `factorial` are both **O(n)**; only the constant factor and the space differ.
+>
+> **The one big exception is tree recursion.** Naive recursive Fibonacci is **O(2ⁿ)** because it recomputes the same sub-problems; the iterative version is **O(n)**. There the improvement is not a constant factor but an entire complexity class.
+
+**Previous Year Question List from this Topic:**
+
+- [What is recursion?](../written-answers/c-programming.md?plain=1#L7498)
+- [Write recursive way below this program:](../written-answers/c-programming.md?plain=1#L7524)
+- [Output find out from recursion:](../written-answers/c-programming.md?plain=1#L7576)
+- [Find the output of following program:](../written-answers/c-programming.md?plain=1#L7632)
+- [(খ) উদাহরণসহ recursion ব্যাখ্যা করুন।](../written-answers/c-programming.md?plain=1#L7982)
+- [(খ) Recursion কি? Recursion পদ্ধতিতে একটি Integer সংখ্যার Factorial নির্ণয়ের জন্য C-Language এ একটি Program লিখুন।](../written-answers/c-programming.md?plain=1#L8258)
+- [(ii) Recursion কী? Recursion পদ্ধতির একটি Simple C-programming এর Code লিখুন।](../written-answers/c-programming.md?plain=1#L8524)
+- [Usually, recursion involves a function calling itself until specified condition is met and it is very useful to find out the factorial. Write a recursive algori…](../written-answers/c-programming.md?plain=1#L8558)
+- [What is recursive function? Give an example of recursive function.](../written-answers/c-programming.md?plain=1#L8639)
+- [Write the performance of a non-recursive function which is written in recursive way.](../written-answers/c-programming.md?plain=1#L8755)
+
+
+---
+
+### Classic Recursive Problems
+
+#### 1. Factorial
+
+```c
+int factorial(int n) {
+    if (n <= 1) return 1;              /* base case: 0! = 1! = 1 */
+    return n * factorial(n - 1);
+}
+```
+**Recurrence: T(n) = T(n−1) + O(1) → O(n) time, O(n) stack.**
+
+#### 2. Fibonacci
+
+> **Rule:** F(0) = 0, F(1) = 1, and **F(n) = F(n−1) + F(n−2)** for n ≥ 2.
+> Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 …
+
+```c
+int fib(int n) {
+    if (n <= 1) return n;                      /* base cases: F(0)=0, F(1)=1 */
+    return fib(n - 1) + fib(n - 2);            /* TWO calls → tree recursion */
+}
+```
+
+**Recurrence: T(n) = T(n−1) + T(n−2) + O(1) → O(φⁿ) ≈ O(1.618ⁿ)** — exponential, because sub-problems are recomputed many times.
+
+```mermaid
+flowchart TD
+    A["fib(5)"] --> B["fib(4)"]
+    A --> C["fib(3) ← repeat"]
+    B --> D["fib(3) ← repeat"]
+    B --> E["fib(2) ← repeat"]
+    D --> F["fib(2) ← repeat"]
+    D --> G["fib(1)"]
+    C --> H["fib(2) ← repeat"]
+    C --> I["fib(1)"]
+```
+
+**The efficient iterative version — O(n) time, O(1) space:**
+
+```c
+int fibIterative(int n) {
+    if (n <= 1) return n;
+    int a = 0, b = 1, c;
+    for (int i = 2; i <= n; i++) { c = a + b; a = b; b = c; }
+    return b;
+}
+```
+
+#### 3. Sum of digits
+
+```c
+int sumDigits(int n) {
+    if (n == 0) return 0;                      /* base case */
+    return (n % 10) + sumDigits(n / 10);       /* last digit + rest */
+}
+```
+**Trace `sumDigits(3426)`:** 6 + (2 + (4 + (3 + 0))) = **15**
+
+*(The variant "**keep summing until a single digit**" — the *digital root* — just applies it repeatedly: `while (n > 9) n = sumDigits(n);`. For 3426 → 15 → 6. The closed form is `1 + (n−1) % 9`.)*
+
+#### 4. Count the number of digits
+
+```c
+int countDigits(int n) {
+    if (n == 0) return 0;              /* base case */
+    return 1 + countDigits(n / 10);    /* one digit + the rest */
+}
+/* countDigits(3426) = 1 + countDigits(342)
+                     = 1 + 1 + countDigits(34)
+                     = 1 + 1 + 1 + countDigits(3)
+                     = 1 + 1 + 1 + 1 + countDigits(0)
+                     = 4  */
+```
+**Recurrence: T(n) = T(n/10) + O(1) → O(log₁₀ n)** — proportional to the number of digits.
+
+**The recursion tree** is a single chain (linear recursion):
+
+```mermaid
+flowchart TD
+    A["countDigits(3426)<br/>1 + ?"] --> B["countDigits(342)<br/>1 + ?"]
+    B --> C["countDigits(34)<br/>1 + ?"]
+    C --> D["countDigits(3)<br/>1 + ?"]
+    D --> E["countDigits(0)<br/>BASE → 0"]
+    E -->|0| D
+    D -->|1| C
+    C -->|2| B
+    B -->|3| A
+    A -->|4| F["Answer = 4"]
+```
+
+#### 5. Power — Xⁿ
+
+```c
+/* simple version — O(n) */
+double power(double x, int n) {
+    if (n == 0) return 1;
+    return x * power(x, n - 1);
+}
+
+/* fast exponentiation — O(log n) */
+double fastPower(double x, int n) {
+    if (n == 0) return 1;
+    double half = fastPower(x, n / 2);
+    if (n % 2 == 0) return half * half;      /* x^n = (x^(n/2))²      */
+    else            return x * half * half;  /* odd n: one extra x    */
+}
+```
+**Recurrence for the fast version: T(n) = T(n/2) + O(1) → O(log n).**
+
+#### 6. Reverse an integer
+
+```c
+int reverseHelper(int n, int rev) {          /* tail recursive */
+    if (n == 0) return rev;
+    return reverseHelper(n / 10, rev * 10 + n % 10);
+}
+int reverse(int n) { return reverseHelper(n, 0); }
+```
+
+#### 7. GCD — Euclid's algorithm
+
+```c
+int gcd(int a, int b) {
+    if (b == 0) return a;                    /* base case */
+    return gcd(b, a % b);                    /* elegant tail recursion */
+}
+/* gcd(48,18) → gcd(18,12) → gcd(12,6) → gcd(6,0) → 6  */
+```
+**LCM from GCD:** `lcm(a,b) = (a / gcd(a,b)) * b` — divide *before* multiplying to avoid overflow.
+
+#### 8. Tower of Hanoi
+
+> **The problem:** move **n discs** from a **source** peg to a **destination** peg using an **auxiliary** peg, moving **one disc at a time**, and **never placing a larger disc on a smaller one**.
+
+**The recursive insight — three steps:**
+1. Move the top **n−1** discs from **source → auxiliary** (using destination as the spare).
+2. Move the **largest** disc from **source → destination**.
+3. Move those **n−1** discs from **auxiliary → destination** (using source as the spare).
+
+```c
+void hanoi(int n, char src, char dest, char aux) {
+    if (n == 1) {                                    /* base case */
+        printf("Move disc 1 from %c to %c\n", src, dest);
+        return;
+    }
+    hanoi(n - 1, src, aux, dest);                    /* step 1 */
+    printf("Move disc %d from %c to %c\n", n, src, dest);   /* step 2 */
+    hanoi(n - 1, aux, dest, src);                    /* step 3 */
+}
+/* call: hanoi(3, 'A', 'C', 'B'); */
+```
+
+**Output for n = 3 (7 moves):**
+```
+Move disc 1 from A to C
+Move disc 2 from A to B
+Move disc 1 from C to B
+Move disc 3 from A to C
+Move disc 1 from B to A
+Move disc 2 from B to C
+Move disc 1 from A to C
+```
+
+**Recurrence: T(n) = 2·T(n−1) + 1**, whose solution is **T(n) = 2ⁿ − 1 moves** — exponential. *(For n = 64 discs, at one move per second, that is about 585 billion years.)*
+
+#### 9. All permutations of a word
+
+```c
+void permute(char *s, int l, int r) {
+    if (l == r) { printf("%s\n", s); return; }       /* base case */
+    for (int i = l; i <= r; i++) {
+        swap(&s[l], &s[i]);                          /* choose    */
+        permute(s, l + 1, r);                        /* explore   */
+        swap(&s[l], &s[i]);                          /* BACKTRACK */
+    }
+}
+/* permute("ABC", 0, 2) → ABC ACB BAC BCA CBA CAB  (3! = 6 permutations) */
+```
+**Time: O(n × n!)** — there are n! permutations and printing each costs O(n). This is the standard **backtracking** pattern: *choose → explore → un-choose*.
+
+#### 10. Sum of a matrix row
+
+```c
+int rowSum(int a[][100], int row, int col) {
+    if (col < 0) return 0;                                /* base case */
+    return a[row][col] + rowSum(a, row, col - 1);
+}
+/* call: rowSum(matrix, i, m - 1);  */
+```
+
+**Previous Year Question List from this Topic:**
+
+- [Write a C program to find the sum of digits of an integer number using "recursion".](../written-answers/c-programming.md?plain=1#L7465)
+- [Write a C/C++ program to calculte factorial of N using recursive function.](../written-answers/c-programming.md?plain=1#L7716)
+- [Write the recursive function of the below problem and find the recurrence relation of the function. F(n) = 1+2+3+..........+(n-1)+n](../written-answers/c-programming.md?plain=1#L7746)
+- [(b) Write a program in C using recursion to find the factorial of an integer.](../written-answers/c-programming.md?plain=1#L7817)
+- [(ক) Tower of Hanoi সমস্যাটি সমাধানের জন্যে একটি recursive অ্যালগরিদম লিখুন।](../written-answers/c-programming.md?plain=1#L8016)
+- [Write a recursive algorithm to find the factorial of a positive integer from 1 to N.](../written-answers/c-programming.md?plain=1#L8112)
+- [What do you mean by recursion? Calculate factorial function using recursion with C programming code.](../written-answers/c-programming.md?plain=1#L8149)
+- [Write a program with a recursive function that shows the sum of its digits. For example, input =3426, output will be 3+4+2+6=15.](../written-answers/c-programming.md?plain=1#L8179)
+- [(a) Write down a recursive function to find out number of digits is an integer number (n). Draw the recursion tree when n= 5396.](../written-answers/c-programming.md?plain=1#L8215)
+- [Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the fo…](../written-answers/c-programming.md?plain=1#L8289)
+- [(b) Write down a pseudocode/program to generate all possible permutation for a given word.](../written-answers/c-programming.md?plain=1#L8352)
+- [Paython এ Recursive function ব্যবহার করে একটি ধনাত্মক সংখ্যার factorial মান বের করার function লিখ?](../written-answers/c-programming.md?plain=1#L8409)
+- [Write a program in C/Java to find out the factorial of a number using recursion also write its iterative program.](../written-answers/c-programming.md?plain=1#L8432)
+- [১. পাইথন প্রোগ্রামিং এর রিকার্সিভ ফাংশন ব্যবহার করে ১০টি সংখ্যার যোগফল বের করার প্রোগ্রাম লিখ।](../written-answers/c-programming.md?plain=1#L8490)
+- [(a) Write down a function to compute the sum of the row an $n \times m$ matrix of integer.](../written-answers/c-programming.md?plain=1#L8594)
+- [Write Algorithm of Fibonacci series.](../written-answers/c-programming.md?plain=1#L8723)
+- [Write a program in C with recursive function to compute the value $X^n$ where n is a positive integer and x has real value.](../written-answers/c-programming.md?plain=1#L8781)
+- [a) Using recursion, develop a computer program to find the n-th Fibonacci number using this rule. (5 marks)](../written-answers/c-programming.md?plain=1#L8826)
