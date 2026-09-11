@@ -154,6 +154,15 @@ An **adaptive** sort runs faster when the input is already partly sorted. **Inse
 - [Fastest sorting algorithms?](../written-answers/algorithm.md?plain=1#L396)
 - [Describe four types sorting algorithm with example.](../written-answers/algorithm.md?plain=1#L779)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following sort algorithms has execution time that is least dependent on initial ordering of the input?](../mcq-answers/algorithm.md?plain=1#L46)
+- [Which of the following is not an in-place algorithm?](../mcq-answers/algorithm.md?plain=1#L82)
+- [কোন Algorithm টি দ্রুত sorting করে?](../mcq-answers/algorithm.md?plain=1#L118)
+- [Which of the following is not a stable sorting algorithm in its typical implementation?](../mcq-answers/algorithm.md?plain=1#L127)
+- [Which is the slowest algorithm?](../mcq-answers/algorithm.md?plain=1#L190)
+
+
 
 ---
 
@@ -243,6 +252,16 @@ After pass 3: `3 2 | 5 6 8`
 - [(গ) উদাহরনসহ Bubble sort algorithm লিখুন।](../written-answers/algorithm.md?plain=1#L654)
 - [(ক) নিম্নের সংখ্যাগুলোকে ঊর্ধ্বক্রমানুসারে সাজানোর জন্য Bubble Sort কিভাবে কাজ করবে তা ধাপে ধাপে প্রদর্শন করুন। 5, 8, 3, 6, 2](../written-answers/algorithm.md?plain=1#L679)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Given a sequence, S= {1, 2, 3, 8, 15, 10}; which of the following algorithms will be the fasted to sort this sequence in ascending order?](../mcq-answers/algorithm.md?plain=1#L100)
+- [The complexity of Bubble short algorithm is-](../mcq-answers/algorithm.md?plain=1#L154)
+- [Bubble sort algorithm sorts n data items using?](../mcq-answers/algorithm.md?plain=1#L163)
+- [The complexity of Bubble sort algorithm is-](../mcq-answers/algorithm.md?plain=1#L181)
+- [Which is the slowest algorithm?](../mcq-answers/algorithm.md?plain=1#L190)
+- [An inversion in a an array A() is a pair (A(i), A(j) such that A(i)>A(j} and i<j. An array will have maximum number of inversions if it is-](../mcq-answers/algorithm.md?plain=1#L91)
+
+
 
 ---
 
@@ -298,6 +317,12 @@ SelectionSort(A, n):
 - [Selection Sort টেকনিক ব্যবহার করে নিম্নোক্ত ডাটা গুলোকে সর্টিং করুন। 45, 72, 80, 65, 84, 52, 37](../written-answers/algorithm.md?plain=1#L635)
 - [(ক) Selection sort পদ্ধতির Algorithm লিখুন।](../written-answers/algorithm.md?plain=1#L705)
 - [(খ) ৭ জন ছাত্রের পরীক্ষার প্রাপ্ত Marks দেওয়া আছে: 45, 72, 80, 65, 84, 52, 37 Selection short ব্যবহার করে নম্বরগুলো নিম্নক্রমানুযায়ী সাজানোর প্রক্রিয়া ধাপে ধ…](../written-answers/algorithm.md?plain=1#L729)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following sort algorithms has execution time that is least dependent on initial ordering of the input?](../mcq-answers/algorithm.md?plain=1#L46)
+- [Which is correct characteristic of Selection Sort?](../mcq-answers/algorithm.md?plain=1#L64)
+
 
 
 ---
@@ -515,6 +540,16 @@ Adding them:
 - [Marge sort Algorithm ব্যবহার করে নিম্নের Data গুলো sorting করুন। (3, 13, 25, 7, 15, 2, 5, 35)](../written-answers/algorithm.md?plain=1#L881)
 - [Apply the Merge Sort algorithm using the divide and conquer approach to sort the following list of numbers: 5, 1, 6, 3, 7, 2, 8, and 4.](../written-answers/algorithm.md?plain=1#L978)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?](../mcq-answers/algorithm.md?plain=1#L19)
+- [Which of the following sorting algorithms is a divide and conquer algorithm?](../mcq-answers/algorithm.md?plain=1#L28)
+- [What is the complexity of Merge sort?](../mcq-answers/algorithm.md?plain=1#L37)
+- [Which is correct for Merge sort–](../mcq-answers/algorithm.md?plain=1#L73)
+- [Which of the following is not an in-place algorithm?](../mcq-answers/algorithm.md?plain=1#L82)
+- [You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?](../mcq-answers/algorithm.md?plain=1#L136)
+
+
 
 ---
 
@@ -650,6 +685,15 @@ Five levels of recursion instead of log₂5 ≈ 2.3, and the comparison count is
 - [Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.](../written-answers/algorithm.md?plain=1#L554)
 - [Explain the Quick Sort algorithm with a suitable example. What is the worst-case time complexity, and in which scenario does it occur?](../written-answers/algorithm.md?plain=1#L962)
 
+**Previous Year MCQ List from this Topic:**
+
+- [কোন Algorithm টি দ্রুত sorting করে?](../mcq-answers/algorithm.md?plain=1#L118)
+- [Which of the following is not a stable sorting algorithm in its typical implementation?](../mcq-answers/algorithm.md?plain=1#L127)
+- [Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst-case complexity of sorting n numbers using randomized qu…](../mcq-answers/algorithm.md?plain=1#L145)
+- [Quicksort can be categorized as:](../mcq-answers/algorithm.md?plain=1#L172)
+- [Quick sort algorithm is an example of –](../mcq-answers/algorithm.md?plain=1#L504)
+
+
 
 ---
 
@@ -782,6 +826,11 @@ Insert(A, n, key):
 - [(ক) Heap sort কিভাবে কাজ করে? উদাহরণসহ দেখান।](../written-answers/algorithm.md?plain=1#L748)
 - [(b) What is heap sort? Build a heap tree from the following list of numbers: (44, 30, 50, 22, 60, 55, 70, 55).](../written-answers/algorithm.md?plain=1#L909)
 
+**Previous Year MCQ List from this Topic:**
+
+- [If we have a very small amount of additional memory, but a large number of items to sort, which of the following sorting algorithm should we use?](../mcq-answers/algorithm.md?plain=1#L55)
+
+
 
 ---
 
@@ -908,6 +957,17 @@ This single table answers a large share of the sorting questions.
 - [Analize and compare the Quick-sort and Merge-sort algorithms in term of their time and space complexity.](../written-answers/algorithm.md?plain=1#L554)
 - [Describe four types sorting algorithm with example.](../written-answers/algorithm.md?plain=1#L779)
 - [Analyze the following C function and determine its Big O Time Complexity and Space Complexity. Explain your reasoning.](../written-answers/algorithm.md?plain=1#L937)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?](../mcq-answers/algorithm.md?plain=1#L19)
+- [If we have a very small amount of additional memory, but a large number of items to sort, which of the following sorting algorithm should we use?](../mcq-answers/algorithm.md?plain=1#L55)
+- [Which is correct characteristic of Selection Sort?](../mcq-answers/algorithm.md?plain=1#L64)
+- [কোন Algorithm টি দ্রুত sorting করে?](../mcq-answers/algorithm.md?plain=1#L118)
+- [Which of the following is not a stable sorting algorithm in its typical implementation?](../mcq-answers/algorithm.md?plain=1#L127)
+- [You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?](../mcq-answers/algorithm.md?plain=1#L136)
+- [Which is the slowest algorithm?](../mcq-answers/algorithm.md?plain=1#L190)
+
 
 ## Graph Traversal Algorithms (BFS & DFS)
 
@@ -1150,6 +1210,11 @@ flowchart TD
 - [Follow alphabetical ordering while considering the order of nodes traversed. (Find BFS and DFS)](../written-answers/algorithm.md?plain=1#L1227)
 - [Draw BFS and DFS tree starting node A-](../written-answers/algorithm.md?plain=1#L1397)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following search algorithm requires less memory?](../mcq-answers/algorithm.md?plain=1#L237)
+
+
 
 ---
 
@@ -1193,6 +1258,11 @@ DFS is preferred when:
 - [Difference between depth first and breadth first search.](../written-answers/algorithm.md?plain=1#L1185)
 - [(c) Between Depths first search (DFS) and Breath first search (BFS). Which one is faster? Which one requires more memory?](../written-answers/algorithm.md?plain=1#L1430)
 - [True false (DFS/ Directed graph related) (হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/algorithm.md?plain=1#L1304)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following search algorithm requires less memory?](../mcq-answers/algorithm.md?plain=1#L237)
+
 
 
 ---
@@ -1279,6 +1349,11 @@ Neither BFS nor DFS can do this — you need **Bellman-Ford**. Run it for **V �
 
 - [Write an Algorithm to detect a cycle in a directed graph.](../written-answers/algorithm.md?plain=1#L1014)
 - [True false (DFS/ Directed graph related) (হুবহু প্রশ্ন সংগ্রহ করা সম্ভব হয়নি)](../written-answers/algorithm.md?plain=1#L1304)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following techniques/algorithms cannot be used to detect cycles in an undirected and unweighted graph?](../mcq-answers/algorithm.md?plain=1#L439)
+
 
 
 ---
@@ -1372,6 +1447,11 @@ Queue starts with `Programming` → output it → DS and DM drop to 0 → queue 
 
 - [Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the orde…](../written-answers/algorithm.md?plain=1#L1252)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In which of the following graphs can we apply topological sort?](../mcq-answers/algorithm.md?plain=1#L383)
+
+
 
 ---
 
@@ -1464,6 +1544,13 @@ flowchart TD
 - [Shortest Path Algorithm.](../written-answers/algorithm.md?plain=1#L1779)
 - [নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।](../written-answers/algorithm.md?plain=1#L1811)
 - [Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using…](../written-answers/algorithm.md?plain=1#L1746)
+
+**Previous Year MCQ List from this Topic:**
+
+- [In the following graph, determine the cost of the shortest path between node 1 to node 4.](../mcq-answers/algorithm.md?plain=1#L410)
+- [In the following graph, determine the cost of the shortest path between node 1 to node 4](../mcq-answers/algorithm.md?plain=1#L448)
+- [Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?](../mcq-answers/algorithm.md?plain=1#L466)
+
 
 
 ---
@@ -1569,6 +1656,12 @@ But B is already finalised, so Dijkstra never updates it and **reports B = 1**, 
 - [নিচের Graph থেকে যে কোন একটি algorithm ব্যবহার করে sortest path বের করার পদ্ধতি ব্যাখ্যা কর।](../written-answers/algorithm.md?plain=1#L1811)
 - [S1, S2, S3, S4, S5 are five nodes and a value on lines denotes the cost to transmit power. (i) Draw a graph to find the shortest path to transmit power. (ii) Ca…](../written-answers/algorithm.md?plain=1#L1833)
 
+**Previous Year MCQ List from this Topic:**
+
+- [To implement Dijkstra's shortest path algorithm on unweighted graphs so that it runs in linear time, the data structure to be used is-](../mcq-answers/algorithm.md?plain=1#L419)
+- [Which algorithm will be the most efficient to find out the shortest path between two given nodes in an undirected weighted graph?](../mcq-answers/algorithm.md?plain=1#L466)
+
+
 
 ---
 
@@ -1659,6 +1752,12 @@ for k = 1 to V:                        // k = the intermediate vertex allowed
 - [How to find single source shortest path from negative weighted cycle. Justify and how you find it is negative weighted graph.](../written-answers/algorithm.md?plain=1#L1633)
 - [How to Determine the weighted graph has negative cycle?](../written-answers/algorithm.md?plain=1#L1794)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In the following graph, determine the cost of the shortest path between node 1 to node 4.](../mcq-answers/algorithm.md?plain=1#L410)
+- [In the following graph, determine the cost of the shortest path between node 1 to node 4](../mcq-answers/algorithm.md?plain=1#L448)
+
+
 
 ---
 
@@ -1698,6 +1797,11 @@ A **Minimum Spanning Tree (MST)** is the spanning tree whose **total edge weight
 
 - [Find the minimum spanning tree:](../written-answers/algorithm.md?plain=1#L1611)
 - [Several substations of SGFL Company exist in different places of the city. You have to travel from one substation to another. Write an algorithm to travel using…](../written-answers/algorithm.md?plain=1#L1746)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Suppose you have a complete undirected graph with 4 nodes. What is the maximum number of Minimum Spanning Tree (MST) you can form?](../mcq-answers/algorithm.md?plain=1#L392)
+
 
 
 ---
@@ -1939,6 +2043,15 @@ int linearSearch(int a[], int n, int key) {
 - [(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।](../written-answers/algorithm.md?plain=1#L2063)
 - [(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।](../written-answers/algorithm.md?plain=1#L2173)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What are the advantages of Linear Search over Binary Search?](../mcq-answers/algorithm.md?plain=1#L201)
+- [Linear search is also called _____](../mcq-answers/algorithm.md?plain=1#L210)
+- [What is the worst case time complexity of linear search algorithm?](../mcq-answers/algorithm.md?plain=1#L228)
+- [The average number of key comparisons done in a successful sequential search in a list of length n, it is-](../mcq-answers/algorithm.md?plain=1#L309)
+- [When the linear search used?](../mcq-answers/algorithm.md?plain=1#L336)
+
+
 
 ---
 
@@ -2089,6 +2202,19 @@ The recursion stops when the sub-problem size is 1, i.e. `n/2ᵏ = 1` → `n = 2
 - [You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return…](../written-answers/algorithm.md?plain=1#L3390)
 - [Recurrence equation of binary search and solve it.](../written-answers/algorithm.md?plain=1#L2503)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is not the required condition for a binary search algorithm?](../mcq-answers/algorithm.md?plain=1#L219)
+- [In binary search, what is the average number of comparison required for search an element in a list is the element number is–](../mcq-answers/algorithm.md?plain=1#L255)
+- [The Average-case Time Complexity of the binary search algorithm is-](../mcq-answers/algorithm.md?plain=1#L264)
+- [The binary search algorithm is used to search for a given item when items are sorted. If the number of items is 1 million, which of the following is the closest…](../mcq-answers/algorithm.md?plain=1#L273)
+- [The minimum number of comparisons required to determine if an integer appears more than n/2 times in a sorted array of n integers is-](../mcq-answers/algorithm.md?plain=1#L300)
+- [The complexity of Binary search algorithm is-](../mcq-answers/algorithm.md?plain=1#L318)
+- [The time complexity of binary search is -----](../mcq-answers/algorithm.md?plain=1#L327)
+- [Binary search worst time complexity is-](../mcq-answers/algorithm.md?plain=1#L345)
+- [For s sorted linear array, which is the fastest algorithm to find the location?](../mcq-answers/algorithm.md?plain=1#L354)
+
+
 
 ---
 
@@ -2133,6 +2259,14 @@ The recursion stops when the sub-problem size is 1, i.e. `n/2ᵏ = 1` → `n = 2
 - [(খ) Linear Search এবং Binary Search এর মধ্যে পার্থক্য লিখুন।](../written-answers/algorithm.md?plain=1#L2002)
 - [(ক) Linear Search অ্যালগরিদম কী? এই অ্যালগরিদম এর best case এবং wrose case complexity বর্ণনা করুন।](../written-answers/algorithm.md?plain=1#L2063)
 - [(ক) Liner search কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন।](../written-answers/algorithm.md?plain=1#L2173)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What are the advantages of Linear Search over Binary Search?](../mcq-answers/algorithm.md?plain=1#L201)
+- [Suppose you searching student data using student number as the key. Which of following arrangement of the student data is suited for binary search?](../mcq-answers/algorithm.md?plain=1#L282)
+- [When the linear search used?](../mcq-answers/algorithm.md?plain=1#L336)
+- [For s sorted linear array, which is the fastest algorithm to find the location?](../mcq-answers/algorithm.md?plain=1#L354)
+
 
 
 ---
@@ -2276,6 +2410,14 @@ Two more properties usually added: **correctness** (it produces the right answer
 - [There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also de…](../written-answers/algorithm.md?plain=1#L2659)
 - [What is algorithm? Write down the algorithm to find out the second highest element in an n-element array.](../written-answers/algorithm.md?plain=1#L2193)
 
+**Previous Year MCQ List from this Topic:**
+
+- [The step-by-step instruction that solve a problem is called:](../mcq-answers/algorithm.md?plain=1#L531)
+- [The step by step instruction that solved a problem are called ________.](../mcq-answers/algorithm.md?plain=1#L540)
+- [The step by step instructions that solve a problem are called?](../mcq-answers/algorithm.md?plain=1#L549)
+- [What is the name given to the sequence of steps which a computer follows?](../mcq-answers/algorithm.md?plain=1#L567)
+
+
 
 ---
 
@@ -2339,6 +2481,13 @@ Algorithms up to **O(n log n)** are considered efficient; **O(n²)** is acceptab
 - [Data structure: Complexity O(N^2). (Full question collect সম্ভব হয় নি)](../written-answers/algorithm.md?plain=1#L2531)
 - [There are no well-defined standards for writing algorithms. Efficiency of an algorithm depends on several factors. Similarly, complexity of an algorithm also de…](../written-answers/algorithm.md?plain=1#L2659)
 - [(a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য](../written-answers/algorithm.md?plain=1#L28)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The time taken by NP-class sorting algorithm is-](../mcq-answers/algorithm.md?plain=1#L634)
+- [Two main measures for the efficiency of an algorithm are?](../mcq-answers/algorithm.md?plain=1#L661)
+- [Travelling Salesperson Problem is an example of-](../mcq-answers/algorithm.md?plain=1#L513)
+
 
 
 ---
@@ -2406,6 +2555,11 @@ flowchart TD
 - [What is Big O and Big Omega?](../written-answers/algorithm.md?plain=1#L2443)
 - [(ক) Algorithm-এর Computational Complexity এর সংজ্ঞা লিখুন।](../written-answers/algorithm.md?plain=1#L2292)
 - [What is complexity of Algorithm? Categorize complexity of Algorihm.](../written-answers/algorithm.md?plain=1#L2266)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The \Theta notation in asymptotic evaluation represents—](../mcq-answers/algorithm.md?plain=1#L643)
+
 
 
 ---
@@ -2616,6 +2770,11 @@ T(n) = 3^(n-1) · 1 + 2 · (3^(n-1) - 1)/2
 - [Solve the recurrence relation: T(n) = 3T(n-1) + 2, T(1) = 1.](../written-answers/algorithm.md?plain=1#L2626)
 - [(a) The complexity of merge sort is T(n) = 2T\left(\frac{n}{2}\right) + n. Explain how the above equation is derived?](../written-answers/algorithm.md?plain=1#L335)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following algorithms can not be designed without recursion?](../mcq-answers/algorithm.md?plain=1#L522)
+
+
 ## Dynamic Programming & Greedy Algorithms
 
 ### Divide and Conquer
@@ -2669,6 +2828,15 @@ flowchart TD
 - [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
 - [(খ) Divide and Conquer technique কী? একটি সমস্যা বর্ণনা করুন যা Divide and Conquer Technique এ সমাধান করা যায়।](../written-answers/algorithm.md?plain=1#L3888)
 - [Which short uses divide and conquer technique?](../written-answers/algorithm.md?plain=1#L388)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following sorting algorithms is a divide and conquer algorithm?](../mcq-answers/algorithm.md?plain=1#L28)
+- [Quicksort can be categorized as:](../mcq-answers/algorithm.md?plain=1#L172)
+- [Which of the following belongs to the algorithm paradigm?](../mcq-answers/algorithm.md?plain=1#L495)
+- [Quick sort algorithm is an example of –](../mcq-answers/algorithm.md?plain=1#L504)
+- [Divide and Conquer method is used in-](../mcq-answers/algorithm.md?plain=1#L558)
+
 
 
 ---
@@ -2803,6 +2971,16 @@ FibOpt(n):
 - [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
 - [What is Dynamic programming? Explain with example.](../written-answers/algorithm.md?plain=1#L3586)
 - [Write down the Algorithm for determining Fibonacci number through dynamic programming.](../written-answers/algorithm.md?plain=1#L3647)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is an example of dynamic programming approach?](../mcq-answers/algorithm.md?plain=1#L578)
+- [Which one of the following algorithm design techniques is used in finding all pairs of shortest distances in a graph?](../mcq-answers/algorithm.md?plain=1#L587)
+- [Which algorithm used in memorization?](../mcq-answers/algorithm.md?plain=1#L596)
+- [Which of the following technique uses memorizations?](../mcq-answers/algorithm.md?plain=1#L605)
+- [An algorithm which is use previous step for calculation-](../mcq-answers/algorithm.md?plain=1#L614)
+- [Dynamic programming approach is used to solve-](../mcq-answers/algorithm.md?plain=1#L623)
+
 
 
 ---
@@ -2944,6 +3122,13 @@ flowchart TD
 - [Both the algorithm the Divide and Conquer and Dynamic Programming solve a problem by breaking it into smaller problem instances and by solving them. What are th…](../written-answers/algorithm.md?plain=1#L2839)
 - [Write the name of Algorithm: (a) Matrix multiplication (b) Knapsack is _____](../written-answers/algorithm.md?plain=1#L2863)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following belongs to the algorithm paradigm?](../mcq-answers/algorithm.md?plain=1#L495)
+- [Divide and Conquer method is used in-](../mcq-answers/algorithm.md?plain=1#L558)
+- [Dynamic programming approach is used to solve-](../mcq-answers/algorithm.md?plain=1#L623)
+
+
 ## Graph Theory & Isomorphism
 
 ### Graph Theory — Basic Terminology and Types
@@ -3013,6 +3198,14 @@ A **graph** **G = (V, E)** is a collection of **vertices (nodes) V** joined by *
 - [(b) Define the following terms- (i) Chromatic number (ii) Bipartite Graph (iii) Clique](../written-answers/algorithm.md?plain=1#L2931)
 - [True False with explanation about Graph related (Two).](../written-answers/algorithm.md?plain=1#L3014)
 - [State whether the following are True or False:](../written-answers/algorithm.md?plain=1#L3026)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the number of edges in a complete graph with 5 nodes?](../mcq-answers/algorithm.md?plain=1#L374)
+- [A graph having an edge from each vertex to every other vertex is called:](../mcq-answers/algorithm.md?plain=1#L475)
+- [The degree of any vertex of a graph is:](../mcq-answers/algorithm.md?plain=1#L484)
+- [Which of the following operations is not O(1) for an array of sorted data. You may assume that array elements are distinct.](../mcq-answers/algorithm.md?plain=1#L291)
+
 
 
 ---
@@ -3350,6 +3543,12 @@ Other algorithms for finding **all** SCCs: **Kosaraju's**, **Tarjan's** (single 
 - [(c) What is a strongly connected graph?](../written-answers/algorithm.md?plain=1#L2999)
 - [True False with explanation about Graph related (Two).](../written-answers/algorithm.md?plain=1#L3014)
 - [State whether the following are True or False:](../written-answers/algorithm.md?plain=1#L3026)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following statements is/are TRUE for an undirected graph?](../mcq-answers/algorithm.md?plain=1#L428)
+- [A graph having an edge from each vertex to every other vertex is called:](../mcq-answers/algorithm.md?plain=1#L475)
+
 
 ## Greedy Algorithms (Fractional Knapsack)
 
@@ -4037,6 +4236,13 @@ long long fibOpt(int n) {
 - [Write down the Algorithm for determining Fibonacci number through dynamic programming.](../written-answers/algorithm.md?plain=1#L3647)
 - [What will be the time and space complexity of the above algorithm?](../written-answers/algorithm.md?plain=1#L3688)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is an example of dynamic programming approach?](../mcq-answers/algorithm.md?plain=1#L578)
+- [Which algorithm used in memorization?](../mcq-answers/algorithm.md?plain=1#L596)
+- [Which of the following technique uses memorizations?](../mcq-answers/algorithm.md?plain=1#L605)
+
+
 
 ---
 
@@ -4288,6 +4494,12 @@ flowchart LR
 - [(b) How a graph can be represented? Explain with example.](../written-answers/algorithm.md?plain=1#L3775)
 - [নিম্নে উল্লেখিত Graph- এর Adjacency Metrix এবং Adjacency List বের করুন।](../written-answers/algorithm.md?plain=1#L3816)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What is the maximum number of possible nonzero values in an adjacency matrix of a simple graph with n vertices?](../mcq-answers/algorithm.md?plain=1#L365)
+- [Which of the following data structures is more suitable for graph representation in Floyd Warshall Algorithm?](../mcq-answers/algorithm.md?plain=1#L401)
+
+
 
 ---
 
@@ -4432,6 +4644,11 @@ Simply store all edges as a list of triples **(u, v, weight)**.
 
 - [Problem solved more efficiently in adjacency list representation then adjacency matrix representation and problem solved more effective in adjacency matrix adja…](../written-answers/algorithm.md?plain=1#L3707)
 - [(b) How a graph can be represented? Explain with example.](../written-answers/algorithm.md?plain=1#L3775)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following data structures is more suitable for graph representation in Floyd Warshall Algorithm?](../mcq-answers/algorithm.md?plain=1#L401)
+
 
 ## Divide and Conquer & Matrix Multiplication
 
@@ -5061,6 +5278,12 @@ Start at the root and read the bit stream one bit at a time: **0 → go left, 1 
 **Previous Year Question List from this Topic:**
 
 - [Huffman encoding draw huffman tree. Given word “CONNECTION”.](../written-answers/algorithm.md?plain=1#L4017)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following techniques is popular for Data Compression?](../mcq-answers/algorithm.md?plain=1#L109)
+- [What is time complexity of Huffman coding?](../mcq-answers/algorithm.md?plain=1#L652)
+
 
 
 ---
