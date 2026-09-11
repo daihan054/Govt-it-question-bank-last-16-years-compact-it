@@ -1,11 +1,12 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 10 theories
+**Table of Contents** — 3 subtopics · 12 theories
 
 1. **[SDLC Phases & Models](#sdlc-phases--models)**
    - [Software Engineering and the SDLC](#software-engineering-and-the-sdlc)
    - [The Waterfall Model](#the-waterfall-model)
    - [Agile Methodology](#agile-methodology)
    - [Other SDLC Models](#other-sdlc-models)
+   - [Requirements Engineering, the SRS and Project Scheduling](#requirements-engineering-the-srs-and-project-scheduling)
 
 2. **[Software Testing & Evaluation](#software-testing--evaluation)**
    - [Software Testing — Fundamentals](#software-testing--fundamentals)
@@ -16,6 +17,7 @@
 
 3. **[Software Design, Architecture & Patterns](#software-design-architecture--patterns)**
    - [Design Patterns](#design-patterns)
+   - [Software Metrics — Coupling, Cohesion, Cyclomatic Complexity and Function Points](#software-metrics--coupling-cohesion-cyclomatic-complexity-and-function-points)
 
 <!-- TOC END -->
 
@@ -138,6 +140,16 @@ flowchart LR
 - [Define software engineering according to IEEE. What is SDLC? Describe any two SDLC.](../written-answers/software-engineering.md?plain=1#L2959)
 - [What is SDLC? Write down the Phases of SDLC?](../written-answers/software-engineering.md?plain=1#L3045)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is an appropriate category of system maintenance performed for the purpose of modifying the system to cope with changes in the software e…](../mcq-answers/software-engineering.md?plain=1#L222)
+- [Programmers being roughly out the logic they will use in the ________ stage of software SDLC.](../mcq-answers/software-engineering.md?plain=1#L231)
+- [Which of the following requires the most time in SDLC?](../mcq-answers/software-engineering.md?plain=1#L267)
+- [Program background, program functions and computing requirements are part of-](../mcq-answers/software-engineering.md?plain=1#L276)
+- [Which of the following is not a Software Development Life Cycle Phase?](../mcq-answers/software-engineering.md?plain=1#L294)
+- [The process of making object code form one system work on another type of system is called ________.](../mcq-answers/software-engineering.md?plain=1#L240)
+
+
 
 ---
 
@@ -190,6 +202,13 @@ flowchart TD
 - [(ক) Waterfall model বিস্তারিত বর্ণনা করুন। এই model এর সুবিধা এবং সীমাবদ্ধতাগুলো উল্লেখ করুন।](../written-answers/software-engineering.md?plain=1#L1157)
 - [(খ) Software development এর Waterfall model এর অসুবিধাগুলো কী কী?](../written-answers/software-engineering.md?plain=1#L1603)
 - [Show the structure model in software engineering. Phase of water fall life cycle.](../written-answers/software-engineering.md?plain=1#L2701)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the major drawback of waterfall Model?](../mcq-answers/software-engineering.md?plain=1#L204)
+- [How many steps in waterfall model?](../mcq-answers/software-engineering.md?plain=1#L213)
+- [Waterfall model phase in which system design is prepared and this system design helps is specifying system requirements and define overall system architecture i…](../mcq-answers/software-engineering.md?plain=1#L285)
+
 
 
 ---
@@ -482,6 +501,118 @@ flowchart LR
 - [From the diagram write down the software evolution.](../written-answers/software-engineering.md?plain=1#L1970)
 - [Define software engineering according to IEEE. What is SDLC? Describe any two SDLC.](../written-answers/software-engineering.md?plain=1#L2959)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In which model prototype can be developed?](../mcq-answers/software-engineering.md?plain=1#L321)
+- [A branch office, location or other data processing centers, where a newly developed system is used under normal operating conditions for several months, to test…](../mcq-answers/software-engineering.md?plain=1#L258)
+
+
+---
+
+### Requirements Engineering, the SRS and Project Scheduling
+
+#### Requirements engineering
+
+> **REQUIREMENTS ENGINEERING is the process of ELICITING, ANALYSING, SPECIFYING, VALIDATING and MANAGING what a system must do.** It is the phase where errors are **cheapest to fix and most expensive to miss** — a requirements defect found in production costs roughly **100 times** more than one found here.
+
+| Type | Meaning | Example |
+|---|---|---|
+| ⭐ **FUNCTIONAL requirements** | **WHAT the system must DO** — the features and behaviour | "The system shall allow a customer to transfer funds between accounts" |
+| ⭐ **NON-FUNCTIONAL requirements** | **HOW WELL it must do it** — the quality attributes and constraints | "The transfer shall complete within 2 seconds for 10,000 concurrent users" |
+| **Domain requirements** | Derived from the business domain | Regulatory limits set by Bangladesh Bank |
+
+> ⚠️ **The distinction matters for testing too: PERFORMANCE, LOAD, STRESS, SECURITY, USABILITY, COMPATIBILITY and RELIABILITY testing are all NON-FUNCTIONAL testing** — they check *how well*, not *what*.
+
+#### ⭐ The characteristics of a good SRS (IEEE 830)
+
+> A **Software Requirements Specification** is the formal, agreed statement of what will be built. To be usable it must have these properties:
+
+| # | Characteristic | Meaning |
+|---|---|---|
+| **1** | **CORRECT** | Every requirement stated is one the system must actually meet |
+| **2** | **UNAMBIGUOUS** | Each requirement has **exactly one interpretation** |
+| **3** | **COMPLETE** | All requirements, responses and definitions are present |
+| **4** | **CONSISTENT** | No requirement contradicts another |
+| **5** | **RANKED** for importance and stability | Each is marked essential / desirable / optional |
+| **6** | ⭐ **VERIFIABLE** | ⭐ **There exists a FINITE, COST-EFFECTIVE PROCESS by which a person or machine can CHECK that the system meets the requirement** |
+| **7** | **MODIFIABLE** | Structured so changes can be made cleanly |
+| **8** | **TRACEABLE** | Each requirement can be traced forward to design, code and tests, and backward to its origin |
+
+> ### **"If EVERY requirement can be CHECKED BY A COST-EFFECTIVE PROCESS, then the SRS is ______"** → ### ✅ **VERIFIABLE.**
+>
+> ### **The practical test for verifiability — the single most useful idea here:**
+> ```
+>    ❌ NOT verifiable :  "The system shall have a GOOD user interface."
+>                         "The response shall be FAST."
+>                         "The system shall be USER-FRIENDLY."
+>       — there is no measurement that settles whether these are met.
+>
+>    ✅ VERIFIABLE     :  "A trained user shall complete a fund transfer in under 60 seconds."
+>                         "95 % of transactions shall return within 2 seconds under a
+>                          load of 10,000 concurrent users."
+>       — each can be measured, and the answer is yes or no.
+> ```
+> **Any requirement containing words like "good", "fast", "easy", "efficient", "user-friendly" or "flexible" is UNVERIFIABLE and must be rewritten with a NUMBER and a MEASUREMENT METHOD.**
+
+#### Requirement elicitation techniques
+
+**Interviews · questionnaires · workshops (JAD) · observation of current working · study of existing documents and systems · prototyping · use cases and user stories · brainstorming · surveys of similar systems.**
+
+#### Project scheduling and estimation
+
+> ### **"Which project-scheduling method can be applied to software development?"** → ### ✅ **BOTH PERT and CPM.**
+
+| Technique | What it is |
+|---|---|
+| ⭐ **GANTT CHART** | ⭐ **A horizontal BAR CHART** — each task is a bar spanning its start and end dates. Shows **progress and overlap at a glance**; the standard project-tracking view |
+| ⭐ **PERT — Program Evaluation and Review Technique** | ⭐ **A NETWORK diagram** using **PROBABILISTIC time estimates**: **Expected time tₑ = (Optimistic + 4 × Most likely + Pessimistic) / 6**. Suited to **research and development work where durations are uncertain** — which is exactly why it fits software |
+| ⭐ **CPM — Critical Path Method** | ⭐ A network diagram using a **single DETERMINISTIC time estimate** per task. Identifies the ⭐ **CRITICAL PATH — the LONGEST path through the network, which determines the project's minimum duration.** Any delay on the critical path delays the whole project |
+| **WBS — Work Breakdown Structure** | Hierarchical decomposition of the work into manageable tasks |
+| **COCOMO** | Constructive Cost Model — estimates **effort and schedule from size**: Effort = a × (KLOC)^b |
+
+> **PERT vs CPM in one line: PERT is EVENT-oriented and PROBABILISTIC (used when durations are uncertain); CPM is ACTIVITY-oriented and DETERMINISTIC (used when durations are well known, and it supports cost-time trade-off / crashing).** Modern tools blend the two, and "PERT/CPM" is usually treated as one technique.
+
+**Key network terms:** **critical path** (longest path = project duration) · **float/slack** (how long a task may be delayed without delaying the project; **tasks on the critical path have ZERO float**) · **milestone** (a zero-duration checkpoint) · **dependency** (finish-to-start, etc.).
+
+#### Which SDLC phase takes the most time?
+
+> ### **"Which of the following requires the MOST TIME in the SDLC?"** → ### ✅ **TESTING.**
+>
+> Industry data consistently puts **testing and debugging at 40–50 % of total development effort** — more than coding itself. *(And if the **whole product lifetime** is counted rather than just development, **MAINTENANCE dominates everything**, at 60–80 % of total cost.)*
+
+#### The SDLC phases — and what is NOT one
+
+| ✅ **Genuine SDLC phases** | ❌ **NOT an SDLC phase** |
+|---|---|
+| Planning / Feasibility · **Requirement Analysis** · **Design** · Implementation (Coding) · **Testing** · Deployment · **Maintenance** | ⚠️ **"TEST CLOSURE"** — this is a phase of the **SOFTWARE TESTING LIFE CYCLE (STLC)**, not of the SDLC |
+
+> **The STLC phases, for contrast:** Requirement Analysis → Test Planning → Test Case Development → Test Environment Setup → Test Execution → ⭐ **Test Closure**. **The STLC sits INSIDE the SDLC's testing phase** — which is exactly the confusion the MCQ exploits.
+
+> ### **Two more phase-identification points:**
+> - ### **"Programmers rough out the LOGIC they will use in the ______ stage"** → ### ✅ **DESIGN.** *(Logic is planned in design; it is written in implementation.)*
+> - ### **"The Waterfall phase in which system DESIGN is prepared, helping to specify hardware and system requirements"** → ### ✅ **the MODELLING / SYSTEM DESIGN phase.**
+> - ### **"How many steps in the Waterfall model?"** → ### ✅ **6** — Requirement analysis, System design, Implementation, Testing, Deployment, Maintenance. *(Some texts count 5 or 7 depending on whether planning and integration are listed separately; **6 is the standard examination answer**.)*
+
+#### Porting
+
+> ### **PORTING is the process of MAKING OBJECT CODE (or software) WRITTEN FOR ONE SYSTEM WORK ON ANOTHER TYPE OF SYSTEM** — a different processor, operating system or platform.
+
+> ### **"The process of making object code from one system work on another type of system is called…"** → ### ✅ **PORTING.**
+>
+> **What makes software portable:** writing in a **high-level, standard language**, avoiding platform-specific system calls, isolating hardware dependencies behind an abstraction layer, and using **portable runtimes** — which is exactly why **Java's "Write Once, Run Anywhere" bytecode** and **.NET's IL** exist. **PORTABILITY is one of the six ISO 9126 quality characteristics**, and **ADAPTIVE MAINTENANCE is the category of maintenance that performs porting** when the environment changes.
+
+**Previous Year MCQ List from this Topic:**
+
+- [If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called-](../mcq-answers/software-engineering.md?plain=1#L435)
+- [The process of making object code form one system work on another type of system is called ________.](../mcq-answers/software-engineering.md?plain=1#L240)
+- [Which of the following requires the most time in SDLC?](../mcq-answers/software-engineering.md?plain=1#L267)
+- [Which of the following is not a Software Development Life Cycle Phase?](../mcq-answers/software-engineering.md?plain=1#L294)
+- [Method used in writing and design of a program is termed as-](../mcq-answers/software-engineering.md?plain=1#L303)
+- [Which of the following is a project scheduling method that can be applied to software development?](../mcq-answers/software-engineering.md?plain=1#L312)
+- [________ is natural language statements that look like programming code.](../mcq-answers/software-engineering.md?plain=1#L249)
+
+
+
 
 ---
 
@@ -548,6 +679,14 @@ flowchart LR
 - [(a) Explain software validation, Verification and Modularity.](../written-answers/software-engineering.md?plain=1#L4288)
 - [Software testing কত প্রকার ও কী কী? Testing এর ক্ষেত্রে Boundary Value Analysis (BVA) এবং Equivalence Partitioning কীভাবে কাজ করে?](../written-answers/software-engineering.md?plain=1#L4431)
 - [Testing is an activity that is performed to verify correct behavior of a program. Testing should be conducted in all the stages of program development. Describe…](../written-answers/software-engineering.md?plain=1#L5339)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which is the correct definition of BUG?](../mcq-answers/software-engineering.md?plain=1#L90)
+- [Test case is written by-](../mcq-answers/software-engineering.md?plain=1#L193)
+- [Which of the below testing is related to Non-functional testing?](../mcq-answers/software-engineering.md?plain=1#L72)
+- [A Non-Functional Software testing is done to check if the user interface is easy to use and understand-](../mcq-answers/software-engineering.md?plain=1#L166)
+
 
 
 ---
@@ -658,6 +797,14 @@ flowchart LR
 - [Software development এ Black Box Testing বলতে কি বুঝায়?](../written-answers/software-engineering.md?plain=1#L5137)
 - [Difference between black box and white box testing.](../written-answers/software-engineering.md?plain=1#L5964)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following testing strategy is related to the boundary value analysis?](../mcq-answers/software-engineering.md?plain=1#L27)
+- [Which of the following is the appropriate set of test cases, (A, B) when the part of a program shown is tested by decision condition coverage (branch coverage)?](../mcq-answers/software-engineering.md?plain=1#L99)
+- [কোন Testing দিয়ে Input-Output ঠিক আছে কিনা বুঝা যায়?](../mcq-answers/software-engineering.md?plain=1#L148)
+- [Cyclomatic complexity is a software metric used in _____](../mcq-answers/software-engineering.md?plain=1#L341)
+
+
 
 ---
 
@@ -743,6 +890,21 @@ The final level — **by the customer or end user**, to decide whether to **acce
 - [Write different between Alpha and Beta testing.](../written-answers/software-engineering.md?plain=1#L5280)
 - [What is Alpha and Beta testing?](../written-answers/software-engineering.md?plain=1#L5807)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Integration testing is the process of testing the _____ between two software units or modules.](../mcq-answers/software-engineering.md?plain=1#L18)
+- [Objective of integration testing is to find _____](../mcq-answers/software-engineering.md?plain=1#L36)
+- [______ is a type of software testing where a group of individuals, usually from within the organization, use the software in a simulated or controlled environme…](../mcq-answers/software-engineering.md?plain=1#L45)
+- [______ testing is a testing technique where the actual data verified in the real environment.](../mcq-answers/software-engineering.md?plain=1#L63)
+- [Which of the following testing is also called Acceptance testing?](../mcq-answers/software-engineering.md?plain=1#L81)
+- [________ is the final stage of the testing process conducted before software release. This is referred as:](../mcq-answers/software-engineering.md?plain=1#L112)
+- [Software goes through a phase in which errors are verified and studied on simulated user environments. This is referred as-](../mcq-answers/software-engineering.md?plain=1#L121)
+- [Modified software goes through a phase where it is tested in the user’s site or live environment. This is referred as-](../mcq-answers/software-engineering.md?plain=1#L130)
+- [Testing of software with actual data and in actual environment is known as-](../mcq-answers/software-engineering.md?plain=1#L157)
+- [Which kind of software testing strategy starts with testing the fundamental components first?](../mcq-answers/software-engineering.md?plain=1#L184)
+- [A branch office, location or other data processing centers, where a newly developed system is used under normal operating conditions for several months, to test…](../mcq-answers/software-engineering.md?plain=1#L258)
+
+
 
 ---
 
@@ -788,6 +950,15 @@ The final level — **by the customer or end user**, to decide whether to **acce
 - [(a) What is penetration testing for a network service? (2 marks)](../written-answers/software-engineering.md?plain=1#L6125)
 - [How would you test an ATM in a banking system?](../written-answers/software-engineering.md?plain=1#L5431)
 - [How would you test an ATM in a distributed system?](../written-answers/software-engineering.md?plain=1#L5677)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following testing techniques includes how well the user will understand and interact with the system?](../mcq-answers/software-engineering.md?plain=1#L54)
+- [Which of the below testing is related to Non-functional testing?](../mcq-answers/software-engineering.md?plain=1#L72)
+- [________ is an integration testing that is commonly used when software products are being developed. It is designed as a pacing mechanism for time-critical proj…](../mcq-answers/software-engineering.md?plain=1#L139)
+- [A Non-Functional Software testing is done to check if the user interface is easy to use and understand-](../mcq-answers/software-engineering.md?plain=1#L166)
+- [The name of the testing which is done to make sure the existing features are not affected by new changes](../mcq-answers/software-engineering.md?plain=1#L175)
+
 
 
 ---
@@ -1056,6 +1227,13 @@ flowchart LR
 - [A program sorts an array of integer. Write down the code that tests the sorting algorithm of written in a program.](../written-answers/software-engineering.md?plain=1#L5860)
 - [A program sorts an array of integer. Write down the code that tests the sorting algorithm of written](../written-answers/software-engineering.md?plain=1#L6021)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is the appropriate set of test cases, (A, B) when the part of a program shown is tested by decision condition coverage (branch coverage)?](../mcq-answers/software-engineering.md?plain=1#L99)
+- [Test case is written by-](../mcq-answers/software-engineering.md?plain=1#L193)
+- [ISO 9126 quality factors consist of –](../mcq-answers/software-engineering.md?plain=1#L386)
+
+
 
 ---
 
@@ -1276,3 +1454,191 @@ class Mp4Adapter implements MediaPlayer {                    // the ADAPTER
 **Previous Year Question List from this Topic:**
 
 - [(b) What is design pattern? List the basic design patterns with example codes. (5 marks)](../written-answers/software-engineering.md?plain=1#L6132)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Design pattern for hierarchical structure is ______](../mcq-answers/software-engineering.md?plain=1#L406)
+- [Which of the following is a design pattern?](../mcq-answers/software-engineering.md?plain=1#L415)
+- [Which of the following is a design pattern?](../mcq-answers/software-engineering.md?plain=1#L424)
+
+
+---
+
+### Software Metrics — Coupling, Cohesion, Cyclomatic Complexity and Function Points
+
+> **A SOFTWARE METRIC is a QUANTITATIVE MEASURE of some attribute of software or of the process that produces it.** Metrics exist because *"you cannot control what you cannot measure"* — they turn vague judgements about quality into numbers that can be tracked.
+
+#### ⭐ Coupling and Cohesion — the two governing design metrics
+
+| | ⭐ **COUPLING** | ⭐ **COHESION** |
+|---|---|---|
+| ⭐ **Definition** | ⭐ **The DEGREE OF INTERACTION / INTERDEPENDENCE BETWEEN TWO MODULES** — a qualitative measure of the **number of connections between a "calling" and a "called" module** | ⭐ **The degree to which the elements INSIDE a SINGLE module belong together** and serve one purpose |
+| **Concerns** | **BETWEEN modules** (inter-module) | **WITHIN one module** (intra-module) |
+| ### **Goal** | ### ⭐ **LOW (loose) coupling** | ### ⭐ **HIGH (strong) cohesion** |
+| **Why** | So a change in one module does **not force changes in others** | So a module does **one thing well** and is easy to understand, test and reuse |
+
+> ### **"The degree of interaction between two modules is known as…"** → ### ✅ **COUPLING.**
+> ### **"…a qualitative measure that refers to the number of connections between a 'calling' and a 'called' module"** → ### ✅ **COUPLING.**
+>
+> ### **The single most quoted design rule in software engineering: "HIGH COHESION, LOW COUPLING."**
+
+**Types of COUPLING — from best to worst:**
+
+| Level | Type | Description |
+|---|---|---|
+| ✅ **Best** | **Data coupling** | Modules share only **simple data parameters** |
+| | **Stamp coupling** | A whole **record/structure** is passed, though only part is used |
+| | **Control coupling** | One module passes a **flag controlling the other's logic** |
+| | **External coupling** | Shared external data format or device |
+| | **Common coupling** | Modules share **global data** |
+| ⚠️ **Worst** | **Content coupling** | One module **directly modifies the internals** of another |
+
+**Types of COHESION — from best to worst:**
+
+| Level | Type | Description |
+|---|---|---|
+| ✅ **Best** | **Functional cohesion** | Every element contributes to **ONE single well-defined task** |
+| | **Sequential** | The output of one element is the input of the next |
+| | **Communicational** | Elements operate on the **same data** |
+| | **Procedural / Temporal** | Elements are grouped by order or by time (e.g. "initialisation") |
+| | **Logical** | Elements do **similar kinds** of thing, selected by a flag |
+| ⚠️ **Worst** | **Coincidental** | Elements are grouped for **no reason at all** — a "utilities" dumping ground |
+
+#### Worked example — maximal cohesion connections
+
+> **In a class definition with 10 methods, how many connections are required to make the class MAXIMALLY COHESIVE?**
+
+```
+   Maximum cohesion means EVERY method is connected to EVERY OTHER method.
+   This is a COMPLETE GRAPH on 10 nodes, and the number of edges is:
+
+        C(n, 2) = n(n − 1) / 2
+                = 10 × 9 / 2
+                = 90 / 2
+                = 45
+```
+> ### ✅ **45 connections.**
+>
+> **The reasoning to state:** a connection between method A and method B is the **same** connection as between B and A, so the count is a **COMBINATION, not a permutation** — `¹⁰C₂ = 45`, not `¹⁰P₂ = 90`. *(This is the identical formula to the handshake problem.)*
+
+#### ⭐ Cyclomatic Complexity
+
+> ### **CYCLOMATIC COMPLEXITY (McCabe's metric) measures the NUMBER OF LINEARLY INDEPENDENT PATHS through a program's source code** — that is, its **decision complexity**.
+>
+> ### **It is a WHITE-BOX (structural) testing metric**, because it is computed from the **code's control-flow graph**, not from its specification.
+
+> ### **"Cyclomatic complexity is a software metric used in…"** → ### ✅ **WHITE-BOX TESTING.**
+
+**The three equivalent formulas:**
+```
+   ① V(G) = E − N + 2P        E = edges, N = nodes, P = connected components (usually 1)
+   ② V(G) = P + 1             P = the number of PREDICATE (decision) nodes
+   ③ V(G) = R                 R = the number of REGIONS in the planar control-flow graph
+```
+
+**Worked example:**
+```c
+if (a > b) {          // decision 1
+    if (a > c)        // decision 2
+        max = a;
+    else
+        max = c;
+} else {
+    max = b;
+}
+```
+```
+   Decision nodes P = 2      ⇒   V(G) = 2 + 1 = 3
+   So THREE linearly independent paths exist, and a minimum of
+   3 test cases is needed for full BRANCH coverage.
+```
+
+| V(G) | Risk | Interpretation |
+|---|---|---|
+| **1 – 10** | ✅ **Low** | Simple, well-structured; easy to test |
+| **11 – 20** | Moderate | More complex |
+| **21 – 50** | ⚠️ **High** | Should be refactored |
+| **> 50** | ⚠️ **Untestable** | Break it up |
+
+> ### **Why it matters practically: V(G) gives the MINIMUM NUMBER OF TEST CASES needed to cover every independent path**, so it tells a test manager how much testing a module actually requires — and it flags functions that are too tangled to maintain.
+
+#### Function Point Analysis
+
+> **FUNCTION POINTS (FP) measure the SIZE of software by what it DOES FOR THE USER, rather than by how many lines of code it contains.** This makes the measure **independent of the programming language**, which is why it is used for **estimating cost and effort before any code exists**.
+
+**The five function types counted:** **External Inputs (EI)** · **External Outputs (EO)** · **External Inquiries (EQ)** · **Internal Logical Files (ILF)** · **External Interface Files (EIF)** — each weighted simple / average / complex to give the **Unadjusted Function Point (UFP)** count.
+
+> ### ⭐ **VALUE ADJUSTMENT FACTORS (VAF)** then modify the raw count by **14 GENERAL SYSTEM CHARACTERISTICS**, which include ⭐ **the CRITICALITY OF PERFORMANCE and the REUSABILITY OF THE CODE**, as well as data communications, distributed processing, heavily used configuration, transaction rate, online data entry, end-user efficiency, online update, complex processing, installation ease, operational ease, multiple sites and facilitation of change.
+>
+> ```
+>      Adjusted FP = UFP × [ 0.65 + 0.01 × Σ(the 14 factor ratings, each 0–5) ]
+> ```
+
+| Metric | Measures | Language dependent? |
+|---|---|---|
+| **LOC (Lines of Code)** | Physical size | ⚠️ **Yes** — 1 FP ≈ 320 LOC in assembly, ≈ 50 in Java |
+| ⭐ **Function Points** | **Functionality delivered to the user** | ✅ **No** |
+| **COCOMO** | Effort and schedule estimated **from** size | — |
+
+> ⚠️ **Why LOC is a poor metric:** it **rewards verbosity** — a programmer who writes the same feature in half the code appears half as productive. Function points avoid this by measuring **what the software does**, not how much text it took.
+
+#### ISO 9126 software quality model
+
+> ### **ISO/IEC 9126 defines SIX software quality characteristics:**
+>
+> ### ⭐ **FUNCTIONALITY · RELIABILITY · USABILITY · EFFICIENCY · MAINTAINABILITY · PORTABILITY**
+
+| Characteristic | Sub-characteristics |
+|---|---|
+| ⭐ **Functionality** | Suitability, accuracy, interoperability, **security**, compliance |
+| ⭐ **Reliability** | Maturity, fault tolerance, recoverability |
+| ⭐ **Usability** | Understandability, learnability, operability, attractiveness |
+| ⭐ **Efficiency** | Time behaviour, resource utilisation |
+| ⭐ **Maintainability** | Analysability, changeability, stability, testability |
+| ⭐ **Portability** | Adaptability, installability, co-existence, replaceability |
+
+> ⚠️ **A note on wording:** some question papers list the fourth characteristic as **"effectiveness"**. The **correct ISO 9126 term is EFFICIENCY**; "effectiveness" belongs to the later **ISO/IEC 25010** quality-in-use model, which superseded 9126 in 2011 and expanded the list to **eight** characteristics by adding **Security** and **Compatibility** as top-level items. **If the options offer "effectiveness" in place of "efficiency", that is the intended key — but the standard term is efficiency.**
+
+#### Design documentation tools
+
+| Tool | Purpose |
+|---|---|
+| ⭐ **DFD — DATA FLOW DIAGRAM** | ⭐ **Shows how DATA MOVES through a system** — processes, data stores, external entities and data flows. **Level 0 is the Context Diagram**; levels 1, 2 … decompose it |
+| ⭐ **STRUCTURE CHART** | ⭐ **Shows the HIERARCHICAL organisation of MODULES** — which module calls which, and what is passed. It is the classic **hierarchical design** representation |
+| **ER Diagram** | Data entities and their relationships |
+| **UML** | Class, sequence, use-case, activity and state diagrams |
+| **Flowchart** | The step-by-step logic of one process |
+| ⭐ **PSEUDOCODE** | ⭐ **NATURAL-LANGUAGE STATEMENTS THAT LOOK LIKE PROGRAMMING CODE** — used to express an algorithm without the syntax of any real language |
+| **Decision table / tree** | Complex combinations of conditions |
+| **Data dictionary** | Definitions of every data element |
+
+> ### **"DFD stands for"** → ### ✅ **DATA FLOW DIAGRAM.**
+> ### **"______ is natural language statements that look like programming code"** → ### ✅ **PSEUDOCODE.**
+> ### **"Design pattern for hierarchical structure"** → ### ✅ **STRUCTURE CHART** *(as the intended answer in this question set; note that in the Gang-of-Four sense the pattern for tree-like hierarchies is the **COMPOSITE** pattern — a structure chart is a **design DOCUMENTATION tool**, not a GoF design pattern).*
+
+#### Top-down vs Bottom-up design
+
+| | ⭐ **TOP-DOWN** | **BOTTOM-UP** |
+|---|---|---|
+| **Starts from** | ⭐ **The whole system, decomposed into smaller modules** | The smallest components, combined upward |
+| **Also called** | Stepwise refinement | Composition |
+| **Testing counterpart** | Top-down integration (needs **stubs**) | ⭐ **BOTTOM-UP integration — "starts with testing the FUNDAMENTAL COMPONENTS first"** (needs **drivers**) |
+| **Suits** | Structured/procedural design | Object-oriented and reuse-driven design |
+
+> ### **"Method used in writing and design of a program is termed as…"** → ### ✅ **TOP-DOWN METHOD.**
+> ### **"Which testing strategy starts with testing the fundamental components first?"** → ### ✅ **BOTTOM-UP TESTING.**
+
+**Previous Year MCQ List from this Topic:**
+
+- [In a class definition with 10 methods, to make the class maximally cohesive number ofconnections required among the methods are-](../mcq-answers/software-engineering.md?plain=1#L332)
+- [Cyclomatic complexity is a software metric used in _____](../mcq-answers/software-engineering.md?plain=1#L341)
+- [The degree of interaction between two modules is known as-](../mcq-answers/software-engineering.md?plain=1#L350)
+- [In software development, value adjustment factors include the following among others:](../mcq-answers/software-engineering.md?plain=1#L359)
+- [Assuming the existence of a start and end nodes for a program graph (PG), the total number of Paths is equivalent to _______ set of test data required to test s…](../mcq-answers/software-engineering.md?plain=1#L368)
+- [________ is qualitative measure that refers to the number of connections between a ‘calling’ and a ‘called’ module and the complexity of these connections.](../mcq-answers/software-engineering.md?plain=1#L377)
+- [ISO 9126 quality factors consist of –](../mcq-answers/software-engineering.md?plain=1#L386)
+- [DFD stands for-](../mcq-answers/software-engineering.md?plain=1#L395)
+- [Design pattern for hierarchical structure is ______](../mcq-answers/software-engineering.md?plain=1#L406)
+- [________ is natural language statements that look like programming code.](../mcq-answers/software-engineering.md?plain=1#L249)
+- [Method used in writing and design of a program is termed as-](../mcq-answers/software-engineering.md?plain=1#L303)
+- [Which kind of software testing strategy starts with testing the fundamental components first?](../mcq-answers/software-engineering.md?plain=1#L184)

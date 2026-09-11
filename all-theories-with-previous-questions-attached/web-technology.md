@@ -1,8 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 8 theories
+**Table of Contents** — 7 subtopics · 11 theories
 
 1. **[HTML & Web Fundamentals](#html--web-fundamentals)**
    - [HTML — Structure, Elements and Tags](#html--structure-elements-and-tags)
+   - [XML, XSLT and Web Data Formats](#xml-xslt-and-web-data-formats)
 
 2. **[CSS & Styling (Inline, Internal, External)](#css--styling-inline-internal-external)**
    - [CSS — Concepts, Types and the Box Model](#css--concepts-types-and-the-box-model)
@@ -19,6 +20,8 @@
 
 6. **[Full Stack & Backend Web Development](#full-stack--backend-web-development)**
    - [Client-side vs Server-side, and Web Architecture](#client-side-vs-server-side-and-web-architecture)
+   - [PHP — Syntax, Variables, Strings and Server-Side Basics](#php--syntax-variables-strings-and-server-side-basics)
+   - [Web Servers, Application Servers and Content Management Systems](#web-servers-application-servers-and-content-management-systems)
 
 7. **[Web Security & Browser Same-Origin Policy (Iframe)](#web-security--browser-same-origin-policy-iframe)**
    - [The Same-Origin Policy and CORS](#the-same-origin-policy-and-cors)
@@ -462,6 +465,120 @@ flowchart LR
 - [What is local Storage and session Storage in HTML5?](../written-answers/web-technology.md?plain=1#L2572)
 - [What are the minimum HTML Tags is used web pages? How can your comments at web pages so that browser not read this?](../written-answers/web-technology.md?plain=1#L2654)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is the root tag of the HTML document?](../mcq-answers/web-technology.md?plain=1#L20)
+- [How to create an unordered list (a list with the list items in bullets) in HTML?](../mcq-answers/web-technology.md?plain=1#L29)
+- [What is the popular way to linking many documents?](../mcq-answers/web-technology.md?plain=1#L38)
+- [The newest version of HTML is:](../mcq-answers/web-technology.md?plain=1#L80)
+- [Which HTML attribute is used to hide characters of an input password?](../mcq-answers/web-technology.md?plain=1#L103)
+- [Which of the followings is not a built-in HTML tag?](../mcq-answers/web-technology.md?plain=1#L112)
+- [Which of the following converts the documents written by HTML?](../mcq-answers/web-technology.md?plain=1#L121)
+- [A nonstandard HTML extension that causes scrolling text to appear as pan of a Web page is-](../mcq-answers/web-technology.md?plain=1#L130)
+- [Which of the following tags is used to create a paragraph in HTML?](../mcq-answers/web-technology.md?plain=1#L139)
+- [Which is correct to open new window/tab of browser?](../mcq-answers/web-technology.md?plain=1#L266)
+
+
+---
+
+### XML, XSLT and Web Data Formats
+
+#### What XML is
+
+> ### **XML (eXtensible Markup Language) is a markup language for STORING AND TRANSPORTING DATA in a format that is BOTH HUMAN-READABLE AND MACHINE-READABLE.** Unlike HTML, it has **no predefined tags** — you define your own, and the tags **describe the DATA, not its appearance**.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="101">
+        <name>Rahim Uddin</name>
+        <department>IT</department>
+        <salary>55000</salary>
+    </employee>
+</employees>
+```
+
+#### ⭐ XML vs HTML — the comparison
+
+| Point | **HTML** | ⭐ **XML** |
+|---|---|---|
+| ⭐ **Purpose** | ⭐ **DISPLAYING data — how it LOOKS** | ⭐ **STORING and TRANSPORTING data — what it MEANS** |
+| **Tags** | **Predefined and fixed** (`<p>`, `<h1>`, `<table>`) | ⭐ **User-defined — extensible** |
+| **Case sensitivity** | Not case-sensitive | ⭐ **CASE-SENSITIVE** |
+| **Closing tags** | Some may be omitted (`<br>`, `<li>`) | ⭐ **EVERY tag must be closed** |
+| **Error tolerance** | ✅ Very forgiving — browsers guess | ⚠️ **Strict — a malformed document is rejected outright** |
+| **Whitespace** | Collapsed | **Preserved** |
+| **Structure** | Presentation-oriented | **Self-describing, hierarchical, tree-structured** |
+| ⭐ **Main advantage** | Renders in a browser | ⭐ **SUITED TO USING A WEB PAGE AS A FRONT-END TO A DATABASE** — the data carries its own meaning, so it can be validated, transformed and loaded into any system |
+
+> ### **"One advantage of XML compared to HTML is…"** → ### ✅ **XML is suited to using a web page as a FRONT-END TO A DATABASE.**
+>
+> **Why: XML separates DATA from PRESENTATION.** Because each element is **named for what it contains**, an XML document can be **validated against a schema, queried, transformed and loaded straight into a database** — none of which is possible with HTML, whose `<td>` tags say only "this is a table cell", not "this is a salary".
+
+**Rules for a WELL-FORMED XML document:** exactly **one root element** · every tag **closed** · tags **properly nested** · **case-sensitive** matching · attribute values in **quotes** · special characters **escaped** (`&lt;` `&gt;` `&amp;` `&quot;` `&apos;`).
+**VALID** XML additionally conforms to a **DTD or XML Schema (XSD)**.
+
+#### The XML family of technologies
+
+| Technology | Purpose |
+|---|---|
+| **DTD / XSD (XML Schema)** | Define the **allowed structure** of a document, so it can be validated |
+| ⭐ **XSLT — eXtensible Stylesheet Language Transformations** | ⭐ **TRANSFORMS an XML document into another format** — HTML, plain text, or different XML |
+| **XPath** | A **path language for selecting nodes** inside an XML document (`/employees/employee[@id='101']/name`) |
+| **XQuery** | A query language for XML, analogous to SQL |
+| **SOAP** | A **protocol** for web services; its messages are XML |
+| **RSS / Atom** | XML formats for news feeds |
+| **SVG / XHTML / WSDL** | Graphics / strict HTML / web-service description — all XML applications |
+
+#### ⭐ XSLT and context-oriented processing
+
+> **An XSLT stylesheet consists of TEMPLATE RULES.** Each rule has a **`match` pattern**, and when the processor finds a node matching it, the rule's body is instantiated.
+
+```xml
+<xsl:template match="employee">
+    <tr>
+        <td><xsl:value-of select="name"/></td>      <!-- relative to the MATCHED node -->
+        <td><xsl:value-of select="salary"/></td>
+    </tr>
+</xsl:template>
+```
+
+> ### **"XSLT processors evaluate each statement IN THE CONTEXT OF THE MATCH THAT HAS BEEN MADE — that is, XSLT processing is ______"** → ### ✅ **CONTEXT ORIENTED.**
+>
+> **What that means concretely:** inside a template, a path such as `select="name"` is **relative to the CURRENT node** (the one that matched), not to the root of the document. **The "context node" moves as the processor walks the tree**, which is why the same template body produces different output for each employee. **XSLT is also DECLARATIVE and functional — you describe what each kind of node should become, not the order of traversal.**
+
+#### The modern data-interchange formats
+
+| Format | Character | Used for |
+|---|---|---|
+| ⭐ **JSON — JavaScript Object Notation** | ⭐ **The MODERN LIGHTWEIGHT message-exchange format** — compact, easy to read, parses natively in JavaScript | ⭐ **REST APIs, AJAX, configuration, NoSQL documents** |
+| **XML** | Verbose, strict, richly validatable | **SOAP web services, documents, enterprise and government data exchange, RSS** |
+| **YAML** | Indentation-based, very human-friendly | Configuration (Docker, Kubernetes, CI pipelines) |
+| **CSV** | Flat, tabular | Spreadsheet and bulk data exchange |
+| **Protocol Buffers / Avro** | Binary, compact, schema-driven | High-performance internal services |
+
+> ### **"Which is the modern LIGHTWEIGHT message exchange format?"** → ### ✅ **JSON (JavaScript Object Notation).**
+
+```json
+{ "employee": { "id": 101, "name": "Rahim Uddin", "salary": 55000 } }
+```
+```xml
+<employee><id>101</id><name>Rahim Uddin</name><salary>55000</salary></employee>
+```
+
+> ### **Why JSON displaced XML for web APIs:** it is **far less verbose** (no closing tags, so smaller payloads and less bandwidth), it **maps directly onto the data structures of every modern language** (objects and arrays), and in JavaScript it needs **no parser at all**. **XML retains the advantage where STRICT VALIDATION, NAMESPACES, RICH DOCUMENT STRUCTURE, COMMENTS or DIGITAL SIGNATURES are required** — which is why SOAP, government data exchange and formal document standards still use it.
+
+**Previous Year MCQ List from this Topic:**
+
+- [XSLT processors evaluate each statement in the context of the match that has been made. That is, XSLT processors are:](../mcq-answers/web-technology.md?plain=1#L53)
+- [One advantage of XML compared to HTML is ________](../mcq-answers/web-technology.md?plain=1#L148)
+- [Which is the lightweight message format?](../mcq-answers/web-technology.md?plain=1#L340)
+- [Which one is modern light weight message exchange format?](../mcq-answers/web-technology.md?plain=1#L349)
+- [Which one is modern lightweight message exchange format?](../mcq-answers/web-technology.md?plain=1#L358)
+- [Which one is modern lightweight message exchange format?](../mcq-answers/web-technology.md?plain=1#L367)
+
+
+
 
 ---
 
@@ -629,6 +746,11 @@ flowchart TD
 - [(ক) HTML এবং CSS কী? সংক্ষেপে ব্যাখ্যা করুন। শুধুমাত্র HTML এবং CSS ব্যবহার করে Web Site তৈরির ক্ষেত্রে সীমাবদ্ধতা আলোচনা করুন।](../written-answers/web-technology.md?plain=1#L1050)
 - [(ক) কোন প্রতিষ্ঠানের Web page development এ HTML এবং CSS এর ভূমিকা কি? শুধুমাত্র HTML এবং CSS ব্যবহার করে কোন ধরনের Web Page Development করা যেতে পারে?](../written-answers/web-technology.md?plain=1#L1192)
 - [(ii) HTML ও CSS কী?](../written-answers/web-technology.md?plain=1#L1287)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which CSS property is used to set the thickness or boldness of the text?](../mcq-answers/web-technology.md?plain=1#L472)
+
 
 
 ---
@@ -918,6 +1040,17 @@ function validateForm() {
 - [How to change html attribute through html DOM?](../written-answers/web-technology.md?plain=1#L4076)
 - [Suppose you've a javaScript code name as “bankScript” write the code for loading in HTML using JS.](../written-answers/web-technology.md?plain=1#L4209)
 - [What is closure in JavaScript? Explain with an example?](../written-answers/web-technology.md?plain=1#L4332)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Where can JavaScript code be placed in an html page?](../mcq-answers/web-technology.md?plain=1#L248)
+- [What is the value of variable x after the following statement is executed in JavaScript var x2= "3" + "4" ?](../mcq-answers/web-technology.md?plain=1#L257)
+- [Which is the correct variable declaration in JavaScript?](../mcq-answers/web-technology.md?plain=1#L275)
+- [Which one does run on client side?](../mcq-answers/web-technology.md?plain=1#L284)
+- [A script is a ________](../mcq-answers/web-technology.md?plain=1#L293)
+- [What is the correct JavaScript syntax to view "Hello World"?](../mcq-answers/web-technology.md?plain=1#L302)
+- [Inside which HTML element do we put the JavaScript?](../mcq-answers/web-technology.md?plain=1#L311)
+
 
 
 ---
@@ -1234,6 +1367,17 @@ Browser → Server:   Cookie: sessionId=abc123        ← sent with EVERY reques
 - [What is the difference between http session and http cookies?](../written-answers/web-technology.md?plain=1#L5490)
 - [It is a small price of data stored on a user's computer by the web browser while browsing a website. What we are talking about?](../written-answers/web-technology.md?plain=1#L5594)
 
+**Previous Year MCQ List from this Topic:**
+
+- [URL stands for–](../mcq-answers/web-technology.md?plain=1#L44)
+- [Suppose you are using an HTML browser at a client machine C to access a static HTML webpage hosted in a HTTP server S. The page contains exactly one static embe…](../mcq-answers/web-technology.md?plain=1#L62)
+- [When a web browser interacts with a web server, the following actions take place?](../mcq-answers/web-technology.md?plain=1#L89)
+- [What does HTTP Status Code 500 indicate?](../mcq-answers/web-technology.md?plain=1#L425)
+- [When we browse internet, browser store some data in the computer. We are talking about-](../mcq-answers/web-technology.md?plain=1#L434)
+- [While browsing, internet browser stores some data in the computer. Which is called by?](../mcq-answers/web-technology.md?plain=1#L443)
+- [Which of the following statements is true regarding Cookies?](../mcq-answers/web-technology.md?plain=1#L461)
+
+
 
 ---
 
@@ -1351,6 +1495,13 @@ DELETE /api/accounts/1234        → delete it
 - [What is the two prime advantages of RESTful API?](../written-answers/web-technology.md?plain=1#L6089)
 - [What is API?](../written-answers/web-technology.md?plain=1#L6178)
 - [What is SOAP?](../written-answers/web-technology.md?plain=1#L6246)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one of the following statements with respect to REST API is false?](../mcq-answers/web-technology.md?plain=1#L331)
+- [Which is the lightweight message format?](../mcq-answers/web-technology.md?plain=1#L340)
+- [Which one is modern light weight message exchange format?](../mcq-answers/web-technology.md?plain=1#L349)
+
 
 
 ---
@@ -1511,6 +1662,261 @@ flowchart LR
 - [Discuss the necessary of using application framework in web application development.](../written-answers/web-technology.md?plain=1#L6954)
 - [(b) Draw three tier architecture of web technology.](../written-answers/web-technology.md?plain=1#L7066)
 
+**Previous Year MCQ List from this Topic:**
+
+- [PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.](../mcq-answers/web-technology.md?plain=1#L219)
+- [Which of the following is not true?](../mcq-answers/web-technology.md?plain=1#L228)
+- [Which one does run on client side?](../mcq-answers/web-technology.md?plain=1#L284)
+- [A script is a ________](../mcq-answers/web-technology.md?plain=1#L293)
+- [What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?](../mcq-answers/web-technology.md?plain=1#L387)
+
+
+---
+
+### PHP — Syntax, Variables, Strings and Server-Side Basics
+
+> ### **PHP ("PHP: Hypertext Preprocessor") is a WIDELY USED, OPEN-SOURCE, GENERAL-PURPOSE SCRIPTING LANGUAGE that is ESPECIALLY SUITED TO WEB DEVELOPMENT AND CAN BE EMBEDDED INTO HTML.**
+>
+> That sentence is almost verbatim the official definition, and it is the answer to the MCQ that quotes it.
+
+#### How PHP code is embedded and executed
+
+```php
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Welcome, <?php echo $name; ?></h1>   <!-- PHP embedded INSIDE html -->
+</body>
+</html>
+```
+
+```mermaid
+flowchart LR
+    A["Browser requests<br/>page.php"] --> B["WEB SERVER<br/>(Apache / Nginx)"]
+    B --> C["PHP INTERPRETER<br/>executes the PHP,<br/>queries the database"]
+    C --> D["Produces PLAIN HTML"]
+    D --> B
+    B --> E["Browser receives ONLY HTML —<br/>⭐ it never sees the PHP source"]
+```
+
+> ### **"PHP cannot be embedded into HTML" — is this true?** → ### ✅ **FALSE. Embedding PHP in HTML is PHP's defining feature.** *(An MCQ asking "which of the following is NOT true?" uses this as the false statement.)*
+>
+> **The security consequence worth knowing: because PHP runs on the SERVER and only its OUTPUT reaches the browser, the source code — including database passwords — is never visible to the user.** This is the fundamental difference from JavaScript.
+
+#### ⭐ PHP variables — the naming rules
+
+> ### **A PHP variable name must begin with a `$`, followed by a LETTER or an UNDERSCORE — NEVER a digit.** After the first character, letters, digits and underscores are allowed.
+
+| Variable | Valid? | Why |
+|---|---|---|
+| `$age` | ✅ | Starts with a letter |
+| `$_age` | ✅ | Starts with an underscore |
+| `$age1` | ✅ | Digit is not the first character |
+| `$my_name` | ✅ | |
+| ⚠️ **`$1age`** | ❌ **INVALID** | ⭐ **Begins with a DIGIT** |
+| `$my-name` | ❌ | Hyphen is not allowed (it reads as minus) |
+| `age` | ❌ | Missing the `$` |
+
+> ### **"Which is NOT a valid variable name in PHP?"** → ### ✅ **`1age`** — a variable name may not start with a number.
+>
+> ⚠️ **PHP variable names are CASE-SENSITIVE** (`$name` and `$Name` are different), but **function and keyword names are NOT**. PHP is also **loosely typed** — you never declare a type, and `$x = 5;` then `$x = "five";` is perfectly legal.
+
+#### ⭐ String concatenation — the dot operator
+
+> ### **PHP joins strings with the DOT `.` operator — NOT with `+`.**
+
+```php
+$first = "Rahim";
+$last  = "Uddin";
+
+echo $first . " " . $last;      // ✅ "Rahim Uddin"   — the DOT concatenates
+echo $first + $last;            // ⚠️ WRONG — '+' is ARITHMETIC in PHP
+
+$msg  = "Hello";
+$msg .= " World";               // ⭐ .=  is the CONCATENATION-ASSIGNMENT operator
+echo $msg;                      // "Hello World"
+```
+
+> ### **"Which is used for adding two or more strings in PHP?"** → ### ✅ **`.` (the DOT).**
+> ### **"Which is correct for concatenation in PHP?"** → ### ✅ **the `.=` form** (concatenation assignment).
+>
+> ⚠️ **This trips up anyone coming from JavaScript or Java, where `+` concatenates.** In PHP, `+` is strictly arithmetic — `"5" + "3"` gives **8**, while `"5" . "3"` gives **"53"**. *(In **JavaScript** the opposite holds: `"3" + "4"` gives the string **"34"**.)*
+
+#### Output — and the classic "prints nothing" trap
+
+```php
+<?php "Hello World" ?>          // ⚠️ outputs NOTHING — the string is merely evaluated
+<?php echo "Hello World"; ?>    // ✅ outputs Hello World
+<?php print "Hello World"; ?>   // ✅ also works (print returns a value; echo does not)
+<?php printf("%s", "Hello"); ?> // ✅ formatted output
+<?= "Hello World" ?>            // ✅ short echo tag
+```
+
+> ### **"What will be the output of `<?php "Hello World" ?>`"** → ### ✅ **NOTHING.**
+>
+> **The reason: a bare string is a valid EXPRESSION but not an OUTPUT STATEMENT.** PHP evaluates it, discards the result, and prints nothing. **`echo` is required to send anything to the browser.**
+
+#### Essential string and array functions
+
+| Function | Returns |
+|---|---|
+| ⭐ **`strlen($var)`** | ⭐ **The NUMBER OF CHARACTERS in a string** |
+| `strtoupper()` / `strtolower()` | Case conversion |
+| `substr($s, $start, $len)` | A portion of the string |
+| `strpos($haystack, $needle)` | Position of a substring, or `false` |
+| `str_replace($find, $replace, $s)` | Replaced string |
+| `trim()` | Removes surrounding whitespace |
+| `explode($delim, $s)` / `implode()` | String ↔ array |
+| `count($array)` | Number of array elements |
+| `number_format($n, 2)` | Formatted number |
+
+> ### **"Which function returns the number of characters in a string variable?"** → ### ✅ **`strlen($variable)`.** *(⚠️ Do not confuse it with **`count()`**, which counts **array elements**, or **`sizeof()`**, which is an alias of `count()`.)*
+
+#### Comparison and control flow
+
+| Operator | Meaning |
+|---|---|
+| `==` | Equal **in value** (with type juggling — `"5" == 5` is **true**) |
+| ⭐ **`===`** | ⭐ **Identical — equal in value AND TYPE** (`"5" === 5` is **false**) |
+| ⭐ **`!=`** or `<>` | ⭐ **NOT equal** |
+| **`!==`** | Not identical |
+| `< > <= >=` | Ordering |
+| `&& \|\| !` | Logical AND, OR, NOT |
+| `??` | Null coalescing |
+
+```php
+if (1 != 5) {                       // ✅ "execute only if 1 is NOT equal to 5"
+    echo "They are different";
+}
+```
+> ### **"How do you write a conditional for executing statements only if 1 is NOT equal to 5?"** → ### ✅ **`if (1 != 5)`.**
+>
+> ⚠️ **The `==` vs `===` distinction is a real source of security bugs in PHP**, because `==` performs **type juggling**: `"0" == false` and `"abc" == 0` have both been true in older versions. **Always use `===` for comparisons that matter.**
+
+#### PHP frameworks and the wider ecosystem
+
+| Framework | Note |
+|---|---|
+| ⭐ **LARAVEL** | ⭐ **The most popular modern PHP web framework** — elegant syntax, MVC, Eloquent ORM, Blade templates, Artisan CLI |
+| **Symfony** | Enterprise-grade, component-based; Laravel is built on its components |
+| **CodeIgniter** | Lightweight, easy to learn |
+| **CakePHP / Yii / Zend (Laminas)** | Other established frameworks |
+
+> ### **"Which is a Web Framework built with PHP?"** → ### ✅ **LARAVEL.**
+>
+> *(For contrast: **Django and Flask** are Python; **Express** is Node.js; **Spring** is Java; **Rails** is Ruby; **ASP.NET** is C#; **React, Angular and Vue** are front-end JavaScript libraries/frameworks, not PHP.)*
+
+**The classic PHP stack:** ⭐ **LAMP — Linux, Apache, MySQL, PHP.** PHP powers **WordPress, Facebook (originally), Wikipedia and a large share of the web**.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which is not a valid variable name in PHP?](../mcq-answers/web-technology.md?plain=1#L159)
+- [Which of the followings is a Web Framework built with PHP?](../mcq-answers/web-technology.md?plain=1#L168)
+- [What will be the output of the following PHP code? <?php "Hello World" ?>](../mcq-answers/web-technology.md?plain=1#L177)
+- [Which is correct for concatenation in PHP?](../mcq-answers/web-technology.md?plain=1#L192)
+- [Which is used for adding two or more string in PHP?](../mcq-answers/web-technology.md?plain=1#L201)
+- [Which of the following function returns the number of characters in a string variable?](../mcq-answers/web-technology.md?plain=1#L210)
+- [PHP is widely used ________ scripting language that is especially suited for web development and can be embedded into html.](../mcq-answers/web-technology.md?plain=1#L219)
+- [Which of the following is not true?](../mcq-answers/web-technology.md?plain=1#L228)
+- [How do you write a conditional statement for executing some statements only if "1" is not equal to 5?](../mcq-answers/web-technology.md?plain=1#L237)
+
+
+---
+
+### Web Servers, Application Servers and Content Management Systems
+
+#### ⭐ What is (and is not) a web server
+
+> ### **A WEB SERVER is SOFTWARE (running on a machine) that LISTENS FOR HTTP REQUESTS and RETURNS WEB CONTENT** — static files directly, or the output of an application for dynamic pages.
+
+| ✅ **These ARE web servers** | ❌ **These are NOT** |
+|---|---|
+| ⭐ **Apache HTTP Server** — the classic open-source server | ⚠️ **PHP** — a **server-side LANGUAGE**, not a server. It is *executed by* a web server |
+| ⭐ **Nginx** — high-performance, event-driven; also a reverse proxy and load balancer | **MySQL** — a database server |
+| ⭐ **Microsoft IIS** — Internet Information Services, on Windows | **HTML / CSS / JavaScript** — languages |
+| **LiteSpeed, Caddy, Tomcat, Node.js (as an HTTP server)** | **Chrome, Firefox** — clients (browsers) |
+
+> ### **"Which of the following is NOT a web server?"** → ### ✅ **PHP.**
+>
+> **The distinction to state: the WEB SERVER receives the request; the LANGUAGE (PHP, Python, Java) generates the response.** Apache does not understand PHP by itself — it hands `.php` files to the **PHP interpreter** (via mod_php or PHP-FPM) and returns whatever HTML comes back.
+
+#### Web server vs Application server
+
+| | **WEB server** | **APPLICATION server** |
+|---|---|---|
+| **Serves** | **Static content** (HTML, CSS, images) and forwards dynamic requests | **Business logic** — the dynamic part |
+| **Protocol** | Mainly **HTTP** | HTTP plus RMI, RPC, messaging |
+| **Examples** | Apache, Nginx, IIS | **Tomcat, JBoss/WildFly, WebLogic, WebSphere, GlassFish** |
+| **Resource use** | Light | Heavier |
+
+> **In practice the line has blurred** — Tomcat serves static files too, and Nginx is usually placed **in front of** an application server as a **reverse proxy**, handling TLS, compression, caching and load balancing.
+
+#### Servlets and server-side components
+
+> ### **A JAVA SERVLET is a Java class that runs ON THE WEB/APPLICATION SERVER and is INVOKED VIA HTTP to generate a response** when the server receives a request from a browser.
+
+> ### **"What is invoked via HTTP on the web server computer when it responds to requests from a user's web browser?"** → ### ✅ **A JAVA SERVLET.**
+
+```
+   Browser ──HTTP request──► Web/App Server ──► SERVLET (Java code)
+                                                   │  processes, queries DB
+   Browser ◄──HTML response── Web/App Server ◄──────┘
+```
+
+| Technology | Platform | Role |
+|---|---|---|
+| ⭐ **Servlet / JSP** | Java | Server-side request handling |
+| **CGI** | Any | The original (now obsolete) mechanism — a new process per request, hence slow |
+| **PHP** | PHP | Embedded server-side scripting |
+| **ASP.NET** | .NET | Microsoft's equivalent |
+| **Node.js / Express** | JavaScript | Server-side JavaScript |
+
+#### Content Management Systems
+
+> ### **A CMS (CONTENT MANAGEMENT SYSTEM) lets non-technical users CREATE, EDIT, ORGANISE AND PUBLISH website content WITHOUT WRITING CODE.**
+
+> ### **"WordPress can be called a ______"** → ### ✅ **a CONTENT-MANAGED WEBSITE / CMS.**
+
+| CMS | Built with | Note |
+|---|---|---|
+| ⭐ **WordPress** | **PHP + MySQL** | ⭐ **By far the most used — powers over 40 % of all websites**; extended by **themes and plugins** |
+| **Joomla / Drupal** | PHP | More complex, more flexible |
+| **Magento / WooCommerce** | PHP | E-commerce |
+| **Ghost / Strapi** | Node.js | Modern, headless |
+
+**Advantages of a CMS:** no coding needed to publish · **separation of content from design** · multi-user roles and workflow · built-in SEO and media management · huge plugin ecosystems · fast to deploy.
+**Disadvantages:** **security risk from outdated plugins** (the commonest cause of WordPress compromise) · performance overhead · limited flexibility for genuinely custom applications · update and maintenance burden.
+
+#### Browser plug-ins and extensions
+
+> ### **A PLUG-IN is a PROGRAM THAT IS AUTOMATICALLY LOADED AND OPERATES AS PART OF THE BROWSER**, adding a capability the browser does not have natively.
+
+> ### **"Programs that are automatically loaded and operate as part of the browser"** → ### ✅ **PLUG-IN.**
+
+| Term | Meaning |
+|---|---|
+| ⭐ **Plug-in** | Runs **inside** the browser, extending its ability to handle content (historically Flash, Java applets, PDF viewers) |
+| **Extension / Add-on** | Modifies or adds **browser features** (ad blockers, password managers) |
+| **Applet** | A small program (classically Java) embedded in a page |
+
+> ⚠️ **Historical note worth having: NPAPI plug-ins such as Flash, Java and Silverlight were REMOVED from all modern browsers** (Flash reached end-of-life on **31 December 2020**) because they were a **major security-vulnerability source**. Their functions are now handled **natively by HTML5** — `<video>`, `<audio>`, `<canvas>` and WebGL. **Today "plug-in" in practice means a browser EXTENSION, or a plug-in within a CMS such as WordPress.**
+
+#### Server operating systems
+
+> A large share of the world's web servers run **Linux** — it is free, stable, secure, scriptable and has a small footprint. Enterprise appliances frequently ship a **hardened, vendor-customised Linux**: **Cisco's Unified Communications / mail platforms, for example, run on Cisco MCS hardware with a Cisco-customised Linux (Cisco Unified OS)**, which is why "Linux" is the answer to questions about the underlying platform of such systems.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is not a web server?](../mcq-answers/web-technology.md?plain=1#L378)
+- [What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?](../mcq-answers/web-technology.md?plain=1#L387)
+- [Word Press can be called as ________](../mcq-answers/web-technology.md?plain=1#L396)
+- [What type of system is Cisco mail platform?](../mcq-answers/web-technology.md?plain=1#L405)
+- [Where the application server is installed for the web server?](../mcq-answers/web-technology.md?plain=1#L414)
+- [Programs that is automatically loaded and operates as a part of browser ----](../mcq-answers/web-technology.md?plain=1#L452)
+
+
+
+
 ## Web Security & Browser Same-Origin Policy (Iframe)
 
 ### The Same-Origin Policy and CORS
@@ -1643,3 +2049,7 @@ sequenceDiagram
 
 - [A & B two frames in a browser loaded from different origins. Why is it a reasonable security policy to allow A to navigate B to another origin base only on whet…](../written-answers/web-technology.md?plain=1#L7613)
 - [What is CORS in web development?](../written-answers/web-technology.md?plain=1#L7733)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such…](../mcq-answers/web-technology.md?plain=1#L322)
