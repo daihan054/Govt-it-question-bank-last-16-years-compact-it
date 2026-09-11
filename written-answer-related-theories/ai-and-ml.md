@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 24 theories
+**Table of Contents** — 4 subtopics · 29 theories
 
 1. **[Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning)**
    - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
@@ -30,6 +30,13 @@
    - [Deep Learning vs Traditional Machine Learning](#deep-learning-vs-traditional-machine-learning)
    - [Convolutional Neural Network (CNN)](#convolutional-neural-network-cnn)
    - [Recurrent Neural Network (RNN) and LSTM](#recurrent-neural-network-rnn-and-lstm)
+
+4. **[Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised)**
+   - [Supervised Learning in Detail](#supervised-learning-in-detail)
+   - [Unsupervised Learning in Detail](#unsupervised-learning-in-detail)
+   - [Supervised vs Unsupervised vs Reinforcement Learning](#supervised-vs-unsupervised-vs-reinforcement-learning)
+   - [Semi-Supervised and Self-Supervised Learning](#semi-supervised-and-self-supervised-learning)
+   - [Data Mining — Definition, KDD Process and Techniques](#data-mining--definition-kdd-process-and-techniques)
 
 <!-- TOC END -->
 
@@ -1206,3 +1213,250 @@ A simpler, faster variant with only **two gates**: the **Reset Gate** and the **
 **Applications of RNN/LSTM:** machine translation, speech recognition, handwriting recognition, stock-price and load forecasting, text generation, sentiment analysis.
 
 *(Note: since 2018, **Transformers** — which use an **attention mechanism** instead of recurrence and can be trained in parallel — have replaced LSTM in most NLP tasks, including GPT and BERT.)*
+
+## Machine Learning Paradigms (Supervised vs Unsupervised)
+
+### Supervised Learning in Detail
+
+**Supervised Learning** is learning **with a teacher**. The training data contains both the **input features (X)** and the **correct output label (Y)**, and the model's job is to learn the mapping **Y = f(X)** so that it can predict Y for new, unseen X.
+
+The name comes from the idea of a supervisor standing beside the student with the answer key.
+
+```mermaid
+flowchart LR
+    A["Labelled Training Data<br/>(X , Y)"] --> B[Learning Algorithm]
+    B --> C[Trained Model]
+    D[New unseen input X'] --> C
+    C --> E[Predicted output Y']
+    F[Actual Y] --> G{Compare & compute error}
+    E -.-> G
+    G -.->|adjust| B
+```
+
+#### The two branches of Supervised Learning
+
+| | **Classification** | **Regression** |
+|---|---|---|
+| **Output type** | Discrete **category / class** | Continuous **number** |
+| **Question it answers** | "Which group?" | "How much / how many?" |
+| **Examples** | Spam or not spam; loan default yes/no; disease positive/negative; digit 0–9 | House price; tomorrow's temperature; sales next month; a customer's credit limit |
+| **Algorithms** | Logistic Regression, Decision Tree, Random Forest, SVM, KNN, Naive Bayes, Neural Network | Linear Regression, Polynomial Regression, Ridge/Lasso, Decision Tree Regressor, SVR |
+| **Evaluation metrics** | Accuracy, Precision, Recall, F1-score, ROC-AUC, Confusion matrix | MAE, MSE, RMSE, R² |
+
+**Classification is further divided into:**
+- **Binary classification** — exactly 2 classes (diabetic / not diabetic).
+- **Multi-class classification** — more than 2 classes, but each sample belongs to exactly one (handwritten digit 0–9).
+- **Multi-label classification** — a sample can belong to several classes at once (a news article tagged both *politics* and *economy*).
+
+#### Common supervised algorithms in one line each
+
+| Algorithm | Idea in one line |
+|---|---|
+| **Linear Regression** | Fit the best straight line through the points |
+| **Logistic Regression** | Fit an S-curve (sigmoid) that outputs a probability, then threshold it |
+| **K-Nearest Neighbours (KNN)** | Look at the K closest training points and take a majority vote |
+| **Naive Bayes** | Apply Bayes' theorem assuming all features are independent |
+| **Decision Tree** | Ask a series of yes/no questions until you reach a leaf |
+| **Random Forest** | Build many decision trees and let them vote (an ensemble) |
+| **Support Vector Machine (SVM)** | Find the hyperplane with the widest possible margin between classes |
+| **Neural Network** | Layers of weighted neurons that learn the mapping by backpropagation |
+
+**Advantages of Supervised Learning**
+- Accuracy is **measurable** because the true answers are known.
+- Usually gives **high accuracy** when enough good labelled data exists.
+- Easy to understand and easy to explain to a business user.
+
+**Disadvantages**
+- Needs **labelled data**, which is expensive and slow to produce (a doctor must label thousands of X-rays).
+- Cannot discover classes it has never been shown.
+- Risk of **overfitting** on small datasets.
+
+---
+
+### Unsupervised Learning in Detail
+
+**Unsupervised Learning** is learning **without a teacher**. The data has only inputs **X** and **no labels**. The algorithm must find the **hidden structure, grouping or pattern** by itself.
+
+```mermaid
+flowchart LR
+    A["Unlabelled Data<br/>(X only)"] --> B[Learning Algorithm]
+    B --> C[Discovered Structure]
+    C --> C1[Groups / Clusters]
+    C --> C2[Association Rules]
+    C --> C3[Fewer, compressed features]
+```
+
+#### The three main tasks
+
+**1. Clustering** — divide the data into groups so that points in the same group are similar and points in different groups are different.
+- *Algorithms:* **K-Means**, Hierarchical clustering, DBSCAN, Gaussian Mixture Models.
+- *Example:* a bank groups its customers into "high-value savers", "young borrowers", "dormant accounts" — without anyone defining those groups in advance.
+
+**2. Association Rule Mining** — find items that occur together.
+- *Algorithms:* **Apriori**, FP-Growth, ECLAT.
+- *Example:* *"customers who buy bread also buy butter"* (Market Basket Analysis).
+
+**3. Dimensionality Reduction** — reduce the number of features while keeping most of the information.
+- *Algorithms:* **PCA (Principal Component Analysis)**, t-SNE, SVD, Autoencoders.
+- *Example:* compressing 200 survey questions into 5 meaningful factors.
+
+**(A fourth task, Anomaly / Outlier Detection**, finds points that do not fit any pattern — used for credit-card fraud and network intrusion detection.)
+
+**Advantages of Unsupervised Learning**
+- **No labelling cost** — works on the raw data a company already has.
+- Can **discover patterns nobody suspected**.
+- Useful as a **first exploration step** before supervised learning.
+
+**Disadvantages**
+- **No ground truth**, so accuracy cannot be measured directly.
+- Results can be **hard to interpret** — you must name the clusters yourself.
+- The output depends heavily on the chosen number of clusters and distance measure.
+
+---
+
+### Supervised vs Unsupervised vs Reinforcement Learning
+
+The single most repeated question in this whole topic. Learn the diagram and the table together.
+
+```mermaid
+flowchart TD
+    subgraph S["Supervised Learning"]
+        S1["Data: X with correct label Y"] --> S2["Learn X → Y"] --> S3["Predict label for new X"]
+    end
+    subgraph U["Unsupervised Learning"]
+        U1["Data: X only, no label"] --> U2["Find hidden structure"] --> U3["Clusters / rules"]
+    end
+    subgraph R["Reinforcement Learning"]
+        R1["Agent in an Environment"] --> R2["Take action"] --> R3["Get reward or penalty"] --> R4["Improve policy"] --> R2
+    end
+```
+
+| Point | **Supervised** | **Unsupervised** | **Reinforcement** |
+|---|---|---|---|
+| **Training data** | Labelled (input + correct output) | Unlabelled (input only) | No fixed dataset — an interactive environment |
+| **Teacher / feedback** | Direct, immediate, correct answer given | No feedback at all | Indirect and **delayed** — only a reward signal |
+| **Goal** | Predict the known output accurately | Discover hidden structure | Maximise the **total long-term reward** |
+| **Learns from** | Examples | Similarity / structure in the data | **Trial and error** |
+| **Main tasks** | Classification, Regression | Clustering, Association, Dimensionality reduction | Control, sequential decision making |
+| **Key algorithms** | Linear/Logistic Regression, Decision Tree, SVM, KNN, Random Forest, Naive Bayes | K-Means, Hierarchical, DBSCAN, Apriori, PCA | Q-Learning, SARSA, DQN, Policy Gradient |
+| **Number of labels needed** | Many | Zero | Zero (but needs a reward function) |
+| **Real example** | Predicting whether a loan applicant will default, from past labelled loan records | Segmenting bank customers into groups for marketing | A robot learning to walk; AlphaGo learning to play Go |
+| **Human analogy** | A student studying with an answer key | A child sorting toys by colour without being told the colours | A child learning to ride a bicycle by falling and adjusting |
+
+**How to recognise which one a question needs:**
+
+```mermaid
+flowchart TD
+    Q{Does the training data have<br/>correct answers / labels?} -->|Yes| A[Supervised Learning]
+    Q -->|No| B{Are we learning by<br/>acting and getting rewards?}
+    B -->|No — just finding patterns| C[Unsupervised Learning]
+    B -->|Yes| D[Reinforcement Learning]
+    A --> A1{Is the output a category<br/>or a number?}
+    A1 -->|Category| A2[Classification]
+    A1 -->|Number| A3[Regression]
+```
+
+> **Worked exam question:** *"You are given a diabetic-patient dataset with features and **some labelled data**, and you must predict whether a patient is diabetic or not. Is this supervised or unsupervised?"*
+>
+> **Answer: Supervised Learning — specifically binary classification.**
+> **Reason:** the dataset already contains the **correct answer (diabetic = Yes/No)** for the training samples. The model learns the mapping from features (glucose level, BMI, age, blood pressure) to that known label, and the output is one of **two discrete classes**, which makes it *binary classification*, not regression and not clustering.
+> *(If only a small part of the data were labelled and a large part unlabelled, you could additionally mention **Semi-Supervised Learning**.)*
+
+---
+
+### Semi-Supervised and Self-Supervised Learning
+
+**Semi-Supervised Learning** sits between supervised and unsupervised. It uses a **small amount of labelled data** together with a **large amount of unlabelled data**.
+
+**Why it exists:** labelling is the expensive part. A hospital may have 100,000 chest X-rays but only 500 labelled by a radiologist. Semi-supervised learning uses the 500 to get started, then uses the structure of the remaining 99,500 to improve.
+
+**How it typically works (self-training / pseudo-labelling):**
+
+```mermaid
+flowchart LR
+    A[Train a model on the small labelled set] --> B[Predict labels for the unlabelled data]
+    B --> C[Keep only the high-confidence predictions<br/>as 'pseudo-labels']
+    C --> D[Add them to the training set]
+    D --> A
+```
+
+*Examples:* web page classification, speech recognition, medical imaging, fraud detection.
+
+**Self-Supervised Learning** is a newer idea where the **labels are created automatically from the data itself**. For example, hide a word in a sentence and make the model predict it, or hide part of an image and make the model reconstruct it. This is how **BERT and GPT are pre-trained** — no human labelling at all, yet the model learns language deeply.
+
+| Type | Labelled data used | Typical use |
+|---|---|---|
+| Supervised | 100 % | Standard prediction tasks |
+| Semi-supervised | A small % + lots of unlabelled | When labelling is costly |
+| Self-supervised | 0 % (labels generated from the data) | Pre-training large language and vision models |
+| Unsupervised | 0 % | Discovering structure |
+
+---
+
+### Data Mining — Definition, KDD Process and Techniques
+
+**Data Mining** is the process of **discovering useful, previously unknown patterns, relationships and knowledge from large amounts of data** using statistics, machine learning and database techniques.
+
+> Popular one-line definition: *Data Mining is the extraction of **knowledge** from a large volume of **data**.*
+> It is also called **KDD — Knowledge Discovery in Databases** (strictly, data mining is *one step* of the KDD process).
+
+**Why "mining"?** Just as gold mining digs through tonnes of earth to find a little gold, data mining digs through terabytes of data to find a few valuable patterns.
+
+#### The KDD Process (7 steps)
+
+```mermaid
+flowchart LR
+    A[(Databases)] --> B[1. Data Cleaning<br/>remove noise & inconsistency]
+    B --> C[2. Data Integration<br/>combine multiple sources]
+    C --> D[(Data Warehouse)]
+    D --> E[3. Data Selection<br/>pick relevant data]
+    E --> F[4. Data Transformation<br/>normalise & aggregate]
+    F --> G[5. Data Mining<br/>apply intelligent algorithms]
+    G --> H[6. Pattern Evaluation<br/>keep the truly interesting patterns]
+    H --> I[7. Knowledge Presentation<br/>visualise & report]
+    I --> K((Knowledge))
+```
+
+*(Steps 1–4 are **data preparation**, which takes about **60–70 %** of the total effort.)*
+
+#### Main Data Mining tasks
+
+| Task | Learning type | Meaning | Example |
+|---|---|---|---|
+| **Classification** | **Supervised** | Assign a record to one of several **predefined classes** | Mark a transaction as *fraud* / *genuine*; classify a loan as *safe* / *risky* |
+| **Regression / Prediction** | **Supervised** | Predict a continuous value | Forecast next quarter's deposits |
+| **Clustering** | **Unsupervised** | Group similar records where the groups are **not predefined** | Segment customers into natural groups |
+| **Association rule mining** | **Unsupervised** | Find items that occur together | Bread → Butter |
+| **Outlier / Anomaly detection** | Unsupervised | Find records that do not fit | Credit-card fraud, network intrusion |
+| **Sequential pattern mining** | Unsupervised | Find patterns over time | Customers buy a phone, then a cover within 2 weeks |
+
+#### Supervised vs Unsupervised **classification** — the exact exam wording
+
+Exams sometimes say *"explain supervised and unsupervised classification with suitable examples"*. The trick is that **"unsupervised classification" is the textbook name for clustering**, especially in remote sensing and image analysis.
+
+| Point | **Supervised classification** | **Unsupervised classification (clustering)** |
+|---|---|---|
+| Classes | **Known beforehand** and defined by the analyst | **Not known** — discovered by the algorithm |
+| Training samples | Required (the analyst marks example areas) | Not required |
+| Human role | Heavy at the start (defining classes and training areas) | Heavy at the end (naming and interpreting the clusters) |
+| Algorithms | Maximum Likelihood, Decision Tree, SVM, Random Forest | K-Means, ISODATA, Hierarchical clustering |
+| **Satellite-image example** | The analyst marks sample pixels of *water*, *forest*, *urban*, *crop land*; the model then labels the whole image with those 4 known classes | The algorithm groups all pixels into 6 statistically similar clusters; only afterwards does the analyst look at them and decide *"cluster 3 is water"* |
+| **Banking example** | Label past customers as *defaulter*/*non-defaulter* and train a model to classify new applicants | Group all customers into segments and only then discover that one segment happens to be high-risk |
+
+#### Applications of Data Mining
+
+- **Banking:** credit scoring, fraud detection, anti-money-laundering, customer churn.
+- **Retail:** market-basket analysis, shelf arrangement, targeted offers.
+- **Telecom:** churn prediction, network fault prediction.
+- **Healthcare:** disease prediction, effective treatment discovery.
+- **Government:** tax-evasion detection, crime pattern analysis.
+- **Education:** predicting which students are likely to drop out.
+
+#### Data Mining vs Machine Learning vs Statistics
+
+| Point | Data Mining | Machine Learning |
+|---|---|---|
+| Main aim | **Discover** unknown patterns in existing data | **Predict** the outcome for new data |
+| Direction | Looks **backwards** at historical data | Looks **forwards** at future cases |
+| Human involvement | High — a human interprets the patterns | Low — the model runs automatically |
+| Relationship | Uses ML algorithms as tools | Is one of the tools data mining uses |
