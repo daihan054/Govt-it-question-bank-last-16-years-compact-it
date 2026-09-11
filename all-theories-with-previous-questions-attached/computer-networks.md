@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 24 theories
+**Table of Contents** — 13 subtopics · 27 theories
 
 1. **[Subnetting & IP Addressing](#subnetting--ip-addressing)**
    - [IPv4 Addressing — Structure and Classes](#ipv4-addressing--structure-and-classes)
@@ -44,6 +44,15 @@
 
 10. **[Network Address Translation (NAT)](#network-address-translation-nat)**
    - [NAT and PAT](#nat-and-pat)
+
+11. **[Data Transmission & Modes](#data-transmission--modes)**
+   - [Data Communication Fundamentals — Modes, Signals, Modulation and Sampling](#data-communication-fundamentals--modes-signals-modulation-and-sampling)
+
+12. **[Switching Techniques](#switching-techniques)**
+   - [Switching Techniques — Circuit, Packet and Message Switching](#switching-techniques--circuit-packet-and-message-switching)
+
+13. **[Wireless & Mobile Communication](#wireless--mobile-communication)**
+   - [Wireless Networks, Wi-Fi Standards and Cellular Generations](#wireless-networks-wi-fi-standards-and-cellular-generations)
 
 <!-- TOC END -->
 
@@ -185,6 +194,18 @@ In **every** network or subnet, two addresses are reserved:
 - [Write down the Private IP address ranges of Class A, Class B, and Class C.](../written-answers/computer-networks.md?plain=1#L2331)
 - [Mention the public and private address ranges of IPv4 for class A, class B and class C.](../written-answers/computer-networks.md?plain=1#L2367)
 
+**Previous Year MCQ List from this Topic:**
+
+- [An IP address is given 192.168.3.0, need to 254 useable host. What is the CIDR value and subnet mask?](../mcq-answers/computer-networks.md?plain=1#L1618)
+- [What is IP class and number of sub-networks if the subnet mask is 255.224.0.0?](../mcq-answers/computer-networks.md?plain=1#L1627)
+- [What is the maximum number of IP addresses that can be assigned to be the host on a local subnet that uses the 255.255.255.224 subnet mask?](../mcq-answers/computer-networks.md?plain=1#L1636)
+- [How many address is there 200.10.10.10/20](../mcq-answers/computer-networks.md?plain=1#L1645)
+- [Which is suitable subnet mask for 200 host?](../mcq-answers/computer-networks.md?plain=1#L1654)
+- [When a host on network A sends a message to a host on network B, which address does the router look at?](../mcq-answers/computer-networks.md?plain=1#L43)
+- [Which of the following TCP/IP address constitute the loopback address?](../mcq-answers/computer-networks.md?plain=1#L1085)
+- [Which of the following TCP/IP address constitute the loopback address?](../mcq-answers/computer-networks.md?plain=1#L1148)
+
+
 
 ---
 
@@ -316,6 +337,17 @@ The **"interesting octet"** is the last octet of the mask that is **not 255**.
 - [Given a Sub net mask 255.255.255.240 and IP address 192.168.1.50. Then find the network address, usable host range and broadcast address.](../written-answers/computer-networks.md?plain=1#L2354)
 - [Given the IP address 192.2.1.0/24](../written-answers/computer-networks.md?plain=1#L2377)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following cannot be used as a public IP address?](../mcq-answers/computer-networks.md?plain=1#L1663)
+- [Which one is Private IP address?](../mcq-answers/computer-networks.md?plain=1#L1672)
+- [An organization is granted a block; one address is 2.2.2.64/20. The organization needs 10 subnets. What is the subnet prefix length?](../mcq-answers/computer-networks.md?plain=1#L1681)
+- [Which of the following is a private IP address?](../mcq-answers/computer-networks.md?plain=1#L1690)
+- [What is the network address for the IP address 178.112.13.10/8?](../mcq-answers/computer-networks.md?plain=1#L1699)
+- [You are given the IP address 192.168.10.100/26. Answer the following question.](../mcq-answers/computer-networks.md?plain=1#L624)
+- [Given, IP address: 102.168.1.50 and Subnet Mask: 255.255.255.240](../mcq-answers/computer-networks.md?plain=1#L639)
+
+
 
 ---
 
@@ -405,6 +437,18 @@ flowchart TD
 - [(a) A network has been assigned to the IP address 200.1.2.0/24 It has 3 subnets. Determine the following for each subnet:](../written-answers/computer-networks.md?plain=1#L2252)
 - [Given IP address 10.10.0.0/16, you have divided the network into eight equal subnets. Find the subnet mask in dotted decimal and CIDR notation. Also find the fi…](../written-answers/computer-networks.md?plain=1#L2281)
 - [Given an IP address: 212.15.180.0/24 and wants to divide into 16 subnet.](../written-answers/computer-networks.md?plain=1#L2399)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is the loopback address?](../mcq-answers/computer-networks.md?plain=1#L1708)
+- [On a class B network, how many hosts are available at each site with subnet mask of 248?](../mcq-answers/computer-networks.md?plain=1#L1717)
+- [Which of the following is not a valid IP address?](../mcq-answers/computer-networks.md?plain=1#L1726)
+- [Suppose you need to assign IPv4 address to two computers of your company so that the both computers belong to the subnet. 255.255.255.240. Which of the followin…](../mcq-answers/computer-networks.md?plain=1#L1735)
+- [Network 10.20.30.0 was assigned to the ITGod company to connect its ISP. The administrator of ITGod would like to configure one router with commands to access t…](../mcq-answers/computer-networks.md?plain=1#L1744)
+- [Classless Inter Domain Routing (CIDR) receives a packet with address 131.23.151.76. The routers routing table has the following entries](../mcq-answers/computer-networks.md?plain=1#L1757)
+- [You are given the IP address 192.168.10.100/26. Answer the following question.](../mcq-answers/computer-networks.md?plain=1#L624)
+- [Given, IP address: 102.168.1.50 and Subnet Mask: 255.255.255.240](../mcq-answers/computer-networks.md?plain=1#L639)
+
 
 
 ---
@@ -571,6 +615,14 @@ IPv4's 4.3 billion addresses were exhausted at the regional registries between 2
 - [Write down the basic differences of the following:](../written-answers/computer-networks.md?plain=1#L980)
 - [(ii) CIDR কী? 192.168.100.9/26 IP address থেকে (a) Total subnets (b) Block size (c) Valid Hosts (d) Total hosts বের করুন।](../written-answers/computer-networks.md?plain=1#L1493)
 
+**Previous Year MCQ List from this Topic:**
+
+- [How many IP addresses can be assigned using IPv4 techniques?](../mcq-answers/computer-networks.md?plain=1#L1773)
+- [Class C IP address is for ________ bit network.](../mcq-answers/computer-networks.md?plain=1#L1782)
+- [Suppose, a Class C network address is 192.168.10.0 and subnet mask is 255.255.255.192. How many valid hosts per subnet can be obtainable?](../mcq-answers/computer-networks.md?plain=1#L1791)
+- [উল্লেখিত কোনটি Private IP address?](../mcq-answers/computer-networks.md?plain=1#L1800)
+
+
 ## OSI & TCP/IP Reference Model
 
 ### The OSI Reference Model — The Seven Layers
@@ -734,6 +786,19 @@ flowchart TD
 - [Name OSI layer that transmitted bit stream to frames.](../written-answers/computer-networks.md?plain=1#L3617)
 - [Explain: ISO, OSI and TCP/IP model with figure.](../written-answers/computer-networks.md?plain=1#L3635)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following pairs is an example of transport layer protocols of the OSI model?](../mcq-answers/computer-networks.md?plain=1#L2278)
+- [TCP দিয়ে কোনটি বোঝানো হয়?](../mcq-answers/computer-networks.md?plain=1#L2287)
+- [Major function of a transport layer in the OSI model is to perform](../mcq-answers/computer-networks.md?plain=1#L2296)
+- [In the diagram shown below. L1 is an Ethernet LAN and L2 is a Token-Ring LAN. An IP packet originates from sender S and traverses to R, as shown. The link withi…](../mcq-answers/computer-networks.md?plain=1#L2305)
+- [Assume that Source S and Destination D are connected through an intermediate router R. How many times a packet has to visit the network layer and data link laye…](../mcq-answers/computer-networks.md?plain=1#L2314)
+- [Open System Interconnection (OSI) model has ________ layer.](../mcq-answers/computer-networks.md?plain=1#L2323)
+- [________ Provides a connection oriented reliable service for sending message.](../mcq-answers/computer-networks.md?plain=1#L2332)
+- [Which layer of OSI determines the interface of the system with the user?](../mcq-answers/computer-networks.md?plain=1#L2341)
+- [How many layers are there in the software part of networking framework?](../mcq-answers/computer-networks.md?plain=1#L379)
+
+
 
 ---
 
@@ -824,6 +889,16 @@ flowchart TD
 - [(খ) TCP/IP প্রোটোকল কী কাজ করে তা বর্ণনা করুন।](../written-answers/computer-networks.md?plain=1#L3456)
 - [How many layers are used in OSI and TCP/IP model? Draw the layer.](../written-answers/computer-networks.md?plain=1#L3535)
 - [Give answer of the following question:](../written-answers/computer-networks.md?plain=1#L3567)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Congestion Control কোন layer-এ করা হয়?](../mcq-answers/computer-networks.md?plain=1#L2350)
+- [Which is not work of Data link layer?](../mcq-answers/computer-networks.md?plain=1#L2359)
+- [In TCP/IP model, which one is not a valid layer?](../mcq-answers/computer-networks.md?plain=1#L2368)
+- [How many layer internet protocol suites?](../mcq-answers/computer-networks.md?plain=1#L1130)
+- [How many layers Internet protocol suite?](../mcq-answers/computer-networks.md?plain=1#L1175)
+- [Which of the following defines the addressing capabilities of the networking?](../mcq-answers/computer-networks.md?plain=1#L370)
+
 
 
 ---
@@ -950,6 +1025,19 @@ This single table answers the many "which protocol/device works at which layer" 
 - [What is PDU?](../written-answers/computer-networks.md?plain=1#L3152)
 - [Which layer data packet receive port from sender to destination? (a) Data link layer (b) Network layer (c) Transport layer (d) None](../written-answers/computer-networks.md?plain=1#L3227)
 - [Name OSI layer that transmitted bit stream to frames.](../written-answers/computer-networks.md?plain=1#L3617)
+
+**Previous Year MCQ List from this Topic:**
+
+- [The end-to-end delivery of the entire message is the responsibility of the ________ layer.](../mcq-answers/computer-networks.md?plain=1#L2377)
+- [Which of the following BEST explains the functions of OSI layer 4?](../mcq-answers/computer-networks.md?plain=1#L2386)
+- [Which of the following transport protocols should be used to avoid retransmitting lost packets?](../mcq-answers/computer-networks.md?plain=1#L2395)
+- [In Which layer basic packet filtering firewall works of OSI model?](../mcq-answers/computer-networks.md?plain=1#L2404)
+- [Which of the following OSI layers handles the routing of data across segments?](../mcq-answers/computer-networks.md?plain=1#L2413)
+- [Which of the followings is the Protocol Data Unit (PDU) for the application layer in the Internet stack?](../mcq-answers/computer-networks.md?plain=1#L959)
+- [Email is a protocol of following layer-](../mcq-answers/computer-networks.md?plain=1#L1112)
+- [Email is a protocol of the following layer?](../mcq-answers/computer-networks.md?plain=1#L1157)
+- [An Access point operates in which layer of OSI model?](../mcq-answers/computer-networks.md?plain=1#L1980)
+
 
 ## Networking Fundamentals & Terminology
 
@@ -1085,6 +1173,24 @@ flowchart LR
 - [What is an access network? Briefly describe the available access network.](../written-answers/computer-networks.md?plain=1#L4303)
 - [Differentiate between Intranet and Extranet.](../written-answers/computer-networks.md?plain=1#L4354)
 - [a) Briefly discuss what a computer network means.](../written-answers/computer-networks.md?plain=1#L4373)
+
+**Previous Year MCQ List from this Topic:**
+
+- [In a network, the response and transit time is used to assess-](../mcq-answers/computer-networks.md?plain=1#L34)
+- [কম্পিউটারকে নিম্নলিখিতভাবে Internet এর সাথে সংযুক্ত করা যায়?](../mcq-answers/computer-networks.md?plain=1#L154)
+- [What type of network provides access to the regional service providers and typically span distances greater than 100 miles?](../mcq-answers/computer-networks.md?plain=1#L208)
+- [Which one is an example of hybrid network?](../mcq-answers/computer-networks.md?plain=1#L253)
+- [Which one acts as the backbone of global village?](../mcq-answers/computer-networks.md?plain=1#L343)
+- [Which one of the following is a private network based on public network?](../mcq-answers/computer-networks.md?plain=1#L352)
+- [Extranet allows-](../mcq-answers/computer-networks.md?plain=1#L361)
+- [Distributed Queue Dual Bus is a standard for------](../mcq-answers/computer-networks.md?plain=1#L397)
+- [Distributed Queue Dual Bus is a standard for-](../mcq-answers/computer-networks.md?plain=1#L433)
+- [A communication network which is used by large organizations over regional, national or global area is called-](../mcq-answers/computer-networks.md?plain=1#L469)
+- [Typical data transfer rates in LAN are of the order of-](../mcq-answers/computer-networks.md?plain=1#L496)
+- [In a network, the response and transit time is used to assess—( নেটওয়ার্কে রেসপন্স এবং ট্রানজিট টাইম কী মূল্যায়নের জন্য ব্যবহৃত হয়? )](../mcq-answers/computer-networks.md?plain=1#L686)
+- [কোনটি প্রথম Network?](../mcq-answers/computer-networks.md?plain=1#L163)
+- [ARPANET stands for-](../mcq-answers/computer-networks.md?plain=1#L145)
+
 
 
 ---
@@ -1278,6 +1384,32 @@ flowchart LR
 - [(b) Suppose, your office needs to setup a network which can uses for internet purpose only? What will be your steps to setup that network in terms of:](../written-answers/computer-networks.md?plain=1#L4288)
 - [Explain the terms Domains, Bandwidth, Broadcast and Multicast.](../written-answers/computer-networks.md?plain=1#L4326)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Set of rules is called _____](../mcq-answers/computer-networks.md?plain=1#L25)
+- [The combination of an IP address and a port number is known as ____.](../mcq-answers/computer-networks.md?plain=1#L102)
+- [The combination of an IP address and a port number is known as ____.](../mcq-answers/computer-networks.md?plain=1#L120)
+- [A path for carrying signals between a source and a destination is known as-](../mcq-answers/computer-networks.md?plain=1#L199)
+- [The abbreviation of bps stands for-](../mcq-answers/computer-networks.md?plain=1#L262)
+- [FTP site are often called ________](../mcq-answers/computer-networks.md?plain=1#L271)
+- [An email address has a user name, the @ symbol and the ________ computer's Name](../mcq-answers/computer-networks.md?plain=1#L280)
+- [Wi-Fi stands for the Wireless ________](../mcq-answers/computer-networks.md?plain=1#L289)
+- [Sockets and Winsock কোন ধরনের সফটওয়্যারের উদাহরণ?](../mcq-answers/computer-networks.md?plain=1#L298)
+- [The ration of number of successful calls to the number of all call attempts is known as:](../mcq-answers/computer-networks.md?plain=1#L307)
+- [What is the acceptance value of dividing point between the wonder and jitter?](../mcq-answers/computer-networks.md?plain=1#L316)
+- [If the voice channel is free in PSTN then what would be the maximum data rate supported by 3.1 KHz bandwidth of voice channel?](../mcq-answers/computer-networks.md?plain=1#L325)
+- [The full form of “Wi-Fi” is-](../mcq-answers/computer-networks.md?plain=1#L388)
+- [RPC provides a(an) ________ on the client side, a separate one for each remote procedure.](../mcq-answers/computer-networks.md?plain=1#L406)
+- [A network that requires human intervention of route signals is called a-](../mcq-answers/computer-networks.md?plain=1#L451)
+- [Which of the following is an example of a client server model?](../mcq-answers/computer-networks.md?plain=1#L460)
+- [In client server system what does the client program?](../mcq-answers/computer-networks.md?plain=1#L478)
+- [What type of architecture does Skype use while conversation?](../mcq-answers/computer-networks.md?plain=1#L505)
+- [Which approach is used in the client server model of the cluster?](../mcq-answers/computer-networks.md?plain=1#L514)
+- [Rules used to establish & maintain communication is called ________](../mcq-answers/computer-networks.md?plain=1#L532)
+- [Which of the following does not require a computer for transmission?](../mcq-answers/computer-networks.md?plain=1#L541)
+- [Whole network will break if node is defect in which network topology?](../mcq-answers/computer-networks.md?plain=1#L487)
+
+
 
 ---
 
@@ -1443,6 +1575,16 @@ A **gateway** is a device (or software) that **connects two networks that use DI
 - [(a) What are the difference among Hub, Switch and Routers?](../written-answers/computer-networks.md?plain=1#L4802)
 - [Difference between Router and Switch.](../written-answers/computer-networks.md?plain=1#L4831)
 - [Describe about Hub, Switch and Router.](../written-answers/computer-networks.md?plain=1#L4855)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the primary function of a Repeater in a computer network?](../mcq-answers/computer-networks.md?plain=1#L556)
+- [Which command loads a new version of the Cisco IOS into a router](../mcq-answers/computer-networks.md?plain=1#L1249)
+- [Which device converts digital to analog signal?](../mcq-answers/computer-networks.md?plain=1#L1258)
+- [নিচের কোনটি নেটওয়ার্ক ডিভাইস নয়? Ans: Wi-Fi](../mcq-answers/computer-networks.md?plain=1#L1267)
+- [NIC Stands for–](../mcq-answers/computer-networks.md?plain=1#L1272)
+- [Which of the following is a device that is used to connect a number of LANs?](../mcq-answers/computer-networks.md?plain=1#L1281)
+
 
 
 ---
@@ -1728,6 +1870,22 @@ sequenceDiagram
 - [What is the difference between DNS server and caches? What is the importance of DNS cache in World Wide Web?](../written-answers/computer-networks.md?plain=1#L5541)
 - [a. What is SQL, b. What is API c. What is recursion d. DNS port number?](../written-answers/computer-networks.md?plain=1#L5595)
 
+**Previous Year MCQ List from this Topic:**
+
+- [DNS port number is:](../mcq-answers/computer-networks.md?plain=1#L784)
+- [Who is controlling "Domain" in the world?](../mcq-answers/computer-networks.md?plain=1#L793)
+- [In an email address "abc@xxx.bd", the portion 'xxx' indicate](../mcq-answers/computer-networks.md?plain=1#L802)
+- [A DNS client is called a ____________](../mcq-answers/computer-networks.md?plain=1#L829)
+- [A DNS response is classified as ____ if the information comes from a cache memory.](../mcq-answers/computer-networks.md?plain=1#L838)
+- [Which of the following services uses both TCP and UDP ports?](../mcq-answers/computer-networks.md?plain=1#L865)
+- [Domain Name থেকে IP-mapping করতে কোনটি কাজ করে?](../mcq-answers/computer-networks.md?plain=1#L1031)
+- [কোনটি UDP protocol use করে?](../mcq-answers/computer-networks.md?plain=1#L1058)
+- [Which of the following protocol used TCP and UDP ports?](../mcq-answers/computer-networks.md?plain=1#L1076)
+- [Which of the following protocols uses both TCP and UDP ports?](../mcq-answers/computer-networks.md?plain=1#L1103)
+- [Domain name to IP address mapping is done by-](../mcq-answers/computer-networks.md?plain=1#L1139)
+- [What does DNS database contain?](../mcq-answers/computer-networks.md?plain=1#L1193)
+
+
 
 ---
 
@@ -1797,6 +1955,19 @@ Because DHCP DISCOVER is a **broadcast**, and **routers do not forward broadcast
 - [Write short notes on DHCP and SMTP.](../written-answers/computer-networks.md?plain=1#L5568)
 - [What is static IP Address and dynamic IP Address?](../written-answers/computer-networks.md?plain=1#L1819)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which protocol assigns IP address to the client connected in the internet?](../mcq-answers/computer-networks.md?plain=1#L811)
+- [DHCP is–](../mcq-answers/computer-networks.md?plain=1#L820)
+- [_______ is a client-server program that provides and IP address, subnet mask, IP address of a router, and IP address of a name server to a computer.](../mcq-answers/computer-networks.md?plain=1#L856)
+- [Which protocol dynamically assigns IP addresses in a TCP/IP network?](../mcq-answers/computer-networks.md?plain=1#L910)
+- [DHCP means?](../mcq-answers/computer-networks.md?plain=1#L950)
+- [Which server can you use to dynamically assign IP addresses to the PCs in a LAN?](../mcq-answers/computer-networks.md?plain=1#L1004)
+- [What can greatly reduce TCP/IP configuration problem?](../mcq-answers/computer-networks.md?plain=1#L1022)
+- [DHCP discover message টি কোন ধরনের?](../mcq-answers/computer-networks.md?plain=1#L1040)
+- [a) Write full form: DHCP and ARP](../mcq-answers/computer-networks.md?plain=1#L647)
+
+
 
 ---
 
@@ -1865,6 +2036,40 @@ Because DHCP DISCOVER is a **broadcast**, and **routers do not forward broadcast
 - [দূরবর্তী কম্পিউটার সংযোগ এর জন্য কোন প্রোটোকল ব্যবহার করা হয়?](../written-answers/computer-networks.md?plain=1#L5504)
 - [Write short notes on DHCP and SMTP.](../written-answers/computer-networks.md?plain=1#L5568)
 - [a. What is SQL, b. What is API c. What is recursion d. DNS port number?](../written-answers/computer-networks.md?plain=1#L5595)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Expansion of FTP is _____](../mcq-answers/computer-networks.md?plain=1#L721)
+- [What does stands for HTTPs?](../mcq-answers/computer-networks.md?plain=1#L730)
+- [Which of the following is commonly used to remotely access a computer system?](../mcq-answers/computer-networks.md?plain=1#L739)
+- [Which of the following protocols is used for receiving e-mails?](../mcq-answers/computer-networks.md?plain=1#L748)
+- [Which of these is the default port number for many web servers when suing HTTPS?](../mcq-answers/computer-networks.md?plain=1#L757)
+- [What is the port address of Oracle Database?](../mcq-answers/computer-networks.md?plain=1#L766)
+- [What is the port address of FTP protocol?](../mcq-answers/computer-networks.md?plain=1#L775)
+- [An email contains a textual birthday greeting, a picture of a cake, and a song. The order is not important. What is the Content-type?](../mcq-answers/computer-networks.md?plain=1#L847)
+- [Which protocol is used to send a destination network unknown message back to the originating host?](../mcq-answers/computer-networks.md?plain=1#L874)
+- [A receiving host has failed to receive all of the segments that is should acknowledge what can the host do the improve the reliability of this communication ses…](../mcq-answers/computer-networks.md?plain=1#L883)
+- [Which symbol must remain in e-mail address?](../mcq-answers/computer-networks.md?plain=1#L892)
+- [What is the full form of SMTP?](../mcq-answers/computer-networks.md?plain=1#L901)
+- [Consider the activities A1, A2 and A3 related to email:](../mcq-answers/computer-networks.md?plain=1#L919)
+- [URL stands for-](../mcq-answers/computer-networks.md?plain=1#L932)
+- [Which one of the following is the default port of HTTP?](../mcq-answers/computer-networks.md?plain=1#L941)
+- [নিচের কোনটি E-mail protocol?](../mcq-answers/computer-networks.md?plain=1#L968)
+- [FTP protocol নিচের কোনটি ব্যবহার করে?](../mcq-answers/computer-networks.md?plain=1#L977)
+- [E-mail service এর সাথে সম্পর্কযুক্ত কোনটি?](../mcq-answers/computer-networks.md?plain=1#L986)
+- [POP3 is a protocol for-](../mcq-answers/computer-networks.md?plain=1#L995)
+- [To cheek to see of the Web server you are trying to reach is available or is down, which command line utility should you use?](../mcq-answers/computer-networks.md?plain=1#L1013)
+- [Email service এর সাথে কোনটি সম্পৃক্ত?](../mcq-answers/computer-networks.md?plain=1#L1049)
+- [Which protocol can cause overload on a CPU of a managed device?](../mcq-answers/computer-networks.md?plain=1#L1067)
+- [A host machine is unable to communicate with google server. Which command is the most appropriate to run at host machine to determine which intermediary device…](../mcq-answers/computer-networks.md?plain=1#L1094)
+- [Which protocol is used for secure web browsing?](../mcq-answers/computer-networks.md?plain=1#L1121)
+- [Which protocol is used for secured web browsing?](../mcq-answers/computer-networks.md?plain=1#L1166)
+- [POP3(Post Office Protocol V3) is a protocol for-](../mcq-answers/computer-networks.md?plain=1#L1184)
+- [Which protocol is used to send emails? ( ইমেইল পাঠানোর জন্য কোন প্রোটোকল ব্যবহৃত হয়? )](../mcq-answers/computer-networks.md?plain=1#L615)
+- [Which of these is the default port number when using HTTPS?( HTTPS ব্যবহারের সময় ডিফল্ট পোর্ট নম্বর কোনটি? )](../mcq-answers/computer-networks.md?plain=1#L677)
+- [A workstation has just been installed on an Ethernet LAN, but cannot communicate with the network. What should you check first?](../mcq-answers/computer-networks.md?plain=1#L66)
+- [An administrator would like to monitor the network to evaluate which employees are using an excessive amount of bandwidth on peer to peer sharing services. Whic…](../mcq-answers/computer-networks.md?plain=1#L523)
+
 
 
 ---
@@ -1982,6 +2187,14 @@ The actual sending rate is **min(receiver window, congestion window)**.
 - [(c) What is TCP protocol? How does it work?](../written-answers/computer-networks.md?plain=1#L6143)
 - [a) Explain Three-Way Handshaking in TCP Protocol.](../written-answers/computer-networks.md?plain=1#L6300)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Handshaking procedure takes place in ________.](../mcq-answers/computer-networks.md?plain=1#L136)
+- [Which of the following defines the addressing capabilities of the networking?](../mcq-answers/computer-networks.md?plain=1#L370)
+- [FTP protocol নিচের কোনটি ব্যবহার করে?](../mcq-answers/computer-networks.md?plain=1#L977)
+- [A receiving host has failed to receive all of the segments that is should acknowledge what can the host do the improve the reliability of this communication ses…](../mcq-answers/computer-networks.md?plain=1#L883)
+
+
 
 ---
 
@@ -2078,6 +2291,13 @@ The receiver acknowledges with **ack = 14,001**, meaning *"I have received every
 - [a) A live video stream will be transmitted. Which Transport layer protocol will you use and why?](../written-answers/computer-networks.md?plain=1#L6119)
 - [Write down difference between TCP and UDP with write down some TCP and UDP protocols.](../written-answers/computer-networks.md?plain=1#L6194)
 - [Write the difference between TCP and UDP.](../written-answers/computer-networks.md?plain=1#L6286)
+
+**Previous Year MCQ List from this Topic:**
+
+- [কোনটি UDP protocol use করে?](../mcq-answers/computer-networks.md?plain=1#L1058)
+- [Which of the following protocol used TCP and UDP ports?](../mcq-answers/computer-networks.md?plain=1#L1076)
+- [Which of the following protocols uses both TCP and UDP ports?](../mcq-answers/computer-networks.md?plain=1#L1103)
+
 
 
 ---
@@ -2306,6 +2526,30 @@ Both are RJ45 UTP cables; the difference is **how the 8 wires are ordered at eac
 - [(a) What are the problems that transmission lines suffer from? Briefly describe any one of them.](../written-answers/computer-networks.md?plain=1#L6805)
 - [Explain 10Base2, 10Base5, 10BaseT and Ethernet.](../written-answers/computer-networks.md?plain=1#L6838)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following medium is used for broadband local networks?](../mcq-answers/computer-networks.md?plain=1#L217)
+- [“The time to communicate between Bangladesh and USA is the same as that to communicate between two adjacent houses is Bangladesh”- In which case is the above tr…](../mcq-answers/computer-networks.md?plain=1#L226)
+- [Which one transfers data at the highest speed?](../mcq-answers/computer-networks.md?plain=1#L334)
+- [“The time to communicate between Bangladesh and USA is the same as that to communicate between two adjacent houses in Bangladesh,”- In which case is the above t…](../mcq-answers/computer-networks.md?plain=1#L415)
+- [Which of the following medium is used for broadband local networks?](../mcq-answers/computer-networks.md?plain=1#L442)
+- [(b) Which transmission medium is usually used in a LAN? What is its maximum length and bit rate? Write the name of data at different layers of the TCP/IP model.](../mcq-answers/computer-networks.md?plain=1#L565)
+- [অপটিক্যাল ফাইবারে আলোর কোন ঘটনাটি ঘটে?](../mcq-answers/computer-networks.md?plain=1#L2561)
+- [An optical fiber has a signal solid dielectric cylinder knowns as the core which is surrounded by a solid dielectric ______ is called?](../mcq-answers/computer-networks.md?plain=1#L2570)
+- [অপটিক্যাল ফাইবার আলোর কোন নীতিতে কাজ করে?](../mcq-answers/computer-networks.md?plain=1#L2576)
+- [Which of the following communication medium requires ‘line-of-sight’?](../mcq-answers/computer-networks.md?plain=1#L2586)
+- [Submarine ক্যাবল কয়টি?](../mcq-answers/computer-networks.md?plain=1#L2595)
+- [Which is the disadvantage of Optical Fiber?](../mcq-answers/computer-networks.md?plain=1#L2605)
+- [Which one of the following have higher bandwidth?](../mcq-answers/computer-networks.md?plain=1#L2614)
+- [Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?](../mcq-answers/computer-networks.md?plain=1#L2623)
+- [Which type of cable is used to connect the COM port of a host to the COM port of a router or switch?](../mcq-answers/computer-networks.md?plain=1#L2632)
+- [Fiber optical cable is used for-](../mcq-answers/computer-networks.md?plain=1#L2641)
+- [Which of the following wiring standards would most likely be used to connect a single network node to a switch?](../mcq-answers/computer-networks.md?plain=1#L2650)
+- [Which of the following WAN technologies requires fiber optics?](../mcq-answers/computer-networks.md?plain=1#L2659)
+- [Which of the following WAN technology types does not use an Ethernet cable as a medium for communication and is used for long distances?](../mcq-answers/computer-networks.md?plain=1#L2668)
+- [Which of the following is strictly used to convert analog to digital signals?](../mcq-answers/computer-networks.md?plain=1#L2677)
+
+
 
 ---
 
@@ -2425,6 +2669,18 @@ A single fibre with DWDM can carry **many terabits per second** — which is how
 - [What is Multiplexing? Write about Time division Multiplexing.](../written-answers/computer-networks.md?plain=1#L7388)
 - [(a) Distinguish between Frequency Division Multiplexing (FDM) and Time Division Multiplexing (TDM).](../written-answers/computer-networks.md?plain=1#L7419)
 - [Figure shows synchronous TOM with a data stream for each input and one data stream for the output. The unit of data is 1bit. Find (a) the input bit duration (b)…](../written-answers/computer-networks.md?plain=1#L7554)
+
+**Previous Year MCQ List from this Topic:**
+
+- [If link transmits 4000 frames per second and each slot has 8 bits, the transmission rate of circuit of this TDM is _____](../mcq-answers/computer-networks.md?plain=1#L2424)
+- [Assume we need to download text documents at the rate of 100 pages per second. A page is an average of 24 lines with 80 characters in each line and one characte…](../mcq-answers/computer-networks.md?plain=1#L2433)
+- [What is the propagation time for a 2.5-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the r…](../mcq-answers/computer-networks.md?plain=1#L2442)
+- [What is the maximum data rate of a channel with a bandwidth of 200 KHz if we use four levels of digital signaling?](../mcq-answers/computer-networks.md?plain=1#L2451)
+- [Suppose we want to download text documents at the rate of 100 pages per second. Assume that a page consists of an average of 24 lines with 80 characters in each…](../mcq-answers/computer-networks.md?plain=1#L2460)
+- [Consider a 50 Mbps satellite channel with a 500 milliseconds round top propagation delay. If the sender wants to transmit 1000 bit frames, how much time will it…](../mcq-answers/computer-networks.md?plain=1#L2469)
+- [A complex bandpass signal has a bandwidth of 300kHz. What is the minimum sampling rate for this signal?](../mcq-answers/computer-networks.md?plain=1#L2478)
+- [The human voice normally contains frequencies from 0 to 4000Hz. If bits per sample?](../mcq-answers/computer-networks.md?plain=1#L2487)
+
 
 
 ---
@@ -2562,6 +2818,20 @@ The method is always the same:
 - [We have four sources, each creating 250 characters per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame. Now find-…](../written-answers/computer-networks.md?plain=1#L7518)
 - [What are the propagation time and the transmission time for a 2.5-Kbyte message and if the bandwidth of the network is 1Gbps? Assume that the distance between t…](../written-answers/computer-networks.md?plain=1#L7602)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Five channels, each with a 100-kHz bandwidth, are to be multiplexed together. What is the minimum bandwidth of the link if there is a need for a guard band of 5…](../mcq-answers/computer-networks.md?plain=1#L2496)
+- [Assume we need to download text documents at the rate of 100 pages per sec. Each page contains an average of 24 lines with 80 characters in each line. If we ass…](../mcq-answers/computer-networks.md?plain=1#L2505)
+- [Consider an extremely noisy channel in which the value of the signal-to-noise ratio is almost zero. For this channel, is the bandwidth is B then what is the cha…](../mcq-answers/computer-networks.md?plain=1#L2514)
+- [A number of signal can be carried simultaneously if each signal is modulated that a different carried frequency called:](../mcq-answers/computer-networks.md?plain=1#L2523)
+- [Which multiplexing technique transmits digital signals?](../mcq-answers/computer-networks.md?plain=1#L2532)
+- [The bandwidth of a channel is 1MHz. The SNR for this channel is 63. What is the bit rate?](../mcq-answers/computer-networks.md?plain=1#L2541)
+- [Maximum speed of voice band is ---](../mcq-answers/computer-networks.md?plain=1#L2550)
+- [Typical data transfer rates in LAN are of the order of-](../mcq-answers/computer-networks.md?plain=1#L496)
+- [Which one is the bandwidth for a signal transmitting at 12 Mbps for QPSK (d=0)?](../mcq-answers/computer-networks.md?plain=1#L2180)
+- [If the frequency spectrum of a signal has a bandwidth of 500Hz with the highest frequency is 600Hz. What should be the sampling rate according to the Nyquist th…](../mcq-answers/computer-networks.md?plain=1#L2240)
+
+
 
 ---
 
@@ -2693,6 +2963,16 @@ flowchart LR
 - [What are static and dynamic routing? Given their relative advantages.](../written-answers/computer-networks.md?plain=1#L8066)
 - [What is Routing? Write down the difference between static routing and dynamic routing.](../written-answers/computer-networks.md?plain=1#L8105)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following pairs is an example of intra-domain routing protocols?](../mcq-answers/computer-networks.md?plain=1#L2804)
+- [Count-to-infinity problem occurs in ______.](../mcq-answers/computer-networks.md?plain=1#L2813)
+- [Which of the following pairs is an example of routing protocols?](../mcq-answers/computer-networks.md?plain=1#L2822)
+- [Which of the following pairs is an example of intra-domain routing protocols?](../mcq-answers/computer-networks.md?plain=1#L2831)
+- [Which of following statements is connected with managed switch?](../mcq-answers/computer-networks.md?plain=1#L2840)
+- [In a comparatively small organization if you want data forwarding among departments based on IP address which one of the following will be a better bet for netw…](../mcq-answers/computer-networks.md?plain=1#L2849)
+
+
 
 ---
 
@@ -2811,6 +3091,17 @@ An **ad-hoc network** is a **decentralised wireless network with no fixed infras
 - [Cost calculation of EIGRP formula.](../written-answers/computer-networks.md?plain=1#L8180)
 - [Given a totology of distance vector routing. Find the table of each node for the 1^{\text{st}} route.](../written-answers/computer-networks.md?plain=1#L8223)
 - [What is difference between link state routing and distance vector routing?](../written-answers/computer-networks.md?plain=1#L8289)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Distance vector routing algorithm is a dynamic routing algorithm. The routing tables in distance vector routing algorithm are updated ____.](../mcq-answers/computer-networks.md?plain=1#L2858)
+- [কোন Routing Protocol এ Dijkstra Algorithm ব্যবহার করা হয়?](../mcq-answers/computer-networks.md?plain=1#L2867)
+- [Routing is clearly the major issue for:](../mcq-answers/computer-networks.md?plain=1#L2876)
+- [Which of the following is the metric used for OSPF?](../mcq-answers/computer-networks.md?plain=1#L2885)
+- [Which of the following describes a routing table that needs to be maintained manually?](../mcq-answers/computer-networks.md?plain=1#L2894)
+- [How the router makes decisions for SQL server database logs?](../mcq-answers/computer-networks.md?plain=1#L2903)
+- [Which of the following routing protocols uses As-path as one of the methods to build the routing table?](../mcq-answers/computer-networks.md?plain=1#L2912)
+
 
 
 ---
@@ -2968,3 +3259,408 @@ flowchart LR
 - [What is PAT? How does a network PAT work?](../written-answers/computer-networks.md?plain=1#L8761)
 - [What is NAT?](../written-answers/computer-networks.md?plain=1#L8809)
 - [Show the translation process of a NAT Box.](../written-answers/computer-networks.md?plain=1#L8836)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following TCP/IP addresses constitute the loopback address?](../mcq-answers/computer-networks.md?plain=1#L1809)
+- [To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask used should be:](../mcq-answers/computer-networks.md?plain=1#L1818)
+
+
+---
+
+## Data Transmission & Modes
+
+### Data Communication Fundamentals — Modes, Signals, Modulation and Sampling
+
+#### ⭐ The five components of a data communications system
+
+> ### **MESSAGE · SENDER · RECEIVER · TRANSMISSION MEDIUM · ⭐ PROTOCOL**
+
+| Component | Role |
+|---|---|
+| **Message** | The information to be communicated |
+| **Sender** | The device that transmits it |
+| **Receiver** | The device that receives it |
+| **Transmission medium** | The physical path — cable, fibre, air |
+| ⭐ **PROTOCOL** | ⭐ **The SET OF RULES governing the communication** — without it the other four are useless, because neither party would understand the other |
+
+> ### **"Five components that make up a data communications system are message, sender, receiver, transmission medium and ______"** → ### ✅ **PROTOCOL.**
+> ### **"The three MAJOR components of a communication system are ______"** → ### ✅ **TRANSMITTER, LINK and RECEIVER.**
+> ### **"A set of rules is called ______" / "Rules used to establish and maintain communication"** → ### ✅ **PROTOCOL.**
+> ### **"Which of the following is the SOURCE of data communication?"** → ### ✅ **COMPUTER.**
+
+#### ⭐ Transmission modes
+
+```mermaid
+flowchart LR
+    subgraph S["SIMPLEX — one direction ONLY"]
+        A["Sender"] --> B["Receiver"]
+    end
+    subgraph H["HALF DUPLEX — both ways, ONE AT A TIME"]
+        C["A"] <-->|"take turns"| D["B"]
+    end
+    subgraph F["FULL DUPLEX — both ways SIMULTANEOUSLY"]
+        E["A"] <--> G["B"]
+    end
+```
+
+| Mode | Direction | Examples |
+|---|---|---|
+| ⭐ **SIMPLEX** | ⭐ **ONE direction only** | ⭐ **KEYBOARD → computer**, monitor, mouse, radio and TV broadcast, printer |
+| ⭐ **HALF DUPLEX** | Both directions, but **only one at a time** | **Walkie-talkie**, CB radio, old Ethernet hubs |
+| ⭐ **FULL DUPLEX** | **Both directions simultaneously** | **Telephone**, mobile phone, modern switched Ethernet |
+
+> ### **"Communication between a computer and a KEYBOARD involves ______ transmission"** → ### ✅ **SIMPLEX** — data flows **only from the keyboard to the computer**, never back.
+
+#### Signal characteristics
+
+| Property | Meaning |
+|---|---|
+| **Amplitude** | The height of the wave — its strength |
+| **Frequency (f)** | Cycles per second (Hz); **f = 1/T** |
+| ⭐ **Phase** | ⭐ **The position of the waveform relative to time zero**, in degrees or radians |
+| **Wavelength (λ)** | Distance covered in one cycle; **λ = v/f** |
+| **Bandwidth** | The **range of frequencies** a signal occupies or a channel can carry |
+
+**Worked example — phase shift**
+> *A sine wave is offset by 1/6 of a cycle with respect to time 0. What is its phase?*
+```
+   One full cycle = 360° = 2π radians
+
+        Phase = (1/6) × 360° = 60°
+              = (1/6) × 2π   = π/3 = 1.047 radians
+```
+> ### ✅ **60° and 1.047 radians.**
+
+#### ⭐ Modulation and demodulation
+
+> ### **MODULATION is the process of impressing an information signal onto a high-frequency CARRIER.** **DEMODULATION** recovers the information at the receiver.
+
+| Purpose of modulation | Why |
+|---|---|
+| ⭐ **To make transmission by ANTENNA practical** | Antenna length must be a fraction of the wavelength; a 3 kHz audio signal would need a 25 km antenna |
+| ⭐ **To allow MULTIPLEXING** | Many signals can share one medium on different carrier frequencies |
+| ⭐ **To reduce NOISE and interference** | Especially with FM and digital schemes |
+| **To increase range** | Higher frequencies propagate usefully |
+| ⚠️ **NOT a purpose** | ⭐ **"To make the system simpler and cheaper"** — modulation makes a system **MORE complex and MORE costly**, and is adopted despite that |
+
+> ### **"Which one is NOT a purpose of modulation in a communication system?"** → ### ✅ **"To make the system simpler and cost effective."**
+
+| Analogue modulation | Digital modulation |
+|---|---|
+| **AM** — Amplitude Modulation | ⭐ **ASK** — Amplitude Shift Keying |
+| **FM** — Frequency Modulation | ⭐ **FSK** — Frequency Shift Keying |
+| **PM** — Phase Modulation | ⭐ **PSK** — Phase Shift Keying · **QPSK**, **QAM** |
+
+> ### **"Which of the following is a DIGITAL modulation technique?"** → ### ✅ **PSK (Phase Shift Keying).**
+
+#### Bit rate, baud rate and bandwidth
+
+```
+        Bit rate (bps)  =  Baud rate (symbols/s) × bits per symbol
+
+        Bits per symbol :  ASK/FSK/BPSK = 1    ⭐ QPSK = 2
+                           8-PSK = 3           16-QAM = 4
+
+        Minimum bandwidth (Nyquist):  BW = (1 + d) × Baud rate
+```
+
+**Worked example — QPSK bandwidth**
+> *What is the bandwidth for a signal transmitting at 12 Mbps using QPSK, with d = 0?*
+```
+   Step 1 — QPSK carries 2 BITS PER SYMBOL:
+        Baud rate = Bit rate / 2 = 12 Mbps / 2 = 6 Mbaud
+
+   Step 2 — minimum bandwidth with d = 0:
+        BW = (1 + 0) × 6 Mbaud = 6 MHz
+```
+> ### ✅ **6 MHz.**
+>
+> ⭐ **The point of higher-order modulation: QPSK sends the SAME 12 Mbps in HALF the bandwidth that BPSK would need**, because each symbol carries two bits instead of one. **16-QAM would need only 3 MHz** — at the cost of greater susceptibility to noise, which is the fundamental trade-off in all digital communication.
+
+#### ⭐ Sampling — the Nyquist theorem
+
+> ### **NYQUIST'S SAMPLING THEOREM: to reconstruct an analogue signal faithfully, it must be sampled at AT LEAST TWICE ITS HIGHEST FREQUENCY.**
+>
+> ### **f_sampling ≥ 2 × f_max**
+
+**Worked example**
+> *A signal has a bandwidth of 500 Hz with the highest frequency 600 Hz. What is the required sampling rate?*
+```
+   ⚠️ Use the HIGHEST FREQUENCY, not the bandwidth.
+
+        f_s = 2 × f_max = 2 × 600 = 1200 samples per second
+```
+> ### ✅ **1200 samples/s.**
+>
+> ⚠️ **The trap is deliberate: the bandwidth (500 Hz) is given to mislead.** Nyquist depends on the **highest frequency component**, which here is 600 Hz. *(If sampled below 2 f_max, **ALIASING** occurs and the original cannot be recovered.)*
+
+> ### **PCM — Pulse Code Modulation** is the technique used by a ⭐ **CODEC to DIGITISE an analogue signal**: **SAMPLE → QUANTISE → ENCODE**. Telephone speech is limited to 4 kHz, sampled at **8000 samples/s**, quantised to **8 bits**, giving the standard **64 kbps** voice channel.
+
+#### Media access control
+
+> ### **"ইন্টারনেটে নেটওয়ার্কে Media Access করে কোনটি?"** → ### ✅ **CSMA/CD.**
+
+| Method | Full form | Used by |
+|---|---|---|
+| ⭐ **CSMA/CD** | **Carrier Sense Multiple Access with Collision DETECTION** | ⭐ **Wired ETHERNET** — listen before transmitting; if a collision occurs, stop, wait a random time and retry |
+| ⭐ **CSMA/CA** | Collision **AVOIDANCE** | ⭐ **Wi-Fi (802.11)** — a station cannot detect collisions while transmitting on radio, so it avoids them instead |
+| **Token passing** | — | Token Ring, FDDI |
+| **ALOHA / Slotted ALOHA** | — | The historical ancestor |
+
+#### Telephony and cable terms
+
+| Term | Meaning |
+|---|---|
+| ⭐ **DTMF** | **Dual-Tone Multi-Frequency** — each telephone key sends **TWO simultaneous tones**, one row frequency and one column frequency. ⭐ **697 Hz (row 1) + 1477 Hz (column 3) = the digit 3** |
+| ⭐ **H.323** | ⭐ **The standard allowing telephones on the PUBLIC TELEPHONE NETWORK to talk to computers** — the classic VoIP signalling suite (now largely replaced by **SIP**) |
+| ⭐ **CMTS** | ⭐ **Cable Modem Termination System** — the **HFC (Hybrid Fibre-Coaxial)** network device installed in the distribution hub that receives and routes the signals from subscribers' cable modems |
+| **PSTN** | Public Switched Telephone Network; a voice channel gives about **3.1 kHz** usable bandwidth |
+| **Codec** | Coder-decoder — converts analogue ↔ digital |
+| **Jitter vs Wander** | Both are timing variation; ⭐ **10 Hz is the conventional dividing point** — variation **above** 10 Hz is **jitter**, **below** it is **wander** |
+| **CCR** | ⭐ **Call Completion Rate** — the ratio of successful calls to all call attempts |
+
+**Previous Year MCQ List from this Topic:**
+
+- [Communication between a computer and a keyboard involves ______ transmission.](../mcq-answers/computer-networks.md?plain=1#L2135)
+- [The _______ is an HFC network device installed inside the distribution hub that receives data from the internet and passes them to the combiner.](../mcq-answers/computer-networks.md?plain=1#L2144)
+- [If the end office receives two bursts of analog signals with frequencies of 697 and 1477 Hz, then the number ____ has been punched.](../mcq-answers/computer-networks.md?plain=1#L2153)
+- [_______ is a standard to allow telephones on the public telephone network to talk to computers connected to the Internet.](../mcq-answers/computer-networks.md?plain=1#L2162)
+- [A sine wave is offset \frac{1}{6} cycle with respect to time 0. What is its phase in degrees and radians?](../mcq-answers/computer-networks.md?plain=1#L2171)
+- [Which one is the bandwidth for a signal transmitting at 12 Mbps for QPSK (d=0)?](../mcq-answers/computer-networks.md?plain=1#L2180)
+- [Which one is not the purpose of modulation in a communication system?](../mcq-answers/computer-networks.md?plain=1#L2189)
+- [A line coding scheme of digital to digital conversion in given below. What is the name of this line coding technique?](../mcq-answers/computer-networks.md?plain=1#L2198)
+- [ইন্টারনেটে নেটওয়ার্কে Media Access করার জন্য কোন পদ্ধতি ব্যবহৃত হয়?](../mcq-answers/computer-networks.md?plain=1#L2204)
+- [Five components that make up a data communications system are message, sender, receiver, medium and-](../mcq-answers/computer-networks.md?plain=1#L2213)
+- [The technique that is used to digitize analog signal by a codec is called-](../mcq-answers/computer-networks.md?plain=1#L2222)
+- [Which one of the following is the source of data communication?](../mcq-answers/computer-networks.md?plain=1#L2231)
+- [If the frequency spectrum of a signal has a bandwidth of 500Hz with the highest frequency is 600Hz. What should be the sampling rate according to the Nyquist th…](../mcq-answers/computer-networks.md?plain=1#L2240)
+- [The action of decoding a modulated signal is known as -](../mcq-answers/computer-networks.md?plain=1#L2249)
+- [Which of the following is a digital modulation technique?](../mcq-answers/computer-networks.md?plain=1#L2258)
+- [A The three major components of a communication system are ________.](../mcq-answers/computer-networks.md?plain=1#L2267)
+- [Set of rules is called _____](../mcq-answers/computer-networks.md?plain=1#L25)
+- [Rules used to establish & maintain communication is called ________](../mcq-answers/computer-networks.md?plain=1#L532)
+- [Which of the following modulation is used in data communication?](../mcq-answers/computer-networks.md?plain=1#L2052)
+
+
+---
+
+## Switching Techniques
+
+### Switching Techniques — Circuit, Packet and Message Switching
+
+> **SWITCHING is how a network establishes a path between a sender and a receiver** when they are not directly connected. There are **three fundamental techniques**, and the difference between them is the single most important idea in network design.
+
+```mermaid
+flowchart TD
+    A["SWITCHING"] --> B["① CIRCUIT SWITCHING<br/>a DEDICATED physical path is<br/>reserved for the whole call"]
+    A --> C["② PACKET SWITCHING<br/>data is split into PACKETS,<br/>each routed independently"]
+    A --> D["③ MESSAGE SWITCHING<br/>the WHOLE message is stored<br/>and forwarded, hop by hop"]
+    C --> E["Datagram<br/>(connectionless)"]
+    C --> F["Virtual circuit<br/>(connection-oriented)"]
+```
+
+#### ⭐ The comparison
+
+| Point | ⭐ **CIRCUIT SWITCHING** | ⭐ **PACKET SWITCHING** | **MESSAGE SWITCHING** |
+|---|---|---|---|
+| **Path** | ⭐ **A DEDICATED, DIRECT CONNECTION is made between sender and receiver before any data flows** | **No dedicated path** — each packet is routed independently | No dedicated path |
+| **Set-up phase** | ✅ **Required** (call set-up) | ❌ None (datagram) | None |
+| **Unit sent** | A continuous **bit stream** | Small **PACKETS** | The **entire message** |
+| **Bandwidth** | ⚠️ **RESERVED for the whole call, even when idle** | ✅ **Shared dynamically — used only when there is data** | Shared |
+| **Efficiency** | ⚠️ **Low** for bursty data | ✅ **High** | Medium |
+| **Delay** | ✅ **Constant and low once connected** | Variable (queuing at each hop) | ⚠️ **Very high** — each node stores the whole message |
+| **Store-and-forward?** | ❌ No | Yes, per packet | ⭐ **Yes, the WHOLE message** |
+| **Reliability on link failure** | ⚠️ **The call drops** | ✅ **Packets reroute around the failure** | Reroutes |
+| **Order of arrival** | Always in order | ⚠️ May arrive **out of order** (datagram) | In order |
+| **Examples** | ⭐ **The traditional TELEPHONE network (PSTN)** | ⭐ **The INTERNET, X.25, Frame Relay, ATM** | Telegram, early email, SMS store-and-forward |
+
+> ### **"The direct connection is made between sender and receiver so that data can be transmitted — this is…"** → ### ✅ **CIRCUIT SWITCHING.**
+>
+> ### **"The ______ was the first WIDE-AREA PACKET-SWITCHING network with DISTRIBUTED CONTROL"** → ### ✅ **ARPANET** (1969) — the direct ancestor of the Internet. **"Distributed control" was the crucial innovation**: there was no central switchboard to destroy, so the network could survive the loss of any node.
+
+#### The three kinds of circuit switching
+
+| Type | How the circuit is formed |
+|---|---|
+| **Space-division** | A **physically separate path** through a matrix of crosspoints (the old mechanical exchange) |
+| ⭐ **TIME-DIVISION (TDM)** | ⭐ **Each connection is given a repeating TIME SLOT on a shared path.** ⭐ **Delivery is DELAYED because the data must be STORED until that connection's slot comes round** |
+| **Combined (TST)** | Time-Space-Time switching, used in modern digital exchanges |
+
+> ### **"In which type of circuit switching is delivery of data DELAYED because data must be stored and retrieved from memory?"** → ### ✅ **TIME-DIVISION switching.**
+>
+> **The reason: a TDM switch must BUFFER incoming samples and re-emit them in a different time slot** on the outgoing side. That buffering is exactly what introduces the delay — a space-division switch, being a direct physical path, introduces none.
+
+#### Packet switching — datagram vs virtual circuit
+
+| | ⭐ **DATAGRAM** (connectionless) | ⭐ **VIRTUAL CIRCUIT** (connection-oriented) |
+|---|---|---|
+| **Route** | **Each packet routed INDEPENDENTLY** — different packets may take different paths | **All packets follow the SAME pre-established path** |
+| **Set-up** | None | Required |
+| **Ordering** | ⚠️ May arrive **out of order** | ✅ **In order** |
+| **Addressing** | **Full destination address in every packet** | Short **virtual-circuit identifier** |
+| **On node failure** | ✅ Reroutes automatically | ⚠️ The circuit fails |
+| **Used by** | ⭐ **IP — the Internet** | **ATM, Frame Relay, MPLS** |
+
+> ⭐ **Why the Internet chose packet switching:** the network was designed to **survive the loss of arbitrary nodes**, and to carry **bursty computer traffic** efficiently. A circuit-switched network reserves capacity for the whole session — fine for a continuous voice call, disastrously wasteful for a user reading a web page for two minutes and then clicking a link. **Packet switching multiplexes many bursty sources onto the same links, achieving far higher utilisation.**
+>
+> **The modern convergence:** voice itself has now moved onto packet-switched networks (**VoIP**), because the efficiency gain outweighs the loss of guaranteed delay — and **QoS** mechanisms restore enough predictability to make it work.
+
+**Previous Year MCQ List from this Topic:**
+
+- [In which type of circuit switching, delivery of data is delayed because data must be stored and retrieved from RAM.](../mcq-answers/computer-networks.md?plain=1#L2952)
+- [The ________ was the first wide-area packet-switching network with distributed control and one of the first networks to implement the TCP/IP protocol suite.](../mcq-answers/computer-networks.md?plain=1#L2961)
+- [The direct connection is made between sender & Receiver so data can be transmitted ________](../mcq-answers/computer-networks.md?plain=1#L2970)
+- [ARPANET stands for-](../mcq-answers/computer-networks.md?plain=1#L145)
+- [কোনটি প্রথম Network?](../mcq-answers/computer-networks.md?plain=1#L163)
+- [A network that requires human intervention of route signals is called a-](../mcq-answers/computer-networks.md?plain=1#L451)
+
+
+---
+
+## Wireless & Mobile Communication
+
+### Wireless Networks, Wi-Fi Standards and Cellular Generations
+
+> **WIRELESS communication carries data as ELECTROMAGNETIC (RADIO) WAVES through free space**, removing the need for a physical cable.
+
+> ### **"What medium is used to communicate by mobile phones?"** → ### ✅ **RADIO WAVES.**
+
+#### ⭐ Wireless networks by range
+
+| Network | Range | Technology | Example |
+|---|---|---|---|
+| ⭐ **PAN — Personal Area Network** | ⭐ **~10 m (about 30 FEET)** | ⭐ **BLUETOOTH**, Zigbee, NFC, IrDA | Headset, mouse, file transfer between phones |
+| ⭐ **WLAN — Wireless LAN** | **30–100 m** | ⭐ **Wi-Fi (IEEE 802.11)** | Home and office network |
+| **WMAN** | A few km | WiMAX (802.16) | City-wide access |
+| **WWAN** | Nationwide | **Cellular — GSM, LTE, 5G** | Mobile phone network |
+| **Satellite** | Global | ⭐ **VSAT**, GEO/LEO | Remote sites, maritime, Starlink |
+
+> ### **"Bluetooth is a radio-wave transmission system good for about ______"** → ### ✅ **30 FEET** (≈10 m, the common Class 2 range).
+> ### **"Bluetooth কোন ধরনের device/network?"** → ### ✅ **PAN (Personal Area Network).**
+> ### **"Which of these networking technologies has the SHORTEST range?"** → ### ✅ **BLUETOOTH.**
+> ### **"Wi-Fi কোন ধরনের নেটওয়ার্ক?" / "Wi-Fi for?"** → ### ✅ **WIRELESS LAN.**
+> ### **"Wi-Fi stands for"** → ### ✅ **WIRELESS FIDELITY.**
+> ### **"VSAT বলতে বুঝায়"** → ### ✅ **VERY SMALL APERTURE TERMINAL** — a compact satellite earth station (dish typically under 3 m) used for remote-site data, rural banking and ATM connectivity.
+
+#### ⭐ The IEEE 802.11 (Wi-Fi) standards
+
+| Standard | Max data rate | Band | Note |
+|---|---|---|---|
+| **802.11** (1997) | 2 Mbps | 2.4 GHz | The original |
+| ⭐ **802.11b** | ⭐ **11 Mbps** | 2.4 GHz | Long range, slow |
+| **802.11a** | 54 Mbps | 5 GHz | Shorter range, less interference |
+| **802.11g** | 54 Mbps | 2.4 GHz | Backward compatible with b |
+| ⭐ **802.11n** (Wi-Fi 4) | ⭐ **600 Mbps** | 2.4 / 5 GHz | Introduced **MIMO** (multiple antennas) |
+| **802.11ac** (Wi-Fi 5) | ~1.3–3.5 Gbps | 5 GHz | Wider channels, MU-MIMO |
+| **802.11ax** (Wi-Fi 6) | ~9.6 Gbps | 2.4 / 5 / 6 GHz | OFDMA, better in crowds |
+
+> ### **"What is the maximum data rate in IEEE 802.11n?"** → ### ✅ **600 Mbps.**
+>
+> ⭐ **Worked troubleshooting: "A SOHO user reports their new 802.11n laptop connects but is slow. Why?"** → ### ✅ **THE WIRELESS ROUTER IS 802.11b ONLY.**
+> **The principle: a wireless link always runs at the speed of the SLOWEST device in the path.** An 802.11n client is backward-compatible with an 802.11b router, so it **connects successfully** — but is capped at **11 Mbps**. *(Worse, a single legacy b client on a mixed network forces protection mechanisms that slow down **everyone**.)*
+
+#### Infrastructure vs Ad-hoc mode
+
+| | ⭐ **INFRASTRUCTURE mode** | ⭐ **AD-HOC mode** |
+|---|---|---|
+| **Access point** | ✅ **Required** — all traffic passes through it | ⭐ **NONE — devices connect DIRECTLY, peer to peer** |
+| **Topology** | Star, centred on the AP | Mesh / peer-to-peer |
+| **Scalability** | Good | Poor |
+| **Used for** | Normal home and office Wi-Fi | Quick file transfer, disaster relief, sensor networks, Wi-Fi Direct |
+
+> ### **"Which wireless network is configured WITHOUT an access point?"** → ### ✅ **AD-HOC.**
+
+| Term | Meaning |
+|---|---|
+| ⭐ **Access Point (AP)** | The device that bridges wireless clients to the wired LAN. ⭐ **It operates at the DATA LINK LAYER (Layer 2)** — it is essentially a **wireless switch/bridge**, forwarding frames by MAC address |
+| ⭐ **HOTSPOT** | ⭐ **A WIRELESS INTERNET ACCESS POINT** — a public location offering Wi-Fi internet, or a phone sharing its mobile data |
+| **SSID** | The network's name |
+| ⭐ **Wi-Fi MESH system** | ⭐ **The current popular technology for maintaining smooth Wi-Fi performance across a large area** — several nodes form one seamless network with a single SSID, so a device roams between them without dropping |
+| **Range extender / Repeater** | Rebroadcasts the signal; halves throughput |
+
+> ### **"An Access Point operates in which layer of the OSI model?"** → ### ✅ **THE DATA LINK LAYER.**
+> ### **"What is the current popular technology for maintaining smooth Wi-Fi performance across a large area?"** → ### ✅ **Wi-Fi MESH NETWORK SYSTEMS.**
+
+#### ⭐ The cellular generations
+
+| Generation | Technology | Capability |
+|---|---|---|
+| **1G** | Analogue (AMPS) | **Voice only**, insecure |
+| ⭐ **2G** | ⭐ **GSM, CDMA — DIGITAL** | Voice + **SMS**; encryption |
+| **2.5G** | ⭐ **GPRS — General Packet Radio Service** | ⭐ **Always-on PACKET data** on the GSM network (~56–114 kbps) |
+| **2.75G** | EDGE | Faster data (~384 kbps) |
+| **3G** | UMTS / HSPA | Mobile internet, video calling (Mbps) |
+| ⭐ **4G** | ⭐ **LTE — LONG TERM EVOLUTION** | All-IP, broadband (tens to hundreds of Mbps) |
+| **5G** | NR — New Radio | Gbps speeds, **very low latency (~1 ms)**, massive IoT density |
+
+> ### **"LTE এর পূর্ণ নাম কি?" / "LTE means"** → ### ✅ **LONG TERM EVOLUTION.**
+> ### **"GPRS এর পূর্ণরূপ কি?"** → ### ✅ **GENERAL PACKET RADIO SERVICE.**
+>
+> ### ⚠️ **"Which is FALSE with respect to 4G and 5G?"** → ### ✅ **"Data session handoff is a feature of 5G that is not available in 4G."**
+> **That statement is false — data session handoff exists in 4G LTE as well** (and in 3G). **The genuine 5G advances are far lower latency, much higher peak data rates, massive device density (mMTC), network slicing and mmWave spectrum** — not the mere existence of handoff.
+
+#### ⭐ Handoff (handover)
+
+> **HANDOFF is the transfer of an ongoing call or data session from one base station (cell) to another as the user moves.**
+
+| Type | Description |
+|---|---|
+| ⭐ **SOFT handoff** | ⭐ **The device communicates with TWO (or more) BASE STATIONS AT THE SAME TIME** during the transition — "make before break". Used in **CDMA**; the call is never dropped |
+| **Hard handoff** | The old link is **broken before** the new one is made — "break before make". Used in **GSM**; a brief interruption is possible |
+| **Softer handoff** | Between two sectors of the **same** base station |
+
+> ### **"When an ongoing call or data session can communicate with two base stations at the same time, it is called…"** → ### ✅ **SOFT HANDOFF.**
+
+#### The radio spectrum bands
+
+| Band | Frequency range | Typical use |
+|---|---|---|
+| **VLF / LF / MF** | 3 kHz – 3 MHz | AM radio, maritime |
+| **HF** | 3 – 30 MHz | Shortwave |
+| **VHF** | 30 – 300 MHz | FM radio, TV |
+| **UHF** | 300 MHz – 3 GHz | TV, mobile phones, Wi-Fi 2.4 GHz |
+| ⭐ **MICROWAVE** | ⭐ **1 GHz – 30 GHz** *(commonly quoted 1–300 GHz)* | ⭐ **Satellite, radar, point-to-point links, Wi-Fi 5 GHz** |
+| **mmWave** | 30 – 300 GHz | 5G, high-capacity backhaul |
+
+> ### **"A frequency range of 1 GHz to 30 GHz is referred to as ______"** → ### ✅ **MICROWAVE.**
+
+#### Transmission types by number of recipients
+
+| Type | Sends to |
+|---|---|
+| **Unicast** | **ONE** specific recipient |
+| ⭐ **MULTICAST** | ⭐ **A SPECIFIC GROUP of recipients** |
+| **Broadcast** | **ALL** devices on the network |
+| **Anycast** | The **nearest** of a group (used in IPv6 and CDNs) |
+
+> ### **"Group SMS is ______"** → ### ✅ **MULTICAST** — it is sent to a **defined group**, not to everyone (broadcast) and not to a single person (unicast).
+
+> **A date worth knowing:** ### **World Telecommunication Day is ⭐ 17 MAY** — marking the founding of the **ITU (International Telecommunication Union)** in 1865.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Bluetooth is a type of radio wave information transmission system that is good for about-](../mcq-answers/computer-networks.md?plain=1#L1928)
+- [LTE এর পূর্ণ নাম কি?](../mcq-answers/computer-networks.md?plain=1#L1937)
+- [নিচের networking technology গুলোর মধ্যে কোনটি সাধারণত সবচেয়ে কম দূরত্বে (বা সবচেয়ে কাছাকাছি) তথ্য প্রেরণের জন্য ব্যবহৃত হয়?](../mcq-answers/computer-networks.md?plain=1#L1943)
+- [VSAT বলতে বুঝায়?](../mcq-answers/computer-networks.md?plain=1#L1952)
+- [Which one of the following is false with respect to 4G and 5G cellular network?](../mcq-answers/computer-networks.md?plain=1#L1962)
+- [What is the maximum data rate in IEEE 802.11n?](../mcq-answers/computer-networks.md?plain=1#L1971)
+- [An Access point operates in which layer of OSI model?](../mcq-answers/computer-networks.md?plain=1#L1980)
+- [বিশ্ব টেলিকমিউনিকেশন দিবস কবে পালিত হয়?](../mcq-answers/computer-networks.md?plain=1#L1989)
+- [GPRS এর পূর্ণরূপ কি?](../mcq-answers/computer-networks.md?plain=1#L1998)
+- [কোনটা ওয়্যারলেস নেটওয়ার্ক হটস্পট?](../mcq-answers/computer-networks.md?plain=1#L2007)
+- [Bluetooth কোন ধরনের device?](../mcq-answers/computer-networks.md?plain=1#L2016)
+- [Wi-fi কোন ধরনের নেটওয়ার্ক?](../mcq-answers/computer-networks.md?plain=1#L2025)
+- [Wi-Fi for?](../mcq-answers/computer-networks.md?plain=1#L2034)
+- [Group sms is ________](../mcq-answers/computer-networks.md?plain=1#L2043)
+- [What is the current popular technology for Maintaining smooth Wi-Fi performance and throughput for gaming, video streaming, and smart home devices?](../mcq-answers/computer-networks.md?plain=1#L2061)
+- [When an ongoing call or data session can communicate with two base stations at the same time, the phenomenon is known as-](../mcq-answers/computer-networks.md?plain=1#L2070)
+- [LTE means -](../mcq-answers/computer-networks.md?plain=1#L2079)
+- [What is hotpot?](../mcq-answers/computer-networks.md?plain=1#L2088)
+- [A frequency range 1\text{ GHz to }30\text{ GHz} is referred to as ________.](../mcq-answers/computer-networks.md?plain=1#L2097)
+- [Which of the following wireless networks is configured without an access point?](../mcq-answers/computer-networks.md?plain=1#L2106)
+- [A small office home office (SOHO) wireless user reports their new laptop is 802.11h and 802.11g capable but with not wirelessly connect faster than 11mbps. Whic…](../mcq-answers/computer-networks.md?plain=1#L2115)
+- [What medium is used to communicate by mobile phones?](../mcq-answers/computer-networks.md?plain=1#L2124)
+- [Wi-Fi stands for the Wireless ________](../mcq-answers/computer-networks.md?plain=1#L289)
+- [The full form of “Wi-Fi” is-](../mcq-answers/computer-networks.md?plain=1#L388)
