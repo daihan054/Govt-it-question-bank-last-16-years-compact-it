@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 9 subtopics · 29 theories
+**Table of Contents** — 9 subtopics · 33 theories
 
 1. **[Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms)**
    - [Computer and Computer System — Characteristics and Elements](#computer-and-computer-system--characteristics-and-elements)
@@ -10,6 +10,7 @@
    - [Registers in a Computer](#registers-in-a-computer)
    - [Master Glossary of IT Acronyms](#master-glossary-of-it-acronyms)
    - [Milestones, Firsts and Famous Names in Computing](#milestones-firsts-and-famous-names-in-computing)
+   - [Early Computing Machines, Firsts and Storage-Unit Conventions](#early-computing-machines-firsts-and-storage-unit-conventions)
 
 2. **[ICT in Society & Governance](#ict-in-society--governance)**
    - [The Fourth Industrial Revolution (IR 4.0)](#the-fourth-industrial-revolution-ir-40)
@@ -27,11 +28,14 @@
    - [BIOS, CMOS, UEFI and the Boot Process](#bios-cmos-uefi-and-the-boot-process)
    - [Input and Output Devices](#input-and-output-devices)
    - [Factors Affecting Computer Performance](#factors-affecting-computer-performance)
+   - [Display Technologies, Printers and Output Devices](#display-technologies-printers-and-output-devices)
+   - [PC Internals — Expansion Slots, Interfaces, IRQs and Power Supplies](#pc-internals--expansion-slots-interfaces-irqs-and-power-supplies)
 
 5. **[Software Types & Classification](#software-types--classification)**
    - [Software — Types and Classification](#software--types-and-classification)
    - [Programming Languages and Their Levels](#programming-languages-and-their-levels)
    - [Common Application Software and Office Tools](#common-application-software-and-office-tools)
+   - [Software Categories — Browsers, Search Engines, Translators and File Formats](#software-categories--browsers-search-engines-translators-and-file-formats)
 
 6. **[Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management)**
    - [Data Centre — Components and Design Factors](#data-centre--components-and-design-factors)
@@ -132,6 +136,14 @@ flowchart LR
 - [What are the components of a Micro computer system?](../written-answers/computer-fundamental.md?plain=1#L2329)
 - [(খ) Computer System এর Components গুলির সংক্ষিপ্ত বর্ণনাসহ লিখুন।](../written-answers/computer-fundamental.md?plain=1#L2401)
 
+**Previous Year MCQ List from this Topic:**
+
+- [একটি কম্পিউটারের আইকিউ কত?](../mcq-answers/computer-fundamental.md?plain=1#L985)
+- [CPU, ________ are the basic components of a computer system.](../mcq-answers/computer-fundamental.md?plain=1#L1210)
+- [What are the four key functions of a computer system?](../mcq-answers/computer-fundamental.md?plain=1#L1228)
+- [This is the smallest unit of data in a computer ________](../mcq-answers/computer-fundamental.md?plain=1#L1237)
+
+
 
 ---
 
@@ -178,6 +190,14 @@ flowchart LR
 - [কম্পিউটার প্রজন্ম বলতে কী বোঝায়? কম্পিউটারের বিভিন্ন প্রজন্মের বৈশিষ্ট্য বর্ণনা করুন।](../written-answers/computer-fundamental.md?plain=1#L288)
 - [১৭. কোন প্রজন্মের কম্পিউটারে VLSI (Very Large Scale Integration) চিপ ব্যবহার শুরু হয়?](../written-answers/computer-fundamental.md?plain=1#L706)
 
+**Previous Year MCQ List from this Topic:**
+
+- [In which year were chips used inside the computer for the first time?](../mcq-answers/computer-fundamental.md?plain=1#L1030)
+- [Microprocessor is used first in which generation computers?](../mcq-answers/computer-fundamental.md?plain=1#L1138)
+- [Which of the following is not true?](../mcq-answers/computer-fundamental.md?plain=1#L1174)
+- [Which was the most popular first-generation computer?](../mcq-answers/computer-fundamental.md?plain=1#L1183)
+
+
 
 ---
 
@@ -218,6 +238,14 @@ A **micro computer** = a **microprocessor (CPU)** + **memory (RAM/ROM)** + **inp
 - [বিশ্বের সবচেয়ে শক্তিশালী সুপার কম্পিউটারের নাম কী?](../written-answers/computer-fundamental.md?plain=1#L480)
 - [(ক) আকার আকৃতি ও ক্ষমতার ভিত্তিতে Digital Computer-এর প্রকারভেদ আলোচনা করুন।](../written-answers/computer-fundamental.md?plain=1#L759)
 - [What are the components of a Micro computer system?](../written-answers/computer-fundamental.md?plain=1#L2329)
+
+**Previous Year MCQ List from this Topic:**
+
+- [On which aspect the analog computers are better than digital?](../mcq-answers/computer-fundamental.md?plain=1#L1147)
+- [Which of the following is a class of computers based on model?](../mcq-answers/computer-fundamental.md?plain=1#L1165)
+- [CPU, ________ are the basic components of a computer system.](../mcq-answers/computer-fundamental.md?plain=1#L1210)
+- [What are the four key functions of a computer system?](../mcq-answers/computer-fundamental.md?plain=1#L1228)
+
 
 
 ---
@@ -284,6 +312,16 @@ flowchart LR
 - [Difference between Data and Information.](../written-answers/computer-fundamental.md?plain=1#L507)
 - [You have created a file containing 1 million characters. Suppose you want to save the file in ASCII format. How much memory space in MB in needed to store the f…](../written-answers/computer-fundamental.md?plain=1#L953)
 
+**Previous Year MCQ List from this Topic:**
+
+- [1 Terabyte ________ gigabyte in the decimal system?](../mcq-answers/computer-fundamental.md?plain=1#L1102)
+- [All decimal values and integers are included in set of](../mcq-answers/computer-fundamental.md?plain=1#L1111)
+- [Which of the following is the smallest size in the list?](../mcq-answers/computer-fundamental.md?plain=1#L1129)
+- [Which of the following is not a form of data?](../mcq-answers/computer-fundamental.md?plain=1#L1192)
+- [Which is equivalent is 1GB?](../mcq-answers/computer-fundamental.md?plain=1#L1201)
+- [This is the smallest unit of data in a computer ________](../mcq-answers/computer-fundamental.md?plain=1#L1237)
+
+
 
 ---
 
@@ -348,6 +386,12 @@ A computer stores **only numbers**. A **character encoding** is the agreed table
 - [Unicode এর মাধ্যমে সম্ভাব্য কতগুলো চিহ্নকে নির্দিষ্ট করা যায়?](../written-answers/computer-fundamental.md?plain=1#L554)
 - [How many bit is use of Unicode digit? (a) 8 (b) 16 (c) 20 (d) 24](../written-answers/computer-fundamental.md?plain=1#L585)
 - [You have created a file containing 1 million characters. Suppose you want to save the file in ASCII format. How much memory space in MB in needed to store the f…](../written-answers/computer-fundamental.md?plain=1#L953)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is the most commonly used encoding standard of Unicode?](../mcq-answers/computer-fundamental.md?plain=1#L1012)
+- [How many bits are there in Unicode?](../mcq-answers/computer-fundamental.md?plain=1#L1084)
+
 
 
 ---
@@ -724,6 +768,110 @@ These short factual questions appear in almost every paper.
 - [Distinguish between OMR and MICR.](../written-answers/computer-fundamental.md?plain=1#L2720)
 - [Write down the difference between Serial Port and Parallel Port.](../written-answers/computer-fundamental.md?plain=1#L2285)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Which one is the first high level programming language?](../mcq-answers/computer-fundamental.md?plain=1#L994)
+- [Which one is the first search engine?](../mcq-answers/computer-fundamental.md?plain=1#L1003)
+- [Which was the world's first electronic computer?](../mcq-answers/computer-fundamental.md?plain=1#L1039)
+- [WWW (World Wide Web) এর জনক কে?](../mcq-answers/computer-fundamental.md?plain=1#L1048)
+- [English scientist ________ invented the World Wide Web in 1989.](../mcq-answers/computer-fundamental.md?plain=1#L1057)
+- [Who is known as the first computer programmer?](../mcq-answers/computer-fundamental.md?plain=1#L1066)
+- [________ was a chess-playing computer developed by IBM?](../mcq-answers/computer-fundamental.md?plain=1#L1075)
+- [When was first artificial satellite established?](../mcq-answers/computer-fundamental.md?plain=1#L1093)
+- [Who invented QWERTY keyboard?](../mcq-answers/computer-fundamental.md?plain=1#L1120)
+- [Who among the following is associated with the invention of computer?](../mcq-answers/computer-fundamental.md?plain=1#L1219)
+
+
+---
+
+### Early Computing Machines, Firsts and Storage-Unit Conventions
+
+> *(The five generations, the IC scales and the famous-names table are covered in **[Generations of Computers](#generations-of-computers)** and **[Milestones, Firsts and Famous Names in Computing](#milestones-firsts-and-famous-names-in-computing)**. This theory adds the specific machine facts and unit conventions those two do not cover.)*
+
+#### The landmark early machines
+
+| Machine | Year | The fact that gets examined |
+|---|---|---|
+| ⭐ **ENIAC** | 1946 | ⭐ **The world's FIRST general-purpose ELECTRONIC computer** — 18,000 vacuum tubes, 30 tonnes, 150 kW. ⭐ **Its internal memory held only 20 NUMBERS** (twenty 10-digit accumulators) |
+| ⭐ **EDSAC** | 1949 | ⭐ **Stored data using MERCURY DELAY LINES** — an acoustic pulse was sent along a tube of mercury and read at the far end, then recirculated. The first practical stored-program computer |
+| **EDVAC** | 1949 | The first design built on **von Neumann's stored-program concept** |
+| **UNIVAC I** | 1951 | The first **commercially sold** computer |
+| ⭐ **IBM 650** | 1954 | ⭐ **THE MOST POPULAR FIRST-GENERATION COMPUTER** — around 2,000 were sold, making it the first mass-produced machine |
+| ⭐ **Deep Blue** | 1997 | ⭐ **IBM's CHESS-PLAYING COMPUTER**, the first to beat a reigning world champion (Garry Kasparov) under tournament conditions |
+
+> **Why early storage was so exotic:** before magnetic core memory there was no cheap way to hold bits. **Mercury delay lines** stored data as **sound waves in transit** — the data existed only while circulating, and had to be continuously refreshed. Other schemes included **Williams tubes** (charge spots on a CRT screen) and **magnetic drums**. **Magnetic core memory** (1955) finally gave random access, and remained standard until semiconductor RAM.
+
+#### Firsts not covered elsewhere
+
+| "First…" | Answer |
+|---|---|
+| ⭐ **First artificial satellite** | ⭐ **SPUTNIK-1, launched by the USSR in 1957** — the event that triggered the space race and, indirectly, the funding of ARPANET |
+| ⭐ **Inventor of the QWERTY keyboard** | ⭐ **CHRISTOPHER LATHAM SHOLES** (1868) |
+
+> **Why QWERTY is arranged so awkwardly:** Sholes designed it for **mechanical typewriters**, deliberately separating commonly paired letters so that the **type bars would not JAM** when struck in quick succession. The layout is therefore optimised for **19th-century mechanics, not for typing speed** — and it survives purely because of the cost of retraining. *(The **Dvorak** layout, designed for efficiency, never displaced it.)*
+
+#### Classification of computers by MODEL
+
+> Besides the usual classification by **size** (supercomputer, mainframe, mini, micro) and by **data type** (analog, digital, hybrid), computers are also classed by ⭐ **MODEL** — the hardware generation of the IBM-compatible PC line:
+
+| Model class | Note |
+|---|---|
+| **PC / XT** | The original IBM PC (1981) and eXTended (1983), 8088-based |
+| ⭐ **AT** | ⭐ **Advanced Technology (1984)** — 80286-based, 16-bit bus; **"AT computers" is a classification by MODEL**, and the AT form factor and keyboard layout became the industry standard |
+| **PS/2** | IBM's 1987 line, which gave us the PS/2 mouse and keyboard ports |
+
+> ### **"Which of the following is a class of computers based on MODEL?"** → ### ✅ **AT COMPUTERS.** *(The others offered are usually classifications by size or purpose.)*
+
+#### ⚠️ Decimal vs binary storage units — both conventions are examined
+
+| Question form | Answer | Convention |
+|---|---|---|
+| ⭐ **"1 Terabyte = ? gigabytes in the DECIMAL system"** | ⭐ **1000** | ⭐ **DECIMAL (SI)** — 1 TB = 10¹² bytes |
+| ⭐ **"Which is equivalent to 1 GB?"** | ⭐ **1e+9 B** (10⁹ bytes) | **DECIMAL** |
+| "How many bytes in 1 KB of memory?" | **1024** | ⭐ **BINARY** — 2¹⁰ |
+| "960 KB of main memory = ? bytes" | **960 × 1024** | **BINARY** |
+
+```
+   DECIMAL (SI)  : 1 KB = 10³  = 1,000        used by DISK MANUFACTURERS and the SI standard
+   BINARY (IEC)  : 1 KiB = 2¹⁰ = 1,024        used by OPERATING SYSTEMS and for MEMORY
+
+   The gap widens with each step:
+        KB  2.4 %  ·  MB  4.9 %  ·  GB  7.4 %  ·  TB  10 %
+```
+
+> ### **Both answers are correct — the question tells you which convention it wants.** Look for the words **"decimal system"** (→ 1000) or a **memory** context (→ 1024).
+>
+> ⭐ **This is exactly why a "1 TB" hard disk displays as about 931 GB in Windows** — the manufacturer sold 10¹² bytes, and the OS divides by 2⁴⁰. The unambiguous binary names are **KiB, MiB, GiB, TiB** (kibibyte, mebibyte, gibibyte, tebibyte), though few people use them.
+
+#### Analog vs digital — where analog still wins
+
+| | **ANALOG computer** | **DIGITAL computer** |
+|---|---|---|
+| **Represents data as** | **Continuous physical quantities** — voltage, current, rotation | **Discrete values (0 and 1)** |
+| ⭐ **Advantage** | ⭐ **SPEED** — the answer appears as fast as the physical system settles, with no stepwise calculation | **Accuracy, programmability, storage, general purpose** |
+| **Accuracy** | ⚠️ Limited by component tolerance and noise — a few significant figures | ✅ **Arbitrarily high** |
+| **Examples** | Slide rule, speedometer, mercury thermometer, analogue flight simulator | Every modern computer |
+
+> ### **"In which aspect are analog computers BETTER than digital?"** → ### ✅ **SPEED.**
+>
+> **The reason: an analog computer does not calculate — it MODELS.** A circuit whose voltages obey the same differential equation as the problem "solves" it **instantaneously and in parallel**, simply by being switched on. A digital computer must execute thousands of discrete arithmetic steps to reach the same result. **The trade-off is precision**, which is why digital won everywhere that exactness matters.
+
+**Previous Year MCQ List from this Topic:**
+
+- [EDSAC কম্পিউটার এ ডাটা সংরক্ষণের জন্য কি ধরণের মেমরি ব্যবহার হত?](../mcq-answers/computer-fundamental.md?plain=1#L1021)
+- [Which was the world's first electronic computer?](../mcq-answers/computer-fundamental.md?plain=1#L1039)
+- [________ was a chess-playing computer developed by IBM?](../mcq-answers/computer-fundamental.md?plain=1#L1075)
+- [When was first artificial satellite established?](../mcq-answers/computer-fundamental.md?plain=1#L1093)
+- [1 Terabyte ________ gigabyte in the decimal system?](../mcq-answers/computer-fundamental.md?plain=1#L1102)
+- [Who invented QWERTY keyboard?](../mcq-answers/computer-fundamental.md?plain=1#L1120)
+- [Which of the following is the smallest size in the list?](../mcq-answers/computer-fundamental.md?plain=1#L1129)
+- [On which aspect the analog computers are better than digital?](../mcq-answers/computer-fundamental.md?plain=1#L1147)
+- [How many numbers could ENIAC store in its internal memory?](../mcq-answers/computer-fundamental.md?plain=1#L1156)
+- [Which of the following is a class of computers based on model?](../mcq-answers/computer-fundamental.md?plain=1#L1165)
+- [Which was the most popular first-generation computer?](../mcq-answers/computer-fundamental.md?plain=1#L1183)
+- [Which is equivalent is 1GB?](../mcq-answers/computer-fundamental.md?plain=1#L1201)
+
+
 ## ICT in Society & Governance
 
 ### The Fourth Industrial Revolution (IR 4.0)
@@ -889,6 +1037,11 @@ flowchart TD
 - [c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?](../written-answers/computer-fundamental.md?plain=1#L2030)
 - [d) State the E-Government initiatives taken in health and education sectors of Bangladesh?](../written-answers/computer-fundamental.md?plain=1#L2055)
 - [Describe in Bangali or English on the post COVID-19 social challenge that Bangladesh may can front end the way ICT can support to overcome them.](../written-answers/computer-fundamental.md?plain=1#L1724)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is Smart Bangladesh?](../mcq-answers/computer-fundamental.md?plain=1#L1257)
+
 
 
 ---
@@ -1597,6 +1750,16 @@ On a **server**, the firmware layer matters far more than on a desktop, because 
 - [Write the difference between BIOS and CMOS?](../written-answers/computer-fundamental.md?plain=1#L2529)
 - [Difference between BIOS and EFI also BOOT loader and firmware.](../written-answers/computer-fundamental.md?plain=1#L2660)
 
+**Previous Year MCQ List from this Topic:**
+
+- [BIOS দিয়ে কি বোঝানো হয়?](../mcq-answers/computer-fundamental.md?plain=1#L27)
+- [How can you clear CMOS password?](../mcq-answers/computer-fundamental.md?plain=1#L64)
+- [Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?](../mcq-answers/computer-fundamental.md?plain=1#L91)
+- [Which one is wrong statement for BIOS of a computer?](../mcq-answers/computer-fundamental.md?plain=1#L145)
+- [BIOS কী](../mcq-answers/computer-fundamental.md?plain=1#L226)
+- [From what location are the 1st computer instructions available on boot up?](../mcq-answers/computer-fundamental.md?plain=1#L334)
+
+
 
 ---
 
@@ -1677,6 +1840,26 @@ A **graphics card (video card / display adapter)** is an expansion card containi
 - [Touch Screen কি জাতীয় ডিভাইস?](../written-answers/computer-fundamental.md?plain=1#L2590)
 - [Distinguish between OMR and MICR.](../written-answers/computer-fundamental.md?plain=1#L2720)
 
+**Previous Year MCQ List from this Topic:**
+
+- [কোনটি আউটপুট ডিভাইস?](../mcq-answers/computer-fundamental.md?plain=1#L36)
+- [নিচের কোনটি ইনপুট ডিভাইস নয়?](../mcq-answers/computer-fundamental.md?plain=1#L55)
+- [কি-বোর্ড একটি-](../mcq-answers/computer-fundamental.md?plain=1#L100)
+- [Which one is output device?](../mcq-answers/computer-fundamental.md?plain=1#L118)
+- [Data are entered into a computer through;](../mcq-answers/computer-fundamental.md?plain=1#L127)
+- [Which one is not contained in MICR code?](../mcq-answers/computer-fundamental.md?plain=1#L154)
+- [Which one is the modifier key of the keyboard?](../mcq-answers/computer-fundamental.md?plain=1#L163)
+- [The job of ________ is to translate the array of dots into text.](../mcq-answers/computer-fundamental.md?plain=1#L172)
+- [A barcode reader emits ________.](../mcq-answers/computer-fundamental.md?plain=1#L181)
+- [Which device converts the computer's digital data into analog signals?](../mcq-answers/computer-fundamental.md?plain=1#L244)
+- [You can connect an electronic instrument to your computer via the ________ port.](../mcq-answers/computer-fundamental.md?plain=1#L253)
+- [Which is the easiest component to environmentally recycle?](../mcq-answers/computer-fundamental.md?plain=1#L271)
+- [Which of the following produces the best quality graphics reproduction?](../mcq-answers/computer-fundamental.md?plain=1#L280)
+- [What type of device is computer keyboard?](../mcq-answers/computer-fundamental.md?plain=1#L289)
+- [To convert paper into an editable document, a scanner would employ ________ technology.](../mcq-answers/computer-fundamental.md?plain=1#L298)
+- [The resolution of a printer is measured in ________.](../mcq-answers/computer-fundamental.md?plain=1#L307)
+
+
 
 ---
 
@@ -1733,6 +1916,284 @@ When replacing a monitor, evaluate: **panel technology** (IPS for colour accurac
 - [What do understand by the resolution of computer screen?](../written-answers/computer-fundamental.md?plain=1#L2351)
 - [Pixel number 130 হলে রেজুলেশন কত হবে?](../written-answers/computer-fundamental.md?plain=1#L2385)
 - [পিক্সেল ও রেজ্যুলেশন কি ব্যাখ্যা করুন।](../written-answers/computer-fundamental.md?plain=1#L2500)
+
+**Previous Year MCQ List from this Topic:**
+
+- [What is the word length of a personal computer?](../mcq-answers/computer-fundamental.md?plain=1#L109)
+- [What is the best way to protect your hard drive data?](../mcq-answers/computer-fundamental.md?plain=1#L73)
+
+
+---
+
+### Display Technologies, Printers and Output Devices
+
+#### Input vs Output devices — the basic classification
+
+| ⭐ **INPUT devices** (data **INTO** the computer) | ⭐ **OUTPUT devices** (data **OUT** to the user) |
+|---|---|
+| **Keyboard, Mouse, Scanner, Microphone, Webcam, Joystick, Light pen, Touchpad, Barcode reader, OCR/MICR reader, Biometric scanner, Digitiser/Graphics tablet** | ⭐ **MONITOR, PRINTER, PLOTTER, Speaker, Projector, Headphone, Plotter** |
+| **Both (I/O):** Touchscreen · Modem · Network card · Hard disk · USB drive · Headset | |
+
+> ### **"কোনটি আউটপুট ডিভাইস?"** → ### ✅ **প্রিন্টার / মনিটর.**
+> ### **"নিচের কোনটি ইনপুট ডিভাইস নয়?"** → ### ✅ **মনিটর** (it is an output device).
+> ### **"What type of device is a computer keyboard?"** → ### ✅ **INPUT.**
+>
+> ### **"কি-বোর্ড একটি ______"** → ### ✅ **TRANSDUCER (ট্রান্সডিউসার).**
+> **A TRANSDUCER is any device that CONVERTS ONE FORM OF ENERGY INTO ANOTHER.** A keyboard converts **mechanical energy (a key press) into an electrical signal** — which is exactly the definition. *(A microphone, speaker, mouse and monitor are all transducers too.)*
+
+#### ⭐ Display technologies
+
+| Technology | How the image is produced | Characteristics |
+|---|---|---|
+| ⭐ **CRT — Cathode Ray Tube** | ⭐ **An ELECTRON BEAM is fired at a phosphor-coated screen**, which glows where it strikes | Bulky, heavy, high power; excellent colour and viewing angle. **Obsolete** |
+| ⭐ **LCD — Liquid Crystal Display** | Liquid crystals **twist to block or pass** light from a backlight | Thin, low power, no flicker |
+| ⭐ **TFT — Thin Film Transistor** | ⭐ **An "ACTIVE MATRIX" LCD — each pixel has its OWN transistor** | ⭐ **Used by ACTIVE MATRIX displays**; far sharper and faster than passive matrix |
+| **Passive matrix** | Pixels addressed by row/column grid, no per-pixel transistor | Cheaper, slower, poorer contrast |
+| ⭐ **PLASMA** | ⭐ **GAS is ELECTRIFIED by a GRID OF ELECTRODES**, producing UV light that excites phosphors | Excellent contrast and black level; heavy and power-hungry. Obsolete |
+| **LED** | An LCD with an **LED backlight** (or true OLED with self-emitting pixels) | Thin, bright, efficient — the modern standard |
+| **OLED** | Each pixel **emits its own light** | Perfect blacks, flexible, expensive |
+
+> ### **"CRT monitors produce an image by ______"** → ### ✅ **an ELECTRON BEAM.**
+> ### **"In a plasma display, gas is electrified by a grid of ______"** → ### ✅ **ELECTRODES.**
+> ### **"Active matrix displays use ______ technology"** → ### ✅ **TFT.**
+> ### **"Portable computer এ কোন ধরনের Monitor সচরাচর ব্যবহৃত হয়?"** → ### ✅ **FLAT PANEL DISPLAY.**
+> ### **"কম্পিউটার মনিটরকে আরও বলা হয়"** → ### ✅ **VDU — Visual Display Unit.**
+
+#### Refresh rate and resolution
+
+> ### **A monitor's image is refreshed at least ⭐ 60 TIMES PER SECOND (60 Hz).**
+>
+> **Why 60 Hz is the minimum:** below about **50–60 refreshes per second the human eye perceives FLICKER**, which causes eye strain and headaches. Modern gaming monitors run at **120, 144 or 240 Hz** for smoother motion.
+
+| Term | Meaning |
+|---|---|
+| **Resolution** | The number of pixels — **1920 × 1080 (Full HD)**, 2560×1440 (QHD), 3840×2160 (4K) |
+| **Refresh rate** | Screen redraws per second, in **Hz** |
+| **Response time** | How fast a pixel changes colour, in **ms** |
+| **Aspect ratio** | Width : height — 16:9, 16:10, 4:3 |
+| **Pixel pitch** | Distance between pixel centres — smaller is sharper |
+
+#### Printers and plotters
+
+| Device | Technology | Best for |
+|---|---|---|
+| **Dot matrix (impact)** | Pins strike an inked ribbon | ⭐ **Multi-part carbon copies** — bank vouchers, invoices. Noisy, low quality |
+| **Inkjet (non-impact)** | Sprays droplets of liquid ink | Photos, colour, home use |
+| **Laser (non-impact)** | **Laser + toner + heat fusing** | High-speed, sharp text, office volume |
+| **Thermal** | Heat-sensitive paper | Receipts, POS terminals |
+| ⭐ **PLOTTER** | ⭐ **Draws CONTINUOUS LINES with a pen or cutter, guided by vector coordinates** | ⭐ **THE BEST QUALITY GRAPHICS REPRODUCTION** — engineering drawings, CAD, architectural plans, large banners |
+
+> ### **"Which produces the best quality graphics reproduction?"** → ### ✅ **PLOTTER.**
+>
+> **Why a plotter beats a printer for drawings: it works in VECTORS, not dots.** A printer approximates a line from a grid of dots; a plotter **physically draws the line as a continuous stroke**, so the result is exact at any size — which is why engineering and architectural drawings are plotted, not printed.
+
+> ### **"The resolution of a printer is measured in ______"** → ### ✅ **DPI — DOTS PER INCH.** *(A monitor's is measured in **PPI**, pixels per inch; a scanner's also in DPI. Higher DPI = finer detail.)*
+
+> **Consumables and recycling:** ### **"Which is the easiest component to environmentally recycle?"** → ### ✅ **TONER CARTRIDGES** — manufacturers operate well-established return-and-refill programmes, and the cartridge is a single self-contained unit, unlike a circuit board with mixed metals and plastics.
+
+#### Scanning and recognition technologies
+
+| Technology | Full form | What it does |
+|---|---|---|
+| ⭐ **OCR** | ⭐ **Optical Character Recognition** | ⭐ **TRANSLATES AN ARRAY OF DOTS (a scanned image) INTO EDITABLE TEXT** — turning paper into a document you can edit |
+| **OMR** | Optical Mark Recognition | Reads **pencil marks** — MCQ answer sheets, ballot papers |
+| ⭐ **MICR** | ⭐ **Magnetic Ink Character Recognition** | ⭐ **Reads the magnetic-ink line at the bottom of a BANK CHEQUE** — fast, and very hard to forge |
+| **Barcode reader** | — | ⭐ **EMITS LIGHT** (a laser or LED), measures the reflection from the black and white bars, and decodes the pattern |
+| **QR code** | Quick Response | Two-dimensional barcode holding far more data |
+| **Biometric scanner** | — | Fingerprint, iris, face |
+
+> ### **"The job of ______ is to translate the array of dots into text"** → ### ✅ **OCR.**
+> ### **"To convert paper into an editable document, a scanner would employ ______ technology"** → ### ✅ **OCR.**
+> ### **"A barcode reader emits ______"** → ### ✅ **LIGHT.**
+
+> ### **The MICR code line on a Bangladeshi cheque contains: the CHEQUE NUMBER · the ROUTING/BANK and BRANCH code · the ACCOUNT NUMBER · and the TRANSACTION CODE.**
+> ### **"Which is NOT contained in the MICR code?"** → ### ✅ **COUNTRY CODE** — MICR is a **domestic clearing** standard, so no country identifier is encoded. *(International transfers use **SWIFT/BIC** and **IBAN** instead, which is where the country code lives.)*
+
+#### Other peripherals
+
+| Device | Function |
+|---|---|
+| ⭐ **MODEM** | ⭐ **MOdulator-DEModulator — converts the computer's DIGITAL data into ANALOG signals** for transmission, and back again |
+| ⭐ **MIDI port** | ⭐ **Connects an ELECTRONIC MUSICAL INSTRUMENT** (keyboard, synthesiser) to a computer |
+| **Light pen / Digitiser** | Direct drawing input |
+| **Projector** | Large-screen output |
+| **Webcam / Microphone** | Video and audio input |
+
+> ### **"Which device converts the computer's digital data into analog signals?"** → ### ✅ **MODEM.**
+> ### **"You can connect an electronic instrument to your computer via the ______ port"** → ### ✅ **MIDI.**
+>
+> ⭐ **The modem exists because of a mismatch:** a computer produces **discrete digital pulses**, but a telephone line was built to carry a **continuous analogue voice band**. **Modulation** impresses the digital bits onto an analogue carrier for the journey, and **demodulation** recovers them at the far end.
+
+**Previous Year MCQ List from this Topic:**
+
+- [কোনটি আউটপুট ডিভাইস?](../mcq-answers/computer-fundamental.md?plain=1#L36)
+- [Which technology is used in Compact Disk (CD)?](../mcq-answers/computer-fundamental.md?plain=1#L46)
+- [নিচের কোনটি ইনপুট ডিভাইস নয়?](../mcq-answers/computer-fundamental.md?plain=1#L55)
+- [কি-বোর্ড একটি-](../mcq-answers/computer-fundamental.md?plain=1#L100)
+- [Which one is output device?](../mcq-answers/computer-fundamental.md?plain=1#L118)
+- [Data are entered into a computer through;](../mcq-answers/computer-fundamental.md?plain=1#L127)
+- [কম্পিউটার মনিটরকে আরও বলা হয়-](../mcq-answers/computer-fundamental.md?plain=1#L136)
+- [Which one is not contained in MICR code?](../mcq-answers/computer-fundamental.md?plain=1#L154)
+- [Which one is the modifier key of the keyboard?](../mcq-answers/computer-fundamental.md?plain=1#L163)
+- [The job of ________ is to translate the array of dots into text.](../mcq-answers/computer-fundamental.md?plain=1#L172)
+- [A barcode reader emits ________.](../mcq-answers/computer-fundamental.md?plain=1#L181)
+- [In a plasma display, gas is electrified by grid of ________.](../mcq-answers/computer-fundamental.md?plain=1#L190)
+- [Which technology has made possible to pinpoint precision to the optical storage?](../mcq-answers/computer-fundamental.md?plain=1#L199)
+- [Active matrix displays use ________ Technology.](../mcq-answers/computer-fundamental.md?plain=1#L235)
+- [Which device converts the computer's digital data into analog signals?](../mcq-answers/computer-fundamental.md?plain=1#L244)
+- [You can connect an electronic instrument to your computer via the ________ port.](../mcq-answers/computer-fundamental.md?plain=1#L253)
+- [Portable computer এ কোন ধরনের Monitor সচরাচর ব্যবহৃত হয়?](../mcq-answers/computer-fundamental.md?plain=1#L262)
+- [Which is the easiest component to environmentally recycle?](../mcq-answers/computer-fundamental.md?plain=1#L271)
+- [Which of the following produces the best quality graphics reproduction?](../mcq-answers/computer-fundamental.md?plain=1#L280)
+- [What type of device is computer keyboard?](../mcq-answers/computer-fundamental.md?plain=1#L289)
+- [To convert paper into an editable document, a scanner would employ ________ technology.](../mcq-answers/computer-fundamental.md?plain=1#L298)
+- [The resolution of a printer is measured in ________.](../mcq-answers/computer-fundamental.md?plain=1#L307)
+- [CRT monitor produce image by ________](../mcq-answers/computer-fundamental.md?plain=1#L352)
+- [Monitor image is refreshed at least ________](../mcq-answers/computer-fundamental.md?plain=1#L361)
+
+
+---
+
+### PC Internals — Expansion Slots, Interfaces, IRQs and Power Supplies
+
+#### Expansion slots and cards
+
+> ### **An EXPANSION CARD is a printed circuit board inserted into a SLOT ON THE MOTHERBOARD to add a capability the computer did not have.**
+>
+> ### **"Expansion cards are inserted into ______ in a computer."** → ### ✅ **SLOTS** (expansion slots on the motherboard, inside the system unit).
+
+| Slot / bus | Era | Bandwidth | Used for |
+|---|---|---|---|
+| **ISA** | 1981–1990s | 8/16 MB/s | Legacy sound and network cards |
+| **PCI** | 1992– | 133 MB/s | General expansion — sound, network, older graphics |
+| ⭐ **AGP — Accelerated Graphics Port** | 1997–2004 | Up to 2.1 GB/s | ⭐ **A DEDICATED, GRAPHICS-ONLY port** — the best choice for a video card of its era |
+| ⭐ **PCI Express (PCIe)** | 2004– | **x16 slot: 16–64 GB/s** | ⭐ **Everything today** — graphics (x16), NVMe SSDs (x4), network cards |
+| **M.2** | 2013– | PCIe x4 | Compact NVMe SSDs |
+
+> ### **"Which is the best choice of specification for a video card?"** → ### ✅ **AGP** *(within the options of that era)*. **AGP was designed exclusively for graphics** — a direct point-to-point link to the chipset with its own dedicated bandwidth, unlike PCI, which every card had to share. **AGP has since been entirely replaced by PCIe x16**, which is faster still and serves all card types.
+
+**Common expansion cards:** graphics/video, sound, network (NIC), TV tuner, USB/FireWire expansion, RAID controller, capture card, modem.
+
+#### Storage and peripheral interfaces
+
+| Interface | Full form | Note |
+|---|---|---|
+| ⭐ **SCSI** | ⭐ **Small Computer System Interface** — ⭐ **pronounced "SCUZZY"** | Supports **multiple daisy-chained devices** on one controller; historically ⭐ **the FASTEST data-transfer interface**, used in servers and workstations |
+| **IDE / PATA** | Integrated Drive Electronics | The old 40/80-pin ribbon cable; 2 devices per channel |
+| **SATA** | Serial ATA | The modern disk interface — 6 Gb/s |
+| **NVMe** | Non-Volatile Memory Express | SSDs directly on PCIe — far faster than SATA |
+| **USB** | Universal Serial Bus | ⭐ **Three generations of specification: USB 1.x, USB 2.0 and USB 3.x** |
+| **Thunderbolt / FireWire** | — | High-speed external peripherals |
+
+> ### **"SCSI is pronounced as ______"** → ### ✅ **"SCUZZY."**
+> ### **"What type of interface has the fastest data transfer?"** → ### ✅ **SCSI** *(within the classic options; today the answer would be NVMe over PCIe).*
+> ### **"How many generations of USB specifications are available?"** → ### ✅ **THREE** — USB 1.x, 2.0 and 3.x.
+
+| USB version | Speed | Name |
+|---|---|---|
+| USB 1.1 | 12 Mbps | Full Speed |
+| **USB 2.0** | **480 Mbps** | High Speed |
+| ⭐ **USB 3.0** | ⭐ **4.8 Gbps (5 Gbps)** | SuperSpeed |
+| USB 3.1 / 3.2 | 10 / 20 Gbps | SuperSpeed+ |
+| USB4 | 40 Gbps | — |
+
+> ### **"What is the typical speed of USB 3.0?"** → ### ✅ **4.8 Gbit/s.**
+
+#### ⭐ IRQ — Interrupt Request lines
+
+> **An IRQ is a hardware line by which a device signals the CPU that it needs attention.** In the classic PC architecture there were **16 IRQ lines (0–15)**, and each device needed its **own** — a conflict caused the device to fail.
+
+| IRQ | Standard assignment |
+|---|---|
+| **0** | System timer |
+| ⭐ **1** | ⭐ **KEYBOARD** |
+| **2** | Cascade to the second interrupt controller |
+| **3 / 4** | COM2/COM4 · COM1/COM3 (serial ports) |
+| **5** | LPT2 / sound card |
+| **6** | Floppy disk controller |
+| **7** | LPT1 (parallel/printer port) |
+| **8** | Real-time clock |
+| **12** | PS/2 mouse |
+| **13** | Maths coprocessor |
+| **14 / 15** | Primary / secondary IDE channel |
+
+> ### **"IRQ1 is commonly assigned to ______"** → ### ✅ **the KEYBOARD.**
+>
+> ⚠️ **IRQ conflicts were the classic PC support problem of the 1990s** — two cards set to the same IRQ, and neither worked. **Plug and Play, APIC and MSI (Message Signalled Interrupts) have made manual IRQ assignment obsolete**, but the question still appears in exams.
+
+#### Power supplies — AT vs ATX
+
+| | **AT** (1984–1996) | ⭐ **ATX** (1995–) |
+|---|---|---|
+| ⭐ **Motherboard connector** | ⭐ **TWO connectors — P8 and P9** (easy to plug in the wrong way round and destroy the board) | ⭐ **A SINGLE keyed connector — P1** (20 or 24 pins), impossible to misfit |
+| **Power switch** | A **mechanical** switch carrying mains voltage to the PSU | A **low-voltage signal** to the motherboard — software can power the machine down |
+| **Soft power off** | ❌ No — "It is now safe to turn off your computer" | ✅ **Yes** — the OS shuts the supply off |
+| **Standby rail** | None | **+5 V standby**, enabling Wake-on-LAN and sleep |
+| **Voltages** | ±5 V, ±12 V | Adds **+3.3 V** for modern CPUs and RAM |
+
+> ### **"What is the difference between AT and ATX power supplies?"** → ### ✅ **AT supplies use P8 and P9, while ATX uses a single P1 power connector.**
+>
+> ### **"মাদার বোর্ডে কোনটি বিদ্যুৎ নিয়ন্ত্রণ করে?"** → ### ✅ **The PSU / power-regulation circuitry (MPSU)** — the **VRM (Voltage Regulator Module)** on the motherboard steps the PSU's 12 V down to the ~1 V the CPU actually needs.
+
+#### Boot sequence and POST diagnostics
+
+```mermaid
+flowchart LR
+    A["Power on"] --> B["⭐ ROM BIOS / UEFI<br/>— the FIRST instructions<br/>come from here"]
+    B --> C["POST<br/>Power-On Self-Test<br/>— checks CPU, RAM, video"]
+    C --> D["Beep code / display"]
+    D --> E["Find the boot device<br/>(boot order in CMOS)"]
+    E --> F["Load the BOOTSTRAP LOADER<br/>from the MBR"]
+    F --> G["Load the OPERATING SYSTEM"]
+```
+
+> ### **"From what location are the FIRST computer instructions available on boot-up?"** → ### ✅ **ROM BIOS.**
+>
+> **Why ROM: at power-on, RAM is empty and no disk has been read.** The processor must therefore begin executing from **non-volatile memory that already contains code** — the BIOS/UEFI firmware in ROM/flash.
+
+**POST beep codes — the classic diagnostic:**
+
+| Beeps | Usual meaning |
+|---|---|
+| ⭐ **One short beep** | ⭐ **All hardware tests PASSED — normal boot** |
+| ⭐ **NO beep at all** | ⭐ **POWER SUPPLY failure** (or the speaker/board is dead) |
+| Continuous beeping | Power supply or motherboard fault |
+| 1 long + 2/3 short | **Video card / display adapter** failure |
+| Repeating short beeps | **Memory (RAM)** failure |
+
+> ### **"Most PCs give a single beep on boot-up to indicate the hardware is OK. If you do NOT get a beep, the most likely faulty component is…"** → ### ✅ **THE POWER SUPPLY.**
+>
+> **The reasoning: no beep means the POST never even ran**, which implies the board received no usable power at all. *(If POST had run and found a fault, it would report it **with** beeps.)*
+
+#### A practical troubleshooting method
+
+> ### **"Which would you do FIRST when troubleshooting a faulty monitor?"** → ### ✅ **CHECK ITS CONNECTIONS to the computer and to the power source.**
+>
+> ⭐ **The universal hardware-support rule: ALWAYS CHECK THE SIMPLEST, CHEAPEST, MOST LIKELY CAUSE FIRST.** Loose or unplugged cables, a switched-off socket and an unpowered device account for a large share of all "faults". Only after that do you swap the monitor, test another cable, try onboard graphics, and finally suspect the graphics card.
+
+**Other practical points:** ⭐ **the best way to protect hard-drive data is REGULAR BACKUP** (not antivirus, not a UPS — those reduce risk, but only a backup recovers the data); a **forgotten CMOS/BIOS password is cleared by REMOVING THE CMOS BATTERY** (or shorting the clear-CMOS jumper), which erases the settings; and **"simplifying the PC configuration"** in a troubleshooting context means **disabling non-essential driver software** to isolate the culprit.
+
+> **The word length of a modern personal computer is ⭐ 64 BITS** — the width of its registers and data path. **Word length is measured in BITS**, and a longer word means more data processed per operation and a far larger addressable memory space.
+
+**Previous Year MCQ List from this Topic:**
+
+- [The Expansion cards are inserted into ______ in a computer.](../mcq-answers/computer-fundamental.md?plain=1#L18)
+- [What is the best way to protect your hard drive data?](../mcq-answers/computer-fundamental.md?plain=1#L73)
+- [Which would you do first when troubleshooting a faulty monitor?](../mcq-answers/computer-fundamental.md?plain=1#L82)
+- [Most PCs give a single beep on boot up to indicate that the hardware is ok. If you do not get any beep, then what will be the first thing to check?](../mcq-answers/computer-fundamental.md?plain=1#L91)
+- [How many generations are an available of USB specifications?](../mcq-answers/computer-fundamental.md?plain=1#L208)
+- [Small computer system interface (SCSI) is pronounced as ________?](../mcq-answers/computer-fundamental.md?plain=1#L217)
+- [Which is the best choice for specification for a video card?](../mcq-answers/computer-fundamental.md?plain=1#L316)
+- [IRQ1 is commonly assigned to ________](../mcq-answers/computer-fundamental.md?plain=1#L325)
+- [From what location are the 1st computer instructions available on boot up?](../mcq-answers/computer-fundamental.md?plain=1#L334)
+- [What is different between AT & ATX power supplies?](../mcq-answers/computer-fundamental.md?plain=1#L343)
+- [What type of interface has the fastest data transfer?](../mcq-answers/computer-fundamental.md?plain=1#L370)
+- [Simplifying the PC configuration means ________](../mcq-answers/computer-fundamental.md?plain=1#L379)
+- [মাদার বোর্ডে কোনটি 'বিদ্যুৎ নিয়ন্ত্রণ' করে?](../mcq-answers/computer-fundamental.md?plain=1#L528)
+- [What is the word length of a personal computer?](../mcq-answers/computer-fundamental.md?plain=1#L109)
+
+
+
 
 
 ---
@@ -1818,6 +2279,19 @@ flowchart TD
 - [Define system software and application software with three examples of each.](../written-answers/computer-fundamental.md?plain=1#L3035)
 - [b) What are the main differences between software and hardware? Discuss with examples.](../written-answers/computer-fundamental.md?plain=1#L3057)
 
+**Previous Year MCQ List from this Topic:**
+
+- [Consist of Instructions that control the computers ________.](../mcq-answers/computer-fundamental.md?plain=1#L794)
+- [সর্বাধিক ব্যবহৃত Operating system কোনটি?](../mcq-answers/computer-fundamental.md?plain=1#L821)
+- [Some program exists for computers use to help it manage it task and devices, which are called-](../mcq-answers/computer-fundamental.md?plain=1#L848)
+- [Which is not Application software?](../mcq-answers/computer-fundamental.md?plain=1#L929)
+- [Which is not application software?](../mcq-answers/computer-fundamental.md?plain=1#L938)
+- [Which one is not operating system software?](../mcq-answers/computer-fundamental.md?plain=1#L947)
+- [The software used to drive microprocessor based systems is called ________](../mcq-answers/computer-fundamental.md?plain=1#L974)
+- [Type of software which is designed for users to customize programs is-](../mcq-answers/computer-fundamental.md?plain=1#L767)
+- [To remove a program from your computer you can it,](../mcq-answers/computer-fundamental.md?plain=1#L812)
+
+
 
 ---
 
@@ -1870,6 +2344,24 @@ flowchart TD
 - [Difference between High level languages and low level language with some example?](../written-answers/computer-fundamental.md?plain=1#L2788)
 - [Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS](../written-answers/computer-fundamental.md?plain=1#L2841)
 - [LOGO কি ধরনের প্রোগ্রাম?](../written-answers/computer-fundamental.md?plain=1#L2850)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which language is directly understood by the Computer without translating?](../mcq-answers/computer-fundamental.md?plain=1#L659)
+- [A computer program that converts an entire program into machine language is called a/an:](../mcq-answers/computer-fundamental.md?plain=1#L668)
+- [Which of the following language does not need any translation?](../mcq-answers/computer-fundamental.md?plain=1#L713)
+- [A ________ translate file of program source code into machine language.](../mcq-answers/computer-fundamental.md?plain=1#L722)
+- [All programming languages require users to follow certain rules of ________.](../mcq-answers/computer-fundamental.md?plain=1#L731)
+- [Object code is the ________ language file that tells the CPU what to do.](../mcq-answers/computer-fundamental.md?plain=1#L740)
+- [Which is not a programming language below?](../mcq-answers/computer-fundamental.md?plain=1#L758)
+- [Language compilers and interpreters does not translate statements correctly when they have____](../mcq-answers/computer-fundamental.md?plain=1#L776)
+- [The only language understood by a digital computer is called ________](../mcq-answers/computer-fundamental.md?plain=1#L785)
+- [Source code is a(an) ________.](../mcq-answers/computer-fundamental.md?plain=1#L884)
+- [The only language understood by a digital computer is called-](../mcq-answers/computer-fundamental.md?plain=1#L911)
+- [What are the three main types of computer languages?](../mcq-answers/computer-fundamental.md?plain=1#L965)
+- [Which of the following is not standard compiler of C programming language?](../mcq-answers/computer-fundamental.md?plain=1#L749)
+- [Which of the following pairs of statements are not treated as identical by the compiler?](../mcq-answers/computer-fundamental.md?plain=1#L677)
+
 
 
 ---
@@ -1934,6 +2426,166 @@ The **IF** function returns one value when a condition is true and another when 
 - [১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?](../written-answers/computer-fundamental.md?plain=1#L2929)
 - [Graphics Design এর চারটি Software এর নাম লিখ।](../written-answers/computer-fundamental.md?plain=1#L2937)
 - [Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadshe…](../written-answers/computer-fundamental.md?plain=1#L2951)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which type of Software can translate scanned text into text that one can edit?](../mcq-answers/computer-fundamental.md?plain=1#L803)
+- [Which one is used to close running document?](../mcq-answers/computer-fundamental.md?plain=1#L839)
+- [The process of laying out a document with text, graphics, headlines and photographs is involved in:](../mcq-answers/computer-fundamental.md?plain=1#L866)
+- [Which language is used to build website?](../mcq-answers/computer-fundamental.md?plain=1#L956)
+- [Which of the following keyboard shortcuts is commonly used to close a tab in most web browsers?](../mcq-answers/computer-fundamental.md?plain=1#L1507)
+
+
+---
+
+### Software Categories — Browsers, Search Engines, Translators and File Formats
+
+#### ⭐ The three types of computer language
+
+> ### **"What are the three main types of computer languages?"** → ### ✅ **MACHINE LANGUAGE, ASSEMBLY LANGUAGE and HIGH-LEVEL LANGUAGE.**
+
+| Type | Form | Needs translation? |
+|---|---|---|
+| ⭐ **MACHINE language** | ⭐ **Pure BINARY (0s and 1s)** | ⭐ **NO — it is THE ONLY LANGUAGE DIRECTLY UNDERSTOOD BY THE COMPUTER** |
+| **Assembly language** | Mnemonics — `MOV`, `ADD` | Yes — by an **assembler** |
+| **High-level language** | English-like — C, Java, Python | Yes — by a **compiler** or **interpreter** |
+
+> ### **"Which language is directly understood by the computer without translating?" / "Which language does not need any translation?" / "The only language understood by a digital computer is…"** → ### ✅ **MACHINE LANGUAGE** (all three phrasings, same answer).
+
+#### The language translators
+
+| Translator | Converts | Manner |
+|---|---|---|
+| ⭐ **COMPILER** | ⭐ **An ENTIRE program of source code into machine language AT ONCE** | Produces a separate **object/executable** file |
+| **Interpreter** | Source code **line by line, at run time** | No separate file |
+| **Assembler** | **Assembly → machine code**, one-to-one | Object file |
+
+> ### **"A computer program that converts an ENTIRE program into machine language is called a ______" / "A ______ translates a file of program source code into machine language"** → ### ✅ **COMPILER.**
+
+| Term | Meaning |
+|---|---|
+| ⭐ **SOURCE CODE** | ⭐ **The human-readable program — a LIST OF COMMANDS** written by the programmer |
+| ⭐ **OBJECT CODE** | ⭐ **The MACHINE-language file that TELLS THE CPU WHAT TO DO** — the compiler's output |
+| **Executable** | Object code after linking, ready to run |
+| ⭐ **SYNTAX** | ⭐ **The RULES every programming language requires the user to follow.** A violation is a ⭐ **SYNTAX ERROR — which is exactly why compilers and interpreters cannot translate a statement correctly** |
+
+> ### **"All programming languages require users to follow certain rules of ______"** → ### ✅ **SYNTAX.**
+> ### **"Compilers and interpreters do not translate statements correctly when they contain ______"** → ### ✅ **SYNTAX ERRORS.**
+>
+> ⚠️ **Two C-specific points that appear here:** `char c[10];` and `char *c;` are ⭐ **NOT treated as identical by the compiler** — the first **allocates 10 bytes of storage**, the second is only a **pointer** with no storage; and **CodeBlocks is an IDE, not a compiler** (the standard C compilers are **GCC, Clang, Turbo C and MSVC**), which is why "CodeBlocks C Compiler" is the odd one out.
+
+#### ⭐ System software vs Application software
+
+| | ⭐ **SYSTEM software** | ⭐ **APPLICATION software** |
+|---|---|---|
+| **Purpose** | ⭐ **Helps the computer MANAGE ITS OWN TASKS AND DEVICES** | Performs a **task for the USER** |
+| **Runs** | In the background, always | When the user launches it |
+| **Examples** | ⭐ **Operating systems (Windows, Linux, ⭐ Red Hat Linux, macOS, Android), device drivers, utilities, firmware, compilers, linkers** | **MS Word, Excel, browsers, Photoshop, games, ⭐ Oracle (a DBMS application), accounting software** |
+| **Without it** | The machine will not run at all | The machine still runs |
+
+> ### **"Some programs exist for the computer's use to help it manage its tasks and devices — these are ______"** → ### ✅ **SYSTEM SOFTWARE.**
+> ### **"Which is NOT application software?"** → ### ✅ **RED HAT LINUX** — it is an **operating system**, i.e. system software.
+> ### **"Which one is NOT operating system software?"** → ### ✅ **ORACLE** — it is a **database management system**, an application.
+> ### **"Consists of instructions that control the computer's ______"** → ### ✅ **PROGRAMS.**
+
+| Other category | Meaning |
+|---|---|
+| ⭐ **FIRMWARE** | ⭐ **Software stored permanently in ROM/flash that DRIVES MICROPROCESSOR-BASED SYSTEMS** — the BIOS, a router's OS, an appliance's controller. It sits **between hardware and software** |
+| **Utility software** | Antivirus, disk defragmenter, backup, compression |
+| ⭐ **MACROS** | ⭐ **Software that lets USERS CUSTOMISE PROGRAMS** — recorded or scripted sequences of actions (Excel/Word VBA macros) |
+| **Middleware** | Connects applications and services |
+| **Open source / Proprietary / Freeware / Shareware** | Licensing categories |
+
+> ### **"The software used to drive microprocessor-based systems is called ______"** → ### ✅ **FIRMWARE.**
+> ### **"Type of software designed for users to customise programs is ______"** → ### ✅ **MACROS.**
+> ### **"To remove a program from your computer you can ______ it"** → ### ✅ **UNINSTALL.**
+
+#### Web browsers vs Search engines — the distinction always tested
+
+| | ⭐ **WEB BROWSER** | ⭐ **SEARCH ENGINE** |
+|---|---|---|
+| **What it is** | ⭐ **SOFTWARE INSTALLED on your device** that **retrieves and displays** web pages | ⭐ **A WEBSITE/SERVICE** that **indexes the web and finds pages** matching a query |
+| **Examples** | ⭐ **Chrome, Firefox, Safari, Edge, Opera, Brave, ⭐ LYNX** | ⭐ **Google, Bing, Yahoo, DuckDuckGo, ⭐ BAIDU, Yandex, Archie** |
+| **Relationship** | You **use a browser to reach** a search engine | It runs **inside** a browser |
+
+> ### **"নিচের কোনটি Browser নয়?" / "Which is not a web browser?"** → ### ✅ **FACEBOOK** — it is a social-networking **website**, not a browser.
+> ### **"Which one is NOT a search engine?"** → ### ✅ **WINDOWS** — it is an operating system.
+> ### **"Baidu is one kind of ______"** → ### ✅ **SEARCH ENGINE** (China's largest).
+> ### **"Which one is the TEXT-BASED web browser?"** → ### ✅ **LYNX** — it displays **only text, no images**, and is used over terminals, by visually impaired users with screen readers, and for testing accessibility.
+> ### **"Which is NOT a type of web search engine?"** → ### ✅ **PORTAL.** *(The genuine types are **crawler-based** (Google), **human-edited directories** (the old Yahoo Directory) and **hybrid/meta** search engines. A **portal** is a gateway website that may host a search box, but it is not itself a kind of search engine.)*
+
+#### File formats by category
+
+| Category | Extensions |
+|---|---|
+| ⭐ **Image** | ⭐ **.jpg / .jpeg, .png, .gif, .bmp, .tiff, .svg, .webp** |
+| ⭐ **Video** | ⭐ **.mp4, .avi, .mkv, .mov, .wmv, .flv, .mpeg/.mpg** |
+| **Audio** | .mp3, .wav, .wma, .aac, .flac, .ogg |
+| **Document** | .doc/.docx, .pdf, .txt, .rtf, .odt |
+| **Spreadsheet / Presentation** | .xls/.xlsx, .csv / .ppt/.pptx |
+| **Compressed** | .zip, .rar, .7z, .tar.gz |
+| **Executable / System** | .exe, .com, .msi, .dll, .sys, .bat |
+
+> ### **"নিচের কোনটি image ফাইলের extension?"** → ### ✅ **.jpg.**
+> ### **"কোনটি ইমেজ ফাইল এক্সটেনশন নয়?"** → ### ✅ **.avi** (it is a **video** format).
+> ### **"Which file format is NOT a video file format?"** → ### ✅ **JPG** (it is an **image** format).
+> ### **"Which video file format is used for HDTV?"** → ### ✅ **MPEG-2** — the broadcast standard for digital television and DVD.
+
+#### Other software terms
+
+| Term | Meaning |
+|---|---|
+| ⭐ **DTP — Desktop Publishing** | ⭐ **The process of LAYING OUT A DOCUMENT with text, graphics, headlines and photographs** — Adobe InDesign, QuarkXPress, Scribus, MS Publisher |
+| ⭐ **Game engine** | A framework providing the **rendering, physics, audio, animation, scripting and AI** needed to build a game — **Unity, Unreal Engine, Godot, CryEngine**. ⚠️ **A HEX EDITOR is NOT a game engine** (it is a binary file editor), and **"closure"** is a programming-language concept, not an engine component |
+| ⭐ **Ergonomics** | ⭐ **THE STUDY OF THE WAY PEOPLE WORK WITH TOOLS** — designing equipment and workplaces to fit the human body, preventing strain and injury (chair height, monitor distance, keyboard angle, lighting) |
+| **HTML** | ⭐ **The language used to BUILD a WEBSITE'S STRUCTURE** |
+| **Ctrl + W** | ⭐ **CLOSES the running DOCUMENT/tab** *(Ctrl+F4 also closes a document window; **Alt+F4** closes the whole application)* |
+
+> ### **"The study of the way people work with tools is called ______"** → ### ✅ **ERGONOMICS.**
+> ### **"সর্বাধিক ব্যবহৃত Operating system কোনটি?"** → ### ✅ **WINDOWS** (on desktop PCs; **Android** leads across all devices, and **Linux** dominates servers).
+
+**Previous Year MCQ List from this Topic:**
+
+- [নিচের কোনটি Browser নয়?](../mcq-answers/computer-fundamental.md?plain=1#L623)
+- [নিচের কোনটি image ফাইলের extension হিসাবে ব্যবহৃত হয়?](../mcq-answers/computer-fundamental.md?plain=1#L632)
+- [Which of the following file format is not a Video file format?](../mcq-answers/computer-fundamental.md?plain=1#L641)
+- [Which one of the following is not a web browser?](../mcq-answers/computer-fundamental.md?plain=1#L650)
+- [Which language is directly understood by the Computer without translating?](../mcq-answers/computer-fundamental.md?plain=1#L659)
+- [A computer program that converts an entire program into machine language is called a/an:](../mcq-answers/computer-fundamental.md?plain=1#L668)
+- [কোনটি ইমেজ ফাইল এক্সটেনশন নয়?](../mcq-answers/computer-fundamental.md?plain=1#L686)
+- [Which one of the following is not a search engine?](../mcq-answers/computer-fundamental.md?plain=1#L695)
+- [Which one is the text based web browser?](../mcq-answers/computer-fundamental.md?plain=1#L704)
+- [Which of the following language does not need any translation?](../mcq-answers/computer-fundamental.md?plain=1#L713)
+- [A ________ translate file of program source code into machine language.](../mcq-answers/computer-fundamental.md?plain=1#L722)
+- [All programming languages require users to follow certain rules of ________.](../mcq-answers/computer-fundamental.md?plain=1#L731)
+- [Object code is the ________ language file that tells the CPU what to do.](../mcq-answers/computer-fundamental.md?plain=1#L740)
+- [Which is not a programming language below?](../mcq-answers/computer-fundamental.md?plain=1#L758)
+- [Type of software which is designed for users to customize programs is-](../mcq-answers/computer-fundamental.md?plain=1#L767)
+- [Language compilers and interpreters does not translate statements correctly when they have____](../mcq-answers/computer-fundamental.md?plain=1#L776)
+- [The only language understood by a digital computer is called ________](../mcq-answers/computer-fundamental.md?plain=1#L785)
+- [Consist of Instructions that control the computers ________.](../mcq-answers/computer-fundamental.md?plain=1#L794)
+- [Which type of Software can translate scanned text into text that one can edit?](../mcq-answers/computer-fundamental.md?plain=1#L803)
+- [To remove a program from your computer you can it,](../mcq-answers/computer-fundamental.md?plain=1#L812)
+- [সর্বাধিক ব্যবহৃত Operating system কোনটি?](../mcq-answers/computer-fundamental.md?plain=1#L821)
+- [Which one is a Web Browser?](../mcq-answers/computer-fundamental.md?plain=1#L830)
+- [Which one is used to close running document?](../mcq-answers/computer-fundamental.md?plain=1#L839)
+- [Some program exists for computers use to help it manage it task and devices, which are called-](../mcq-answers/computer-fundamental.md?plain=1#L848)
+- [Baidu is one kind of -](../mcq-answers/computer-fundamental.md?plain=1#L857)
+- [The process of laying out a document with text, graphics, headlines and photographs is involved in:](../mcq-answers/computer-fundamental.md?plain=1#L866)
+- [Which one of the following is not required in a game engine?](../mcq-answers/computer-fundamental.md?plain=1#L875)
+- [Source code is a(an) ________.](../mcq-answers/computer-fundamental.md?plain=1#L884)
+- [All of the following are considered gaming engine except-](../mcq-answers/computer-fundamental.md?plain=1#L893)
+- [Which one of the following is not a type of Web search engine?](../mcq-answers/computer-fundamental.md?plain=1#L902)
+- [The only language understood by a digital computer is called-](../mcq-answers/computer-fundamental.md?plain=1#L911)
+- [Which video File format is used for HDTV?](../mcq-answers/computer-fundamental.md?plain=1#L920)
+- [Which is not Application software?](../mcq-answers/computer-fundamental.md?plain=1#L929)
+- [Which is not application software?](../mcq-answers/computer-fundamental.md?plain=1#L938)
+- [Which one is not operating system software?](../mcq-answers/computer-fundamental.md?plain=1#L947)
+- [Which language is used to build website?](../mcq-answers/computer-fundamental.md?plain=1#L956)
+- [What are the three main types of computer languages?](../mcq-answers/computer-fundamental.md?plain=1#L965)
+- [The software used to drive microprocessor based systems is called ________](../mcq-answers/computer-fundamental.md?plain=1#L974)
+
+
 
 
 ---
@@ -2522,6 +3174,16 @@ flowchart TD
 - [Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT](../written-answers/computer-fundamental.md?plain=1#L3517)
 - [Write short note on the folloing topics](../written-answers/computer-fundamental.md?plain=1#L3544)
 
+**Previous Year MCQ List from this Topic:**
+
+- [What does a block in a Blockchain?](../mcq-answers/computer-fundamental.md?plain=1#L1248)
+- [What is a distributed ledger on a peer-to-peer network called?](../mcq-answers/computer-fundamental.md?plain=1#L1266)
+- [In which way blockchain data can be modifued?](../mcq-answers/computer-fundamental.md?plain=1#L1272)
+- [Which of the following is not in connection with blockchain technology?](../mcq-answers/computer-fundamental.md?plain=1#L1287)
+- [Smallest unit of bit coin is called:](../mcq-answers/computer-fundamental.md?plain=1#L1305)
+- [In a block chain, a bundle of transaction is called:](../mcq-answers/computer-fundamental.md?plain=1#L1314)
+
+
 
 ---
 
@@ -2652,3 +3314,9 @@ flowchart LR
 - [Write short note on the folloing topics](../written-answers/computer-fundamental.md?plain=1#L3544)
 - [Write short answer on the following: (a) Plaintext (b) HTTP (c) Gateway used in \underline{\phantom{\text{Network}}} layer. (d) VIRUS full form (e) Who is the f…](../written-answers/computer-fundamental.md?plain=1#L458)
 - [Describe about Firewalls, Microcontroller, COCOMO, Query Optimization, Genetic algorithm and UML.](../written-answers/computer-fundamental.md?plain=1#L919)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which one of the following process is the main task for the computer in mapping the geographical data?](../mcq-answers/computer-fundamental.md?plain=1#L1278)
+- [The study of the way people work with tools is called.](../mcq-answers/computer-fundamental.md?plain=1#L1296)
+- [What is Smart Bangladesh?](../mcq-answers/computer-fundamental.md?plain=1#L1257)
