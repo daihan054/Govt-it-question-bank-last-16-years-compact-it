@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 3 subtopics · 16 theories
+**Table of Contents** — 9 subtopics · 29 theories
 
 1. **[Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms)**
    - [Computer and Computer System — Characteristics and Elements](#computer-and-computer-system--characteristics-and-elements)
@@ -22,6 +22,31 @@
 3. **[Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies)**
    - [Quantum Computing](#quantum-computing)
    - [Virtual Reality, Augmented Reality and Nanotechnology](#virtual-reality-augmented-reality-and-nanotechnology)
+
+4. **[Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery)**
+   - [BIOS, CMOS, UEFI and the Boot Process](#bios-cmos-uefi-and-the-boot-process)
+   - [Input and Output Devices](#input-and-output-devices)
+   - [Factors Affecting Computer Performance](#factors-affecting-computer-performance)
+
+5. **[Software Types & Classification](#software-types--classification)**
+   - [Software — Types and Classification](#software--types-and-classification)
+   - [Programming Languages and Their Levels](#programming-languages-and-their-levels)
+   - [Common Application Software and Office Tools](#common-application-software-and-office-tools)
+
+6. **[Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management)**
+   - [Data Centre — Components and Design Factors](#data-centre--components-and-design-factors)
+   - [Data Centre Tier Standards](#data-centre-tier-standards)
+   - [Data Centre Power — UPS, Generators and DCIM](#data-centre-power--ups-generators-and-dcim)
+
+7. **[Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems)**
+   - [Server Hardware — Components and Selection](#server-hardware--components-and-selection)
+
+8. **[User Interfaces (CLI vs GUI)](#user-interfaces-cli-vs-gui)**
+   - [Command Line Interface and Graphical User Interface](#command-line-interface-and-graphical-user-interface)
+
+9. **[Blockchain & Emerging Technologies](#blockchain--emerging-technologies)**
+   - [Blockchain — Concept and How It Works](#blockchain--concept-and-how-it-works)
+   - [Other Emerging Technology Short Notes](#other-emerging-technology-short-notes)
 
 <!-- TOC END -->
 
@@ -1437,3 +1462,1193 @@ A classical computer stores a **bit**, which is **either 0 or 1**. A quantum com
 
 - [What is the name of molecular scale computer?](../written-answers/computer-fundamental.md?plain=1#L3778)
 - [Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।](../written-answers/computer-fundamental.md?plain=1#L3792)
+
+## Hardware Components & BIOS (CMOS Battery)
+
+### BIOS, CMOS, UEFI and the Boot Process
+
+#### What is BIOS?
+
+**BIOS (Basic Input Output System)** is **firmware** — permanent low-level software stored on a **chip on the motherboard** — that is the **very first program a computer runs when it is switched on**. It initialises and tests the hardware, then loads the operating system.
+
+> **BIOS is the bridge between the hardware and the operating system.** Without it, the CPU would power on with no idea what hardware exists or where to find the OS.
+
+#### The four functions of BIOS
+
+| # | Function | Description |
+|---|---|---|
+| 1 | **POST — Power On Self Test** | Checks that the CPU, RAM, keyboard, graphics and storage are present and working. Failures are reported by **beep codes** |
+| 2 | **Bootstrap loader** | Finds the **boot device**, loads the **boot loader** from it, and hands over control |
+| 3 | **BIOS drivers / firmware** | Provides basic low-level control of the hardware before the OS drivers load |
+| 4 | **BIOS Setup (CMOS Setup)** | The configuration utility (entered with Del/F2) for boot order, date/time, passwords, overclocking |
+
+#### The boot process of a PC — step by step
+
+```mermaid
+flowchart TD
+    A["1 . POWER ON<br/>the PSU sends the 'Power Good' signal"] --> B["2 . CPU jumps to the RESET VECTOR<br/>(a fixed address in the BIOS ROM)"]
+    B --> C["3 . POST — Power On Self Test<br/>checks CPU, RAM, graphics, keyboard, storage"]
+    C --> D{"Hardware<br/>OK ?"}
+    D -->|No| E["❌ Error beep codes<br/>or an error message; boot halts"]
+    D -->|Yes| F["4 . BIOS reads its settings from CMOS<br/>(date, time, boot order, hardware config)"]
+    F --> G["5 . BIOS initialises hardware<br/>and displays the system summary"]
+    G --> H["6 . BIOS searches the BOOT ORDER<br/>for a bootable device"]
+    H --> I["7 . Reads the MBR / GPT — the first sector —<br/>and loads the BOOT LOADER into RAM"]
+    I --> J["8 . The boot loader (GRUB / Windows Boot Manager)<br/>loads the OS KERNEL"]
+    J --> K["9 . The kernel initialises drivers,<br/>services and the file system"]
+    K --> L["10 . Login screen / desktop — the OS is in control"]
+```
+
+**The stages in words**
+
+1. **Power on.** The power supply stabilises and sends a **"Power Good"** signal; the CPU comes out of reset.
+2. **The CPU executes the first instruction from the BIOS ROM** at the reset vector.
+3. **POST** runs, verifying essential hardware. A **single short beep** usually means success; a pattern of beeps identifies the fault (e.g. repeated beeps = RAM failure).
+4. **BIOS reads its saved configuration from CMOS memory** — date, time, boot sequence, enabled devices.
+5. **Hardware initialisation** — the video card first (so messages can be displayed), then drives and peripherals.
+6. **The boot device is selected** by following the configured **boot order** (SSD → USB → network).
+7. **The Master Boot Record (MBR, sector 0)** or the **GPT/EFI System Partition** is read and the **boot loader** is loaded into RAM.
+8. **The boot loader** (GRUB on Linux, Windows Boot Manager on Windows) loads the **OS kernel**.
+9. **The kernel** takes control, initialises memory management, drivers, and mounts the file system.
+10. **Services and the user interface** start; the login screen appears.
+
+#### What is CMOS, and the CMOS battery
+
+**CMOS (Complementary Metal Oxide Semiconductor)** is a small amount of **volatile RAM on the motherboard** that stores the **BIOS settings and the real-time clock**. Because it is volatile, it needs constant power — supplied by the **CMOS battery**, a coin cell, usually a **CR2032 (3 V lithium)**.
+
+**Performance and lifetime of the CMOS battery**
+
+| Aspect | Detail |
+|---|---|
+| **Type** | Coin-cell lithium, usually **CR2032, 3 volts** |
+| **Typical life** | **3 to 10 years** (commonly 5) |
+| **Power drawn** | Only a few microamps — it only runs the clock and holds the settings when the machine is off |
+| **Drains faster if** | The computer is **left unplugged for long periods** (when mains power is present, the board powers the CMOS instead), or in high-temperature environments |
+
+**Symptoms of a failing/dead CMOS battery:**
+1. **The date and time reset** to a default (e.g. 01/01/2000) on every boot — *the classic symptom*.
+2. **"CMOS checksum error"** or **"CMOS battery failure"** message at startup.
+3. BIOS settings (boot order, RAID mode) **revert to default** each time.
+4. **Boot failure or a slow boot** because the boot order changed.
+5. Hardware such as a drive appearing "missing".
+6. **SSL/HTTPS certificate errors and failed software licence checks**, because the system clock is wrong.
+7. On a **server**, log timestamps become wrong, breaking scheduled jobs, backups and forensic analysis.
+
+**The fix:** replace the CR2032 (a few taka, two minutes' work), then re-enter the BIOS and set the date, time and boot order.
+
+#### BIOS vs CMOS — the comparison
+
+| Point | **BIOS** | **CMOS** |
+|---|---|---|
+| **What it is** | **Firmware — a PROGRAM** | **Memory — a CHIP that stores data** |
+| **Function** | **Runs** the POST and boots the machine | **Stores** the BIOS settings and the clock |
+| **Storage type** | **Non-volatile** — ROM / Flash EEPROM | **Volatile** — needs the battery |
+| **Retains data without power?** | ✅ **Yes** | ❌ **No** — only while the battery lasts |
+| **Size** | A few MB | A few hundred **bytes** |
+| **Battery needed?** | ❌ No | ✅ **Yes — the CMOS battery** |
+| **If it fails** | The machine cannot boot at all (requires reflashing) | Settings and time are lost, but the machine still boots |
+
+> **The relationship in one line:** **BIOS is the program; CMOS is the notebook where that program keeps its settings; the CMOS battery is what keeps the notebook readable when the power is off.**
+
+#### BIOS vs UEFI
+
+**UEFI (Unified Extensible Firmware Interface)** is the **modern replacement for the legacy BIOS**, standard on all machines since roughly 2012.
+
+| Point | **Legacy BIOS** | **UEFI** |
+|---|---|---|
+| **Introduced** | 1975 (IBM PC era) | 2005 onward; standard since ~2012 |
+| **Operating mode** | **16-bit real mode** | **32-bit or 64-bit** |
+| **Addressable memory during boot** | **1 MB** | Effectively unlimited |
+| **Partition scheme** | **MBR** | **GPT** (and MBR for compatibility) |
+| **Maximum disk size** | **2 TB** | **9.4 ZB** (zettabytes) |
+| **Maximum primary partitions** | **4** | **128** |
+| **Interface** | Text-only, keyboard only | **Graphical, mouse support, multi-language** |
+| **Boot speed** | Slower | **Faster** — parallel initialisation, **Fast Boot** |
+| **Security** | ❌ None | ✅ **Secure Boot** — only signed boot loaders may run, blocking bootkits/rootkits |
+| **Network capability** | Very limited | Built-in networking, **remote diagnostics and update** |
+| **Drivers** | Firmware-only | Modular, extensible **UEFI drivers and applications** |
+| **Extensibility** | Fixed | **Extensible** — a shell and applications can run pre-OS |
+
+#### BIOS/UEFI in servers, and firmware vs boot loader
+
+On a **server**, the firmware layer matters far more than on a desktop, because it controls **RAID configuration, boot order across many drives, virtualisation extensions (VT-x/AMD-V), memory mirroring, power profiles and remote management**. Server boards add an out-of-band management controller — **iDRAC (Dell), iLO (HP), IMM (IBM/Lenovo)** — which lets an administrator power-cycle, reconfigure the BIOS and mount installation media **remotely, even when the OS is dead**. Firmware settings therefore directly affect **boot reliability, virtualisation support, performance and maintenance windows**.
+
+| Term | Meaning |
+|---|---|
+| **Firmware** | Permanent low-level software stored in a hardware device's own ROM/flash, controlling that device. **BIOS/UEFI is firmware**; so is the firmware in a router, SSD, printer or smartphone |
+| **Boot loader** | A small **program stored on the DISK** whose only job is to **load the operating system kernel** into memory and start it. Examples: **GRUB, LILO, Windows Boot Manager, U-Boot** |
+
+| Point | **Firmware (BIOS/UEFI)** | **Boot loader (GRUB etc.)** |
+|---|---|---|
+| **Stored in** | A **chip on the motherboard** | **The disk** (MBR / EFI System Partition) |
+| **Runs** | **First**, at power-on | **Second**, after the firmware hands over |
+| **Job** | Initialise and test **hardware**, find a boot device | Find and load the **OS kernel**; offer a boot menu |
+| **Hardware/OS specific** | Hardware specific | OS specific |
+| **Updated by** | Flashing the chip | Reinstalling/reconfiguring the OS |
+
+**Previous Year Question List from this Topic:**
+
+- [Performance of CMOS battery?](../written-answers/computer-fundamental.md?plain=1#L2190)
+- [(c) Explain the rule of BIOS (Basic Input Output System) in the boot process of a PC. Describe the steps involved in booting a computer from power on to loading…](../written-answers/computer-fundamental.md?plain=1#L2212)
+- [Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.](../written-answers/computer-fundamental.md?plain=1#L2249)
+- [What is BIOS?](../written-answers/computer-fundamental.md?plain=1#L2272)
+- [What is BIOS?](../written-answers/computer-fundamental.md?plain=1#L2372)
+- [What is the difference between UEFI and BIOS?](../written-answers/computer-fundamental.md?plain=1#L2456)
+- [Write the difference between BIOS and CMOS?](../written-answers/computer-fundamental.md?plain=1#L2529)
+- [Difference between BIOS and EFI also BOOT loader and firmware.](../written-answers/computer-fundamental.md?plain=1#L2660)
+
+
+---
+
+### Input and Output Devices
+
+#### Classification
+
+| Category | Devices |
+|---|---|
+| **Input** | Keyboard, mouse, scanner, microphone, webcam, joystick, light pen, **barcode reader, OMR, OCR, MICR**, biometric/fingerprint reader, digitiser/graphics tablet, sensors |
+| **Output** | **Monitor**, printer, **plotter**, speaker, projector, headphone |
+| **Both (I/O)** | **Touch screen**, modem, network card, hard disk, USB drive, headset (mic + speaker), multifunction printer |
+
+> ### "Is a touch screen an input or an output device?"
+> **BOTH.** It **displays** information (output, as a monitor) and **accepts** the user's finger or stylus input (input). It is therefore classified as an **input-output (I/O) device**, and is the standard example of one.
+
+> ### "What kind of device is a plotter?"
+> An **OUTPUT device** — specifically a **hard-copy graphics output device** that draws continuous **lines** by moving a pen (or an ink head) across the paper, rather than printing dots. It is used for **large, precise line drawings**: engineering and architectural blueprints, maps, circuit diagrams and CAD output. Types: **drum plotter, flatbed plotter, inkjet plotter, electrostatic plotter**.
+
+#### Printers
+
+| Category | Type | How it works | Quality / Speed |
+|---|---|---|---|
+| **Impact** | **Dot matrix** | A **print head carrying a matrix of pins/needles** strikes an **inked ribbon** against the paper | Low quality, noisy, **cheap running cost**; the only type that can print **multi-part carbon copies** (bank vouchers, invoices) |
+| **Impact** | Daisy wheel, Line printer | A moulded character strikes the ribbon | Letter quality but no graphics |
+| **Non-impact** | **Inkjet** | Sprays tiny droplets of liquid ink | Good quality, good colour, cheap printer but expensive ink |
+| **Non-impact** | **Laser** | A laser draws the image on a drum; **toner** sticks to it and is **fused by heat** | **Best quality and speed**, low cost per page, ideal for offices |
+| **Non-impact** | Thermal | Heat darkens special paper | Receipts, POS, ATM slips |
+| **Non-impact** | **3-D printer** | Builds an object layer by layer | Prototyping, manufacturing |
+
+> **The main component of a dot-matrix printer is the PRINT HEAD** — a column of small pins (typically 9 or 24) driven by electromagnets. The more pins, the better the quality (a 24-pin head produces near-letter-quality output).
+
+#### Display: pixel and resolution
+
+| Term | Meaning |
+|---|---|
+| **Pixel** | **PICture ELement** — the **smallest addressable dot** of a display or image. Each pixel has a colour, formed from **red, green and blue** sub-pixels |
+| **Resolution** | The **number of pixels** a display or image contains, written as **width × height** (e.g. 1920 × 1080) |
+| **PPI / DPI** | **Pixels (or dots) per inch** — the *density* of pixels, which determines sharpness at a given physical size |
+| **Aspect ratio** | The ratio of width to height — 4:3, **16:9**, 21:9 |
+| **Colour depth** | Bits per pixel — 8-bit (256 colours), 16-bit, **24-bit true colour (16.7 million)**, 32-bit (with alpha) |
+
+**Standard resolutions:**
+
+| Name | Resolution | Total pixels |
+|---|---|---|
+| VGA | 640 × 480 | 307,200 |
+| **HD** | **1280 × 720** | 921,600 |
+| **Full HD (1080p)** | **1920 × 1080** | **2,073,600** |
+| 2K / QHD | 2560 × 1440 | 3,686,400 |
+| **4K / UHD** | **3840 × 2160** | **8,294,400** |
+| 8K | 7680 × 4320 | 33,177,600 |
+
+> **Higher resolution = more pixels = sharper image and more detail**, but it also needs **more memory, more GPU power and more bandwidth**.
+>
+> **Worked calculation:** the video memory needed for one screen of 1920 × 1080 at 24-bit colour = 1920 × 1080 × 3 bytes = **6,220,800 bytes ≈ 5.93 MB** per frame. For a "pixel number of 130", the intended reading is usually **130 PPI** — pixel *density* — or a small 130 × 130 image, which contains 130 × 130 = **16,900 pixels**. Always state which interpretation you are using.
+
+#### What is a graphics card?
+
+A **graphics card (video card / display adapter)** is an expansion card containing a **GPU (Graphics Processing Unit)** and its own **video memory (VRAM)**, which **renders images, video and animation and sends the signal to the monitor**.
+
+| Component | Function |
+|---|---|
+| **GPU** | Massively parallel processor specialised for graphics and matrix maths |
+| **VRAM** | Dedicated high-speed memory (GDDR6) holding textures and frame buffers |
+| **Cooling** | Heat sink and fans — GPUs generate a great deal of heat |
+| **Output ports** | HDMI, DisplayPort, DVI, VGA |
+| **Power connectors** | High-end cards need direct PSU power |
+
+**Integrated vs dedicated:** an **integrated** GPU is built into the CPU and shares system RAM — cheap, low power, fine for office work. A **dedicated** card has its own GPU and VRAM — essential for **gaming, video editing, CAD, 3-D rendering, and AI/deep learning training**.
+
+**Previous Year Question List from this Topic:**
+
+- [Name and define the components of a computer system. Mention two optical input devices.](../written-answers/computer-fundamental.md?plain=1#L2303)
+- [Plotter কোন ধরনের Device?](../written-answers/computer-fundamental.md?plain=1#L2480)
+- [গ্রাফিক্স কার্ড কি?](../written-answers/computer-fundamental.md?plain=1#L2549)
+- [ডট মেট্রিক্স প্রিন্টারের মূল উপাদান কি?](../written-answers/computer-fundamental.md?plain=1#L2568)
+- [Touch Screen কি জাতীয় ডিভাইস?](../written-answers/computer-fundamental.md?plain=1#L2590)
+- [Distinguish between OMR and MICR.](../written-answers/computer-fundamental.md?plain=1#L2720)
+
+
+---
+
+### Factors Affecting Computer Performance
+
+> *(A directly asked question: "Discuss the factors that affect the processing speed of a computer.")*
+
+| # | Factor | How it affects speed |
+|---|---|---|
+| 1 | **CPU clock speed (GHz)** | Cycles per second — more cycles, more instructions per second |
+| 2 | **Number of cores and threads** | **Multi-core** CPUs execute several tasks genuinely in parallel |
+| 3 | **CPU architecture / IPC** | Instructions executed per clock cycle; a modern 3 GHz CPU is far faster than an old 3 GHz one |
+| 4 | **Cache memory (L1, L2, L3)** | Larger, faster cache means fewer slow trips to RAM — often more important than raw GHz |
+| 5 | **RAM size** | Too little RAM forces **swapping/paging to disk**, which is catastrophic for speed |
+| 6 | **RAM speed and channels** | DDR generation, MHz, and dual/quad-channel bandwidth |
+| 7 | **Storage type** | **SSD vs HDD is the single biggest practical difference** — an SSD is 10–100× faster to access |
+| 8 | **Bus width and speed** | The data highway between CPU, memory and devices (FSB, PCIe generation) |
+| 9 | **Word size** | 32-bit vs **64-bit** — how much data is handled per operation |
+| 10 | **GPU** | Offloads graphics and parallel computation from the CPU |
+| 11 | **Operating system and background processes** | Bloatware, startup programs and malware steal CPU and RAM |
+| 12 | **Disk fragmentation and free space** | A nearly full or fragmented drive slows dramatically (matters for HDD) |
+| 13 | **Malware / viruses** | Consume resources silently |
+| 14 | **Heat and thermal throttling** | An overheating CPU **deliberately slows itself down** to avoid damage |
+| 15 | **Power settings** | "Power saver" mode caps the CPU frequency |
+| 16 | **Software efficiency** | A badly written O(n²) program beats no hardware |
+| 17 | **Network speed** | For cloud and networked applications, the bottleneck is often the link, not the machine |
+
+#### Laptop overheating — causes and solutions
+
+**Causes:** dust clogging the vents and heat sink · **dried-out thermal paste** between CPU and heat sink · a failing or blocked **fan** · use on a **bed, pillow or lap** blocking the intake · heavy sustained load (gaming, rendering, many browser tabs) · high ambient temperature · malware consuming 100 % CPU · a swollen or faulty battery · an old, degraded cooling system.
+
+**Solutions:**
+1. **Clean the vents and internal heat sink** with compressed air — the most common and most effective fix.
+2. **Replace the thermal paste** (recommended every 2–3 years).
+3. Use it on a **hard, flat surface**; add a **cooling pad** with fans.
+4. **Check fan operation**; replace a failing fan.
+5. **Close unnecessary programs**; check the task manager for a runaway process; **scan for malware**.
+6. **Update BIOS and drivers** — fan curves are often improved in updates.
+7. Reduce load: lower game settings, limit background sync, use a **balanced/power-saver** profile.
+8. **Undervolt** the CPU (advanced) to cut heat with minimal performance loss.
+9. Keep the ambient temperature reasonable and avoid direct sunlight.
+10. If it persists, have the **heat pipes and heat sink assembly** inspected or replaced.
+
+#### Choosing a monitor
+
+When replacing a monitor, evaluate: **panel technology** (IPS for colour accuracy and viewing angles, VA for contrast, TN for cheap high refresh rates) · **size and resolution** (and therefore PPI) · **refresh rate** (60 Hz for office, 120 Hz+ for gaming) · **response time** · **brightness and contrast ratio** · **colour gamut** (sRGB coverage, important for design work) · **ports** (HDMI/DisplayPort/USB-C, and whether they match the computer) · **ergonomics** (height/tilt/pivot adjustment, VESA mount) · **eye comfort** (flicker-free, blue-light filter) · **power consumption** and **warranty/dead-pixel policy**.
+
+**Previous Year Question List from this Topic:**
+
+- [(ক) কম্পিউটার সিস্টেমের কর্মক্ষমতার উপর প্রভাব রাখতে সক্ষম এরূপ ৩টি Component এর সংক্ষিপ্ত বর্ণনা দিন।](../written-answers/computer-fundamental.md?plain=1#L2434)
+- [(d) Mention and discuss some fectors that affect the processing speed a computer.](../written-answers/computer-fundamental.md?plain=1#L2605)
+- [How to solve laptop overheating problem?](../written-answers/computer-fundamental.md?plain=1#L2638)
+- [Suppose you are entering data into computer but facing some problem with your monitor. You need to buy a new monitor. What factor should you consider in case of…](../written-answers/computer-fundamental.md?plain=1#L2691)
+- [What do understand by the resolution of computer screen?](../written-answers/computer-fundamental.md?plain=1#L2351)
+- [Pixel number 130 হলে রেজুলেশন কত হবে?](../written-answers/computer-fundamental.md?plain=1#L2385)
+- [পিক্সেল ও রেজ্যুলেশন কি ব্যাখ্যা করুন।](../written-answers/computer-fundamental.md?plain=1#L2500)
+
+
+---
+
+## Software Types & Classification
+
+### Software — Types and Classification
+
+**Software** is the **set of programs, procedures and associated documentation** that tells the hardware what to do. It is the **logical, intangible** part of a computer system.
+
+```mermaid
+flowchart TD
+    S["SOFTWARE"] --> A["1 . SYSTEM SOFTWARE<br/>runs and manages the computer itself"]
+    S --> B["2 . APPLICATION SOFTWARE<br/>does work for the USER"]
+    S --> C["3 . UTILITY / SUPPORT SOFTWARE"]
+    A --> A1["Operating System<br/>Windows, Linux, macOS, Android"]
+    A --> A2["Device Drivers"]
+    A --> A3["Language Translators<br/>Compiler, Interpreter, Assembler"]
+    A --> A4["Firmware / BIOS"]
+    B --> B1["General purpose<br/>MS Word, Excel, browsers"]
+    B --> B2["Custom / Bespoke<br/>a bank's core banking system"]
+    C --> C1["Antivirus, disk cleanup,<br/>backup, compression"]
+```
+
+#### System software vs Application software
+
+| Point | **System Software** | **Application Software** |
+|---|---|---|
+| **Purpose** | **Manages and controls the computer hardware** and provides a platform | **Performs a specific task for the USER** |
+| **Works for** | **The computer itself** | **The user** |
+| **When it runs** | **Starts with the system** and runs continuously in the background | **Started by the user** when needed |
+| **Essential?** | ✅ **Yes — the computer cannot work without it** | ❌ No — the computer runs fine without it |
+| **Written in** | Usually **low-level languages** (C, assembly) for speed and hardware access | Usually **high-level languages** (Java, Python, C#) |
+| **Interaction** | Interacts **directly with hardware** | Interacts with the **user**, and reaches hardware **through the system software** |
+| **Independence** | Can run **independently** | **Depends on** system software |
+| **Size / complexity** | Generally large and complex, but general-purpose | Varies; task-specific |
+| **User awareness** | Mostly invisible to the user | The user works with it directly |
+| **Installation** | Usually pre-installed | Installed by the user as needed |
+| **Examples** | **Operating systems** (Windows, Linux, macOS, Android), **device drivers**, **compilers/assemblers/interpreters**, BIOS/firmware, utility programs | **MS Word, Excel, PowerPoint**, Chrome, Photoshop, VLC, WhatsApp, games, **banking software, Tally, AutoCAD** |
+
+#### Software vs Hardware
+
+| Point | **Hardware** | **Software** |
+|---|---|---|
+| **Nature** | **Physical, tangible** — you can touch it | **Logical, intangible** — a set of instructions |
+| **Made of** | Electronic and mechanical components | Code written by programmers |
+| **Wear and tear** | ✅ **Degrades physically** over time | ❌ **Does not wear out**, but it does become **obsolete** and accumulate bugs |
+| **If it fails** | **Repair or REPLACE** the part | **Reinstall, patch or update** |
+| **Virus affected?** | ❌ Not directly | ✅ **Yes** |
+| **Transfer** | Must be physically moved | **Copied instantly** over a network |
+| **Manufacturing cost** | High per unit — raw materials, factory | **Nearly zero per extra copy** after development |
+| **Development cost** | Design + manufacture | **Almost all the cost is development** |
+| **Dependency** | Useless without software | Cannot run without hardware |
+| **Examples** | CPU, RAM, monitor, keyboard, hard disk, printer | Windows, MS Office, Chrome, a compiler, a mobile app |
+
+> **They are inseparable:** *hardware without software is a lifeless box; software without hardware is an idea that cannot execute.*
+
+#### Platform-independent software
+
+**Platform-independent (cross-platform) software** runs on **multiple operating systems and hardware architectures without being rewritten**.
+
+**How it is achieved**
+
+| Method | How it works | Example |
+|---|---|---|
+| **Virtual machine / bytecode** | The source is compiled once to an **intermediate bytecode**, which a platform-specific **virtual machine** executes | **Java → bytecode → JVM** — "write once, run anywhere" |
+| **Interpreted languages** | The source is shipped as-is and interpreted by a platform-specific interpreter | **Python, JavaScript, Ruby, PHP** |
+| **Web applications** | The application runs inside the **browser**, which is the universal platform | Gmail, Google Docs, any web app |
+| **Cross-platform frameworks** | One code base compiled or rendered for each target | Flutter, React Native, Electron, Qt, .NET MAUI |
+| **Containers** | The app plus its dependencies ship together | **Docker** (across Linux hosts) |
+
+**Example explained — Java.** A Java program `Hello.java` is compiled by `javac` into **`Hello.class`, which contains bytecode, not machine code**. That same `.class` file runs unchanged on Windows, Linux, macOS or Android, because each platform has its **own JVM** that translates the bytecode into that machine's native instructions. **The bytecode is portable; the JVM is not.**
+
+**Advantages:** one code base to write and maintain; a much larger market; lower development cost; users are not locked to one OS.
+**Disadvantages:** usually **slower** than native code; cannot easily use platform-specific features; a larger download (the runtime must be present); and the look-and-feel may not match the host OS perfectly.
+
+**Previous Year Question List from this Topic:**
+
+- [What is the difference between System Software and Application Software?](../written-answers/computer-fundamental.md?plain=1#L2745)
+- [What is platform independent software discuss with example?](../written-answers/computer-fundamental.md?plain=1#L2764)
+- [Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?](../written-answers/computer-fundamental.md?plain=1#L2901)
+- [Differentiate between system software and application software.](../written-answers/computer-fundamental.md?plain=1#L3017)
+- [Define system software and application software with three examples of each.](../written-answers/computer-fundamental.md?plain=1#L3035)
+- [b) What are the main differences between software and hardware? Discuss with examples.](../written-answers/computer-fundamental.md?plain=1#L3057)
+
+
+---
+
+### Programming Languages and Their Levels
+
+| Level | Description | Machine dependence | Translator needed | Speed | Ease |
+|---|---|---|---|---|---|
+| **Machine language (1GL)** | Pure **binary** — 0s and 1s, the only language the CPU truly understands | **Fully machine dependent** | **None** | **Fastest** | Extremely hard |
+| **Assembly language (2GL)** | **Mnemonics** — MOV, ADD, SUB — one statement per machine instruction | Machine dependent | **Assembler** | Very fast | Hard |
+| **High-level language (3GL)** | English-like statements, hardware details hidden | **Machine INDEPENDENT** | **Compiler or Interpreter** | Slower | **Easy** |
+| **Very high level (4GL)** | Declarative — say *what*, not *how* | Independent | Interpreter/engine | Slower | Very easy |
+| **Natural / AI (5GL)** | Constraints and natural language | Independent | AI engine | — | Easiest |
+
+#### High-level vs Low-level languages
+
+| Point | **Low-Level Language** | **High-Level Language** |
+|---|---|---|
+| **Closeness to hardware** | **Very close** — direct register and memory access | **Far** — hardware details are abstracted away |
+| **Human readability** | **Difficult** — binary or cryptic mnemonics | **Easy** — English-like |
+| **Machine dependence** | **Machine DEPENDENT** — code written for one CPU will not run on another | **Machine INDEPENDENT / portable** |
+| **Translator** | Assembler (or none for machine code) | **Compiler or interpreter** |
+| **Execution speed** | **Fastest** | Slower |
+| **Memory efficiency** | **Highly efficient** — the programmer controls every byte | Less efficient |
+| **Development speed** | **Very slow**; many lines for a simple task | **Fast** — one line replaces many |
+| **Debugging & maintenance** | **Very difficult** | **Easy** |
+| **Error probability** | High | Lower |
+| **Used for** | **Device drivers, embedded systems, OS kernels, BIOS, real-time control**, performance-critical routines | **Applications, web, business software, games, data science** — almost everything |
+| **Examples** | **Machine code, Assembly (8085/8086, ARM, MIPS)** | **C, C++, Java, Python, C#, PHP, JavaScript, COBOL, FORTRAN** |
+
+*(**C is often called a "middle-level" language**, because it has high-level structure and readability but also allows low-level pointer and bit manipulation.)*
+
+#### Which language for which job
+
+| Task | Language |
+|---|---|
+| **Android application development** | **Java** (and **Kotlin**, now Google's preferred language) |
+| iOS application development | **Swift** (formerly Objective-C) |
+| Web front end | **JavaScript** (with HTML and CSS) |
+| Web back end | PHP, Python, Java, Node.js, C#, Go |
+| System / OS programming | **C, C++, Rust** |
+| Embedded systems | **C, Assembly** |
+| Data science and AI | **Python**, R |
+| Enterprise / banking back office | **Java, COBOL, C#** |
+| Databases | **SQL** |
+| Scientific computing | FORTRAN, Python, MATLAB |
+| **Teaching children / turtle graphics** | **LOGO** — an educational language famous for its "turtle" that draws shapes as it moves |
+
+**Previous Year Question List from this Topic:**
+
+- [Difference between High level languages and low level language with some example?](../written-answers/computer-fundamental.md?plain=1#L2788)
+- [Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS](../written-answers/computer-fundamental.md?plain=1#L2841)
+- [LOGO কি ধরনের প্রোগ্রাম?](../written-answers/computer-fundamental.md?plain=1#L2850)
+
+
+---
+
+### Common Application Software and Office Tools
+
+| Category | Software |
+|---|---|
+| **Word processing** | **MS Word**, Google Docs, LibreOffice Writer, WPS Writer |
+| **Spreadsheet / calculation** | **MS Excel**, Google Sheets, LibreOffice Calc |
+| **Presentation** | **MS PowerPoint**, Google Slides, Prezi |
+| **Database** | MS Access, MySQL, Oracle, SQL Server, PostgreSQL |
+| **Accounting** | **Tally**, QuickBooks, Zoho Books, SAP FI |
+| **Graphics design** | **Adobe Photoshop, Adobe Illustrator, CorelDRAW, Canva**, GIMP, Inkscape, Figma |
+| **Video editing** | Adobe Premiere Pro, Final Cut Pro, DaVinci Resolve, Filmora |
+| **Web browsing** | Chrome, Firefox, Edge, Safari |
+| **Email client** | Outlook, Thunderbird, Gmail |
+| **Bangla writing** | **Avro Keyboard, Bijoy Bayanno**, Ridmik |
+
+> **Which software is used for calculation work on a computer?** → a **SPREADSHEET** program, principally **Microsoft Excel**.
+>
+> **What is the grid of cells in a spreadsheet called?** → the **WORKSHEET** (or **spreadsheet**). Each individual box is a **CELL**, identified by its **column letter + row number** (A1, B5). A collection of worksheets in one file is a **WORKBOOK**.
+>
+> **LOGO** is an **educational programming language** designed to teach programming concepts to children through **turtle graphics**.
+>
+> **Bangla email software:** any standard email client can send Bangla once a **Unicode Bangla keyboard** such as **Avro** or **Bijoy** is installed — Avro is the most widely used free Bangla typing software in Bangladesh.
+
+#### MS Excel — the IF function
+
+The **IF** function returns one value when a condition is true and another when it is false:
+
+```
+=IF(logical_test, value_if_true, value_if_false)
+```
+
+**Examples using cells A1, B1, C1:**
+
+```excel
+=IF(A1>50, "Pass", "Fail")                     ' simple two-way test
+=IF(A1>B1, A1, B1)                             ' the larger of A1 and B1
+=IF(A1>=B1, IF(A1>=C1, A1, C1), IF(B1>=C1, B1, C1))   ' the largest of THREE — nested IF
+=IF(AND(A1>40, B1>40, C1>40), "All Passed", "Not all passed")
+=IF(OR(A1>90, B1>90), "Excellent", "Normal")
+=IF(A1="", "Empty", "Has data")                ' blank check
+=IFERROR(A1/B1, "Division error")              ' safe division
+```
+
+**A grade calculation with a nested IF:**
+```excel
+=IF(A1>=80,"A+", IF(A1>=70,"A", IF(A1>=60,"A-", IF(A1>=50,"B", IF(A1>=40,"C","F")))))
+```
+
+**Running MS Office from the Run dialog** (Windows + R): **`winword`** opens MS Word · **`excel`** opens Excel · **`powerpnt`** opens PowerPoint · **`msaccess`** opens Access · **`outlook`** opens Outlook · **`notepad`**, **`calc`**, **`mspaint`**, **`cmd`**, **`control`** for the Control Panel.
+
+**MS Word, Excel and PowerPoint together are classified as APPLICATION software** — specifically **general-purpose packaged application software**, sold as the **Microsoft Office suite**.
+
+**Previous Year Question List from this Topic:**
+
+- [Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?](../written-answers/computer-fundamental.md?plain=1#L2812)
+- [Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?](../written-answers/computer-fundamental.md?plain=1#L2826)
+- [MS-Excell এর IF Function ব্যবহার করে A1, B1, C1 থেকে ডাটা বের করে D1 এর মধ্যে রাখার ফাংশন লিখ।](../written-answers/computer-fundamental.md?plain=1#L2870)
+- [১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?](../written-answers/computer-fundamental.md?plain=1#L2929)
+- [Graphics Design এর চারটি Software এর নাম লিখ।](../written-answers/computer-fundamental.md?plain=1#L2937)
+- [Fill in the blank: (i) Run command to MS word open করবেন কিভাবে _____? (ii) MS Word, Excel, Spreadsheet Macro ব্যবহার করা হয় _____ সুবিধার জন্য। (iii) Spreadshe…](../written-answers/computer-fundamental.md?plain=1#L2951)
+
+
+---
+
+## Data Center Infrastructure & Power Management
+
+### Data Centre — Components and Design Factors
+
+A **data centre** is a **dedicated facility that houses an organisation's IT infrastructure** — servers, storage, networking equipment — together with the **power, cooling, security and connectivity** needed to keep it running continuously.
+
+#### The elements/components of a data centre
+
+```mermaid
+flowchart TD
+    DC["DATA CENTRE"]
+    DC --> IT["1 . IT INFRASTRUCTURE"]
+    DC --> PW["2 . POWER SYSTEM"]
+    DC --> CL["3 . COOLING SYSTEM"]
+    DC --> NW["4 . NETWORK & CONNECTIVITY"]
+    DC --> SEC["5 . PHYSICAL SECURITY"]
+    DC --> FIRE["6 . FIRE DETECTION & SUPPRESSION"]
+    DC --> MON["7 . MONITORING & MANAGEMENT (DCIM)"]
+    IT --> IT1["Servers · Storage (SAN/NAS) · Racks · Cabling"]
+    PW --> PW1["Utility feed · UPS · Generators · PDU · ATS · Batteries"]
+    CL --> CL1["CRAC/CRAH units · Chillers · Hot/cold aisles · Raised floor"]
+    NW --> NW1["Core & ToR switches · Routers · Firewalls · Load balancers · Redundant ISP links"]
+    SEC --> SEC1["Access control · Biometrics · CCTV · Mantrap · Guards"]
+    FIRE --> FIRE1["VESDA smoke detection · Clean-agent (FM-200/Novec) suppression"]
+    MON --> MON1["DCIM · BMS · NOC · Sensors · Alerting"]
+```
+
+| Component | Detail |
+|---|---|
+| **Servers & compute** | Rack-mounted or blade servers, virtualisation hosts |
+| **Storage** | SAN, NAS, disk arrays, tape/backup libraries |
+| **Racks & cabinets** | Standard **42U, 19-inch** racks with cable management |
+| **Network** | Core, aggregation and top-of-rack switches, routers, firewalls, structured cabling, **redundant ISP links** |
+| **Power** | Utility feed, **UPS** for instant backup, **diesel generators** for long outages, **PDUs**, **ATS (Automatic Transfer Switch)**, battery banks |
+| **Cooling / HVAC** | **CRAC/CRAH** units, chillers, cooling towers, **hot aisle / cold aisle containment**, raised floor, humidity control |
+| **Physical security** | Multi-layer access control, biometrics, **mantrap**, CCTV, 24×7 guards |
+| **Fire safety** | Very-early smoke detection (**VESDA**), **clean-agent** suppression (FM-200, Novec 1230 — water would destroy the equipment) |
+| **Environmental monitoring** | Temperature, humidity, water-leak and airflow sensors |
+| **Management** | **DCIM** software, a **BMS**, a **NOC**, ticketing and change management |
+| **Disaster recovery** | A **geographically separate DR site** with replication |
+
+#### The most important factors for a banking data centre
+
+| # | Factor | Why it matters in banking |
+|---|---|---|
+| 1 | **Availability / uptime** | Banking is 24×7; a **Tier III or Tier IV** design with N+1 or 2N redundancy is expected. Every minute of downtime is lost transactions and reputational damage |
+| 2 | **Security — physical and cyber** | Customer financial data is the highest-value target: multi-layer access, encryption, IDS/IPS, **SOC** monitoring |
+| 3 | **Regulatory compliance** | **Bangladesh Bank ICT Security Guideline**, **PCI-DSS** for cards, ISO 27001, data-localisation rules |
+| 4 | **Disaster Recovery / Business Continuity** | A **DR site in a different seismic and flood zone**, with defined **RPO and RTO**, and regular DR drills |
+| 5 | **Power reliability** | **Redundant utility feeds + UPS + N+1 generators**; a bank cannot tolerate a power gap |
+| 6 | **Cooling reliability** | Redundant CRAC units; overheating shuts down servers as surely as a power cut |
+| 7 | **Network redundancy** | Multiple ISPs over **diverse physical paths**, redundant core switches, no single point of failure |
+| 8 | **Data integrity and backup** | **Real-time replication**, tested restores, immutable/offline backups against ransomware |
+| 9 | **Scalability** | Room to grow as customers, branches and digital channels expand |
+| 10 | **Monitoring and 24×7 NOC/SOC** | Detect and respond before customers notice |
+| 11 | **Location** | Away from flood plains, industrial hazards and political risk; good connectivity and skilled staff nearby |
+| 12 | **Audit trail** | Every physical and logical access logged for regulators |
+
+#### National data centre
+
+A **national data centre** is a **government-owned, centralised data centre facility that hosts the IT systems, databases and e-services of the state**, providing shared, secure and sovereign infrastructure to all ministries and agencies instead of each building its own.
+
+**Purpose and benefits:** **data sovereignty** (citizen data stays inside the country) · **cost saving** through shared infrastructure · **uniform security and compliance** standards · **interoperability** between agencies · **disaster recovery** for critical national systems · foundation for e-government and **Digital Bangladesh**.
+
+**In Bangladesh:** the **National Data Center (NDC)** at the **Bangladesh Computer Council (BCC)**, and the **Tier IV National Data Center at Kaliakoir (Bangabandhu Hi-Tech City)** — one of the largest Tier IV facilities in the region — plus a **Disaster Recovery site in Jessore**.
+
+**Previous Year Question List from this Topic:**
+
+- [Describe the most important factors of data center for banking organization.](../written-answers/computer-fundamental.md?plain=1#L3112)
+- [What do you mean by national data center?](../written-answers/computer-fundamental.md?plain=1#L3168)
+- [Write down the element of data center.](../written-answers/computer-fundamental.md?plain=1#L3282)
+- [Explain the component of Data Center.](../written-answers/computer-fundamental.md?plain=1#L3336)
+
+
+---
+
+### Data Centre Tier Standards
+
+The **Uptime Institute Tier classification** rates a data centre's infrastructure **redundancy and availability** on a four-level scale.
+
+| | **Tier I** | **Tier II** | **Tier III** | **Tier IV** |
+|---|---|---|---|---|
+| **Name** | Basic capacity | Redundant components | **Concurrently maintainable** | **Fault tolerant** |
+| **Redundancy** | **N** (none) | **N + 1** (partial) | **N + 1** (full, with dual paths) | **2N or 2(N+1)** (fully duplicated) |
+| **Distribution paths** | **1** | **1** | **2** (one active, one alternate) | **2 ACTIVE** simultaneously |
+| **Uptime guarantee** | **99.671 %** | **99.741 %** | **99.982 %** | **99.995 %** |
+| **Downtime per year** | **28.8 hours** | **22 hours** | **1.6 hours** | **26.3 minutes** |
+| **Maintenance without shutdown?** | ❌ **No** — must shut down | ❌ Partly | ✅ **YES** — any component can be serviced with no downtime | ✅ Yes |
+| **Survives an unplanned failure?** | ❌ No | ❌ Limited | ⚠️ Mostly — but a single fault can still cause an outage | ✅ **YES — any single fault is absorbed automatically** |
+| **Cost** | Lowest | Low | High | **Highest** |
+| **Typical user** | Small business, startup | SME | **Most enterprises, banks** | **National infrastructure, stock exchanges, top-tier banks** |
+
+```mermaid
+flowchart TD
+    subgraph T1["TIER I — N, single path"]
+        U1["Utility"] --> UP1["UPS"] --> R1["Racks"]
+    end
+    subgraph T3["TIER III — N+1, dual path, one active"]
+        U3["Utility A"] --> UP3A["UPS A"] --> R3["Racks"]
+        U3B["Generator"] --> UP3B["UPS B (standby)"] -.->|"alternate path"| R3
+    end
+    subgraph T4["TIER IV — 2N, dual path, BOTH active"]
+        U4A["Utility A"] --> UP4A["UPS A"] --> R4["Racks"]
+        U4B["Utility B"] --> UP4B["UPS B"] --> R4
+        G4A["Generator A"] --> UP4A
+        G4B["Generator B"] --> UP4B
+    end
+```
+
+> **The essential distinction between Tier III and Tier IV:** Tier III is **concurrently maintainable** — you can service *any* component **on a planned basis** without downtime, because there is an alternate path. Tier IV is **fault tolerant** — it also survives an **unplanned, unexpected failure of any single component** with **no** interruption, because both paths are **simultaneously active**.
+
+**Previous Year Question List from this Topic:**
+
+- [What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.](../written-answers/computer-fundamental.md?plain=1#L3210)
+
+
+---
+
+### Data Centre Power — UPS, Generators and DCIM
+
+#### Online vs Offline UPS
+
+An **Uninterruptible Power Supply (UPS)** provides **instant battery backup** when mains power fails, and conditions the power while mains is present.
+
+| Point | **Offline / Standby UPS** | **Online / Double-Conversion UPS** |
+|---|---|---|
+| **Normal operation** | The load runs **directly on raw mains**; the inverter is idle | Mains → **rectifier → DC → inverter → AC** — the load **always** runs from the inverter |
+| **Transfer time** | **2–10 milliseconds** (there IS a brief gap) | **ZERO — no transfer at all**, because the inverter never stops |
+| **Power conditioning** | **Minimal** — spikes, sags and frequency variation pass through | **Complete** — the output is a clean, regulated, constant-voltage, constant-frequency sine wave, fully isolated from mains disturbance |
+| **Protection level** | Basic | **Highest** |
+| **Efficiency** | **Higher (95–98 %)** — no conversion loss in normal mode | Lower (85–95 %) — double conversion always costs energy |
+| **Heat generated** | Low | **High** |
+| **Cost** | **Low** | **High** |
+| **Size** | Small | Large |
+| **Used for** | **Home PCs, small offices**, non-critical loads | **Data centres, servers, medical equipment, telecom, banking systems** |
+| **Also called** | Standby UPS | True UPS / double-conversion UPS |
+
+*(A third type, the **Line-Interactive UPS**, sits between them: it adds **AVR (Automatic Voltage Regulation)** to correct voltage fluctuation without switching to battery, and is the usual choice for small servers and network equipment.)*
+
+> **For a data centre, an ONLINE UPS is mandatory**, because even a 5-millisecond gap can reboot a server, and because the double conversion completely isolates sensitive equipment from the poor mains quality common in Bangladesh.
+
+#### Generators for a data centre
+
+**UPS** covers **seconds to minutes** (batteries); a **diesel generator** covers **hours to days**. The **ATS (Automatic Transfer Switch)** starts the generator and transfers the load automatically when mains fails, while the UPS bridges the 10–60 second gap until the generator stabilises.
+
+> ### "For a data centre cooling system, which type of generator would you prefer — AC or DC?"
+>
+> **An AC generator (alternator) — a standard diesel-driven synchronous AC generator — is the correct choice.**
+>
+> **Reasons:**
+> 1. **Cooling equipment is AC.** CRAC units, chillers, compressors, pumps and blowers are driven by **three-phase AC induction motors**, which require an AC supply. A DC generator would need a large inverter to drive them, adding cost, loss and another failure point.
+> 2. **AC is the standard for power distribution** — it can be **transformed** to different voltages efficiently and distributed over the facility with low loss; DC cannot be transformed simply.
+> 3. **AC generators (alternators) are simpler and more reliable** — they have **no commutator or brushes** (in a brushless design), so there is far less wear, sparking and maintenance than a DC generator with its commutator.
+> 4. **Higher capacity and efficiency** at the megawatt scale required.
+> 5. **Easy synchronisation and paralleling** — several AC generators can be run in parallel to share load and provide N+1 redundancy.
+> 6. **Compatibility with the grid and the ATS**, and with the UPS input.
+> 7. **Availability, cost and serviceability** — AC diesel gensets are the industry standard and spares and technicians are readily available.
+>
+> **Specification points to add:** size the generator for the full cooling load **plus** the IT load with margin (cooling is often 30–40 % of total); prefer **three-phase, 400 V, 50 Hz**; provide **N+1 redundancy**; ensure **automatic start and transfer (ATS)** within 10 seconds; and keep **adequate fuel storage** with an automatic refill contract for extended outages.
+>
+> *(DC power **is** used inside data centres — telecom-style **48 V DC** distribution and DC-powered racks improve efficiency by removing conversion stages — but that DC is produced by **rectifiers from an AC source**, not by a DC generator, and it is not used for driving cooling machinery.)*
+
+#### DCIM — Data Center Infrastructure Management
+
+**DCIM** is **software that monitors, measures and manages a data centre's IT equipment together with its physical infrastructure** (power, cooling, space), bringing both worlds into a single view.
+
+**What DCIM does**
+
+| Function | Detail |
+|---|---|
+| **Asset management** | A complete inventory of every server, switch and rack, with location and lifecycle |
+| **Real-time monitoring** | Power draw, temperature, humidity, airflow, UPS and generator status |
+| **Capacity planning** | How much **space, power and cooling** remains; where the next server can safely go |
+| **Power management** | Per-rack and per-outlet power measurement, **PUE** calculation, cost allocation |
+| **Cooling optimisation** | Identifies hot spots and over-cooled zones; supports containment planning |
+| **Change management** | Plan and record every move, add and change |
+| **Alerting** | Threshold alarms before something fails |
+| **Reporting and compliance** | Energy, uptime and audit reports |
+
+**Benefits:** prevents outages by catching problems early · **reduces energy cost** · defers capital expenditure by using existing capacity fully · shortens fault diagnosis · supports audits and sustainability reporting.
+
+#### Energy efficiency and PUE
+
+> **PUE (Power Usage Effectiveness) = Total facility power ÷ IT equipment power**
+
+| PUE | Meaning |
+|---|---|
+| **1.0** | Perfect — every watt goes to IT (theoretically impossible) |
+| **1.1 – 1.2** | **Excellent** — modern hyperscale data centres (Google averages ~1.1) |
+| **1.5 – 1.8** | Typical modern enterprise data centre |
+| **2.0 – 3.0** | Poor / older facility — for every watt of computing, another one or two is spent on cooling and losses |
+
+#### Challenges in optimising data centre energy efficiency
+
+| # | Challenge | Explanation |
+|---|---|---|
+| 1 | **Cooling dominates consumption** | Cooling can be **30–50 %** of total power; every watt of IT power becomes a watt of heat that must be removed |
+| 2 | **Over-provisioning** | Infrastructure is sized for peak load and redundancy, so it runs far below capacity most of the time — and equipment is **least efficient at low load** |
+| 3 | **Idle and "zombie" servers** | Studies find **20–30 %** of servers doing no useful work, yet drawing 50–60 % of their peak power |
+| 4 | **Hot spots and air mixing** | Hot exhaust mixing with cold supply air forces over-cooling of the whole room to protect a few racks |
+| 5 | **Legacy equipment** | Older servers and CRAC units are far less efficient but expensive to replace |
+| 6 | **The redundancy vs efficiency conflict** | 2N redundancy means every component runs at **≤50 % load**, which is inefficient — but reliability cannot be sacrificed |
+| 7 | **Lack of measurement** | You cannot optimise what you do not measure; many facilities lack per-rack metering |
+| 8 | **Climate** | In a hot, humid country like Bangladesh, free-air cooling is rarely possible and dehumidification adds load |
+| 9 | **Rising power density** | AI and GPU racks now draw **30–100 kW per rack** versus 3–5 kW a decade ago, outrunning air cooling entirely |
+| 10 | **Uninterruptible power losses** | Double-conversion UPS and transformers each waste several percent |
+| 11 | **Split incentives / organisational silos** | The IT team buys the servers; the facilities team pays the electricity bill |
+| 12 | **Uptime risk aversion** | Nobody wants to be blamed for an outage caused by an efficiency experiment |
+
+**Solutions:** **hot-aisle/cold-aisle containment** · raise the supply air temperature (ASHRAE now allows up to 27 °C) · **virtualisation and consolidation** to raise server utilisation · decommission zombie servers · variable-speed fans and pumps · **free cooling / economisers** where climate allows · **liquid and immersion cooling** for high-density racks · high-efficiency **modular UPS** · DCIM monitoring with **per-rack metering** · renewable energy and heat reuse.
+
+#### Dynamic capacity provisioning
+
+**Dynamic capacity provisioning** is the practice of **automatically allocating and releasing computing resources in real time to match the actual workload**, instead of keeping a fixed amount of capacity permanently powered on.
+
+**How it works:** the system continuously monitors demand (CPU, memory, request rate); when load rises it **starts more virtual machines or containers and powers on more physical servers**; when load falls it **consolidates workloads onto fewer hosts and powers the rest down or puts them to sleep**.
+
+**Why it is essential for a data centre**
+
+1. **Energy saving** — idle servers still draw 50–60 % of peak power; turning them off is the single largest saving available.
+2. **Cost reduction** — less electricity, less cooling, deferred hardware purchases.
+3. **Handles demand spikes** — sale days, salary day, exam-result day.
+4. **Higher utilisation** — typical static data centres run at 10–20 % utilisation; dynamic provisioning can double or triple that.
+5. **Sustainability** — a direct reduction in carbon footprint.
+6. **Better SLA compliance** — capacity is added *before* performance degrades.
+7. **It is the foundation of cloud elasticity** — pay-per-use billing only works if capacity can actually be released.
+
+**Challenges:** the **provisioning delay** (a server takes minutes to boot), the risk of **thrashing** (constantly powering on and off), accurate **workload prediction**, **stateful applications** that cannot be moved easily, and the wear of frequent power cycling.
+
+**Previous Year Question List from this Topic:**
+
+- [To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost,…](../written-answers/computer-fundamental.md?plain=1#L3084)
+- [What are the challenges in optimizing energy efficiency of data centers? Explain!](../written-answers/computer-fundamental.md?plain=1#L3149)
+- [What is DCIM in a data center?](../written-answers/computer-fundamental.md?plain=1#L3187)
+- [What do you mean by dynamic capacity provisioning? Why it is essential for data center?](../written-answers/computer-fundamental.md?plain=1#L3258)
+- [Write down difference between Online UPS and Offline UPS.](../written-answers/computer-fundamental.md?plain=1#L3315)
+
+
+---
+
+## Server Hardware & Enterprise Systems
+
+### Server Hardware — Components and Selection
+
+A **server** is a computer built for **continuous, reliable, multi-user operation**, providing services (files, applications, databases, web pages) to **client** machines over a network.
+
+#### Server vs desktop computer
+
+| Point | **Server** | **Desktop PC** |
+|---|---|---|
+| **Purpose** | Serve **many users/clients** simultaneously | One user |
+| **Uptime** | **24 × 7 × 365** | A few hours a day |
+| **CPU** | **Multiple sockets**, many cores (Xeon, EPYC) | One socket, fewer cores |
+| **RAM** | **ECC (Error-Correcting Code)** memory, hundreds of GB to TB | Non-ECC, 8–64 GB |
+| **Storage** | **RAID arrays**, hot-swappable, SAS/NVMe | A single SSD/HDD |
+| **Power supply** | **Redundant, hot-swappable** | Single |
+| **Cooling** | Heavy-duty, redundant fans | Basic |
+| **Form factor** | **Rack (1U/2U), blade, tower** | Tower or all-in-one |
+| **Management** | **Out-of-band (iDRAC/iLO/IPMI)** — full remote control even when powered off | None |
+| **OS** | Windows Server, Linux (RHEL, Ubuntu Server), VMware ESXi | Windows/macOS desktop |
+| **Cost** | Very high | Moderate |
+
+#### Key hardware components of a server and their contribution
+
+| Component | Contribution to performance and reliability |
+|---|---|
+| **CPU (processor)** | **Multi-socket, many-core** (Xeon/EPYC) — determines how many concurrent workloads and VMs it can run. More cores and larger cache directly raise throughput |
+| **RAM — ECC memory** | Capacity determines how many VMs/databases fit in memory; **ECC automatically detects and corrects single-bit errors**, preventing silent data corruption and crashes — the single most important server-specific feature |
+| **Storage (HDD/SSD/NVMe)** | **The commonest bottleneck.** NVMe SSDs give the highest IOPS for databases; capacity HDDs for archives. Hot-swap bays allow replacement without downtime |
+| **RAID controller** | Combines drives for **redundancy (survives a disk failure) and performance (striping)**; a battery/flash-backed write cache accelerates writes safely |
+| **Network Interface Cards** | **Multiple 1/10/25/100 GbE ports**, teamed/bonded for **bandwidth and failover**; determines how fast clients are served |
+| **Motherboard / chipset** | Determines socket count, memory channels, PCIe lanes — the ceiling on everything else |
+| **Power Supply Units (PSU)** | **Redundant (1+1) and hot-swappable**, ideally fed from two separate circuits — removes a single point of failure |
+| **Cooling — fans and heat sinks** | Redundant, variable-speed fans prevent **thermal throttling** and hardware failure; a server runs hot 24×7 |
+| **Out-of-band management (iDRAC/iLO/IPMI)** | Remote power control, console, BIOS access, firmware update and hardware alerts **even when the OS is dead** — saves site visits and cuts MTTR |
+| **Expansion (PCIe slots)** | GPUs for AI, HBAs for SAN, additional NICs |
+| **Chassis / form factor** | Rack density, airflow, cable management, serviceability |
+| **TPM (Trusted Platform Module)** | Hardware root of trust for secure boot and disk encryption |
+
+#### What to check before buying a server
+
+| # | Consideration | Questions to ask |
+|---|---|---|
+| 1 | **Workload and purpose** | Web, database, file, virtualisation host, AI training? Each has a different bottleneck |
+| 2 | **Performance sizing** | Required cores, RAM, IOPS, network throughput — with headroom for **3–5 years** of growth |
+| 3 | **Scalability** | Can RAM, CPU, disks and NICs be added later? How many free slots and bays? |
+| 4 | **Reliability / redundancy** | Redundant PSU, ECC RAM, RAID, hot-swap drives and fans |
+| 5 | **Form factor and rack space** | Tower vs **rack (how many U?)** vs blade; does it fit the existing rack and airflow? |
+| 6 | **Power and cooling budget** | Watts drawn, heat produced, and whether the UPS, PDU and CRAC can support it |
+| 7 | **Storage strategy** | Internal disks, SAN/NAS attachment, RAID level, capacity and IOPS |
+| 8 | **Network requirement** | Port count and speed, redundancy, compatibility with existing switches |
+| 9 | **Operating system and software compatibility** | Is the OS and the application certified on this hardware? Are drivers available? |
+| 10 | **Virtualisation support** | VT-x/AMD-V, enough RAM and cores for the planned VM density |
+| 11 | **Management features** | iDRAC/iLO licence level, monitoring integration |
+| 12 | **Vendor, warranty and support** | **On-site SLA (e.g. 4-hour response)**, local spare-parts availability in Bangladesh, warranty length |
+| 13 | **Total Cost of Ownership (TCO)** | Purchase + power + cooling + licences + support over 5 years — **not just the sticker price** |
+| 14 | **Security features** | TPM, secure boot, firmware signing, physical locks |
+| 15 | **Compliance** | Meets Bangladesh Bank ICT guidelines / organisational standards |
+| 16 | **Future-proofing** | Latest CPU generation and PCIe/DDR standard, so upgrades remain possible |
+
+#### Server maintenance best practices
+
+**Routine physical maintenance**
+1. **Clean dust** from fans, filters, heat sinks and vents on a schedule — dust is the leading cause of overheating.
+2. Check and **test cooling and airflow**; keep blanking panels in empty rack slots.
+3. Inspect **cabling** and connectors; keep cable management tidy for airflow.
+4. **Test the UPS batteries and generator** under load regularly.
+5. Verify **environmental conditions** — temperature and humidity within ASHRAE limits.
+
+**Monitoring**
+6. Monitor **CPU, memory, disk, network and temperature** continuously with alerting thresholds.
+7. Review **hardware health logs** (predictive disk failure, ECC error counts, PSU status).
+8. Track **capacity trends** so upgrades happen before exhaustion.
+9. Keep a **24×7 NOC** or at least automated alerts to on-call staff.
+
+**Security and updates**
+10. Apply **security patches and firmware/BIOS updates** promptly, **after testing in a staging environment**.
+11. Review **user accounts and privileges** regularly; remove dormant accounts; enforce least privilege and MFA.
+12. Keep **antivirus/EDR** and firewall rules current; scan for vulnerabilities.
+13. Review **logs** for anomalies; retain them for audit.
+
+**Data protection**
+14. Follow the **3-2-1 backup rule**: **3** copies, on **2** different media, with **1** off-site.
+15. **Test restores regularly** — an untested backup is not a backup.
+16. Maintain and **rehearse the disaster recovery plan**.
+
+**Process discipline**
+17. Use **change management** — document every change, with a rollback plan.
+18. Maintain **up-to-date documentation and asset inventory**.
+19. Schedule maintenance in **agreed windows** with user notification.
+20. Track **hardware lifecycle** and plan replacement before end-of-support.
+
+#### SAS vs SATA
+
+| Point | **SAS (Serial Attached SCSI)** | **SATA (Serial ATA)** |
+|---|---|---|
+| **Designed for** | **Enterprise servers and storage arrays** | **Desktops and consumer devices** |
+| **Speed** | **12 Gb/s / 24 Gb/s** | 6 Gb/s |
+| **Rotational speed (HDD)** | **10,000 / 15,000 RPM** | 5,400 / 7,200 RPM |
+| **Reliability (MTBF)** | **~1.6 million hours** | ~700,000 hours |
+| **Duty cycle** | Designed for **24 × 7 at 100 % load** | Designed for ~8 hours a day |
+| **Error rate (UBER)** | **1 in 10¹⁶** — ten times better | 1 in 10¹⁵ |
+| **Full duplex** | ✅ **Yes** — read and write simultaneously | ❌ No — half duplex |
+| **Dual porting** | ✅ **Yes** — two independent paths to the drive, so a controller failure does not lose access | ❌ No |
+| **Command queueing** | **TCQ — up to 256 commands** | NCQ — 32 commands |
+| **Cable length** | Up to **10 m** | Up to 1 m |
+| **Devices per controller** | **Up to 65,535** (with expanders) | Typically 4–8 |
+| **Cost per GB** | **High** | **Low** |
+| **Capacity available** | Lower per drive | **Higher** per drive |
+| **Can mix?** | A SAS controller **can** run SATA drives; a SATA controller **cannot** run SAS drives | |
+
+> ### Which is best for a server?
+> **SAS is the better choice for a server**, and for the same reason in every case: it is **engineered for continuous, mission-critical, multi-user operation**. Its **dual porting** removes a single point of failure, its **full duplex** operation and deeper command queue handle the **random, concurrent I/O** that a database or virtualisation host generates, and its far **lower error rate and higher MTBF** mean less risk of data loss.
+>
+> **But the honest, complete answer is that it depends on the workload:**
+>
+> | Use case | Best choice |
+> |---|---|
+> | **Database, OLTP, virtualisation host, email server** — random I/O, high concurrency | **SAS** (or **NVMe SSD**, which is now better still) |
+> | **Backup, archive, file server, video surveillance storage, cold data** — sequential, capacity-driven | **SATA** — far cheaper per terabyte, and the performance is adequate |
+> | **Highest performance regardless of cost** | **NVMe SSD** — it bypasses the SAS/SATA controller entirely and connects over **PCIe**, giving an order of magnitude more IOPS |
+>
+> Most real servers use a **tiered mix**: NVMe/SAS SSD for hot data, SAS HDD for warm, and large SATA drives for cold data and backups.
+
+**Previous Year Question List from this Topic:**
+
+- [What should be checked before buying servers?](../written-answers/computer-fundamental.md?plain=1#L3584)
+- [Scenario based descriptive question for server related problem ( How do you handle those problem for your company )](../written-answers/computer-fundamental.md?plain=1#L3626)
+- [What are the key hardware components that make up a typical server, and how do they contribute to its overall performance and functionality?](../written-answers/computer-fundamental.md?plain=1#L3662)
+- [Discuss server maintenance best practices, including routine tasks like cleaning, monitoring, and applying security patches. How do these practices contribute t…](../written-answers/computer-fundamental.md?plain=1#L3682)
+- [Difference between SAS and SATA. Which one is best server?](../written-answers/computer-fundamental.md?plain=1#L3721)
+
+
+---
+
+## User Interfaces (CLI vs GUI)
+
+### Command Line Interface and Graphical User Interface
+
+#### What is a CLI?
+
+A **Command Line Interface (CLI)** is a **text-based user interface** in which the user interacts with the computer by **typing commands** at a prompt, and the system responds with text output.
+
+**Examples:** **Command Prompt (cmd.exe)** and **PowerShell** on Windows · **Bash, Zsh, sh** on Linux and macOS · the **Cisco IOS CLI** on routers and switches · **MySQL** and **psql** database shells · **git**, **docker** and **kubectl**.
+
+```
+$ ls -l                      # list files in long format
+$ cd /var/log                # change directory
+$ grep "error" system.log    # search for text
+$ ps aux | grep nginx        # find a running process
+$ mkdir backup && cp *.conf backup/
+```
+
+#### Characteristics of a CLI
+
+| Aspect | Detail |
+|---|---|
+| **Input** | Typed **commands** with options/flags and arguments |
+| **Output** | **Plain text** |
+| **Structure** | `command [options] [arguments]` — e.g. `cp -r source/ dest/` |
+| **Needs** | The user must **know the command names and syntax** |
+| **Power** | Commands can be **combined (pipes), scripted and automated** |
+
+#### CLI vs GUI — the comparison
+
+| Point | **CLI (Command Line Interface)** | **GUI (Graphical User Interface)** |
+|---|---|---|
+| **Interaction** | **Typing text commands** | **Clicking icons, menus, buttons, windows** |
+| **Learning curve** | **Steep** — commands must be memorised | **Gentle** — visual, discoverable, intuitive |
+| **Ease for a beginner** | Difficult | **Easy** |
+| **Speed for an expert** | **Much faster** — one line does what takes many clicks | Slower for repetitive work |
+| **Resource usage** | **Very low** — a few KB of memory, no graphics hardware | **High** — needs a graphics subsystem, more RAM and CPU |
+| **Precision and control** | **Maximum** — every option is exposed | Limited to what the designer exposed in the interface |
+| **Automation / scripting** | ✅ **Excellent** — the core strength; scripts, cron jobs, pipelines | ❌ **Poor** — clicking cannot easily be automated |
+| **Remote administration** | ✅ **Ideal** — works over a slow SSH link with almost no bandwidth | Needs remote desktop and far more bandwidth |
+| **Repeatability & documentation** | ✅ A command can be **copied, pasted, logged and audited** exactly | Hard to document "click here, then here" |
+| **Multitasking** | Multiple sessions, background jobs (`&`), `screen`/`tmux` | Multiple windows |
+| **Error messages** | Terse, sometimes cryptic | Usually friendly dialogs |
+| **Risk** | **Higher** — a mistyped `rm -rf /` executes instantly with no confirmation | Lower — confirmation dialogs and undo |
+| **Visual/graphical work** | ❌ Impossible — no images, drag and drop, or design work | ✅ **Essential** for design, video, browsing |
+| **Memory/disk footprint** | Tiny | Large |
+| **Used by** | System administrators, developers, network engineers, DevOps | **General users**, office workers |
+| **Examples** | Bash, PowerShell, cmd, Cisco IOS | Windows Explorer, macOS Finder, GNOME/KDE, any app window |
+
+#### When each is preferred
+
+**Use the CLI when:** administering a **server** (most servers run with no GUI at all, to save resources); **automating** anything repetitive; working **remotely over SSH**; you need exact, auditable, repeatable operations; working with **version control, containers and cloud tooling**; or troubleshooting a system whose GUI has failed.
+
+**Use the GUI when:** the user is a **non-technical end user**; the work is inherently **visual** (design, video, presentations, browsing); you are **exploring** an unfamiliar system and need discoverability; or you need to see **many things at once** in different windows.
+
+> **In practice, professionals use both.** A Linux administrator may run a graphical desktop for the browser and documentation, while doing every administrative task in a terminal. Most modern tools (Git, Docker, cloud consoles) deliberately provide **both** a GUI for learning and a CLI for automation.
+
+**Previous Year Question List from this Topic:**
+
+- [What is CLI?](../written-answers/computer-fundamental.md?plain=1#L3896)
+
+## Blockchain & Emerging Technologies
+
+### Blockchain — Concept and How It Works
+
+**Blockchain** is a **distributed, decentralised, immutable digital ledger** that records transactions across a **peer-to-peer network of computers**, in such a way that a recorded transaction **cannot be altered retroactively** without altering every block after it and gaining the agreement of the network majority.
+
+> **A distributed ledger maintained on a peer-to-peer network is called a BLOCKCHAIN** (more generally, **Distributed Ledger Technology — DLT**).
+
+**In plain words:** imagine a shared notebook that **thousands of people each hold an identical copy of**. Every new entry is announced to everyone, checked by everyone, and then written into **all** copies simultaneously. To forge an entry you would have to change **every copy at once** — which is practically impossible. There is **no bank, no government and no single company** in the middle; **trust comes from mathematics and from the majority of the network**, not from an authority.
+
+#### The structure of a block
+
+```mermaid
+flowchart LR
+    B1["BLOCK 1 (Genesis)<br/>─────────────<br/>Prev Hash: 0000<br/>Data: transactions<br/>Timestamp · Nonce<br/>Hash: 00a3f…"]
+    B2["BLOCK 2<br/>─────────────<br/>Prev Hash: 00a3f…<br/>Data: transactions<br/>Timestamp · Nonce<br/>Hash: 00b7c…"]
+    B3["BLOCK 3<br/>─────────────<br/>Prev Hash: 00b7c…<br/>Data: transactions<br/>Timestamp · Nonce<br/>Hash: 00d9e…"]
+    B1 --> B2 --> B3
+```
+
+| Field | Purpose |
+|---|---|
+| **Block number / index** | Its position in the chain |
+| **Timestamp** | When the block was created |
+| **Data / Transactions** | The actual records (usually organised as a **Merkle tree**, whose root hash summarises them all) |
+| **Previous block's hash** | **The link that forms the chain** — this is what makes tampering detectable |
+| **Nonce** | A number miners vary to find a valid hash (Proof of Work) |
+| **Own hash** | A **SHA-256** fingerprint of everything above |
+
+#### How blockchain works — step by step
+
+```mermaid
+flowchart TD
+    A["1 . A user REQUESTS a transaction<br/>(send 5 BTC to X)"] --> B["2 . The transaction is BROADCAST<br/>to the peer-to-peer network"]
+    B --> C["3 . Nodes VALIDATE it<br/>— signature, balance, rules"]
+    C --> D["4 . Valid transactions are grouped<br/>into a new BLOCK"]
+    D --> E["5 . CONSENSUS — miners/validators compete<br/>(Proof of Work / Proof of Stake)"]
+    E --> F["6 . The winning block is BROADCAST<br/>and verified by every node"]
+    F --> G["7 . The block is APPENDED to the chain<br/>and linked by the previous hash"]
+    G --> H["8 . Every node UPDATES its copy<br/>— the transaction is now permanent"]
+```
+
+#### The core concepts
+
+| Concept | Meaning |
+|---|---|
+| **Distributed ledger** | Every node holds a **full copy**; there is no master copy |
+| **Decentralisation** | **No single controlling authority** or point of failure |
+| **Cryptographic hashing (SHA-256)** | Any change to a block changes its hash completely — the **avalanche effect** |
+| **Immutability** | Because each block stores the previous block's hash, changing block 50 invalidates 51, 52, 53 … |
+| **Consensus mechanism** | The rule by which the network agrees on the next block — **PoW, PoS, PBFT, PoA** |
+| **Digital signature** | Each transaction is signed with the sender's **private key** and verified with their **public key** |
+| **Smart contract** | Self-executing code stored on the chain that runs automatically when conditions are met (Ethereum) |
+| **Merkle tree** | A hash tree summarising all transactions in a block into a single root hash |
+| **Mining** | Solving the computational puzzle to earn the right to add the next block |
+
+#### Consensus mechanisms
+
+| Mechanism | How it works | Used by | Trade-off |
+|---|---|---|---|
+| **Proof of Work (PoW)** | Miners race to find a nonce that makes the block hash start with enough zeros | **Bitcoin** | Extremely **secure** but consumes enormous **energy** |
+| **Proof of Stake (PoS)** | Validators are chosen in proportion to the coins they "stake" as collateral | **Ethereum (since 2022)**, Cardano | ~99.9 % less energy; risk of favouring the wealthy |
+| **Delegated PoS** | Token holders elect a small set of validators | EOS, TRON | Fast but more centralised |
+| **PBFT / Raft** | Voting among a known set of nodes | **Hyperledger Fabric** (private chains) | Very fast; requires known participants |
+| **Proof of Authority** | Pre-approved, identified validators | Private/consortium chains | Fast, but trust is placed in the authorities |
+
+#### Why blockchain is secure
+
+1. **Cryptographic chaining.** Each block contains the hash of the previous one, so altering any past block **breaks every subsequent link**, and the tampering is instantly visible.
+2. **Distributed copies.** Thousands of nodes hold identical copies; an attacker must change them **all simultaneously**.
+3. **Consensus requirement.** To rewrite history an attacker needs control of **more than 50 % of the network's hash power or stake** — the **"51 % attack"** — which for Bitcoin would cost billions of dollars and be economically irrational.
+4. **Proof of Work cost.** Re-mining a changed block **and every block after it**, faster than the honest network extends the chain, is computationally infeasible.
+5. **Digital signatures.** Only the holder of the **private key** can authorise a transfer; forging a signature is cryptographically impossible.
+6. **Transparency and auditability.** Every participant can verify the whole history independently, so fraud is detected immediately.
+7. **No single point of failure.** There is no central server to hack, bribe or shut down.
+8. **Immutability by design.** Records are **append-only** — data can be added but never silently edited or deleted.
+
+#### Types of blockchain
+
+| Type | Access | Example | Use |
+|---|---|---|---|
+| **Public (permissionless)** | Anyone can join, read and validate | **Bitcoin, Ethereum** | Cryptocurrency, DeFi, NFTs |
+| **Private (permissioned)** | Only invited members of one organisation | Hyperledger Fabric | Internal enterprise records |
+| **Consortium / Federated** | A group of organisations jointly control it | Trade-finance networks, **R3 Corda** | Inter-bank settlement, supply chains |
+| **Hybrid** | Some data public, some private | — | Regulated industries |
+
+#### Top benefits of blockchain
+
+1. **Security** — cryptographically protected and tamper-evident.
+2. **Transparency** — all participants see the same verified record.
+3. **Immutability** — a permanent, auditable history.
+4. **Decentralisation** — no single point of failure or control.
+5. **No intermediaries** — removes brokers, clearing houses and correspondent banks, cutting **cost and time**.
+6. **Faster settlement** — cross-border payments in minutes instead of 3–5 days.
+7. **Traceability** — full provenance of every asset from origin to destination.
+8. **Automation through smart contracts** — payment releases automatically when a shipment is delivered.
+9. **Reduced fraud** — records cannot be quietly altered.
+10. **Availability** — 24×7, with no downtime from a central server.
+
+#### Limitations
+
+**Scalability** — Bitcoin handles about 7 transactions per second and Ethereum about 15–30, against Visa's ~24,000. **Energy consumption** of Proof of Work is enormous. **Storage growth** — every node stores the entire history. **Irreversibility** — a mistaken or fraudulent transfer cannot be undone. **Regulatory uncertainty** and legal status. **Privacy** — a public ledger exposes transaction patterns. **Key management** — lose your private key and the assets are gone forever. **Complexity and skills shortage**. **The 51 % risk** on small networks.
+
+#### Traditional database vs Blockchain
+
+| Point | **Traditional Database** | **Blockchain** |
+|---|---|---|
+| **Control** | **Centralised** — one administrator/organisation | **Decentralised** — shared across all participants |
+| **Architecture** | Client–server | **Peer-to-peer** |
+| **Operations** | **CRUD** — Create, Read, **Update, Delete** | **Only INSERT and READ** — append-only |
+| **Data modification** | Records can be **edited or deleted** by an admin | **Immutable** — nothing can be altered or removed |
+| **Trust model** | You must **trust the administrator** | **Trustless** — trust the protocol and the majority |
+| **Transparency** | Restricted; visible to authorised users only | **Full transparency** to all participants (in a public chain) |
+| **Performance** | **Very high** — thousands to millions of TPS | **Low** — 7 to a few thousand TPS |
+| **Storage cost** | One copy | **Replicated on every node** — far more expensive |
+| **Data integrity** | Depends on the admin's controls | **Cryptographically guaranteed** |
+| **Single point of failure** | ✅ Yes | ❌ No |
+| **History / audit** | Can be overwritten; audit logs can be tampered with by an admin | **Complete, permanent, verifiable history** |
+| **Best for** | High-volume business applications, where one trusted owner exists | Multi-party situations where **participants do not fully trust each other** |
+
+> **When should you NOT use blockchain?** If there is a single trusted owner of the data, if the data must be edited or deleted (GDPR "right to be forgotten"), if you need high throughput, or if no multiple parties are involved — **a normal database is better, cheaper and faster.** Blockchain earns its cost only when **mutual distrust between parties** is the core problem.
+
+#### Applications of blockchain
+
+| Sector | Application |
+|---|---|
+| **Finance** | Cryptocurrency, **cross-border remittance**, trade finance and letters of credit, settlement, DeFi |
+| **Banking** | KYC sharing between banks, syndicated loans, bond issuance, audit trails |
+| **Supply chain** | Provenance and traceability — food safety, pharmaceuticals, **garment supply chain (highly relevant to Bangladesh's RMG exports)** |
+| **Government** | **Land registry**, birth/death records, digital identity, **tamper-proof voting** |
+| **Healthcare** | Secure, patient-controlled medical records; drug authenticity |
+| **Education** | Verifiable digital certificates and degrees — instantly checkable, impossible to forge |
+| **Energy** | Peer-to-peer solar energy trading |
+| **Legal** | Smart contracts, notarisation, intellectual-property registration |
+| **Insurance** | Automatic parametric claim settlement |
+| **Charity/aid** | Transparent tracking of donations and relief funds |
+
+**Previous Year Question List from this Topic:**
+
+- [What is Blockchain technology? How it works?](../written-answers/computer-fundamental.md?plain=1#L3376)
+- [What is blockchain technology? Why it is more secure( Such type)](../written-answers/computer-fundamental.md?plain=1#L3409)
+- [Write about Blockchain.](../written-answers/computer-fundamental.md?plain=1#L3428)
+- [What is Blockchain? How does work it? Mention 5 top benefits of blockchain. Write down the difference between Traditional banking and Digital banking.](../written-answers/computer-fundamental.md?plain=1#L3457)
+- [A distributive ledger in a peer-to-peer network is called?](../written-answers/computer-fundamental.md?plain=1#L3489)
+- [(a) Write short note on (i) Blockchain technology (ii) Cloud Computing](../written-answers/computer-fundamental.md?plain=1#L3497)
+- [Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT](../written-answers/computer-fundamental.md?plain=1#L3517)
+- [Write short note on the folloing topics](../written-answers/computer-fundamental.md?plain=1#L3544)
+
+
+---
+
+### Other Emerging Technology Short Notes
+
+#### Digital signature
+
+A **digital signature** is a **cryptographic mechanism that verifies the authenticity and integrity of a digital message or document**, and proves who created it.
+
+```mermaid
+flowchart LR
+    subgraph SIGN["SIGNING — by the sender"]
+        D["Document"] --> H1["Hash function<br/>SHA-256"]
+        H1 --> HD["Message digest"]
+        HD --> E["Encrypt with the<br/>SENDER'S PRIVATE KEY"]
+        E --> S["DIGITAL SIGNATURE"]
+    end
+    subgraph VERIFY["VERIFICATION — by the receiver"]
+        S2["Signature"] --> DE["Decrypt with the<br/>SENDER'S PUBLIC KEY"]
+        DE --> HD2["Digest A"]
+        D2["Received document"] --> H2["Hash function"]
+        H2 --> HD3["Digest B"]
+        HD2 --> C{"A = B ?"}
+        HD3 --> C
+        C -->|Yes| OK["✅ Authentic and unaltered"]
+        C -->|No| BAD["❌ Forged or tampered"]
+    end
+```
+
+**What it guarantees:**
+
+| Property | Meaning |
+|---|---|
+| **Authentication** | Proves **who** signed it — only the holder of the private key could have |
+| **Integrity** | Proves the document **has not been changed** — any change alters the hash |
+| **Non-repudiation** | The signer **cannot later deny** having signed it |
+
+**Note:** a digital signature does **not** provide **confidentiality** — the document itself is still readable unless it is separately encrypted.
+
+**Handwritten vs digital signature:** a handwritten signature is the same on every document and can be copied; a **digital signature is different for every document** (because it depends on the document's hash) and cannot be transferred to another document.
+
+**Uses:** e-tender and e-GP submissions, e-banking instructions, software code signing, SSL/TLS certificates, legally valid e-documents (recognised in Bangladesh under the **ICT Act 2006**), email signing (S/MIME, PGP).
+
+#### Internet of Things (IoT)
+
+**IoT** is a network of **physical objects embedded with sensors, software and connectivity** that collect and exchange data over the Internet, with little or no human intervention.
+
+**Architecture:** **Perception layer** (sensors and actuators) → **Network layer** (Wi-Fi, 4G/5G, LoRaWAN, Zigbee, Bluetooth) → **Edge/Fog layer** (local gateways) → **Cloud/Application layer** (storage, analytics, dashboards).
+
+**Applications:** smart home (lights, AC, locks), **smart agriculture** (soil moisture, automated irrigation), **smart metering** for electricity and gas, healthcare wearables, industrial predictive maintenance, smart city traffic and waste management, vehicle and fleet tracking, **cold-chain monitoring**.
+
+**Challenges:** **security** (billions of weakly protected devices — the Mirai botnet built from IoT cameras), **privacy**, lack of **standards and interoperability**, **power** for remote sensors, network coverage, and the sheer **volume of data** generated.
+
+#### Microcontroller
+
+A **microcontroller** is a **complete small computer on a single chip** — CPU + memory (RAM and flash) + input/output ports — designed to control one specific embedded task.
+
+| Point | **Microprocessor** | **Microcontroller** |
+|---|---|---|
+| **Contains** | Only the **CPU** | **CPU + RAM + ROM/Flash + I/O ports + timers + ADC** |
+| **External components** | Needs external memory and I/O chips | **Self-contained** — a "computer on a chip" |
+| **Cost** | Higher | **Very low** |
+| **Power consumption** | High | **Very low** |
+| **Clock speed** | GHz | MHz |
+| **Purpose** | **General purpose** computing | **Dedicated, embedded control** |
+| **Examples** | Intel Core i7, AMD Ryzen, ARM Cortex-A | **8051, AVR (Arduino), PIC, ESP32, ARM Cortex-M** |
+| **Used in** | PCs, laptops, servers, smartphones | Washing machines, microwave ovens, cars, **IoT devices**, remote controls, medical devices |
+
+#### Genetic algorithm
+
+A **genetic algorithm (GA)** is an **optimisation and search technique inspired by natural evolution and Darwin's "survival of the fittest"**.
+
+```mermaid
+flowchart LR
+    A["1 . Initial POPULATION<br/>random candidate solutions"] --> B["2 . FITNESS evaluation<br/>score each solution"]
+    B --> C["3 . SELECTION<br/>pick the fittest as parents"]
+    C --> D["4 . CROSSOVER<br/>combine two parents"]
+    D --> E["5 . MUTATION<br/>random small changes"]
+    E --> F{"Good enough<br/>or max generations?"}
+    F -->|No| B
+    F -->|Yes| G["Best solution found"]
+```
+
+**Terminology:** a **chromosome** is one candidate solution (often encoded as a bit string); a **gene** is one element of it; the **fitness function** measures how good a solution is; **crossover** mixes two parents; **mutation** introduces random variation to avoid getting stuck in a local optimum.
+
+**Used for:** the Travelling Salesman Problem, timetable and exam scheduling, neural-network architecture search, engineering design optimisation, route and network planning, feature selection in machine learning, and portfolio optimisation.
+
+**Advantages:** works on problems with **no known mathematical formula**; escapes **local optima** better than hill climbing; naturally parallel. **Disadvantages:** gives a **good** answer, not a **provably optimal** one; computationally expensive; needs careful tuning of population size, crossover and mutation rates.
+
+#### COCOMO
+
+**COCOMO (COnstructive COst MOdel)**, developed by **Barry Boehm (1981)**, is an **algorithmic model for estimating the effort, time and cost of a software project** from its estimated size in **KLOC (thousands of lines of code)**.
+
+> **Effort (person-months) E = a × (KLOC)^b**
+> **Development time (months) D = c × E^d**
+
+| Project type | Description | a | b | c | d |
+|---|---|---|---|---|---|
+| **Organic** | Small team, familiar problem, flexible requirements | **2.4** | **1.05** | 2.5 | 0.38 |
+| **Semi-detached** | Medium size, mixed experience, moderate constraints | **3.0** | **1.12** | 2.5 | 0.35 |
+| **Embedded** | Large, complex, tight hardware/regulatory constraints | **3.6** | **1.20** | 2.5 | 0.32 |
+
+**Worked example:** an **organic** project estimated at **40 KLOC**:
+- Effort E = 2.4 × 40^1.05 = 2.4 × 47.9 ≈ **115 person-months**
+- Time D = 2.5 × 115^0.38 ≈ 2.5 × 6.06 ≈ **15 months**
+- Average staff = E ÷ D = 115 ÷ 15 ≈ **8 people**
+
+**The three levels:** **Basic** (size only), **Intermediate** (adds 15 cost drivers such as product complexity, team capability and tool support), and **Detailed** (applies the drivers phase by phase). **COCOMO II** (1995) updates it for modern reuse-based and object-oriented development.
+
+**Limitation:** it depends entirely on an accurate **estimate of KLOC**, which is notoriously hard to make early in a project — the core weakness of all size-based estimation.
+
+#### Query optimisation
+
+**Query optimisation** is the process by which a **DBMS finds the most efficient way to execute a given SQL query** — the **execution plan** that returns the correct result with the least cost in disk I/O, CPU and memory.
+
+**Why it is needed:** SQL is **declarative** — you state *what* data you want, not *how* to get it. For a join of three tables there may be **dozens of possible execution plans** whose running times differ by a factor of thousands. The optimiser's job is to pick a good one.
+
+**The process:** **Parsing** → **Translation** into relational algebra → **Optimisation** (generate candidate plans and estimate their cost using table statistics) → **Execution**.
+
+**Common techniques:** push **selections and projections down** the tree so that less data flows upward · choose the best **join order** (join the most selective tables first) · choose the best **join algorithm** (nested loop, hash join, sort-merge) · use available **indexes** instead of full table scans · eliminate redundant sub-queries · use **materialised views** and cached plans.
+
+**What a developer can do:** create appropriate **indexes**; avoid `SELECT *`; avoid functions on indexed columns in the `WHERE` clause (they prevent index use); filter **before** joining; keep **statistics up to date**; and read the **`EXPLAIN` / execution plan** to see what the optimiser actually chose.
+
+**Previous Year Question List from this Topic:**
+
+- [(a) Write short note on (i) Blockchain technology (ii) Cloud Computing](../written-answers/computer-fundamental.md?plain=1#L3497)
+- [Write short notes on the following: (a) Digital Signature (b) Cloud Computing (c) Block Chain (d) TOT](../written-answers/computer-fundamental.md?plain=1#L3517)
+- [Write short note on the folloing topics](../written-answers/computer-fundamental.md?plain=1#L3544)
+- [Write short answer on the following: (a) Plaintext (b) HTTP (c) Gateway used in \underline{\phantom{\text{Network}}} layer. (d) VIRUS full form (e) Who is the f…](../written-answers/computer-fundamental.md?plain=1#L458)
+- [Describe about Firewalls, Microcontroller, COCOMO, Query Optimization, Genetic algorithm and UML.](../written-answers/computer-fundamental.md?plain=1#L919)
