@@ -1091,4 +1091,6 @@ A **Turing Machine** is the most powerful model: a finite control unit with a **
 
 **Previous Year Question List from this Topic:**
 
-- [Write difference between compiler and interpreter.](../written-answers/compiler-and-toc.md?plain=1#L916)
+- [Write difference between compiler and interpreter.](../written-answers/compiler-and-toc.md?plain=1#L917)
+- [What are the components of finite automation model? Difference between DFA and NFA.](../written-answers/compiler-and-toc.md?plain=1#L229)
+- [How CFG to represent a palindrome number?](../written-answers/compiler-and-toc.md?plain=1#L545)
