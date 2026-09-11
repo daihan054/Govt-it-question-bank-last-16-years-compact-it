@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 8 subtopics · 45 theories
+**Table of Contents** — 9 subtopics · 47 theories
 
 1. **[Sorting Algorithms & Complexity](#sorting-algorithms--complexity)**
    - [Sorting — Concepts and Classification](#sorting--concepts-and-classification)
@@ -61,6 +61,10 @@
    - [0/1 Knapsack vs Fractional Knapsack](#01-knapsack-vs-fractional-knapsack)
    - [Activity Selection / Interval Scheduling](#activity-selection--interval-scheduling)
    - [Greedy vs Optimal Cost — Measuring the Gap](#greedy-vs-optimal-cost--measuring-the-gap)
+
+9. **[Searching & Graph Algorithms](#searching--graph-algorithms)**
+   - [Prime Numbers — Checking and Generating](#prime-numbers--checking-and-generating)
+   - [Binary Search Tree — Construction, Traversal and Search](#binary-search-tree--construction-traversal-and-search)
 
 <!-- TOC END -->
 
@@ -3426,25 +3430,18 @@ flowchart LR
 
 Capacity **W = 10**:
 
-| Item | Value | Weight | Ratio |
+| Item | Value | Weight | Ratio (v/w) |
 |---|---|---|---|
-| A | 60 | 5 | **12** |
-| B | 50 | 5 | 10 |
-| C | 55 | 6 | 9.17 |
-
-- **Greedy by ratio:** take A (ratio 12, weight 5) → 5 capacity left → take B (ratio 10, weight 5) → full. **Total = 110.**
-  *That is actually optimal here — so try a different set:*
-
-Capacity **W = 10**:
-
-| Item | Value | Weight | Ratio |
-|---|---|---|---|
-| A | 60 | 6 | **10** |
+| A | 60 | 6 | 10 |
 | B | 50 | 5 | 10 |
 | C | 50 | 5 | 10 |
 
-- **Greedy:** takes A first (weight 6) → 4 capacity left → neither B nor C (weight 5) fits → **total = 60**, with **4 units of capacity wasted**.
-- **Optimal:** take B + C (weight 5 + 5 = 10) → **total = 100**.
+All three items have the same ratio, so greedy breaks the tie by taking the first — **item A**.
+
+- **Greedy:** take A (weight 6) → only **4** units of capacity remain → neither B nor C (weight 5 each) fits → **total value = 60**, with **4 units of capacity wasted**.
+- **Optimal:** take **B + C** (weight 5 + 5 = 10, a perfect fit) → **total value = 100**.
+
+Greedy loses **40 % of the achievable value** on this tiny instance.
 
 > **The reason greedy fails:** in the 0/1 version the knapsack can be left **partially empty**, and that wasted capacity is what greedy cannot reason about. In the fractional version there is never any waste — the bag is always filled exactly.
 
@@ -3653,3 +3650,246 @@ Coins {1, 7, 10}, target **15**.
 
 - [What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. (Full question collect সম্ভব হয় নি)](../written-answers/algorithm.md?plain=1#L3276)
 - [(b) Does greedy algorithm always achieve optimal solution? If not, when does greedy approach achieve optimal solution?](../written-answers/algorithm.md?plain=1#L2817)
+
+## Searching & Graph Algorithms
+
+### Prime Numbers — Checking and Generating
+
+A **prime number** is a natural number **greater than 1** that has **exactly two divisors: 1 and itself**. Examples: 2, 3, 5, 7, 11, 13, 17, 19, 23 …
+
+**Important facts for the exam:**
+- **1 is NOT a prime** (it has only one divisor) and **not composite** either.
+- **2 is the only even prime**, and the smallest prime.
+- There are **infinitely many primes** (proved by Euclid).
+
+#### Method 1 — naive check, O(n)
+
+```c
+int isPrime(int n) {
+    if (n <= 1) return 0;
+    for (int i = 2; i < n; i++)
+        if (n % i == 0) return 0;   /* found a divisor → not prime */
+    return 1;
+}
+```
+
+#### Method 2 — the optimised √n check (this is the one to write)
+
+> **Key insight:** if n = a × b, then one of the factors must be **≤ √n**. If no divisor exists up to √n, none exists at all. So checking beyond √n is wasted work.
+
+```c
+#include <stdio.h>
+
+int isPrime(int n) {
+    if (n <= 1)      return 0;          /* 0, 1 and negatives are not prime */
+    if (n <= 3)      return 1;          /* 2 and 3 are prime                */
+    if (n % 2 == 0 || n % 3 == 0) return 0;
+
+    /* check divisors of the form 6k ± 1 up to sqrt(n) */
+    for (int i = 5; i * i <= n; i += 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return 0;
+    return 1;
+}
+
+int main(void) {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("%d is %s\n", n, isPrime(n) ? "a prime number" : "not a prime number");
+    return 0;
+}
+```
+
+**Time complexity: O(√n).** For n = 1,000,000 this is about **1,000** checks instead of 1,000,000.
+
+*(The `6k ± 1` trick: every prime greater than 3 has the form 6k−1 or 6k+1, because 6k, 6k+2, 6k+4 are divisible by 2 and 6k+3 by 3. This skips two-thirds of the candidates.)*
+
+#### Method 3 — printing all primes from 1 to n
+
+**Simple version — O(n√n):**
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
+    printf("Prime numbers from 1 to %d:\n", n);
+    for (int num = 2; num <= n; num++) {
+        int prime = 1;
+        for (int i = 2; i * i <= num; i++)
+            if (num % i == 0) { prime = 0; break; }
+        if (prime) printf("%d ", num);
+    }
+    return 0;
+}
+```
+
+#### Method 4 — Sieve of Eratosthenes, O(n log log n)
+
+The **best** way to list every prime up to n. Instead of testing each number, **cross out the multiples** of each prime.
+
+```
+SieveOfEratosthenes(n):
+    create isPrime[0..n], all set to TRUE
+    isPrime[0] = isPrime[1] = FALSE
+
+    for p = 2 to sqrt(n):
+        if isPrime[p] == TRUE:
+            for multiple = p*p to n step p:      // start at p*p, not 2p
+                isPrime[multiple] = FALSE
+
+    print every i where isPrime[i] == TRUE
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+void sieve(int n) {
+    char isPrime[n + 1];
+    memset(isPrime, 1, sizeof(isPrime));
+    isPrime[0] = isPrime[1] = 0;
+
+    for (int p = 2; (long)p * p <= n; p++)
+        if (isPrime[p])
+            for (int m = p * p; m <= n; m += p)
+                isPrime[m] = 0;
+
+    for (int i = 2; i <= n; i++)
+        if (isPrime[i]) printf("%d ", i);
+}
+```
+
+**Worked trace for n = 30:**
+
+| Step | Prime p | Cross out | Remaining candidates |
+|---|---|---|---|
+| Start | — | — | 2 3 4 5 6 … 30 |
+| 1 | **2** | 4, 6, 8, 10, … 30 | 2 3 5 7 9 11 13 15 … 29 |
+| 2 | **3** | 9, 12, 15, 18, 21, 24, 27, 30 | 2 3 5 7 11 13 17 19 23 25 29 |
+| 3 | **5** | 25, 30 | 2 3 5 7 11 13 17 19 23 29 |
+| — | (stop: 7² = 49 > 30) | — | **Primes ≤ 30** |
+
+> **Primes up to 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29** (10 primes).
+
+**Why start crossing out at p²?** Every smaller multiple (2p, 3p, … (p−1)p) already has a **smaller prime factor** and was crossed out in an earlier round.
+
+| Method | Time | When to use |
+|---|---|---|
+| Naive division | O(n) | Never |
+| **√n check** | **O(√n)** | Testing **one** number |
+| **Sieve of Eratosthenes** | **O(n log log n)** | Listing **all** primes up to n |
+| Miller-Rabin (probabilistic) | O(k log³ n) | Very large numbers (cryptography, RSA) |
+
+**Previous Year Question List from this Topic:**
+
+- [Write a program that check a number is prime number.](../written-answers/algorithm.md?plain=1#L3426)
+- [Write a C/C++/ Java Program to Print the prime number from 1 to n^{th}](../written-answers/algorithm.md?plain=1#L3474)
+
+
+---
+
+### Binary Search Tree — Construction, Traversal and Search
+
+A **Binary Search Tree (BST)** is a binary tree that satisfies the **BST property** at **every** node:
+
+> **All keys in the LEFT subtree < the node's key < all keys in the RIGHT subtree.**
+
+This ordering is what makes search, insert and delete run in **O(h)**, where h is the height.
+
+#### Insertion algorithm
+
+```
+Insert(root, key):
+    if root == NULL:
+        return new Node(key)
+    if key < root.key:
+        root.left  = Insert(root.left, key)
+    else if key > root.key:
+        root.right = Insert(root.right, key)
+    // key == root.key → duplicate; usually ignored
+    return root
+```
+
+#### Worked example — build a BST from 45, 9, 5, 19, 23, 19, 46, 2, 12, 10
+
+Insert the values **in the given order**; the first becomes the root.
+
+| Step | Insert | Path taken | Placed as |
+|---|---|---|---|
+| 1 | **45** | — | **Root** |
+| 2 | **9** | 9 < 45 → left | Left child of 45 |
+| 3 | **5** | 5 < 45 → left; 5 < 9 → left | Left child of 9 |
+| 4 | **19** | 19 < 45 → left; 19 > 9 → right | Right child of 9 |
+| 5 | **23** | 23 < 45 → left; 23 > 9 → right; 23 > 19 → right | Right child of 19 |
+| 6 | **19** | **Duplicate — ignored** (a BST normally holds distinct keys) | — |
+| 7 | **46** | 46 > 45 → right | Right child of 45 |
+| 8 | **2** | 2 < 45 → L; 2 < 9 → L; 2 < 5 → L | Left child of 5 |
+| 9 | **12** | 12 < 45 → L; 12 > 9 → R; 12 < 19 → L | Left child of 19 |
+| 10 | **10** | 10 < 45 → L; 10 > 9 → R; 10 < 19 → L; 10 < 12 → L | Left child of 12 |
+
+**The resulting BST:**
+
+```mermaid
+flowchart TD
+    A((45)) --> B((9))
+    A --> C((46))
+    B --> D((5))
+    B --> E((19))
+    D --> F((2))
+    D -.-> DX[" "]
+    E --> G((12))
+    E --> H((23))
+    G --> I((10))
+    style DX fill:none,stroke:none
+```
+
+#### The three traversals
+
+| Traversal | Order | Result for this tree |
+|---|---|---|
+| **In-order** (Left, Root, Right) | Gives the keys in **sorted order** | **2, 5, 9, 10, 12, 19, 23, 45, 46** |
+| **Pre-order** (Root, Left, Right) | Used to **copy/serialise** a tree | 45, 9, 5, 2, 19, 12, 10, 23, 46 |
+| **Post-order** (Left, Right, Root) | Used to **delete** a tree, and for expression evaluation | 2, 5, 10, 12, 23, 19, 9, 46, 45 |
+
+> **The most important property:** an **in-order traversal of a BST always produces the keys in ascending order.** This is the standard way to verify that a tree really is a valid BST.
+
+#### Searching in a BST
+
+```
+Search(root, key):
+    if root == NULL or root.key == key:
+        return root
+    if key < root.key:  return Search(root.left,  key)
+    else:               return Search(root.right, key)
+```
+
+**Searching for 12:** 12 < 45 → go left to 9 → 12 > 9 → go right to 19 → 12 < 19 → go left → **found**. Only **4 comparisons** for 9 nodes.
+
+#### Other operations
+
+| Operation | How |
+|---|---|
+| **Minimum** | Keep going **left** until `left == NULL` → **2** |
+| **Maximum** | Keep going **right** until `right == NULL` → **46** |
+| **Deletion** | Three cases: *(a)* **leaf** → just remove it; *(b)* **one child** → replace the node with its child; *(c)* **two children** → replace the node's key with its **in-order successor** (the minimum of the right subtree), then delete that successor |
+
+#### Complexity
+
+| Operation | Balanced BST | **Skewed BST (worst case)** |
+|---|---|---|
+| Search | **O(log n)** | **O(n)** |
+| Insert | **O(log n)** | O(n) |
+| Delete | **O(log n)** | O(n) |
+| Space | O(n) | O(n) |
+
+> **The weakness of a plain BST:** if the keys are inserted in **sorted order** (1, 2, 3, 4, 5 …), every node becomes a right child, and the tree degenerates into a **linked list** with height n — so every operation becomes **O(n)**.
+>
+> **The fix:** use a **self-balancing BST** — **AVL tree**, **Red-Black tree**, or a **B-tree** (used by databases and file systems). These keep the height at **O(log n)** automatically by rotating after insertions and deletions.
+
+**Previous Year Question List from this Topic:**
+
+- [Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.](../written-answers/algorithm.md?plain=1#L3510)
