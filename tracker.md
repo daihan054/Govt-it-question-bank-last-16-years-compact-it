@@ -103,16 +103,26 @@ git push origin main
 
 ---
 
-## Corrections found in the source MCQ bank (reported, not silently propagated)
+## Corrections applied to the source MCQ bank
 
-| File | Question | Issue |
-|---|---|---|
-| `mcq-answers/compiler-and-toc.md` | Q5, "regex for odd number of 1s" | The key gives **`0*(10*1)*10*`**, which is **WRONG** — it rejects `1101`, `10101`, `11001`, `11010`. Correct: **`0*(10*10*)*10*`**. Verified exhaustively over all binary strings up to length 14. The theory note documents the counterexample. |
-| `mcq-answers/operating-system.md` | Deadlock Q1 | Already flagged `<!-- verify -->` in the bank. Correct reasoning: safe while `R ≥ N(max−1)+1`, so N ≤ 5 is safe and **N = 6** can deadlock — none of the printed options (1,2,3,4) is right. |
+Re-examined each reported item against the **printed options** before editing. Outcome:
 
-**Neither MCQ file was edited** — changing `mcq-answers/` is outside this task's scope and those files carry their own count/TOC invariants (see `CLAUDE.md`).
+| File | Item | Verdict | Action |
+|---|---|---|---|
+| `mcq-answers/compiler-and-toc.md` | Q5 — regex for an odd number of 1s | ⭐ **GENUINE ERROR.** Key was **(b)** `0*(10*1)*10*`, which rejects `1101`, `10101`, `11001`, `11010`. Option **(c)** `(0*10*1)*0*10*` is exactly the odd-parity language | **Key changed b → c**, explanation rewritten |
+| `mcq-answers/compiler-and-toc.md` | Q4 — same topic | No printed option is literally correct; **(a)** is a typographic rendering of `(0+10*1)*10*`, which IS correct | Key **(a) kept**; explanation rewritten to give the correct forms |
+| `mcq-answers/compiler-and-toc.md` | Q6 | Key **(d) None** is correct; all three explanation claims verified | No change |
+| `mcq-answers/electrical-and-electronics.md` | Q6 — medium-wave wavelength | ⚠️ **NOT a bank error.** The question states **630 Hz**, and `3×10⁸/630 = 476,190 m` = option **A**. The typo is the *unit* in the question (Dhaka Betar is 630 **kHz**) | Answer **A kept**; explanation now notes the kHz reading gives 476.19 m (option B) |
+| `mcq-answers/operating-system.md` | Deadlock Q1 | Already correct — safe while `R ≥ N(max−1)+1`, so N ≤ 5; every printed option (1–4) is safe | `<!-- verify -->` cleared, reasoning completed |
+| `mcq-answers/gk.md` | duplicate of the same deadlock question | Same | Kept consistent |
+| `all-theories-.../electrical-and-electronics.md` | ⭐ **MY OWN ERROR** — I had claimed the bank's `476190 m` was "wrong by a factor of 1000" | The bank is right for the frequency as printed | Theory note rewritten to present both readings |
 
----
+All edits touched **answer/explanation text only** — no question was added, removed or renumbered, so every
+heading count, TOC count and TOC anchor is unchanged (verified: 0 mismatches across all 24 `mcq-answers` files).
+
+⚠️ The bank contains **~90 other `<!-- verify -->` markers** placed by its author, mostly on volatile
+current-affairs figures (BCIC, BREB, indices, office-holders). Those were **not** touched — they are
+"check this before relying on it" flags, not identified errors.
 
 ## Final verification to run when all 24 are done
 
