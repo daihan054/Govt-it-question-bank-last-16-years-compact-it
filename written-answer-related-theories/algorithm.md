@@ -5013,7 +5013,7 @@ flowchart TD
 
 `C O N N E C T I O N`
 = `111` `00` `10` `10` `010` `111` `011` `110` `00` `10`
-= **`111001010010111011110 0010`** → **25 bits total**
+= **`1110010100101110111100010`** → **25 bits total** *(verified: decoding this stream reproduces CONNECTION exactly)*
 
 #### Compression achieved
 
