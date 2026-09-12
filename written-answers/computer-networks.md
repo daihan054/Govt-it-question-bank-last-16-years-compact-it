@@ -2431,8 +2431,8 @@ Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, split
 | 6 | Presentation | Translation, encryption/decryption, compression | Data | SSL/TLS, JPEG, ASCII |
 | 5 | Session | Sets up, manages and ends a session; synchronisation | Data | NetBIOS, RPC, SMB |
 | 4 | Transport | End-to-end delivery, segmentation, flow and error control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
-| 3 | Network | Logical addressing and routing between networks.<br><br>`┌────────────┬─────────┬────────────────┐`<br>`│ Source IP₁ │ Segment │ Destination IP₂│`<br>`└────────────┴─────────┴────────────────┘`<br>`|--------------- Packet ----------------|` | Packet | IP, ICMP, OSPF |
-| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection.<br><br>`┌──────┬──────────────────────────────┬──────┐`<br>`│ MAC₁ │  IP₁  │  Segment  │   IP₂    │ MAC₂ │`<br>`└──────┴───────┴───────────┴──────────┴──────┘`<br>`       |----------- Packet -----------|`<br>`|------------------ Frame -------------------|` | Frame | Ethernet, PPP, ARP |
+| 3 | Network | Logical addressing and routing between networks.<br><br>`┌────┬─────────┬────┐`<br>`│IP₁ │ Segment │IP₂ │`<br>`└────┴─────────┴────┘`<br>`|←---- Packet ----→|` | Packet | IP, ICMP, OSPF |
+| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection.<br><br>`┌────┬───────────┬────┐`<br>`│MAC₁│IP₁│Seg│IP₂│MAC₂│`<br>`└────┴───────────┴────┘`<br>`     |←-Packet--→|`<br>`|←----- Frame ------→|` | Frame | Ethernet, PPP, ARP |
 | 1 | Physical | Sends raw bits as electrical, light or radio signals | Bit | Cables, hubs, RS-232 |
 
    **PDU Visual Structures (Network Layer Packet & Data Link Layer Frame):**
