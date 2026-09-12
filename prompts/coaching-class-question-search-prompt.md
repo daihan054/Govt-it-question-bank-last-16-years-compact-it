@@ -7,7 +7,7 @@
 Class notes / images pore prothome chat box-e details-e bolbe sir ki ki poraise (Topic and Subtopic breakdown).
 Tarpor ei porar shathe "all-questions" folder-er written ebong mcq file-gular kon kon subtopic common sheta question count shoho chat box-ei list kore dekhabe.
 Eigula chat box-e dekhanor por tumi amar permission / OK-er wait korbe.
-Ami permission dile tumi "Nipu bhai important topics" folder-er written.md ebong mcq.md update korbe (ekhane 2-column table akare boshbe ebong subtopic question count descending order-e sort thakbe).
+Ami permission dile tumi "Nipu bhai important topics" folder-er written.md ebong mcq.md update korbe (ekhane 2-column table akare boshbe ebong subtopic question count descending order-e sort thakbe) ebong update seshe nij thekei Git commit ebong push kore dibe.
 ```
 
 ---
@@ -39,3 +39,10 @@ Ami permission dile tumi "Nipu bhai important topics" folder-er written.md ebong
   - ২ কলামের টেবিল হবে: `| File Name | Subtopic |`
   - কোনো ফাইলের প্রথম সারিতে ফাইলের নাম থাকবে, পরবর্তী সারিগুলোতে ফাইলের ঘরের অংশ ফাঁকা থাকবে।
   - সাবটপিকগুলো ব্র্যাকেটের ভেতরের প্রশ্নসংখ্যা অনুযায়ী বড় থেকে ছোট (Descending) ক্রমানুসারে সাজানো থাকতে হবে।
+
+### ধাপ ৫: স্বয়ংক্রিয় গিট কমিট ও পুশ (Automatic Git Commit & Push)
+- ফাইল আপডেট সম্পন্ন হওয়ামাত্রই ব্যবহারকারীকে আলাদাভাবে না বলতে বলে অ্যাসিস্ট্যান্ট স্বয়ংক্রিয়ভাবে Git commit ও push করবে:
+  1. পরিবর্তিত ফাইল স্টেজ করা: `git add "Nipu bhai important topics/written.md" "Nipu bhai important topics/mcq.md"`
+  2. প্রাসঙ্গিক ও অর্থপূর্ণ কমিট মেসেজ দেওয়া: `git commit -m "Add <Topic/Class Name> subtopics to Nipu bhai important topics"`
+  3. রিমোট রিপোজিটরিতে পুশ করা: `git push origin main`
+- পুশ সফল হলে কমিট হ্যাশ ও স্ট্যাটাস ব্যবহারকারীকে চ্যাটবক্সে জানিয়ে দেওয়া।
