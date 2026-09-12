@@ -7,6 +7,7 @@
 |  | Network Devices & Configuration (38) |
 |  | OSI & TCP-IP Model (16) |
 |  | Routing Protocols (13) |
+|  | Error Detection & Correction (3) |
 | computer-network-security.md | Cyber Attacks & Threats (20) |
 |  | Security Protocols (9) |
 | web-technology.md | HTML, XML & Web Fundamentals (15) |
