@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 14 subtopics · 185 questions
+**Table of Contents** — 15 subtopics · 225 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -17,6 +17,7 @@
 | 12 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc-5) | 5 |
 | 13 | [Concurrency Control & Locking](#concurrency-control--locking-5) | 5 |
 | 14 | [SQL Joins](#sql-joins-2) | 2 |
+| 15 | [Model Test: BB AD (ICT) Exam Two — Database Management](#model-test-bb-ad-ict-exam-two--database-management-40) | 40 |
 
 <!-- TOC END -->
 
@@ -1219,3 +1220,246 @@
    b) EQUI Join  
    c) Outer Join  
    d) All of the above
+
+## Model Test: BB AD (ICT) Exam Two — Database Management (40)
+
+1. **What is the primary function of a Database Management System (DBMS)?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Managing software installation  
+   (b) Data processing  
+   (c) Data storage and retrieval  
+   (d) Computer networking
+
+2. **Which of the following is NOT a characteristic of a DBMS?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Data redundancy  
+   (b) Data integrity  
+   (c) Data security  
+   (d) Data independence
+
+3. **Which of the following is NOT a component of DBMS?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Query Processor  
+   (b) Database Engine  
+   (c) Database Table  
+   (d) Indexing Engine
+
+4. **Which one is not true for DBMS?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) DBMS ensures data accuracy  
+   (b) DBMS is designed to handle large volumes of data  
+   (c) DBMS provides frails security  
+   (d) DBMS allows multiple users and applications
+
+5. **______ is a database management system which supports multiple users concurrently.** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) distributed database system  
+   (b) multiuser database system  
+   (c) single-user database system  
+   (d) centralized database system
+
+6. **In which of the following formats data is stored in the database management system?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Image  
+   (b) Text  
+   (c) Table  
+   (d) Graph
+
+7. **Which of the following is a component of the DBMS?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Data  
+   (b) Data Languages  
+   (c) Data Manager  
+   (d) All of the above
+
+8. **The core components of an ER model are:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Entities  
+   (b) Attributes  
+   (c) Relationships  
+   (d) All of the mentioned
+
+9. **Which one is not a true statement?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Attribute is a connection between entities  
+   (b) ER diagrams represent the E-R model in a database, making them easy to convert into relations  
+   (c) These diagrams serve the purpose of real-world modeling of objects  
+   (d) All of the above
+
+10. **Which statement is true?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) A candidate Key is a set of attributes that can uniquely identify a tuple  
+   (b) A primary Key is a set of attributes that can uniquely identify a tuple in a relation  
+   (c) A super Key uniquely identifies each tuple and cannot have NULL values  
+   (d) A Foreign Key is an attribute in one relation that refers to the primary key of another relation
+
+11. **Which of the following is not an example of DBMS?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) MySQL  
+   (b) Microsoft Access  
+   (c) IBM DB2  
+   (d) Google
+
+12. **Which of the following is not an integrity constraint?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Not null  
+   (b) Positive  
+   (c) Unique  
+   (d) Check 'predicate'
+
+13. **Student(ID, name, dept name, tot_credit). In this query which attributes form the primary key?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Name  
+   (b) Dept  
+   (c) tot_credit  
+   (d) ID
+
+14. **The ______ operation performs a set union of two 'similarly structured' tables.** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Union  
+   (b) Join  
+   (c) Product  
+   (d) Intersect
+
+15. **The ______ provides a set of operations that take one or more relations as input and return a relation as an output.** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Schematic representation  
+   (b) Relational algebra  
+   (c) Scheme diagram  
+   (d) Relation flow
+
+16. **Which statement is not true for functional dependency?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) A functional dependency is denoted as X -> Y  
+   (b) It is the foundation of database normalization  
+   (c) It describes a relationship between two sets  
+   (d) A many-to-many relationship is a functional dependency
+
+17. **In SQL, which command is used to remove all rows from a table but keep its structure?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) DELETE  
+   (b) DROP  
+   (c) TRUNCATE  
+   (d) REMOVE
+
+18. **Which normal form removes transitive dependency?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) 1NF  
+   (b) 2NF  
+   (c) 3NF  
+   (d) BCNF
+
+19. **Which of the following ensures that transactions are processed reliably?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Normalization  
+   (b) Indexing  
+   (c) ACID properties  
+   (d) Deadlock
+
+20. **Which SQL clause is used to group rows that have the same values in specified columns?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) ORDER BY  
+   (b) GROUP BY  
+   (c) HAVING  
+   (d) DISTINCT
+
+21. **In relational databases, what does a foreign key represent?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) A unique identifier within the same table  
+   (b) A reference to a primary key in another table  
+   (c) A composite key within the same table  
+   (d) A key that has NULL values
+
+22. **Which of the following is NOT a valid SQL aggregate function?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) SUM()  
+   (b) COUNT()  
+   (c) AVG()  
+   (d) UPDATE()
+
+23. **Deadlock in a database occurs when:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Two transactions wait for each other's locked resources  
+   (b) A transaction runs indefinitely  
+   (c) Indexing fails in a database  
+   (d) Data is normalized incorrectly
+
+24. **Which of the following statements about indexes is TRUE?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Index improves query performance but slows down updates/inserts  
+   (b) Indexes always decrease database size  
+   (c) Indexes remove duplicate rows  
+   (d) Indexes are used only for foreign keys
+
+25. **What is the Cartesian product of two relations R(A,B) with 3 rows and S(C,D) with 4 rows?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) 7  
+   (b) 12  
+   (c) 16  
+   (d) 24
+
+26. **SET concept is used in:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Network Model  
+   (b) Hierarchical Model  
+   (c) Relational Model  
+   (d) None of these
+
+27. **Relational Algebra is:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Data Definition Language  
+   (b) Meta Language  
+   (c) Procedural Query Language  
+   (d) None of the above
+
+28. **Key to represent the relationship between tables is called:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Primary key  
+   (b) Secondary Key  
+   (c) Foreign Key  
+   (d) None of these
+
+29. **______ produces the relation that has attributes of R1 and R2.** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Cartesian product  
+   (b) Difference  
+   (c) Intersection  
+   (d) Product
+
+30. **Which of the following is a valid SQL type?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) CHARACTER  
+   (b) NUMERIC  
+   (c) FLOAT  
+   (d) All of the above
+
+31. **Which of the following statements are syntactically valid SQL expressions? (1) SELECT NAME FROM EMPLOYEE; (2) SELECT * FROM EMPLOYEE WHERE SALARY = NULL; (3) SELECT * FROM EMPLOYEE WHERE NAME LIKE 'A%'; (4) SELECT * FROM EMPLOYEE WHERE SALARY BETWEEN 30000 AND 50000; (5) SELECT NULL FROM EMPLOYEE;** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) 1, 2, 3 and 4 only  
+   (b) 1, 3, 4 and 5 only  
+   (c) 1, 2 and 5 only  
+   (d) 1, 3 and 5 only
+
+32. **Which of the following is a comparison operator in SQL?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) =  
+   (b) LIKE  
+   (c) BETWEEN  
+   (d) All of the above
+
+33. **A set of possible data values is called:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) attribute  
+   (b) degree  
+   (c) tuple  
+   (d) domain
+
+34. **A data dictionary is a special file that contains:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) The name of all fields in all files  
+   (b) The width of all fields in all files  
+   (c) The data type of all fields in all files  
+   (d) All of the above
+
+35. **An instance of relational schema R(A,B,C) has distinct values of A, including NULL values. Which one of the following is true?** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) A is a candidate key  
+   (b) A is not a candidate key  
+   (c) A is a Primary Key  
+   (d) Both A and C
+
+36. **The natural join is equal to:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Cartesian Product  
+   (b) Combination of Union and Cartesian product  
+   (c) Combination of selection and Cartesian product  
+   (d) Combination of projection and Cartesian product
+
+37. **A data manipulation command that combines the records from one or more tables is called:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) SELECT  
+   (b) PROJECT  
+   (c) JOIN  
+   (d) PRODUCT
+
+38. **In E-R diagram generalisation is represented by:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Ellipse  
+   (b) Dashed ellipse  
+   (c) Rectangle  
+   (d) Triangle
+
+39. **A table joined with itself is called:** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) Join  
+   (b) Self Join  
+   (c) Outer Join  
+   (d) Equal Join
+
+40. **______ data type can store unstructured data.** *[Coaching Exam: BB AD (ICT) EXAM TWO]*  
+   (a) RAW  
+   (b) CHAR  
+   (c) NUMERIC  
+   (d) VARCHAR
+

@@ -1,15 +1,17 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 17 theories
+**Table of Contents** — 7 subtopics · 21 theories
 
 1. **[SQL Queries](#sql-queries)**
    - [SQL — Fundamentals and Sub-languages](#sql--fundamentals-and-sub-languages)
    - [Joins and Subqueries](#joins-and-subqueries)
    - [Standard SQL Query Patterns](#standard-sql-query-patterns)
+   - [SQL Data Types and Storage — Structured, Binary and Unstructured Data (RAW, LOB, BLOB, CLOB)](#sql-data-types-and-storage--structured-binary-and-unstructured-data-raw-lob-blob-clob)
 
 2. **[Normalization & Database Design](#normalization--database-design)**
    - [DBMS, RDBMS and the Relational Model](#dbms-rdbms-and-the-relational-model)
    - [Normalization](#normalization)
    - [ER Diagrams and Database Design](#er-diagrams-and-database-design)
+   - [Enhanced ER (EER) Concepts — Generalization, Specialization and Aggregation](#enhanced-er-eer-concepts--generalization-specialization-and-aggregation)
 
 3. **[Transaction Management & ACID Properties](#transaction-management--acid-properties)**
    - [Transactions and the ACID Properties](#transactions-and-the-acid-properties)
@@ -20,6 +22,8 @@
 
 5. **[DBMS Concepts & Architecture](#dbms-concepts--architecture)**
    - [DBMS Architecture — Three-Level Schema, Data Abstraction and Data Independence](#dbms-architecture--three-level-schema-data-abstraction-and-data-independence)
+   - [Data Models — Hierarchical, Network, Relational and Object-Oriented](#data-models--hierarchical-network-relational-and-object-oriented)
+   - [DBMS Functional Components & Engine Architecture](#dbms-functional-components--engine-architecture)
    - [Metadata, the Data Dictionary and the Role of the DBA](#metadata-the-data-dictionary-and-the-role-of-the-dba)
    - [Database System Architectures — Client-Server, Distributed and NoSQL](#database-system-architectures--client-server-distributed-and-nosql)
 
@@ -172,33 +176,38 @@ LIMIT    n;                              -- 7. restrict the count
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which clause is executed first in an SQL query?](../mcq-answers/database.md?plain=1#L27)
-- [Which of the following is a DML (Data Manipulation Language) command?](../mcq-answers/database.md?plain=1#L36)
-- [Which of the following is a command of Data Definition Language (DDL)?](../mcq-answers/database.md?plain=1#L45)
-- [Which statements are used to create the database structure?](../mcq-answers/database.md?plain=1#L54)
-- [Which of the following is not a DDL statement?](../mcq-answers/database.md?plain=1#L63)
-- [Which clause is required in an SQL query for getting information from a database?](../mcq-answers/database.md?plain=1#L72)
-- [CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?](../mcq-answers/database.md?plain=1#L81)
-- [Which one of the followings sorts rows in SQL?](../mcq-answers/database.md?plain=1#L90)
-- [Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database…](../mcq-answers/database.md?plain=1#L113)
-- [To remove a relational table from SQL database, we use ______.](../mcq-answers/database.md?plain=1#L122)
-- [Which of the following command is a type of Data Definition language command?](../mcq-answers/database.md?plain=1#L131)
-- [Which of the following is not a DDL command?](../mcq-answers/database.md?plain=1#L157)
-- [Which of the following are the five built-in functions provided by SQL?](../mcq-answers/database.md?plain=1#L196)
-- [Which is not the steps of SQL Query processing?](../mcq-answers/database.md?plain=1#L268)
-- [Which one is the Data Control Language (DCL) in SQL?](../mcq-answers/database.md?plain=1#L277)
-- [What is wrong statements for SQL?](../mcq-answers/database.md?plain=1#L327)
-- [উল্লেখিত কোনটি Database aggregate এর function?](../mcq-answers/database.md?plain=1#L388)
-- [নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?](../mcq-answers/database.md?plain=1#L397)
-- [Which one is database language?](../mcq-answers/database.md?plain=1#L424)
-- [The SQL statement that requires or reads data from the table is-](../mcq-answers/database.md?plain=1#L433)
-- [Which of the following logical connectives is not included in SQL?](../mcq-answers/database.md?plain=1#L442)
-- [The result of a SQL SELECT statement is a ----](../mcq-answers/database.md?plain=1#L451)
-- [To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.](../mcq-answers/database.md?plain=1#L460)
-- [The ________ clause is used to list the attributes desired in the result of a query.](../mcq-answers/database.md?plain=1#L469)
-- [In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.](../mcq-answers/database.md?plain=1#L478)
-- [You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?](../mcq-answers/database.md?plain=1#L532)
-- [Which SQL keyword is used to short the result set?](../mcq-answers/database.md?plain=1#L1111)
+- [Which clause is executed first in an SQL query?](../mcq-answers/database.md?plain=1#L28)
+- [Which of the following is a DML (Data Manipulation Language) command?](../mcq-answers/database.md?plain=1#L37)
+- [Which of the following is a command of Data Definition Language (DDL)?](../mcq-answers/database.md?plain=1#L37)
+- [Which statements are used to create the database structure?](../mcq-answers/database.md?plain=1#L55)
+- [Which of the following is not a DDL statement?](../mcq-answers/database.md?plain=1#L37)
+- [Which clause is required in an SQL query for getting information from a database?](../mcq-answers/database.md?plain=1#L73)
+- [CREATE TABLE employee (name VARCHAR, id INTEGER). What type of statement is this?](../mcq-answers/database.md?plain=1#L82)
+- [Which one of the followings sorts rows in SQL?](../mcq-answers/database.md?plain=1#L91)
+- [Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database…](../mcq-answers/database.md?plain=1#L114)
+- [To remove a relational table from SQL database, we use ______.](../mcq-answers/database.md?plain=1#L123)
+- [Which of the following command is a type of Data Definition language command?](../mcq-answers/database.md?plain=1#L132)
+- [Which of the following is not a DDL command?](../mcq-answers/database.md?plain=1#L37)
+- [Which of the following are the five built-in functions provided by SQL?](../mcq-answers/database.md?plain=1#L197)
+- [Which is not the steps of SQL Query processing?](../mcq-answers/database.md?plain=1#L269)
+- [Which one is the Data Control Language (DCL) in SQL?](../mcq-answers/database.md?plain=1#L278)
+- [What is wrong statements for SQL?](../mcq-answers/database.md?plain=1#L328)
+- [উল্লেখিত কোনটি Database aggregate এর function?](../mcq-answers/database.md?plain=1#L389)
+- [নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?](../mcq-answers/database.md?plain=1#L398)
+- [Which one is database language?](../mcq-answers/database.md?plain=1#L425)
+- [The SQL statement that requires or reads data from the table is-](../mcq-answers/database.md?plain=1#L434)
+- [Which of the following logical connectives is not included in SQL?](../mcq-answers/database.md?plain=1#L443)
+- [The result of a SQL SELECT statement is a ----](../mcq-answers/database.md?plain=1#L452)
+- [To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.](../mcq-answers/database.md?plain=1#L461)
+- [The ________ clause is used to list the attributes desired in the result of a query.](../mcq-answers/database.md?plain=1#L470)
+- [In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.](../mcq-answers/database.md?plain=1#L479)
+- [You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?](../mcq-answers/database.md?plain=1#L533)
+- [Which SQL keyword is used to short the result set?](../mcq-answers/database.md?plain=1#L1112)
+- [In SQL, which command is used to remove all rows from a table but keep its structure?](../mcq-answers/database.md?plain=1#L1919)
+- [Which SQL clause is used to group rows that have the same values in specified columns?](../mcq-answers/database.md?plain=1#L1946)
+- [Which of the following is NOT a valid SQL aggregate function?](../mcq-answers/database.md?plain=1#L37)
+- [Which of the following statements are syntactically valid SQL expressions?](../mcq-answers/database.md?plain=1#L1982)
+- [Which of the following is a comparison operator in SQL?](../mcq-answers/database.md?plain=1#L37)
 
 
 
@@ -316,15 +325,18 @@ WHERE  DeptID IN (SELECT DeptID FROM Department WHERE Location = 'Dhaka');
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?](../mcq-answers/database.md?plain=1#L148)
-- [What does this query do?](../mcq-answers/database.md?plain=1#L205)
-- [Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement](../mcq-answers/database.md?plain=1#L240)
-- [Consider the following Employee Table and the SQL query given:](../mcq-answers/database.md?plain=1#L345)
-- [What type of join in needed when you wish to include rows that do not have matching values?](../mcq-answers/database.md?plain=1#L1754)
-- [Which type of JOIN operation in SQL command is used to returns that do not have matching values?](../mcq-answers/database.md?plain=1#L1763)
-- [(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to…](../mcq-answers/database.md?plain=1#L1540)
+- [Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?](../mcq-answers/database.md?plain=1#L149)
+- [What does this query do?](../mcq-answers/database.md?plain=1#L206)
+- [Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement](../mcq-answers/database.md?plain=1#L100)
+- [Consider the following Employee Table and the SQL query given:](../mcq-answers/database.md?plain=1#L346)
+- [What type of join in needed when you wish to include rows that do not have matching values?](../mcq-answers/database.md?plain=1#L1755)
+- [Which type of JOIN operation in SQL command is used to returns that do not have matching values?](../mcq-answers/database.md?plain=1#L1764)
+- [(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to…](../mcq-answers/database.md?plain=1#L1541)
 
 
+
+- [A data manipulation command that combines the records from one or more tables is called:](../mcq-answers/database.md?plain=1#L2099)
+- [A table joined with itself is called:](../mcq-answers/database.md?plain=1#L2117)
 
 ---
 
@@ -525,21 +537,77 @@ SELECT DISTINCT dept, salary FROM Employee;       -- distinct PAIRS, not distinc
 
 **Previous Year MCQ List from this Topic:**
 
-- [Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:](../mcq-answers/database.md?plain=1#L99)
-- [The SQL statement](../mcq-answers/database.md?plain=1#L166)
-- [How to select all data from student table starting the name from letter 'r'?](../mcq-answers/database.md?plain=1#L187)
-- [What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?](../mcq-answers/database.md?plain=1#L219)
-- [Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?](../mcq-answers/database.md?plain=1#L228)
-- [Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?](../mcq-answers/database.md?plain=1#L253)
-- [Consider the following “staff” table](../mcq-answers/database.md?plain=1#L295)
-- [Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?](../mcq-answers/database.md?plain=1#L364)
-- [What is the advantage of using ‘case’ while doing the update operation?](../mcq-answers/database.md?plain=1#L379)
-- [See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);](../mcq-answers/database.md?plain=1#L1554)
-- [Write the following queries](../mcq-answers/database.md?plain=1#L1562)
-- [একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?](../mcq-answers/database.md?plain=1#L1575)
-- [With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?](../mcq-answers/database.md?plain=1#L1212)
+- [Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:](../mcq-answers/database.md?plain=1#L100)
+- [The SQL statement](../mcq-answers/database.md?plain=1#L167)
+- [How to select all data from student table starting the name from letter 'r'?](../mcq-answers/database.md?plain=1#L188)
+- [What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?](../mcq-answers/database.md?plain=1#L220)
+- [Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?](../mcq-answers/database.md?plain=1#L229)
+- [Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?](../mcq-answers/database.md?plain=1#L254)
+- [Consider the following “staff” table](../mcq-answers/database.md?plain=1#L296)
+- [Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?](../mcq-answers/database.md?plain=1#L254)
+- [What is the advantage of using ‘case’ while doing the update operation?](../mcq-answers/database.md?plain=1#L380)
+- [See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);](../mcq-answers/database.md?plain=1#L1555)
+- [Write the following queries](../mcq-answers/database.md?plain=1#L1563)
+- [একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?](../mcq-answers/database.md?plain=1#L1576)
+- [With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?](../mcq-answers/database.md?plain=1#L1213)
 
 
+
+---
+
+---
+
+### SQL Data Types and Storage — Structured, Binary and Unstructured Data (RAW, LOB, BLOB, CLOB)
+
+A **data type** in SQL specifies the kind of value that can be stored in a column, the range of valid values, and the set of operations that can be performed on it.
+
+#### Standard SQL Data Types
+
+```mermaid
+flowchart TD
+    DT["SQL Data Types"]
+    DT --> NUM["Numeric"]
+    DT --> CHR["Character / String"]
+    DT --> DTME["Date & Time"]
+    DT --> LOB["Large Objects & Unstructured"]
+    
+    NUM --> N1["INTEGER / INT · SMALLINT · BIGINT"]
+    NUM --> N2["NUMERIC(p,s) · DECIMAL(p,s)"]
+    NUM --> N3["FLOAT · REAL · DOUBLE PRECISION"]
+    
+    CHR --> C1["CHAR(n) — fixed length"]
+    CHR --> C2["VARCHAR(n) / VARCHAR2 — variable length"]
+    
+    DTME --> D1["DATE · TIME · TIMESTAMP · INTERVAL"]
+    
+    LOB --> L1["RAW(n) — raw binary / byte strings"]
+    LOB --> L2["BLOB — Binary Large Object (unstructured)"]
+    LOB --> L3["CLOB — Character Large Object (long text)"]
+    LOB --> L4["BFILE — External binary files"]
+```
+
+| Category | Data Type | Storage & Characteristics | Typical Use Cases |
+|---|---|---|---|
+| **Exact Numeric** | `INT` / `INTEGER` | 4 bytes integer (-2.14B to +2.14B) | Counters, IDs, quantities |
+| **Exact Numeric** | `NUMERIC(p,s)`, `DECIMAL(p,s)` | Fixed point precision `p` and scale `s` | Currency, financial amounts, accurate decimals |
+| **Approximate Numeric** | `FLOAT`, `REAL`, `DOUBLE PRECISION` | Floating-point binary representation | Scientific calculations, graphics |
+| **Fixed String** | `CHAR(n)` | Fixed length `n` (padded with spaces up to `n`) | Fixed-width codes (e.g. Country code 'BD', 'US') |
+| **Variable String** | `VARCHAR(n)` / `VARCHAR2(n)` | Variable length up to `n` characters (no space padding) | Names, emails, addresses, descriptions |
+| **Date & Time** | `DATE`, `TIMESTAMP` | Stores year, month, day, hours, minutes, seconds | Birth dates, log timestamps, creation times |
+| **Binary (RAW)** | `RAW(n)` | **Stores unstructured raw binary data or byte strings** (up to 2000 bytes in Oracle) without character set conversion | Cryptographic keys, image hashes, byte arrays |
+| **Binary Large Object** | `BLOB` | **Unstructured binary data** up to 4 GB or Terabytes | Images, audio clips, video files, compiled binaries, PDFs |
+| **Character Large Object** | `CLOB` | Single-byte or multibyte character data up to 4 GB | Books, long legal contracts, massive XML/JSON documents |
+| **External Binary** | `BFILE` | Pointer to an operating system binary file outside the DB | Giant video archives stored on OS file system |
+
+> ### **How Unstructured Data is Handled in a DBMS:**
+> - Traditional columns (`VARCHAR`, `INT`, `DATE`) store **structured data**.
+> - Multimedia (photos, voice notes, PDFs, sensor streams) is **unstructured data**.
+> - SQL DBMSs provide **`RAW`** (small byte strings) and **`BLOB`** (Binary Large Objects) specifically designed to store unstructured binary data without corruption or character encoding translation.
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is a valid SQL type?](../mcq-answers/database.md?plain=1#L37)
+- [______ data type can store unstructured data.](../mcq-answers/database.md?plain=1#L2126)
 
 ---
 
@@ -660,25 +728,27 @@ CREATE TABLE Enrollment (
 
 **Previous Year MCQ List from this Topic:**
 
-- [What is the maximum length of the “varchar” in the database?](../mcq-answers/database.md?plain=1#L309)
-- [Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?](../mcq-answers/database.md?plain=1#L318)
-- [The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.](../mcq-answers/database.md?plain=1#L336)
-- [What is a tuple?](../mcq-answers/database.md?plain=1#L496)
-- [Microsoft Access is a ________](../mcq-answers/database.md?plain=1#L541)
-- [A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-](../mcq-answers/database.md?plain=1#L621)
-- [Which one of the following is a No-SQL Database?](../mcq-answers/database.md?plain=1#L684)
-- [Which one of the following statements is true with respect to a Database Management System?](../mcq-answers/database.md?plain=1#L693)
-- [Which of the following term refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L774)
-- [Which one is an example of DBMS?](../mcq-answers/database.md?plain=1#L783)
-- [Which of the following terms refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L810)
-- [What is the degree of relation?](../mcq-answers/database.md?plain=1#L1407)
-- [Which one of the following is true for a tuple in a database?](../mcq-answers/database.md?plain=1#L1413)
-- [In a table an attribute named interest is defined as follows,](../mcq-answers/database.md?plain=1#L1422)
-- [Which one is an entity?](../mcq-answers/database.md?plain=1#L1438)
-- [Flat file database is most useful for ________.](../mcq-answers/database.md?plain=1#L1456)
-- [In database, a field is ________](../mcq-answers/database.md?plain=1#L1465)
+- [What is the maximum length of the “varchar” in the database?](../mcq-answers/database.md?plain=1#L310)
+- [Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?](../mcq-answers/database.md?plain=1#L319)
+- [The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.](../mcq-answers/database.md?plain=1#L337)
+- [What is a tuple?](../mcq-answers/database.md?plain=1#L497)
+- [Microsoft Access is a ________](../mcq-answers/database.md?plain=1#L542)
+- [A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-](../mcq-answers/database.md?plain=1#L622)
+- [Which one of the following is a No-SQL Database?](../mcq-answers/database.md?plain=1#L91)
+- [Which one of the following statements is true with respect to a Database Management System?](../mcq-answers/database.md?plain=1#L91)
+- [Which of the following term refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L775)
+- [Which one is an example of DBMS?](../mcq-answers/database.md?plain=1#L784)
+- [Which of the following terms refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L775)
+- [What is the degree of relation?](../mcq-answers/database.md?plain=1#L1408)
+- [Which one of the following is true for a tuple in a database?](../mcq-answers/database.md?plain=1#L91)
+- [In a table an attribute named interest is defined as follows,](../mcq-answers/database.md?plain=1#L1423)
+- [Which one is an entity?](../mcq-answers/database.md?plain=1#L1439)
+- [Flat file database is most useful for ________.](../mcq-answers/database.md?plain=1#L1457)
+- [In database, a field is ________](../mcq-answers/database.md?plain=1#L1466)
 
 
+
+- [A set of possible data values is called:](../mcq-answers/database.md?plain=1#L2063)
 
 ---
 
@@ -970,25 +1040,28 @@ Now the department's location is stored **exactly once**, and all four anomalies
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which normal form is considered adequate for normal relational database design?](../mcq-answers/database.md?plain=1#L857)
-- [Which one is correct in case of normalization-](../mcq-answers/database.md?plain=1#L866)
-- [If attribute A determines both attributes B and C then, it is also true that—](../mcq-answers/database.md?plain=1#L875)
-- [If a table is normalized so that all its determinants are candidate keys then, the tableis in-](../mcq-answers/database.md?plain=1#L884)
-- [Functional dependency use in which normalizations?](../mcq-answers/database.md?plain=1#L893)
-- ["There must not be any partial dependency "Which of the following Normal Forms holds this condition?](../mcq-answers/database.md?plain=1#L899)
-- [To remove partial dependency from a database, which technique you will use?](../mcq-answers/database.md?plain=1#L908)
-- [In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functio…](../mcq-answers/database.md?plain=1#L917)
-- [Third normal form is based on the concept of ______.](../mcq-answers/database.md?plain=1#L926)
-- [If you are told to remove the inconsistency from the course table which normalization technique you will use-](../mcq-answers/database.md?plain=1#L935)
-- [If you are assigned to remove partial dependency from a database, which technique you will use?](../mcq-answers/database.md?plain=1#L944)
-- [The table in below violates the Normal Form(s). Which normal form it violates?](../mcq-answers/database.md?plain=1#L953)
-- [Why do we need to normalize a database?](../mcq-answers/database.md?plain=1#L959)
-- [In the ________ normal form, a composite attribute is converted to individual attributes.](../mcq-answers/database.md?plain=1#L968)
-- [Repeated data exist at—](../mcq-answers/database.md?plain=1#L977)
-- [What is normalization?](../mcq-answers/database.md?plain=1#L986)
-- [Which one is in case of normalization—( নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— )](../mcq-answers/database.md?plain=1#L1580)
+- [Which normal form is considered adequate for normal relational database design?](../mcq-answers/database.md?plain=1#L858)
+- [Which one is correct in case of normalization-](../mcq-answers/database.md?plain=1#L867)
+- [If attribute A determines both attributes B and C then, it is also true that—](../mcq-answers/database.md?plain=1#L876)
+- [If a table is normalized so that all its determinants are candidate keys then, the tableis in-](../mcq-answers/database.md?plain=1#L885)
+- [Functional dependency use in which normalizations?](../mcq-answers/database.md?plain=1#L894)
+- ["There must not be any partial dependency "Which of the following Normal Forms holds this condition?](../mcq-answers/database.md?plain=1#L900)
+- [To remove partial dependency from a database, which technique you will use?](../mcq-answers/database.md?plain=1#L909)
+- [In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functio…](../mcq-answers/database.md?plain=1#L918)
+- [Third normal form is based on the concept of ______.](../mcq-answers/database.md?plain=1#L927)
+- [If you are told to remove the inconsistency from the course table which normalization technique you will use-](../mcq-answers/database.md?plain=1#L936)
+- [If you are assigned to remove partial dependency from a database, which technique you will use?](../mcq-answers/database.md?plain=1#L945)
+- [The table in below violates the Normal Form(s). Which normal form it violates?](../mcq-answers/database.md?plain=1#L954)
+- [Why do we need to normalize a database?](../mcq-answers/database.md?plain=1#L960)
+- [In the ________ normal form, a composite attribute is converted to individual attributes.](../mcq-answers/database.md?plain=1#L969)
+- [Repeated data exist at—](../mcq-answers/database.md?plain=1#L978)
+- [What is normalization?](../mcq-answers/database.md?plain=1#L987)
+- [Which one is in case of normalization—( নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— )](../mcq-answers/database.md?plain=1#L1581)
 
 
+
+- [Which statement is not true for functional dependency?](../mcq-answers/database.md?plain=1#L1910)
+- [Which normal form removes transitive dependency?](../mcq-answers/database.md?plain=1#L1928)
 
 ---
 
@@ -1117,17 +1190,69 @@ flowchart LR
 
 **Previous Year MCQ List from this Topic:**
 
-- [Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many…](../mcq-answers/database.md?plain=1#L1306)
-- [Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?](../mcq-answers/database.md?plain=1#L1315)
-- [What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraint…](../mcq-answers/database.md?plain=1#L1324)
-- [Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality…](../mcq-answers/database.md?plain=1#L1333)
-- [A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1342)
-- [A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1360)
-- [Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totall…](../mcq-answers/database.md?plain=1#L1378)
-- [A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1387)
-- [In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.](../mcq-answers/database.md?plain=1#L1396)
+- [Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many…](../mcq-answers/database.md?plain=1#L1307)
+- [Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?](../mcq-answers/database.md?plain=1#L37)
+- [What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraint…](../mcq-answers/database.md?plain=1#L1325)
+- [Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality…](../mcq-answers/database.md?plain=1#L1334)
+- [A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1343)
+- [A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1343)
+- [Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totall…](../mcq-answers/database.md?plain=1#L1334)
+- [A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?](../mcq-answers/database.md?plain=1#L1343)
+- [In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.](../mcq-answers/database.md?plain=1#L1397)
 
 
+
+- [The core components of an ER model are:](../mcq-answers/database.md?plain=1#L1838)
+- [Which one is not a true statement?](../mcq-answers/database.md?plain=1#L1847)
+
+---
+
+---
+
+### Enhanced ER (EER) Concepts — Generalization, Specialization and Aggregation
+
+As database applications became more complex, the classic Entity-Relationship (ER) model was extended into the **Enhanced ER (EER) model** to support advanced conceptual modeling, object-oriented concepts, and abstraction mechanisms.
+
+#### 1. Generalization (Bottom-Up Abstraction)
+- **Definition:** The process of extracting common characteristics, attributes, and relationships from multiple lower-level entity sets to synthesize a higher-level generalized entity set (superclass).
+- **Approach:** **Bottom-Up** — you start with specific entities and generalize upwards.
+- **Example:** `Car` and `Truck` entity sets both have `LicensePlate`, `Price`, and `MaxSpeed`. They are generalized into a higher-level entity `Vehicle`.
+- **ER Diagram Notation:** Represented by a **TRIANGLE** labeled with **"IS-A"** (or triangle symbol pointing toward the generalized superclass).
+
+```mermaid
+flowchart TD
+    CAR["Subclass: Car<br/>(num_doors, seating_cap)"] --> ISA{"▲<br/>IS-A<br/>(Generalization)"}
+    TRUCK["Subclass: Truck<br/>(cargo_capacity, num_axles)"] --> ISA
+    ISA --> VEHICLE["Superclass: Vehicle<br/>(Vehicle_ID, License_No, Model, Price)"]
+```
+
+#### 2. Specialization (Top-Down Abstraction)
+- **Definition:** The process of designating sub-groupings within a higher-level entity set that possess distinctive attributes or specific relationships not shared by all members.
+- **Approach:** **Top-Down** — you start with a generalized entity and specialize downwards.
+- **Example:** `Employee` is specialized into `Developer` (has `programming_language`), `Accountant` (has `cpa_license`), and `Manager` (has `bonus_budget`).
+
+#### Constraints on Specialization / Generalization:
+1. **Disjointness Constraint:**
+   - **Disjoint (d):** An entity instance can belong to **at most ONE** subclass (e.g., a Vehicle cannot be both a Car and a Truck simultaneously).
+   - **Overlapping (o):** An entity instance can belong to **more than one** subclass concurrently (e.g., a person can be both an `Employee` and an `Alumni`).
+2. **Completeness Constraint:**
+   - **Total Specialization (Double Line):** Every entity in the superclass **must** belong to at least one subclass.
+   - **Partial Specialization (Single Line):** An entity in the superclass may not belong to any subclass.
+
+#### 3. Aggregation (Abstracting Relationships)
+- **Definition:** An abstraction through which relationships are treated as higher-level entities.
+- **Why it is needed:** In standard ER modeling, a relationship cannot be directly linked to another relationship. Aggregation wraps an existing relationship and its participating entities into a single aggregate entity set so that it can participate in a further relationship.
+- **Example:** `Employee` works on a `Project` (Relationship). That entire combination is sponsored by a `FundingAgency`.
+
+| Concept | Approach | Notation / Symbol | Key Idea |
+|---|---|---|---|
+| **Generalization** | **Bottom-Up** | 🔺 **Triangle ("IS-A")** | Combines lower-level entities into a higher superclass |
+| **Specialization** | **Top-Down** | 🔺 **Triangle ("IS-A")** | Splits superclass into distinct sub-entities |
+| **Aggregation** | Composition | **Bounding Rectangle** enclosing relationship | Treats relationship + entities as an abstract entity |
+
+**Previous Year MCQ List from this Topic:**
+
+- [In E-R diagram generalisation is represented by:](../mcq-answers/database.md?plain=1#L2108)
 
 ---
 
@@ -1291,22 +1416,24 @@ The formal ideal is **serialisability**: the result of running transactions conc
 
 **Previous Year MCQ List from this Topic:**
 
-- [A transaction for which all committed changes are permanent is called ________](../mcq-answers/database.md?plain=1#L514)
-- [A to B transfer balance but not sent to B? Which property in ACID is responsible?](../mcq-answers/database.md?plain=1#L997)
-- [Which one of these is not included in acid property of database?](../mcq-answers/database.md?plain=1#L1006)
-- [A transaction completes its execution is said to be-](../mcq-answers/database.md?plain=1#L1015)
-- [What is the D in ACID property in database?](../mcq-answers/database.md?plain=1#L1024)
-- [Which one of the following commands is used to restore the database to the last committed state?](../mcq-answers/database.md?plain=1#L1030)
-- [Which one is not Database Transaction property?](../mcq-answers/database.md?plain=1#L1039)
-- [Which one of the following is a failure to a system?](../mcq-answers/database.md?plain=1#L1048)
-- [How can your rollback a committed transaction in any DBMS?](../mcq-answers/database.md?plain=1#L1057)
-- [The packaged procedure that makes data in form permanent in the Database is-](../mcq-answers/database.md?plain=1#L1066)
-- [ROLLBACK command is used to undo the changes made by-](../mcq-answers/database.md?plain=1#L1075)
-- [Why is set transaction used in an oracle DBMS?](../mcq-answers/database.md?plain=1#L1084)
-- [After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is…](../mcq-answers/database.md?plain=1#L1093)
-- [It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be vis…](../mcq-answers/database.md?plain=1#L1102)
+- [A transaction for which all committed changes are permanent is called ________](../mcq-answers/database.md?plain=1#L515)
+- [A to B transfer balance but not sent to B? Which property in ACID is responsible?](../mcq-answers/database.md?plain=1#L998)
+- [Which one of these is not included in acid property of database?](../mcq-answers/database.md?plain=1#L1007)
+- [A transaction completes its execution is said to be-](../mcq-answers/database.md?plain=1#L1016)
+- [What is the D in ACID property in database?](../mcq-answers/database.md?plain=1#L1025)
+- [Which one of the following commands is used to restore the database to the last committed state?](../mcq-answers/database.md?plain=1#L91)
+- [Which one is not Database Transaction property?](../mcq-answers/database.md?plain=1#L1040)
+- [Which one of the following is a failure to a system?](../mcq-answers/database.md?plain=1#L91)
+- [How can your rollback a committed transaction in any DBMS?](../mcq-answers/database.md?plain=1#L1058)
+- [The packaged procedure that makes data in form permanent in the Database is-](../mcq-answers/database.md?plain=1#L1067)
+- [ROLLBACK command is used to undo the changes made by-](../mcq-answers/database.md?plain=1#L1076)
+- [Why is set transaction used in an oracle DBMS?](../mcq-answers/database.md?plain=1#L1085)
+- [After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is…](../mcq-answers/database.md?plain=1#L1094)
+- [It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be vis…](../mcq-answers/database.md?plain=1#L1103)
 
 
+
+- [Which of the following ensures that transactions are processed reliably?](../mcq-answers/database.md?plain=1#L1937)
 
 ---
 
@@ -1406,16 +1533,18 @@ END;
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which of the following locks the item from access of any type?](../mcq-answers/database.md?plain=1#L523)
-- [Which of the following is not a factor in determining the concurrency control behavior of SQL Server?](../mcq-answers/database.md?plain=1#L1707)
-- [In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical co…](../mcq-answers/database.md?plain=1#L1716)
-- [Which of the below is responsible for controlling the interaction among simultaneous transaction?](../mcq-answers/database.md?plain=1#L1725)
-- [In strict two phase locking protocol-](../mcq-answers/database.md?plain=1#L1734)
-- [A shared lock allows which of the following type of transaction to occur?](../mcq-answers/database.md?plain=1#L1743)
-- [Which of the following protocol is an SQL trigger support by oracle?](../mcq-answers/database.md?plain=1#L1512)
-- [________ is a statement that is executed automatically by the system.](../mcq-answers/database.md?plain=1#L1521)
+- [Which of the following locks the item from access of any type?](../mcq-answers/database.md?plain=1#L443)
+- [Which of the following is not a factor in determining the concurrency control behavior of SQL Server?](../mcq-answers/database.md?plain=1#L37)
+- [In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical co…](../mcq-answers/database.md?plain=1#L1717)
+- [Which of the below is responsible for controlling the interaction among simultaneous transaction?](../mcq-answers/database.md?plain=1#L1726)
+- [In strict two phase locking protocol-](../mcq-answers/database.md?plain=1#L1735)
+- [A shared lock allows which of the following type of transaction to occur?](../mcq-answers/database.md?plain=1#L1744)
+- [Which of the following protocol is an SQL trigger support by oracle?](../mcq-answers/database.md?plain=1#L114)
+- [________ is a statement that is executed automatically by the system.](../mcq-answers/database.md?plain=1#L1522)
 
 
+
+- [Deadlock in a database occurs when:](../mcq-answers/database.md?plain=1#L1973)
 
 ---
 
@@ -1473,24 +1602,31 @@ CREATE INDEX idx_emp_dept_salary ON Employee(DeptID, Salary);   -- composite
 
 **Previous Year MCQ List from this Topic:**
 
-- [We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-](../mcq-answers/database.md?plain=1#L286)
-- [কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?](../mcq-answers/database.md?plain=1#L406)
-- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L415)
-- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L487)
-- [The primary key is selected from the ________](../mcq-answers/database.md?plain=1#L505)
-- [The key selected from the sets of candidate keys by database design is called ______ key:](../mcq-answers/database.md?plain=1#L1122)
-- [Which of the following types of table constraints prevents the entry of duplicate rows?](../mcq-answers/database.md?plain=1#L1131)
-- [Referential integrity in a DBMS is a form of-](../mcq-answers/database.md?plain=1#L1140)
-- [Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.](../mcq-answers/database.md?plain=1#L1149)
-- [The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-](../mcq-answers/database.md?plain=1#L1158)
-- [Which of the following is a group of one or more attributes that uniquely identifies a row?](../mcq-answers/database.md?plain=1#L1167)
-- [For every relationship, how many possible sets of minimum cardinalities are there?](../mcq-answers/database.md?plain=1#L1176)
-- [A primary key must also be-](../mcq-answers/database.md?plain=1#L1185)
-- [What represents a row in a relational database?](../mcq-answers/database.md?plain=1#L1194)
-- [The subset of super key is a candidate key under what condition?](../mcq-answers/database.md?plain=1#L1203)
-- [Which of the following is a primary key property in DBMS? ( DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? )](../mcq-answers/database.md?plain=1#L1545)
-- [What are the different events in Triggers?](../mcq-answers/database.md?plain=1#L1476)
+- [We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-](../mcq-answers/database.md?plain=1#L287)
+- [কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?](../mcq-answers/database.md?plain=1#L407)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L416)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L416)
+- [The primary key is selected from the ________](../mcq-answers/database.md?plain=1#L506)
+- [The key selected from the sets of candidate keys by database design is called ______ key:](../mcq-answers/database.md?plain=1#L1123)
+- [Which of the following types of table constraints prevents the entry of duplicate rows?](../mcq-answers/database.md?plain=1#L1132)
+- [Referential integrity in a DBMS is a form of-](../mcq-answers/database.md?plain=1#L1141)
+- [Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.](../mcq-answers/database.md?plain=1#L1150)
+- [The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-](../mcq-answers/database.md?plain=1#L1159)
+- [Which of the following is a group of one or more attributes that uniquely identifies a row?](../mcq-answers/database.md?plain=1#L37)
+- [For every relationship, how many possible sets of minimum cardinalities are there?](../mcq-answers/database.md?plain=1#L1177)
+- [A primary key must also be-](../mcq-answers/database.md?plain=1#L1186)
+- [What represents a row in a relational database?](../mcq-answers/database.md?plain=1#L1195)
+- [The subset of super key is a candidate key under what condition?](../mcq-answers/database.md?plain=1#L1204)
+- [Which of the following is a primary key property in DBMS? ( DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? )](../mcq-answers/database.md?plain=1#L37)
+- [What are the different events in Triggers?](../mcq-answers/database.md?plain=1#L1477)
 
+
+- [Which statement is true?](../mcq-answers/database.md?plain=1#L1856)
+- [Which of the following is not an integrity constraint?](../mcq-answers/database.md?plain=1#L37)
+- [Student(ID, name, dept name, tot_credit). In this query which attributes form the primary key?](../mcq-answers/database.md?plain=1#L1883)
+- [In relational databases, what does a foreign key represent?](../mcq-answers/database.md?plain=1#L1955)
+- [Key to represent the relationship between tables is called:](../mcq-answers/database.md?plain=1#L2018)
+- [An instance of relational schema R(A,B,C) has distinct values of A, including NULL values. Which one of the following is true?](../mcq-answers/database.md?plain=1#L2081)
 
 ---
 
@@ -1569,14 +1705,154 @@ flowchart TD
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which level of abstraction specifies the data and relationships between data?](../mcq-answers/database.md?plain=1#L561)
-- [Data integrity problems in a DBMS is caused due to-](../mcq-answers/database.md?plain=1#L612)
-- [A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-](../mcq-answers/database.md?plain=1#L621)
-- [The collection of information stored in the database at a particular moment is called-](../mcq-answers/database.md?plain=1#L702)
-- [Which of the following term refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L774)
-- [Which of the following terms refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L810)
-- [The ________ format is usually used to store data.](../mcq-answers/database.md?plain=1#L828)
+- [Which level of abstraction specifies the data and relationships between data?](../mcq-answers/database.md?plain=1#L562)
+- [Data integrity problems in a DBMS is caused due to-](../mcq-answers/database.md?plain=1#L613)
+- [A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-](../mcq-answers/database.md?plain=1#L622)
+- [The collection of information stored in the database at a particular moment is called-](../mcq-answers/database.md?plain=1#L703)
+- [Which of the following term refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L775)
+- [Which of the following terms refers to the degree to which data in a database system are accurate and correct?](../mcq-answers/database.md?plain=1#L775)
+- [The ________ format is usually used to store data.](../mcq-answers/database.md?plain=1#L829)
 
+
+- [What is the primary function of a Database Management System (DBMS)?](../mcq-answers/database.md?plain=1#L1775)
+- [Which of the following is NOT a characteristic of a DBMS?](../mcq-answers/database.md?plain=1#L37)
+- [Which one is not true for DBMS?](../mcq-answers/database.md?plain=1#L1802)
+- [______ is a database management system which supports multiple users concurrently.](../mcq-answers/database.md?plain=1#L1811)
+- [In which of the following formats data is stored in the database management system?](../mcq-answers/database.md?plain=1#L1820)
+- [Which of the following is not an example of DBMS?](../mcq-answers/database.md?plain=1#L37)
+
+---
+
+---
+
+### Data Models — Hierarchical, Network, Relational and Object-Oriented
+
+A **data model** is an integrated collection of concepts for describing data, data relationships, data semantics, and data constraints.
+
+```mermaid
+flowchart TD
+    subgraph HIERARCHICAL["1. Hierarchical Model (Tree)"]
+        H_ROOT["Parent / Root"] --> H_C1["Child 1"]
+        H_ROOT --> H_C2["Child 2"]
+    end
+
+    subgraph NETWORK["2. Network Model (Graph & SET)"]
+        N_O1["Owner Record A"] -->|SET 1 (1:N)| N_M1["Member Record"]
+        N_O2["Owner Record B"] -->|SET 2 (1:N)| N_M1
+    end
+
+    subgraph RELATIONAL["3. Relational Model (Tables)"]
+        R_T1["Table 1 (Rows x Columns)"] <-->|Foreign Key| R_T2["Table 2 (Rows x Columns)"]
+    end
+```
+
+#### 1. The Hierarchical Data Model
+- **Structure:** **Tree-like structure** composed of segments (records).
+- **Rules:** 
+  - Exactly **one ROOT segment** with no parent.
+  - Every non-root segment has **strictly ONE parent segment** (1:N parent-child relationship).
+- **Limitations:** Cannot naturally represent Many-to-Many (M:N) relationships; causes extensive data duplication and complex pointer maintenance.
+- **Famous Example:** **IBM IMS (Information Management System)**.
+
+#### 2. The Network Data Model (CODASYL DBTG)
+- **Structure:** **Graph (Arbitrary network)** of record types connected by links.
+- **The SET Concept (Core Feature):**
+  - In the CODASYL Network Model, relationships are represented using **SETS**.
+  - A **SET** consists of an **Owner Record Type** and one or more **Member Record Types**.
+  - A SET represents a **1-to-Many (1:N) relationship** from the owner to the members.
+  - **Crucial Advantage over Hierarchical Model:** A member record can belong to **MULTIPLE SETS** simultaneously — meaning a child can have **MORE THAN ONE PARENT/OWNER**!
+  - Many-to-Many (M:N) relationships are modeled cleanly by introducing an intersection record type that participates as a member in two distinct sets.
+  - Pointers (embedded in record prefixes) link owner and member records in circular chains.
+
+#### 3. The Relational Data Model (E.F. Codd, 1970)
+- **Structure:** Two-dimensional **Tables (Relations)** consisting of rows (tuples) and columns (attributes).
+- **Features:** Mathematical foundation (Relational Calculus and Relational Algebra); declarative queries (SQL); physical storage independence. Dominant in modern enterprise computing (Oracle, PostgreSQL, MySQL, SQL Server).
+
+#### 4. Object-Oriented / Object-Relational Models
+- Models complex real-world entities as objects with state (attributes) and behavior (methods), supporting inheritance and encapsulation.
+
+| Feature | Hierarchical Model | Network Model | Relational Model |
+|---|---|---|---|
+| **Underlying Structure** | **Tree hierarchy** | **Graph / Network** | **Tables (Relations)** |
+| **Relationship Mechanism** | Parent-Child Relationships | **SET Concept (Owner & Member)** | **Keys & Foreign Keys** |
+| **Multiple Parents Allowed?** | ❌ **No** (Strictly 1 parent) | ✅ **Yes (via multiple sets)** | ✅ Yes (via foreign keys) |
+| **Many-to-Many (M:N)** | Difficult (Requires duplication) | ✅ Supported via junction records | ✅ Supported via bridge tables |
+| **Query Mechanism** | Navigational (Procedural) | Navigational (Procedural pointers) | **Declarative (SQL)** |
+| **Data Independence** | Low | Low | 🏆 **High** |
+
+**Previous Year MCQ List from this Topic:**
+
+- [SET concept is used in:](../mcq-answers/database.md?plain=1#L2000)
+
+---
+
+### DBMS Functional Components & Engine Architecture
+
+Internally, a Database Management System consists of software modules categorized into two major functional units: the **Query Processor** and the **Storage Manager (Database Engine)**.
+
+```mermaid
+flowchart TD
+    USER["Users / Application Programs"] --> QP["1. QUERY PROCESSOR"]
+    
+    subgraph QP["1. QUERY PROCESSOR"]
+        DDL_I["DDL Interpreter"]
+        DML_C["DML Compiler & Optimizer"]
+        QEE["Query Execution Engine"]
+        DDL_I --> QEE
+        DML_C --> QEE
+    end
+    
+    QP --> SM["2. STORAGE MANAGER (DATABASE ENGINE)"]
+    
+    subgraph SM["2. STORAGE MANAGER"]
+        AUTH["Authorization & Integrity Manager"]
+        TX["Transaction & Lock Manager"]
+        BUF["Buffer Manager"]
+        FILE["File & Storage Manager"]
+        REC["Recovery Manager"]
+        AUTH --> BUF
+        TX --> BUF
+        FILE --> BUF
+        REC --> BUF
+    end
+    
+    SM --> DISK[("3. PHYSICAL STORAGE")]
+    
+    subgraph DISK[("3. PHYSICAL DISK STORAGE")]
+        DATA["Data Files (Tables, Rows)"]
+        DICT["Data Dictionary (Metadata)"]
+        IDX["Indices"]
+        LOGS["Transaction Logs (WAL)"]
+    end
+    
+    BUF <--> DISK
+```
+
+#### Detailed Breakdown of Components:
+
+1. **Query Processor (Query Engine):**
+   - **DDL Interpreter:** Parses and executes DDL statements (`CREATE`, `ALTER`, `DROP`) and records the resulting metadata definitions into the Data Dictionary.
+   - **DML Compiler:** Translates DML statements (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) into low-level execution primitives.
+   - **Query Optimizer:** Evaluates multiple equivalent evaluation plans for a query and selects the most cost-effective execution plan (evaluating index scans vs full table scans).
+   - **Query Execution Engine:** Coordinates execution of chosen query plan against stored data.
+
+2. **Storage Manager / Database Engine:**
+   - **Buffer Manager:** Allocates and manages cache memory (RAM Buffer Pool), reading disk pages into memory and deciding replacement algorithms (e.g., LRU).
+   - **File & Storage Manager:** Manages contiguous disk block allocation, data file expansion, and free space maps.
+   - **Authorization & Integrity Manager:** Enforces database constraints (`NOT NULL`, `CHECK`, `FOREIGN KEY`) and verifies access privileges (`GRANT`/`REVOKE`).
+   - **Transaction Manager:** Guarantees ACID properties; oversees transaction state transitions (Active, Committed, Aborted).
+   - **Concurrency Control / Lock Manager:** Assigns and releases shared/exclusive locks to prevent conflicts during simultaneous transactions.
+   - **Recovery Manager:** Maintains Write-Ahead Logging (WAL) and restores consistency after hardware or system crashes.
+
+3. **Data & Stored Objects vs DBMS Components:**
+   > ### **Crucial Exam Concept:**
+   > - **DBMS Engine Components:** Query Processor, Storage Manager, Database Engine, Indexing Engine, Buffer Manager, Data Languages (DDL/DML compilers).
+   > - **Database Objects / Data Structures:** Database **Tables**, Views, Triggers, Indexes, and Tuples are **data structures / stored objects**, NOT software components of the DBMS engine!
+
+**Previous Year MCQ List from this Topic:**
+
+- [Which of the following is NOT a component of DBMS?](../mcq-answers/database.md?plain=1#L37)
+- [Which of the following is a component of the DBMS?](../mcq-answers/database.md?plain=1#L37)
 
 ---
 
@@ -1629,19 +1905,21 @@ flowchart TD
 
 **Previous Year MCQ List from this Topic:**
 
-- [Data about data is called-](../mcq-answers/database.md?plain=1#L552)
-- [Which of the following is not a function of a database administrator?](../mcq-answers/database.md?plain=1#L567)
-- [Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?](../mcq-answers/database.md?plain=1#L648)
-- [In user facilities, copying of all records onto a main store from permanent store is considered as-](../mcq-answers/database.md?plain=1#L720)
-- [If master and transaction file have keys in same order, then it takes____](../mcq-answers/database.md?plain=1#L729)
-- [File used to update information in computer's master file is classified as](../mcq-answers/database.md?plain=1#L738)
-- [Interleaving of records to form one file containing all records is classified as ____.](../mcq-answers/database.md?plain=1#L747)
-- [Set of numbers used to check all groups record within limits of data is classified as-](../mcq-answers/database.md?plain=1#L756)
-- [Process of converting data or information in the form of which is readily available for processing is called-](../mcq-answers/database.md?plain=1#L765)
-- [Data directory contains detail of-](../mcq-answers/database.md?plain=1#L801)
-- [The following are functions of a DBMS except ________](../mcq-answers/database.md?plain=1#L819)
-- [What is the purpose of data logger?](../mcq-answers/database.md?plain=1#L846)
+- [Data about data is called-](../mcq-answers/database.md?plain=1#L553)
+- [Which of the following is not a function of a database administrator?](../mcq-answers/database.md?plain=1#L37)
+- [Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?](../mcq-answers/database.md?plain=1#L649)
+- [In user facilities, copying of all records onto a main store from permanent store is considered as-](../mcq-answers/database.md?plain=1#L721)
+- [If master and transaction file have keys in same order, then it takes____](../mcq-answers/database.md?plain=1#L730)
+- [File used to update information in computer's master file is classified as](../mcq-answers/database.md?plain=1#L739)
+- [Interleaving of records to form one file containing all records is classified as ____.](../mcq-answers/database.md?plain=1#L748)
+- [Set of numbers used to check all groups record within limits of data is classified as-](../mcq-answers/database.md?plain=1#L757)
+- [Process of converting data or information in the form of which is readily available for processing is called-](../mcq-answers/database.md?plain=1#L766)
+- [Data directory contains detail of-](../mcq-answers/database.md?plain=1#L802)
+- [The following are functions of a DBMS except ________](../mcq-answers/database.md?plain=1#L820)
+- [What is the purpose of data logger?](../mcq-answers/database.md?plain=1#L847)
 
+
+- [A data dictionary is a special file that contains:](../mcq-answers/database.md?plain=1#L2072)
 
 ---
 
@@ -1715,21 +1993,21 @@ flowchart LR
 
 **Previous Year MCQ List from this Topic:**
 
-- [Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?](../mcq-answers/database.md?plain=1#L576)
-- [In oracle to change the DB_Block_size parameter, you need to-](../mcq-answers/database.md?plain=1#L585)
-- [Which of the following controls the execution of application program and UI in two tier client/server architecture?](../mcq-answers/database.md?plain=1#L594)
-- [LGWR process writes information into-](../mcq-answers/database.md?plain=1#L603)
-- [Which is the oracle component that contains the memory structures and background process?](../mcq-answers/database.md?plain=1#L630)
-- [The three different application logic components are which of the following?](../mcq-answers/database.md?plain=1#L639)
-- [Oracle materialized views or SNAPSHOTS is used-](../mcq-answers/database.md?plain=1#L657)
-- [A distributed database has which of the following advantages over a centralized database?](../mcq-answers/database.md?plain=1#L666)
-- [In Oracle DBMS, LGWR process is a-](../mcq-answers/database.md?plain=1#L675)
-- [Which one of the following is a No-SQL Database?](../mcq-answers/database.md?plain=1#L684)
-- [Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.](../mcq-answers/database.md?plain=1#L711)
-- [Which one is an example of DBMS?](../mcq-answers/database.md?plain=1#L783)
-- [In the hypermedia database, information bits are stored in the form of:](../mcq-answers/database.md?plain=1#L792)
-- [From where the data is captured in the SQL Server Database?](../mcq-answers/database.md?plain=1#L837)
-- [The Application program interface in a two-tier architecture DBMS is provided by-](../mcq-answers/database.md?plain=1#L1669)
+- [Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?](../mcq-answers/database.md?plain=1#L577)
+- [In oracle to change the DB_Block_size parameter, you need to-](../mcq-answers/database.md?plain=1#L586)
+- [Which of the following controls the execution of application program and UI in two tier client/server architecture?](../mcq-answers/database.md?plain=1#L132)
+- [LGWR process writes information into-](../mcq-answers/database.md?plain=1#L604)
+- [Which is the oracle component that contains the memory structures and background process?](../mcq-answers/database.md?plain=1#L631)
+- [The three different application logic components are which of the following?](../mcq-answers/database.md?plain=1#L640)
+- [Oracle materialized views or SNAPSHOTS is used-](../mcq-answers/database.md?plain=1#L658)
+- [A distributed database has which of the following advantages over a centralized database?](../mcq-answers/database.md?plain=1#L667)
+- [In Oracle DBMS, LGWR process is a-](../mcq-answers/database.md?plain=1#L676)
+- [Which one of the following is a No-SQL Database?](../mcq-answers/database.md?plain=1#L91)
+- [Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.](../mcq-answers/database.md?plain=1#L712)
+- [Which one is an example of DBMS?](../mcq-answers/database.md?plain=1#L784)
+- [In the hypermedia database, information bits are stored in the form of:](../mcq-answers/database.md?plain=1#L793)
+- [From where the data is captured in the SQL Server Database?](../mcq-answers/database.md?plain=1#L838)
+- [The Application program interface in a two-tier architecture DBMS is provided by-](../mcq-answers/database.md?plain=1#L1670)
 
 
 ---
@@ -1813,10 +2091,10 @@ flowchart TD
 
 **Previous Year MCQ List from this Topic:**
 
-- [Where is data warehousing used?](../mcq-answers/database.md?plain=1#L1223)
-- [What is the use of data cleaning?](../mcq-answers/database.md?plain=1#L1232)
-- [Small logical units where data warehouse hold large amounts of data is known as ______.](../mcq-answers/database.md?plain=1#L1241)
-- [A star schema has what type of relationship between a dimension and fact table?](../mcq-answers/database.md?plain=1#L1277)
+- [Where is data warehousing used?](../mcq-answers/database.md?plain=1#L1224)
+- [What is the use of data cleaning?](../mcq-answers/database.md?plain=1#L1233)
+- [Small logical units where data warehouse hold large amounts of data is known as ______.](../mcq-answers/database.md?plain=1#L1242)
+- [A star schema has what type of relationship between a dimension and fact table?](../mcq-answers/database.md?plain=1#L1278)
 
 
 ---
@@ -1876,11 +2154,11 @@ flowchart TD
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?](../mcq-answers/database.md?plain=1#L1250)
-- [Hadoop written in which language?](../mcq-answers/database.md?plain=1#L1259)
-- [Business Intelligence (BI) reporting analyses can be performed using](../mcq-answers/database.md?plain=1#L1268)
-- [Finding useful pattern from the data in a database is known as-](../mcq-answers/database.md?plain=1#L1286)
-- [Dark data represents ________.](../mcq-answers/database.md?plain=1#L1295)
+- [Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?](../mcq-answers/database.md?plain=1#L37)
+- [Hadoop written in which language?](../mcq-answers/database.md?plain=1#L1260)
+- [Business Intelligence (BI) reporting analyses can be performed using](../mcq-answers/database.md?plain=1#L1269)
+- [Finding useful pattern from the data in a database is known as-](../mcq-answers/database.md?plain=1#L1287)
+- [Dark data represents ________.](../mcq-answers/database.md?plain=1#L1296)
 
 
 ---
@@ -1954,14 +2232,16 @@ flowchart LR
 
 **Previous Year MCQ List from this Topic:**
 
-- [Which is not the steps of SQL Query processing?](../mcq-answers/database.md?plain=1#L268)
-- [Which one make data access from a database faster?](../mcq-answers/database.md?plain=1#L1591)
-- [Related records of the different relations can be stored on the same block using which file organization technique?](../mcq-answers/database.md?plain=1#L1613)
-- [Which of the following is correct for the Create index command?](../mcq-answers/database.md?plain=1#L1622)
-- [Database index speeds up-](../mcq-answers/database.md?plain=1#L1631)
-- [Which of the following index is automatically created by the database server when an object is created?](../mcq-answers/database.md?plain=1#L1640)
-- [Related records of the different relations can be stored on the same block using which file organization technique?](../mcq-answers/database.md?plain=1#L1649)
+- [Which is not the steps of SQL Query processing?](../mcq-answers/database.md?plain=1#L269)
+- [Which one make data access from a database faster?](../mcq-answers/database.md?plain=1#L1592)
+- [Related records of the different relations can be stored on the same block using which file organization technique?](../mcq-answers/database.md?plain=1#L1614)
+- [Which of the following is correct for the Create index command?](../mcq-answers/database.md?plain=1#L37)
+- [Database index speeds up-](../mcq-answers/database.md?plain=1#L1632)
+- [Which of the following index is automatically created by the database server when an object is created?](../mcq-answers/database.md?plain=1#L1641)
+- [Related records of the different relations can be stored on the same block using which file organization technique?](../mcq-answers/database.md?plain=1#L1614)
 
+
+- [Which of the following statements about indexes is TRUE?](../mcq-answers/database.md?plain=1#L1982)
 
 ---
 
@@ -2020,12 +2300,12 @@ rs.close(); st.close(); con.close();
 
 **Previous Year MCQ List from this Topic:**
 
-- [Embedded SQL is which of the following?](../mcq-answers/database.md?plain=1#L1660)
-- [The Application program interface in a two-tier architecture DBMS is provided by-](../mcq-answers/database.md?plain=1#L1669)
-- [A major challenge in mixing SQL with a general-purpose language is mismatching in the](../mcq-answers/database.md?plain=1#L1678)
-- [Once connection is set up, program can send SQL commands to database by using](../mcq-answers/database.md?plain=1#L1687)
-- [In your program you want to use the JDBC-ODBC bridge drive. What code do you use?](../mcq-answers/database.md?plain=1#L1696)
-- [b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।](../mcq-answers/database.md?plain=1#L1570)
+- [Embedded SQL is which of the following?](../mcq-answers/database.md?plain=1#L1661)
+- [The Application program interface in a two-tier architecture DBMS is provided by-](../mcq-answers/database.md?plain=1#L1670)
+- [A major challenge in mixing SQL with a general-purpose language is mismatching in the](../mcq-answers/database.md?plain=1#L1679)
+- [Once connection is set up, program can send SQL commands to database by using](../mcq-answers/database.md?plain=1#L1688)
+- [In your program you want to use the JDBC-ODBC bridge drive. What code do you use?](../mcq-answers/database.md?plain=1#L1697)
+- [b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।](../mcq-answers/database.md?plain=1#L1571)
 
 
 ---
@@ -2101,12 +2381,18 @@ END;
 
 **Previous Year MCQ List from this Topic:**
 
-- [We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-](../mcq-answers/database.md?plain=1#L286)
-- [The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.](../mcq-answers/database.md?plain=1#L336)
-- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L415)
-- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L487)
-- [Which one is not unary operator in relational algebra?](../mcq-answers/database.md?plain=1#L1429)
-- [How can you generate debugging output from PL/SQL?](../mcq-answers/database.md?plain=1#L1485)
-- [What is GET_BLOCK property?](../mcq-answers/database.md?plain=1#L1494)
-- [Which is not the UTL_FILE function-](../mcq-answers/database.md?plain=1#L1503)
-- [What does a COMMIT statement do to a CURSOR?](../mcq-answers/database.md?plain=1#L1530)
+- [We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-](../mcq-answers/database.md?plain=1#L287)
+- [The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.](../mcq-answers/database.md?plain=1#L337)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L416)
+- [In SQL, the ________ command is used to recompile a view.](../mcq-answers/database.md?plain=1#L416)
+- [Which one is not unary operator in relational algebra?](../mcq-answers/database.md?plain=1#L1430)
+- [How can you generate debugging output from PL/SQL?](../mcq-answers/database.md?plain=1#L1486)
+- [What is GET_BLOCK property?](../mcq-answers/database.md?plain=1#L1495)
+- [Which is not the UTL_FILE function-](../mcq-answers/database.md?plain=1#L1504)
+- [What does a COMMIT statement do to a CURSOR?](../mcq-answers/database.md?plain=1#L1531)
+- [The ______ operation performs a set union of two 'similarly structured' tables.](../mcq-answers/database.md?plain=1#L1892)
+- [The ______ provides a set of operations that take one or more relations as input and return a relation as an output.](../mcq-answers/database.md?plain=1#L1901)
+- [What is the Cartesian product of two relations R(A,B) with 3 rows and S(C,D) with 4 rows?](../mcq-answers/database.md?plain=1#L1991)
+- [Relational Algebra is:](../mcq-answers/database.md?plain=1#L2009)
+- [______ produces the relation that has attributes of R1 and R2.](../mcq-answers/database.md?plain=1#L2027)
+- [The natural join is equal to:](../mcq-answers/database.md?plain=1#L2090)
