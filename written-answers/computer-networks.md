@@ -2432,7 +2432,7 @@ Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, split
 | 5 | Session | Sets up, manages and ends a session; synchronisation | Data | NetBIOS, RPC, SMB |
 | 4 | Transport | End-to-end delivery, segmentation, flow and error control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
 | 3 | Network | Logical addressing and routing between networks | Packet | IP, ICMP, OSPF |
-| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection | Frame | Ethernet, PPP, ARP |
+| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection, media access control | Frame | Ethernet, PPP, ARP |
 | 1 | Physical | Sends raw bits as electrical, light or radio signals | Bit | Cables, hubs, RS-232 |
 
    Layer functions in short
