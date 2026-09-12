@@ -1221,7 +1221,7 @@ As database applications became more complex, the classic Entity-Relationship (E
 
 ```mermaid
 flowchart TD
-    CAR["Subclass: Car<br/>(num_doors, seating_cap)"] --> ISA{"▲<br/>IS-A<br/>(Generalization)"}
+    CAR["Subclass: Car<br/>(num_doors, seating_cap)"] --> ISA{"IS-A<br/>(Generalization Triangle)"}
     TRUCK["Subclass: Truck<br/>(cargo_capacity, num_axles)"] --> ISA
     ISA --> VEHICLE["Superclass: Vehicle<br/>(Vehicle_ID, License_No, Model, Price)"]
 ```
@@ -1737,12 +1737,12 @@ flowchart TD
     end
 
     subgraph NETWORK["2. Network Model (Graph & SET)"]
-        N_O1["Owner Record A"] -->|SET 1 (1:N)| N_M1["Member Record"]
-        N_O2["Owner Record B"] -->|SET 2 (1:N)| N_M1
+        N_O1["Owner Record A"] -->|"SET 1 (1 to N)"| N_M1["Member Record"]
+        N_O2["Owner Record B"] -->|"SET 2 (1 to N)"| N_M1
     end
 
     subgraph RELATIONAL["3. Relational Model (Tables)"]
-        R_T1["Table 1 (Rows x Columns)"] <-->|Foreign Key| R_T2["Table 2 (Rows x Columns)"]
+        R_T1["Table 1 (Rows x Columns)"] ---|"Foreign Key"| R_T2["Table 2 (Rows x Columns)"]
     end
 ```
 
@@ -1792,9 +1792,9 @@ Internally, a Database Management System consists of software modules categorize
 
 ```mermaid
 flowchart TD
-    USER["Users / Application Programs"] --> QP["1. QUERY PROCESSOR"]
+    USER["Users / Application Programs"] --> QP_HEAD["1. QUERY PROCESSOR"]
     
-    subgraph QP["1. QUERY PROCESSOR"]
+    subgraph QP_BOX["1. QUERY PROCESSOR"]
         DDL_I["DDL Interpreter"]
         DML_C["DML Compiler & Optimizer"]
         QEE["Query Execution Engine"]
@@ -1802,9 +1802,9 @@ flowchart TD
         DML_C --> QEE
     end
     
-    QP --> SM["2. STORAGE MANAGER (DATABASE ENGINE)"]
+    QP_HEAD --> SM_HEAD["2. STORAGE MANAGER (DATABASE ENGINE)"]
     
-    subgraph SM["2. STORAGE MANAGER"]
+    subgraph SM_BOX["2. STORAGE MANAGER"]
         AUTH["Authorization & Integrity Manager"]
         TX["Transaction & Lock Manager"]
         BUF["Buffer Manager"]
@@ -1816,16 +1816,16 @@ flowchart TD
         REC --> BUF
     end
     
-    SM --> DISK[("3. PHYSICAL STORAGE")]
+    SM_HEAD --> DISK_STORAGE[("3. PHYSICAL STORAGE")]
     
-    subgraph DISK[("3. PHYSICAL DISK STORAGE")]
+    subgraph DISK_BOX["3. PHYSICAL DISK STORAGE"]
         DATA["Data Files (Tables, Rows)"]
         DICT["Data Dictionary (Metadata)"]
         IDX["Indices"]
         LOGS["Transaction Logs (WAL)"]
     end
     
-    BUF <--> DISK
+    BUF --- DISK_STORAGE
 ```
 
 #### Detailed Breakdown of Components:
