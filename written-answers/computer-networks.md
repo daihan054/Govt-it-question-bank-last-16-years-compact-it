@@ -2431,25 +2431,34 @@ Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, split
 | 6 | Presentation | Translation, encryption/decryption, compression | Data | SSL/TLS, JPEG, ASCII |
 | 5 | Session | Sets up, manages and ends a session; synchronisation | Data | NetBIOS, RPC, SMB |
 | 4 | Transport | End-to-end delivery, segmentation, flow and error control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
-| 3 | Network | Logical addressing and routing between networks.<br><br>**Packet structure:**<br>`[ IP Header (Src/Dst IP) │ Data (Segment Payload) ]` | Packet | IP, ICMP, OSPF |
-| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection.<br><br>**Frame structure:**<br>`[ Frame Header (MAC) │ IP Packet (Data) │ Trailer (CRC/FCS) ]` | Frame | Ethernet, PPP, ARP |
+| 3 | Network | Logical addressing and routing between networks.<br><br>**Packet structure:**<br>`[ Source IP₁ │ Segment │ Destination IP₂ ]` | Packet | IP, ICMP, OSPF |
+| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection.<br><br>**Frame structure:**<br>`[ MAC₁ │ Packet (IP₁ │ Segment │ IP₂) │ MAC₂ ]` | Frame | Ethernet, PPP, ARP |
 | 1 | Physical | Sends raw bits as electrical, light or radio signals | Bit | Cables, hubs, RS-232 |
 
    **PDU Visual Structures (Network Layer Packet & Data Link Layer Frame):**
 
    ```mermaid
    flowchart LR
-       subgraph Packet ["Layer 3: Network Layer Packet (PDU)"]
+       subgraph Packet ["Packet (Network Layer)"]
            direction LR
-           IP_H["IP Header (20–60 Bytes)<br>• Source IP & Dest IP<br>• Version, IHL, TTL, Protocol"] --- IP_DATA["Payload / Data<br>(Transport Layer Segment: TCP/UDP)"]
+           IP1["Source IP₁"] --- SEG["Segment"] --- IP2["Destination IP₂"]
        end
    ```
 
    ```mermaid
    flowchart LR
-       subgraph Frame ["Layer 2: Data Link Layer Frame (PDU)"]
+       subgraph Frame ["Frame (Data Link Layer)"]
            direction LR
-           MAC_H["Frame Header (14 Bytes)<br>• Preamble & SFD<br>• Dest MAC & Source MAC<br>• EtherType / Length"] --- MAC_DATA["Payload / Data<br>(Network Layer IP Packet)"] --- MAC_T["Frame Trailer (4 Bytes)<br>• CRC-32 / FCS Error Check"]
+           MAC1["MAC₁<br>(Source MAC)"]
+           
+           subgraph Packet_Inside ["Packet"]
+               direction LR
+               IP1["IP₁"] --- SEG["Segment"] --- IP2["IP₂"]
+           end
+           
+           MAC2["MAC₂<br>(Destination MAC)"]
+           
+           MAC1 --- Packet_Inside --- MAC2
        end
    ```
 
