@@ -2524,15 +2524,13 @@ Answer:
    The OSI layers (top to bottom):
    - 7 Application, 6 Presentation, 5 Session, 4 Transport, 3 Network, 2 Data Link, 1 Physical.
 
-Cyber threats at different OSI layers (any three for exam):
+Cyber threats at three layers:
 
 | Layer | Cyber Threat | How It Works & Defense |
 |---|---|---|
 | 7 Application | Phishing | Fake login pages trick users to steal passwords.<br>**Defense:** 2FA / MFA, User awareness training. |
 | 4 Transport | TCP SYN Flood | Floods server with half-open requests to crash it.<br>**Defense:** SYN cookies, Rate limiting. |
 | 3 Network | IP Spoofing | Uses a fake source IP to bypass firewall rules.<br>**Defense:** Packet filtering on routers, IPsec. |
-| 2 Data Link | ARP Spoofing | Sends fake ARP replies on LAN to spy on user traffic.<br>**Defense:** Dynamic ARP Inspection (DAI), Port security. |
-| 1 Physical | Cable Tapping / Jamming | Taps cables to steal data or uses jammers to block Wi-Fi.<br>**Defense:** Locked server rooms, Shielded cables. |
 
 5. **Write bottom to top OSI reference Model.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
