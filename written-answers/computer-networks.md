@@ -2521,25 +2521,18 @@ The seven layers with examples:
 
 Answer:
 
-   The OSI layers (top to bottom)
+   The OSI layers (top to bottom):
    - 7 Application, 6 Presentation, 5 Session, 4 Transport, 3 Network, 2 Data Link, 1 Physical.
 
-Cyber threats at three of those layers
+Cyber threats at different OSI layers (any three for exam):
 
-| Layer | Threat | How it works |
+| Layer | Cyber Threat | How It Works & Defense |
 |---|---|---|
-| 7 Application | SQL injection / phishing | Malicious input is placed in a web form so the database executes attacker SQL; or a fake page steals credentials |
-| 4 Transport | TCP SYN flood | The attacker sends thousands of SYN packets and never completes the handshake, filling the server's connection table (DoS) |
-| 3 Network | IP spoofing / ICMP flood | The source IP in the packet header is forged to hide the attacker or to reflect traffic at a victim |
-| 2 Data Link | ARP spoofing / MAC flooding | Fake ARP replies redirect LAN traffic through the attacker (man-in-the-middle); a flooded CAM table turns a switch into a hub |
-| 1 Physical | Cable tapping / jamming | Fibre or copper is tapped to copy traffic, or a Wi-Fi jammer blocks the channel |
-
-   Matching defence
-   - Layer 7 – input validation, prepared statements, WAF, user awareness training.
-   - Layer 4 – SYN cookies, rate limiting, stateful firewall.
-   - Layer 3 – ingress and egress filtering, IPsec, anti-spoofing ACLs.
-   - Layer 2 – Dynamic ARP Inspection, port security, DHCP snooping.
-   - Layer 1 – locked cabinets, conduit, physical access control.
+| 7 Application | Phishing | Fake login pages trick users to steal passwords.<br>**Defense:** 2FA / MFA, User awareness training. |
+| 4 Transport | TCP SYN Flood | Floods server with half-open requests to crash it.<br>**Defense:** SYN cookies, Rate limiting. |
+| 3 Network | IP Spoofing | Uses a fake source IP to bypass firewall rules.<br>**Defense:** Packet filtering on routers, IPsec. |
+| 2 Data Link | ARP Spoofing | Sends fake ARP replies on LAN to spy on user traffic.<br>**Defense:** Dynamic ARP Inspection (DAI), Port security. |
+| 1 Physical | Cable Tapping / Jamming | Taps cables to steal data or uses jammers to block Wi-Fi.<br>**Defense:** Locked server rooms, Shielded cables. |
 
 5. **Write bottom to top OSI reference Model.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
