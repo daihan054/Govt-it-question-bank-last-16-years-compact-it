@@ -2509,13 +2509,13 @@ The seven layers with examples:
 
 | # | Layer | Main function | Examples |
 |---|---|---|---|
-| 7 | Application | Provides network services directly to the user's program | HTTP, FTP, SMTP, DNS |
-| 6 | Presentation | Translation, encryption/decryption, compression | SSL/TLS, JPEG, ASCII |
-| 5 | Session | Sets up, manages and ends a session; synchronisation | NetBIOS, RPC, SMB |
+| 7 | Application | Provides network services directly to the user's program | HTTP, FTP |
+| 6 | Presentation | Translation, encryption/decryption, compression | SSL/TLS, JPEG |
+| 5 | Session | Sets up, manages and ends a session; synchronisation | NetBIOS, RPC |
 | 4 | Transport | End-to-end delivery, segmentation, flow and error control | TCP, UDP |
-| 3 | Network | Logical addressing and routing between networks | IP, ICMP, OSPF |
-| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection | Ethernet, PPP, ARP |
-| 1 | Physical | Sends raw bits as electrical, light or radio signals | Cables, hubs, RS-232 |
+| 3 | Network | Logical addressing and routing between networks | IP, ICMP |
+| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection | Ethernet, ARP |
+| 1 | Physical | Sends raw bits as electrical, light or radio signals | Cables, Hubs |
 
 4. **(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
