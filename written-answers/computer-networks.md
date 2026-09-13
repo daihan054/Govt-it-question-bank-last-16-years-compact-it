@@ -2508,25 +2508,25 @@ Answer:
    The seven layers with functions and examples:
 
    - **7. Application Layer:** Provides network services directly to the user's program
-     - *Example:* Sending a message or photo on WhatsApp / opening a webpage in a web browser.
+     - *Examples (Protocols):* HTTP, HTTPS, FTP, SMTP, DNS (e.g., browsing a webpage with HTTP/HTTPS, sending emails with SMTP, or looking up domains with DNS).
 
    - **6. Presentation Layer:** Translation, encryption/decryption, compression
-     - *Example:* Compressing an image to reduce size / encrypting a password for security (SSL/TLS).
+     - *Examples (Standards & Formats):* SSL/TLS, JPEG, ASCII, MPEG (e.g., encrypting passwords and sensitive traffic via SSL/TLS, decompressing JPEG images or formatting ASCII text).
 
    - **5. Session Layer:** Sets up, manages and ends a session; synchronisation
-     - *Example:* Keeping a voice call or internet-banking login session active until logout.
+     - *Examples (Protocols):* NetBIOS, RPC, SMB (e.g., managing Remote Procedure Calls, or keeping an online banking login session active until logout).
 
    - **4. Transport Layer:** End-to-end delivery, segmentation, flow and error control
-     - *Example:* Splitting a 5MB photo into segments and resending any segment if lost (TCP).
+     - *Examples (Protocols):* TCP, UDP (e.g., TCP provides reliable delivery by segmenting data and resending lost packets; UDP provides fast streaming).
 
    - **3. Network Layer:** Logical addressing and routing between networks
-     - *Example:* Adding IP addresses (sender and receiver) and choosing the best path across routers.
+     - *Examples (Protocols & Devices):* IP (IPv4/IPv6), ICMP, OSPF, Routers (e.g., assigning logical IP addresses and finding the best path for packets across networks).
 
    - **2. Data Link Layer:** Node-to-node delivery, framing, MAC addressing, error detection
-     - *Example:* Transmitting data frames from your phone/PC to the nearby Wi-Fi router using MAC address.
+     - *Examples (Protocols & Standards):* Ethernet, PPP, ARP, Switches (e.g., packaging data into frames and transmitting them to a local device using physical MAC addresses).
 
    - **1. Physical Layer:** Sends raw bits as electrical, light or radio signals
-     - *Example:* Wi-Fi radio waves in the air, light pulses in optical fiber, or electrical voltage in a LAN cable.
+     - *Examples (Hardware & Media):* Twisted-pair cables (UTP), Fiber-optic cables, Hubs, Repeaters, RS-232, Wi-Fi radio (e.g., transmitting raw bit streams as electrical voltages, light pulses, or radio waves).
 
 4. **(b) Name the OSI layers and give one example of a cyber threat at any tree of those layers.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
