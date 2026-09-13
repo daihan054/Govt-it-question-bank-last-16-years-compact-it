@@ -2427,13 +2427,13 @@ Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, split
 
 | # | Layer | Main function | PDU | Examples |
 |---|---|---|---|---|
-| 7 | Application | Provides network services directly to the user's program | Data | HTTP, FTP, SMTP, DNS |
-| 6 | Presentation | Translation, encryption/decryption, compression | Data | SSL/TLS, JPEG, ASCII |
-| 5 | Session | Sets up, manages and ends a session; synchronisation | Data | NetBIOS, RPC, SMB |
+| 7 | Application | Provides network services directly to the user's program | Data | HTTP, FTP |
+| 6 | Presentation | Translation, encryption/decryption, compression | Data | SSL/TLS, JPEG |
+| 5 | Session | Sets up, manages and ends a session; synchronisation | Data | NetBIOS, RPC |
 | 4 | Transport | End-to-end delivery, segmentation, flow and error control | Segment (TCP) / Datagram (UDP) | TCP, UDP |
-| 3 | Network | Logical addressing and routing between networks | Packet | IP, ICMP, OSPF |
-| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection | Frame | Ethernet, PPP, ARP |
-| 1 | Physical | Sends raw bits as electrical, light or radio signals | Bit | Cables, hubs, RS-232 |
+| 3 | Network | Logical addressing and routing between networks | Packet | IP, ICMP |
+| 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection | Frame | Ethernet, ARP |
+| 1 | Physical | Sends raw bits as electrical, light or radio signals | Bit | Cables, Hubs |
 
    **PDU Visual Structures (Network Layer Packet & Data Link Layer Frame):**
 
