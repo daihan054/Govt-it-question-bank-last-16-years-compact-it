@@ -11073,3 +11073,346 @@ Answer:
     FF02::1             all-nodes multicast on the link
     2001:db8::/32       the block reserved for documentation
     ```
+
+## Physical Layer & Optical Fiber (Attenuation & Power Budget) (13)
+
+1. **A fiber optic network is designed using single-mode fiber with an attenuation of 0.35 dB/km. The network includes a splitter with a 14 dB loss as specified in the datasheet. Additionally, there are two mechanical splices (each with 0.1 dB loss) and two connectors (each with 0.75 dB loss). Given the following parameters:**
+   * **Transmitter Power: 5 dBm**
+   * **Receiver Sensitivity: -14 dBm**
+   * **Fiber Attenuation: 0.35 dB/km**
+   **Calculate the maximum fiber length (D) that can be used between the OLT (Optical Line Terminal) and ONU (Optical Network Unit) while maintaining an acceptable signal level.** *[Islami Bank PLC Senior Officer (Network/System) 14.03.2025 compact it 1332 (ET: BUET)]*
+
+Answer:
+
+   Given
+   ```
+   Transmitter power   Pt = 5 dBm
+   Receiver sensitivity Pr = -14 dBm
+   Fiber attenuation      = 0.35 dB/km
+   Splitter loss          = 14 dB
+   Mechanical splices     = 2 × 0.1 dB
+   Connectors             = 2 × 0.75 dB
+   ```
+
+   Step 1 — total power budget
+   ```
+   Power budget = Pt − Pr
+                = 5 − (−14)
+                = 19 dB
+   ```
+
+   Step 2 — add up the fixed losses
+   ```
+   Splitter          = 14.0 dB
+   Splices  2 × 0.1  =  0.2 dB
+   Connectors 2 × 0.75 = 1.5 dB
+   ------------------------------
+   Total fixed loss  = 15.7 dB
+   ```
+
+   Step 3 — loss left for the fiber itself
+   ```
+   Fiber loss allowed = 19 − 15.7 = 3.3 dB
+   ```
+
+   Step 4 — maximum length
+   ```
+   D = fiber loss allowed / attenuation per km
+     = 3.3 / 0.35
+     = 9.43 km
+   ```
+
+   Maximum fiber length D ≈ 9.43 km
+
+   - If a safety margin is required, subtract it before step 3. For example with a 3 dB margin the fiber loss allowed becomes 0.3 dB and D falls to only 0.86 km, which shows how heavily the 14 dB splitter dominates this PON design.
+
+2. **(a) Why fiber optic cable is used in submarine instead of satellite?** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
+
+Answer:
+
+   - Far higher capacity. One submarine fiber pair with WDM carries tens of terabits per second. A satellite transponder gives only a few hundred Mbps to a few Gbps, so a single cable replaces hundreds of satellites.
+   - Much lower delay. Light in fiber takes about 5 µs per km, so Dhaka to Singapore is a few tens of milliseconds. A geostationary satellite adds about 250–280 ms one way because the signal must travel 36,000 km up and the same distance down. That delay ruins voice calls, video conferencing, gaming and financial trading.
+   - Much lower cost per bit. The cable is expensive to lay once, but it then carries so much traffic for 25 years that the cost per gigabit is a tiny fraction of satellite cost.
+   - Better reliability and signal quality. Fiber is immune to rain fade, solar interference and atmospheric conditions; satellite links degrade badly in heavy rain, which matters in a monsoon country.
+   - More secure. The signal stays inside the glass, so it is very hard to intercept without being detected. A satellite signal is broadcast over a wide footprint and can be received by anyone in it.
+   - Very low bit error rate and no need to share limited spectrum, since fiber does not use the crowded radio bands at all.
+   - Satellite is still preferred for broadcasting to many receivers, for remote islands and hills, for ships and aircraft, and as a backup when the cable is cut.
+
+3. **(b) Why the submarine cable is damaged under water?** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 432 (ET: BUET)]*
+
+Answer:
+
+   - Fishing activity — bottom trawling nets and dredging drag across the seabed and snag the cable. This is the single largest cause of faults in shallow water.
+   - Ship anchors — an anchor dropped or dragged in a shipping lane cuts the cable. Together with fishing this accounts for most of the damage.
+   - Natural causes — undersea earthquakes, submarine landslides and turbidity currents, which can break several cables at once.
+   - Abrasion and chafing where the cable rubs against rock or coral on a rough seabed, especially where currents move it back and forth.
+   - Corrosion and water ingress when the outer sheath is breached; seawater then attacks the metal conductor and weakens the cable.
+   - Marine life — shark and fish bites have damaged cables, and marine growth adds stress.
+   - Strong currents, tides and storm surge that move sediment and expose or shift a buried cable.
+   - Human activity such as dredging, sand mining, construction of pipelines, and sabotage.
+   - Manufacturing or installation faults — a bad splice, excessive bending or too much tension while laying.
+   - Prevention: bury the cable in shallow water, use armoured cable near shore, publish cable routes on charts to warn shipping, and keep a repair ship on standby.
+
+4. **(ক) ফাইবার অপটিক ক্যাবলের গঠন ও বৈশিষ্ট্য ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
+
+Answer:
+
+   Structure
+
+```
+   +-------------------------------------+
+   |  Outer jacket (PVC) — protection    |
+   |  +-------------------------------+  |
+   |  |  Strength member (Kevlar)     |  |
+   |  |  +-------------------------+  |  |
+   |  |  |  Buffer coating         |  |  |
+   |  |  |  +-------------------+  |  |  |
+   |  |  |  |  Cladding (n2)    |  |  |  |
+   |  |  |  |  +-----------+    |  |  |  |
+   |  |  |  |  | Core (n1) |    |  |  |  |
+   |  |  |  |  +-----------+    |  |  |  |
+   |  |  |  +-------------------+  |  |  |
+   |  |  +-------------------------+  |  |
+   |  +-------------------------------+  |
+   +-------------------------------------+
+            n1 > n2  (core index is higher)
+```
+
+   - Core — the thin glass centre that actually carries the light. Diameter about 8–10 µm in single-mode and 50–62.5 µm in multimode.
+   - Cladding — a glass layer around the core with a slightly lower refractive index. This difference is what causes total internal reflection and keeps the light inside the core.
+   - Buffer coating — a plastic layer that protects the glass from moisture and physical damage.
+   - Strength member — Kevlar or aramid yarn that takes the pulling force during installation.
+   - Outer jacket — the final PVC or polyethylene sheath.
+
+   Characteristics
+   - Very high bandwidth, terabits per second with WDM.
+   - Very low attenuation, about 0.2 dB/km at 1550 nm, so repeaters can be 80–100 km apart.
+   - Completely immune to electromagnetic interference and crosstalk, because it carries light not electricity.
+   - Very secure — tapping the fiber disturbs the signal and is easily detected.
+   - Light, thin and does not corrode.
+   - Electrically isolated, so it is safe near high-voltage lines.
+   - Drawbacks: the glass is brittle, splicing needs skilled work and a fusion splicer, and the equipment cost is higher than copper.
+
+5. **Write down the Working principle of Optical Fibre.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+Answer:
+
+   The working principle is total internal reflection.
+
+   - The core has a higher refractive index (n1) than the cladding (n2). When light travelling in the core hits the boundary at an angle greater than the critical angle, none of it passes into the cladding — all of it is reflected back into the core.
+   ```
+   Critical angle:  θc = sin⁻¹ (n2 / n1)
+   Condition for total internal reflection:  θ > θc  and  n1 > n2
+   ```
+   - Because of this the light keeps bouncing along the fiber and travels many kilometres with very little loss, even around gentle bends.
+   - Only rays entering within the acceptance cone are guided. This is measured by the numerical aperture:
+   ```
+   NA = √(n1² − n2²)
+   ```
+
+   Working steps
+   - The electrical signal is converted to light by an LED or a laser diode at the transmitter.
+   - The light is modulated — usually simple on-off keying, where light on is 1 and light off is 0.
+   - The light travels down the core by total internal reflection.
+   - At the far end a photodiode (PIN or APD) converts the light back into an electrical signal.
+   - For long links, optical amplifiers such as EDFA or regenerators are placed along the route to make up for attenuation.
+
+6. **Define the attenuation and dispersion in an optical fiber. Draw the block diagram of a long-haul optical fiber communication system.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+Answer:
+
+   Attenuation
+   - Attenuation is the loss of optical power as the signal travels along the fiber, measured in dB/km.
+   ```
+   Attenuation (dB) = 10 log10 (Pin / Pout)
+   ```
+   - Causes: absorption by impurities such as OH ions, Rayleigh scattering from tiny density variations in the glass, and bending losses at macro and micro bends.
+   - It limits how far the signal can go before it must be amplified. Typical values are 0.2 dB/km at 1550 nm and 0.35 dB/km at 1310 nm.
+
+   Dispersion
+   - Dispersion is the spreading of the light pulse as it travels, so that a narrow pulse arrives wider than it was sent.
+   - Types: modal dispersion, where different modes take different path lengths in multimode fiber; chromatic dispersion, where different wavelengths travel at different speeds; and polarisation mode dispersion.
+   - Effect: adjacent pulses overlap, which is intersymbol interference. This limits the bit rate and the distance, and is expressed as the bandwidth-distance product in MHz·km.
+
+   Block diagram of a long-haul system
+
+```mermaid
+flowchart LR
+    IN["Electrical input"] --> DRV["Driver circuit"]
+    DRV --> SRC["Optical source<br/>(laser diode)"]
+    SRC --> C1["Connector / coupler"]
+    C1 --> F1["Optical fiber cable"]
+    F1 --> AMP["Optical amplifier (EDFA)<br/>or regenerator"]
+    AMP --> F2["Optical fiber cable"]
+    F2 --> DET["Photodetector<br/>(PIN / APD)"]
+    DET --> AMP2["Amplifier + equaliser"]
+    AMP2 --> OUT["Electrical output"]
+```
+
+   - The driver converts the electrical data into a current that switches the laser. The optical amplifier boosts the light directly without converting it back to electricity, which is why EDFAs made long submarine links possible.
+
+7. **Define the principle of data transmission through the fiber optic cable.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
+
+Answer:
+
+   - Data is carried as pulses of light instead of electrical voltage. The principle that keeps the light inside the fiber is total internal reflection.
+   - The core has a higher refractive index than the cladding. Light striking the core-cladding boundary at an angle greater than the critical angle is reflected entirely back into the core, so it is guided down the fiber.
+   ```
+   n1 > n2      and      θc = sin⁻¹ (n2 / n1)
+   ```
+   - Data encoding is normally on-off keying: light present means binary 1, light absent means binary 0. The laser switches billions of times per second.
+   - Transmission steps: electrical data → laser or LED converts it to light → light travels by total internal reflection → optical amplifiers restore power on long routes → photodiode converts the light back to an electrical signal → the receiver circuit regenerates the bits.
+   - Many wavelengths can be sent down the same fiber at the same time using WDM, which multiplies the capacity without laying more cable.
+
+8. **How can you do fix the signal attenuation problems?** *[BOF Assistant Programmer 2022 compact it 734 (ET: MIST)]*
+
+Answer:
+
+   - Use repeaters or regenerators, which receive the weak signal, decode it and transmit a fresh clean copy. In fiber, an EDFA optical amplifier boosts the light directly without converting it to electricity.
+   - Use amplifiers on analog links, but note that an amplifier boosts the noise as well, so digital regeneration is preferred.
+   - Choose a lower-loss medium — optical fiber at 0.2 dB/km instead of copper, or a thicker gauge copper cable with less resistance.
+   - Keep the cable within its rated length. For example UTP Ethernet is limited to 100 m, so a switch or repeater must be added beyond that.
+   - Operate at the wavelength or frequency where the medium has least loss, such as the 1550 nm window in silica fiber.
+   - Reduce connectors, splices and sharp bends, since each one adds a fixed loss. Use fusion splices rather than mechanical ones.
+   - Use good quality connectors and keep them clean, because dust on a fiber end face is a common cause of sudden loss.
+   - Increase the transmit power or use a more sensitive receiver, within the power budget and eye-safety limits.
+   - Shield and ground copper cables properly to cut interference, and keep them away from motors and power lines.
+   - Design with a power budget: transmitter power minus receiver sensitivity must exceed the total loss plus a safety margin, usually 3 dB.
+
+9. **Where are the low loss transmission windows of silicon based optical fiber and Which window is the most popular in communication and wave. Draw diagram of a long haul WDM Transmission system.** *[BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
+
+Answer:
+
+   Low-loss transmission windows of silica fiber
+
+| Window | Wavelength | Typical attenuation | Note |
+|---|---|---|---|
+| 1st | 850 nm | about 3 dB/km | Cheap LED sources, short-distance multimode LAN |
+| 2nd | 1310 nm | about 0.35 dB/km | Zero chromatic dispersion point |
+| 3rd | 1550 nm | about 0.20 dB/km | Lowest loss, and the EDFA works here |
+
+   - The most popular window for long-haul communication is 1550 nm, because it has the minimum attenuation of the three and because the erbium-doped fiber amplifier operates in this band. It is the C band, roughly 1530–1565 nm, and WDM systems are built around it.
+   - The high-loss region between the windows is caused by the OH (water) absorption peak near 1385 nm. Modern low-water-peak fiber removes it and allows the whole 1260–1625 nm range to be used.
+
+   Long-haul WDM transmission system
+
+```mermaid
+flowchart LR
+    T1["Tx λ1"] --> MUX["WDM<br/>multiplexer"]
+    T2["Tx λ2"] --> MUX
+    T3["Tx λn"] --> MUX
+    MUX --> BA["Booster<br/>amplifier"]
+    BA --> F1["Fiber span"]
+    F1 --> LA["Line amplifier<br/>(EDFA) every 80-100 km"]
+    LA --> F2["Fiber span"]
+    F2 --> PA["Pre-amplifier"]
+    PA --> DEMUX["WDM<br/>demultiplexer"]
+    DEMUX --> R1["Rx λ1"]
+    DEMUX --> R2["Rx λ2"]
+    DEMUX --> R3["Rx λn"]
+```
+
+   - Each transmitter uses a different wavelength. The multiplexer combines them onto one fiber, EDFAs amplify all wavelengths together along the route, and the demultiplexer separates them again at the far end. A dispersion compensation module is normally added at each amplifier site.
+
+10. **A 1550nm fiber optic transmission Link if of 50km length without repeating with a signal mode fiber having loss of 0.2dB/km. The fiber is joined ever 2km with conductor each with 0.5dB loss. Determine the minimum average power which should be lunched in to the fiver in order to Tarantion an average optical power level of 10 micro-watts at the receiver.** *[BTCL Assistant Manager (Technical) 2021 compact it 766 (ET: BUET)]*
+
+Answer:
+
+    Given
+    ```
+    Link length          = 50 km
+    Fiber loss           = 0.2 dB/km
+    Section length       = 2 km, joined by connectors
+    Connector loss       = 0.5 dB each
+    Required received power = 10 µW
+    ```
+
+    Step 1 — fiber attenuation over the whole link
+    ```
+    Fiber loss = 50 × 0.2 = 10 dB
+    ```
+
+    Step 2 — number of connectors
+    ```
+    50 km ÷ 2 km = 25 sections
+    Joints between 25 sections = 25 − 1 = 24 connectors
+    Connector loss = 24 × 0.5 = 12 dB
+    ```
+
+    Step 3 — total link loss
+    ```
+    Total loss = 10 + 12 = 22 dB
+    ```
+
+    Step 4 — receiver power in dBm
+    ```
+    Pr(dBm) = 10 log10 (10 µW / 1 mW)
+            = 10 log10 (0.01)
+            = -20 dBm
+    ```
+
+    Step 5 — minimum launch power
+    ```
+    Pt(dBm) = Pr(dBm) + total loss
+            = -20 + 22
+            = 2 dBm
+    ```
+
+    Step 6 — convert to watts
+    ```
+    Pt = 10^(2/10) mW = 1.585 mW ≈ 1.58 mW
+    ```
+
+    Minimum average launch power = 2 dBm ≈ 1.58 mW
+
+    - If the question is read as having a connector at the end of every 2 km section, that is 25 connectors and 12.5 dB, giving a total loss of 22.5 dB and a launch power of 2.5 dBm ≈ 1.78 mW. State the assumption you use.
+
+11. **কোন মাধ্যমে আলোর Pulse ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+Answer:
+
+    - Optical fiber cable.
+    - In optical fiber, data is carried as pulses of light rather than as electrical signals. Light present means binary 1 and light absent means binary 0.
+    - The light is produced by an LED or a laser diode and is guided along the glass core by total internal reflection, because the core has a higher refractive index than the cladding.
+    - Infrared wireless links also use light pulses, but through free space rather than a guided medium.
+
+12. **What is 3dB?** *[BTRC Assistant Director (Technical) 2019 compact it 1145-1146 (ET: N/A)]*
+
+Answer:
+
+    - The decibel is a logarithmic way of comparing two power levels.
+    ```
+    Gain or loss in dB = 10 log10 (Pout / Pin)
+    ```
+    - 3 dB is the half-power point. A loss of 3 dB means the power has fallen to half; a gain of 3 dB means the power has doubled.
+    ```
+    10 log10 (2)   = +3.01 dB   → power doubled
+    10 log10 (0.5) = -3.01 dB   → power halved
+    ```
+    - 3 dB bandwidth (also called the cut-off frequency or half-power bandwidth) is the range of frequencies over which the output power stays above half of its maximum. It is the standard way to state the bandwidth of a filter, an amplifier or an antenna.
+    - In a fiber power budget, a 3 dB margin is normally kept as a safety reserve for ageing, repairs and extra splices.
+    - Useful shortcuts: 3 dB = ×2, 10 dB = ×10, 20 dB = ×100, and 0 dBm = 1 mW.
+
+13. **From single mode fiber and multimode fiber which one is suitable for LAN?** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1153 (ET: RUET)]*
+
+Answer:
+
+    Multimode fiber is suitable for a LAN.
+
+    Reasons
+    - A LAN covers only a few hundred metres, and multimode easily covers that distance, so the extra reach of single-mode is not needed.
+    - Its core is much wider (50 or 62.5 µm against 8–10 µm), so alignment is easier, connectors and splices are cheaper, and installation is faster.
+    - It can use a cheap LED or VCSEL source instead of a precision laser, which makes the transceiver several times cheaper.
+    - Total cost of ownership is much lower for the short links inside a building, between floors or within a data centre.
+
+    Where single-mode is used
+    - Long-haul links, metro backbones, submarine cables and campus links beyond about 2 km, because it has no modal dispersion and much lower attenuation.
+
+| Point | Multimode | Single-mode |
+|---|---|---|
+| Core diameter | 50 or 62.5 µm | 8–10 µm |
+| Light source | LED or VCSEL | Laser diode |
+| Distance | Up to about 550 m at 1 Gbps | Tens to hundreds of km |
+| Dispersion | Modal dispersion present | No modal dispersion |
+| Cost | Lower | Higher |
+| Typical use | LAN, data centre, building backbone | WAN, metro, submarine |
