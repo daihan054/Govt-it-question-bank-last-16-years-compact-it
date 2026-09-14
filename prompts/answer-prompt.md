@@ -54,12 +54,7 @@ LIKHBE NA:
 ═══════════════════════════════════════════════════════════════════
 1. ANSWER LENGTH — LIMITED SPACE (GURUTTOPURNO)
 ═══════════════════════════════════════════════════════════════════
-Written exam-er khata-y duita question-er majhe LIMITED jayga thake — oitukur
-moddhei answer likhte hoy. Tai answer ojotha lomba hobe na, kintu ETO CHHOTO-O
-NA je point miss hoye jay.
-
-Target: MAIN POINT gulo puro-puri thakbe, kintu bhorat-bhorti kotha thakbe na.
-Question-ta jotota chay tototai — beshi na, kom-o na.
+ANSWER LENGTH — A4 EXAM SPACE RULE: Written exam-e protita question-er jonno unlimited space nei. A4 size-er exam paper dhore answer-er maximum practical space holo 1 page. Kichu short question-er khetre ek page-e 2 ta question thakte pare, duita question-er majhe ektu blank space thake; tai short answer-er jonno roughly half-page-er moto space dhora jay. Tai answer-er length shudhu fixed word count diye decide korbe na; question-er marks, complexity, ebong ki ki point cover kora dorkar tar upor length determine korbe. Very short/factual question, jemon full form, port number, "X stands for", ba one-line fact, 1–3 line-er moddhe rakhbe. Short question, jemon "What is X?", "Define X", ba small 2–4 mark theory question, approximately 1/4–1/2 A4 page-er moddhe rakhbe, usually short definition + 3–5 concise point enough. Medium theory question, jemon "Explain X", "What are the features of X?", "Describe the components of X", ba "Explain the working of X", approximately 1/2–3/4 A4 page-er moddhe rakhbe, jekhane short definition, important components/types/steps, main technical points, ebong proyojon hole chhoto example thakbe. Large/10-mark/detailed question, jemon "Explain X in detail", "Discuss X", "Describe the working of X", ba "Explain with diagram", maximum 1 full A4 page-er moddhe complete korbe; definition, types/components/steps, required diagram, important explanation, ebong necessary short example thakbe, kintu 1 page fill korar jonno unnecessary information add korbe na. Difference between X and Y question hole 5–7 row-er compact table use korbe ebong normally approximately 1/3–1/2 A4 page-er moddhe rakhbe. Math, subnetting, scheduling, K-map, CRC, cache ba onno numerical/technical calculation-er khetre normal word limit apply korbe na; formula, given values, substitution, calculation ebong final answer-er complete steps dekhate hobe, karon calculation-er step space bachanor jonno bad deya jabe na, shudhu unnecessary verbal explanation komabe. Diagram question hole compact diagram + 3–5 line explanation dibe ebong normally 1/2–1 A4 page-er moddhe rakhbe, question-er requirement onujayi. Focus writing/composition approximately 150–200 words hobe. Translation hole shudhu translation dibe, kono explanation ba additional note dibe na. Golden rule holo: maximum 1 A4 page ekta upper limit, target length na; short question-er jonno unnecessary space use korbe na, abar answer eto chhoto-o korbe na je important mark-bearing point miss hoy. Answer lekhar shomoy nijeke jiggesh korbe, "Ami jodi A4 exam paper-e hate likhtam, ei answer-ta ki realistic bhabe available space-er moddhe shesh korte partam?" Answer beshi long hole prothome filler, repeated point, unnecessary background, unnecessary example, ebong overly detailed explanation bad dibe; kintu main technical point, required keyword, calculation step, ba required diagram bad dibe na. Answer beshi short hole check korbe definition, important keyword, required components/types/steps, example/diagram-er requirement, ebong question-er protita part properly answer kora hoyeche kina. Space fill kora target na; marks cover kora target. Question jototuku require kore, exactly tototuku complete, concise, technically correct, ebong exam-hall-realistic answer likhbe.
 
 Question type onujayi:
 
@@ -122,7 +117,7 @@ Ei style mane:
 - Technical keyword thik-thak likhbe — shoja mane bhul na, shoja mane porishkar.
 
 ═══════════════════════════════════════════════════════════════════
-3. RESEARCH — answer ber korar poddhoti
+3. Answer writing flow ta erokom
 ═══════════════════════════════════════════════════════════════════
 Jevabe ekjon manush hate likhto, tumio thik shei vabe korba:
 
@@ -143,15 +138,6 @@ Niyom:
   <!-- verify --> dao.
 - Simple factual question (jemon "HTTP port number koto") — search-er dorkar nai,
   shoja likhe dao. Search shudhu tokhon jokhon sotti dorkar.
-
-═══════════════════════════════════════════════════════════════════
-4. Answer writing flow ta erokom:
-═══════════════════════════════════════════════════════════════════
-1. search the question in internet
-2. pick some articles.
-3. read them
-4. Learn
-5. Now write in Geeks for geeks style
 
 ═══════════════════════════════════════════════════════════════════
 ANSWER FORMAT (exact)
@@ -186,7 +172,7 @@ EXAM-REALISTIC RAKHO:
 - Baki khetre bullet point, table na.
 
 ═══════════════════════════════════════════════════════════════════
-BHASHA
+Language
 ═══════════════════════════════════════════════════════════════════
 Answer-er bhasha thik hobe FILE dekhe, question-er bhasha dekhe NA (general
 file chhara). Duita rule, byotikrom nai:
@@ -389,24 +375,6 @@ func writeAnswers() {
   }
 }
 
-TRAVERSAL ORDER (deterministic rakho, jate resume kora jay):
-
-PHASE 1 — AGE SHOB IT FILE (20 ta), alphabetical order-e:
-    ai-and-ml.md, algorithm.md, c-programming.md, cloud-computing.md,
-    compiler-and-toc.md, computer-fundamental.md, computer-network-security.md,
-    computer-networks.md, data-structure.md, database.md, dld.md,
-    electrical-and-electronics.md, image-processing.md,
-    microprocessor-and-computer-architecture.md, ms-office.md, oop.md,
-    operating-system.md, programming-languages.md, software-engineering.md,
-    web-technology.md
-
-PHASE 2 — TARPOR GENERAL FILE (4 ta), alphabetical order-e:
-    bangla.md, english.md, gk.md, math.md
-
-- Phase 1 puro shesh na houa porjonto Phase 2 dhorba NA.
-- Protita file-er bhitore section gulo file-e jei order-e ache sei order-e
-  (TOC order = count descending) — upor theke niche.
-
 NIYOM:
 - Ekta ## subtopic shesh -> SATHE SATHE commit + push. BATCH KORBE NA.
 - Amar command-er jonno WAIT KORBE NA. Permission chaibe na, "next koro?"
@@ -422,33 +390,6 @@ RESUME (session bhenge gele ba abar shuru korle):
 - Sekhan theke abar loop chalu koro. Age kora section abar likhbe na.
 - PROGRESS.md na thakle: written-answers/ -e jei section-e "Answer:" nai,
   seta theke shuru.
-═══════════════════════════════════════════════════════════════════
-PROCESS
-═══════════════════════════════════════════════════════════════════
-- Kaj SHUDHU written-answers/ folder-e.
-- Loop-er niyom THE LOOP section-e — oitai follow koro.
-
-PROTITA SUBTOPIC-ER COMMIT:
-- git add written-answers/<file>.md PROGRESS.md
-- Commit message : "<file name> — <section name>"
-  Commit body    : "Committed by Daihan"
-  Claude / AI-er KONO reference thakbe na. Co-Authored-By line DEBE NA.
-- Commit-er por SATHE SATHE push.
-
-      git add written-answers/<file>.md PROGRESS.md
-      git commit -m "<file name> — <section name>" -m "Committed by Daihan"
-      git push
-
-PROGRESS.md (project root-e):
-- Protita commit-er sathe update koro.
-- Rakhbe: subtopicCompleted / SUB_TOPIC_COUNT, ekhon kon file + kon section,
-  ar mot koyta <!-- verify --> ache.
-
-REPORT:
-- Protita FILE shesh hole ek line report: file-er nam, koyta section, koyta
-  answer, koyta <!-- verify -->. Report dite giye loop thamabe na.
-- Puro kaj shesh hole final report: mot answer, skip kora question,
-  <!-- verify --> -er list, ar baad pora file (jodi thake).
 
 COUNT NIYE (CLAUDE.md RULE 1):
 - Answer lekhay question count BADLAY NA. Tai TOC / heading count / section order
