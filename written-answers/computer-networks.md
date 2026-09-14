@@ -12788,3 +12788,377 @@ Answer:
    Minimum channel bandwidth = 20 kHz
 
    - If a multilevel scheme with L levels were used, the bandwidth would fall to B = R / (2 log2 L); for example 4 levels would need only 10 kHz.
+
+## Switching Techniques (Circuit vs Packet Switching) (5)
+1. **Why is packet switching more suitable for internet communication?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+
+Answer:
+
+   - Internet traffic is bursty. A user reads a page for two minutes and then clicks a link. Circuit switching would keep a dedicated path reserved during all that idle time; packet switching gives capacity only when there is data to send.
+   - Statistical multiplexing. Many bursty users share the same link, and because their peaks do not happen together, the link carries far more users than a circuit-switched link of the same size.
+   - No set-up delay. A packet can be sent immediately, while circuit switching needs a call set-up phase before any data moves.
+   - Fault tolerance. Each packet is routed independently, so if a router or a link fails the remaining packets are rerouted around it. A circuit drops the whole call. This was the original design goal of ARPANET.
+   - Different speeds and different technologies can be joined together, because routers store and forward each packet and can convert between link types.
+   - Cheaper per bit and easier to scale, since capacity is shared instead of reserved.
+   - Priority and QoS can be applied per packet, so voice packets can be sent ahead of a file download.
+   - The cost is variable delay and jitter, and possible loss under congestion — which TCP and QoS mechanisms handle.
+
+2. **Difference between circuit switching and packet switching. Identify which of the two is predominantly used in Internet communication and justify why?** *[BUET Assistant Programmer 21.06.2025 compact it 1435 (ET: BUET)]*
+
+Answer:
+
+| Point | Circuit switching | Packet switching |
+|---|---|---|
+| Path | A dedicated physical path is reserved before any data flows | No dedicated path; each packet is routed independently |
+| Set-up phase | Required (call set-up) | Not required for datagram service |
+| Unit sent | A continuous bit stream | Small packets with a header |
+| Bandwidth | Reserved for the whole call, wasted when idle | Shared dynamically, used only when there is data |
+| Efficiency | Low for bursty traffic | High |
+| Delay | Constant and low once connected | Variable, because of queuing at each hop |
+| Store and forward | No | Yes, per packet |
+| On link failure | The call drops | Packets reroute around the failure |
+| Order of arrival | Always in order | May arrive out of order |
+| Cost | Higher | Lower |
+| Example | Traditional telephone network (PSTN) | The internet, X.25, Frame Relay |
+
+   Which one the internet uses, and why
+   - The internet is predominantly PACKET SWITCHED.
+   - Justification: internet traffic is bursty, so reserving capacity for an idle session wastes most of it. Packet switching multiplexes many bursty users onto the same links and achieves far higher utilisation.
+   - It also survives failure. The network was designed to keep working when arbitrary nodes are destroyed, and only independent per-packet routing gives that.
+   - It joins together links of very different speeds and technologies, which a single reserved circuit cannot do.
+   - Modern note: even voice has moved onto packet switching as VoIP, because the efficiency gain outweighs the loss of guaranteed delay, and QoS mechanisms restore enough predictability.
+
+3. **(c) Compare circuit switching and packet switching.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1353 (ET: N/A)]*, *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72]]*
+
+Answer:
+
+| Point | Circuit switching | Packet switching |
+|---|---|---|
+| Connection | Connection oriented, path reserved end to end | Connectionless (datagram) or virtual circuit |
+| Resource allocation | Fixed, reserved for the whole session | On demand, per packet |
+| Set-up time | Needed | Not needed |
+| Bandwidth use | Wasted when the line is idle | Used only when data exists |
+| Delay | Fixed and predictable | Variable, with jitter |
+| Congestion | Happens at set-up — the call is blocked | Happens during transfer — packets queue or are dropped |
+| Reliability on failure | Whole call fails | Automatic rerouting |
+| Header overhead | None per unit of data | Every packet carries a header |
+| Charging model | By connection time | By volume of data |
+| Suitable for | Continuous, constant-rate traffic such as voice | Bursty data traffic |
+| Example | PSTN telephone call | Internet, email, web |
+
+4. **Do you prefer packet switching compared to circuit switching in communication network? If Yes, why? How does packet switching work step by step? What applications use packet switching?** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 536 (ET: MIST)]*
+
+Answer:
+
+   Preference — yes, packet switching is preferred
+   - Data traffic is bursty, and packet switching charges the network only while data is actually flowing, so utilisation is far higher.
+   - No set-up delay, so a short transfer starts immediately.
+   - It survives link and node failure by rerouting, while a circuit simply drops.
+   - It is cheaper, scales better, and lets links of different speeds and technologies work together.
+   - Circuit switching is still better only where a constant rate and a guaranteed fixed delay are essential, such as classic telephony.
+
+   How packet switching works — step by step
+   - The message is divided into small packets of a fixed maximum size.
+   - Each packet is given a header containing the source IP, the destination IP, a sequence number and a checksum.
+   - The packet is sent to the first router, which stores it fully, checks it, looks up the destination in its routing table and forwards it out of the best interface. This is store and forward.
+   - Every packet is routed independently, so different packets of the same message may take different paths.
+   - Packets may therefore arrive out of order, delayed, duplicated or not at all.
+   - At the destination the transport layer uses the sequence numbers to reorder them, asks for retransmission of anything missing, and reassembles the original message.
+
+```mermaid
+flowchart LR
+    M["Message"] --> S["Split into packets<br/>+ header"]
+    S --> R1["Router 1"]
+    R1 --> R2["Router 2"]
+    R1 --> R3["Router 3 (alternate path)"]
+    R2 --> D["Destination:<br/>reorder and reassemble"]
+    R3 --> D
+```
+
+   Applications that use packet switching
+   - The whole internet — web browsing over HTTP and HTTPS, email over SMTP, file transfer over FTP.
+   - VoIP and video calling such as WhatsApp, Zoom and Skype.
+   - Video streaming such as YouTube and Netflix.
+   - Online gaming, cloud services, IoT sensor traffic.
+   - Mobile data networks from 4G LTE onwards, which are fully packet switched.
+
+5. **Why is packet suiting suitable for digital data transmission?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
+
+Answer:
+
+   - Digital data is bursty, not continuous. Packet switching allocates bandwidth only during the burst, so nothing is wasted between bursts.
+   - Statistical multiplexing lets many users share one link, because their bursts rarely coincide. This gives far higher utilisation than reserving a circuit for each user.
+   - Digital data tolerates variable delay but not errors. Packet switching suits this, because each packet carries a checksum and a lost packet can simply be retransmitted.
+   - Error control is easy per packet. A small corrupted packet is resent cheaply; in circuit switching the whole stream would be affected.
+   - Independent routing gives fault tolerance — if a link fails, later packets take another path.
+   - Different sources can use different data rates and different technologies on the same network, because routers store and forward.
+   - Priority can be set per packet, so interactive traffic is served before bulk transfer.
+   - No set-up delay, which matters because most digital transactions are short.
+
+## WAN Technologies (SONET/SDH, ATM, WDM) (5)
+
+1. **White short notes on: (i) SONET/SDH; (ii) IP telephony; (iii) WDM technology; (iv) ATM network** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+Answer:
+
+   (i) SONET / SDH
+   - SONET (Synchronous Optical Network, the American standard) and SDH (Synchronous Digital Hierarchy, the international standard) are standards for carrying many digital streams over optical fiber in a synchronised way.
+   - The basic unit is STS-1 / OC-1 at 51.84 Mbps in SONET and STM-1 at 155.52 Mbps in SDH, and higher rates are exact multiples: OC-3 at 155.52, OC-12 at 622, OC-48 at 2.5 Gbps, OC-192 at 10 Gbps.
+   - Every node is locked to one master clock, so a low-speed tributary can be added or dropped without demultiplexing the whole stream.
+   - Normally built as a dual ring so that a fiber cut is healed in under 50 ms by switching to the protection path.
+   - Used as the transport backbone of telecom carriers, under ATM, IP and Ethernet traffic.
+
+   (ii) IP telephony
+   - IP telephony, also called VoIP, carries voice as data packets over an IP network instead of over a dedicated circuit in the PSTN.
+   - The voice is sampled, compressed by a codec such as G.711 or G.729, packed into RTP packets and sent over UDP.
+   - Signalling — setting up and ending the call — uses SIP or the older H.323.
+   - Advantages: much cheaper, especially for international calls, one network for voice and data, and easy extra features such as voicemail to email and video.
+   - Drawbacks: it depends on the quality of the IP network, so delay, jitter and packet loss degrade the call, and it needs power and internet, unlike a classic telephone line.
+   - Examples: Skype, WhatsApp calls, Zoom, and IP-PBX systems in offices.
+
+   (iii) WDM technology
+   - WDM (Wavelength Division Multiplexing) sends several signals down one optical fiber at the same time, each on a different wavelength of light. It is frequency division multiplexing applied to light.
+   - A multiplexer combines the wavelengths at one end and a demultiplexer separates them at the other. EDFA amplifiers boost all wavelengths together.
+   - CWDM (Coarse WDM) uses about 18 channels spaced 20 nm apart and is cheap; DWDM (Dense WDM) packs 40 to 160 channels with 0.8 nm or 0.4 nm spacing in the C band and is used for long haul.
+   - It multiplies the capacity of an existing fiber many times without laying any new cable, which is why it is the backbone of submarine and national networks.
+
+   (iv) ATM network
+   - ATM (Asynchronous Transfer Mode) is a connection-oriented, cell-switching WAN technology designed to carry voice, video and data on one network.
+   - It uses a fixed-size cell of 53 bytes — a 5-byte header and a 48-byte payload. The fixed size makes switching fast and predictable in hardware.
+   - It is connection oriented: a virtual circuit is set up first, identified by VPI and VCI in the cell header, and all cells then follow the same path in order.
+   - It offers real QoS classes — CBR, VBR, ABR and UBR — so voice can be guaranteed a constant rate while data uses what is left.
+   - It was widely used in carrier backbones and ADSL in the 1990s and 2000s, but has now been replaced by IP over MPLS and Carrier Ethernet, mainly because the 5-byte header on a 48-byte payload wastes about 10 percent of the bandwidth.
+
+2. **(c) Explain IPTV and VOIP.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
+
+Answer:
+
+   IPTV — Internet Protocol Television
+   - IPTV is the delivery of television content as IP packets over a managed broadband network, instead of over terrestrial, satellite or cable broadcast.
+   - The operator encodes the channels, and a set-top box or an app at the subscriber end decodes and shows them. Live channels are usually multicast so that one stream serves many viewers; video on demand is unicast to each viewer.
+   - Three services are normally offered: live TV, time-shifted TV (catch-up), and video on demand.
+   - Advantages: two-way interaction, pause and rewind of live TV, personalised recommendations, and one network for TV, internet and telephone (triple play).
+   - It runs on a managed network with reserved bandwidth and QoS, which is what separates IPTV from ordinary internet video such as YouTube.
+
+   VoIP — Voice over Internet Protocol
+   - VoIP carries telephone calls as IP packets over a data network instead of over a circuit-switched telephone line.
+   - Working steps: the microphone signal is digitised, compressed by a codec (G.711, G.729, Opus), placed in RTP packets carried over UDP, sent across the IP network, and reassembled and played at the far end. SIP handles the call set-up and teardown.
+   - Equipment: an IP phone or a softphone, or an ordinary phone with an ATA adapter, plus an IP-PBX or a SIP provider, and a gateway to reach the PSTN.
+   - Advantages: far lower cost, one network for voice and data, easy scaling, and features such as call forwarding, conferencing, voicemail to email and video.
+   - Drawbacks: quality depends on the network, so delay above about 150 ms, jitter or packet loss makes the call bad; it also needs power and internet to work.
+
+3. **Write the full form of the given technologies CX, IGW and IIG. Write feature of there technologies.** *[BTRC Assistant Director (Technical) 2021 compact it 806 (ET: IBA)]*
+
+Answer:
+
+   Full forms
+   - ICX — Interconnection Exchange
+   - IGW — International Gateway
+   - IIG — International Internet Gateway
+
+   ICX — Interconnection Exchange
+   - It is the national transit switch that sits between the mobile and fixed access operators inside Bangladesh.
+   - Every call between two different operators, and every international call going to or coming from an IGW, is routed through an ICX. Operators do not interconnect directly with each other.
+   - It keeps the call detail records used for inter-operator billing and for revenue sharing with BTRC.
+   - It gives the regulator one point to monitor and control domestic interconnection traffic.
+
+   IGW — International Gateway
+   - It is the gateway for international VOICE traffic — all incoming and outgoing overseas calls pass through it.
+   - It connects the national network to foreign carriers, over TDM or IP interfaces.
+   - It handles the settlement of international call rates, and it is the point where illegal VoIP call termination is detected and blocked.
+   - Traffic path for an incoming international call: foreign carrier → IGW → ICX → access operator → subscriber.
+
+   IIG — International Internet Gateway
+   - It is the gateway for international DATA traffic — all internet bandwidth entering or leaving the country passes through an IIG.
+   - It buys capacity from submarine cables (SEA-ME-WE consortium through BSCPLC) and from terrestrial links through India, and sells it to ISPs and mobile operators.
+   - It gives the country a controlled point for international bandwidth, and supports peering and caching arrangements that keep local traffic local.
+
+   - Summary of the chain: subscriber → ANS operator → ICX (domestic voice) or IIG (internet data) → IGW (international voice) → foreign network.
+
+4. **TSCM এর কাজ কী? VoIP পরিচালনায় কী কী সরঞ্জামের প্রয়োজন হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
+
+Answer:
+
+   Work of TSCM
+   - TSCM stands for Technical Surveillance Counter-Measures. It is the practice of detecting and neutralising hidden eavesdropping devices and illegal transmitters.
+   - Its work includes: sweeping a room or building for hidden microphones, cameras and GSM bugs; scanning the radio spectrum for unauthorised transmissions; inspecting telephone and network lines for taps; using non-linear junction detectors and thermal imaging to find electronics hidden inside walls and furniture; and checking for rogue Wi-Fi access points and IMSI catchers.
+   - In a telecom regulator's context it also covers protecting sensitive facilities and communication links from interception, and verifying that the operator's equipment is not being used for unauthorised monitoring. <!-- verify -->
+
+   Equipment needed to operate VoIP
+   - IP phone (hardphone) or a softphone application on a PC or mobile.
+   - ATA (Analog Telephone Adapter) if ordinary analog telephones are to be used.
+   - IP-PBX or SIP server, which sets up, routes and tears down the calls.
+   - VoIP gateway or media gateway, to connect the IP network to the PSTN.
+   - Session Border Controller, for security, NAT traversal and call admission control at the network edge.
+   - Router and managed switch with QoS configured, so that voice packets get priority over data.
+   - Power over Ethernet switch, so the IP phones take power from the LAN cable.
+   - A broadband internet connection with enough bandwidth — roughly 100 kbps per concurrent G.711 call.
+   - UPS or backup power, because unlike a classic telephone line a VoIP phone dies when the power goes.
+   - Headsets, and a codec such as G.711, G.729 or Opus running on the endpoints.
+
+5. **Write down the difference between IPoE and PPPoE.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 839-840 (ET: N/A)]*
+
+Answer:
+
+| Point | PPPoE | IPoE |
+|---|---|---|
+| Full form | Point-to-Point Protocol over Ethernet | IP over Ethernet |
+| Encapsulation | PPP frames carried inside Ethernet frames | IP packets carried directly in Ethernet frames |
+| Session | Connection oriented — a session is set up with the BNG first | Connectionless, no session set-up |
+| Authentication | Username and password per subscriber, using PAP or CHAP | No credentials; the subscriber is identified by MAC address, VLAN, option 82 or the physical port |
+| Address assignment | Given by IPCP during PPP negotiation | Given by DHCP or DHCPv6 |
+| Overhead | 8 extra bytes, so the usable MTU drops to 1492 | No extra header, full 1500-byte MTU |
+| Connection time | Slower, because of the discovery and negotiation phases | Faster, the link is up as soon as DHCP replies |
+| Accounting | Easy and accurate per user session | Harder, has to be based on IP or MAC |
+| Multicast and IPTV | Poor — multicast has to be replicated per session | Native multicast, so it suits IPTV |
+| Typical use | Traditional DSL broadband | Modern fiber (GPON), IPTV and high-speed residential networks |
+
+   - Trade-off in one line: PPPoE gives the ISP strong per-user control and easy billing at the cost of overhead and complexity; IPoE is simpler, faster and better for IPTV, but the ISP must identify subscribers by the network itself.
+
+## Network Layer (Packet Fragmentation & Tunneling) (4)
+
+1. **(a) How do you define packet fragmentation? Explain briefly the transparent and non-transparent fragmentation with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 481 (ET: N/A)]*
+
+Answer:
+
+   Packet fragmentation
+   - Fragmentation is the breaking of a large packet into smaller pieces so that it can pass through a network whose MTU (Maximum Transmission Unit) is smaller than the packet.
+   - Every network technology has its own MTU — Ethernet 1500 bytes, PPPoE 1492, FDDI 4352. A packet larger than the MTU of the next link must be cut into fragments or dropped.
+
+   Transparent fragmentation
+
+```mermaid
+flowchart LR
+    H1["Host A<br/>big packet"] --> G1["Gateway G1<br/>FRAGMENTS"]
+    G1 --> N["Small-MTU network"]
+    N --> G2["Gateway G2<br/>REASSEMBLES"]
+    G2 --> H2["Host B<br/>full packet again"]
+```
+
+   - The gateway entering the small-MTU network splits the packet, and the gateway leaving that network puts the pieces back together immediately.
+   - The rest of the network never knows fragmentation happened, which is why it is called transparent.
+   - Advantages: later networks are unaffected, and each small network can use its own MTU freely.
+   - Disadvantages: the exit gateway must buffer and wait for every fragment, all fragments must take the same route, and the work is repeated at every such network.
+
+   Non-transparent fragmentation
+
+```mermaid
+flowchart LR
+    H1["Host A<br/>big packet"] --> G1["Gateway G1<br/>FRAGMENTS"]
+    G1 --> N["Small-MTU network"]
+    N --> G2["Gateway G2<br/>forwards fragments as they are"]
+    G2 --> G3["More gateways"]
+    G3 --> H2["Host B<br/>REASSEMBLES"]
+```
+
+   - Once a packet is fragmented it stays fragmented all the way, and only the DESTINATION HOST reassembles it.
+   - Advantages: gateways stay simple and stateless, fragments may take different routes, and no gateway has to buffer.
+   - Disadvantages: every fragment carries a full header, so overhead rises, and the small fragment size is kept even on later networks with a large MTU.
+   - IP uses non-transparent fragmentation.
+
+2. **(b) Describe briefly the TCP/IP tunneling using appropriate diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 482 (ET: N/A)]*
+
+Answer:
+
+   - Tunnelling means wrapping a whole packet of one protocol inside the payload of another packet, so that it can travel across a network that would not otherwise carry it. This is also called encapsulation.
+   - It is used when two networks of the same type must be joined across a different network in between — for example two IPv6 islands connected over an IPv4 internet, or two branch offices joined over the public internet.
+
+```mermaid
+flowchart LR
+    A["LAN A<br/>original packet"] --> E["Entry router<br/>ENCAPSULATE:<br/>add outer IP header"]
+    E --> I["Public network<br/>(carries the outer packet only)"]
+    I --> X["Exit router<br/>DECAPSULATE:<br/>strip outer header"]
+    X --> B["LAN B<br/>original packet restored"]
+```
+
+   Packet structure inside the tunnel
+```
+   +---------------+---------------+-----------------+
+   | Outer IP hdr  | Tunnel header | Original packet |
+   | (router to    | (GRE/IPsec/   | (original IP    |
+   |  router)      |  L2TP)        |  header + data) |
+   +---------------+---------------+-----------------+
+```
+
+   - The entry router adds an outer IP header addressed to the exit router. Every router in between sees only the outer header and forwards it normally, with no idea what is inside.
+   - The exit router removes the outer header and delivers the original packet into the destination LAN.
+   - Common tunnelling protocols: GRE, IPsec (used by site-to-site VPNs), L2TP, PPTP, 6to4 and Teredo for IPv6 over IPv4, and MPLS in carrier networks.
+   - Advantage: two private networks behave as if directly connected, and with IPsec the traffic is also encrypted.
+   - Disadvantage: the extra headers reduce the usable MTU, which often causes fragmentation, and encapsulation adds processing overhead.
+
+3. **Why network need packet fragmentation? Define different types of packet fragmentation with necessary diagram.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 666 (ET: N/A)]*
+
+Answer:
+
+   Why fragmentation is needed
+   - Each network technology has its own MTU. Ethernet allows 1500 bytes, PPPoE 1492, a wireless link may allow less, FDDI allows 4352.
+   - A packet coming from a large-MTU network may be too big for the next hop. Without fragmentation the router would simply drop it, so communication between the two networks would be impossible.
+   - Fragmentation lets one network connect to another with a different MTU, which is what makes an internet of dissimilar networks work at all.
+   - Smaller units also mean less data to retransmit when an error occurs, and less delay for other traffic waiting behind a huge packet.
+
+   Types of fragmentation
+
+   Transparent fragmentation
+```
+   Host A --> G1 (fragment) --> small-MTU net --> G2 (reassemble) --> Host B
+                                                  ^ put back together here
+```
+   - The exit gateway reassembles the fragments immediately, so the next network sees the original packet. Simple for the rest of the path, but the exit gateway must buffer all fragments and they must all take the same route.
+
+   Non-transparent fragmentation
+```
+   Host A --> G1 (fragment) --> net --> G2 --> net --> G3 --> Host B
+                                                              ^ reassemble here only
+```
+   - Fragments stay fragmented until they reach the destination host, which reassembles them. Gateways stay simple and fragments may take different routes, but the header overhead is repeated on every fragment.
+
+   How IP does it
+   - IP uses non-transparent fragmentation. Three header fields make it work: Identification, which is the same in every fragment of one packet; Fragment Offset, which gives the position in units of 8 bytes; and the MF (More Fragments) flag, which is 1 in every fragment except the last.
+   - If the DF (Do not Fragment) bit is set, the router drops the packet instead and returns an ICMP "fragmentation needed" message, which is how Path MTU Discovery works.
+   - IPv6 removed router fragmentation completely; only the source host may fragment.
+
+4. **Suppose a 22-byte packet is to be transmitted through a network of \text{MTU} = 3\text{ byte}. The elementary fragment size is 1\text{ byte}. Show the segment numbering of the above packet. Packet number is 217.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+Answer:
+
+   Given
+   ```
+   Packet size            = 22 bytes
+   MTU                    = 3 bytes per fragment
+   Elementary fragment    = 1 byte  (so the offset is counted in bytes)
+   Packet number          = 217
+   ```
+
+   Step 1 — number of fragments
+   ```
+   Number of fragments = ceiling(22 / 3) = 8
+   7 fragments carry 3 bytes each = 21 bytes, and the 8th carries the remaining 1 byte.
+   ```
+
+   Step 2 — numbering scheme
+   ```
+   Each fragment is labelled ( packet number , offset , end-of-packet bit )
+   offset = position of the first byte of the fragment, in elementary fragment units
+   end-of-packet bit = 1 means more fragments follow, 0 means this is the last one
+   ```
+
+   Step 3 — the fragment table
+
+| Fragment | Bytes carried | Label (packet, offset, bit) |
+|---|---|---|
+| 1 | bytes 1–3 | (217, 0, 1) |
+| 2 | bytes 4–6 | (217, 3, 1) |
+| 3 | bytes 7–9 | (217, 6, 1) |
+| 4 | bytes 10–12 | (217, 9, 1) |
+| 5 | bytes 13–15 | (217, 12, 1) |
+| 6 | bytes 16–18 | (217, 15, 1) |
+| 7 | bytes 19–21 | (217, 18, 1) |
+| 8 | byte 22 | (217, 21, 0) |
+
+   ```
+   (217,0,1) (217,3,1) (217,6,1) (217,9,1) (217,12,1) (217,15,1) (217,18,1) (217,21,0)
+   ```
+
+   - The packet number 217 is the same in all eight fragments, which is how the receiver knows they belong together.
+   - The offset tells the receiver where to place each fragment, so they can be reassembled even if they arrive out of order.
+   - The last fragment carries bit 0, which tells the receiver that nothing more is coming and reassembly can finish.
