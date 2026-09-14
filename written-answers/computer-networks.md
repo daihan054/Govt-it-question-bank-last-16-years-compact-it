@@ -12198,3 +12198,194 @@ Answer:
     - The first form is used in practice because the rectangular grid is easy to generate with two independent I and Q amplitude modulators, and easy to decide at the receiver.
     - The second form spreads the points more evenly on the circle, which can help on a channel with phase noise, but it is harder to build.
     - In both cases 16 symbols means log2(16) = 4 bits per symbol, so with a baud rate of 1000 the bit rate is 4000 bps.
+
+## Email Architecture & Protocols (SMTP, POP3, IMAP) (10)
+
+1. **Sinthia wants to send an email to her friend (Afsana). He sends the email through application and transport layer.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1323 (ET: DU)]*
+   * (a) Mention the protocol of application layer and transport layer.
+   * (b) Write down the steps of Mail transfer from Afsana to Sinthia.
+
+Answer:
+
+   (a) Protocols used
+
+| Layer | Protocol | Work it does |
+|---|---|---|
+| Application | SMTP (port 25, 587, 465) | Sends the mail from the client to the server, and from server to server |
+| Application | POP3 (port 110, 995) or IMAP (port 143, 993) | Downloads or reads the mail from the receiver's mailbox |
+| Application | DNS (port 53) | Finds the MX record, which names the mail server of the destination domain |
+| Transport | TCP | Carries all of the above reliably. SMTP, POP3 and IMAP all run over TCP, never UDP |
+
+   - TCP is used because an email must arrive complete and in order. A lost byte would corrupt the message, so the reliability, ordering and retransmission of TCP are essential.
+
+   (b) Steps of mail transfer
+
+```mermaid
+flowchart LR
+    UA1["Afsana<br/>User Agent"] --> MS1["Afsana's mail server<br/>(sender side)"]
+    MS1 --> DNS["DNS lookup<br/>MX record of Sinthia's domain"]
+    DNS --> MS1
+    MS1 --> MS2["Sinthia's mail server<br/>(receiver side)"]
+    MS2 --> MB["Sinthia's mailbox"]
+    MB --> UA2["Sinthia<br/>User Agent"]
+```
+
+   - Step 1 — Afsana composes the mail in her user agent (Gmail app, Outlook or a browser) and presses send.
+   - Step 2 — the user agent opens a TCP connection to Afsana's own mail server and pushes the message to it using SMTP.
+   - Step 3 — Afsana's mail server reads the domain part of Sinthia's address and asks DNS for the MX record of that domain, which returns the name and then the IP address of Sinthia's mail server.
+   - Step 4 — Afsana's server opens a TCP connection on port 25 to Sinthia's mail server and transfers the message with SMTP. If the far server is busy the message waits in a queue and is retried.
+   - Step 5 — Sinthia's mail server accepts the message and places it in Sinthia's mailbox.
+   - Step 6 — when Sinthia opens her mail client, it fetches the message from the mailbox using POP3 (download and usually delete) or IMAP (keep on the server and stay in sync).
+
+   - Note the direction rule: SMTP is a push protocol and is used for every hop up to the receiver's mailbox. POP3 and IMAP are pull protocols and are used only for the last step, from the mailbox to the reader.
+
+2. **Difference between: (i) SMTP and SNMP (ii) HTTP and HTTPs** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
+
+Answer:
+
+   (i) SMTP vs SNMP
+
+| Point | SMTP | SNMP |
+|---|---|---|
+| Full form | Simple Mail Transfer Protocol | Simple Network Management Protocol |
+| Purpose | Sends email between clients and mail servers | Monitors and manages network devices |
+| Transport and port | TCP, port 25 (also 587 and 465) | UDP, port 161 for queries and 162 for traps |
+| Parties involved | Mail client and mail servers | Manager (NMS) and agents on routers, switches, servers |
+| What it carries | The email message itself | Device statistics such as CPU, interface traffic, errors, and alerts |
+| Operations | HELO, MAIL FROM, RCPT TO, DATA, QUIT | GET, GETNEXT, SET, TRAP, INFORM |
+| Reliability | Reliable, since TCP is used | Best effort, since UDP is used, so monitoring never adds load |
+
+   (ii) HTTP vs HTTPS
+
+| Point | HTTP | HTTPS |
+|---|---|---|
+| Full form | HyperText Transfer Protocol | HTTP Secure |
+| Port | 80 | 443 |
+| Encryption | None, data travels in plain text | Encrypted with SSL/TLS |
+| Security | Anyone on the path can read or alter the data | Gives confidentiality, integrity and server authentication |
+| Certificate | Not needed | Needs an SSL/TLS certificate from a CA |
+| Browser display | Marked "Not secure" | Padlock icon |
+| Speed | Slightly faster, no handshake | A small handshake cost, now negligible with TLS 1.3 and HTTP/2 |
+| Use | Obsolete for real sites | Required for login, payment, and in practice for every site today |
+
+3. **Which protocol is used for email received?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+Answer:
+
+   - POP3 (Post Office Protocol version 3) and IMAP (Internet Message Access Protocol) are the protocols used to receive email.
+   - POP3 uses TCP port 110, or 995 with SSL. It downloads the mail to the local device and normally deletes it from the server.
+   - IMAP uses TCP port 143, or 993 with SSL. It keeps the mail on the server and synchronises folders, read status and flags across all devices.
+   - SMTP is not the answer here — SMTP is only for sending mail, on port 25.
+
+4. **(a) Distinguish the purpose of SMTP and IMAP in email communication.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 688 (ET: N/A)]*
+
+Answer:
+
+| Point | SMTP | IMAP |
+|---|---|---|
+| Full form | Simple Mail Transfer Protocol | Internet Message Access Protocol |
+| Purpose | Sending mail — from the client to the server, and from server to server | Reading mail — from the server mailbox to the client |
+| Direction | Push | Pull |
+| Port | 25, and 587 or 465 for client submission | 143, or 993 with SSL |
+| Where mail is stored | Does not store, it only transfers | Mail stays on the server |
+| Multiple devices | Not applicable | Fully synchronised across phone, laptop and web |
+| Folders and flags | No concept of folders | Supports folders, read/unread flags, search on the server |
+| Offline use | Not applicable | Works with a local cache, then syncs |
+
+   - Working relation: SMTP carries the message all the way into the recipient's mailbox; IMAP is used only for the final step when the recipient opens the mailbox and reads it. The two are complementary, not alternatives.
+
+5. **Email এর ক্ষেত্রে CC এবং BCC এর অর্থ কি বুঝায়?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
+
+Answer:
+
+   - CC stands for Carbon Copy. A copy of the mail is sent to these addresses, and every recipient can see who was put in the CC field. It is used to keep someone informed when the mail is not directly addressed to them.
+   - BCC stands for Blind Carbon Copy. A copy is also sent to these addresses, but nobody else can see them. Recipients in the To and CC fields do not know that a BCC recipient exists, and BCC recipients cannot see each other.
+
+| Field | Who sees the address | Typical use |
+|---|---|---|
+| To | Everyone | The main recipient, the person expected to act |
+| CC | Everyone | People who need to know but are not expected to act |
+| BCC | Only the sender | Privacy, or sending a notice to a large list |
+
+   - The names come from the carbon paper once placed between sheets in a typewriter to make a duplicate copy.
+   - Practical rule: use BCC when mailing a large list, so that no recipient's address is exposed to the others.
+
+6. **Which of the following is correct email formate? (a) compact@webmail.com (b) compact@webmail@com (c) compact.webmail.com (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
+
+Answer:
+
+   - (a) compact@webmail.com
+   - A valid email address has the form localpart@domain — a user name, then exactly one @ sign, then the domain name.
+   - (b) is wrong because it has two @ signs; only one is allowed.
+   - (c) is wrong because it has no @ at all, so it is a domain name, not an email address.
+
+7. **E-mail পাঠানো এবং রিসিভ করার জন্য একটি করে প্রোটোকলের নাম লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 866 (ET: BUET)]*
+
+Answer:
+
+   - For sending email: SMTP (Simple Mail Transfer Protocol), TCP port 25.
+   - For receiving email: POP3 (Post Office Protocol version 3), TCP port 110. IMAP on port 143 is the other option for receiving.
+
+8. **Which protocol provides e-mail facility amount different hosts?** *[BSEC Assistant Director (MIS) 2021 compact it 937 (ET: IBA)]*
+
+Answer:
+
+   - SMTP — Simple Mail Transfer Protocol.
+   - It is the application-layer protocol that carries email between different hosts: from the sender's client to the sender's mail server, and then from that server to the recipient's mail server.
+   - It runs over TCP on port 25, with 587 and 465 used for client submission.
+   - Its command sequence is HELO or EHLO, MAIL FROM, RCPT TO, DATA and QUIT.
+   - POP3 and IMAP only fetch mail from the recipient's own mailbox, so they do not transfer mail between hosts.
+
+9. **ই-মেইল করার ক্ষেত্রে TO, CC ও BCC কোন ব্যবহার করা হয়?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
+
+Answer:
+
+   - To — the main recipient of the mail, the person the message is actually addressed to and who is expected to act on it. Everyone can see this field.
+   - CC (Carbon Copy) — people who should be kept informed but are not expected to act. Their addresses are visible to all recipients.
+   - BCC (Blind Carbon Copy) — people who receive a copy without anyone else knowing. Their addresses are hidden from the To and CC recipients and from each other.
+
+| Field | Meaning | Address visible to others | When to use |
+|---|---|---|---|
+| To | Direct recipient | Yes | Action is expected from this person |
+| CC | Carbon copy | Yes | Only to keep informed |
+| BCC | Blind carbon copy | No | Privacy, or a large mailing list |
+
+   - Practical points: replying with Reply All goes to the To and CC recipients but never to the BCC list, and BCC is the correct way to mail many people without exposing their addresses to each other.
+
+10. **(a) What is SMTP? How SMTP works?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
+
+Answer:
+
+    What SMTP is
+    - SMTP stands for Simple Mail Transfer Protocol. It is the application-layer protocol used to send email — from a client to its mail server, and from one mail server to another.
+    - It runs over TCP, on port 25 for server-to-server transfer, and on 587 or 465 for a client submitting mail.
+    - It is a push protocol and text based. It only sends mail; fetching mail from a mailbox is done by POP3 or IMAP.
+
+    How SMTP works
+
+```mermaid
+sequenceDiagram
+    participant C as Client / sending server
+    participant S as Receiving mail server
+    C->>S: TCP connection to port 25
+    S->>C: 220 service ready
+    C->>S: EHLO sender.com
+    S->>C: 250 OK
+    C->>S: MAIL FROM: <afsana@sender.com>
+    S->>C: 250 OK
+    C->>S: RCPT TO: <sinthia@receiver.com>
+    S->>C: 250 OK
+    C->>S: DATA
+    S->>C: 354 start mail input
+    C->>S: headers + body, ends with a single dot
+    S->>C: 250 message accepted
+    C->>S: QUIT
+    S->>C: 221 closing connection
+```
+
+    - Connection — the sender opens a TCP connection to port 25 of the receiving server, which replies with code 220.
+    - Handshake — the sender identifies itself with HELO or EHLO; EHLO also asks which extensions the server supports, such as STARTTLS and AUTH.
+    - Envelope — MAIL FROM gives the sender address and RCPT TO gives each recipient. The server can reject a recipient here.
+    - Message transfer — DATA begins the message; the headers and body follow and are ended by a line containing only a full stop.
+    - Close — the server accepts with code 250 and the sender sends QUIT.
+    - Before all this, the sending server queries DNS for the MX record of the recipient's domain to find which server to contact. If that server is unreachable the mail stays in the queue and delivery is retried for several days.
