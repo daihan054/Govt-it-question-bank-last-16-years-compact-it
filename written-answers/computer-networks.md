@@ -13162,3 +13162,434 @@ Answer:
    - The packet number 217 is the same in all eight fragments, which is how the receiver knows they belong together.
    - The offset tells the receiver where to place each fragment, so they can be reassembled even if they arrive out of order.
    - The last fragment carries bit 0, which tells the receiver that nothing more is coming and reassembly can finish.
+
+## Satellite Communication (4)
+
+1. **(b) Difference between active and passive satellites.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
+
+Answer:
+
+| Point | Passive satellite | Active satellite |
+|---|---|---|
+| Function | Only reflects the signal back, like a mirror in the sky | Receives, amplifies, changes the frequency and retransmits |
+| Electronics on board | None, or almost none | Transponders, amplifiers, antennas, power system |
+| Power source | Needs no power | Solar panels and batteries |
+| Signal strength | Very weak on return, so huge ground antennas and high power are needed | Strong, because the signal is amplified before being sent down |
+| Frequency | Comes back on the same frequency, so uplink and downlink interfere | Downlink uses a different frequency from the uplink, so there is no interference |
+| Cost and complexity | Cheap and simple | Expensive and complex |
+| Lifetime | Long, nothing can fail | Limited by fuel and electronics, about 15 years |
+| Example | Echo 1 and Echo 2 (1960s balloon satellites), the Moon | Every modern satellite — Intelsat, Bangabandhu-1, GPS, VSAT |
+
+   - Passive satellites were only used in the earliest experiments. Every practical satellite today is active, because the amplification and the frequency change are essential for a usable link.
+
+2. **(c) Briefly describe different types of earth orbital satellite.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 695 (ET: N/A)]*
+
+Answer:
+
+| Type | Altitude | Orbital period | Main features |
+|---|---|---|---|
+| LEO — Low Earth Orbit | 160–2,000 km | 90–120 minutes | Very low delay (5–10 ms), small cheap satellites, but each one is visible for only a few minutes so a large constellation and handover are needed |
+| MEO — Medium Earth Orbit | 2,000–35,786 km | 6–12 hours | Delay about 50–150 ms, fewer satellites needed than LEO, used mainly for navigation |
+| GEO — Geostationary Orbit | 35,786 km | 24 hours | Appears fixed in the sky, so the ground antenna never moves; 3 satellites cover almost the whole earth; but delay is 250–280 ms one way and the poles are not covered |
+| HEO — Highly Elliptical Orbit | 500 km to 40,000 km | 12 hours typically | Spends most of its time over one hemisphere, so it gives good coverage of high-latitude regions that GEO cannot reach |
+
+   - Examples: LEO — Starlink, OneWeb, Iridium; MEO — GPS, Galileo, GLONASS; GEO — Bangabandhu-1, Intelsat, most TV broadcast satellites; HEO — the Russian Molniya series.
+   - The trade-off in one line: the higher the orbit, the fewer satellites needed but the greater the delay and the launch cost.
+
+3. **Satellite ভিত্তিক যোগাযোগের একটি অসুবিধা লিখুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 825 (ET: N/A)]*
+
+Answer:
+
+   - The main disadvantage is the high propagation delay. A geostationary satellite is 35,786 km above the earth, so the signal takes about 250 to 280 ms to go up and come down, and a round trip is over 500 ms. This makes voice calls awkward and interactive applications such as online gaming and video conferencing unusable.
+
+   Other disadvantages that can be added
+   - Very high launch and maintenance cost, and a satellite cannot be repaired once it is in orbit.
+   - Rain fade — heavy rain absorbs Ku and Ka band signals, so the link degrades in bad weather.
+   - Limited bandwidth compared with optical fiber.
+   - The signal is broadcast over a wide footprint, so it is easier to intercept and must be encrypted.
+   - Limited lifetime, about 15 years, set by the station-keeping fuel.
+
+4. **How does mobile work? How many satellites are required to cover the earth?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1279-1280 (ET: N/A)]*
+
+Answer:
+
+   How a mobile phone works
+   - The service area is divided into small cells, each covered by a base station (BTS). The same frequencies are reused in cells far enough apart, which is what lets a limited spectrum serve millions of users.
+   - When the phone is switched on it scans for the strongest base station, registers with it, and is authenticated using the key in the SIM. Its location is stored in the HLR and VLR databases.
+   - To make a call, the phone sends a request on the control channel. The BTS passes it to the BSC and then to the MSC, which looks up the called number, finds where that subscriber is, and sets up the path.
+   - Voice is digitised, compressed by a codec, modulated and sent over the radio channel. The MSC routes it to another mobile, to the PSTN or to another network.
+   - While the user moves, the phone keeps measuring the signal of neighbouring cells. When a neighbour becomes better, the network performs a handover and the call continues on the new cell without a break.
+   - In 4G and 5G the whole system is packet switched, so voice itself travels as IP packets (VoLTE).
+
+   Satellites required to cover the earth
+   - Three geostationary satellites placed 120 degrees apart over the equator are enough to cover almost the entire earth.
+   - The reason: a GEO satellite at 35,786 km sees about 42 percent of the globe, so three footprints overlap and cover all of it except the polar regions above roughly 75 degrees latitude.
+   - To include the poles as well, a fourth satellite or a separate polar or highly elliptical orbit system is needed.
+   - A LEO system needs far more — Iridium uses 66 satellites and Starlink uses thousands — because each LEO satellite covers a much smaller area and passes overhead in only a few minutes.
+
+## Analog Modulation & Radio Receivers (3)
+
+1. **With appropriate figures, distinguish between homodyne and heterodyne detection processes. Draw the block diagram of a super heterodyne AM receiver.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+Answer:
+
+   Homodyne detection
+
+```
+   RF in ---->[ Mixer ]----> Baseband out
+                  ^
+                  |
+        Local oscillator at EXACTLY fc
+        (same frequency and phase as the carrier)
+```
+   - The local oscillator runs at exactly the carrier frequency, so the mixer brings the signal straight down to baseband in one step. It is also called direct conversion or zero-IF.
+   - Advantage: no intermediate frequency stage, so no image frequency problem, and the circuit is simple and easy to integrate on a chip.
+   - Disadvantage: the local oscillator must be locked to the carrier in both frequency and phase, which needs a PLL or a Costas loop. It also suffers from DC offset and 1/f noise at baseband.
+
+   Heterodyne detection
+
+```
+   RF in ---->[ Mixer ]----> IF ---->[ IF amp + filter ]----> Detector ----> Output
+                  ^
+                  |
+        Local oscillator at fc + fIF
+        (offset from the carrier)
+```
+   - The local oscillator is offset from the carrier, so the mixer produces a fixed intermediate frequency instead of baseband. The signal is amplified and filtered at that IF and only then demodulated.
+   - Advantage: most of the gain and all of the sharp filtering happen at one fixed frequency, which is far easier to design, so selectivity and sensitivity are much better.
+   - Disadvantage: it suffers from the image frequency, which must be removed by an RF filter before the mixer.
+
+   Superheterodyne AM receiver
+
+```mermaid
+flowchart LR
+    ANT["Antenna"] --> RF["RF amplifier<br/>+ tuned circuit"]
+    RF --> MIX["Mixer"]
+    LO["Local oscillator<br/>f_LO = f_c + 455 kHz"] --> MIX
+    MIX --> IF["IF amplifier<br/>fixed 455 kHz"]
+    IF --> DET["Envelope detector<br/>(diode)"]
+    DET --> AF["AF amplifier"]
+    AF --> SPK["Loudspeaker"]
+    DET --> AGC["AGC"]
+    AGC --> IF
+    AGC --> RF
+```
+
+   - The RF stage selects the wanted station and rejects the image. The mixer and local oscillator shift every station down to the same fixed IF of 455 kHz for AM. The IF amplifier provides most of the gain and the sharp selectivity. The envelope detector recovers the audio, and AGC keeps the output level steady as the signal strength changes.
+
+2. **Difference between AM and FM. (a) Which is prefer for long distance communication? (b) Which has low distortion? (c) Which has low interference?** *[EGCB Assistant Engineer (CSE) 2022 compact it 716 (ET: BUET)]*
+
+Answer:
+
+| Point | AM (Amplitude Modulation) | FM (Frequency Modulation) |
+|---|---|---|
+| What varies | Amplitude of the carrier | Frequency of the carrier |
+| Bandwidth | Narrow, 2 × fm (about 10 kHz per station) | Wide, 2(Δf + fm) by Carson's rule (about 200 kHz per station) |
+| Noise immunity | Poor — noise directly changes the amplitude | Very good — noise affects amplitude and the receiver limits it away |
+| Sound quality | Low fidelity | High fidelity, stereo possible |
+| Power efficiency | Poor, most power is in the carrier | Better, the carrier power is constant |
+| Frequency band | 535–1605 kHz (medium wave) | 88–108 MHz (VHF) |
+| Range | Very long, because of ground wave and ionospheric reflection | Line of sight, about 50–100 km |
+| Circuit | Simple and cheap | More complex |
+
+   (a) Preferred for long distance communication — AM
+   - AM broadcasts in the medium and short wave bands, and those waves reflect from the ionosphere and follow the ground, so they travel hundreds or thousands of kilometres. FM is in the VHF band, which passes through the ionosphere and is limited to line of sight.
+
+   (b) Lower distortion — FM
+   - FM carries the information in the frequency, and the receiver's limiter stage removes all amplitude variation before demodulation, so amplitude distortion and noise are stripped out. Its wider bandwidth also allows a much better audio response.
+
+   (c) Lower interference — FM
+   - Most natural and man-made interference, such as lightning and motor sparks, is amplitude noise, which FM ignores. FM also has the capture effect, where the stronger of two signals on the same channel completely suppresses the weaker one, so no mixing is heard.
+
+3. **A sinusoidal modulating waveform of amplitude 5V and frequency of 2 kHz is applied to FM generator, which has a frequency sensitivity of 40Hz/volt. Calculate the frequency deviation, modulation index and bandwidth.** *[BOF Assistant Programmer 2022 compact it 734 (ET: MIST)]*
+
+Answer:
+
+   Given
+   ```
+   Amplitude of the modulating signal, Am = 5 V
+   Modulating frequency, fm = 2 kHz = 2000 Hz
+   Frequency sensitivity, kf = 40 Hz per volt
+   ```
+
+   Step 1 — frequency deviation
+   ```
+   Δf = kf × Am
+      = 40 × 5
+      = 200 Hz
+   ```
+
+   Step 2 — modulation index
+   ```
+   β = Δf / fm
+     = 200 / 2000
+     = 0.1
+   ```
+
+   Step 3 — bandwidth by Carson's rule
+   ```
+   BW = 2 (Δf + fm)
+      = 2 (200 + 2000)
+      = 2 × 2200
+      = 4400 Hz
+      = 4.4 kHz
+   ```
+
+   Frequency deviation = 200 Hz, modulation index = 0.1, bandwidth = 4.4 kHz
+
+   - Since β = 0.1 is much less than 1, this is narrowband FM. Its bandwidth is close to 2fm = 4 kHz, almost the same as AM would need. Wideband FM, with β much greater than 1, is what gives FM its high fidelity and noise immunity.
+
+## Spread Spectrum & Multiple Access (CDMA, FHSS, DSSS) (3)
+
+1. **What are the limitaions of CDMA?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+Answer:
+
+   - Near-far problem. A handset close to the tower drowns out a distant one, because all users share the same frequency at the same time. Very fast and accurate power control, about 800 times per second, is needed to prevent this, and it adds complexity.
+   - Soft capacity limit and cell breathing. Every extra user raises the noise floor for everyone, so as the load grows the effective cell radius shrinks and edge users lose service.
+   - Self-interference. Codes are not perfectly orthogonal in a real multipath channel, so users interfere with each other and the quality falls gradually as the load rises.
+   - Higher complexity and cost. The handset needs a rake receiver, precise code synchronisation and tight power control, so it is more expensive and uses more battery.
+   - Needs accurate timing. CDMA2000 systems depend on GPS timing at every base station, which is an extra dependency.
+   - Wider bandwidth per carrier is required, and the codes must be centrally planned and managed.
+   - Limited global roaming and a smaller handset ecosystem compared with GSM, which is why most operators moved to GSM-family technology.
+
+2. **Mention the basic differences between frequency-hopped spread spectrum (FHSS) and direct sequence spread spectrum (DSSS) techniques.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+Answer:
+
+| Point | FHSS | DSSS |
+|---|---|---|
+| How the spectrum is spread | The carrier hops from one frequency to another in a pseudo-random sequence | Each data bit is multiplied by a faster pseudo-random chip code |
+| Bandwidth used at any instant | Narrow, only the current hop channel | The full wide band, all the time |
+| Synchronisation | Both ends must follow the same hopping pattern and timing | Both ends must use the same chip code and be chip-synchronised |
+| Resistance to narrowband interference | Good — the signal simply hops away from the jammed channel | Good — the interference is spread out and falls below the noise floor at the despreader |
+| Resistance to multipath | Moderate | Better, a rake receiver can combine the multipath copies |
+| Processing gain | Number of hop channels | Ratio of chip rate to bit rate |
+| Complexity and cost | Simpler and cheaper | More complex, needs fast correlators |
+| Data rate | Lower | Higher |
+| Example | Bluetooth, older 802.11 (1–2 Mbps), military anti-jam radio | 802.11b Wi-Fi, CDMA cellular, GPS |
+
+   - Short way to state it: FHSS dodges interference by changing frequency; DSSS survives interference by spreading the signal so thin that the interference cannot destroy it.
+
+3. **What is CDMA? Briefly explain.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1122 (ET: BREB)]*
+
+Answer:
+
+   - CDMA stands for Code Division Multiple Access. It is a multiple access method in which every user transmits on the SAME frequency at the SAME time, and the users are separated by unique orthogonal codes instead of by frequency or by time slot.
+   - Each user's data bit is multiplied by its own pseudo-random chip code, which spreads the signal over a wide bandwidth. The receiver multiplies the incoming mixture by the same code and recovers only that user's data; all other users appear as low-level noise.
+   - The classic analogy: many people talk in one room at the same time, but each pair speaks a different language, so each listener hears only their own partner.
+
+   Comparison with the other methods
+   - FDMA — each user gets a different frequency.
+   - TDMA — each user gets a different time slot on the same frequency.
+   - CDMA — all users share the same frequency and the same time, separated by code.
+
+   - Advantages: high capacity, built-in security because the code is needed to decode, soft handover, resistance to interference and multipath, and no hard limit on the number of users.
+   - Disadvantages: the near-far problem needing strict power control, self-interference as the load grows, and more complex and costly handsets.
+   - Used in IS-95 and CDMA2000 cellular networks, in the WCDMA air interface of 3G, and in GPS.
+
+## Line Coding & Digital Encoding (2)
+
+1. **Assume we want to transmit the following binary string: 01001110. Show the resulting signal on the one using the following line coding techniques: (i) NRZ-L (ii) Manchester NRZ (iii) Unipolar RZ (binary string: 11011000100)** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 638 (ET: N/A)]*
+
+Answer:
+
+   (i) NRZ-L for 0 1 0 0 1 1 1 0
+   Convention used: 1 = high (positive) level, 0 = low (zero or negative) level. The level stays for the whole bit and there is no return to zero.
+
+```
+   Bit :  0     1     0     0     1     1     1     0
+          ___         ___________                   ___
+   NRZ-L     |       |           |                 |
+             |_______|           |_________________|
+          (low=0 shown up here only for readability; read the level per bit)
+
+   Cleaner form, + = high, - = low:
+
+   Bit :  0   1   0   0   1   1   1   0
+   Level: -   +   -   -   +   +   +   -
+```
+
+   (ii) Manchester for 0 1 0 0 1 1 1 0
+   Every bit has a transition in the MIDDLE of the bit period. Using the IEEE 802.3 convention: 0 = high to low, 1 = low to high.
+
+```
+   Bit :   0      1      0      0      1      1      1      0
+          ‾‾|__  __|‾‾  ‾‾|__  ‾‾|__  __|‾‾  __|‾‾  __|‾‾  ‾‾|__
+          H  L   L  H   H  L   H  L   L  H   L  H   L  H   H  L
+              ^ mid-bit transition in every bit
+```
+   - The mid-bit transition means the clock can always be recovered from the data, and there is no DC component. The price is that it needs twice the bandwidth of NRZ.
+
+   (iii) Unipolar RZ for 1 1 0 1 1 0 0 0 1 0 0
+   A 1 is a positive pulse for the FIRST HALF of the bit and then returns to zero; a 0 stays at zero for the whole bit.
+
+```
+   Bit :  1     1     0     1     1     0     0     0     1     0     0
+         ‾|_   ‾|_   ___   ‾|_   ‾|_   ___   ___   ___   ‾|_   ___   ___
+          ^     ^           ^     ^                       ^
+       pulse in first half of every 1-bit, zero in the second half
+```
+   - Only one polarity is used, which is why it is called unipolar. The return to zero in every 1 gives some self-synchronisation, but a long run of 0s still gives no transition at all, and the scheme has a large DC component and poor bandwidth efficiency.
+
+2. **What is Line coding? What is the different line coding techniques?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 869-870 (ET: N/A)]*
+
+Answer:
+
+   What line coding is
+   - Line coding is the process of converting binary data (1s and 0s) into a digital signal — a pattern of voltage levels — so that it can be sent over a transmission medium. It is digital-to-digital conversion.
+
+   What a good line code must provide
+   - Self-synchronisation, so the receiver can recover the clock from the data itself.
+   - No DC component, so the signal can pass through transformers and AC-coupled links.
+   - Low bandwidth requirement and good error detection ability.
+   - Immunity to noise and interference.
+
+   Line coding techniques
+
+| Category | Scheme | How it works |
+|---|---|---|
+| Unipolar | NRZ | 1 = positive voltage, 0 = zero. Simple but has a large DC component |
+| Polar | NRZ-L | The level itself carries the bit: one level for 1, another for 0 |
+| Polar | NRZ-I | A transition at the start of a bit means 1; no transition means 0 |
+| Polar | RZ | Three levels; the signal returns to zero in the middle of every bit, so the clock is always recoverable |
+| Polar biphase | Manchester | A transition in the middle of every bit — 0 is high to low, 1 is low to high |
+| Polar biphase | Differential Manchester | Always a mid-bit transition for the clock; a 0 also has a transition at the start of the bit and a 1 does not |
+| Bipolar | AMI | 0 is zero volts; successive 1s alternate between positive and negative, which removes the DC component |
+| Bipolar | Pseudoternary | The opposite of AMI — 1 is zero volts and 0s alternate |
+| Multilevel | 2B1Q, 8B6T, MLT-3 | Several bits are mapped into fewer signal elements, which saves bandwidth |
+| Multitransition | MLT-3 | Cycles through three levels; used in 100BASE-TX Ethernet |
+
+   - Practical examples: Manchester in classic 10 Mbps Ethernet, MLT-3 with 4B/5B in 100BASE-TX, AMI in T1 lines, and 2B1Q in ISDN.
+
+## Address Resolution (ARP & RARP) (2)
+
+1. **(a) Discuss the main role of Address Resolution Protocol (ARP) in the network layer of TCP/IP protocol suite.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
+
+Answer:
+
+   Main role
+   - ARP maps a known IP address to the MAC address that goes with it on the same local network. It is the bridge between layer 3 addressing and layer 2 delivery.
+   - Why it is needed: a host knows the destination IP address, but the frame that actually goes on the wire must carry a destination MAC address. Without ARP the packet cannot be placed in a frame at all.
+
+   How it works
+   - The sender first checks its ARP cache. If the mapping is there, it is used at once.
+   - If not, the sender broadcasts an ARP Request to FF:FF:FF:FF:FF:FF asking "who has 192.168.1.10, tell 192.168.1.5". Every host on the segment receives it.
+   - Only the host that owns that IP replies with a unicast ARP Reply containing its MAC address.
+   - The sender stores the mapping in its ARP cache for a few minutes and builds the frame.
+
+```mermaid
+sequenceDiagram
+    participant A as Host A (192.168.1.5)
+    participant N as All hosts on the LAN
+    participant B as Host B (192.168.1.10)
+    A->>N: ARP Request (broadcast) — who has 192.168.1.10?
+    B->>A: ARP Reply (unicast) — 192.168.1.10 is at 00:1A:2B:3C:4D:5E
+```
+
+   Other points worth stating
+   - If the destination is on a different network, ARP resolves the MAC address of the DEFAULT GATEWAY, not of the final destination. The IP addresses stay the same end to end, while the MAC addresses are rewritten at every hop.
+   - Related protocols: RARP finds an IP from a known MAC (now replaced by DHCP), Proxy ARP lets a router answer on behalf of another host, and Gratuitous ARP announces a host's own mapping after a change.
+   - ARP has no authentication, so ARP spoofing is possible, where an attacker claims to own the gateway's IP and intercepts traffic. Dynamic ARP Inspection and static entries are the defences.
+   - Note on layer: ARP sits between layer 3 and layer 2. It is usually grouped with the network layer in the TCP/IP suite because it serves IP, and IPv6 replaces it with the Neighbor Discovery Protocol.
+
+2. **What is ARP? Briefly explain ARP.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841-842 (ET: N/A)]*
+
+Answer:
+
+   - ARP stands for Address Resolution Protocol. It finds the MAC (physical) address that belongs to a known IP (logical) address on the same local network.
+   - It is needed because an IP packet can only travel on a LAN inside an Ethernet frame, and that frame must carry a destination MAC address.
+
+   Working steps
+   - The sender looks in its ARP cache first. A hit means no request is needed.
+   - On a miss, it broadcasts an ARP Request to all hosts on the segment, asking who owns that IP address.
+   - The host that owns it sends back a unicast ARP Reply with its MAC address.
+   - The sender caches the result, usually for a few minutes, and then sends the frame.
+   - Command to view the table: `arp -a`.
+
+   Types
+   - Proxy ARP — a router replies on behalf of a host on another segment.
+   - Gratuitous ARP — a host announces its own IP-to-MAC mapping, used to detect duplicate addresses and to update neighbours after a failover.
+   - Reverse ARP (RARP) — the opposite direction, finding an IP from a MAC; replaced by BOOTP and then DHCP.
+   - Inverse ARP — used in Frame Relay to find the IP at the far end of a virtual circuit.
+
+   - Security note: ARP has no authentication, so ARP spoofing or poisoning lets an attacker impersonate the gateway and mount a man-in-the-middle attack. IPv6 does not use ARP; it uses the Neighbor Discovery Protocol instead.
+
+## VLANs & Subnetting Comparison (2)
+
+1. A large organization wants to isolate different departments and user groups within the same physical network to improve security, reduce broadcast traffic, and manage network resources efficiently. The network administrator is considering either subnetting or VLANs to achieve this isolation. Compare subnetting and VLANs in this scenario and determine which technique is more appropriate for logical network isolation, explaining how the selected technique improves security and traffic management. [BSCCPL AME 21-08-2026 (BUET)]
+
+Answer:
+
+   Comparison
+
+| Point | Subnetting | VLAN |
+|---|---|---|
+| Layer | Layer 3, network layer | Layer 2, data link layer |
+| Method | Divides one IP block into smaller IP ranges | Divides one physical switch into separate logical broadcast domains |
+| Basis of grouping | IP address range | Switch port, MAC address or protocol — independent of location |
+| Broadcast domain | Separated only if a router sits between the subnets | Separated by definition, one per VLAN |
+| Moving a user | The device must be re-addressed for the new subnet | Just change the port's VLAN; the user can sit anywhere in the building |
+| Hardware needed | A router or L3 switch | A managed switch supporting 802.1Q |
+| Traffic between groups | Routed, and can be filtered by ACL | Needs inter-VLAN routing, and can also be filtered by ACL |
+| Flexibility | Tied to physical location and cabling | Fully logical, a department spread over three floors is still one VLAN |
+
+   Which one is more appropriate — VLAN
+   - The requirement is to isolate departments that share the SAME physical network. That is exactly what a VLAN does: one switch, or one set of switches, is divided into several independent logical networks.
+   - Subnetting alone does not isolate anything at layer 2. Two subnets on the same switch still share one broadcast domain, so broadcasts still reach everyone and a host can simply be re-addressed to reach the other group.
+   - In practice both are used together — each VLAN is given its own subnet — but VLAN is the technique that actually creates the isolation.
+
+   How VLANs improve security
+   - Traffic of one VLAN never reaches another VLAN at layer 2, so a compromised PC in Sales cannot sniff Finance traffic or ARP-spoof its gateway.
+   - All inter-VLAN traffic must pass through a router or L3 switch, which gives a single enforcement point for ACLs and firewall rules.
+   - Sensitive servers can be placed in their own VLAN with a strict access list; guests can be given an isolated VLAN with internet access only.
+   - It limits the blast radius of malware, because a worm spreading by broadcast or local scanning is confined to one VLAN.
+
+   How VLANs improve traffic management
+   - Each VLAN is its own broadcast domain, so ARP and DHCP broadcasts are confined to a small group instead of flooding the whole organisation. This directly reduces wasted bandwidth and CPU on every host.
+   - Smaller broadcast domains mean better performance and easier troubleshooting.
+   - QoS policy can be applied per VLAN — for example a voice VLAN given priority over a data VLAN.
+   - Users can be moved or reorganised by changing a port setting, with no re-cabling and no re-addressing.
+
+2. **What is VLAN? Difference between static and dynamic VLAN.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
+
+Answer:
+
+   What a VLAN is
+   - A VLAN (Virtual Local Area Network) is a logical grouping of devices on one or more physical switches, so that they behave as if they are on a separate LAN of their own.
+   - Each VLAN is its own broadcast domain. Devices in different VLANs cannot talk at layer 2 and need a router or a layer 3 switch to communicate.
+   - VLANs are tagged with a 12-bit VLAN ID carried in the IEEE 802.1Q header, giving 4094 usable VLANs. A trunk port carries several VLANs between switches; an access port belongs to one VLAN.
+   - Benefits: smaller broadcast domains, better security, logical grouping regardless of physical location, easier moves and changes, and per-VLAN QoS.
+
+   Static vs dynamic VLAN
+
+| Point | Static VLAN | Dynamic VLAN |
+|---|---|---|
+| How membership is decided | By the switch PORT; the administrator assigns each port to a VLAN | By the DEVICE; membership follows the MAC address, the user login or 802.1X authentication |
+| Also called | Port-based VLAN | MAC-based or policy-based VLAN |
+| Server needed | None | A VMPS or a RADIUS server holding the membership database |
+| If a user moves to another port | The user is now in that port's VLAN — the administrator must reconfigure | The device keeps its own VLAN automatically, wherever it is plugged in |
+| Configuration effort | Simple to set up, but heavy to maintain in a large network | Harder to set up, much easier to maintain afterwards |
+| Security | Weaker — anyone plugging into the port joins that VLAN | Stronger — the device or user must be recognised first |
+| Typical use | Most small and medium networks | Large campuses, hot-desking offices, BYOD and guest networks |
+
+## High Availability & Redundancy Protocols (VRRP, HSRP) (1)
+
+1. **State the network protocol of VRRP?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1359 (ET: BUET)]*
+
+Answer:
+
+   - VRRP stands for Virtual Router Redundancy Protocol. It is a layer 3 (network layer) redundancy protocol.
+   - It runs directly over IP as IP protocol number 112 — it does not use TCP or UDP.
+   - Advertisements are sent to the multicast address 224.0.0.18 for IPv4 and FF02::12 for IPv6, with a TTL of 255 so that the packets never leave the local segment.
+   - It is an open IETF standard, defined in RFC 3768 and RFC 5798.
+
+   What it does
+   - Several physical routers share one virtual IP address and one virtual MAC address (00:00:5E:00:01:XX, where XX is the VRRP group ID). Hosts use that virtual IP as their default gateway.
+   - One router is elected Master by priority, and the rest are Backup. The Master sends advertisements every second.
+   - If the Backup stops hearing advertisements, it takes over the virtual IP and MAC within about three seconds. The hosts notice nothing, because their gateway address never changes.
+   - This removes the default gateway as a single point of failure.
+
+   Comparison with HSRP
+   - HSRP is Cisco proprietary, uses UDP port 1985 and multicast 224.0.0.2, and calls its roles Active and Standby.
+   - VRRP is the open standard equivalent and works across vendors. GLBP is a third option that also load balances across the gateways.
