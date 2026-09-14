@@ -12389,3 +12389,402 @@ sequenceDiagram
     - Message transfer — DATA begins the message; the headers and body follow and are ended by a line containing only a full stop.
     - Close — the server accepts with code 250 and the sender sends QUIT.
     - Before all this, the sending server queries DNS for the MX record of the recipient's domain to find which server to contact. If that server is unreachable the mail stays in the queue and delivery is retried for several days.
+
+## Application Layer & Well-Known Port Numbers (6)
+
+1. Full Form and Port Number – SSH, FTP, SMTP, DNS, IMAP. *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+
+Answer:
+
+| Protocol | Full form | Port | Transport | Work |
+|---|---|---|---|---|
+| SSH | Secure Shell | 22 | TCP | Encrypted remote login and command execution |
+| FTP | File Transfer Protocol | 21 control, 20 data | TCP | Transfers files between client and server |
+| SMTP | Simple Mail Transfer Protocol | 25 (587, 465 for submission) | TCP | Sends email |
+| DNS | Domain Name System | 53 | UDP for queries, TCP for zone transfer and large replies | Translates a domain name into an IP address |
+| IMAP | Internet Message Access Protocol | 143 (993 with SSL) | TCP | Reads email kept on the server |
+
+   - SSH replaced Telnet (port 23) because Telnet sends everything, including the password, in plain text.
+   - FTP is unusual in using two ports: 21 carries the commands and 20 carries the file data in active mode.
+
+2. **What is the port number used by DNS?** *[BBA Assistant Programmer 12.07.2025 compact it 1432 (ET: BUET)], [BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)], [BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+Answer:
+
+   - DNS uses port 53.
+   - It uses UDP port 53 for ordinary queries and replies, because a query and its answer are one small packet each and a TCP handshake would cost three extra packets.
+   - It uses TCP port 53 when the reply is larger than 512 bytes and when a zone transfer between DNS servers is done, since those need reliable delivery.
+   - DNS over TLS uses port 853 and DNS over HTTPS uses port 443.
+
+3. **HTTPS এর পোর্ট নাম্বার কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+Answer:
+
+   - HTTPS uses TCP port 443.
+   - Plain HTTP uses port 80. HTTPS is HTTP carried inside an SSL/TLS encrypted session, which is why it has its own port.
+
+4. **Write the port address of the following applications of data communications. (i) HTTP; (ii) HTTPS; (iii) FTP; (iv) SMTP; (v) POP** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
+
+Answer:
+
+| Application | Port | Transport |
+|---|---|---|
+| (i) HTTP | 80 | TCP |
+| (ii) HTTPS | 443 | TCP |
+| (iii) FTP | 21 for control, 20 for data | TCP |
+| (iv) SMTP | 25 | TCP |
+| (v) POP3 | 110, or 995 with SSL | TCP |
+
+5. **Describe TCP/IP protocols and its ports.** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)]*
+
+Answer:
+
+   The TCP/IP model has four layers, and each layer has its own protocols.
+
+| Layer | Main protocols | Work |
+|---|---|---|
+| Application | HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, DHCP, SNMP, Telnet, SSH | Services the user actually uses |
+| Transport | TCP, UDP | End-to-end delivery, port addressing, segmentation |
+| Internet | IP, ICMP, ARP, IGMP | Logical addressing and routing between networks |
+| Network access | Ethernet, Wi-Fi, PPP, HDLC | Framing, MAC addressing, physical transmission |
+
+   TCP and UDP in brief
+   - TCP is connection oriented and reliable. It uses a three-way handshake, sequence numbers, acknowledgements, retransmission, flow control and congestion control. Header is 20 bytes minimum.
+   - UDP is connectionless and unreliable, with an 8-byte header and no acknowledgement. It is used where speed matters more than perfect delivery.
+
+   Well-known ports
+
+| Port | Protocol | Transport |
+|---|---|---|
+| 20, 21 | FTP data, FTP control | TCP |
+| 22 | SSH | TCP |
+| 23 | Telnet | TCP |
+| 25 | SMTP | TCP |
+| 53 | DNS | UDP, and TCP for zone transfer |
+| 67, 68 | DHCP server, DHCP client | UDP |
+| 69 | TFTP | UDP |
+| 80 | HTTP | TCP |
+| 110 | POP3 | TCP |
+| 143 | IMAP | TCP |
+| 161, 162 | SNMP, SNMP trap | UDP |
+| 443 | HTTPS | TCP |
+| 3306 | MySQL | TCP |
+
+   - Port ranges: 0–1023 are well-known ports, 1024–49151 are registered ports, and 49152–65535 are dynamic or ephemeral ports used by clients.
+
+6. **A server has port number 1223. A user is requesting the server (www.example.com) but it is showing server is not reached. How can you solve this?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+Answer:
+
+   Why it fails
+   - The browser assumes port 80 for http:// and port 443 for https://. The service here is listening on port 1223, so the browser knocks on the wrong port and the connection is refused.
+
+   Ways to solve it
+   - Type the port in the URL. The quickest fix for the user:
+   ```
+   http://www.example.com:1223
+   ```
+   - Move the service to the standard port. Configure the web server to listen on 80 or 443, so that plain www.example.com works for everyone.
+   - Use port forwarding or NAT on the router or firewall — map incoming port 80 to internal port 1223, so the outside world uses the normal port.
+   - Put a reverse proxy such as Nginx or Apache in front. The proxy listens on 80 and 443 and forwards the request to 127.0.0.1:1223.
+   - Open the port in the firewall. Check the server firewall (Windows Firewall, iptables, security group) and the network firewall actually allow inbound TCP 1223.
+   - Verify the service is really running and bound to the right interface. A service bound only to 127.0.0.1 will not answer from outside; it must bind to 0.0.0.0.
+   - Check DNS. Confirm that www.example.com resolves to the correct public IP, using nslookup or dig.
+   - Test the path step by step: ping the host, then telnet www.example.com 1223 or use nmap to see whether the port is open, then check the server logs.
+
+## Pulse Code Modulation (PCM) & Signal Processing (6)
+
+1. **A PCM system have step resolution of 2V. Sinusoidal signal amplitude 10V. SNR=? And total number of bits=?** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)], [BTCL Assistant Manager (Technical) 2021 compact it 765 (ET: BUET)]*
+
+Answer:
+
+   Given
+   ```
+   Step size (resolution), Δ = 2 V
+   Peak amplitude of the sinusoid, A = 10 V
+   So the full swing is from -10 V to +10 V, that is 20 V
+   ```
+
+   Step 1 — number of quantisation levels
+   ```
+   L = full swing / step size
+     = (2 × 10) / 2
+     = 10 levels
+   ```
+
+   Step 2 — number of bits per sample
+   ```
+   n = log2(L) = log2(10) = 3.32
+   n must be a whole number, so round up:  n = 4 bits per sample
+   ```
+
+   Step 3 — signal power of the sinusoid
+   ```
+   Ps = A² / 2 = 100 / 2 = 50 (normalised to 1 ohm)
+   ```
+
+   Step 4 — quantisation noise power
+   ```
+   Nq = Δ² / 12 = 4 / 12 = 0.3333
+   ```
+
+   Step 5 — signal to quantisation noise ratio
+   ```
+   SNR = Ps / Nq = 50 / 0.3333 = 150
+   SNR(dB) = 10 log10(150) = 21.76 dB
+   ```
+
+   SNR = 150, that is 21.76 dB, and 4 bits per sample are needed
+
+   Cross-check
+   ```
+   SNR = 1.5 L² = 1.5 × 10² = 150   ✓
+   With 4 bits the hardware actually gives L = 16 levels, and then
+   SNR(dB) = 1.76 + 6.02 n = 1.76 + 24.08 = 25.84 dB.
+   ```
+
+   - Useful rule to quote: every extra bit adds about 6 dB to the SNR of a PCM system.
+
+2. **Draw Delta modulation figure and math. (Approximate)** *[NPCBL Executive Trainee (IT) 2022 compact it 648 (ET: BUET)]*
+
+Answer:
+
+   Delta modulation is the simplest form of PCM. It sends only one bit per sample — 1 if the signal has risen since the last sample, 0 if it has fallen.
+
+   Block diagram
+
+```mermaid
+flowchart LR
+    IN["Analog input m(t)"] --> CMP["Comparator<br/>m(t) − m'(t)"]
+    CMP --> Q["1-bit quantiser<br/>+Δ or −Δ"]
+    Q --> OUT["Output bit stream"]
+    Q --> ACC["Accumulator<br/>(integrator)"]
+    ACC --> DLY["Delay"]
+    DLY --> CMP
+```
+
+   Staircase approximation
+
+```
+   Amplitude
+      |            ____ actual signal m(t)
+      |        ___/
+      |    ___/  ___  staircase m'(t) follows in steps of Δ
+      |  _/   _-'
+      | /  _-'
+      |/_-'
+      +--------------------------------> time
+        1 1 1 1 1 0 1 0 1 0 0 0     output bits
+```
+
+   Key equations
+   ```
+   Step size          = Δ
+   Sampling frequency = fs
+   Bit rate           = fs × 1 bit = fs
+
+   Slope overload does not occur while
+        Δ × fs  ≥  max | dm(t)/dt |
+
+   For a sinusoid m(t) = A sin(2π fm t):
+        max | dm/dt | = A × 2π fm
+   so   Δ × fs ≥ 2π A fm     →    fs ≥ 2π A fm / Δ
+
+   Granular (quantisation) noise power = Δ² / 3
+   ```
+
+   Two noises to name
+   - Slope overload noise — the staircase cannot climb fast enough when the signal rises steeply. Fixed by a larger Δ or a higher fs.
+   - Granular noise — the staircase keeps hunting up and down by ±Δ when the signal is almost flat. Fixed by a smaller Δ.
+   - The two pull in opposite directions, which is why adaptive delta modulation (ADM) changes Δ automatically.
+
+3. **A singla-tone message signal of bandwidth 4KHZ and amplitude 10V is transmitted by \Delta-modulation with step size 2V. Determine the data rate so that slope overloading noise is the minimum.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 675 (ET: N/A)]*
+
+Answer:
+
+   Given
+   ```
+   Message frequency, fm = 4 kHz = 4000 Hz
+   Amplitude, A = 10 V
+   Step size, Δ = 2 V
+   ```
+
+   Step 1 — condition to avoid slope overload
+   ```
+   The staircase must rise at least as fast as the signal:
+
+        Δ × fs  ≥  max | dm(t)/dt |
+   ```
+
+   Step 2 — maximum slope of the message
+   ```
+   m(t) = A sin(2π fm t)
+   dm/dt = A (2π fm) cos(2π fm t)
+   max | dm/dt | = A × 2π fm
+                 = 10 × 2π × 4000
+                 = 251,327 V/s
+   ```
+
+   Step 3 — minimum sampling frequency
+   ```
+   fs ≥ (A × 2π fm) / Δ
+      ≥ 251,327 / 2
+      ≥ 125,664 samples per second
+   ```
+
+   Step 4 — data rate
+   ```
+   Delta modulation sends 1 bit per sample, so
+   Data rate = fs × 1 = 125,664 bps ≈ 125.66 kbps
+   ```
+
+   Required data rate ≈ 125.7 kbps
+
+   - Compare this with the Nyquist rate of only 8000 samples/s. Delta modulation must sample about 16 times faster than Nyquist just to keep up with the slope, which is the main cost of using a 1-bit quantiser.
+
+4. **A single-tone message signal of bandwidth 4 KHZ is sampled by using a pulse train of frequency 200% higher than the Nyquist rate of the message signal to obtain PAM signal. The duty cycle of the pulse train is 20%. By drawing the amplitude spectrum of the PAM signal, determine its bandwidth.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 676 (ET: N/A)]*
+
+Answer:
+
+   Given
+   ```
+   Message bandwidth, fm = 4 kHz
+   Duty cycle of the pulse train = 20 % = 0.2
+   ```
+
+   Step 1 — Nyquist rate
+   ```
+   f_Nyquist = 2 × fm = 2 × 4000 = 8000 samples/s = 8 kHz
+   ```
+
+   Step 2 — actual sampling frequency
+   ```
+   200 % higher than the Nyquist rate means the Nyquist rate plus 200 % of it:
+   fs = 8 kHz + (200 % of 8 kHz)
+      = 8 kHz + 16 kHz
+      = 24 kHz
+   ```
+
+   Step 3 — pulse width from the duty cycle
+   ```
+   Sampling period, Ts = 1 / fs = 1 / 24,000 = 41.67 µs
+   Pulse width, τ = duty cycle × Ts
+                  = 0.2 × 41.67 µs
+                  = 8.33 µs
+   ```
+
+   Step 4 — amplitude spectrum of the PAM signal
+
+```
+   |X(f)|
+     |
+     |  /\        /\        /\        /\
+     | /  \      /  \      /  \      /  \
+     |/    \    /    \    /    \    /    \
+     +-----+----+-----+----+-----+----+-----+---> f
+     0    24k  48k   72k  96k  120k
+
+   Repeated copies of the message spectrum at 0, fs, 2fs, 3fs ...
+   The whole picture is multiplied by a sinc envelope whose first
+   null is at  f = 1/τ.
+```
+
+   Step 5 — bandwidth
+   ```
+   The sinc envelope of a flat-top pulse of width τ has its first null at 1/τ,
+   and that is taken as the bandwidth of the PAM signal:
+
+   BW = 1 / τ
+      = 1 / (8.33 × 10^-6)
+      = 120,000 Hz
+      = 120 kHz
+   ```
+
+   Bandwidth of the PAM signal = 120 kHz
+
+   - Note the relation: BW = 1/τ = fs / duty cycle = 24 kHz / 0.2 = 120 kHz. A narrower pulse gives a wider spectrum, which is the usual time-frequency trade-off.
+
+5. **Define pulse amplitude modulation. Explaine the different type of computer network.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1107 (ET: AUST)]*
+
+Answer:
+
+   Pulse Amplitude Modulation (PAM)
+   - PAM is the modulation in which the AMPLITUDE of a train of pulses is varied in proportion to the instantaneous value of the analog message signal, while the width and position of the pulses stay fixed.
+   - It is the first step of analog-to-digital conversion. The analog signal is sampled at the Nyquist rate or higher, and each sample becomes a pulse whose height equals the sample value.
+   - The output is still analog in amplitude but discrete in time. Quantising and encoding those pulse heights turns PAM into PCM.
+   - Two forms: natural sampling, where the pulse top follows the signal, and flat-top sampling, where each pulse holds a constant value. Flat-top is the practical one and it introduces a sinc distortion called the aperture effect.
+   - Used in Ethernet line coding (PAM-5 in 1000BASE-T, PAM-4 in modern high-speed links), in older telephone switching and as the input stage of every codec.
+
+   Types of computer network
+
+| Type | Full form | Coverage | Example |
+|---|---|---|---|
+| PAN | Personal Area Network | About 10 m, around one person | Phone paired with a smartwatch by Bluetooth |
+| LAN | Local Area Network | One room, floor or building | Office network of PCs on a switch |
+| CAN | Campus Area Network | Several nearby buildings | University campus network |
+| MAN | Metropolitan Area Network | One city | Cable TV network, a city-wide ISP |
+| WAN | Wide Area Network | Country or the whole world | The internet, a bank's branch network |
+
+   - Other classifications worth a line: by architecture there is client-server and peer-to-peer; by medium there is wired and wireless; and a VPN is a private network built over a public one.
+
+6. **Consider an audio signal with spectral component limited to the frequency band to 3300Hz. Assume that a sampling rate of 8000s/s with be used to generate a signal power to average needs to be 30dB.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1154 (ET: RUET)]*
+   a) What the minimum number of bit per sample?
+   b) Calculate the minimum channel bandwidth required for transmission of such a PCM signal.
+
+Answer:
+
+   Given
+   ```
+   Message band     = 300 to 3300 Hz
+   Sampling rate    fs = 8000 samples/s
+   Required SNR     = 30 dB
+   ```
+
+   (a) Minimum number of bits per sample
+
+   Step 1 — use the PCM SNR formula
+   ```
+   SNR(dB) = 1.76 + 6.02 n
+   ```
+
+   Step 2 — put the required SNR in
+   ```
+   30 ≤ 1.76 + 6.02 n
+   6.02 n ≥ 28.24
+   n ≥ 4.69
+   ```
+
+   Step 3 — round up, because n must be a whole number
+   ```
+   n = 5 bits per sample
+   ```
+
+   Minimum number of bits per sample = 5
+
+   Check
+   ```
+   With n = 5:  SNR = 1.76 + 6.02(5) = 31.86 dB  ≥ 30 dB  ✓
+   With n = 4:  SNR = 1.76 + 6.02(4) = 25.84 dB  < 30 dB  ✗
+   ```
+
+   (b) Minimum channel bandwidth
+
+   Step 1 — bit rate of the PCM signal
+   ```
+   R = fs × n
+     = 8000 × 5
+     = 40,000 bps = 40 kbps
+   ```
+
+   Step 2 — minimum bandwidth from the Nyquist relation
+   ```
+   For a binary signal with two levels, C = 2B, so
+   B = R / 2
+     = 40,000 / 2
+     = 20,000 Hz
+     = 20 kHz
+   ```
+
+   Minimum channel bandwidth = 20 kHz
+
+   - If a multilevel scheme with L levels were used, the bandwidth would fall to B = R / (2 log2 L); for example 4 levels would need only 10 kHz.
