@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 15 subtopics · 36 theories
+**Table of Contents** — 15 subtopics · 37 theories
 
 1. **[Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks)**
    - [Social Engineering — Techniques and Prevention](#social-engineering--techniques-and-prevention)
@@ -23,6 +23,7 @@
    - [Firewall — Concept, Types and Placement](#firewall--concept-types-and-placement)
    - [DMZ, Proxy Server and Network Segmentation](#dmz-proxy-server-and-network-segmentation)
    - [IDS, IPS and Defence in Depth](#ids-ips-and-defence-in-depth)
+   - [Zero Trust Architecture and the Layered Security Stack](#zero-trust-architecture-and-the-layered-security-stack)
 
 4. **[Malware & Security Threats](#malware--security-threats)**
    - [Malware — Types and Characteristics](#malware--types-and-characteristics)
@@ -1911,6 +1912,135 @@ flowchart TD
 - [Which of the following is the security equipment?](../mcq-answers/computer-network-security.md?plain=1#L174)
 
 
+
+---
+
+### Zero Trust Architecture and the Layered Security Stack
+
+> ⭐ **The one line that defines it: "NEVER TRUST, ALWAYS VERIFY."** In a Zero Trust network **no user, no device and no request is trusted just because it is already inside the office network.** Every single access is authenticated, authorised and checked again, whether it comes from the next desk or from the other side of the world.
+
+#### Why the old model broke
+
+The traditional design was called **castle-and-moat**, or the **perimeter model**.
+
+```mermaid
+flowchart LR
+    NET["🌐 Internet<br/>(untrusted)"] --> FW["FIREWALL<br/>the moat"]
+    FW --> IN["INSIDE THE OFFICE<br/>everyone TRUSTED<br/>PC + Server + Database<br/>flat network, no checks"]
+```
+
+| The assumption it made | Why it fails today |
+|---|---|
+| Everything inside the firewall is safe | One phishing email gives the attacker a PC **inside**, and from there nothing stops them |
+| The network has a clear edge | Cloud, SaaS, mobile phones and work-from-home mean there **is no edge any more** |
+| The threat is outside | A large share of breaches involve an **insider** or stolen credentials |
+| Once you are in, you can reach everything | This is **lateral movement** — the single biggest reason a small breach becomes a disaster |
+
+> ⚠️ ⭐ **The fatal flaw of the flat network:** the attacker only has to break in **once**. After that, the internal network gives them free movement to the file server, the database and the domain controller — because the network was built to trust whatever is inside it.
+
+#### The three core principles
+
+```mermaid
+flowchart TD
+    Z["ZERO TRUST"] --> A["1 . VERIFY EXPLICITLY<br/>authenticate and authorise<br/>EVERY request, every time"]
+    Z --> B["2 . LEAST PRIVILEGE<br/>give the minimum access needed,<br/>just in time, just enough"]
+    Z --> C["3 . ASSUME BREACH<br/>design as if the attacker<br/>is already inside"]
+```
+
+| Principle | What it means in practice |
+|---|---|
+| ⭐ **Verify explicitly** | Check **identity, device health, location, time and behaviour** on every request — not once at login. MFA everywhere. |
+| ⭐ **Least privilege** | A clerk's account can reach the clerk's application and nothing else. Admin rights are granted **only for the task, only for the time needed** (just-in-time access). |
+| ⭐ **Assume breach** | **Micro-segment** the network so that one compromised PC can reach almost nothing. Encrypt everything, log everything, and watch for unusual behaviour. |
+
+#### Micro-segmentation — the practical heart of Zero Trust
+
+```
+ FLAT NETWORK (old)                   MICRO-SEGMENTED (Zero Trust)
+
+ +---------------------------+        +-------+  +-------+  +--------+
+ |  PC  PC  PC               |        |  HR   |  | Sales |  | Finance|
+ |  Server  Database  Print  |        +---+---+  +---+---+  +----+---+
+ |  everything can reach     |            |          |           |
+ |  everything               |        ----+----------+-----------+----
+ +---------------------------+            POLICY ENGINE / FIREWALL
+                                      every flow between segments is
+   one breach = total loss            checked; HR cannot touch Finance
+```
+
+- The network is cut into very small zones — per application, per workload, sometimes per server — and **every flow between zones passes a policy check**.
+- Result: a compromised PC in Sales **cannot even see** the Finance database, so the blast radius of a breach is tiny.
+
+#### The layered defence stack it is built on
+
+This is the stack a bank or a large organisation actually deploys, in the order traffic meets it:
+
+```mermaid
+flowchart TD
+    I["🌐 INTERNET"] --> AD["1 . ANTI-DDoS<br/>scrubs volumetric flood traffic"]
+    AD --> FW["2 . NGFW<br/>stateful + deep packet inspection<br/>+ TLS decryption"]
+    FW --> WAF["3 . WAF<br/>blocks SQLi, XSS, bot traffic<br/>hides the real server IP"]
+    WAF --> LB["4 . LOAD BALANCER"]
+    LB --> WEB["5 . WEB SERVER (DMZ)"]
+    WEB --> IFW["6 . INTERNAL FIREWALL<br/>allow 3306 only, deny all else"]
+    IFW --> DB["7 . DATABASE (innermost zone)"]
+    WEB --> IDS["IDS / IPS"]
+    IDS --> SIEM["SIEM"]
+    SIEM --> SOC["24×7 SOC"]
+```
+
+| Device | What it filters | Layer it works at |
+|---|---|---|
+| ⭐ **Anti-DDoS** | Huge volumes of **software-generated flood traffic** before they reach the firewall | 3–4, volumetric |
+| ⭐ **NGFW** | Port and protocol **plus the payload** — it decrypts TLS and inspects the content, unlike an old firewall that read only the header | 3–7 |
+| ⭐ **WAF** | **Application-layer attacks** — SQL injection, XSS, malicious scripts; also hides the public IP of the web server | 7 |
+| ⭐ **Load balancer** | Spreads traffic across web servers, and absorbs some attack traffic | 4 or 7 |
+| ⭐ **Internal firewall** | Traffic **between zones** — for example only port 3306 from the web tier to the database, everything else denied | 3–4 |
+| ⭐ **IDS / IPS** | IDS **detects and alerts**; IPS sits inline and **blocks** | 3–7 |
+| ⭐ **SIEM → SOC** | Collects and correlates logs from every device; the SOC team acts on the alerts | Management |
+
+> ⭐ **Defence in Depth vs Zero Trust — do not confuse them.**
+> **Defence in Depth** = many layers stacked one behind another, so that if one fails the next still holds. It is about **depth**.
+> **Zero Trust** = no implicit trust at any layer, including the innermost. It is about **who is allowed**, not about how many walls there are.
+> Modern designs use **both**: defence in depth supplies the layers, Zero Trust supplies the rule that none of those layers grants automatic trust.
+
+#### Zero Trust vs the perimeter model
+
+| Point | Perimeter (castle-and-moat) | ⭐ Zero Trust |
+|---|---|---|
+| Trust | Inside = trusted, outside = untrusted | **Nothing is trusted anywhere** |
+| Verification | Once, at the perimeter | **Continuously, on every request** |
+| Network shape | Flat internal network | **Micro-segmented** |
+| Lateral movement | Easy for an attacker | **Blocked by policy at every hop** |
+| Identity | Network location decides access | **Identity + device posture** decides access |
+| Encryption | Often only on the outside link | **Everywhere, including internal traffic** |
+| Suits | A single office building | **Cloud, remote work, BYOD, SaaS** |
+| Breach impact | One entry gives wide access | **Contained to one small segment** |
+
+#### How an organisation moves to Zero Trust
+
+- **Identify the protect surface** — the data, applications, assets and services that actually matter. It is far smaller than the whole attack surface.
+- **Map the flows** — who legitimately talks to what, and on which port.
+- **Build the micro-segments** and put a policy enforcement point in front of each one.
+- **Write the policy** in the Kipling form: *who, what, when, where, why and how* may this request proceed.
+- **Enforce strong identity** — MFA for everyone, single sign-on, conditional access, device health checks.
+- **Encrypt everything**, including traffic inside the data centre.
+- **Monitor and log continuously**, feed a SIEM, and review the policy as behaviour changes.
+
+> **Exam-ready summary**
+> - Zero Trust = **never trust, always verify**.
+> - Three principles: **verify explicitly, least privilege, assume breach**.
+> - Its practical core is **micro-segmentation**, which stops **lateral movement**.
+> - It replaces the **castle-and-moat / perimeter** model, which failed because of cloud, remote work and insider threats.
+
+**A caution about this topic**
+
+> No previous-year question in this bank asks about Zero Trust by name. Every firewall question so far is about **firewall types, DMZ, proxy, IDS vs IPS and defence in depth**. Treat it as a **new-pattern topic** — prepare it from theory and expect it as a **definition or a comparison-with-perimeter question** if it appears.
+
+**Previous Year Question List from the closest existing topic:**
+
+- [As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?](../written-answers/computer-network-security.md?plain=1#L1864)
+- [Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps w…](../written-answers/computer-network-security.md?plain=1#L250)
 
 ---
 

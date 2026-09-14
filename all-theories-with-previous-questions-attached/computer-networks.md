@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 13 subtopics · 27 theories
+**Table of Contents** — 15 subtopics · 30 theories
 
 1. **[Subnetting & IP Addressing](#subnetting--ip-addressing)**
    - [IPv4 Addressing — Structure and Classes](#ipv4-addressing--structure-and-classes)
@@ -21,6 +21,7 @@
 4. **[Networking Devices](#networking-devices)**
    - [Hub, Switch, Router, Bridge, Repeater and Gateway](#hub-switch-router-bridge-repeater-and-gateway)
    - [Collision Domains and Broadcast Domains](#collision-domains-and-broadcast-domains)
+   - [Enterprise LAN Design — Access, Distribution and Core](#enterprise-lan-design--access-distribution-and-core)
 
 5. **[Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)](#application-layer-protocols--troubleshooting-dns-dhcp-https)**
    - [DNS — Domain Name System](#dns--domain-name-system)
@@ -45,13 +46,19 @@
 10. **[Network Address Translation (NAT)](#network-address-translation-nat)**
    - [NAT and PAT](#nat-and-pat)
 
-11. **[Data Transmission & Modes](#data-transmission--modes)**
+11. **[Error Detection & Data Communication (CRC, Throughput)](#error-detection--data-communication-crc-throughput)**
+   - [Error Detection and Correction — Parity, Checksum, CRC and Hamming Code](#error-detection-and-correction--parity-checksum-crc-and-hamming-code)
+
+12. **[Flow Control & Data Link Layer (Stop-and-Wait)](#flow-control--data-link-layer-stop-and-wait)**
+   - [Flow Control and ARQ — Stop-and-Wait, Go-Back-N and Selective Repeat](#flow-control-and-arq--stop-and-wait-go-back-n-and-selective-repeat)
+
+13. **[Data Transmission & Modes](#data-transmission--modes)**
    - [Data Communication Fundamentals — Modes, Signals, Modulation and Sampling](#data-communication-fundamentals--modes-signals-modulation-and-sampling)
 
-12. **[Switching Techniques](#switching-techniques)**
+14. **[Switching Techniques](#switching-techniques)**
    - [Switching Techniques — Circuit, Packet and Message Switching](#switching-techniques--circuit-packet-and-message-switching)
 
-13. **[Wireless & Mobile Communication](#wireless--mobile-communication)**
+15. **[Wireless & Mobile Communication](#wireless--mobile-communication)**
    - [Wireless Networks, Wi-Fi Standards and Cellular Generations](#wireless-networks-wi-fi-standards-and-cellular-generations)
 
 <!-- TOC END -->
@@ -1682,6 +1689,90 @@ A **Wireless Access Point (WAP/AP)** is a **Layer 2 device that allows wireless 
 - [How many collision domians are created when you segment a network with a 12-port switch?](../written-answers/computer-networks.md?plain=1#L4451)
 - [Differentiate between Collision Domain and Broadcast Domain in computer network. What is the function of DNS and DHCP?](../written-answers/computer-networks.md?plain=1#L4495)
 
+### Enterprise LAN Design — Access, Distribution and Core
+
+> **A network for 200 PCs is not built by buying one enormous switch.** It is built as a **hierarchy of small switches**, and knowing that hierarchy is what separates a "list the devices" answer from a design answer.
+
+#### The problem, stated simply
+
+A company has **200 PCs**. A switch comes with **24 or 48 ports**. So no single switch can hold everybody, and cascading switch after switch in a long chain gives terrible performance. The answer is the **three-layer hierarchical model**.
+
+```mermaid
+flowchart TD
+    PC1["PC PC PC ... (48)"] --> AS1["ACCESS switch 1<br/>48 ports"]
+    PC2["PC PC PC ... (48)"] --> AS2["ACCESS switch 2<br/>48 ports"]
+    PC3["PC PC PC ... (48)"] --> AS3["ACCESS switch 3<br/>48 ports"]
+    AS1 --> CS["CORE / DISTRIBUTION switch<br/>high speed, high backplane"]
+    AS2 --> CS
+    AS3 --> CS
+    CS --> FW["Firewall"]
+    FW --> RTR["Router"]
+    RTR --> ISP["🌐 ISP / Internet"]
+```
+
+#### The three layers
+
+| Layer | Also called | What it does | Typical device |
+|---|---|---|---|
+| ⭐ **Access layer** | Edge layer | The layer users actually plug into. One switch per floor or per room. Handles port security, VLAN assignment, PoE for IP phones and access points. | 24 or 48-port L2 switch |
+| ⭐ **Distribution layer** | Aggregation layer | Collects the uplinks from many access switches, does **inter-VLAN routing**, applies **ACLs and QoS policy**, and is the boundary between L2 and L3. | L3 switch |
+| ⭐ **Core layer** | Backbone | Moves traffic between distribution blocks **as fast as possible**. It does nothing else — no filtering, no policy — because every millisecond of delay here affects everyone. | High-capacity L3 switch |
+
+> **In a small or medium office the distribution and core layers are merged into one box.** That merged device is what people simply call the **core switch**, and the design is then called **collapsed core**.
+
+#### Why the hierarchy, and not one big flat switch stack
+
+- **Scalability** — to add 48 more users you add one more access switch and one uplink. Nothing else changes.
+- **Performance** — traffic between two PCs on the same access switch never leaves it. Only traffic that must cross floors goes up the hierarchy.
+- **Predictable paths** — every PC is exactly the same number of hops from the core, so delay is uniform.
+- **Fault isolation** — a failed access switch takes down one floor, not the company.
+- **Manageable broadcast domains** — VLANs are terminated at the distribution layer, so broadcasts stay small.
+- **Redundancy** — each access switch can have **two uplinks** to two distribution switches, so a cable cut or a switch failure is survived. STP or a link-aggregation technology keeps it loop-free.
+
+#### Uplink bandwidth — the point that is usually missed
+
+> ⭐ An access switch with **48 × 1 Gbps ports** must not be connected upward by a **single 1 Gbps** cable. That uplink becomes the bottleneck for the whole floor.
+
+```
+   48 user ports × 1 Gbps  =  48 Gbps of possible demand
+            │
+            └── uplink should be 10 Gbps or more, or several
+                1 Gbps links bonded together (link aggregation)
+```
+
+The design rule of thumb is an **oversubscription ratio** of about **20:1 from access to distribution** and **4:1 from distribution to core**.
+
+#### Where the security devices sit
+
+```mermaid
+flowchart LR
+    ACC["Access switches<br/>(users)"] --> CORE["Core switch"]
+    CORE --> IFW["Internal firewall<br/>(segments user / server / management)"]
+    IFW --> SRV["Server VLAN"]
+    CORE --> FW["Perimeter firewall"]
+    FW --> RTR["Border router"]
+    RTR --> NET["🌐 Internet"]
+```
+
+- The **router** is the exit to the ISP; it does NAT and holds the default route.
+- The **perimeter firewall** sits between the core switch and the router and controls everything entering or leaving the organisation.
+- An **internal firewall** between the core switch and the server VLAN controls traffic that never leaves the building — this is what stops a compromised user PC from reaching the database directly.
+- **Management network** is kept as a separate VLAN so that switch and server consoles are not reachable from a user PC.
+
+> ⭐ **Why a switch and not a hub, in one line:** a hub floods every frame to every port, so it is both slow (one collision domain) and **insecure** (every PC can read everyone's traffic). A switch learns MAC addresses and sends each frame only to the correct port, giving every port its own collision domain and keeping the traffic private.
+
+#### Quick design checklist for an exam answer
+
+- Count the users → decide the number of **access switches** (48 ports each, leaving spare ports for growth).
+- Aggregate them into a **core / distribution switch** with high-speed uplinks.
+- Add **redundant uplinks** and a second core switch if availability matters.
+- Put a **firewall** between the core switch and the **router**, and the router to the **ISP**.
+- Separate departments into **VLANs**, one subnet per VLAN, routed at the distribution layer with ACLs between them.
+- Keep **servers in their own VLAN** behind an internal firewall, and the **management network** separate.
+- Add **PoE** on the access layer if there are IP phones or wireless access points.
+
+---
+
 ## Application Layer Protocols & Troubleshooting (DNS, DHCP, HTTPS)
 
 ### DNS — Domain Name System
@@ -3265,6 +3356,661 @@ flowchart LR
 - [Which of the following TCP/IP addresses constitute the loopback address?](../mcq-answers/computer-networks.md?plain=1#L1809)
 - [To divide a class C network into a maximum of 14 subnets – each capable of having up to 14 hosts, the subnet mask used should be:](../mcq-answers/computer-networks.md?plain=1#L1818)
 
+
+---
+
+## Error Detection & Data Communication (CRC, Throughput)
+
+### Error Detection and Correction — Parity, Checksum, CRC and Hamming Code
+
+> **When data travels from one device to another, it can get damaged on the way.** Noise on the wire, attenuation, interference from a nearby motor — any of these can flip a `1` into a `0`. The receiver has no way of knowing this happened, because a corrupted bit looks exactly like a good bit. **So the sender must send some extra information along with the data, and the receiver uses that extra information to check whether the data survived the journey.**
+
+**Where this is done:** error handling happens at **two layers** —
+
+| Layer | What it protects |
+|---|---|
+| ⭐ **Data Link Layer** | The **frame** on **one single hop** (PC → switch, switch → router). Uses **CRC** in the frame trailer. |
+| ⭐ **Transport Layer** | The **segment** over the **whole end-to-end path**. Uses a **checksum** in the TCP/UDP header. |
+
+---
+
+#### Types of error
+
+```mermaid
+flowchart TD
+    A["TYPES OF ERROR"] --> B["① SINGLE-BIT ERROR<br/>only ONE bit changes"]
+    A --> C["② BURST ERROR<br/>TWO OR MORE bits change,<br/>usually next to each other"]
+    B --> D["1101 → 1<b>0</b>01<br/>(one bit flipped)"]
+    C --> E["1101 → 1000<br/>(last two bits flipped)"]
+```
+
+| | ⭐ **Single-bit error** | ⭐ **Burst error** |
+|---|---|---|
+| **How many bits change** | Exactly **one** | **Two or more** |
+| **Example** | `1101` → `1001` | `1101` → `1000` |
+| **Where it happens** | **Parallel transmission** (each bit has its own wire, so noise hits one wire) | ⭐ **SERIAL transmission** — noise lasts for a few microseconds, and in that time several bits have already gone past |
+| **Which is more common?** | Rare | ⭐ **Burst error is far more common in real networks** |
+
+> **Why burst errors dominate:** in serial transmission the bits go one after another on the same wire. A noise spike that lasts even **1/100 of a second** on a **1 Mbps** line will damage about **10,000 bits** — not one. That is why every practical error-detection method is designed to catch **bursts**, not just single bits.
+
+---
+
+#### The basic idea — redundant bits
+
+**We cannot detect an error by looking at the data alone.** So the sender **adds extra bits** to the data. These extra bits are called **redundant bits** (or **redundancy**), because they carry no new information — they exist only to allow checking.
+
+```mermaid
+flowchart LR
+    subgraph SENDER
+    D1["DATA<br/>10011001"] --> G["GENERATING<br/>FUNCTION"]
+    G --> R["Redundant bits<br/>1011101"]
+    end
+    R --> T["Sent on the wire:<br/>DATA + redundant bits"]
+    T --> subgraphR
+    subgraph subgraphR["RECEIVER"]
+    C["CHECKING<br/>FUNCTION"] --> OK["✅ ACCEPT"]
+    C --> NO["❌ REJECT"]
+    end
+```
+
+| Side | What happens |
+|---|---|
+| **Sender** | Runs a **generating function** on the data → produces redundant bits → sends **data + redundant bits** together |
+| **Receiver** | Runs a **checking function** on what arrived → if the check passes, **accept**; if it fails, **reject** (and usually ask for a retransmission) |
+
+> ⭐ **Detection vs Correction — know the difference.**
+> **Error DETECTION** only tells you *"something is wrong"*. The receiver then discards the frame and asks the sender to send it again (this is **ARQ**).
+> **Error CORRECTION** tells you *"bit number 5 is wrong"*, so the receiver can **fix it itself** without any retransmission (this is **FEC — Forward Error Correction**, and **Hamming code** is the classic example).
+
+---
+
+#### ① VRC — Vertical Redundancy Check (simple parity)
+
+**VRC is the simplest method of all.** You add **one single bit** — the **parity bit** — to the end of every data unit, so that the **total number of 1s becomes even** (for *even parity*) or **odd** (for *odd parity*).
+
+**Even parity, step by step:**
+
+```
+Data to send        :  1100001
+Count the 1s        :  1+1+0+0+0+0+1  =  3  ones  →  ODD
+Parity bit needed   :  1   (to make the count EVEN)
+Actually transmitted:  1 1100001
+                       ↑
+                  parity bit
+```
+
+At the **receiver**, count the 1s again in the whole received unit:
+
+| Received | Number of 1s | Decision |
+|---|---|---|
+| `1 1100001` | 4 → **even** | ✅ **Accept** |
+| `1 1101011` | 6 → even… but two bits changed! | ⚠️ **Wrongly accepted** |
+
+> ⚠️ ⭐ **The big weakness of VRC:** it can detect **any ODD number of bit errors** (1, 3, 5 …) but it **CANNOT detect an EVEN number of errors**. If two bits flip, the parity still works out, and the corrupted frame slips through. Since burst errors usually damage several bits at once, **VRC alone is not good enough for real networks.**
+
+---
+
+#### ② LRC — Longitudinal Redundancy Check (two-dimensional parity)
+
+**LRC fixes part of VRC's weakness by checking in the other direction too.** Arrange the data as a **table of rows**, then compute a **parity bit for each COLUMN**. That extra row of parity bits is the **LRC**, and it is sent as one extra data unit at the end.
+
+```
+        Data arranged in rows              
+        ┌─────────────────────┐
+row 1   │  1 1 0 0 1 1 1 0    │
+row 2   │  1 1 0 1 1 0 0 1    │
+row 3   │  0 0 1 1 1 1 0 0    │
+row 4   │  1 0 1 0 1 0 1 1    │
+        ├─────────────────────┤
+LRC     │  1 0 0 0 0 0 0 0    │  ← column-wise even parity
+        └─────────────────────┘
+```
+
+Each LRC bit is chosen so that **its column has an even number of 1s**.
+
+| | **VRC** | ⭐ **LRC** |
+|---|---|---|
+| **Direction of check** | Across the **row** (horizontal) | Down the **column** (vertical / longitudinal) |
+| **Extra bits** | 1 bit per data unit | 1 whole **extra row** |
+| **Catches burst errors?** | Poorly | ✅ **Much better** — a burst damages one row, but the columns reveal it |
+| **Blind spot** | Even number of errors | ⚠️ **If two bits in the SAME two columns of two different rows are interchanged, LRC cannot see it** |
+
+> ⚠️ ⭐ **LRC's blind spot:** if a burst flips bits at positions (row 1, col 3) and (row 2, col 3) **and also** (row 1, col 7) and (row 2, col 7) — that is, the damage is symmetric — then every column parity still comes out even and the error is **missed**. This is rare, but it is the reason we need CRC.
+
+---
+
+#### ③ Checksum
+
+> ⭐ **Checksum = CHECK + SUM.** The sender **adds up** all the data blocks, takes the **1's complement of the sum**, and sends that as the checksum. The receiver adds everything up again — **including the checksum** — and if the answer is **all 1s**, the data is clean.
+
+**Sender side — the four steps:**
+
+| Step | What to do |
+|---|---|
+| **1** | **Break** the original message into **k blocks of n bits each** |
+| **2** | **Add** all k blocks together using 1's-complement addition |
+| **3** | **Add the carry** back into the sum, if there is one (this is called *wrap-around carry*) |
+| **4** | Take the **1's complement** of the result → **this is the CHECKSUM** |
+
+**Worked example** — message `10011001 11100010 00100100 10000100`:
+
+```
+Step 1 — four blocks of 8 bits:
+          10011001   11100010   00100100   10000100
+
+Step 2 — add them:
+             10011001
+             11100010
+             00100100
+          +  10000100
+          ─────────────
+          1 00100011        ← a carry of 1 came out of the top
+
+Step 3 — add the carry back:
+             00100011
+          +         1
+          ─────────────
+             00100100
+
+Step 4 — 1's complement (flip every bit):
+             11011011     ← THIS IS THE CHECKSUM
+```
+
+The sender transmits **all four data blocks + the checksum**.
+
+**Receiver side — the three steps:**
+
+| Step | What to do |
+|---|---|
+| **1** | **Collect** all the data blocks **including the checksum** |
+| **2** | **Add** them all together (same 1's-complement addition, wrap the carry) |
+| **3** | If the result is **ALL 1s → no error, ACCEPT**. Otherwise → **REJECT** |
+
+```
+Receiver adds the four data blocks + the checksum:
+
+             10011001
+             11100010
+             00100100
+             10000100
+          +  11011011      ← the checksum
+          ─────────────
+             11111111      ← ALL ONES  →  ✅ NO ERROR, ACCEPT
+```
+
+> **The neat logic behind it:** the checksum is the 1's complement of the sum. So when you add the sum and its own complement, every bit position becomes `1`. Any change anywhere in the data breaks that pattern.
+
+> ⚠️ **Checksum is weaker than CRC** — if two errors cancel each other out in the addition (one bit goes up, another goes down by the same amount), the sum is unchanged and the error is missed. That is why the **Data Link Layer uses CRC** for the frame, and the checksum is kept for the **Transport Layer**, where it is only a second line of defence.
+
+---
+
+#### ④ CRC — Cyclic Redundancy Check ⭐⭐⭐
+
+> ⭐ **CRC is the most powerful and most widely used error-detection method.** It is built into **every Ethernet frame, every Wi-Fi frame, ZIP files, and hard-disk sectors**. The idea: treat the data as a **big binary number**, **divide** it by an agreed **divisor**, and send the **remainder** along with the data.
+
+**The key point that makes CRC work:** the division is not ordinary arithmetic division — it is **modulo-2 division, which means every subtraction is just an XOR**.
+
+```
+XOR rules (the only arithmetic you need):
+
+   0 ⊕ 0 = 0
+   0 ⊕ 1 = 1
+   1 ⊕ 0 = 1
+   1 ⊕ 1 = 0
+```
+
+**Sender side algorithm:**
+
+| Step | What to do |
+|---|---|
+| **1** | Find **L**, the number of bits in the **divisor** |
+| **2** | **Append (L − 1) zero bits** to the end of the data |
+| **3** | Perform **binary (XOR) division** of that extended data by the divisor |
+| **4** | The **remainder of the division is the CRC** |
+| **5** | Transmit **original data + CRC** |
+
+**Worked example** — data `100100`, divisor `1101`:
+
+```
+Divisor 1101 has L = 4 bits  →  append L − 1 = 3 zeros
+
+Extended data:  100100 000
+                       ↑↑↑
+                   3 appended zeros
+
+        1 1 1 1 0 1                ← quotient (we don't need it)
+     ┌────────────────
+1101 │ 1 0 0 1 0 0 0 0 0
+       1 1 0 1                      ⊕
+       ───────
+       0 1 0 0 0
+         1 1 0 1                    ⊕
+         ───────
+         0 1 0 1 0
+           1 1 0 1                  ⊕
+           ───────
+           0 1 1 1 0
+             1 1 0 1                ⊕
+             ───────
+             0 0 1 1 0
+                 1 1 0 1            ⊕
+                 ───────
+                 0 0 1 0 0
+                   ...
+                 remainder = 0 0 1   ← ⭐ THIS IS THE CRC
+```
+
+> ⭐ **CRC = 001**, so the **transmitted frame is `100100` + `001` = `100100001`.**
+
+**Receiver side:**
+
+The receiver divides **the whole received frame** (data + CRC) by the **same divisor**.
+
+| Remainder | Meaning |
+|---|---|
+| ⭐ **0** | ✅ **No error — ACCEPT** |
+| **Anything other than 0** | ❌ **Error detected — REJECT** and ask for retransmission |
+
+> **Why the remainder becomes 0:** the sender appended exactly the remainder that makes the whole number **perfectly divisible** by the divisor. If even one bit changes on the way, the number is no longer divisible and a non-zero remainder appears.
+
+**The divisor is written as a polynomial.** In exam questions the divisor is often given as a polynomial such as **x³ + x² + 1** — just write down the coefficient of each power, from the highest down to x⁰:
+
+```
+    x³   +   x²   +   0·x   +   1
+    ↓        ↓         ↓        ↓
+    1        1         0        1      →  divisor = 1101
+
+    x³   +   0·x²  +   x     +   1     →  divisor = 1011
+    x³   +   1                          →  divisor = 1001
+```
+
+> ### **"Which technique is used for binary division check in a network?"** → ### ✅ **CRC — Cyclic Redundancy Check.**
+>
+> ### **"Full meaning of CRC?"** → ### ✅ **Cyclic Redundancy Check.**
+
+---
+
+#### ⑤ Hamming Code — error CORRECTION, not just detection
+
+> ⭐ **Every method above only DETECTS an error. Hamming code actually FINDS which bit is wrong and FLIPS it back** — no retransmission needed. This matters where retransmission is impossible or too slow: satellite links, deep-space probes, ECC memory in servers.
+
+**How many redundant bits do we need?** If the data has **m** bits and we add **r** redundant bits, then:
+
+> ### **2ʳ ≥ m + r + 1**
+
+The reason: the r check bits must be able to point to **any one of the (m + r) bit positions**, *plus* one extra pattern to say **"no error at all"**.
+
+| Data bits (m) | Redundant bits needed (r) | Total |
+|---|---|---|
+| 4 | 3 | 7 — the classic **Hamming(7,4)** |
+| 8 | 4 | 12 |
+| 16 | 5 | 21 |
+
+**Where the redundant bits go:** at **every position that is a power of 2** — positions **1, 2, 4, 8, 16 …**. The data bits fill all the remaining positions.
+
+```
+Position :  1    2    3    4    5    6    7
+Holds    :  r1   r2   d1   r4   d2   d3   d4
+            ↑    ↑         ↑
+        redundant bits at powers of 2
+```
+
+**Each redundant bit checks a fixed set of positions:**
+
+| Check bit | Checks positions | Rule |
+|---|---|---|
+| **r1** (pos 1) | 1, 3, 5, 7, 9, 11 … | positions whose **bit-0 is 1** |
+| **r2** (pos 2) | 2, 3, 6, 7, 10, 11 … | positions whose **bit-1 is 1** |
+| **r4** (pos 4) | 4, 5, 6, 7, 12, 13 … | positions whose **bit-2 is 1** |
+
+**At the receiver:** recompute each check bit. Write the failing checks as a binary number — **that number IS the position of the wrong bit**. Flip it, and the data is correct.
+
+> **Example:** if r4 and r1 fail but r2 passes, write `r4 r2 r1` = `1 0 1` = **5**. So **bit 5** is the corrupted one → flip it → done.
+>
+> ⭐ **Hamming code corrects ONE single-bit error and detects two-bit errors.** It cannot fix a burst error — for that, the data is **interleaved** first so that a burst gets spread across many codewords, each one then having only a single-bit error.
+
+---
+
+#### ⭐ The comparison table — memorise this
+
+| Method | Full form | Detects | Corrects | Extra bits | Where used |
+|---|---|---|---|---|---|
+| ⭐ **VRC** | **Vertical Redundancy Check** (simple parity) | Odd number of errors only | ❌ No | **1 bit** | Serial links, ASCII terminals |
+| ⭐ **LRC** | **Longitudinal Redundancy Check** (2-D parity) | Most burst errors | ❌ No | **1 extra row** | Older block protocols |
+| ⭐ **Checksum** | — | Most errors, but cancelling errors slip through | ❌ No | **1 block** | ⭐ **TCP, UDP, IP header** |
+| ⭐ **CRC** | **Cyclic Redundancy Check** | ⭐ **Almost all errors, including long bursts** | ❌ No | **L − 1 bits** | ⭐ **Ethernet, Wi-Fi, ZIP, HDD** |
+| ⭐ **Hamming** | Hamming Code | 2-bit errors | ⭐ **✅ Corrects 1-bit errors** | **r bits, 2ʳ ≥ m+r+1** | ECC RAM, satellite, storage |
+
+> **One-line memory hook:**
+> **VRC = one bit. LRC = one row. Checksum = add and complement. CRC = divide and send the remainder. Hamming = find the position and flip it.**
+
+---
+
+#### Related data-communication terms that come with this topic
+
+| Term | Meaning |
+|---|---|
+| ⭐ **Bandwidth** | The **capacity** of the link — the **maximum** bits per second it *could* carry. A property of the medium. |
+| ⭐ **Throughput** | The bits per second **actually delivered** in practice. ⭐ **Throughput ≤ Bandwidth, always** — retransmissions, protocol headers and congestion eat the difference. |
+| **Goodput** | Throughput counting only the **useful application data**, with all headers and retransmissions removed. |
+| **Latency (delay)** | **Propagation + transmission + queuing + processing** delay. |
+| **Propagation time** | `distance ÷ propagation speed` |
+| **Transmission time** | `message size ÷ bandwidth` |
+| **Bit error rate (BER)** | Number of wrong bits ÷ total bits sent. |
+
+> **Total latency = propagation time + transmission time + queuing time + processing delay.** In the typical exam problem you are given a distance and a bandwidth and are expected to add the first two and say the other two are negligible.
+
+**Previous Year Question List from this Topic:**
+
+- [(b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)](../written-answers/computer-networks.md?plain=1#L10109)
+- [Differentiate the following terms in tabular form: Parity bit check, CRC and Checksum.](../written-answers/computer-networks.md?plain=1#L10221)
+- [CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.](../written-answers/computer-networks.md?plain=1#L10283)
+- [Which technique is used for binary division check in network?](../written-answers/computer-networks.md?plain=1#L10377)
+- [Explain parity method for error detection. Write down the bit strings of "Delta" using ASCII.](../written-answers/computer-networks.md?plain=1#L10386)
+- [The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.](../written-answers/computer-networks.md?plain=1#L10451)
+- [10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.](../written-answers/computer-networks.md?plain=1#L10148)
+- [What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps?](../written-answers/computer-networks.md?plain=1#L10174)
+- [(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।](../written-answers/computer-networks.md?plain=1#L10267)
+- [A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162.](../written-answers/computer-networks.md?plain=1#L10345)
+- [An end system sends 50 packets per second using UDP over a full duplex 100 Mbps ethernet LAN connection. What is the throughput at the UDP layer?](../written-answers/computer-networks.md?plain=1#L10415)
+
+**Previous Year MCQ List from this Topic:**
+
+- [Full meaning of CRC is-](../mcq-answers/computer-networks.md?plain=1#L2923)
+- [Which error detection method involves the use of parity bits?](../mcq-answers/computer-networks.md?plain=1#L2932)
+- [Type of error which occurs when data is transferred from one device to another is classified as-](../mcq-answers/computer-networks.md?plain=1#L2941)
+
+
+---
+
+## Flow Control & Data Link Layer (Stop-and-Wait)
+
+### Flow Control and ARQ — Stop-and-Wait, Go-Back-N and Selective Repeat
+
+> ⭐ **Flow control is a SPEED-MATCHING mechanism.** It limits **how much data a sender may transmit before it must wait for an acknowledgement**, so that a **fast sender cannot drown a slow receiver**.
+
+**The everyday picture:** a server pushes data at **100 Mbps**, but the phone on the other end can only swallow **20 Mbps**. Without flow control the phone's buffer overflows in a moment and everything after that is simply thrown away. Flow control makes the server **slow down to the receiver's pace**.
+
+```mermaid
+flowchart LR
+    S["SERVER<br/>can send at 100 Mbps"] -- "100 Mbps ✗ too fast" --> X["📱 PHONE<br/>can only receive 20 Mbps"]
+    S -- "20 Mbps ✓ matched" --> X
+```
+
+> ⭐ ⚠️ **Flow control vs Congestion control — a favourite exam question.**
+
+| | ⭐ **FLOW CONTROL** | ⭐ **CONGESTION CONTROL** |
+|---|---|---|
+| **Protects** | The **RECEIVER** from being overwhelmed | The **NETWORK** (routers, links) from being overwhelmed |
+| **Problem solved** | Receiver's **buffer** overflows | Router **queues** overflow → packet loss |
+| **Who is involved** | **Two endpoints** only | **Everyone** sharing the network |
+| **Mechanism in TCP** | **Receiver window** (`rwnd`) — advertised by the receiver | **Congestion window** (`cwnd`) — guessed by the sender from packet loss |
+| **Layer** | ⭐ **Data Link Layer AND Transport Layer** | Mainly **Transport / Network Layer** |
+
+> ### **"Which two OSI layers are known for flow control?"** → ### ✅ **The DATA LINK layer (hop-by-hop) and the TRANSPORT layer (end-to-end).**
+
+---
+
+#### The family tree of flow-control protocols
+
+```mermaid
+flowchart TD
+    A["FLOW CONTROL PROTOCOLS"] --> B["NOISELESS CHANNEL<br/>(ideal — no frame is ever lost<br/>or damaged)"]
+    A --> C["NOISY CHANNEL<br/>(real world — frames get lost,<br/>damaged or delayed)"]
+    B --> B1["① Simplest Protocol<br/>no flow control at all"]
+    B --> B2["② Stop-and-Wait"]
+    C --> C1["③ Stop-and-Wait ARQ"]
+    C --> C2["④ Go-Back-N ARQ"]
+    C --> C3["⑤ Selective-Repeat ARQ"]
+    C2 --> W["Both are SLIDING WINDOW protocols"]
+    C3 --> W
+```
+
+**ARQ** stands for ⭐ **Automatic Repeat reQuest** — *"if the data does not arrive properly, ask for it again."*
+
+---
+
+#### ① Simplest Protocol (noiseless)
+
+The sender just keeps sending. There is **no flow control and no error control at all**. It only works if we assume the receiver can process frames **infinitely fast** — which no real receiver can. It is in the syllabus purely as a starting point.
+
+#### ② Stop-and-Wait (noiseless)
+
+The sender sends **one frame**, then **stops and waits** for an acknowledgement. Only after the ACK arrives does it send the next frame.
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S->>R: Frame 1
+    R->>S: ACK 1
+    S->>R: Frame 2
+    R->>S: ACK 2
+```
+
+This solves the speed problem — the sender can never be more than one frame ahead of the receiver. But on a noiseless channel we assumed nothing is ever lost. **On a real link, things do get lost, and that is where Stop-and-Wait breaks down.**
+
+---
+
+#### ③ Stop-and-Wait ARQ (noisy channel) ⭐
+
+> ⭐ **Stop-and-Wait ARQ = Stop-and-Wait + TIMER + SEQUENCE NUMBER.**
+
+Plain Stop-and-Wait has one fatal flaw: **if the frame or the ACK is lost, the sender waits for ever.** Two additions fix it:
+
+| Addition | What it fixes |
+|---|---|
+| ⭐ **Timeout timer** | The sender starts a timer when it sends. If the ACK has not arrived before the timer expires, the sender **retransmits automatically** — no infinite waiting. |
+| ⭐ **Sequence number** | Frames are numbered **0, 1, 0, 1 …** so that when a duplicate arrives, the receiver can **recognise it as a duplicate and discard it**. |
+
+**The four cases you must be able to draw:**
+
+**(a) Normal operation — everything works**
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S->>R: Frame 0
+    R->>S: ACK 1
+    Note over S: ACK arrives before timeout ✅
+```
+
+**(b) The FRAME is lost**
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S--xR: Frame 0 (LOST ✗)
+    Note over S: timer expires ⏱
+    S->>R: Frame 0 (retransmitted)
+    R->>S: ACK 1
+```
+
+**(c) The ACK is lost**
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S->>R: Frame 0
+    R--xS: ACK 1 (LOST ✗)
+    Note over S: timer expires ⏱
+    S->>R: Frame 0 (retransmitted)
+    Note over R: sequence number says<br/>"duplicate" → DISCARD,<br/>but ACK again
+    R->>S: ACK 1
+```
+
+> ⭐ **This is exactly why the sequence number is essential.** Without it the receiver would deliver the same frame to the application **twice**.
+
+**(d) The ACK is DELAYED (arrives after the timeout)**
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S->>R: Frame 0
+    Note over S: timer expires ⏱ too early
+    S->>R: Frame 0 (unnecessary retransmit)
+    R->>S: ACK 1 (the delayed one)
+    R->>S: ACK 1 (for the duplicate)
+```
+
+The delayed ACK finally turns up, but by then a needless copy has already been sent. **Choosing the timeout value is therefore a real engineering problem** — too short wastes bandwidth, too long wastes time.
+
+> ⚠️ ⭐ **The problem with Stop-and-Wait ARQ: POOR UTILISATION.** Only **one frame** can be in flight at a time, so on a long or fast link the sender spends almost all its time **idle, waiting for an ACK to come back**.
+>
+> **Efficiency** `η = 1 / (1 + 2a)` where `a = propagation time ÷ transmission time`.
+> On a satellite link where `a` is large, efficiency collapses to a few percent. **This single weakness is the whole reason sliding-window protocols exist.**
+
+---
+
+#### ④ Sliding Window — sending several frames at once
+
+> ⭐ **The fix is obvious once you see the problem: do not wait after every frame. Send a whole WINDOW of frames, then wait.**
+
+The **window** is the set of frames the sender is allowed to have **unacknowledged at any moment**. As ACKs come back, the window **slides forward** to cover new frames — hence the name.
+
+```
+Window size = 4
+
+  ┌───────────────┐
+  │ 1  2  3  4    │  5  6  7  8        ← may send 1–4 without waiting
+  └───────────────┘
+
+ACK for 1 arrives → the window slides one step right:
+
+     ┌───────────────┐
+  1  │ 2  3  4  5    │  6  7  8
+     └───────────────┘
+```
+
+**Two sliding-window ARQ protocols exist, and they differ only in what happens when a frame is lost.**
+
+---
+
+#### ⑤ Go-Back-N ARQ ⭐
+
+The receiver is **simple**: it accepts frames **strictly in order** and has **no buffer** for out-of-order frames. So when frame 3 is lost, frames 4, 5 and 6 arriving afterwards are simply **thrown away**, even though they were perfectly fine.
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S->>R: Frame 1
+    S->>R: Frame 2
+    S--xR: Frame 3 (LOST ✗)
+    S->>R: Frame 4
+    S->>R: Frame 5
+    Note over R: 4 and 5 are out of order<br/>→ DISCARDED
+    Note over S: timeout for frame 3 ⏱
+    S->>R: Frame 3 (again)
+    S->>R: Frame 4 (again)
+    S->>R: Frame 5 (again)
+```
+
+> ⭐ **The name says it all: on a loss the sender "goes back N frames" and resends the lost one AND everything after it.** Wasteful of bandwidth, but the receiver stays cheap and simple.
+>
+> ⭐ **Sender window = N, Receiver window = 1. Maximum window size = 2^m − 1** where m is the number of sequence-number bits.
+
+---
+
+#### ⑥ Selective Repeat ARQ ⭐
+
+Here the receiver is **smarter**: it **buffers the out-of-order frames** and only asks for the **one frame that was actually lost**.
+
+```mermaid
+sequenceDiagram
+    participant S as SENDER
+    participant R as RECEIVER
+    S->>R: Frame 1
+    S->>R: Frame 2
+    S--xR: Frame 3 (LOST ✗)
+    S->>R: Frame 4
+    S->>R: Frame 5
+    Note over R: 4 and 5 are BUFFERED ✅
+    R->>S: NAK 3
+    S->>R: Frame 3 (only this one)
+    Note over R: now deliver 3, 4, 5 in order
+```
+
+> ⭐ **Only the lost frame is retransmitted** — far more efficient, especially on a noisy link. The price is a **more complex receiver** (it needs a buffer and must re-sort the frames).
+>
+> ⭐ **Sender window = Receiver window = N. Maximum window size = 2^(m−1)** — exactly **half** of Go-Back-N's, so that an old frame can never be mistaken for a new one.
+
+---
+
+#### ⭐ The master comparison
+
+| Point | **Stop-and-Wait ARQ** | ⭐ **Go-Back-N ARQ** | ⭐ **Selective Repeat ARQ** |
+|---|---|---|---|
+| **Frames in flight** | ⭐ **Only 1** | **N** | **N** |
+| **Sender window** | 1 | **N** | **N** |
+| **Receiver window** | 1 | ⭐ **1** | ⭐ **N** |
+| **On a lost frame** | Resend that frame | ⭐ **Resend the lost frame AND all frames after it** | ⭐ **Resend ONLY the lost frame** |
+| **Receiver buffers out-of-order frames?** | — | ❌ **No — discards them** | ✅ **Yes** |
+| **Acknowledgement style** | ACK each frame | **Cumulative** ACK | **Individual** ACK + NAK |
+| **Max window size** | 1 | **2^m − 1** | **2^(m−1)** |
+| **Bandwidth efficiency** | ⚠️ **Worst** | Medium | ✅ **Best** |
+| **Complexity** | ✅ Simplest | Medium | ⚠️ **Most complex** |
+| **Sequence-number bits (m=3)** | — | window ≤ 7 | window ≤ 4 |
+
+> **The one-line way to remember it:**
+> **Stop-and-Wait** — *one at a time.*
+> **Go-Back-N** — *one goes wrong, everybody goes again.*
+> **Selective Repeat** — *only the guilty one goes again.*
+
+---
+
+#### Piggybacking
+
+> ⭐ **Piggybacking is sending an acknowledgement by ATTACHING it to an outgoing DATA frame, instead of sending a separate ACK frame.**
+
+In a full-duplex link both sides have data to send anyway. So when B wants to acknowledge A's frame, B **waits a moment** and puts the ACK inside the header of the next data frame it was going to send to A.
+
+| Advantage | Disadvantage |
+|---|---|
+| ✅ **Saves bandwidth** — one frame instead of two | ⚠️ The ACK is **delayed** while waiting for outgoing data |
+| ✅ **Better channel utilisation** | ⚠️ If no data appears, a timer must fire and send a plain ACK anyway |
+
+---
+
+#### Where the Data Link Layer fits
+
+The Data Link Layer does **more** than flow control. Its full job list:
+
+| Function | What it means |
+|---|---|
+| ⭐ **Framing** | Package the bits into **FRAMES** — the Data Link Layer's PDU |
+| ⭐ **Physical addressing** | Put the **source and destination MAC address** into the frame header |
+| ⭐ **Error detection** | Add the **CRC** in the frame trailer |
+| ⭐ **Flow control** | Stop the sender from overwhelming the receiver on **this one hop** |
+| ⭐ **Media Access Control** | Decide **who may transmit** on a shared medium (CSMA/CD for Ethernet, CSMA/CA for Wi-Fi) |
+
+> ### **"What is the unit of the Data Link Layer?"** → ### ✅ **FRAME.**
+>
+> ### **"Where is the trailer in a data packet, and why is it used?"** → ### ✅ **At the END of the FRAME, added by the DATA LINK layer.** It holds the **CRC / FCS (Frame Check Sequence)** used for **error detection**, and in some protocols the end-of-frame delimiter. It is placed at the end because the CRC can only be computed **after** the whole frame is assembled.
+>
+> ### **"Does a firewall check the frame or the packet?"** → ### ✅ **The FRAME** — the firewall receives the complete Layer-2 frame off the wire and then looks inside it at the IP header, the TCP/UDP ports and (for an NGFW) the payload.
+
+**Previous Year Question List from this Topic:**
+
+- [Using an explanation of the difference between flow-control and congestion control, discuss the impact of a stable end-to-end latency.](../written-answers/computer-networks.md?plain=1#L11495)
+- [(খ) Congestion কী? Network-এ কীভাবে Congestion নিয়ন্ত্রণ করা যায়? আলোচনা করুন।](../written-answers/computer-networks.md?plain=1#L11520)
+- [(i) Congestion Control কী? কী কী ভাবে Congestion Control করা যায়?](../written-answers/computer-networks.md?plain=1#L11667)
+- [How STP works? Explain congestion control algorithm.](../written-answers/computer-networks.md?plain=1#L11578)
+- [Two OSI layers which known as "flow Control" which are those? Write them and explain.](../written-answers/computer-networks.md?plain=1#L11692)
+- [Host A is sending data to Host B over a full duplex link using the sliding window protocol. What is the maximum achievable throughput?](../written-answers/computer-networks.md?plain=1#L11599)
+- [A single-mode optical fiber link 250 km apart using WDM, data transmitted using the Stop-and-Wait protocol — total time to transfer a 1 GB file.](../written-answers/computer-networks.md?plain=1#L11422)
+- [What is the piggybacking and MAC Address?](../written-answers/computer-networks.md?plain=1#L11650)
+- [What is piggybacking in Networking? Difference among Hub, Switch and Router.](../written-answers/computer-networks.md?plain=1#L11712)
+- [Unit of data link layer?](../written-answers/computer-networks.md?plain=1#L11546)
+- [(ক) নেটওয়ার্কে ডাটা প্যাকেটে trailer কোথায় এবং কেন ব্যবহার করা হয়? উদাহরণ দিন।](../written-answers/computer-networks.md?plain=1#L11554)
+- [Explain IEEE 802.3 frame format.](../written-answers/computer-networks.md?plain=1#L11736)
+
+
+---
 
 ---
 
