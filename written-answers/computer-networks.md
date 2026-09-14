@@ -10813,3 +10813,263 @@ Answer:
 | Mesh | Dedicated link between every pair, n(n−1)/2 links | Most reliable, no congestion, private links | Very expensive cabling and ports |
 | Tree | Hierarchy of star segments on a backbone | Scales well for large campuses | Whole branch fails if the parent fails |
 | Hybrid | Mixture of two or more topologies | Flexible, reliable, fits real buildings | Complex design and higher cost |
+
+## IPv6 Addressing (13)
+
+1. 4B:30:10:21:2A:1B, 4C:20:1B:2E:08:E7 Identify which of the given IPv6 addresses represent Unicast and Multicast communication, and determine whether any of them represents a Broadcast address. Explain your answer based on the IPv6 addressing rules. [BSCCPL AME 21-08-2026 (BUET)]
+
+Answer:
+
+   First note on the given values
+   - Each value has 6 groups of two hex digits, which is 48 bits. That is the MAC address format, not IPv6. A real IPv6 address is 128 bits written as 8 groups of four hex digits separated by colons.
+   - Reading them as the leading part of an IPv6 address, the rule is decided by the first bits, so the answer can still be given.
+
+   IPv6 addressing rule used
+   ```
+   Multicast  : first 8 bits are all 1  →  FF00::/8   (address starts with FF)
+   Global unicast : first 3 bits are 001 →  2000::/3  (starts with 2 or 3)
+   Link-local unicast : FE80::/10
+   Broadcast  : does not exist in IPv6
+   ```
+
+   Applying the rule
+   - 4B:30:10:21:2A:1B — starts with 4B, not FF, so it is not multicast. It falls in the unicast part of the address space.
+   - 4C:20:1B:2E:08:E7 — starts with 4C, not FF, so it is also not multicast and is likewise unicast.
+   - Neither is a broadcast address, because IPv6 has removed broadcast completely.
+
+   Why IPv6 has no broadcast
+   - Broadcast in IPv4 forces every host on the link to process the frame even when it is not interested, which wastes CPU and bandwidth and makes smurf-type attacks easy.
+   - IPv6 replaces it with multicast, where only the members of the group receive the packet. The well known groups are FF02::1 for all nodes on the link and FF02::2 for all routers on the link.
+   - It also adds anycast, where the packet goes to the nearest one of several nodes sharing the address.
+
+   Conclusion: both given addresses are unicast, neither is multicast, and neither is broadcast because IPv6 has no broadcast address. <!-- verify -->
+
+2. A host is connected to an IPv6 network and needs to configure its own IPv6 address automatically using Stateless Address Autoconfiguration (SLAAC). Arrange the steps in the correct order and explain the purpose of each step. [BSCCPL AME 21-08-2026 (BUET)]
+
+Answer:
+
+   Correct order of SLAAC
+
+```mermaid
+flowchart TD
+    A["1. Build link-local address<br/>FE80::/64 + interface ID"] --> B["2. Duplicate Address Detection<br/>on the link-local address"]
+    B --> C["3. Send Router Solicitation<br/>to FF02::2"]
+    C --> D["4. Receive Router Advertisement<br/>carrying the /64 prefix"]
+    D --> E["5. Build global address<br/>prefix + interface ID"]
+    E --> F["6. Duplicate Address Detection<br/>on the global address"]
+    F --> G["7. Address is usable<br/>default gateway = router link-local"]
+```
+
+   Purpose of each step
+   - Step 1 — Link-local address generation. The host makes FE80:: plus a 64-bit interface identifier, taken either from the MAC address by the EUI-64 method or generated randomly for privacy. Every IPv6 interface needs a link-local address before it can talk to anything.
+   - Step 2 — Duplicate Address Detection on the link-local address. The host sends a Neighbor Solicitation to the solicited-node multicast group for that address. If nobody answers, the address is unique and becomes usable. This prevents two hosts using the same address.
+   - Step 3 — Router Solicitation. The host sends an RS message to FF02::2, the all-routers multicast group, to ask any router on the link to advertise itself immediately instead of waiting for the next periodic advertisement.
+   - Step 4 — Router Advertisement. The router replies with an RA that carries the network prefix (normally a /64), the prefix lifetime, the MTU, and the A, M and O flags that say whether SLAAC and DHCPv6 should be used.
+   - Step 5 — Global address formation. The host joins the /64 prefix from the RA to its own 64-bit interface identifier and gets a full 128-bit global unicast address. No server is involved, which is why it is called stateless.
+   - Step 6 — Duplicate Address Detection on the new global address, for the same reason as step 2.
+   - Step 7 — The address becomes valid and the host installs the router's link-local address as its default gateway. If the O flag was set, the host also asks a DHCPv6 server for the DNS server address, since basic SLAAC does not supply DNS information.
+
+3. **(a) What are the differences between IPv4 and IPv6, and why is IPv6 considered more secure?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+
+Answer:
+
+| Point | IPv4 | IPv6 |
+|---|---|---|
+| Address size | 32 bits, about 4.3 billion addresses | 128 bits, about 3.4 × 10^38 addresses |
+| Notation | Dotted decimal, 192.168.1.1 | Hexadecimal with colons, 2001:db8::1 |
+| Header | 20–60 bytes, variable, 13 fields | 40 bytes, fixed, 8 fields |
+| Header checksum | Present | Removed, left to layer 2 and layer 4 |
+| Fragmentation | Done by the sender and by routers | Done only by the sender |
+| Configuration | Manual or DHCP | SLAAC, auto-configuration without a server |
+| Broadcast | Yes | No — replaced by multicast and anycast |
+| IPsec | Optional add-on | Designed in as part of the protocol suite |
+| NAT | Needed because addresses are short | Not needed, every device can have a public address |
+| QoS | Type of Service field | Traffic Class and Flow Label fields |
+
+   Why IPv6 is considered more secure
+   - IPsec support is built into the protocol design, so authentication (AH) and encryption (ESP) are a standard part of the stack rather than an optional bolt-on.
+   - The huge address space makes address scanning impractical. A /64 subnet holds 2^64 addresses, so an attacker cannot sweep it the way a /24 IPv4 subnet is swept in seconds.
+   - No broadcast address, so broadcast amplification attacks such as smurf are not possible.
+   - Neighbor Discovery can be protected with SEND (Secure Neighbor Discovery) using cryptographically generated addresses, which blocks ARP-spoofing style attacks.
+   - No NAT, so end-to-end integrity checks and IPsec work without being broken by address rewriting.
+   - Caution to state: IPv6 is not automatically safe. IPsec is available but often not enabled, and the flat public addressing removes the accidental hiding that NAT gave. A firewall is still essential.
+
+4. **How many bits in IPv4 and IPv6 address? Why NAT is not required in IPv6?** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 398 (ET: BUET)]*
+
+Answer:
+
+   Address size
+   ```
+   IPv4 = 32 bits  → 2^32  ≈ 4.3 × 10^9 addresses
+   IPv6 = 128 bits → 2^128 ≈ 3.4 × 10^38 addresses
+   ```
+
+   Why NAT is not required in IPv6
+   - NAT was invented only to solve the IPv4 address shortage. It lets many private hosts share one public IPv4 address.
+   - IPv6 has 128-bit addresses, which is enough to give a globally unique public address to every device on earth many times over. There is no shortage to work around.
+   - A normal home or office is given a /64 or /56 prefix, so every device gets its own global address directly.
+   - With no NAT the connection is truly end to end, which restores peer-to-peer applications, VoIP, online gaming and IPsec, all of which NAT breaks by rewriting addresses and ports.
+   - It also removes the NAT state table, which was a bottleneck and a single point of failure in the router.
+   - Note: removing NAT removes the accidental hiding it provided, so a stateful firewall must be used for protection instead.
+
+5. **(ক) IP Address কী? IPv4 এবং IPv6 এর মধ্যে চারটি প্রধান পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
+
+Answer:
+
+   IP address
+   - An IP address is a unique logical address given to every device on a TCP/IP network, so that packets can be routed to the correct destination.
+   - It works at the network layer and has two parts — a network portion and a host portion, separated by the subnet mask or prefix length.
+   - It can be static (set manually) or dynamic (assigned by DHCP), and public (routable on the internet) or private (used inside a LAN).
+
+   Four main differences
+
+| Point | IPv4 | IPv6 |
+|---|---|---|
+| Address length | 32 bits, about 4.3 billion addresses | 128 bits, about 3.4 × 10^38 addresses |
+| Notation | Dotted decimal, 192.168.10.1 | Hexadecimal with colons, 2001:db8::1 |
+| Header | 20–60 bytes, variable, with checksum | 40 bytes, fixed, no checksum |
+| Address types | Unicast, multicast, broadcast | Unicast, multicast, anycast — no broadcast |
+| Configuration and NAT | DHCP or manual; NAT needed | SLAAC auto-configuration; NAT not needed |
+
+6. **(a) Differentiate between IPV4 and IPV6.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)], [BREB Assistant General Manager (IT) 2021 compact it 934 (ET: N/A)], [WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 501 (ET: N/A)], [BMA Signal Assistant Engineer (Computer) 2021 compact it 932 (ET: BUET)]*
+
+Answer:
+
+| Point | IPv4 | IPv6 |
+|---|---|---|
+| Address size | 32 bits | 128 bits |
+| Address space | About 4.3 × 10^9 | About 3.4 × 10^38 |
+| Notation | Dotted decimal, 4 octets, 192.168.1.1 | Hexadecimal, 8 groups, 2001:db8::1 |
+| Header size | 20–60 bytes, variable | 40 bytes, fixed |
+| Header fields | 13 | 8, with extension headers for options |
+| Checksum in header | Yes | Removed, which speeds up routers |
+| Fragmentation | Sender and intermediate routers | Sender only, using Path MTU Discovery |
+| Address resolution | ARP with broadcast | Neighbor Discovery Protocol with multicast |
+| Configuration | Manual or DHCP | SLAAC or DHCPv6 |
+| Address types | Unicast, multicast, broadcast | Unicast, multicast, anycast |
+| Security | IPsec optional | IPsec part of the design |
+| NAT | Required | Not required |
+| QoS | Type of Service | Traffic Class and Flow Label |
+
+7. **IPv4 and IPv6 how many bits and Why is NAT not needed in IPv6?** *[RPGCL Assistant Manager (ICT) 2022 compact it 652 (ET: BUET)]*
+
+Answer:
+
+   Number of bits
+   ```
+   IPv4 = 32 bits,  written as 4 octets in dotted decimal   → 2^32 addresses
+   IPv6 = 128 bits, written as 8 hex groups of 16 bits      → 2^128 addresses
+   ```
+
+   Why NAT is not needed in IPv6
+   - NAT exists only to stretch a limited pool of IPv4 addresses by letting many private hosts share one public address.
+   - IPv6 has so many addresses that every device, in every home and office, can hold a globally unique public address. The problem NAT solved no longer exists.
+   - An ISP normally gives a subscriber a whole /64 or /56 prefix, so there is nothing to translate.
+   - Removing NAT restores true end-to-end connectivity, which makes VoIP, video calling, gaming, IPsec and peer-to-peer applications work without special helpers such as STUN or port forwarding.
+   - The router no longer has to keep a large translation table, so it is simpler and faster.
+   - Security must now come from a stateful firewall rather than from the side effect of NAT.
+
+8. **IPv6 address কত বিটের?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+Answer:
+
+   - An IPv6 address is 128 bits long.
+   - It is written as 8 groups of 4 hexadecimal digits, each group being 16 bits, separated by colons.
+   - Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334, which shortens to 2001:db8:85a3::8a2e:370:7334.
+   - Normally the first 64 bits are the network prefix and the last 64 bits are the interface identifier.
+
+9. **What is the difference between stateful DHCPv6 and stateless DHCPv6?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840-841 (ET: N/A)]*
+
+Answer:
+
+| Point | Stateful DHCPv6 | Stateless DHCPv6 |
+|---|---|---|
+| Who gives the address | The DHCPv6 server assigns the full IPv6 address | The host builds its own address by SLAAC from the RA prefix |
+| What the server supplies | Address, prefix, DNS, domain name, other options | Only extra options such as DNS server and domain name |
+| Server keeps a record | Yes — it stores which address went to which client, so it holds state | No — it keeps no address binding |
+| RA flag used | M flag = 1 (managed) | O flag = 1, A flag = 1 (other configuration) |
+| Similar to | IPv4 DHCP | SLAAC plus a small information service |
+| Control over addressing | Full control, easy to audit and log | Less control, host chooses its own interface ID |
+| When to use | Enterprises that must track which device holds which address | Simple networks that only need DNS information |
+
+   - Both exist because plain SLAAC gives an address but cannot give the DNS server address, which almost every host needs.
+
+10. **What is DHCPv6?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 841 (ET: N/A)]*
+
+Answer:
+
+    - DHCPv6 is the Dynamic Host Configuration Protocol for IPv6. It is the IPv6 version of DHCP, used to give hosts their address and other network settings automatically.
+    - It works over UDP; the client uses port 546 and the server uses port 547. The client sends to the multicast address FF02::1:2, which reaches all DHCPv6 servers and relay agents on the link.
+    - Message exchange is SOLICIT → ADVERTISE → REQUEST → REPLY, which matches DORA in IPv4 DHCP.
+    - Two modes: stateful, where the server assigns the address and remembers it, and stateless, where the host makes its own address by SLAAC and asks DHCPv6 only for DNS and domain information.
+    - It also supports prefix delegation (DHCPv6-PD), where an ISP hands a whole prefix such as a /56 to a customer router, which then splits it into /64 subnets.
+    - It identifies clients by a DUID rather than by MAC address, so the identity survives a change of network card.
+
+11. **Explain IPv6 link local address and multicast address.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 843 (ET: N/A)]*
+
+Answer:
+
+    Link-local address
+    - Range FE80::/10, in practice always FE80::/64. Every IPv6 interface configures one automatically as soon as it comes up, even if no router exists.
+    - It is valid only on that one link. A router never forwards a packet with a link-local source or destination, so the same FE80:: address can be reused on every link.
+    - Formed as FE80:: plus a 64-bit interface identifier, taken from the MAC address by EUI-64 or generated randomly.
+    - Used for Neighbor Discovery, Router Solicitation and Advertisement, DHCPv6 exchange, and as the next-hop address in routing tables. OSPFv3 and other routing protocols peer over link-local addresses.
+
+    Multicast address
+    - Range FF00::/8 — any address starting with FF is multicast. It delivers one packet to a group of interested nodes, and it replaces broadcast, which IPv6 does not have.
+    - Format: FF, then 4 flag bits, then 4 scope bits, then the 112-bit group ID. The scope decides how far it travels — 1 is interface-local, 2 is link-local, 5 is site-local, E is global.
+    - Well known groups:
+      FF02::1 — all nodes on the link
+      FF02::2 — all routers on the link
+      FF02::5 and FF02::6 — OSPFv3 routers
+      FF02::1:2 — all DHCPv6 servers and relay agents
+      FF02::1:FFxx:xxxx — solicited-node multicast, used by Neighbor Discovery in place of ARP
+    - Because only the members of the group process the packet, IPv6 wastes far less CPU and bandwidth than IPv4 broadcast.
+
+12. **Write down the difference between IPv4 and IPv6.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1122-1123 (ET: BREB)]*
+
+Answer:
+
+| Point | IPv4 | IPv6 |
+|---|---|---|
+| Developed | 1981, RFC 791 | 1998, RFC 2460, updated by RFC 8200 |
+| Address length | 32 bits | 128 bits |
+| Total addresses | About 4.3 billion | About 3.4 × 10^38 |
+| Written as | Dotted decimal, 172.16.0.5 | Hexadecimal with colons, 2001:db8::5 |
+| Header length | 20–60 bytes, variable | 40 bytes, fixed |
+| Checksum | Present in the header | Removed |
+| Options | Inside the header | Separate extension headers |
+| Fragmentation | Sender and routers | Sender only |
+| Broadcast | Supported | Not supported, multicast is used |
+| Anycast | Not formally defined | Supported |
+| Address resolution | ARP | Neighbor Discovery Protocol |
+| Auto configuration | DHCP only | SLAAC and DHCPv6 |
+| IPsec | Optional | Built into the design |
+| NAT | Commonly required | Not required |
+| Minimum MTU | 576 bytes | 1280 bytes |
+
+13. **How many bits for IPv6? Write an example IPv6?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+Answer:
+
+    Number of bits
+    - IPv6 is 128 bits long, written as 8 groups of 4 hexadecimal digits, each group being 16 bits, separated by colons.
+
+    Example
+    ```
+    Full form       : 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+    Shortened form  : 2001:db8:85a3::8a2e:370:7334
+    ```
+
+    Shortening rules used
+    - Leading zeros in a group may be dropped: 0db8 becomes db8, 0370 becomes 370.
+    - One run of consecutive all-zero groups may be replaced by a double colon ::, and only one :: is allowed in an address.
+
+    Other examples
+    ```
+    ::1                 loopback, equivalent to 127.0.0.1
+    ::                  unspecified address, equivalent to 0.0.0.0
+    FE80::1             link-local address
+    FF02::1             all-nodes multicast on the link
+    2001:db8::/32       the block reserved for documentation
+    ```
