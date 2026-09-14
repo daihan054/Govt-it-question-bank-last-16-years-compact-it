@@ -12,6 +12,7 @@
 |  | Error Detection & Correction (3) |
 | computer-network-security.md | Cyber Attacks & Threats (20) |
 |  | Security Protocols (9) |
+|  | Web Security Vulnerabilities (4) |
 | web-technology.md | HTML, XML & Web Fundamentals (15) |
 |  | HTTP & Status Codes (5) |
 |  | Full Stack & Web Servers (5) |
