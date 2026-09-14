@@ -10103,3 +10103,390 @@ Answer:
     Maximum bit rate = 6000 bps = 6 kbps
 
     - With 4 signal levels the same channel would give 2 × 3000 × 2 = 12,000 bps, showing that doubling the levels adds one bit per signal element.
+
+## Error Detection & Data Communication (CRC, Throughput) (14)
+
+1. (a) CMY color model এর উপাদানগুলো লিখুন (CMY color model এর কাজ কী?)
+   (b) CRC এর কাজ কী? (IIB CRC-16 এর ক্ষেত্র এবং প্রশ্নগুলো আলোচনা করুন)
+   (c) Data communication এর ক্ষেত্রে bandwidth এবং throughput এর মধ্যে পার্থক্য লিখুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+Answer:
+
+   (a) CMY colour model
+   - Components: Cyan, Magenta and Yellow. These are the three secondary colours of light and the primary colours of pigment.
+   - It is a subtractive model. White light falls on the paper and the ink subtracts (absorbs) part of it; what is left is reflected to the eye. Cyan absorbs red, magenta absorbs green, yellow absorbs blue.
+   - Work of the model: it is used for printing on paper — printers, plotters and press work — because ink works by absorbing light, not by emitting it. RGB, the additive model, is used for screens instead.
+   - In practice CMYK is used, with K for Key (black), because mixing all three inks gives a muddy dark brown rather than pure black, and a separate black ink is cheaper and sharper for text.
+   - Conversion: C = 1 − R, M = 1 − G, Y = 1 − B, taking R, G, B as normalised values from 0 to 1.
+
+   (b) Work of CRC
+   - CRC (Cyclic Redundancy Check) is an error detection method used at the data link layer. It checks whether a frame was damaged in transmission.
+   - The sender treats the data as a binary number, appends (L − 1) zeros where L is the number of bits in the divisor, divides by an agreed generator polynomial using modulo-2 (XOR) division, and sends the remainder as the CRC.
+   - The receiver divides the whole received frame by the same divisor. Remainder 0 means no error, so the frame is accepted; any other remainder means the frame is rejected.
+   - CRC detects all single-bit errors, all double-bit errors, all odd numbers of errors, and all burst errors shorter than the CRC length, which is why it is used in Ethernet, Wi-Fi, ZIP files and disk sectors.
+
+   CRC-16
+   - CRC-16 produces a 16-bit checksum, so 16 zeros are appended before the division and the remainder is 16 bits.
+   - Common generator polynomials: CRC-16-IBM (also called CRC-16-ANSI) x^16 + x^15 + x^2 + 1, used in Modbus and USB; and CRC-16-CCITT x^16 + x^12 + x^5 + 1, used in HDLC, X.25 and Bluetooth.
+   - It catches every burst error up to 16 bits long, and about 99.997 percent of longer bursts, which is enough for frames of a few hundred bytes.
+   - It is used where frames are short and the processing cost must stay low — industrial protocols, smart cards, modems. Ethernet uses the stronger CRC-32 instead.
+
+   (c) Bandwidth vs throughput
+
+| Point | Bandwidth | Throughput |
+|---|---|---|
+| Meaning | Maximum capacity of the link | Data actually delivered per second |
+| Nature | Theoretical and fixed | Measured and variable |
+| Depends on | Medium, frequency range, hardware | Congestion, errors, retransmission, protocol overhead |
+| Relation | The upper limit | Always less than or equal to bandwidth |
+| Example | A 100 Mbps link | The same link delivering 60 Mbps in busy hours |
+
+2. **Data communication mathematical problems.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+3. **Question on data communication transmission and signal related math.** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
+
+4. **10Mbps bandwidth, average packet length 1500 bytes what is maximum packet arrival rate support without causing congestion.** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1430 (ET: BUET)]*
+
+Answer:
+
+   Given
+   ```
+   Bandwidth = 10 Mbps = 10,000,000 bits per second
+   Average packet length = 1500 bytes
+   ```
+
+   Step 1 — packet length in bits
+   ```
+   1500 bytes × 8 = 12,000 bits per packet
+   ```
+
+   Step 2 — maximum packets the link can carry per second
+   ```
+   packet arrival rate = bandwidth / bits per packet
+                       = 10,000,000 / 12,000
+                       = 833.33 packets per second
+   ```
+
+   Maximum arrival rate ≈ 833 packets per second
+
+   - The link stays stable only while the arrival rate is below the service rate. At exactly 833.33 packets/s the utilisation is 100 percent, the queue grows without bound and congestion begins, so the practical design limit is kept well below this — typically 70–80 percent, about 580–660 packets per second.
+
+5. **What is Total Latency for a 3-kbyte message (an e-mail) if the bandwidth of the network is 1Gbps? Assume that the distance between the sender and the receiver is 300\text{ km} and that light travels at 2 \times 10^8\text{ m/s}. Round Trip Time 50ms Queuing Time 5ms?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1320 (ET: DU)]*
+
+Answer:
+
+   Formula
+   ```
+   Total latency = propagation time + transmission time + queuing time + processing time
+   ```
+
+   Given
+   ```
+   Message size = 3 kbyte = 3000 bytes
+   Bandwidth    = 1 Gbps = 10^9 bits per second
+   Distance     = 300 km = 300,000 m
+   Speed        = 2 × 10^8 m/s
+   Queuing time = 5 ms
+   Processing time is not given, so it is taken as negligible
+   ```
+
+   Step 1 — propagation time
+   ```
+   Tp = distance / speed
+      = 300,000 / (2 × 10^8)
+      = 1.5 × 10^-3 s
+      = 1.5 ms
+   ```
+
+   Step 2 — transmission time
+   ```
+   Tt = message bits / bandwidth
+      = (3000 × 8) / 10^9
+      = 24,000 / 10^9
+      = 24 × 10^-6 s
+      = 0.024 ms
+   ```
+
+   Step 3 — add everything
+   ```
+   Total latency = 1.5 + 0.024 + 5
+                 = 6.524 ms
+   ```
+
+   Total latency = 6.524 ms
+
+   - The transmission time is tiny compared with the propagation and queuing time. This is typical of a high-bandwidth link: the delay comes from distance and queues, not from the size of the message.
+   - Reading with the round trip time: if the 50 ms RTT is meant to replace the one-way propagation term — for example when a handshake must complete before the message is sent — then total latency = 50 + 0.024 + 5 = 55.024 ms. State which reading you use, because the question supplies both the distance and the RTT. <!-- verify -->
+
+6. **Differentiate the following terms in tabular form:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 300 (ET: BIBM)]*
+   * **A. CSMA/CD and CSMA/CA.**
+   * **B. Optical Communication and Satellite Communication.**
+   * **C. Parity bit check, CRC and Checksum.**
+
+Answer:
+
+   A. CSMA/CD vs CSMA/CA
+
+| Point | CSMA/CD | CSMA/CA |
+|---|---|---|
+| Full form | Carrier Sense Multiple Access with Collision Detection | Carrier Sense Multiple Access with Collision Avoidance |
+| Approach | Detects a collision after it happens | Tries to prevent the collision from happening |
+| Used in | Wired Ethernet (IEEE 802.3) | Wireless LAN (IEEE 802.11) |
+| Why it fits | A wired NIC can listen while transmitting | A radio cannot hear a weak collision under its own strong signal |
+| On collision | Stop, send a jam signal, wait a random backoff, retry | Collisions are avoided in advance using DIFS, random backoff and RTS/CTS |
+| Acknowledgement | Not needed | Explicit ACK needed for every frame |
+| Efficiency | Better, since the channel is freed quickly after a collision | Lower, because of the waiting and control frames |
+
+   B. Optical communication vs Satellite communication
+
+| Point | Optical communication | Satellite communication |
+|---|---|---|
+| Medium | Light through a glass fibre — guided | Microwave through free space — unguided |
+| Bandwidth | Extremely high, terabits per second | Lower, limited transponder bandwidth |
+| Propagation delay | Very low, about 5 µs per km | Very high, about 250–280 ms one way for GEO |
+| Coverage | Point to point along the cable route | Very wide, covers oceans, deserts and remote areas |
+| Interference and security | Immune to EMI, hard to tap | Affected by rain fade and solar noise, signal is broadcast so easier to intercept |
+| Installation | Costly trenching, hard over sea and hills | No ground path needed, but the launch cost is very high |
+| Error rate | Very low | Higher |
+| Typical use | Backbone links, submarine cables, FTTH | Broadcasting, remote area links, GPS, disaster communication |
+
+   C. Parity bit check vs CRC vs Checksum
+
+| Point | Parity bit check | Checksum | CRC |
+|---|---|---|---|
+| Extra bits | 1 bit per data unit | One block, usually 16 bits | L − 1 bits, typically 16 or 32 |
+| Method | Make the count of 1s even or odd | Add all blocks, wrap the carry, take the 1's complement | Modulo-2 binary division, send the remainder |
+| Layer | Character-level serial links | Transport layer — TCP, UDP, IP | Data link layer — Ethernet, Wi-Fi |
+| Detects | Odd number of errors only | Most errors, but cancelling errors slip through | All single, double and odd errors, and all bursts shorter than the CRC |
+| Burst error | Poor | Moderate | Excellent |
+| Cost | Cheapest | Cheap, software friendly | Higher, but done in hardware |
+| Correction | No | No | No |
+
+7. **Two math from data communication.** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
+
+8. **(গ) Data communication-এর সাপেক্ষে bandwidth এবং troughput এর সংজ্ঞা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+Answer:
+
+   Bandwidth
+   - Bandwidth is the maximum amount of data a link can carry per unit of time. It is the capacity of the channel.
+   - In analog terms it is the range of frequencies the channel passes, measured in hertz. In digital terms it is the maximum bit rate, measured in bits per second.
+   - It is fixed by the medium and the hardware, so it does not change with traffic.
+
+   Throughput
+   - Throughput is the amount of data that actually reaches the destination successfully per unit of time, measured in bits per second.
+   - It is a measured value and it changes moment to moment with congestion, errors, retransmission and protocol overhead.
+   - Throughput is always less than or equal to bandwidth.
+
+   - Example: a link is sold as 100 Mbps (bandwidth) but a file download shows 60 Mbps (throughput). The remaining 40 Mbps is lost to headers, retransmission and sharing with other users.
+
+9. **CRC is a redundancy error technique used to determine the error. Suppose the original data is 11100 and divisor is 1001.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
+
+Answer:
+
+   Given
+   ```
+   Data    = 11100
+   Divisor = 1001   (L = 4 bits)
+   ```
+
+   Step 1 — append (L − 1) = 3 zeros to the data
+   ```
+   Extended data = 11100 000
+   ```
+
+   Step 2 — divide 11100000 by 1001 using XOR (modulo-2) division
+   ```
+           1 1 1 1 1
+        ┌──────────────
+   1001 │ 1 1 1 0 0 0 0 0
+          1 0 0 1
+          ───────
+          0 1 1 1 0
+            1 0 0 1
+            ───────
+            0 1 1 1 0
+              1 0 0 1
+              ───────
+              0 1 1 1 0
+                1 0 0 1
+                ───────
+                0 1 1 1 0
+                  1 0 0 1
+                  ───────
+                  0 1 1 1        ← remainder (last 3 bits) = 111
+   ```
+
+   Step 3 — the remainder is the CRC
+   ```
+   CRC = 111
+   ```
+
+   Step 4 — frame to transmit
+   ```
+   Transmitted frame = data + CRC = 11100 + 111 = 11100111
+   ```
+
+   Step 5 — check at the receiver
+   ```
+   Divide 11100111 by 1001:
+
+   1110 ⊕ 1001 = 0111   → bring 0 → 1110
+   1110 ⊕ 1001 = 0111   → bring 1 → 1111
+   1111 ⊕ 1001 = 0110   → bring 1 → 1101
+   1101 ⊕ 1001 = 0100   → bring 1 → 1001
+   1001 ⊕ 1001 = 0000
+
+   Remainder = 000 → no error, frame accepted
+   ```
+
+   CRC = 111 and the transmitted message is 11100111
+
+10. **A telephone line normally has a bandwidth of 3000 Hz (300 to 3300 Hz) assigned for data communication. The SNR is usually 3162. What will be the capacity for this channel?** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
+
+Answer:
+
+    Given
+    ```
+    B   = 3000 Hz
+    SNR = 3162
+    The channel is noisy → Shannon capacity formula
+    ```
+
+    Step 1 — formula
+    ```
+    C = B log2(1 + SNR)
+    ```
+
+    Step 2 — substitute
+    ```
+    C = 3000 × log2(1 + 3162)
+      = 3000 × log2(3163)
+    ```
+
+    Step 3 — evaluate
+    ```
+    log2(3163) = log10(3163) / log10(2) = 3.5001 / 0.3010 = 11.627
+    C = 3000 × 11.627 = 34,881 bps
+    ```
+
+    C ≈ 34,881 bps ≈ 34.86 kbps
+
+    - This is the theoretical maximum for the line. No modulation scheme can beat it, which is why telephone modems stopped near 33.6 kbps.
+
+11. **Which technique is used for binary division check in network?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+Answer:
+
+    - CRC — Cyclic Redundancy Check.
+    - It is the only common error-detection method based on binary division. The data is treated as a binary number, divided by an agreed generator polynomial using modulo-2 (XOR) division, and the remainder is sent as the CRC.
+    - At the receiver the whole frame is divided again by the same divisor. Remainder 0 means the frame is clean; any other remainder means it is corrupted.
+    - Checksum uses addition and parity uses counting, so neither of them is a division method.
+
+12. **Explain parity method for error detection. Write down the bit strings of “Delta” using ASCII.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 (ET: BIBM)]*
+
+Answer:
+
+    Parity method
+    - One extra bit, called the parity bit, is added to every data unit so that the total number of 1s follows a fixed rule.
+    - Even parity — the parity bit is chosen so that the total number of 1s becomes even. Odd parity — it is chosen so that the total becomes odd.
+    - The receiver counts the 1s in what arrived. If the count breaks the rule, an error is detected and the unit is rejected.
+    - It detects any odd number of errors (1, 3, 5 …) but cannot detect an even number of errors, because two flipped bits cancel each other in the count. It can detect but not correct.
+    - Two-dimensional parity (LRC) improves this by adding a parity bit for each column of a block as well.
+
+    Bit strings of "Delta" in 7-bit ASCII, with an even parity bit added in front
+
+```
+Char  Decimal   7-bit ASCII   Number of 1s   Even parity bit   Transmitted 8 bits
+ D       68      1000100            2               0              0 1000100
+ e      101      1100101            4               0              0 1100101
+ l      108      1101100            4               0              0 1101100
+ t      116      1110100            4               0              0 1110100
+ a       97      1100001            3               1              1 1100001
+```
+
+    Full bit stream for "Delta" with even parity:
+```
+01000100 01100101 01101100 01110100 11100001
+```
+
+    - Without the parity bit the plain 7-bit ASCII strings are 1000100, 1100101, 1101100, 1110100 and 1100001.
+
+13. **An end system sends 50 packets per second using the User Datagram Protocol (UDP) over a full duplex 100 Mbps ethernet LAN connection. Each packet consists 1500B of ethernet frame payload data. What is the throughput, when measured at the UDP layer?** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
+
+Answer:
+
+    Given
+    ```
+    Packet rate = 50 packets per second
+    Ethernet frame payload = 1500 bytes per packet
+    ```
+
+    Step 1 — peel off the headers inside the Ethernet payload
+    ```
+    Ethernet payload            = 1500 bytes   (this is the IP datagram)
+    IP header                   =   20 bytes
+    UDP datagram                = 1500 − 20    = 1480 bytes
+    UDP header                  =    8 bytes
+    UDP payload (application)   = 1480 − 8     = 1472 bytes
+    ```
+
+    Step 2 — bits of useful data per packet
+    ```
+    1472 × 8 = 11,776 bits
+    ```
+
+    Step 3 — throughput
+    ```
+    Throughput = 50 × 11,776
+               = 588,800 bits per second
+               = 588.8 kbps ≈ 0.5888 Mbps
+    ```
+
+    Throughput at the UDP layer ≈ 588.8 kbps
+
+    - The 100 Mbps link is barely used; the application is only sending about 0.59 Mbps.
+    - If the question counts the whole UDP datagram including its 8-byte header, the figure becomes 50 × 1480 × 8 = 592,000 bps = 592 kbps. The usual convention is to count only the payload delivered to the application, so 588.8 kbps is the expected answer.
+
+14. **The message 11001001 is to be transmitted using the CRC polynomial x^3+1 to protect it from the errors. Now find out the message that should be transmitted.** *[BAUST Assistant Programmer 2021 compact it 917-918 (ET: N/A)]*
+
+Answer:
+
+    Step 1 — turn the polynomial into a binary divisor
+    ```
+    x^3 + 1  =  1·x^3 + 0·x^2 + 0·x^1 + 1
+    Divisor  =  1 0 0 1    (L = 4 bits)
+    ```
+
+    Step 2 — append (L − 1) = 3 zeros to the message
+    ```
+    Message        = 11001001
+    Extended data  = 11001001 000
+    ```
+
+    Step 3 — modulo-2 (XOR) division of 11001001000 by 1001
+    ```
+    1100 ⊕ 1001 = 0101   → bring 1 → 1011
+    1011 ⊕ 1001 = 0010   → bring 0 → 0100
+    0100 (MSB 0, no XOR) → bring 0 → 1000
+    1000 ⊕ 1001 = 0001   → bring 1 → 0011
+    0011 (MSB 0, no XOR) → bring 0 → 0110
+    0110 (MSB 0, no XOR) → bring 0 → 1100
+    1100 ⊕ 1001 = 0101   → bring 0 → 1010
+    1010 ⊕ 1001 = 0011
+
+    Remainder (last 3 bits) = 011
+    ```
+
+    Step 4 — CRC and transmitted message
+    ```
+    CRC = 011
+    Transmitted message = 11001001 + 011 = 11001001011
+    ```
+
+    Step 5 — verification at the receiver
+    ```
+    Dividing 11001001011 by 1001 leaves remainder 000, so the frame is accepted.
+    ```
+
+    The message that should be transmitted is 11001001011
