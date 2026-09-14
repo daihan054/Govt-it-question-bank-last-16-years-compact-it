@@ -11757,3 +11757,179 @@ Answer:
     - FCS (Frame Check Sequence) — 4 bytes of CRC-32 in the trailer, covering everything from the destination address to the pad. The receiver recomputes it and discards the frame if it does not match.
 
     - Frame size: minimum 64 bytes, maximum 1518 bytes, not counting the preamble and SFD. A jumbo frame extends the data field up to 9000 bytes but is outside the standard.
+
+## Network Services (DHCP, NAT) (11)
+
+1. **What is the DHCP in computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
+
+Answer:
+
+   - DHCP stands for Dynamic Host Configuration Protocol. It is an application-layer protocol that gives a host its IP configuration automatically when it joins a network.
+   - It supplies the IP address, subnet mask, default gateway, DNS server address and the lease time, so nothing has to be typed by hand.
+   - It runs over UDP. The server listens on port 67 and the client uses port 68.
+   - The exchange is DORA — Discover, Offer, Request, Acknowledge.
+   - The address is given on lease for a fixed period. The client renews it at 50 percent of the lease time; if the lease expires the address goes back to the pool and can be reused.
+   - Benefits: no manual configuration, no duplicate address conflicts, efficient reuse of a limited address pool, and central control of settings.
+
+2. **What is the NAT in Computer networking?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
+
+Answer:
+
+   - NAT stands for Network Address Translation. It is the technique of changing the IP address inside a packet header as it passes through a router, so that many private hosts can share one or a few public IP addresses.
+   - It was created to deal with the shortage of IPv4 addresses. Private ranges such as 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16 are not routable on the internet, so the router rewrites them into a public address on the way out and restores them on the way back.
+   - The router keeps a translation table so it knows which reply belongs to which inside host.
+
+   Types
+   - Static NAT — one private address is permanently mapped to one public address. Used for a server that must be reachable from outside.
+   - Dynamic NAT — private addresses are mapped to any free address from a public pool.
+   - PAT (Port Address Translation), also called NAT overload — many private addresses share one public address, and the different sessions are separated by the source port number. This is what every home router does.
+
+   - Advantages: saves public addresses and hides the internal network. Disadvantages: breaks true end-to-end connectivity, complicates VoIP, gaming and IPsec, and adds processing delay. IPv6 does not need NAT at all.
+
+3. **NAT Stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
+
+Answer:
+
+   - NAT stands for Network Address Translation.
+   - It translates private IP addresses into public IP addresses at the router, so that many internal hosts can reach the internet through one public address.
+
+4. **Which two services are required to enable a computer to receive dynamic IP address and access internet using domain names?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 634 (ET: N/A)]*
+
+Answer:
+
+   - DHCP (Dynamic Host Configuration Protocol) — gives the computer its IP address, subnet mask, default gateway and DNS server address automatically when it joins the network.
+   - DNS (Domain Name System) — translates a domain name such as www.google.com into the IP address the computer needs to open the connection.
+
+   - The two work together: DHCP hands the client the address of the DNS server, and the client then uses DNS to resolve every name it types. Without DHCP the settings must be entered by hand; without DNS the user would have to remember IP addresses.
+
+5. **What is DHCP Server and why it is needed in a computer network.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
+
+Answer:
+
+   DHCP server
+   - A DHCP server is the machine or service that holds a pool of IP addresses and hands them out to clients on request, together with the subnet mask, default gateway, DNS server and lease time.
+   - It listens on UDP port 67 and answers the client on port 68. It also stores the binding of each address to a client, so the same address is not given twice.
+
+   Why it is needed
+   - Manual configuration of hundreds of PCs is slow and error prone. DHCP configures every host automatically in a second.
+   - It prevents duplicate IP address conflicts, because the server tracks which addresses are in use.
+   - It reuses a limited address pool. A laptop that leaves the network releases its address after the lease expires, and another device can take it.
+   - It supports mobility. A laptop moving between floors or offices gets a correct address for the new subnet automatically.
+   - It gives central control. Changing the DNS server or gateway for the whole network means editing one setting on the server, not visiting every PC.
+   - Reserved or static mappings can still be made by MAC address for printers and servers that need a fixed address.
+
+6. **(b) Explain the message flow between a DHCP server and client. Show necessary timing diagram.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 799 (ET: N/A)]*
+
+Answer:
+
+   The exchange has four messages, remembered as DORA.
+
+```mermaid
+sequenceDiagram
+    participant C as DHCP Client
+    participant S as DHCP Server
+    C->>S: 1. DHCPDISCOVER (broadcast 255.255.255.255, src 0.0.0.0)
+    S->>C: 2. DHCPOFFER (offers an IP, mask, gateway, DNS, lease)
+    C->>S: 3. DHCPREQUEST (broadcast, accepts one offer)
+    S->>C: 4. DHCPACK (confirms, lease starts)
+```
+
+   - DHCPDISCOVER — the client has no address yet, so it sends a broadcast to 255.255.255.255 with source 0.0.0.0, asking any DHCP server on the link to answer.
+   - DHCPOFFER — each server that hears it replies with a proposed IP address, subnet mask, default gateway, DNS server and lease time.
+   - DHCPREQUEST — the client picks one offer, usually the first, and broadcasts its choice. The broadcast tells the other servers to withdraw their offers.
+   - DHCPACK — the chosen server confirms, records the binding, and the lease begins. If the address is no longer free it sends DHCPNAK instead and the client starts again.
+
+   Lease renewal timers
+   - At T1, which is 50 percent of the lease, the client unicasts a DHCPREQUEST to renew.
+   - At T2, which is 87.5 percent of the lease, if there is still no reply it broadcasts a request to any server (rebinding).
+   - If the lease expires with no answer, the client gives up the address and restarts with DHCPDISCOVER.
+   - DHCPRELEASE is sent when the client shuts down cleanly, returning the address to the pool.
+   - If the server is on another subnet, a DHCP relay agent on the router forwards the broadcast to it, because routers do not pass broadcasts.
+
+7. **What is APIPA?** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 840 (ET: N/A)]*
+
+Answer:
+
+   - APIPA stands for Automatic Private IP Addressing. It is the fallback used by a host when it asks for a DHCP address and no DHCP server answers.
+   - The host then gives itself an address from the range 169.254.0.1 to 169.254.255.254, with subnet mask 255.255.0.0 (169.254.0.0/16).
+   - Before using it, the host sends an ARP request to check that no other device on the link already holds that address. If there is a clash it picks another one.
+   - It sets no default gateway and no DNS server, so the host can talk only to other devices on the same link. There is no internet access.
+   - The host keeps trying to reach a DHCP server in the background, usually every five minutes, and switches to a proper address as soon as one replies.
+   - Practical use: it lets two PCs connected by a single cable communicate with no server. Seeing a 169.254.x.x address in ipconfig is the classic sign that the DHCP server or the link to it has failed.
+
+8. **What do you mean by DHCP server? Explain the benefits of using dedicated DHCP server. Briefly describe the main benefits of using IPv6 protocol.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 914 (ET: N/A)]*
+
+Answer:
+
+   DHCP server
+   - A DHCP server is the service that holds a pool of IP addresses and leases them to clients automatically, along with the subnet mask, default gateway, DNS server and lease time. It uses UDP port 67 and answers clients on port 68.
+
+   Benefits of a dedicated DHCP server
+   - Central management — every scope, reservation and option for the whole organisation is configured in one place.
+   - Better performance and reliability — a dedicated machine is not competing with routing or file-serving work, so it answers quickly even in a large network.
+   - Redundancy and failover — two dedicated servers can split the scope or run in a failover pair, so addressing survives a server failure.
+   - Large address pools and many scopes for many VLANs, which a small router-based DHCP service cannot handle.
+   - Detailed logging and auditing — which MAC held which address at which time, which matters for security investigations.
+   - Integration with DNS (dynamic DNS update) and with Active Directory, and easy MAC-based reservations for printers and servers.
+   - Fine-grained options — TFTP server for PXE boot, NTP server, vendor-specific options for IP phones.
+
+   Main benefits of IPv6
+   - A vastly larger address space, 128 bits, which ends the address shortage and removes the need for NAT.
+   - Simpler fixed 40-byte header with no checksum, so routers forward packets faster.
+   - Stateless address auto-configuration (SLAAC), where a host builds its own address from the router advertisement without any server.
+   - IPsec support designed into the protocol, giving authentication and encryption as a standard feature.
+   - No broadcast; multicast and anycast are used instead, which cuts wasted traffic and blocks broadcast amplification attacks.
+   - Better QoS through the Traffic Class and Flow Label fields.
+   - True end-to-end connectivity, which restores VoIP, gaming and peer-to-peer applications that NAT used to break.
+   - More efficient routing through hierarchical addressing and route aggregation.
+
+9. **১৬. DHCP uses UDP port _____ for sending data to the server.** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+Answer:
+
+   - Port 67.
+   - The DHCP server listens on UDP port 67, so every message the client sends to the server — DISCOVER, REQUEST, RELEASE — goes to destination port 67.
+   - The client uses UDP port 68, and the server sends OFFER and ACK back to that port.
+   - UDP is used rather than TCP because the client has no IP address yet and must broadcast, and a connection handshake is not possible in that state.
+
+10. **DHCP কি? DHCP কিভাবে কাজ করে লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1043 (ET: DPI)]*
+
+Answer:
+
+    What DHCP is
+    - DHCP is the Dynamic Host Configuration Protocol. It automatically gives a host its IP address, subnet mask, default gateway, DNS server address and lease time when the host joins a network.
+    - It is an application-layer protocol running over UDP, with the server on port 67 and the client on port 68.
+
+    How it works — the DORA process
+    - Discover — the client has no address, so it broadcasts a DHCPDISCOVER to 255.255.255.255 with source address 0.0.0.0, asking for a server.
+    - Offer — every DHCP server that hears the broadcast replies with a DHCPOFFER containing a free IP address and the other settings.
+    - Request — the client chooses one offer and broadcasts a DHCPREQUEST naming that server, which also tells the other servers to release their reserved addresses.
+    - Acknowledge — the chosen server replies with DHCPACK, records the binding and starts the lease. The client can now use the address.
+
+    Lease management
+    - The client tries to renew at 50 percent of the lease time by unicasting a request to the same server, and at 87.5 percent it broadcasts to any server.
+    - DHCPRELEASE returns the address when the host shuts down. If the lease expires with no renewal, the address goes back to the pool.
+    - If the DHCP server is on a different subnet, a relay agent on the router forwards the client's broadcast to it.
+
+11. **Write the disadvantage of manual IP. Name the protocol of dynamic IP assigning. DHCP how works?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
+
+Answer:
+
+    Disadvantages of manual (static) IP configuration
+    - Very time consuming — every host must be configured by hand, which is impossible for hundreds of machines.
+    - High risk of duplicate addresses, which knocks both devices off the network and is hard to trace.
+    - Typing mistakes in the mask, gateway or DNS cause faults that are difficult to find.
+    - Poor use of the address pool — an address stays reserved even when the device is switched off or removed.
+    - No mobility. A laptop moving to another subnet has to be reconfigured every time.
+    - Changing the DNS server or gateway means visiting every machine.
+    - Needs a record of every assignment, and that record goes out of date quickly.
+
+    Protocol for dynamic IP assignment
+    - DHCP — Dynamic Host Configuration Protocol. Its predecessor was BOOTP, and the IPv6 version is DHCPv6.
+
+    How DHCP works
+    - Discover — the client broadcasts DHCPDISCOVER because it has no address yet.
+    - Offer — a DHCP server replies with DHCPOFFER carrying a free address, subnet mask, gateway, DNS and lease time.
+    - Request — the client broadcasts DHCPREQUEST to accept one particular offer.
+    - Acknowledge — the server sends DHCPACK, records the binding and the lease starts.
+    - The client renews at half the lease time, and releases the address on shutdown so it can be reused.
