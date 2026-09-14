@@ -684,6 +684,69 @@ flowchart TD
 | **2** | **Data Link** | **PHYSICAL ADDRESSING (MAC)**; **FRAMING** — packaging bits into frames; **error DETECTION** (CRC); **flow control**; **media access control** (who may transmit) | **FRAME** | **SWITCH**, **BRIDGE**, NIC | **Ethernet (802.3), Wi-Fi (802.11), PPP, HDLC, Frame Relay, ATM, ARP** |
 | **1** | **Physical** | Transmission of **raw BITS** over the medium; defines **voltages, cables, connectors, pins, data rate, topology and transmission mode**; **bit synchronisation** | **BIT** | **HUB**, **REPEATER**, cables, connectors, modem | RS-232, RJ45, Ethernet physical specs, DSL, USB, Bluetooth physical |
 
+#### The Presentation layer in detail — translation, compression and encryption
+
+The Presentation layer is the one most often skipped, and the one examiners most often ask about. It does exactly **three** jobs.
+
+**1. Translation — making two different machines understand the same characters**
+
+Two computers may store text in different character codes. The sender's format is converted into a common format, and the receiver's Presentation layer converts it into its own.
+
+```
+   Sender (PC, ASCII)                 Receiver (IBM mainframe, EBCDIC)
+   'A' = 0100 0001   ──translate──►   'A' = 1100 0001
+```
+
+| Code | Bits | Used by |
+|---|---|---|
+| ⭐ **ASCII** | 7 bits, 128 characters (extended 8-bit gives 256) | PCs and almost everything today |
+| ⭐ **EBCDIC** | 8 bits, 256 characters | IBM mainframes |
+| **Unicode / UTF-8** | 8 to 32 bits | Modern systems, supports Bengali and every other script |
+
+> ⭐ **The classic exam line: "Conversion of ASCII to EBCDIC is done at the PRESENTATION layer."** This is why the layer is nicknamed the **Translator** or the **Syntax layer**.
+
+**2. Data compression — sending fewer bits for the same information**
+
+Compression removes redundancy so that less data goes on the wire. Less data means **less bandwidth, lower cost and faster transfer**.
+
+| Type | What happens | Example |
+|---|---|---|
+| ⭐ **Lossless** | Nothing is thrown away; the original is rebuilt exactly | **Huffman coding**, run-length encoding, LZW, ZIP, PNG, GIF |
+| ⭐ **Lossy** | Detail the human eye or ear will not notice is discarded | JPEG, MP3, MPEG |
+
+**Huffman coding — the algorithm to be able to name**
+
+> The idea in one line: ⭐ **give the SHORTEST code to the character that appears MOST often, and the longest code to the rarest.**
+
+```
+Suppose a message uses only 4 characters:
+
+  Char   Frequency   Fixed 2-bit code   Huffman code
+   A        45%            00                0
+   B        30%            01               10
+   C        15%            10              110
+   D        10%            11              111
+
+Fixed-length cost   : 2 bits per character, always
+Huffman average cost: 0.45(1) + 0.30(2) + 0.15(3) + 0.10(3)
+                    = 0.45 + 0.60 + 0.45 + 0.30
+                    = 1.80 bits per character
+
+Saving ≈ 10 %  — and the saving grows as the frequencies become more uneven.
+```
+
+- Huffman codes are **prefix-free**: no code is the start of another code, so the receiver can decode the stream without any separator between characters.
+- The codes are built by repeatedly joining the two least frequent symbols into a binary tree — the rarest symbols end up deepest, and depth is code length.
+- A worked bit example of run-length style compression: `110000 1100 → 1110`, where a long run is replaced by a short token.
+
+**3. Encryption and decryption — making the data private**
+
+- The Presentation layer encrypts outgoing data and decrypts incoming data, so that anyone tapping the line sees only ciphertext.
+- ⭐ **SSL/TLS (Secure Socket Layer / Transport Layer Security)** is the protocol normally named here, and it is what turns HTTP into HTTPS.
+- Note for the exam: SSL/TLS is often listed at layer 6 in the OSI model but sits **between the application and the transport layer** in the real TCP/IP stack, so both answers appear in textbooks.
+
+> ⭐ **Remember the Presentation layer by its three words: TRANSLATE, COMPRESS, ENCRYPT.**
+
 #### The Data Link layer's two sub-layers
 
 | Sub-layer | Function |
