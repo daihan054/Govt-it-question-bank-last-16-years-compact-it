@@ -1305,7 +1305,27 @@ Answer:
     - ২০% বেতন বৃদ্ধি পেলে মোট বেতন হবে মূল বেতনের ১২০%।
     - মোট নতুন মাসিক বেতন = $5075 	imes 1.20 = 6,090$ টাকা।
 
-88. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+88. **(a+b)^2 = 36 এবং (a-b)^2 = 16 হলে ab এবং (a^2+b^2)-এর মান নির্ণয় কর। (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+    Answer:
+
+    দেওয়া আছে: $(a+b)^2 = 36$ এবং $(a-b)^2 = 16$
+
+    ab নির্ণয়:
+    - $(a+b)^2 = a^2 + 2ab + b^2 = 36$ ... (i)
+    - $(a-b)^2 = a^2 - 2ab + b^2 = 16$ ... (ii)
+    - (i) - (ii): $4ab = 20$
+    - $\therefore ab = 5$
+
+    $(a^2+b^2)$ নির্ণয়:
+    - (i) + (ii): $2(a^2 + b^2) = 52$
+    - $\therefore a^2 + b^2 = 26$
+
+    উত্তর: $ab = 5$ এবং $a^2 + b^2 = 26$
+
+89. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
 
     Answer:
     - E-7 (Emerging 7): বিশ্বের দ্রুত বিকাশমান ও উদীয়মান সাতটি প্রধান অর্থনীতির দেশকে নিয়ে গঠিত জোট। প্রাইসওয়াটারহাউসকুপার্স (PwC) ২০০৬ সালে এই ধারণাটি প্রবর্তন করে।
