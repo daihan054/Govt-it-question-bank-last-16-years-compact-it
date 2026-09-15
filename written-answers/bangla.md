@@ -257,101 +257,45 @@ Answer: 'ও' এবং 'এবং' — দুটিই সংযোজক অ�
  * **ঘ) সমার্থক শব্দ লিখুন (একটি করে): অর্ণব, আদিত্য, ময়ূখ, আত্মজা**
  * **ঙ) বাগধারা গুলোর নিহিতার্থ লিখুন: লঙ্কা কাণ্ড, টইটম্বুর, তালকানা, ঘুনাক্ষর**
 
-(ক) উদাহরণসহ ধাতুর সংজ্ঞা লিখুন।
-(খ) বাংলা শব্দগঠনের যে কোন দুটি প্রক্রিয়ার সংজ্ঞা লিখুন।
-(গ) শুদ্ধ বানান লিখুন: আলস্যতা, সাম্যতাপ্রাপণ
-(ঘ) নিচের বাগধারা দুটির অর্থ লিখে বাক্য রচনা করুন: তুলসী বনের বাঘ, কেবলা হাকিম
-(ঙ) বাক্য সংকোচন করুন: মেঘের ধ্বনি, তালু থেকে উচ্চারিত
+    Answer:
 
-    Answer: (ক) উদাহরণসহ ধাতুর সংজ্ঞা
-    - ক্রিয়াপদের যে মূল অংশ থেকে ক্রিয়াপদ গঠিত হয়, তাকে `ধাতু` বা `ক্রিয়ামূল` বলে। ধাতুর সঙ্গে ক্রিয়াবিভক্তি যুক্ত হয়ে ক্রিয়াপদ তৈরি হয়।
+    (ক) ণ-ত্ব বিধানের দুইটি নিয়ম
     ```
-       কর্‌ (ধাতু) + ই  =  করি
-       কর্‌         + ছি =  করছি
-       কর্‌         + বে =  করবে
-       পড়্‌ + ল  =  পড়ল
+       ১. ঋ, র, ষ -এর পরে যদি মাঝে স্বরবর্ণ, ক-বর্গ, প-বর্গ, য়, হ বা
+          অনুস্বার (ং) থাকে, তাহলে পরবর্তী দন্ত্য 'ন' মূর্ধন্য 'ণ' হয়।
+               উদাহরণ : রণ, বর্ণ, ঋণ, ভীষণ, তৃণ, গ্রহণ, দর্পণ
 
-       ধাতু চিহ্নিত করার নিয়ম : ধাতুর পরে হসন্ত (্‌) চিহ্ন দেওয়া
-       হয় - কর্‌ , পড়্‌ , যা , দেখ্‌
-    ```
-    ```
-       ধাতুর প্রকার
-
-       ১. মৌলিক ধাতু (সিদ্ধ ধাতু)
-            যাকে আর ভাঙা যায় না।
-                 কর্‌ , পড়্‌ , দেখ্‌ , যা , খা
-
-       ২. সাধিত ধাতু
-            মৌলিক ধাতু বা শব্দের সঙ্গে কিছু যোগ করে গঠিত।
-            তিন ভাগে -
-                 ণিজন্ত   :  কর্‌ -> করা(ও) - অন্যকে দিয়ে করানো
-                 নাম ধাতু :  বিশেষ্য / বিশেষণ থেকে -
-                             ঘুম -> ঘুমা , বেত -> বেতা
-                 কর্মবাচ্যের ধাতু : কর্‌ -> করা যায়
-
-       ৩. যৌগিক / উপসর্গাত্মক ধাতু
-            উপসর্গ যোগে গঠিত।
-                 প্র + হার্‌ = প্রহার্‌ ,  আ + হার্‌ = আহার্‌
-
-       ৪. অনুকার ধাতু
-            ধ্বনি অনুকরণে গঠিত।
-                 ঝম্‌ঝম্‌ , কড়্‌কড়্‌ , টল্‌মল্‌
+       ২. প্র, পরা, পরি, নির্ — এই চারটি উপসর্গের পরে দন্ত্য 'ন'
+          মূর্ধন্য 'ণ' হয়ে যায়।
+               উদাহরণ : প্রণাম, প্রমাণ, পরায়ণ, পরিণতি, নির্ণয়
     ```
 
-    (খ) বাংলা শব্দগঠনের দুটি প্রক্রিয়ার সংজ্ঞা
-    ```
-       ১. সমাস
-            পরস্পর অর্থসম্বন্ধযুক্ত দুই বা তার বেশি শব্দ মিলে
-            যখন একটি নতুন শব্দ গঠিত হয়, তখন তাকে সমাস বলে।
-                 সিংহ চিহ্নিত আসন  =  সিংহাসন
-                 মহৎ যে জন        =  মহাজন
-            সমাসে সমস্তপদ, ব্যাসবাক্য ও সমস্যমান পদ থাকে।
+    (খ) খাঁটি বাংলা উপসর্গ যোগে গঠিত চারটি শব্দ
+    - খাঁটি বাংলা উপসর্গ (অ-, অজ-, আ-, আন-, কু-, নি-, বি-, ভর-, স-, সা-, সু- ইত্যাদি) কেবল খাঁটি বাংলা বা তদ্ভব শব্দের আগে বসে।
+    - উদাহরণ: `আ + কাশ = আকাশ`, `সু + নজর = সুনজর`, `নি + লাজ = নিলাজ`, `ভর + দুপুর = ভরদুপুর`
 
-       ২. প্রত্যয়
-            ধাতু বা শব্দের শেষে যে শব্দাংশ যুক্ত হয়ে নতুন শব্দ
-            গঠন করে, তাকে প্রত্যয় বলে।
-                 কৃৎ প্রত্যয় - ধাতুর সঙ্গে যুক্ত হয় :
-                      কর্‌ + অক = কারক ,  পঠ্‌ + অন = পঠন
-                 তদ্ধিত প্রত্যয় - শব্দের সঙ্গে যুক্ত হয় :
-                      মেধা + বিন্ = মেধাবী , সৎ + তা = সততা
+    (গ) ব্যাসবাক্য সহ সমাসের নাম
 
-       আরও দুটি প্রক্রিয়া : উপসর্গযোগ (প্র + হার = প্রহার) ,
-       সন্ধি (বিদ্যা + আলয় = বিদ্যালয়)
-    ```
+    | শব্দ | সমাসের নাম | ব্যাসবাক্য |
+    |---|---|---|
+    | গায়ে হলুদ | অলুক বহুব্রীহি সমাস | গায়ে হলুদ দেওয়া হয় যে অনুষ্ঠানে |
+    | প্রতিদিন | অব্যয়ীভাব সমাস | দিন দিন |
+    | বিষাদসিন্ধু | রূপক কর্মধারয় সমাস | বিষাদ রূপ সিন্ধু |
+    | উপগ্রহ | অব্যয়ীভাব সমাস | গ্রহের সমীপে |
 
-    (গ) শুদ্ধ বানান
-    ```
-       অশুদ্ধ : আলস্যতা      ->  শুদ্ধ : আলস্য
-            কারণ : 'আলস্য' শব্দেই ভাববাচকতা আছে, তার সঙ্গে আবার
-            'তা' প্রত্যয় যোগ করা অতিরিক্ত। একই ভুল :
-            দারিদ্র্যতা -> দারিদ্র্য , সৌজন্যতা -> সৌজন্য
+    (ঘ) সমার্থক শব্দ (একটি করে)
+    - অর্ণব → সমুদ্র
+    - আদিত্য → রবি
+    - ময়ূখ → কিরণ
+    - আত্মজা → কন্যা
 
-       অশুদ্ধ : সাম্যতাপ্রাপণ  ->  শব্দটি বিকৃত।
-            সম্ভাব্য শুদ্ধ রূপ : সাম্যাবস্থা প্রাপ্তি
-    ```
-
-    (ঘ) বাগধারার অর্থ ও বাক্য রচনা
-    ```
-       তুলসী বনের বাঘ  ->  ভণ্ড সাধু ; বাইরে সাধু, ভেতরে শয়তান
-            বাক্য : মুখে ধর্মের কথা, আর কাজে প্রতারণা - লোকটি
-            আসলে তুলসী বনের বাঘ।
-
-       কেবলা হাকিম     ->  নির্বোধ , আনাড়ি বিচারক ; বোকা লোক
-            বাক্য : যে বিচারক দুই পক্ষের কথা না শুনেই রায় দেন,
-            তিনি তো কেবলা হাকিম।
-    ```
-
-    (ঙ) বাক্য সংকোচন
-    ```
-       মেঘের ধ্বনি         ->  জীমূতমন্দ্র  (মেঘনাদ , মেঘগর্জন)
-       তালু থেকে উচ্চারিত   ->  তালব্য
-    ```
-    - উচ্চারণস্থান অনুযায়ী বর্ণের নামগুলো একসঙ্গে জেনে রাখা ভালো: `কণ্ঠ্য` (ক-বর্গ), `তালব্য` (চ-বর্গ, ইশ, য), `মূর্ধন্য` (ট-বর্গ, র, ষ), `দন্ত্য` (ত-বর্গ, ল, স), `ওষ্ঠ্য` (প-বর্গ), `দন্ত্যমূলীয়`, `নাসিক্য` (ঙ ঞ ণ ন ম)।
+    (ঙ) বাগধারা গুলোর নিহিতার্থ
+    - লঙ্কা কাণ্ড → সামান্য বিষয় নিয়ে তুমুল গোলযোগ বাধা
+    - টইটম্বুর → কানায় কানায় পরিপূর্ণ, ভরপুর
+    - তালকানা → কাণ্ডজ্ঞানহীন, আনাড়ি
+    - ঘুনাক্ষর → লেশমাত্র বা সামান্যতম আভাস (সচরাচর নেতিবাচক বাক্যে বসে, যেমন `ঘুণাক্ষরেও জানত না`) <!-- verify -->
 
 6. **(ক) ভাষায় উপসর্গ ও অনুসর্গ কীভাবে কাজ করে আলোচনা করুন।** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
-**(খ) বানানের নিয়মসহ প্রমিত রূপে লিখুন:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
-> অংক, সুসম, ইংরেজী, মনযোগ, পদাবলী।
-
 **(খ) বানানের নিয়মসহ প্রমিত রূপে লিখুন:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
 > অংক, সুসম, ইংরেজী, মনযোগ, পদাবলী।
 
@@ -645,12 +589,6 @@ Answer: প্রশ্নটি `incomplete` — "বাংলা ব্যা�
     - প্রশ্নের নির্দিষ্ট রূপ পাওয়া গেলে এই কাঠামো ধরে উত্তর লেখা যাবে। বাংলা ব্যাকরণে সবচেয়ে বেশি নম্বর আসে `সন্ধি`, `সমাস`, `কারক`, `বাগধারা`, `শুদ্ধ বানান` ও `এককথায় প্রকাশ` — এই ছয়টি অংশ থেকে।
 
 11. **নিচের প্রশ্নগুলোর উত্তর লিখুন:** *[বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-(ক) উদাহরণসহ ধাতুর সংজ্ঞা লিখুন।
-(খ) বাংলা শব্দগঠনের যে কোন দুটি প্রক্রিয়ার সংজ্ঞা লিখুন।
-(গ) শুদ্ধ বানান লিখুন: আলস্যতা, সাম্যতাপ্রাপণ
-(ঘ) নিচের বাগধারা দুটির অর্থ লিখে বাক্য রচনা করুন: তুলসী বনের বাঘ, কেবলা হাকিম
-(ঙ) বাক্য সংকোচন করুন: মেঘের ধ্বনি, তালু থেকে উচ্চারিত
-
 (ক) উদাহরণসহ ধাতুর সংজ্ঞা লিখুন।
 (খ) বাংলা শব্দগঠনের যে কোন দুটি প্রক্রিয়ার সংজ্ঞা লিখুন।
 (গ) শুদ্ধ বানান লিখুন: আলস্যতা, সাম্যতাপ্রাপণ
@@ -4831,10 +4769,7 @@ Answer:
 41. **Translation [Bangla to English]** *[compact it 523]*
 মুক্তিযুদ্ধের ফল সরূপ নীতিগত ভিত্তিতে ব্যাংক খাতের প্রতিষ্ঠানসমূহ জাতীয়করণ করা হয় ১৯৭২ সালে। এ সময়ে ব্যাংক খাতের প্রতিষ্ঠান ও বেসরকারি শেয়ার কেটে নিয়ে সাঙ্গভাবে অর্থনীতির রপ্তানির প্রয়োজনে শিক্ষিতদের নিয়ে একটি প্রস্তাবনার উপর ভিত্তি করে বাংলাদেশ অর্থনৈতিক পুনর্গঠনের মধ্য দিয়ে মৌলিক চাহিদাগুলো মেটাতে একটি সরকার গঠন করে। বাস্তবতায়, জাতীয়করণ কার্যক্রমের আগে ও পরে ব্যাংক ও শিল্পখাতের মধ্যে যথার্থভাবে তত্ব না দেয়ার অবস্থান ছিল। এ অবস্থায় সময়ের বড় একটি ফ্যাক্টর সরকারপ্রধান অর্থে মুক্তিযুদ্ধ ছিল।
 
-**Translate the following passage into Bangla:**
-   > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
-
-   Answer: ব্যাংকিং খাতে সক্ষমতা উন্নয়ন অত্যন্ত গুরুত্বপূর্ণ, কারণ দ্রুত পরিবর্তনশীল পরিস্থিতিতে এই শিল্পকে ক্রমবর্ধমান নতুন চ্যালেঞ্জ ও সুযোগের মুখোমুখি হতে হচ্ছে। জটিল আর্থিক পরিবেশে কার্যকরভাবে পথ চলার জন্য ব্যাংকিং পেশাজীবীদের জ্ঞান, দক্ষতা ও সামর্থ্য বাড়ানোই এর অন্তর্ভুক্ত। এর মধ্যে রয়েছে আর্থিক সাক্ষরতা, ঝুঁকি ব্যবস্থাপনা, নিয়ন্ত্রণ-বিধি পরিপালন এবং প্রযুক্তিগত দক্ষতার মতো ক্ষেত্রে প্রশিক্ষণ। ব্যাংকগুলো যখন উন্নত প্রযুক্তি ও ডিজিটাল ব্যাংকিং সমাধান গ্রহণ করছে, তখন পরিচালন-দক্ষতা ও গ্রাহকসেবার মান বাড়ানোর জন্য এসব হাতিয়ার কাজে লাগাতে বিশেষায়িত দক্ষতার প্রয়োজনীয়তা বেড়েই চলেছে। সক্ষমতা উন্নয়নের উদ্যোগগুলো নেতৃত্ব বিকাশের ওপরও গুরুত্ব দেয় — যাতে ঊর্ধ্বতন নির্বাহীদের মধ্যে কৌশলগত চিন্তা ও সিদ্ধান্ত গ্রহণের ক্ষমতা গড়ে ওঠে এবং তাঁরা অর্থনৈতিক অনিশ্চয়তা ও প্রতিযোগিতার চাপের মধ্য দিয়ে ব্যাংককে পরিচালনা করতে পারেন।
+   Answer: As a result of the Liberation War, the banking-sector institutions were nationalized on a policy basis in 1972. At that time, private shares in banking-sector institutions were withdrawn, and, based on a proposal drawn up with educated people for the needs of the economy's exports, a government was formed to meet basic needs through the economic reconstruction of Bangladesh. In reality, both before and after the nationalization process, there was a lack of proper coordination between the banking and industrial sectors. In this situation, a major factor of that time, in terms of the head of government, was the Liberation War. <!-- verify -->
 
 ## Translation (19)
 
@@ -4846,8 +4781,6 @@ Answer:
     Answer: তিনি একেবারে শেষ মুহূর্তে চুক্তি থেকে সরে দাঁড়ানোর সিদ্ধান্ত নিলেন। এই আকস্মিক পদক্ষেপে সবাই হতভম্ব হয়ে গেল এবং গোটা প্রকল্পটিই ঝুঁকির মুখে পড়ল। তিনি যদি আগেভাগে দলকে জানাতেন, তবে আমরা সহজেই বিকল্প ব্যবস্থা করে নিতে পারতাম। এখন আমাদের সামনে সবকিছু নতুন করে শুরু করা ছাড়া আর কোনো উপায় নেই। এ থেকেই বোঝা যায়, মানুষের কথায় সবসময় নির্ভর করা চলে না।
 
 2. **বাংলায় অনুবাদ করুন:** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-Words have a lot of power. They can help or hint, bless or curse. Unkind words do a lot of harm, Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
-
 Words have a lot of power. They can help or hint, bless or curse. Unkind words do a lot of harm, Kind words do a lot of good. We can spoil a friends happiness by an unkind word, but cheer up a sad heart with a kind word, which costs nothing. A kind word is often more welcome than a costly present.
 
    Answer: শব্দের রয়েছে বিপুল শক্তি। শব্দ সাহায্য করতে পারে, আবার ইঙ্গিতও দিতে পারে; আশীর্বাদ দিতে পারে, আবার অভিশাপও দিতে পারে। নির্দয় কথা অনেক ক্ষতি করে, আর দয়ার কথা অনেক উপকার করে। একটি নির্দয় কথায় আমরা বন্ধুর আনন্দ নষ্ট করে দিতে পারি; আবার একটি মধুর কথায় বিষণ্ণ হৃদয়কেও প্রফুল্ল করে তুলতে পারি, অথচ তাতে কোনো খরচ হয় না। একটি দয়ার কথা প্রায়ই মূল্যবান উপহারের চেয়েও বেশি কাঙ্ক্ষিত হয়।
@@ -4864,8 +4797,6 @@ Answer: সাইবার নিরাপত্তা তথ্য ব্যব
    Answer: ভদ্রলোক তিনিই, যিনি কখনো অন্যকে কষ্ট দেন না। এই বর্ণনাটি সংক্ষিপ্ত, তবে যতদূর যায় ততদূর সঠিক। তিনি সর্বদা বিনয়ী ও বিবেচক। যা তাঁর সঙ্গীদের সামান্যতম আঘাতও দিতে পারে, তিনি সযত্নে তা এড়িয়ে চলেন।
 
 5. **বাংলায় অনুবাদ করুন:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
-> A gentleman is one who never causes pain to others. This description is short, but as far as it goes is correct. He is always polite and considerate. He carefully avoids whatever may cause even a slight shock with his associates.
-
 > A gentleman is one who never causes pain to others. This description is short, but as far as it goes is correct. He is always polite and considerate. He carefully avoids whatever may cause even a slight shock with his associates.
 
    Answer: ভদ্রলোক তিনিই, যিনি কখনো অন্যকে কষ্ট দেন না। এই বর্ণনাটি সংক্ষিপ্ত, তবে যতদূর যায় ততদূর সঠিক। তিনি সর্বদা বিনয়ী ও বিবেচক। যা তাঁর সঙ্গীদের সামান্যতম আঘাতও দিতে পারে, তিনি সযত্নে তা এড়িয়ে চলেন।
@@ -4922,9 +4853,6 @@ Answer: প্রশ্নটি `incomplete` — কেবল "English to Bangl
    **Translate the following passage into Bangla:**
    > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
 
-**Translate the following passage into Bangla:**
-   > Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
-
    Answer: ব্যাংকিং খাতে সক্ষমতা উন্নয়ন অত্যন্ত গুরুত্বপূর্ণ, কারণ দ্রুত পরিবর্তনশীল পরিস্থিতিতে এই শিল্পকে ক্রমবর্ধমান নতুন চ্যালেঞ্জ ও সুযোগের মুখোমুখি হতে হচ্ছে। জটিল আর্থিক পরিবেশে কার্যকরভাবে পথ চলার জন্য ব্যাংকিং পেশাজীবীদের জ্ঞান, দক্ষতা ও সামর্থ্য বাড়ানোই এর অন্তর্ভুক্ত। এর মধ্যে রয়েছে আর্থিক সাক্ষরতা, ঝুঁকি ব্যবস্থাপনা, নিয়ন্ত্রণ-বিধি পরিপালন এবং প্রযুক্তিগত দক্ষতার মতো ক্ষেত্রে প্রশিক্ষণ। ব্যাংকগুলো যখন উন্নত প্রযুক্তি ও ডিজিটাল ব্যাংকিং সমাধান গ্রহণ করছে, তখন পরিচালন-দক্ষতা ও গ্রাহকসেবার মান বাড়ানোর জন্য এসব হাতিয়ার কাজে লাগাতে বিশেষায়িত দক্ষতার প্রয়োজনীয়তা বেড়েই চলেছে। সক্ষমতা উন্নয়নের উদ্যোগগুলো নেতৃত্ব বিকাশের ওপরও গুরুত্ব দেয় — যাতে ঊর্ধ্বতন নির্বাহীদের মধ্যে কৌশলগত চিন্তা ও সিদ্ধান্ত গ্রহণের ক্ষমতা গড়ে ওঠে এবং তাঁরা অর্থনৈতিক অনিশ্চয়তা ও প্রতিযোগিতার চাপের মধ্য দিয়ে ব্যাংককে পরিচালনা করতে পারেন।
 
 10. **অনুবাদ সংক্রান্ত প্রশ্নাবলি।** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
@@ -4956,24 +4884,16 @@ Answer: প্রশ্নটি `incomplete` — "অনুবাদ সংক�
 11. **Translate the following passage into Bangla:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 “He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word.”
 
-“He decided to pull out of the agreement at the eleventh hour. This sudden move took everyone by surprise and put the entire project at stake. Had he informed the team beforehand, we could have easily made alternative arrangements. Now, we are left with no other choice but to start everything from scratch. It just goes to show that you cannot always take people at their word.”
-
     Answer: তিনি একেবারে শেষ মুহূর্তে চুক্তি থেকে সরে দাঁড়ানোর সিদ্ধান্ত নিলেন। এই আকস্মিক পদক্ষেপে সবাই হতভম্ব হয়ে গেল এবং গোটা প্রকল্পটিই ঝুঁকির মুখে পড়ল। তিনি যদি আগেভাগে দলকে জানাতেন, তবে আমরা সহজেই বিকল্প ব্যবস্থা করে নিতে পারতাম। এখন আমাদের সামনে সবকিছু নতুন করে শুরু করা ছাড়া আর কোনো উপায় নেই। এ থেকেই বোঝা যায়, মানুষের কথায় সবসময় নির্ভর করা চলে না।
 
 12. **Translate the following passage from English to Bangla:**
     > To become a good person is the most important thing for a person. He must try to be honest, just and kind in his personal life. This is his main duty. It is not difficult to understand the reason for this. The welfare of a state or a city depends largely on the moral character of its citizens.
     *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
-> To become a good person is the most important thing for a person. He must try to be honest, just and kind in his personal life. This is his main duty. It is not difficult to understand the reason for this. The welfare of a state or a city depends largely on the moral character of its citizens.
-    *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
-
     Answer: একজন মানুষের জন্য সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো ভালো মানুষ হওয়া। ব্যক্তিগত জীবনে তাকে সৎ, ন্যায়পরায়ণ ও দয়ালু হওয়ার চেষ্টা করতে হবে। এটিই তার প্রধান কর্তব্য। এর কারণ বোঝা কঠিন নয়। কোনো রাষ্ট্র বা নগরের কল্যাণ মূলত তার নাগরিকদের নৈতিক চরিত্রের ওপরই নির্ভর করে।
 
 13. **Translation (English to Bangla)**
     > Global investment in green economy-related..........
-    *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
-
-> Global investment in green economy-related..........
     *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
     Answer: প্রশ্নটি `incomplete` — অনুচ্ছেদটি অসম্পূর্ণভাবে লিপিবদ্ধ হয়েছে ("Global investment in green economy-related..........")। যতটুকু সংকেত পাওয়া যায় তার ভিত্তিতে একটি সম্ভাব্য পূর্ণ অনুচ্ছেদ ও তার অনুবাদ নিচে দেওয়া হলো।
@@ -5073,8 +4993,6 @@ Answer: প্রশ্নটি `incomplete` — কেবল বিষয়�
     - মন্তব্য: মূল অনুচ্ছেদ পাওয়া গেলে একই পদ্ধতিতে অনুবাদ করা যাবে।
 
 19. **Translate the following passage into Bengali.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-Honoring three medical scientists with the Nobel Medicine Prize 2020 for their homing in on the Hepatitis C has been widely acclaimed as a landmark achievement on the part of the Nobel Assembly at Karolinska Institutet. Awards like this will, undoubtedly, help the Nobel Committee regain a remarkable amount of its earlier prestige tainted by a couple of its decisions and internal scandals. The three Medicine award winners for this year are Americans Harvey Alter and Charles Rice along with Briton Michael Houghton. The world's medicinal research community has enough reasons to feel elated over the recognition extended to the trio. Their joint discovery had turned the page on protracted efforts to find a remedy to Hepatitis C. It is probably the deadliest of the blood-borne hepatitis after Hepatitis A and B.
-
 Honoring three medical scientists with the Nobel Medicine Prize 2020 for their homing in on the Hepatitis C has been widely acclaimed as a landmark achievement on the part of the Nobel Assembly at Karolinska Institutet. Awards like this will, undoubtedly, help the Nobel Committee regain a remarkable amount of its earlier prestige tainted by a couple of its decisions and internal scandals. The three Medicine award winners for this year are Americans Harvey Alter and Charles Rice along with Briton Michael Houghton. The world's medicinal research community has enough reasons to feel elated over the recognition extended to the trio. Their joint discovery had turned the page on protracted efforts to find a remedy to Hepatitis C. It is probably the deadliest of the blood-borne hepatitis after Hepatitis A and B.
 
     Answer: হেপাটাইটিস সি শনাক্তকরণে অবদানের জন্য তিন চিকিৎসাবিজ্ঞানীকে ২০২০ সালের নোবেল চিকিৎসা পুরস্কারে ভূষিত করাকে ক্যারোলিনস্কা ইনস্টিটিউটের নোবেল অ্যাসেম্বলির পক্ষ থেকে একটি যুগান্তকারী অর্জন হিসেবে ব্যাপকভাবে প্রশংসিত হয়েছে। এ ধরনের পুরস্কার নিঃসন্দেহে নোবেল কমিটিকে তার পূর্বের সেই মর্যাদার একটি উল্লেখযোগ্য অংশ ফিরে পেতে সহায়তা করবে, যা কয়েকটি সিদ্ধান্ত ও অভ্যন্তরীণ কলঙ্কের কারণে কলুষিত হয়েছিল। এ বছর চিকিৎসাশাস্ত্রে পুরস্কারপ্রাপ্ত তিনজন হলেন — মার্কিন বিজ্ঞানী হার্ভি অল্টার ও চার্লস রাইস এবং ব্রিটিশ বিজ্ঞানী মাইকেল হাউটন। এই তিনজনকে দেওয়া এই স্বীকৃতিতে উল্লসিত হওয়ার যথেষ্ট কারণ রয়েছে বিশ্বের চিকিৎসা-গবেষণা মহলের। তাঁদের যৌথ আবিষ্কার হেপাটাইটিস সি-এর প্রতিষেধক খোঁজার দীর্ঘ প্রয়াসের ইতিহাসে নতুন অধ্যায়ের সূচনা করেছে। হেপাটাইটিস এ ও বি-এর পর রক্তবাহিত হেপাটাইটিসগুলোর মধ্যে সম্ভবত এটিই সবচেয়ে প্রাণঘাতী।
@@ -5277,15 +5195,6 @@ Answer:
    Answer: আবহমান বাংলার সংস্কৃতি ও ঐতিহ্যের মূল ভিত্তি হলো নানা জাতি, ধর্ম ও পেশার মানুষের সম্প্রীতি ও যৌথ জীবনযাত্রা। শ্রমজীবী মানুষের কঠোর পরিশ্রম, পারস্পরিক সৌহার্দ্য এবং ধর্মীয় ও সাংস্কৃতিক মেলবন্ধনই চিরন্তন বাংলাদেশের শাশ্বত রূপ প্রকাশ করে।
 
 4. **সারমর্ম লিখুন:** *[বাংলা, বিষয় কোড: ১০১, মান: ৪০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-> বহু মিশ্র প্রাণের সংসারে
-> সেই বাংলাদেশে ছিল সহস্রের একটি কাহিনী
-> কোরানে-পুরাণে-শিল্পে, পালা-পার্বনের ঢাকে ঢোলে
-> বাউল বাউল নাচে; পুণ্যাহের সানাই রঞ্জিত
-> রোদ্দুরে আকাশতলে দেশ কারা হাটে যায়, মাঝি
-> পাল তোলে, তাঁতি বোনে, খড়ে-ছাওয়া ঘরের অঙ্গনে
-> মাঠে ঘাটে-শ্রমসঙ্গী নানা জাতি ধর্মের বসতি
-> চিরদিন বাংলাদেশ।
-
 > বহু মিশ্র প্রাণের সংসারে
 > সেই বাংলাদেশে ছিল সহস্রের একটি কাহিনী
 > কোরানে-পুরাণে-শিল্পে, পালা-পার্বনের ঢাকে ঢোলে
