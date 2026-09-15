@@ -98,18 +98,18 @@ Answer: The language is: an optional sign, then one or more digits, then optiona
    |---|---|---|
    | q0 | Start — nothing read yet | No |
    | q1 | Sign read, waiting for the first digit | No |
-   | q2 | Reading the integer part `n` | **Yes** — accepts `+12`, `-7`, `45` |
+   | q2 | Reading the integer part `n` | Yes — accepts `+12`, `-7`, `45` |
    | q3 | Dot read, waiting for the first fraction digit | No |
-   | q4 | Reading the fraction part `m` | **Yes** — accepts `3.14`, `-0.5` |
+   | q4 | Reading the fraction part `m` | Yes — accepts `3.14`, `-0.5` |
 
    Why q1 and q3 are NOT final
    - q1 is not final because a lone `+` or `-` is not a number.
    - q3 is not final because `12.` has an empty fraction part, and `m` must be non-empty.
 
    Traces
-   - `-3.14` : q0 →(-)→ q1 →(3)→ q2 →(.)→ q3 →(1)→ q4 →(4)→ q4. Ends in q4 → **accepted**.
-   - `12` : q0 →(1)→ q2 →(2)→ q2. Ends in q2 → **accepted**.
-   - `12.` : ends in q3, not a final state → **rejected**, correctly.
+   - `-3.14` : q0 →(-)→ q1 →(3)→ q2 →(.)→ q3 →(1)→ q4 →(4)→ q4. Ends in q4 → accepted.
+   - `12` : q0 →(1)→ q2 →(2)→ q2. Ends in q2 → accepted.
+   - `12.` : ends in q3, not a final state → rejected, correctly.
 
 4. **State diagram of DFA using binary strings having 0 with multiple of 3 on input \{0,1\}. Also showing regular expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 836-837 (ET: N/A)], [Janata Bank Assistant System Administrator 2021 compact it 938 (ET: N/A)]*
 
@@ -131,7 +131,7 @@ Answer: The language is all binary strings in which the NUMBER OF 0s is a multip
 
    | State | Number of 0s seen so far | Final? |
    |---|---|---|
-   | q0 | count mod 3 = 0 | **Yes** |
+   | q0 | count mod 3 = 0 | Yes |
    | q1 | count mod 3 = 1 | No |
    | q2 | count mod 3 = 2 | No |
 
@@ -169,7 +169,7 @@ Answer: A binary number is divisible by 4 exactly when its last TWO bits are `00
 
    | State | Meaning | Final? |
    |---|---|---|
-   | q0 | Nothing read yet, or the string ends in `00` | **Yes** |
+   | q0 | Nothing read yet, or the string ends in `00` | Yes |
    | q1 | The string ends in `1` | No |
    | q2 | The string ends in `10` | No |
 
@@ -232,16 +232,16 @@ Answer:
 
    Components of a finite automaton
    - A finite automaton is formally a 5-tuple `M = (Q, Σ, δ, q₀, F)`:
-   - **Q** — a non-empty finite set of states.
-   - **Σ** — a non-empty finite set of input symbols, the alphabet.
-   - **δ** — the transition function, which decides the next state from the current state and input symbol.
-   - **q₀** — the start state, a member of Q.
-   - **F** — the set of final (accepting) states, a subset of Q.
+   - Q — a non-empty finite set of states.
+   - Σ — a non-empty finite set of input symbols, the alphabet.
+   - δ — the transition function, which decides the next state from the current state and input symbol.
+   - q₀ — the start state, a member of Q.
+   - F — the set of final (accepting) states, a subset of Q.
 
    Physically the model has three parts
-   - **Input tape** — holds the input string, divided into cells.
-   - **Read head** — reads one symbol at a time and moves only to the right.
-   - **Finite control** — holds the current state and applies the transition function.
+   - Input tape — holds the input string, divided into cells.
+   - Read head — reads one symbol at a time and moves only to the right.
+   - Finite control — holds the current state and applies the transition function.
 
    DFA vs NFA
 
@@ -348,14 +348,14 @@ Answer:
        G --> H[Target machine code]
    ```
 
-   - **Lexical analysis** — scans the character stream, groups characters into lexemes and outputs tokens such as `id`, `num`, `+`, `if`. Removes whitespace and comments.
-   - **Syntax analysis (parsing)** — checks the token sequence against the language grammar and builds a parse tree. Reports syntax errors such as a missing semicolon.
-   - **Semantic analysis** — checks meaning: type compatibility, undeclared variables, wrong number of function arguments. Produces an annotated parse tree.
-   - **Intermediate code generation** — produces a machine-independent representation such as three-address code, which makes the compiler portable across target machines.
-   - **Code optimization** — improves the intermediate code by removing dead code, folding constants and moving loop-invariant computations out of loops.
-   - **Code generation** — converts the optimised intermediate code into target machine code, allocating registers and memory.
+   - Lexical analysis — scans the character stream, groups characters into lexemes and outputs tokens such as `id`, `num`, `+`, `if`. Removes whitespace and comments.
+   - Syntax analysis (parsing) — checks the token sequence against the language grammar and builds a parse tree. Reports syntax errors such as a missing semicolon.
+   - Semantic analysis — checks meaning: type compatibility, undeclared variables, wrong number of function arguments. Produces an annotated parse tree.
+   - Intermediate code generation — produces a machine-independent representation such as three-address code, which makes the compiler portable across target machines.
+   - Code optimization — improves the intermediate code by removing dead code, folding constants and moving loop-invariant computations out of loops.
+   - Code generation — converts the optimised intermediate code into target machine code, allocating registers and memory.
 
-   - Two supporting components run alongside all six phases: the **symbol table manager**, which stores identifier names, types and scopes, and the **error handler**.
+   - Two supporting components run alongside all six phases: the symbol table manager, which stores identifier names, types and scopes, and the error handler.
 
 4. **Define an Interpreted language.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823 (ET: BUET)]*
 
@@ -479,7 +479,7 @@ Answer: A grammar is ambiguous if a single string has MORE THAN ONE parse tree (
    - Value with id = 2, 3, 4 : `(2 + 3) × 4 = 20`
 
    Conclusion
-   - The same string `id + id * id` produces two distinct parse trees and two distinct leftmost derivations, giving two different values. Therefore the grammar is **ambiguous**.
+   - The same string `id + id * id` produces two distinct parse trees and two distinct leftmost derivations, giving two different values. Therefore the grammar is ambiguous.
 
    How to remove the ambiguity
    - The grammar carries no precedence or associativity information. Rewriting it with separate levels fixes this:
@@ -537,7 +537,7 @@ Answer: To prove ambiguity, two different parse trees must be produced for the s
 
    Result
    - Both derivations are leftmost and both produce exactly the string `id + id * id`, yet the parse trees differ.
-   - Hence the grammar is **ambiguous**. Proved.
+   - Hence the grammar is ambiguous. Proved.
 
    Why this matters in practice
    - A compiler using this grammar could not decide whether `2 + 3 * 4` means 14 or 20. Ambiguous grammars are therefore unusable for parsing, and the grammar must be rewritten with precedence levels (`E → E + T | T`, `T → T * F | F`, `F → id`) before a parser can be built from it.
@@ -721,7 +721,7 @@ Answer:
 
 1. **(a) How does a compiler handle comments in source code?** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 483 (ET: N/A)]*
 
-Answer: Comments are removed during **lexical analysis**, the very first phase of the compiler. They never reach the parser and never appear in the generated code.
+Answer: Comments are removed during lexical analysis, the very first phase of the compiler. They never reach the parser and never appear in the generated code.
 
    How it works
    - The lexical analyzer (scanner) reads the source character by character.
@@ -765,33 +765,33 @@ Answer: The C statement was not printed with the question, so the counting metho
    | 9 | `)` | Punctuation |
    | 10 | `;` | Punctuation |
 
-   - Total = **10 tokens**.
+   - Total = 10 tokens.
 
    The two traps in this kind of question
    - A string literal counts as ONE token no matter how long it is, and whatever is inside it (`%d`, `&`, spaces, commas) is never tokenized.
    - Every bracket, comma and semicolon is a separate token, which students often forget to count.
 
    Second example — `int a = b + 5;`
-   - `int`, `a`, `=`, `b`, `+`, `5`, `;` → **7 tokens**. Spaces are ignored, so `int a=b+5;` gives exactly the same count.
+   - `int`, `a`, `=`, `b`, `+`, `5`, `;` → 7 tokens. Spaces are ignored, so `int a=b+5;` gives exactly the same count.
 
 3. **Why we optimize algorithm when it runs in compile time?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 858 (ET: N/A)]*
 
 Answer: Code optimization is done at COMPILE time because it is a one-time cost that pays off on every single run of the program.
 
    Reasons for optimizing at compile time
-   - **Pay once, benefit forever** — the program is compiled once but executed thousands of times. Time spent optimizing during compilation is amortised across every run.
-   - **No run-time overhead** — an optimization performed while running would itself consume CPU cycles, cancelling part of the benefit.
-   - **Full program visibility** — at compile time the whole source is available, so the compiler can see across functions and loops. At run time only the current instruction is in view.
-   - **Faster execution** — removing redundant work directly reduces the number of instructions executed.
-   - **Less memory and power** — fewer instructions and better register use mean smaller code and lower energy consumption, which matters on embedded and mobile devices.
+   - Pay once, benefit forever — the program is compiled once but executed thousands of times. Time spent optimizing during compilation is amortised across every run.
+   - No run-time overhead — an optimization performed while running would itself consume CPU cycles, cancelling part of the benefit.
+   - Full program visibility — at compile time the whole source is available, so the compiler can see across functions and loops. At run time only the current instruction is in view.
+   - Faster execution — removing redundant work directly reduces the number of instructions executed.
+   - Less memory and power — fewer instructions and better register use mean smaller code and lower energy consumption, which matters on embedded and mobile devices.
 
    Typical compile-time optimizations
-   - **Constant folding** — `x = 4 * 5;` becomes `x = 20;` at compile time, so the multiplication never runs.
-   - **Dead code elimination** — code that can never execute, or whose result is never used, is removed.
-   - **Loop-invariant code motion** — a computation that gives the same result every iteration is moved outside the loop.
-   - **Common subexpression elimination** — `a*b` computed twice is computed once and reused.
-   - **Strength reduction** — `x * 2` becomes `x << 1`, which is cheaper.
-   - **Inline expansion** — a small function body replaces the call, removing call overhead.
+   - Constant folding — `x = 4 * 5;` becomes `x = 20;` at compile time, so the multiplication never runs.
+   - Dead code elimination — code that can never execute, or whose result is never used, is removed.
+   - Loop-invariant code motion — a computation that gives the same result every iteration is moved outside the loop.
+   - Common subexpression elimination — `a*b` computed twice is computed once and reused.
+   - Strength reduction — `x * 2` becomes `x << 1`, which is cheaper.
+   - Inline expansion — a small function body replaces the call, removing call overhead.
 
    - Balance to note: heavy optimization makes compilation slower and can make debugging harder, since the generated code no longer matches the source line by line. This is why compilers offer levels such as `-O0` for development and `-O2` or `-O3` for release builds.
    - JIT compilers do optimize at run time, but only because they can observe actual execution behaviour — a different trade-off, not a replacement.
@@ -801,18 +801,18 @@ Answer: Code optimization is done at COMPILE time because it is a one-time cost 
 Answer: A semantic error is an error of MEANING. The statement follows the grammar of the language correctly, so it passes syntax analysis, but it makes no sense according to the language's rules. It is caught in the third phase of the compiler, semantic analysis.
 
    Common semantic errors
-   - **Type mismatch** — `int x = "hello";` assigning a string to an integer.
-   - **Undeclared variable** — using `y` when `y` was never declared.
-   - **Multiple declaration** — declaring the same identifier twice in one scope.
-   - **Wrong number or type of arguments** — calling `add(5)` when `add` needs two parameters.
-   - **Return type mismatch** — a function declared `int` returning a string.
-   - **Operator misuse** — applying `%` to floating-point operands in C.
-   - **Array misuse** — indexing a non-array variable, or using a non-integer subscript.
-   - **Scope violation** — accessing a variable outside the block where it was declared.
+   - Type mismatch — `int x = "hello";` assigning a string to an integer.
+   - Undeclared variable — using `y` when `y` was never declared.
+   - Multiple declaration — declaring the same identifier twice in one scope.
+   - Wrong number or type of arguments — calling `add(5)` when `add` needs two parameters.
+   - Return type mismatch — a function declared `int` returning a string.
+   - Operator misuse — applying `%` to floating-point operands in C.
+   - Array misuse — indexing a non-array variable, or using a non-integer subscript.
+   - Scope violation — accessing a variable outside the block where it was declared.
 
    How the compiler detects them
    - The semantic analyzer walks the parse tree produced by the parser.
-   - It consults the **symbol table**, which stores each identifier's name, type and scope, and checks every use against it.
+   - It consults the symbol table, which stores each identifier's name, type and scope, and checks every use against it.
    - Type checking is the largest part of this work; the result is an annotated parse tree carrying type information.
 
    Where it sits among error types
@@ -873,12 +873,12 @@ Answer: The linker and the loader are the last two system programs in the path f
    ```
 
    Tasks of the LINKER
-   - **Combine object files** — merges several `.o` files produced from different source files into one executable.
-   - **Resolve external references** — if `main.c` calls `add()` defined in `math.c`, the compiler leaves the address blank. The linker fills in the real address.
-   - **Link libraries** — attaches library code such as `printf` from the C standard library.
-   - **Relocation of addresses** — adjusts the addresses in each object file so they do not overlap when combined.
-   - **Build the symbol table** — records every function and global variable name with its final address.
-   - **Report unresolved symbols** — if a function is called but never defined anywhere, the linker reports "undefined reference".
+   - Combine object files — merges several `.o` files produced from different source files into one executable.
+   - Resolve external references — if `main.c` calls `add()` defined in `math.c`, the compiler leaves the address blank. The linker fills in the real address.
+   - Link libraries — attaches library code such as `printf` from the C standard library.
+   - Relocation of addresses — adjusts the addresses in each object file so they do not overlap when combined.
+   - Build the symbol table — records every function and global variable name with its final address.
+   - Report unresolved symbols — if a function is called but never defined anywhere, the linker reports "undefined reference".
 
    Example
    ```bash
@@ -889,12 +889,12 @@ Answer: The linker and the loader are the last two system programs in the path f
    - Forgetting `math.o` gives the classic error `undefined reference to 'add'` — that message comes from the linker, not the compiler.
 
    Tasks of the LOADER
-   - **Load the executable into memory** — copies the code and data from disk into RAM.
-   - **Allocate memory** — reserves space for the text, data, heap and stack segments.
-   - **Final relocation** — adjusts addresses to the actual memory location where the program was placed.
-   - **Resolve dynamic libraries** — loads shared libraries (`.so` on Linux, `.dll` on Windows) and binds their symbols at load time.
-   - **Set up the execution environment** — initialises registers, the stack pointer and command-line arguments.
-   - **Transfer control** — jumps to the entry point so execution begins.
+   - Load the executable into memory — copies the code and data from disk into RAM.
+   - Allocate memory — reserves space for the text, data, heap and stack segments.
+   - Final relocation — adjusts addresses to the actual memory location where the program was placed.
+   - Resolve dynamic libraries — loads shared libraries (`.so` on Linux, `.dll` on Windows) and binds their symbols at load time.
+   - Set up the execution environment — initialises registers, the stack pointer and command-line arguments.
+   - Transfer control — jumps to the entry point so execution begins.
 
    Example
    ```bash
@@ -910,7 +910,7 @@ Answer: The linker and the loader are the last two system programs in the path f
    | Main job | Combine modules and resolve symbols | Place the program in RAM and start it |
    | Part of | The toolchain (`ld`) | The operating system |
 
-   - Two kinds of linking: **static linking** copies library code into the executable, making it larger but self-contained; **dynamic linking** leaves it to the loader, giving smaller files and shared library updates.
+   - Two kinds of linking: static linking copies library code into the executable, making it larger but self-contained; dynamic linking leaves it to the loader, giving smaller files and shared library updates.
 
 ## Compiler Design & Theory of Computation (1)
 
