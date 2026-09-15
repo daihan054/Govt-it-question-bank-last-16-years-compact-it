@@ -4192,7 +4192,30 @@ Answer: Two-Factor Authentication means verifying a user's identity using two in
 
 ## Cryptography & Network Security (14)
 
-1. **What is difference between SHA and RSA algorithm?** *[EGCB Sub-Assistant Engineer (ICT) 08.10.2021 compact it 838 (ET: BUET)]*
+1. **(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*
+
+   Answer: Two-Factor Authentication (2FA) is a security process that requires a user to provide two independent proofs of identity from two different categories before access is granted. Even if an attacker steals the password, the account remains safe because the second factor is missing.
+
+   The three factor categories:
+   - Something you know — password, PIN, security answer.
+   - Something you have — smartphone, hardware key (YubiKey), smart card.
+   - Something you are — fingerprint, face ID, iris scan.
+
+   True 2FA picks one factor from two different categories. Picking two from the same category (e.g., password + security question) is NOT 2FA.
+
+   Example — Online bank login:
+   - Step 1 (something you know): user enters username + password.
+   - Step 2 (something you have): bank sends a 6-digit OTP to the registered mobile; user enters it within 30 seconds.
+   - Access granted only after both steps pass.
+
+   Common 2FA methods:
+   - SMS OTP — quick but vulnerable to SIM-swapping.
+   - Authenticator app (Google Authenticator, TOTP) — generates a time-based code every 30 s; more secure.
+   - Push notification — approve/deny tap on a trusted device.
+   - Hardware key (YubiKey) — plug into USB; phishing-resistant.
+   - Biometric — fingerprint or Face ID on the device.
+
+2. **What is difference between SHA and RSA algorithm?** *[EGCB Sub-Assistant Engineer (ICT) 08.10.2021 compact it 838 (ET: BUET)]*
 
 Answer:
 
