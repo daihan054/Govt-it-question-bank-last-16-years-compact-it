@@ -7052,6 +7052,695 @@ Answer:
     DROP VIEW HighSalaryEmployees;
     ```
 
+## ER Diagram & Database Design (25)
+
+1. **BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints.** *[BSCCPL AME 21-08-2026 (BUET)]*
+
+   Answer:
+
+   ```mermaid
+   erDiagram
+       JOB ||--o{ APPLICANT : "receives applications from"
+       JOB {
+           string Job_ID PK
+           string Job_Title
+           float Starting_Salary
+           string Job_Description
+       }
+       APPLICANT {
+           string Applicant_ID PK
+           string Name
+           date DOB
+           date Joining_Date
+           string Contact_Info
+       }
+   ```
+   - Cardinality: one `JOB` can receive many `APPLICANT` rows (1:N), so `Applicant_ID` is not enough to determine the job — instead each applicant row carries a `Job_ID` foreign key.
+   - Participation: `APPLICANT`'s participation in "applies for" is total (an applicant record only exists because they applied for a job), while `JOB`'s participation is partial (a job can exist with zero applicants so far).
+
+2. **(a) Design an ER diagram for a library management systems where- (i) A library has multiple books. (ii) Each book can have multiple copies.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1349 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   erDiagram
+       LIBRARY ||--o{ BOOK : has
+       BOOK ||--o{ COPY : has
+       LIBRARY {
+           string Library_ID PK
+           string Library_Name
+       }
+       BOOK {
+           string Book_ID PK
+           string Library_ID FK
+           string Title
+           string Author
+       }
+       COPY {
+           string Copy_ID PK
+           string Book_ID FK
+           string Status
+       }
+   ```
+   - `LIBRARY` to `BOOK` is 1:N (one library has many books), and `BOOK` to `COPY` is also 1:N (one book title has many physical copies), so `Copy_ID` alone is not the whole picture — each copy's `Status` (available/issued) is tracked per physical copy, not per title.
+
+3. **(খ) নিচের ডেটাবেস অনুযায়ী ER ডায়াগ্রাম তৈরি করুন: Worker(Worker ID, Worker Name, Hour Rate, Skill Type), Assignment(Worker ID, Building ID, Start Date, Num Days), Building(Building ID, Address, Building Type)** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 415 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   erDiagram
+       WORKER ||--o{ ASSIGNMENT : has
+       BUILDING ||--o{ ASSIGNMENT : has
+       WORKER {
+           string Worker_ID PK
+           string Worker_Name
+           float Hour_Rate
+           string Skill_Type
+       }
+       BUILDING {
+           string Building_ID PK
+           string Address
+           string Building_Type
+       }
+       ASSIGNMENT {
+           string Worker_ID FK
+           string Building_ID FK
+           date Start_Date
+           int Num_Days
+       }
+   ```
+   - `ASSIGNMENT` is a many-to-many bridge table between `WORKER` and `BUILDING`: one worker can be assigned to many buildings, and one building can have many workers assigned to it. Its primary key is the combination `(Worker_ID, Building_ID)`.
+
+4. **Consider the Schema employee(id, name, salary), equipment(id, name, price), hire(employee_id, equipment_id). (i) Draw the ERD digram for the relation (ii) Write the SQL query to show the name of employee who borrow the maximum equipment?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 462 (ET: BUET)]*
+
+   Answer:
+
+   (i) ER diagram
+   ```mermaid
+   erDiagram
+       EMPLOYEE ||--o{ HIRE : makes
+       EQUIPMENT ||--o{ HIRE : "is hired in"
+       EMPLOYEE {
+           string id PK
+           string name
+           float salary
+       }
+       EQUIPMENT {
+           string id PK
+           string name
+           float price
+       }
+       HIRE {
+           string employee_id FK
+           string equipment_id FK
+       }
+   ```
+
+   (ii) SQL query
+   ```sql
+   SELECT e.name, COUNT(h.equipment_id) AS equipment_count
+   FROM employee e
+   JOIN hire h ON e.id = h.employee_id
+   GROUP BY e.id, e.name
+   ORDER BY equipment_count DESC
+   LIMIT 1;
+   ```
+   - `GROUP BY` counts how many equipment rows each employee hired, and ordering by that count descending with `LIMIT 1` returns the employee who has hired the most equipment.
+
+5. **Develop an entity relationship diagram that describes data objects, relationships and attributes of the following system: A web based order processing system for a computer store.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   erDiagram
+       CUSTOMER ||--o{ ORDER : places
+       ORDER ||--o{ ORDER_ITEM : contains
+       PRODUCT ||--o{ ORDER_ITEM : "appears in"
+       CUSTOMER {
+           string cust_id PK
+           string name
+           string address
+       }
+       ORDER {
+           string order_id PK
+           string cust_id FK
+           date order_date
+           string status
+       }
+       PRODUCT {
+           string product_id PK
+           string name
+           float price
+           int stock_qty
+       }
+       ORDER_ITEM {
+           string order_id FK
+           string product_id FK
+           int quantity
+       }
+   ```
+   - `ORDER_ITEM` is the junction entity that resolves the many-to-many relationship between `ORDER` and `PRODUCT` (one order can contain many products, one product can appear in many orders).
+
+6. **Draw a ER diagram for BPL.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
+
+   Answer: The exact requirements for "BPL" were not printed with the question, so a Bangladesh Premier League-style sports database is used to show the method.
+
+   ```mermaid
+   erDiagram
+       TEAM ||--o{ PLAYER : has
+       TEAM ||--o{ MATCH : "plays in"
+       PLAYER ||--o{ PERFORMANCE : records
+       MATCH ||--o{ PERFORMANCE : has
+       TEAM {
+           string team_id PK
+           string team_name
+       }
+       PLAYER {
+           string player_id PK
+           string team_id FK
+           string player_name
+           string role
+       }
+       MATCH {
+           string match_id PK
+           date match_date
+           string venue
+       }
+       PERFORMANCE {
+           string player_id FK
+           string match_id FK
+           int runs
+           int wickets
+       }
+   ```
+
+7. **How can you define the ER model in DBMS?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
+
+   Answer: The Entity-Relationship (ER) model is a high-level conceptual data model that describes a database in terms of entities, their attributes, and the relationships between them, before it is translated into actual tables.
+
+   Key components
+   - Entity — a real-world object or concept the database stores data about (e.g., Student, Course).
+   - Attribute — a property describing an entity (e.g., a Student's name, roll number).
+   - Relationship — an association between two or more entities (e.g., a Student "enrolls in" a Course).
+   - Represented visually as an ER diagram, using rectangles (entities), ovals (attributes) and diamonds (relationships) in the classical Chen notation.
+   - Purpose: it lets designers plan the database structure in an easy-to-understand way before writing any SQL.
+
+8. **Draw an entity diagram Student database management system from following statement: Student (data); Course (data); Report (data); Registration; Staff (data)** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   erDiagram
+       STUDENT ||--o{ REGISTRATION : makes
+       COURSE ||--o{ REGISTRATION : has
+       STUDENT ||--o{ REPORT : receives
+       STAFF ||--o{ REPORT : prepares
+       STUDENT {
+           string student_id PK
+           string name
+       }
+       COURSE {
+           string course_id PK
+           string course_name
+       }
+       REGISTRATION {
+           string student_id FK
+           string course_id FK
+           date reg_date
+       }
+       REPORT {
+           string report_id PK
+           string student_id FK
+           string staff_id FK
+       }
+       STAFF {
+           string staff_id PK
+           string name
+       }
+   ```
+
+9. **(ক) Entity-Relationship (ER) Diagram কেন ব্যবহার করা হয়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
+
+   Answer: An ER diagram is used to visually plan a database's structure — its entities, attributes and relationships — before any table is actually created, so design mistakes are caught early and the design is easy to communicate to non-technical stakeholders.
+
+   Reasons for using it
+   - Gives a clear, high-level picture of the whole system's data requirements.
+   - Helps identify primary keys, foreign keys and cardinalities before implementation.
+   - Serves as documentation and a communication tool between designers, developers and clients.
+
+   Example: `STUDENT` "enrolls in" `COURSE` — drawn as two rectangles connected by a diamond, showing at a glance that this is a many-to-many relationship, which then guides the designer to create a junction table for it.
+
+10. **(a) While converting E-R diagram into Tables, how is a Many-to-many relationship set between entities A and B is converted into database tables?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 804 (ET: N/A)]*
+
+    Answer: A many-to-many relationship cannot be stored as a foreign key on either side, so it is converted into a separate junction (bridge) table.
+
+    - Create a new table for the relationship itself, e.g., `A_B`.
+    - Give it two foreign key columns, one referencing `A`'s primary key and one referencing `B`'s primary key.
+    - Its own primary key is usually the combination of both foreign keys, `(A_id, B_id)`.
+    - Any attributes that belong to the relationship itself (e.g., "date enrolled" for Student-Course) are stored in this junction table, not in A or B.
+
+    ```sql
+    CREATE TABLE Enrollment (
+        student_id INT,
+        course_id INT,
+        enroll_date DATE,
+        PRIMARY KEY (student_id, course_id),
+        FOREIGN KEY (student_id) REFERENCES Student(student_id),
+        FOREIGN KEY (course_id) REFERENCES Course(course_id)
+    );
+    ```
+
+11. **Draw ER diagram for Titas Gas Transmission and Distribution Company limited. Relation between customer and meter. (full question টা পাওয়া যায়নি।)** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        CUSTOMER ||--|| METER : owns
+        CUSTOMER {
+            string customer_id PK
+            string name
+            string address
+        }
+        METER {
+            string meter_id PK
+            string customer_id FK
+            string meter_type
+            float last_reading
+        }
+    ```
+    - Modelled as one-to-one, since a residential gas customer typically has exactly one meter; if a customer could have multiple meters, the relationship would instead be drawn as `CUSTOMER ||--o{ METER`.
+
+12. **Draw ER diagram from a story.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 837 (ET: N/A)]*
+
+    Answer: The specific story was not printed with the question, so a generic bank customer-account story is used to show the method.
+
+    ```mermaid
+    erDiagram
+        CUSTOMER ||--o{ ACCOUNT : owns
+        ACCOUNT ||--o{ TRANSACTION : has
+        CUSTOMER {
+            string customer_id PK
+            string name
+            string nid
+        }
+        ACCOUNT {
+            string account_no PK
+            string customer_id FK
+            string account_type
+            float balance
+        }
+        TRANSACTION {
+            string txn_id PK
+            string account_no FK
+            date txn_date
+            float amount
+        }
+    ```
+
+13. **Draw E-R diagram of hospital management system. Hospital name "SKY Hospital Ltd.".** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        PATIENT ||--o{ APPOINTMENT : books
+        DOCTOR ||--o{ APPOINTMENT : attends
+        APPOINTMENT ||--o| PRESCRIPTION : results_in
+        PATIENT {
+            string patient_id PK
+            string name
+            date dob
+        }
+        DOCTOR {
+            string doctor_id PK
+            string name
+            string specialty
+        }
+        APPOINTMENT {
+            string appt_id PK
+            string patient_id FK
+            string doctor_id FK
+            date appt_date
+        }
+        PRESCRIPTION {
+            string prescription_id PK
+            string appt_id FK
+            string medicine
+        }
+    ```
+
+14. **Draw E-R diagram of Banking Management system. Bank name "SKY Bank Ltd.".** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        CUSTOMER ||--o{ ACCOUNT : holds
+        BRANCH ||--o{ ACCOUNT : manages
+        ACCOUNT ||--o{ TRANSACTION : has
+        CUSTOMER {
+            string customer_id PK
+            string name
+        }
+        BRANCH {
+            string branch_id PK
+            string branch_name
+        }
+        ACCOUNT {
+            string account_no PK
+            string customer_id FK
+            string branch_id FK
+            float balance
+        }
+        TRANSACTION {
+            string txn_id PK
+            string account_no FK
+            float amount
+            date txn_date
+        }
+    ```
+
+15. **Draw ER diagram for details of gas company data described. Bakharbad gas distribution Company has two types of customers i.e General and Industrial. General customer has customer ID, name, DOB, age (calculated from DOB). Industrial customer has all attributes of general customer with TAX number additionally. Meter has model and producer name. Every customer has one meter.** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 877 (ET: BUET)]*
+
+    Answer: This is a classic case for EER (Enhanced ER) specialisation/generalisation, since `Industrial Customer` is a specialised sub-type of `Customer` with an extra attribute.
+
+    ```mermaid
+    erDiagram
+        CUSTOMER ||--|| METER : has
+        CUSTOMER ||--o| INDUSTRIAL_CUSTOMER : "is a"
+        CUSTOMER {
+            string customer_id PK
+            string name
+            date dob
+        }
+        INDUSTRIAL_CUSTOMER {
+            string customer_id PK_FK
+            string tax_number
+        }
+        METER {
+            string meter_id PK
+            string customer_id FK
+            string model
+            string producer_name
+        }
+    ```
+    - `Age` is a derived attribute (calculated from `DOB`), so it is not stored as its own column.
+    - `INDUSTRIAL_CUSTOMER` inherits everything from `CUSTOMER` and adds `tax_number` — this is generalisation/specialisation, drawn with an ISA (is-a) relationship in the classical EER notation.
+
+16. **Draw the ER diagram where their relation named TEAM, PLAYER, MATCH** *[NWPGCL Assistant Engineer (IT) 03.12.2021 compact it 880 (ET: BUET)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        TEAM ||--o{ PLAYER : has
+        TEAM ||--o{ MATCH : plays
+        TEAM {
+            string team_id PK
+            string team_name
+        }
+        PLAYER {
+            string player_id PK
+            string team_id FK
+            string player_name
+        }
+        MATCH {
+            string match_id PK
+            string team1_id FK
+            string team2_id FK
+            date match_date
+        }
+    ```
+
+17. **Railway Service system ER diagram.** *[Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        PASSENGER ||--o{ TICKET : books
+        TRAIN ||--o{ TICKET : "is booked for"
+        TRAIN ||--o{ SCHEDULE : has
+        STATION ||--o{ SCHEDULE : "stops at"
+        PASSENGER {
+            string passenger_id PK
+            string name
+            string nid
+        }
+        TRAIN {
+            string train_id PK
+            string train_name
+        }
+        TICKET {
+            string ticket_id PK
+            string passenger_id FK
+            string train_id FK
+            date travel_date
+            string seat_no
+        }
+        STATION {
+            string station_id PK
+            string station_name
+        }
+        SCHEDULE {
+            string train_id FK
+            string station_id FK
+            string arrival_time
+            string departure_time
+        }
+    ```
+
+18. **(i) Draw ER diagram: Given a scenario about football Game (Game_no, game_time, game_name), Team (team-id, coach_id, team-name), Referee (Referee-id, Referee-name) Player (player-id, palyername, player-position), Stadium information (stadium-id, stadium-name, stadium-loc) Match (match_id, match_date, match_result). (ii) Convert the ER diagram to relations (Table)** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 928-929 (ET: CTI)], [Janata Bank Assistant System Administrator 2021 compact it 939 (ET: N/A)]*
+
+    Answer:
+
+    (i) ER diagram
+    ```mermaid
+    erDiagram
+        TEAM ||--o{ PLAYER : has
+        TEAM ||--o{ MATCH : plays
+        REFEREE ||--o{ MATCH : officiates
+        STADIUM ||--o{ MATCH : hosts
+        TEAM {
+            string team_id PK
+            string coach_id
+            string team_name
+        }
+        PLAYER {
+            string player_id PK
+            string team_id FK
+            string player_name
+            string player_position
+        }
+        REFEREE {
+            string referee_id PK
+            string referee_name
+        }
+        STADIUM {
+            string stadium_id PK
+            string stadium_name
+            string stadium_loc
+        }
+        MATCH {
+            string match_id PK
+            string team1_id FK
+            string team2_id FK
+            string referee_id FK
+            string stadium_id FK
+            date match_date
+            string match_result
+        }
+    ```
+
+    (ii) Converting to relations (tables)
+    - `Team(team_id PK, coach_id, team_name)`
+    - `Player(player_id PK, team_id FK, player_name, player_position)`
+    - `Referee(referee_id PK, referee_name)`
+    - `Stadium(stadium_id PK, stadium_name, stadium_loc)`
+    - `Match(match_id PK, team1_id FK, team2_id FK, referee_id FK, stadium_id FK, match_date, match_result)`
+    - Every entity becomes its own table with its primary key; every 1:N relationship becomes a foreign key placed on the "many" side, exactly as shown above.
+
+19. **Draw ER diagram (Self test)** *[Combined 4 Banks Assistant Programmer 2020 compact it 1009 (ET: DU)]*
+
+    Answer: The specific scenario was not printed with the question, so a simple, generic library ER diagram is shown as the standard self-test example.
+
+    ```mermaid
+    erDiagram
+        MEMBER ||--o{ LOAN : makes
+        BOOK ||--o{ LOAN : "is borrowed in"
+        MEMBER {
+            string member_id PK
+            string name
+        }
+        BOOK {
+            string book_id PK
+            string title
+        }
+        LOAN {
+            string loan_id PK
+            string member_id FK
+            string book_id FK
+            date due_date
+        }
+    ```
+
+20. **E-R Diagram কী? উদাহরণসহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1019-1020 (ET: N/A)]*
+
+    Answer: An E-R (Entity-Relationship) diagram is a visual representation of a database's entities, their attributes, and the relationships between them, used to plan the database before implementation.
+
+    - Entities are drawn as rectangles, attributes as ovals connected to their entity, and relationships as diamonds connecting entities.
+
+    Example
+    ```mermaid
+    erDiagram
+        STUDENT ||--o{ ENROLLMENT : makes
+        COURSE ||--o{ ENROLLMENT : has
+        STUDENT {
+            string student_id PK
+            string name
+        }
+        COURSE {
+            string course_id PK
+            string course_name
+        }
+        ENROLLMENT {
+            string student_id FK
+            string course_id FK
+        }
+    ```
+    - This shows at a glance that a `STUDENT` can enroll in many `COURSE`s and a `COURSE` can have many `STUDENT`s — a many-to-many relationship resolved with the `ENROLLMENT` junction entity.
+
+21. **Draw an ER diagram of a Library Management System.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036-1037 (ET: BUET)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        MEMBER ||--o{ LOAN : makes
+        BOOK ||--o{ LOAN : "is borrowed in"
+        BOOK ||--o{ COPY : has
+        MEMBER {
+            string member_id PK
+            string name
+            string address
+        }
+        BOOK {
+            string book_id PK
+            string title
+            string author
+        }
+        COPY {
+            string copy_id PK
+            string book_id FK
+            string status
+        }
+        LOAN {
+            string loan_id PK
+            string member_id FK
+            string copy_id FK
+            date issue_date
+            date due_date
+        }
+    ```
+
+22. **(ক) Database এর ক্ষেত্রে E-R Diagram বলতে কী বোঝায়? একটি উদাহরণের মাধ্যমে ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094 (ET: N/A)]*
+
+    Answer: In database design, an E-R diagram is the conceptual blueprint that shows what entities exist, what data (attributes) each holds, and how the entities relate to one another, before the actual tables are created.
+
+    Example: `DOCTOR` "treats" `PATIENT` — drawn as two entity rectangles joined by a "treats" relationship diamond, with `Doctor_ID` and `Patient_ID` as their respective primary keys, and cardinality `1:N` if one doctor can treat many patients.
+
+23. **Explain E-R diagram with example?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
+
+    Answer: An E-R diagram graphically models a database's entities, attributes and relationships so the structure can be understood and verified before implementation.
+
+    Example — a simple order system
+    ```mermaid
+    erDiagram
+        CUSTOMER ||--o{ ORDER : places
+        CUSTOMER {
+            string customer_id PK
+            string name
+        }
+        ORDER {
+            string order_id PK
+            string customer_id FK
+            date order_date
+        }
+    ```
+    - Reading it: one `CUSTOMER` can place many `ORDER`s (`||--o{` means "exactly one" on the customer side and "zero or many" on the order side), and `customer_id` becomes a foreign key inside the `ORDER` table once converted to a relational schema.
+
+24. **Daraz is proud of having up-to-date information on the processing and current location of each shipped item. Daraz relies on a company-wide information system. Shipped items are the heart of the Daraz product tracking information system. Shipped items can be characterized by item number, weight, dimensions, insurance amount, destination and final delivery date. Shipped items are received into the Daraz system at a single retail center. Retail center are characterized by their type, ID and address. Shipped items make their way to their destination via one or more standard Daraz transportation events (flights, truck deliveries). These transportation events are characterized by a schedule number, a type (e.g. flight, truck), and a delivery route. Please create an entity relationship diagram that captures this information about the Daraz system. Be certain to indicate identifiers and cardinality constraints.** *[Sonali & Janata Bank Senior Officer (IT/ICT) 2018 compact it 1166 (ET: N/A)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        RETAIL_CENTER ||--o{ SHIPPED_ITEM : receives
+        SHIPPED_ITEM }o--o{ TRANSPORT_EVENT : "moves via"
+        RETAIL_CENTER {
+            string center_id PK
+            string type
+            string address
+        }
+        SHIPPED_ITEM {
+            string item_number PK
+            string center_id FK
+            float weight
+            string dimensions
+            float insurance_amount
+            string destination
+            date final_delivery_date
+        }
+        TRANSPORT_EVENT {
+            string schedule_number PK
+            string type
+            string delivery_route
+        }
+    ```
+    - `RETAIL_CENTER` to `SHIPPED_ITEM` is 1:N — each item is received at exactly one retail center, but a center receives many items.
+    - `SHIPPED_ITEM` to `TRANSPORT_EVENT` is M:N — an item can travel through one or more transportation events, and one flight/truck event carries many items; this many-to-many link would become its own junction table (e.g., `Item_Transport(item_number, schedule_number, sequence_no)`) when converted to relations.
+
+25. **Design ER diagram for Online MCQ examination portal. Your design must contain separate entities for student, examination, question, solution and submission. Ensure that normalization is ful-fill in your design and identify the primary and foreign key.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196-1197 (ET: N/A)]*
+
+    Answer:
+
+    ```mermaid
+    erDiagram
+        STUDENT ||--o{ SUBMISSION : makes
+        EXAMINATION ||--o{ SUBMISSION : has
+        EXAMINATION ||--o{ QUESTION : contains
+        QUESTION ||--o| SOLUTION : has
+        STUDENT {
+            string student_id PK
+            string name
+        }
+        EXAMINATION {
+            string exam_id PK
+            string exam_name
+            date exam_date
+        }
+        QUESTION {
+            string question_id PK
+            string exam_id FK
+            string question_text
+        }
+        SOLUTION {
+            string question_id PK_FK
+            string correct_option
+        }
+        SUBMISSION {
+            string submission_id PK
+            string student_id FK
+            string exam_id FK
+            string selected_option
+            date submit_time
+        }
+    ```
+    - Every entity holds only attributes that depend solely on its own primary key (2NF/3NF respected) — for example, `SOLUTION`'s correct answer sits with `QUESTION` (1:1), not repeated inside every `SUBMISSION` row.
+    - Foreign keys: `SUBMISSION.student_id -> STUDENT`, `SUBMISSION.exam_id -> EXAMINATION`, `QUESTION.exam_id -> EXAMINATION`, `SOLUTION.question_id -> QUESTION`.
+
 ## Normalization & Database Design (23)
 
 1. **What is Normalization? How do 1NF and 2NF work in a database? Give examples.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
