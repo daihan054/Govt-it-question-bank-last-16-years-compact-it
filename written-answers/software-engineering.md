@@ -6106,6 +6106,479 @@ Answer: The test program below drives the sorting function and checks `two prope
 Answer:
     Penetration Testing (Ethical Hacking / Pen Testing) for a network service is an authorized simulated cyberattack performed on computer systems, network devices, and service ports to identify, safely exploit, and report security vulnerabilities (such as open ports, misconfigurations, and outdated protocols) before malicious attackers can exploit them.
 
+## UML Diagrams (Class, Use Case, Sequence) (14)
+
+1. **An e-commerce platform has Customers, Orders, and Payment methods (Credit Card, Mobile Banking). Draw a Class Diagram showing attributes, methods, and relationships (inheritance, association). [SO IT 25-07-2026]**
+
+Answer:
+   ```mermaid
+   classDiagram
+       class Customer {
+           +int customerId
+           +String name
+           +placeOrder()
+       }
+       class Order {
+           +int orderId
+           +float totalAmount
+           +calculateTotal()
+       }
+       class Payment {
+           <<abstract>>
+           +float amount
+           +pay()
+       }
+       class CreditCard {
+           +String cardNumber
+           +pay()
+       }
+       class MobileBanking {
+           +String walletNumber
+           +pay()
+       }
+       Customer "1" --> "many" Order : places
+       Order "1" --> "1" Payment : paid by
+       Payment <|-- CreditCard
+       Payment <|-- MobileBanking
+   ```
+   - Association: a Customer places many Orders (1-to-many); an Order is paid by exactly one Payment.
+   - Inheritance: CreditCard and MobileBanking both extend the abstract Payment class and override `pay()`.
+
+2. **Draw a Use Case Diagram for an Online Banking System with two actors: Customer and Bank Admin.**
+
+Answer:
+   ```mermaid
+   flowchart LR
+       Customer((Customer))
+       Admin((Bank Admin))
+       UC1([Login])
+       UC2([View Balance])
+       UC3([Transfer Funds])
+       UC4([Manage Accounts])
+       Customer --> UC1
+       Customer --> UC2
+       Customer --> UC3
+       Admin --> UC1
+       Admin --> UC4
+   ```
+   - Both actors sit outside the system boundary; each oval is a use case they can trigger. `Customer` handles day-to-day banking; `Bank Admin` handles account management. Both share `Login`.
+
+3. **Draw a class diagram for an E-commerce website where customer can view different products, can pay either by card or cash.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 401 (ET: BUET)]*
+
+Answer:
+   ```mermaid
+   classDiagram
+       class Customer {
+           +String name
+           +viewProduct()
+           +makePayment()
+       }
+       class Product {
+           +String name
+           +float price
+       }
+       class Payment {
+           <<abstract>>
+           +pay()
+       }
+       class CardPayment {
+           +pay()
+       }
+       class CashPayment {
+           +pay()
+       }
+       Customer --> Product : views
+       Customer --> Payment : makes
+       Payment <|-- CardPayment
+       Payment <|-- CashPayment
+   ```
+   - Customer views many Products (association) and makes one Payment; CardPayment and CashPayment both inherit from the abstract Payment class.
+
+4. **Consider the following buy a product description. Customer browses catalog, selects items to buy and then goes to check out. Customer fills in shipping information (address, receive time). System presents full pricing information and customer fills in credit card information. System authorizes purchase, confirms sale and sends confirming email to customer. Draw a use case diagram for the above system.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 424 (ET: BIBM)]*
+
+Answer:
+   ```mermaid
+   flowchart LR
+       Customer((Customer))
+       UC1([Browse Catalog])
+       UC2([Check Out])
+       UC3([Enter Shipping Info])
+       UC4([View Pricing])
+       UC5([Enter Payment Info])
+       UC6([Authorize Purchase])
+       Customer --> UC1
+       Customer --> UC2
+       UC2 -.include.-> UC3
+       UC2 -.include.-> UC4
+       UC2 -.include.-> UC5
+       UC5 --> UC6
+   ```
+   - `Check Out` is the main use case and `includes` shipping info, pricing display and payment entry as sub-steps, ending in the `Authorize Purchase` step that triggers the confirmation email.
+
+5. **Library management class diagram:** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
+
+Answer:
+   ```mermaid
+   classDiagram
+       class Member {
+           +int memberId
+           +String name
+           +borrowBook()
+       }
+       class Book {
+           +String title
+           +String isbn
+           +boolean isAvailable
+       }
+       class Librarian {
+           +issueBook()
+           +returnBook()
+       }
+       class Loan {
+           +Date issueDate
+           +Date dueDate
+       }
+       Member "1" --> "many" Loan : has
+       Loan "many" --> "1" Book : for
+       Librarian --> Loan : manages
+   ```
+   - A Member can have many Loans (borrowed books); each Loan links to exactly one Book; the Librarian manages the loan records.
+
+6. **Draw A class diagram. A token-ring based local area network (LAN) is a network consisting of nodes in which network packets are sent around. Every node has a unique name within the network, and refers to its next node. Different kinds of nodes exist: Workstations are originators of messages; servers and printers are network nodes that can receive messages. Packets contain an originator a destination and content, and are sent around on a network. A LAN is a circular configuration of nodes.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 438 (ET: BIBM)]*
+
+Answer:
+   ```mermaid
+   classDiagram
+       class Node {
+           +String name
+           +Node nextNode
+       }
+       class Workstation {
+           +sendPacket()
+       }
+       class Server {
+           +receivePacket()
+       }
+       class Printer {
+           +receivePacket()
+       }
+       class Packet {
+           +String originator
+           +String destination
+           +String content
+       }
+       class LAN {
+           +List~Node~ nodes
+       }
+       Node <|-- Workstation
+       Node <|-- Server
+       Node <|-- Printer
+       Node --> Node : next
+       LAN "1" --> "many" Node : contains
+       Workstation --> Packet : originates
+   ```
+   - Each Node has a self-referencing `next` association, forming the ring; Workstation, Server and Printer all inherit from the common Node class.
+
+7. **(খ) একটি লাইব্রেরি ব্যবস্থাপনা সিস্টেম এর জন্যে Use Case Diagram অঙ্কন করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   ```mermaid
+   flowchart LR
+       Member((Member))
+       Librarian((Librarian))
+       UC1([Search Book])
+       UC2([Borrow Book])
+       UC3([Return Book])
+       UC4([Add/Remove Book])
+       Member --> UC1
+       Member --> UC2
+       Member --> UC3
+       Librarian --> UC4
+       Librarian --> UC2
+   ```
+   - `Member` searches, borrows and returns books; `Librarian` manages the book catalog and also processes the borrow action.
+
+8. **How do you model the following situation with a UML class diagram the car fleet of a car rental contains multiple cars, one car belongs to exactly one car fleet.** *[BIWTA; Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
+
+Answer:
+   ```mermaid
+   classDiagram
+       class CarFleet {
+           +String fleetName
+       }
+       class Car {
+           +String plateNumber
+       }
+       CarFleet "1" *-- "many" Car : contains
+   ```
+   - This is a `Composition` relationship (filled diamond): a Car belongs to exactly one CarFleet, and if the CarFleet is removed, its Cars are considered removed from the fleet as well — the "many" side (Car) cannot exist independently of the "1" side (CarFleet) in this model.
+
+9. **(ক) Typical web-based login system এর জন্য sequence diagram আঁকুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 778 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   ```mermaid
+   sequenceDiagram
+       actor User
+       participant Browser
+       participant Server
+       participant Database
+       User->>Browser: Enter username & password
+       Browser->>Server: POST /login
+       Server->>Database: Check credentials
+       Database-->>Server: Valid/Invalid
+       alt Valid credentials
+           Server-->>Browser: Login success + session token
+       else Invalid credentials
+           Server-->>Browser: Login failed
+       end
+   ```
+   - The sequence shows the time order of messages: the user submits credentials, the server checks them against the database, and returns success or failure based on the result.
+
+10. **(c) Explain different type of relationships that are used in a UML diagram.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+    Answer:
+    - Association: a general "uses" or "has" link between two classes, e.g. a Student is associated with a Course.
+    - Aggregation (hollow diamond): a "has-a" relationship where the part can exist independently of the whole, e.g. a Department has Professors, but a Professor can exist without that Department.
+    - Composition (filled diamond): a stronger "has-a" where the part cannot exist without the whole, e.g. a House has Rooms; the Rooms are destroyed if the House is destroyed.
+    - Inheritance / Generalization (hollow triangle arrow): an "is-a" relationship, e.g. a Car is a Vehicle.
+    - Dependency (dashed arrow): one class uses another temporarily, e.g. a method parameter, without a permanent structural link.
+    - Realization (dashed arrow with hollow triangle): a class implements an interface.
+
+11. **Write down the use case diagram for ATM.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162-1163 (ET: N/A)]*
+
+    Answer:
+    ```mermaid
+    flowchart LR
+        Customer((Customer))
+        Bank((Bank System))
+        UC1([Insert Card & Enter PIN])
+        UC2([Withdraw Cash])
+        UC3([Check Balance])
+        UC4([Deposit Cash])
+        UC5([Print Mini Statement])
+        Customer --> UC1
+        Customer --> UC2
+        Customer --> UC3
+        Customer --> UC4
+        Customer --> UC5
+        UC2 --> Bank
+        UC3 --> Bank
+        UC4 --> Bank
+    ```
+    - The `Customer` actor interacts with the ATM for withdrawal, balance check, deposit and printing a statement; the ATM validates each transaction against the `Bank System`.
+
+12. **Draw UML diagram of composite design pattern.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
+
+    Answer:
+    ```mermaid
+    classDiagram
+        class Component {
+            <<interface>>
+            +operation()
+        }
+        class Leaf {
+            +operation()
+        }
+        class Composite {
+            +List~Component~ children
+            +operation()
+            +add(Component)
+        }
+        Component <|.. Leaf
+        Component <|.. Composite
+        Composite o-- Component : children
+    ```
+    - `Composite` pattern lets a client treat a single object (`Leaf`) and a group of objects (`Composite`) uniformly through the common `Component` interface — the `Composite` holds a list of `Component` children and calls `operation()` on each of them.
+
+13. **Write the use cases of withdrawing money for ATM card.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1223-1224 (ET: N/A)]*
+
+    Answer:
+    - Insert ATM card into the machine.
+    - Enter the correct PIN (main success scenario).
+    - Select "Withdraw Cash" and enter the amount.
+    - System checks the account balance and daily withdrawal limit.
+    - System dispenses cash and updates the account balance.
+    - System prints a receipt (optional) and ejects the card.
+    - Extension/exception cases: wrong PIN entered (retry, up to 3 attempts before the card is retained), insufficient balance (transaction rejected), machine out of cash (transaction cancelled).
+
+14. **Draw a high level use case diagram: Use case diagram for a visitor who want to login a page by using username password.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+
+    Answer:
+    ```mermaid
+    flowchart LR
+        Visitor((Visitor))
+        UC1([Enter Username & Password])
+        UC2([Validate Credentials])
+        UC3([Access Granted])
+        UC4([Access Denied])
+        Visitor --> UC1
+        UC1 --> UC2
+        UC2 -->|Valid| UC3
+        UC2 -->|Invalid| UC4
+    ```
+    - The visitor enters credentials, the system validates them, and the outcome is either granting access to the page or denying it and prompting a retry.
+
+## Software Architecture & Design Patterns (MVC) (13)
+
+1. **Why is it essential to maintain proper MVC structure in web applications?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
+
+Answer:
+   - It separates concerns: `Model` (data/business logic), `View` (presentation) and `Controller` (input handling) each change independently without breaking the others.
+   - Multiple developers can work on the UI and the business logic at the same time without conflicts.
+   - It makes the code easier to test, since business logic in the Model can be unit-tested without a UI.
+   - It improves maintainability and reusability — the same Model can serve multiple Views (e.g. a web page and a mobile app).
+
+2. **What is MVC? Write down the MVC design pattern.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
+
+Answer: `MVC (Model-View-Controller)` is an architectural pattern that splits an application into three interconnected parts.
+   ```mermaid
+   flowchart LR
+       User -->|input| Controller
+       Controller -->|updates| Model
+       Model -->|notifies| View
+       View -->|renders to| User
+       Controller -->|selects| View
+   ```
+   - `Model`: holds the application's data and business logic.
+   - `View`: displays the data to the user (the UI).
+   - `Controller`: receives user input, updates the Model, and chooses which View to render.
+
+3. **Name of few architecture in design pattern.** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 503 (ET: N/A)]*
+
+Answer:
+   - MVC (Model-View-Controller)
+   - MVVM (Model-View-ViewModel)
+   - Layered / N-tier Architecture
+   - Microservices Architecture
+   - Client-Server Architecture
+   - Event-Driven Architecture
+
+4. **What is software design pattern? What are the advantages?** *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 471 (ET: N/A)]*
+
+Answer: A software design pattern is a reusable, general solution to a commonly occurring problem in software design — not finished code, but a template that can be applied to many situations.
+   Advantages:
+   - Saves time by reusing proven solutions instead of solving a common problem from scratch.
+   - Makes the code more maintainable and easier for other developers to understand, since patterns use a shared vocabulary.
+   - Improves code flexibility and reusability.
+
+5. **Define design pattern. Write about singleton pattern.** *[BREB Assistant Programmer 18.02.2023 compact it 469 (ET: N/A)]*
+
+Answer: A design pattern is a reusable, proven solution template for a common software design problem.
+   The `Singleton pattern` ensures a class has only one instance in the whole application and provides one global point of access to it — commonly used for things like a database connection or a configuration manager.
+   ```java
+   class DatabaseConnection {
+       private static DatabaseConnection instance;
+       private DatabaseConnection() {}
+       public static DatabaseConnection getInstance() {
+           if (instance == null) instance = new DatabaseConnection();
+           return instance;
+       }
+   }
+   ```
+
+6. **We are going to create a Shape interface and concrete classes implementing the Shape interface. A facade class ShapeMaker is defined as a next step. ShapeMaker class uses the concrete classes to delegate user calls to these classes. FacadePatternDemo, our demo class, will use ShapeMaker class to show the results.** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 450 (ET: BUET)]*
+
+Answer: This describes the `Facade design pattern`, which provides one simplified interface to a set of more complex subsystem classes.
+   ```mermaid
+   classDiagram
+       class Shape {
+           <<interface>>
+           +draw()
+       }
+       class Circle { +draw() }
+       class Square { +draw() }
+       class ShapeMaker {
+           +drawCircle()
+           +drawSquare()
+       }
+       Shape <|.. Circle
+       Shape <|.. Square
+       ShapeMaker --> Circle
+       ShapeMaker --> Square
+   ```
+   - The client (`FacadePatternDemo`) only talks to `ShapeMaker`, without knowing that `ShapeMaker` internally creates and calls `Circle` or `Square` — this hides the subsystem's complexity behind one simple facade.
+
+7. **Imagine a scenario where new child classes are introduced frequently from a basic class. The method calling sequences for every child class are the same but the implementation is different among the child classes. Here which design pattern would you like to apply? Explain the reasons with examples to support your answer.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
+
+Answer: The `Template Method pattern` fits this scenario.
+   - It defines the overall algorithm's skeleton (the fixed calling sequence) in a base class method, while letting subclasses override individual steps with their own implementation.
+   - Example: a base class `ReportGenerator` has a method `generate()` that calls `fetchData()`, `formatData()`, `exportReport()` in that fixed order; each subclass (`PDFReport`, `ExcelReport`) overrides `formatData()` and `exportReport()` differently, but the calling sequence never changes.
+   - This is preferred over the Strategy pattern here because the `sequence itself is fixed and shared` — only individual step implementations vary, which is exactly the Template Method's use case.
+
+8. **(ক) 'ATM machine' এর Software Structure আঁকুন।** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   ```mermaid
+   flowchart TD
+       UI[User Interface Layer] --> Controller[Transaction Controller]
+       Controller --> Auth[Authentication Module]
+       Controller --> Trans[Transaction Module]
+       Trans --> DB[(Bank Database)]
+       Controller --> Hardware[Card Reader / Cash Dispenser]
+   ```
+   - The UI layer takes user input; the Controller coordinates authentication and transaction modules; the Transaction module talks to the bank's database, while the Controller also drives the physical hardware (card reader, cash dispenser).
+
+9. **(ii) Design the communication for the user login system for an MVC pattern framework.** *[NESCO Assistant Manager (ICT) 2021 compact it 907 (ET: BUET)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   ```mermaid
+   sequenceDiagram
+       actor User
+       participant View
+       participant Controller
+       participant Model
+       User->>View: Enter username/password
+       View->>Controller: submitLogin(credentials)
+       Controller->>Model: validateUser(credentials)
+       Model-->>Controller: valid / invalid
+       Controller-->>View: show result
+       View-->>User: display success or error
+   ```
+   - The View only forwards user input to the Controller; the Controller asks the Model to validate credentials against stored data, then tells the View what to display — the View never touches the Model directly.
+
+10. **(i) MVC framework কী? এর সুবিধাগুলো লিখুন।** *[BPSC Assistant Network Engineer 2020 compact it 960 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) MVC (Model-View-Controller) is an architectural framework that separates an application into a Model (data/logic), View (presentation) and Controller (input handling).
+    Advantages:
+    - Clear separation of concerns makes the code easier to maintain and extend.
+    - Multiple developers can work on the View and the Model in parallel.
+    - The same Model can support multiple Views (web, mobile).
+    - Easier unit testing, since business logic is isolated in the Model.
+
+11. **MVC framework কী? MVC Framework এর সুবিধাসমূহ লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1021 (ET: N/A)]*
+
+    Answer: (Answered in English, as required for IT topics.) MVC (Model-View-Controller) is a design pattern/framework that divides an application into three parts: Model (data and business rules), View (the user interface) and Controller (handles user input and updates the Model/View).
+    Advantages:
+    - Separation of concerns leads to cleaner, more maintainable code.
+    - Faster parallel development, since UI and logic teams can work independently.
+    - Improved reusability — one Model can drive several different Views.
+    - Simplified testing of business logic without needing the UI.
+
+12. **What is MVC? Write down the MVC design pattern.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175-1176 (ET: N/A)]*
+
+    Answer: MVC (Model-View-Controller) is an architectural pattern that separates an application's data, UI, and control logic into three components.
+    ```mermaid
+    flowchart LR
+        User -->|input| Controller
+        Controller -->|updates| Model
+        Model -->|notifies| View
+        View -->|renders to| User
+    ```
+    - `Model` manages data and business rules; `View` displays it; `Controller` accepts input and coordinates between Model and View — keeping each part independently changeable.
+
+13. **Explain desin pattern MVC with appropriate figure.** *[NESCO Manager (Software) 2018 compact it 1209 (ET: N/A)]*
+
+    Answer:
+    ```mermaid
+    flowchart LR
+        User -->|1: request| Controller
+        Controller -->|2: update| Model
+        Model -->|3: notify| View
+        View -->|4: fetch data| Model
+        View -->|5: display| User
+    ```
+    - Step 1: the user's action reaches the Controller. Step 2: the Controller updates the Model based on that action. Step 3-4: the View is notified and pulls the updated data from the Model. Step 5: the View renders the result back to the user — each component has one clear job, so a change in the UI (View) never requires touching the business logic (Model).
+
 ## Software Requirements Engineering (10)
 
 1. **What is the difference between functional and non-functional requirements? What is requirement validation?** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
