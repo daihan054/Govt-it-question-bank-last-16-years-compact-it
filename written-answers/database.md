@@ -9530,6 +9530,451 @@ Answer:
       - Once a transaction successfully commits, its changes are permanently written to non-volatile secondary storage and will survive subsequent power outages, hardware failures, or system crashes.
       - Managed by: Recovery Manager using write-ahead logging (WAL) and checkpointing.
 
+## Distributed & Parallel Databases (5)
+
+1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
+
+   Answer: Speedup and scaleup are the two standard measures used to judge how well a parallel or distributed database performs as resources are added.
+
+   Speedup
+   - Fixed problem size, increasing the number of processors. Ideal (linear) speedup means doubling the processors halves the execution time.
+   - `Speedup = Time on 1 processor / Time on N processors`
+   ```
+   Time
+    |\
+    | \
+    |  \___
+    |      \______
+    +------------------ Number of processors
+   ```
+   - In practice speedup flattens out (sub-linear) because of coordination and communication overhead between nodes.
+
+   Scaleup
+   - The problem size grows in proportion to the number of processors added, and the goal is to keep the response time constant.
+   - `Scaleup = Time on 1 processor for size S / Time on N processors for size N*S`
+   ```
+   Time
+    |______________
+    |
+    +------------------ Number of processors (and proportional data size)
+   ```
+   - A flat line means perfect (linear) scaleup: the system handles N times the data in the same time using N times the processors.
+
+2. **(ক) Data Fragmentation কী? ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
+
+   Answer: Data fragmentation is the process of splitting a relation into smaller pieces (fragments) and storing them at different sites of a distributed database, so each site keeps only the data it actually needs.
+
+   Types of fragmentation
+   - Horizontal fragmentation - splits a table by rows, using a condition (e.g., customers of the Dhaka branch go to the Dhaka server, Chittagong customers to the Chittagong server).
+   - Vertical fragmentation - splits a table by columns, grouping attributes that are used together (e.g., basic employee info at one site, salary details at another), keeping the primary key in every fragment so the rows can be rejoined.
+   - Mixed (hybrid) fragmentation - applies horizontal and vertical fragmentation together.
+   - Fragments may also be replicated at more than one site for availability.
+
+   - Goal: keep data close to where it is used most, which reduces network traffic and improves local query performance.
+
+3. **What is distributed database?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
+
+   Answer: A distributed database is a single logical database whose data is actually stored across multiple physical sites (computers), connected by a network, but which appears to the user as one unified database.
+
+   - Each site can process local queries independently, and the system coordinates queries that need data from more than one site.
+   - Key properties: data independence from location, no reliance on one central site, and continued operation even if one site fails.
+   - Example: a bank's core database with each branch holding its own local data while all branches can also query the whole bank's data through the network.
+
+4. **Which of the following distributed database system over centralized database system? (a) Software cost (b) Software complexity (c) Slow response (d) Modular growth** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
+
+   Answer: (d) Modular growth.
+
+   - A distributed database can grow modularly — a new site or server is simply added to the network without redesigning the whole system, which is a genuine advantage over a centralized system.
+   - The other three (higher software cost, higher software complexity, and potentially slower response over the network) are drawbacks of distributed databases compared to a centralized one, not advantages.
+
+5. **Explain the concept distributed DBMS. What are the features of DBMS?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1054 (ET: BUET)]*
+
+   Answer: A Distributed DBMS (DDBMS) manages a database that is spread across multiple sites while giving users a single, unified view of the data, handling the fragmentation, replication and network communication transparently.
+
+   Concept
+   - Data is fragmented and/or replicated across sites connected by a network.
+   - A global schema describes the whole database; each site also has its own local schema.
+   - The DDBMS translates a global query into sub-queries that run at the relevant local sites, then merges the results.
+
+   Features of a (D)DBMS
+   - Data independence — the physical location and storage details are hidden from the user.
+   - Concurrent access control and transaction management across sites.
+   - Query processing and optimisation that considers network cost, not just local cost.
+   - Fault tolerance — the system can keep working even if one site goes down, especially when data is replicated.
+   - Security and access control enforced consistently across all sites.
+
+## SQL Joins & Operations (7)
+
+1. **What are the different types of join in SQL?** *[DESCO Assistant Engineer 20.05.2023 compact it 580 (ET: DESCO)]*
+
+   Answer: A join combines rows from two or more tables based on a related column.
+
+   | Join type | What it returns |
+   |---|---|
+   | INNER JOIN | Only rows that match in both tables |
+   | LEFT (OUTER) JOIN | All rows from the left table, plus matching rows from the right (NULLs where there is no match) |
+   | RIGHT (OUTER) JOIN | All rows from the right table, plus matching rows from the left |
+   | FULL (OUTER) JOIN | All rows from both tables, matched where possible, NULLs elsewhere |
+   | CROSS JOIN | The Cartesian product — every row of one table paired with every row of the other |
+   | SELF JOIN | A table joined with itself, using aliases, to compare rows within the same table |
+
+2. **Left joning and inner joining of a table.** *[BTCL Assistant Manager (Technical) 2023 compact it 594 (ET: BUET)]*
+
+   Answer:
+
+   ```sql
+   -- INNER JOIN: only rows with a match in both tables
+   SELECT e.name, d.dept_name
+   FROM Employee e
+   INNER JOIN Department d ON e.dept_id = d.dept_id;
+
+   -- LEFT JOIN: every employee, department is NULL if not assigned
+   SELECT e.name, d.dept_name
+   FROM Employee e
+   LEFT JOIN Department d ON e.dept_id = d.dept_id;
+   ```
+   - INNER JOIN drops an employee row entirely if `dept_id` does not match any department.
+   - LEFT JOIN keeps every employee row regardless, filling `dept_name` with `NULL` when there is no matching department — useful for finding unassigned employees.
+
+3. **Which join is used for including not matching all records with output?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+   Answer: A FULL OUTER JOIN, since it returns every row from both tables, matched where possible and padded with `NULL` where there is no match on either side.
+
+   - If only the unmatched rows from one specific side are needed, a LEFT JOIN or RIGHT JOIN is used instead.
+
+4. **What is inner join? Explain with syntax and example.** *[Bangladesh Television Assistant Programmer 2019 compact it 1065 (ET: N/A)]*
+
+   Answer: An inner join returns only the rows that have a matching value in both joined tables; non-matching rows from either table are dropped.
+
+   Syntax
+   ```sql
+   SELECT columns
+   FROM TableA
+   INNER JOIN TableB ON TableA.key = TableB.key;
+   ```
+
+   Example
+   ```sql
+   SELECT Employee.name, Department.dept_name
+   FROM Employee
+   INNER JOIN Department ON Employee.dept_id = Department.dept_id;
+   ```
+   - If an employee's `dept_id` does not exist in the `Department` table, that employee simply does not appear in the result.
+
+5. **(b) Explain JOIN and INNER-JOIN procedure.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1143 (ET: N/A)]*
+
+   Answer: JOIN is the general SQL clause for combining rows from two or more tables using a related column; INNER JOIN is its most common form.
+
+   - Procedure: the database scans matching rows between the two tables (often via an index or a hash/merge join internally), and for every pair of rows where the join condition is true, it produces one combined output row.
+   - Only rows satisfying the condition appear in the output — a row from either table with no match is excluded entirely.
+   - Writing `JOIN` alone in most SQL dialects defaults to `INNER JOIN`.
+
+6. **Define: (i) Left outer join (ii) Right outer join (iii) Full outer join (iv) One to many and (v) Many to many** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
+
+   Answer:
+
+   - (i) Left outer join — returns all rows of the left table plus matching rows of the right table; unmatched right-side columns are `NULL`.
+   - (ii) Right outer join — returns all rows of the right table plus matching rows of the left table; unmatched left-side columns are `NULL`.
+   - (iii) Full outer join — returns all rows from both tables, matched where possible and `NULL`-padded elsewhere.
+   - (iv) One-to-many — one row in table A can relate to many rows in table B, but each row in B relates to only one row in A (e.g., one Department has many Employees).
+   - (v) Many-to-many — a row in table A can relate to many rows in table B and vice versa (e.g., Students and Courses); implemented using a junction/bridge table holding the foreign keys of both sides.
+
+7. **What join should use when there is no match between two tables?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1266 (ET: N/A)]*
+
+   Answer: To find rows that exist in one table but have no matching row in the other, use an OUTER JOIN (LEFT or RIGHT) and filter for `NULL` on the side that should have matched.
+
+   ```sql
+   SELECT e.*
+   FROM Employee e
+   LEFT JOIN Department d ON e.dept_id = d.dept_id
+   WHERE d.dept_id IS NULL;
+   ```
+   - This returns every employee who has no matching department — a classic "anti-join" pattern built on top of a LEFT JOIN.
+
+## PL/SQL & Database Triggers (7)
+
+1. **Explain Database Trigger with example.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
+
+   Answer: A database trigger is a stored block of code that the DBMS runs automatically in response to a specific event (`INSERT`, `UPDATE`, or `DELETE`) on a given table, without the application explicitly calling it.
+
+   Example — log every salary change
+   ```sql
+   CREATE TRIGGER trg_salary_audit
+   AFTER UPDATE OF salary ON Employee
+   FOR EACH ROW
+   BEGIN
+       INSERT INTO Salary_Audit (emp_id, old_salary, new_salary, changed_on)
+       VALUES (:OLD.emp_id, :OLD.salary, :NEW.salary, SYSDATE);
+   END;
+   ```
+   - `:OLD` and `:NEW` refer to the row's values before and after the change.
+   - Triggers are used for auditing, enforcing complex business rules, and keeping derived/denormalised data in sync automatically.
+
+2. **Database program with base and high- level language (SQL) to find out the interest rate from the given database table.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
+
+   Answer: The interest rate can be looked up directly with a `SELECT`, and PL/SQL can wrap it in a reusable procedure.
+
+   ```sql
+   CREATE TABLE InterestRate (
+       account_type VARCHAR(20) PRIMARY KEY,
+       rate DECIMAL(5,2)
+   );
+
+   -- Plain SQL lookup
+   SELECT rate FROM InterestRate WHERE account_type = 'Savings';
+   ```
+   ```sql
+   -- PL/SQL procedure form
+   CREATE OR REPLACE PROCEDURE GetInterestRate(p_type IN VARCHAR2, p_rate OUT NUMBER) AS
+   BEGIN
+       SELECT rate INTO p_rate FROM InterestRate WHERE account_type = p_type;
+   END;
+   ```
+   - The plain `SELECT` (high-level SQL) is enough for a one-off query; the PL/SQL procedure wraps the same logic so it can be called repeatedly from an application with parameters.
+
+3. **(c) Define dynamic SQL and trigger with examples.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
+
+   Answer:
+
+   Dynamic SQL
+   - SQL statements that are built and executed at runtime, as text, instead of being fixed at compile time. Useful when the table name, column list or condition is not known until the program runs.
+   ```sql
+   EXECUTE IMMEDIATE 'SELECT COUNT(*) FROM ' || table_name INTO cnt;
+   ```
+
+   Trigger
+   - A stored procedure that fires automatically on a table event.
+   ```sql
+   CREATE TRIGGER trg_no_delete
+   BEFORE DELETE ON Employee
+   FOR EACH ROW
+   BEGIN
+       RAISE_APPLICATION_ERROR(-20001, 'Deletion not allowed');
+   END;
+   ```
+   - Dynamic SQL is about building a query on the fly; a trigger is about running fixed code automatically when an event happens — the two are independent concepts, though a trigger's body can itself contain dynamic SQL.
+
+4. **(b) Describe the application of trigger in database.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
+
+   Answer: Triggers are used wherever an action must happen automatically and consistently whenever data changes, without depending on every application remembering to do it.
+
+   Applications
+   - Auditing — recording who changed what and when.
+   - Enforcing complex business rules that a simple `CHECK` constraint cannot express (e.g., a salary raise cannot exceed 20% in one update).
+   - Maintaining derived or denormalised data, such as keeping a running total in sync after every insert/delete.
+   - Replicating changes to another table or system.
+   - Preventing invalid operations, such as blocking deletes on a table outside business hours.
+
+5. **Suppose, ‘Employee’ table (emp_id, emp_name, dept_id, salary) and ‘Department’ table (dept_id, dept_name, increment_dept). Create a tigger to increment the salary of the employee by 10% whose salary is above 30000.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
+
+   Answer:
+
+   ```sql
+   CREATE TRIGGER trg_salary_increment
+   BEFORE UPDATE ON Employee
+   FOR EACH ROW
+   WHEN (NEW.salary > 30000)
+   BEGIN
+       SET NEW.salary = NEW.salary * 1.10;
+   END;
+   ```
+   - `WHEN (NEW.salary > 30000)` restricts the increment to only the employees who already earn above 30,000.
+   - Written as a `BEFORE UPDATE` trigger so the increased value is written directly instead of firing a second update.
+
+6. **(a) What is the purpose of database trigger? Explain with an example.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+
+   Answer: The purpose of a trigger is to make the database itself enforce a rule or reaction automatically, so it applies no matter which application or user makes the change.
+
+   Example — stop a negative balance
+   ```sql
+   CREATE TRIGGER trg_no_negative_balance
+   BEFORE UPDATE ON Account
+   FOR EACH ROW
+   WHEN (NEW.balance < 0)
+   BEGIN
+       RAISE_APPLICATION_ERROR(-20002, 'Balance cannot go negative');
+   END;
+   ```
+   - Even if a careless application tries to withdraw more money than is available, the database itself rejects the update, which is far safer than relying only on application-level checks.
+
+7. **Write a program in pl/SQL to find the heighest paid employees from employee table and store the data in HighestPaidEmp table.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
+
+   Answer:
+
+   ```sql
+   DECLARE
+       v_max_salary Employee.salary%TYPE;
+   BEGIN
+       SELECT MAX(salary) INTO v_max_salary FROM Employee;
+
+       INSERT INTO HighestPaidEmp (emp_id, emp_name, salary)
+       SELECT emp_id, emp_name, salary
+       FROM Employee
+       WHERE salary = v_max_salary;
+
+       COMMIT;
+   END;
+   ```
+   - `MAX(salary)` first finds the top salary value, then the `INSERT ... SELECT` copies every employee who earns that amount (handles ties automatically) into `HighestPaidEmp`.
+
+## Database Design & Data Types (3)
+
+1. **An institute wants to create a database table named STUDENT to store student information. The table should include the columns Roll Number, Name, Department, Email, and Admission Date. Specify the most appropriate SQL data type for each column and identify which column should be defined as the Primary Key, giving a brief justification for your choice.** *[Officer (IT) 31 Jul 2026 bscs 03 (ET: N/A)]*
+
+   Answer:
+
+   | Column | Suggested data type | Reason |
+   |---|---|---|
+   | Roll Number | `INT` (or `VARCHAR` if it has leading zeros/letters) | Numeric, small, and naturally unique per student |
+   | Name | `VARCHAR(100)` | Variable-length text |
+   | Department | `VARCHAR(50)` | Short, variable-length text, could also be a foreign key to a `Department` table |
+   | Email | `VARCHAR(100) UNIQUE` | Variable-length text; usually enforced unique |
+   | Admission Date | `DATE` | Stores only a calendar date, no time needed |
+
+   Primary key: `Roll Number`
+   - It is short, numeric, unique to every student, and never changes over time, which are exactly the properties a good primary key needs. `Email` could also work as a candidate key, but institutions almost always index student records by roll number.
+
+2. **(c) Describe the difference between CHAR and VARCHAR data type.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
+
+   Answer:
+
+   | Point | CHAR(n) | VARCHAR(n) |
+   |---|---|---|
+   | Length | Fixed — always stores exactly `n` characters | Variable — stores up to `n` characters |
+   | Padding | Shorter values are padded with trailing spaces | No padding; only the actual characters are stored |
+   | Storage | Uses `n` bytes always | Uses actual length plus 1-2 bytes to record the length |
+   | Speed | Slightly faster for fixed-size data (no length check) | Slightly slower due to variable-length handling |
+   | Best for | Fields with a known, constant length, such as a country code or gender flag | Fields whose length varies, such as a name or email |
+
+3. **What is the domain in a relational database? Explain with an example. Show how you would use Alter table SQL command to add a domain on a database table.** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 916 (ET: N/A)]*
+
+   Answer: A domain is the set of all legal, atomic values that an attribute is allowed to take. It defines both the data type and any extra restriction placed on the values.
+
+   - Example: The domain of an `Age` column might be defined as "integer between 0 and 120", and the domain of a `Gender` column might be restricted to `{'M', 'F', 'O'}`.
+   - Domains stop invalid data from ever entering the table, independent of application-level checks.
+
+   Adding a domain-style restriction with `ALTER TABLE`
+   ```sql
+   ALTER TABLE Employee
+   ADD CONSTRAINT chk_age CHECK (Age BETWEEN 18 AND 60);
+   ```
+   - Most databases implement a true, reusable `CREATE DOMAIN` object (SQL standard), but a `CHECK` constraint added via `ALTER TABLE` achieves the same restriction directly on the column.
+
+## NoSQL, NewSQL & Modern Databases (2)
+
+1. **What are the limitations of DBMS and how to related newsql with SQL and No-SQL.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1332 (ET: BUET)]*
+
+   Answer:
+
+   Limitations of a traditional (relational) DBMS
+   - Struggles to scale horizontally across many cheap servers; scaling is mostly vertical (bigger hardware).
+   - Rigid schema makes it costly to store fast-changing or semi-structured data.
+   - High cost of licensing and hardware for very large, high-write workloads.
+   - Complex joins become slow at massive scale.
+
+   Where NewSQL fits
+   - NewSQL is a newer class of database that tries to keep the SQL query language and full ACID guarantees of a traditional RDBMS, while adding the horizontal scalability of NoSQL systems.
+   - It sits between the two: like SQL, it offers a relational model, strong consistency and standard SQL syntax; like NoSQL, it is built to scale out across a distributed cluster.
+   - Examples: Google Spanner, CockroachDB, VoltDB, TiDB.
+
+   | Point | SQL (RDBMS) | NoSQL | NewSQL |
+   |---|---|---|---|
+   | Data model | Relational (tables) | Document/key-value/column/graph | Relational (tables) |
+   | Scaling | Mostly vertical | Horizontal | Horizontal |
+   | ACID | Full | Usually relaxed (BASE) | Full |
+   | Schema | Fixed | Flexible/schema-less | Fixed |
+
+2. **Write difference between relational database and NoSQL database.** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Relational Database (SQL) | NoSQL Database |
+   |---|---|---|
+   | Data model | Tables with rows and columns | Document, key-value, column-family or graph |
+   | Schema | Fixed, defined in advance | Flexible or schema-less |
+   | Scaling | Vertical (bigger server) | Horizontal (more servers) |
+   | Consistency | Strong (ACID) | Often eventual consistency (BASE) |
+   | Relationships | Enforced with foreign keys and joins | Usually denormalised; joins avoided |
+   | Query language | SQL (standard) | Varies by product (MongoDB query language, CQL, etc.) |
+   | Best for | Structured data with complex relationships, e.g. banking | Large-scale, fast-changing or unstructured data, e.g. social media feeds |
+   | Examples | MySQL, PostgreSQL, Oracle | MongoDB, Cassandra, Redis, Neo4j |
+
+## Database Connectivity (JDBC) (2)
+
+1. **What is JDBC? Explain the steps required to connect a Java application to a MySQL database.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+
+   Answer: JDBC (Java Database Connectivity) is a Java API that lets a Java program connect to and run SQL statements against a relational database, independent of which specific database is used underneath.
+
+   Steps to connect a Java application to MySQL
+   - 1. Add the MySQL JDBC driver (Connector/J) to the project's classpath.
+   - 2. Load and register the driver: `Class.forName("com.mysql.cj.jdbc.Driver");` (optional in modern JDBC, since drivers self-register).
+   - 3. Open a connection:
+     ```java
+     Connection con = DriverManager.getConnection(
+         "jdbc:mysql://localhost:3306/mydb", "root", "password");
+     ```
+   - 4. Create a statement object: `Statement stmt = con.createStatement();` or use `PreparedStatement` for parameterised queries.
+   - 5. Execute the SQL: `ResultSet rs = stmt.executeQuery("SELECT * FROM employee");`
+   - 6. Process the `ResultSet` by iterating over `rs.next()` and reading columns.
+   - 7. Close the `ResultSet`, `Statement` and `Connection` (or use try-with-resources) to release database resources.
+
+2. **(b) Explain embedded SQL with an appropriate example.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
+
+   Answer: Embedded SQL is a way of writing SQL statements directly inside a host programming language (C, C++, Java, COBOL), so the program can query the database without calling a separate API for every statement.
+
+   - The SQL statements are marked, usually with `EXEC SQL ... ;`, so a pre-compiler can find them and translate them into normal host-language function calls before the real compiler runs.
+   - Host variables (ordinary program variables prefixed with `:`) carry data between the program and the SQL statement.
+
+   Example (embedded SQL in C)
+   ```c
+   EXEC SQL BEGIN DECLARE SECTION;
+       int emp_id;
+       char emp_name[50];
+   EXEC SQL END DECLARE SECTION;
+
+   emp_id = 101;
+   EXEC SQL SELECT name INTO :emp_name
+            FROM Employee WHERE id = :emp_id;
+
+   printf("Employee name: %s\n", emp_name);
+   ```
+   - Here `:emp_id` supplies the value to the query, and `:emp_name` receives the result back into the C program.
+   - Benefit: SQL logic stays close to the application code and is checked at compile time; drawback: it needs a special pre-compiler and ties the code to one database vendor's embedded-SQL syntax.
+
+## Relational Keys (Candidate, Super, Primary, Foreign Key) (1)
+
+1. **Employee table( NID, Company_ID, Name, Mobile Number). Assume every record has a unique Mobile number. Find the number of super key, candidate key. And give example of two candidate key.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
+
+   Answer: NID (National ID) and Mobile Number are each guaranteed unique per person, so both qualify as minimal unique identifiers.
+
+   Candidate keys (2)
+   - `{NID}`
+   - `{Mobile Number}`
+   - Neither Company_ID nor Name is stated to be unique, so they cannot be candidate keys on their own.
+
+   Counting the super keys
+   - A super key is any attribute set that still identifies a row uniquely, so it is any set that contains at least one candidate key.
+   - Sets containing NID: `NID` combined with every subset of the other 3 attributes (Company_ID, Name, Mobile Number) = `2^3 = 8` sets.
+   - Sets containing Mobile Number: likewise `2^3 = 8` sets.
+   - Sets containing both NID and Mobile Number are counted twice above, so subtract them once: `2^2 = 4` sets.
+   - Total super keys = `8 + 8 - 4 = 12`. <!-- verify -->
+
+   - Out of these 12, only the 2 minimal ones (`{NID}` and `{Mobile Number}`) are candidate keys; the rest are super keys but not candidate keys because they carry extra, unnecessary attributes.
+
+## Indexing in DBMS (1)
+
+1. **সূচকের ধরন কি? এখানে প্রশ্নের উত্তর বিষয়ভিত্তিক প্রকার লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer: An index is a data structure that speeds up row lookup on a table, at the cost of extra storage and slower writes.
+
+   Types of index
+   - Primary index - built on the primary key of a file sorted by that key; typically sparse, one entry per block.
+   - Clustering index - built on a non-key field that decides the physical ordering of the records; also sparse.
+   - Secondary index - built on a field that does not order the file; must be dense, since a data block can no longer be located from just one entry.
+   - Dense index - carries one index entry for every distinct search-key value in the file.
+   - Sparse index - carries an entry for only some search-key values, usually one per data block, and relies on sequential access to reach the rest.
+   - Multilevel index - an index built on top of another index, used when the first-level index itself grows too large for memory; a B+ tree is the standard multilevel structure used in real databases.
+
 ## Keys, Constraints & Database Objects (1)
 
 1. **(d) What are the purpose of Primary Key and Foreign Key in context with ‘Relational Database’? Write in short with examples. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334-335]]*
