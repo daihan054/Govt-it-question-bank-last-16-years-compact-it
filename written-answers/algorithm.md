@@ -28,8 +28,6 @@
 1. **(a) Algorithm এর Computational Complexity এর মধ্যে পার্থক্য**
    (b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-(b) Bubble sort algorithm প্রয়োগ করে নিম্ন লিখিত সংখ্যানুক্রমিক এবং বর্ণানুক্রমিক ক্রমানুসারে সাজানোর ধাপসমূহ প্রদর্শন করে দেখান: *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
    Answer:
 
    (a) Algorithm vs Computational Complexity
@@ -83,14 +81,6 @@ Answer: Quick sort is a divide-and-conquer sorting algorithm. It picks one eleme
    - Space: `O(log n)` for the recursion stack when partitions are balanced, `O(n)` when they are skewed. Quick sort is not stable.
 
 3. **Write the Best case, worst case and average case time complexity for the following sorting algorithms.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1365 (ET: BUET)]*
-
-| Algorithms | Best Case | Worst Case | Average Case |
-|---|---|---|---|
-| Selection sort |  |  |  |
-| Insertion sort |  |  |  |
-| Merge sort |  |  |  |
-| Quick sort |  |  |  |
-| Heap sort |  |  |  |
 
 | Algorithms | Best Case | Worst Case | Average Case |
 |---|---|---|---|
@@ -274,8 +264,6 @@ Answer: With the first element as pivot on an already sorted array, quick sort h
     - This is the irony of quick sort — already sorted input, which is the easiest case for insertion sort, is the hardest case here. Using a random or median-of-three pivot restores `O(n log n)`.
 
 11. **(খ) Bubble sort algorithm ব্যবহার করে নিচের সংখ্যাগুলো sort করুন। প্রতিটি ধাপ প্রদর্শন করতে হবে।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-13, 14, 23, 4, 6
-
 13, 14, 23, 4, 6
 
     Answer: Bubble sort compares each adjacent pair and swaps them when they are out of order. After every pass the largest remaining element settles at the end.
@@ -2243,13 +2231,6 @@ for i in N:
 ```
 *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
 
-```python
-for i in N:
-    for j in M:
-
-```
-*[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1440 (ET: BUET)]*
-
    Answer: The code has two nested loops. The outer loop runs `N` times and, for every one of those turns, the inner loop runs `M` times.
 
    Time complexity
@@ -2722,13 +2703,6 @@ for(k=0; k<n;k++)
 count++;
 ```
 
-```c
-for(i=0; i<n;i++)
-for(j=0; j<n;j++)
-for(k=0; k<n;k++)
-count++;
-```
-
     Answer: There are three loops, each nested inside the previous one, and each runs `n` times.
 
     Time complexity
@@ -3029,11 +3003,6 @@ Answer: The two statements were not printed with the question, so two commonly a
    c) Strongly connected component
    d) Unique path on different weight on graph
 
-a) Back edge in DAG
-   b) Extra edge in DAG
-   c) Strongly connected component
-   d) Unique path on different weight on graph
-
    Answer:
 
    (a) "A DAG contains a back edge." — False.
@@ -3053,15 +3022,6 @@ a) Back edge in DAG
 
 1. **(a) Vector এবং Raster graphics এর মধ্যে প্রধান পার্থক্য গুলি লেখ।**
    (b)
-
-| Item | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
-| Value | 18 | 2.5 | 12 | 14 | 20 |
-| Weight | 4 | 3 | 1 | 2 | 5 |
-
-**অনুসারে প্রাপ্ত fractional knapsack সমস্যা সমাধান একটি চিত্রানুপাতে উত্তর লেখ।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
-(b)
 
 | Item | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
@@ -3126,15 +3086,6 @@ a) Back edge in DAG
 i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
 ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
 
-| Item | 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|---|
-| Value | 20 | 15 | 12 | 14 | 20 |
-| Weight | 4 | 3 | 2 | 2 | 5 |
-
-একজন ব্যক্তি fractional knapsack ব্যবহার করে একটি থলি পূর্ণ করতে চান।
-i) থলির সর্বোচ্চ ধারণক্ষমতা 25 হলে, এতে সবচেয়ে বেশি মোট কত ওজনের বস্তু (item) রাখা যাবে?
-ii) বস্তুগুলো থলিতে রাখার ক্রম কী হবে?
-
    Answer:
 
    Step 1 - compute the value-to-weight ratio
@@ -3157,7 +3108,7 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
    - No fraction is needed here, because capacity is larger than the total weight.
 
    (ii) Order of placing the items
-   - Sort by value-to-weight ratio, highest first: **Item 4 (7.0) → Item 3 (6.0) → Item 1 (5.0) → Item 2 (5.0) → Item 5 (4.0)**
+   - Sort by value-to-weight ratio, highest first: `Item 4 (7.0) → Item 3 (6.0) → Item 1 (5.0) → Item 2 (5.0) → Item 5 (4.0)`
    - Items 1 and 2 tie at 5.0, so either may come first without changing the result.
 
    | Order | Item | Weight | Cumulative weight | Value |
@@ -3760,13 +3711,13 @@ Answer: In binary-heap numbering, the children of node `i` are `2i` and `2i+1`. 
 
    |   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
    |---|---|---|---|---|---|---|---|
-   | **1** | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
-   | **2** | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
-   | **3** | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
-   | **4** | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-   | **5** | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-   | **6** | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-   | **7** | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+   | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+   | 2 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+   | 3 | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
+   | 4 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+   | 5 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+   | 6 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+   | 7 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 
    - The matrix is symmetric, because the graph is undirected. The diagonal is all zeros, since there is no self-loop.
    - Total 1s in the matrix = 12 = `2 × 6`, matching the 6 edges of a 7-vertex tree (`V − 1 = 6`).
@@ -3790,10 +3741,10 @@ Answer: A graph is stored in memory in one of three standard ways.
 
    |   | A | B | C | D |
    |---|---|---|---|---|
-   | **A** | 0 | 1 | 1 | 0 |
-   | **B** | 1 | 0 | 1 | 1 |
-   | **C** | 1 | 1 | 0 | 1 |
-   | **D** | 0 | 1 | 1 | 0 |
+   | A | 0 | 1 | 1 | 0 |
+   | B | 1 | 0 | 1 | 1 |
+   | C | 1 | 1 | 0 | 1 |
+   | D | 0 | 1 | 1 | 0 |
 
    - Space `O(V²)`, edge lookup `O(1)`.
 
@@ -3829,11 +3780,11 @@ Answer: The graph figure was not printed with the question, so this graph is use
 
    |   | 1 | 2 | 3 | 4 | 5 |
    |---|---|---|---|---|---|
-   | **1** | 0 | 1 | 1 | 0 | 0 |
-   | **2** | 1 | 0 | 1 | 1 | 0 |
-   | **3** | 1 | 1 | 0 | 1 | 0 |
-   | **4** | 0 | 1 | 1 | 0 | 1 |
-   | **5** | 0 | 0 | 0 | 1 | 0 |
+   | 1 | 0 | 1 | 1 | 0 | 0 |
+   | 2 | 1 | 0 | 1 | 1 | 0 |
+   | 3 | 1 | 1 | 0 | 1 | 0 |
+   | 4 | 0 | 1 | 1 | 0 | 1 |
+   | 5 | 0 | 0 | 0 | 1 | 0 |
 
    Adjacency list
    ```
