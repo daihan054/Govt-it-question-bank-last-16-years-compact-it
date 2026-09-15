@@ -1446,9 +1446,6 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
    Inorder: B A D C F E J H K G I
    Preorder: A B C D E F G H J K I
 
-Inorder: B A D C F E J H K G I
-   Preorder: A B C D E F G H J K I
-
     Answer: A binary tree is uniquely determined by its `inorder` and `preorder` traversals. Preorder supplies the root; inorder shows what lies to its left and right.
 
     Given
@@ -1520,9 +1517,6 @@ Inorder: B A D C F E J H K G I
 
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
-   Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
-
-In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
    Preorder: 50, 40, 30, 20, 35, 45, 65, 55, 70
 
     Answer:
@@ -2735,13 +2729,6 @@ Answer:
     - `Time O(n)`, one pass over the string. `Space O(n)` in the worst case, when every character is an opening bracket.
 
 16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
-```text
-Input: [0]{[00]0}
-Output: Balanced
-Input: [())
-Output: Not Balanced
-```
-
 ```text
 Input: [0]{[00]0}
 Output: Balanced
@@ -6000,8 +5987,8 @@ Answer:
 
 Answer:
     How They Handle Data:
-    - Stack handles data in a **Last-In, First-Out (LIFO)** order. Both insertion and removal occur at a single designated end called `Top`. The most recently added item is always processed first.
-    - Queue handles data in a **First-In, First-Out (FIFO)** order. Insertion occurs at the `Rear` while extraction occurs at the `Front`, preserving the exact arrival sequence.
+    - Stack handles data in a Last-In, First-Out (LIFO) order. Both insertion and removal occur at a single designated end called `Top`. The most recently added item is always processed first.
+    - Queue handles data in a First-In, First-Out (FIFO) order. Insertion occurs at the `Rear` while extraction occurs at the `Front`, preserving the exact arrival sequence.
 
     Real-Life Scenarios:
     - 1. Stack Scenario — Web Browser History & Text Editor Undo:
