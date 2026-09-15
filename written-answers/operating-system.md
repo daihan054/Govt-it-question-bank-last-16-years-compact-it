@@ -7016,7 +7016,263 @@ Answer:
     - Connectivity: Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3, Thunderbolt 4 / USB-C 4.0
     - Battery & OS: 4-Cell 80Wh Li-ion battery, Windows 11 Pro (64-bit).
 
-## Deadlock & Concurrency Control (2)
+## CPU Scheduling (6)
+
+1. **A system has three processes with the following arrival times and CPU burst times:** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+
+   | Process | Arrival Time (ms) | Burst Time (ms) |
+   |---|---|---|
+   | P1 | 0 | 5 |
+   | P2 | 1 | 3 |
+   | P3 | 2 | 2 |
+
+   Using the First-Come, First-Served (FCFS) CPU scheduling algorithm calculate the average waiting time and the average turnaround time.
+
+   Answer:
+
+   Gantt chart (execution order is simply arrival order for FCFS)
+   ```
+   | P1(0-5) | P2(5-8) | P3(8-10) |
+   0         5         8          10
+   ```
+
+   | Process | AT | BT | Completion Time | Turnaround Time (CT-AT) | Waiting Time (TAT-BT) |
+   |---|---|---|---|---|---|
+   | P1 | 0 | 5 | 5 | 5 | 0 |
+   | P2 | 1 | 3 | 8 | 7 | 4 |
+   | P3 | 2 | 2 | 10 | 8 | 6 |
+
+   - Average turnaround time = (5 + 7 + 8) / 3 = 20 / 3 = 6.67 ms
+   - Average waiting time = (0 + 4 + 6) / 3 = 10 / 3 = 3.33 ms
+
+2. **(a) নিচের গুলোর Distributed-GPT control and computing এর কার্যকারিতা লিখুন: (b) Clock cycle কী? একটি প্রসেসরের clock speed 3.5 GHz বলতে কী বোঝায়? (c) নিচের সারণীটি দেখুুন:** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   | Process | Burst Time (ms) | Priority |
+   |---|---|---|
+   | P_1 | 15 | 1 |
+   | P_2 | 2 | 1 |
+   | P_3 | 4 | 3 |
+   | P_4 | 2 | 4 |
+   | P_5 | 8 | 2 |
+
+   Answer:
+
+   (b) Clock cycle
+   - A clock cycle is the smallest unit of time in which the CPU completes one basic operation, timed by the processor's internal clock signal.
+   - A clock speed of 3.5 GHz means the processor completes 3.5 billion clock cycles every second.
+
+   (c) FCFS and SJF Gantt charts and average waiting/turnaround time (arrival time = 0 for all, priority values shown for reference only since this run uses SJF, not priority scheduling)
+
+   FCFS (execution order P1, P2, P3, P4, P5 as listed)
+   ```
+   | P1(0-15) | P2(15-17) | P3(17-21) | P4(21-23) | P5(23-31) |
+   ```
+   | Process | BT | Completion | Waiting (CT-BT) |
+   |---|---|---|---|
+   | P1 | 15 | 15 | 0 |
+   | P2 | 2 | 17 | 15 |
+   | P3 | 4 | 21 | 17 |
+   | P4 | 2 | 23 | 21 |
+   | P5 | 8 | 31 | 23 |
+
+   - Average waiting time (FCFS) = (0+15+17+21+23)/5 = 76/5 = 15.2 ms
+
+   SJF (shortest burst first: P2(2), P4(2), P3(4), P5(8), P1(15))
+   ```
+   | P2(0-2) | P4(2-4) | P3(4-8) | P5(8-16) | P1(16-31) |
+   ```
+   | Process | BT | Completion | Waiting (CT-BT) |
+   |---|---|---|---|
+   | P2 | 2 | 2 | 0 |
+   | P4 | 2 | 4 | 2 |
+   | P3 | 4 | 8 | 4 |
+   | P5 | 8 | 16 | 8 |
+   | P1 | 15 | 31 | 16 |
+
+   - Average waiting time (SJF) = (0+2+4+8+16)/5 = 30/5 = 6 ms
+   - SJF gives a much lower average waiting time here because short jobs (P2, P4) no longer wait behind the long job P1.
+
+3. **Consider the set of 3 processes whose arrival time and burst time are given below- If the CPU scheduling policy is round robin with time quantum=2, finds out the completion time, turnaround time, waiting time, and response time** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
+
+   | Process | AT | BT |
+   |---|---|---|
+   | P1 | 0 | 5 |
+   | P2 | 1 | 4 |
+   | P3 | 2 | 2 |
+
+   Answer:
+
+   Gantt chart (quantum = 2)
+   ```
+   | P1(0-2) | P2(2-4) | P3(4-6) | P1(6-8) | P2(8-10) | P3(10-11) | P1(11-12) | P2(12-13) |
+   ```
+
+   | Process | CT | TAT (CT-AT) | WT (TAT-BT) | Response Time (first run start - AT) |
+   |---|---|---|---|---|
+   | P1 | 12 | 12 | 7 | 0 |
+   | P2 | 13 | 12 | 8 | 1 |
+   | P3 | 11 | 9 | 7 | 2 |
+
+4. **There are 3 tasks P1, P2, and P3. Apply the round-robin scheduling algorithm with quantum size-20 to schedule the tasks in a single core machine. Calculate the turnaround time for each task.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1338 (ET: N/A)]*
+
+   | Task | Arrival time (ms) | Duration (ms) |
+   |---|---|---|
+   | P1 | 0 | 40 |
+   | P2 | 5 | 40 |
+   | P3 | 10 | 20 |
+
+   Answer:
+
+   Gantt chart (quantum = 20)
+   ```
+   | P1(0-20) | P2(20-40) | P3(40-60) | P1(60-80) | P2(80-100) |
+   ```
+
+   | Task | Completion Time | Turnaround Time (CT-AT) |
+   |---|---|---|
+   | P1 | 80 | 80 |
+   | P2 | 100 | 95 |
+   | P3 | 60 | 50 |
+
+5. **Calculate the average waiting time.** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
+
+   | Process | Burst Time |
+   |---|---|
+   | P1 | 21 |
+   | P2 | 3 |
+   | P3 | 6 |
+
+   Answer: Since no scheduling algorithm is stated, the FCFS order (P1, P2, P3) is used, since that is the default assumption when a table gives only burst times in a fixed order.
+
+   | Process | BT | Completion Time | Waiting Time (CT-BT) |
+   |---|---|---|---|
+   | P1 | 21 | 21 | 0 |
+   | P2 | 3 | 24 | 21 |
+   | P3 | 6 | 30 | 24 |
+
+   - Average waiting time = (0 + 21 + 24) / 3 = 45 / 3 = 15 ms
+   - Note: SJF (shortest job first) would give a much better average — ordering as P2(3), P3(6), P1(21) gives waiting times 0, 3, 9, averaging just 4 ms. <!-- verify -->
+
+6. **(খ) CPU Scheduling কী? যে যে কারণে CPU Scheduling করতে হয় সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
+
+   Answer: CPU scheduling is the mechanism the operating system uses to decide which of the ready processes gets the CPU next, whenever the CPU becomes idle.
+
+   Why CPU scheduling is needed
+   - Multiprogramming keeps several processes in memory at once, but only one CPU (or core) can run an instruction at a time, so a decision procedure is required.
+   - It maximises CPU utilisation by never leaving the CPU idle while a process is ready to run.
+   - It improves throughput (jobs completed per unit time) and reduces average waiting and turnaround time.
+   - It ensures fairness, so no process is starved of CPU time indefinitely.
+   - It supports priority handling, letting more urgent processes (e.g., an interactive task) run ahead of less urgent ones.
+
+## Windows & System Administration (5)
+
+1. **How to check the IP address in the Windows Command Prompt?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: Open Command Prompt and run:
+   ```
+   ipconfig
+   ```
+   - This shows the IPv4/IPv6 address, subnet mask and default gateway of every network adapter.
+   - `ipconfig /all` gives additional details such as the MAC address and DNS servers.
+
+2. **Assume that an office has three departments and each department has 50 to 70 employees who are using computers with Windows operating systems... (a) What is Active Directory? Do you need an Active Directory for such an office? If yes, briefly explain its use under this circumstance.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 323 (ET: BIBM)]*
+
+   Answer: Active Directory (AD) is Microsoft's directory service that centrally stores and manages information about users, computers and other resources on a Windows network, and controls who can access what.
+
+   Is it needed here? Yes.
+   - With 150-210 employees across three departments sharing computers, Active Directory lets a single sign-on identity follow each employee to whichever computer they log into within their department.
+   - It centrally manages user accounts, passwords and group policies, instead of configuring each of the ~200 machines individually.
+   - It stores each user's files on the server (via roaming profiles / folder redirection), so a user gets the same files and settings from any authorised computer, exactly as described in the scenario.
+   - It lets the administrator organise users into department-based Organisational Units (OUs) and apply different access rules and policies per department.
+
+3. **Describe the booting process in windows system.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       A[Power on] --> B[POST - Power-On Self-Test]
+       B --> C[BIOS/UEFI loads boot device]
+       C --> D[Bootloader: Windows Boot Manager]
+       D --> E[winload.exe loads kernel<br/>ntoskrnl.exe]
+       E --> F[Kernel initialises drivers<br/>and subsystems]
+       F --> G[Session Manager starts<br/>Winlogon]
+       G --> H[User logs in<br/>Desktop loads]
+   ```
+   - POST checks hardware (RAM, keyboard, disks) before anything else runs.
+   - BIOS/UEFI hands control to the boot manager on the boot disk, which locates and starts the Windows kernel.
+   - The kernel loads device drivers and system services, and finally the login screen (Winlogon) appears, after which the user's desktop session starts.
+
+4. **১৯. বর্তমানে উইন্ডোজ অপারেটিং সিস্টেম এর কত তম ভার্সন বাজারজাত করা হয়েছে?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+
+   Answer: As of the exam's timeframe, Windows 11 was the latest released major version (Windows follows Windows 10, then Windows 11; there is no "Windows 9"). <!-- verify -->
+
+5. **What is main difference between Domain and Workgroup?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Workgroup | Domain |
+   |---|---|---|
+   | Management | Decentralised — each computer manages its own accounts | Centralised — a domain controller manages all accounts |
+   | Scale | Suited to a small number of computers (peer-to-peer) | Suited to large networks (hundreds/thousands of computers) |
+   | Login | Separate account needed on every computer | Single sign-on works across every domain computer |
+   | Security policy | Set individually per machine | Set centrally and applied to all machines via Group Policy |
+   | Administration | No central admin required | Requires a Windows Server running Active Directory |
+
+## Process Synchronization & Concurrency (4)
+
+1. **Two independent applications running concurrently attempt to update the same file located at the same file location. Both applications may read and modify the file at nearly the same time, creating a possibility of race conditions, lost updates, or inconsistent data. What type of consistency problem can occur in this situation, and which synchronization technique(s) should be used to ensure that only one application can safely update the file at a time? Explain the mechanism and justify the most appropriate solution.** *[BSCCPL AME 21-08-2026 (BUET)]*
+
+   Answer: This is a classic race condition, specifically a lost-update problem, since two processes can read the same old value and each write back their own update, silently discarding one of them.
+
+   Recommended technique: mutual exclusion using a lock (mutex) or a semaphore around the file's critical section.
+
+   Mechanism
+   - Before touching the file, a process must acquire a lock associated with that file.
+   - If the lock is already held by the other process, the requesting process blocks (waits) instead of proceeding.
+   - The holding process reads, modifies and writes the file, then releases the lock.
+   - The waiting process then acquires the lock and repeats the same sequence, now working with the up-to-date file content.
+
+   Why this is the most appropriate solution
+   - It directly enforces mutual exclusion, the exact property needed: only one process can be inside the critical section (the read-modify-write sequence) at any time.
+   - File-locking APIs (`flock` on Linux, file locks on Windows) implement exactly this at the operating-system level, so no application-level workaround is needed.
+   - A semaphore initialised to 1 (a binary semaphore/mutex) is the standard primitive: `wait(S)` before accessing the file, `signal(S)` after finishing.
+
+2. **What is Semaphore? How would you improve performance when using semaphores?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 504 (ET: N/A)]*
+
+   Answer: A semaphore is an integer variable, accessed only through the atomic operations `wait()` (P, decrement) and `signal()` (V, increment), used to control access to a shared resource among multiple processes/threads.
+
+   - Binary semaphore (0 or 1) — behaves like a mutex lock, used for mutual exclusion.
+   - Counting semaphore — can take any non-negative value, used to manage a resource with several identical instances (e.g., a pool of 5 printers).
+
+   Improving performance when using semaphores
+   - Keep the critical section as short as possible, so processes spend minimal time waiting.
+   - Avoid busy-waiting (spinlocks) where possible; use a blocking semaphore that suspends the waiting process instead of looping and wasting CPU cycles.
+   - Use fine-grained locking (a separate semaphore per resource) instead of one large semaphore for everything, so unrelated operations do not block each other unnecessarily.
+   - Order lock acquisition consistently across the program to avoid deadlock, which otherwise wastes far more time than the locking itself.
+
+3. **(গ) Process Synchronization এর ক্ষেত্রে Race condition ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
+
+   Answer: A race condition occurs when two or more processes/threads access and manipulate shared data concurrently, and the final outcome depends on the unpredictable order (timing) in which their instructions execute.
+
+   Example
+   - Two processes both execute `count = count + 1` on a shared variable `count = 5`.
+   - Both read `count` as 5 before either writes back, so both compute 6 and write 6 — one increment is lost, and the final value should have been 7.
+   - Solution: protect the shared variable's read-modify-write sequence as a critical section using a mutex or semaphore, so only one process executes it at a time.
+
+4. **(ক) Critical Section Problem কী? ইহা কীভাবে সমাধান করা যায়?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+   Answer: The critical section problem is the challenge of designing a protocol that lets multiple concurrent processes safely access a shared resource, so that at most one process executes its "critical section" (the code that touches the shared resource) at any time.
+
+   A correct solution must satisfy three requirements
+   - Mutual exclusion — no two processes execute in their critical section at the same time.
+   - Progress — if no process is in its critical section, one of the processes waiting to enter must eventually be allowed in, and this decision cannot be postponed indefinitely.
+   - Bounded waiting — there is a limit on how many times other processes are allowed to enter their critical section after a process has requested entry and before its request is granted, so no process starves.
+
+   Solutions
+   - Software: Peterson's algorithm (two processes, using turn and flag variables).
+   - Hardware: atomic instructions such as `Test-and-Set` or `Compare-and-Swap`.
+   - OS-provided: mutex locks and semaphores, which are the standard, practical solution used in real systems.
 
 ## Deadlock & Concurrency Control (2)
 
@@ -7046,3 +7302,25 @@ Answer:
     - 3. No Preemption: Resources cannot be forcibly confiscated from a process; a resource can only be released voluntarily by the holding process after it completes its task.
     - 4. Circular Wait: A closed chain of processes $\{P_0, P_1, \dots, P_n\}$ exists such that $P_0$ is waiting for a resource held by $P_1$, $P_1$ is waiting for $P_2$, and $P_n$ is waiting for a resource held by $P_0$.
 
+## Linux, Shell & System Commands (1)
+
+1. **Answer the following Linux Command.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 386]]*
+
+   Answer: The exact command list was not printed with the question, so the most commonly asked basic Linux commands are covered.
+
+   | Command | Purpose |
+   |---|---|
+   | `ls` | List files and directories in the current location |
+   | `pwd` | Print the current working directory |
+   | `cd <dir>` | Change directory |
+   | `mkdir <dir>` | Create a new directory |
+   | `rm <file>` | Remove a file (`rm -r` for a directory) |
+   | `cp <src> <dst>` | Copy a file or directory |
+   | `mv <src> <dst>` | Move or rename a file |
+   | `cat <file>` | Display file contents |
+   | `chmod <mode> <file>` | Change file permissions |
+   | `grep <pattern> <file>` | Search text inside a file |
+   | `ps` | List running processes |
+   | `kill <pid>` | Terminate a process by its process ID |
+
+   - These commands cover the everyday file, directory, permission and process management tasks a Linux system administrator is expected to know.
