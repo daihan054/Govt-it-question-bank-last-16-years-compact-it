@@ -7052,6 +7052,333 @@ Answer:
     DROP VIEW HighSalaryEmployees;
     ```
 
+## Keys in DBMS (34)
+
+1. **Difference Between Primary Key, Foreign Key, Candidate Key.** *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+
+   Answer:
+
+   | Key | Definition |
+   |---|---|
+   | Candidate key | Any minimal set of attributes that can uniquely identify a row; a table can have several |
+   | Primary key | The one candidate key chosen to be the table's official unique identifier; cannot be NULL |
+   | Foreign key | A column in one table that references the primary key of another table, linking the two |
+
+   - Every primary key is a candidate key, but not every candidate key is chosen as the primary key (the unchosen ones become alternate keys).
+
+2. **(a) Define RDBMS. Explain the different key and primary key, candidate key, super key, and foreign key DBMS.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
+
+   Answer: An RDBMS (Relational Database Management System) stores data in tables of rows and columns, and uses common key values to relate one table to another.
+
+   - Super key — any set of attributes that can uniquely identify a row; may include extra, unnecessary attributes.
+   - Candidate key — a minimal super key; removing any attribute from it would break uniqueness.
+   - Primary key — the candidate key chosen to formally identify each row; unique and never `NULL`.
+   - Foreign key — an attribute in one table that references the primary key of another table, establishing a relationship.
+
+3. **Difference between primary key, foreign key? What is trigger?** *[WZPGCL Assistant Engineer (CSE) 27.05.2023 compact it 502 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Primary key | Foreign key |
+   |---|---|---|
+   | Location | Identifies rows within its own table | References the primary key of another table |
+   | Uniqueness | Must be unique, cannot be NULL | Can repeat, can be NULL |
+   | Purpose | Entity integrity | Referential integrity |
+
+   Trigger — a stored block of code that runs automatically when a specified event (`INSERT`, `UPDATE`, `DELETE`) happens on a table.
+
+4. **Define primary key, super key, and Candidate key.** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
+
+   Answer:
+
+   - Super key — any attribute set that uniquely identifies a row, possibly with extra attributes.
+   - Candidate key — a minimal super key; no attribute can be removed without losing uniqueness.
+   - Primary key — the one candidate key selected as the table's main identifier.
+
+5. **What is primary key and foreign key with example?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
+
+   Answer:
+
+   - Primary key — uniquely identifies each row in a table. Example: `emp_id` in `Employee(emp_id, name, dept_id)`.
+   - Foreign key — a column referencing another table's primary key. Example: `dept_id` in `Employee` references `Department(dept_id)`, linking each employee to their department.
+
+6. **Explain Primary key, Candidate key, and Foreign key.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
+
+   Answer:
+
+   - Candidate key — any minimal attribute set capable of uniquely identifying a row.
+   - Primary key — the candidate key formally chosen to identify rows; enforced unique and `NOT NULL` by the DBMS.
+   - Foreign key — a column referencing another table's primary key, used to enforce a relationship between the two tables.
+
+7. **(খ) Primary key এবং Super key এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Primary key | Super key |
+   |---|---|---|
+   | Minimality | Minimal — no extra attribute | May contain extra, unnecessary attributes |
+   | Count per table | Exactly one | Can be many |
+   | Nullability | Cannot be NULL | Depends on the attributes it contains |
+
+   - Every primary key is a super key, but not every super key is a primary key.
+
+8. **Super key and Candidate key finding from table.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 648 (ET: BUET)]*
+
+   Answer: The exact table was not printed with the question, so the general method is shown.
+
+   - Step 1: find every minimal attribute set whose values are unique across all rows — these are the candidate keys.
+   - Step 2: a super key is any set that contains at least one candidate key, so add every possible combination of the remaining attributes to each candidate key to list all super keys.
+   - Example: for `Student(roll, name, email)` where both `roll` and `email` are unique, candidate keys are `{roll}` and `{email}`; super keys include those two plus every superset, such as `{roll, name}` and `{roll, email, name}`.
+
+9. **From Functional Dependency for determine candidate key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 661 (ET: N/A)]*
+
+   Answer: A candidate key is found from a set of functional dependencies (FDs) by finding the smallest attribute set whose closure covers every attribute of the relation.
+
+   - Step 1: compute the closure of each candidate attribute set (all attributes it functionally determines, directly or transitively).
+   - Step 2: if a set's closure equals the full attribute set of the relation, it is a super key.
+   - Step 3: remove attributes one at a time and recompute the closure; if removing an attribute breaks the closure, that attribute is necessary — the smallest set that still closes to everything is a candidate key.
+   - Example: given `R(A, B, C)` with FDs `A -> B` and `B -> C`, the closure of `{A}` is `{A, B, C}`, so `{A}` alone is a candidate key.
+
+10. **Relation to find primary key, candidate key, super key.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
+
+    Answer: The exact relation was not printed with the question, so the general procedure is given.
+
+    - Candidate key(s): find the minimal attribute set(s) whose closure (via functional dependencies) covers all attributes of the relation.
+    - Primary key: pick one candidate key (usually the simplest or most stable) as the primary key.
+    - Super keys: every set that contains a candidate key plus any extra attributes.
+
+11. **(a) Differentiate among foreign key, candidate key, and primary key.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Candidate key | Primary key | Foreign key |
+    |---|---|---|---|
+    | Where | Within its own table | Within its own table | References another table |
+    | Count | Can be several per table | Exactly one per table | Can be several per table |
+    | Nullable | Depends | Never | Can be, unless restricted |
+    | Purpose | Potential unique identifier | The chosen identifier | Enforces a relationship between tables |
+
+12. **Explain the primary key and composite key with respect to database.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
+
+    Answer:
+
+    - Primary key — the column (or column set) chosen to uniquely identify every row; cannot be `NULL` and must stay unique.
+    - Composite key — a primary key made up of two or more columns together, used when no single column is unique on its own. Example: in `Enrollment(student_id, course_id)`, neither column alone is unique, but the pair `(student_id, course_id)` is, so it forms a composite primary key.
+
+13. **(খ) Relational Database Design এ Primary Key ও Foreign Key বলতে কি বুঝায়? উদাহরণসহ লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
+
+    Answer:
+
+    - Primary key — the column that uniquely identifies every row in a table. Example: `student_id` in `Student(student_id, name)`.
+    - Foreign key — a column that references the primary key of another table, linking related data. Example: `student_id` in `Enrollment(student_id, course_id)` references `Student(student_id)`.
+    - Together they let related data in separate tables be joined together correctly and consistently.
+
+14. **(b) What are purpose of using foreign key in a database? Give suitable example.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
+
+    Answer: A foreign key's purpose is to enforce referential integrity — making sure a value in one table always points to a row that genuinely exists in the referenced table.
+
+    - It also expresses and enforces the actual relationship between two tables, and prevents "orphan" records.
+    - Example: `Order(order_id, customer_id)` where `customer_id` is a foreign key referencing `Customer(customer_id)` — an order can never be inserted for a customer that does not exist.
+
+15. **What is primary key?** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
+
+    Answer: A primary key is a column (or set of columns) that uniquely identifies every row of a table; it cannot contain `NULL` values and its value cannot repeat.
+
+16. **What is Primary key, Unique key and Forgein key.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+
+    Answer:
+
+    - Primary key — uniquely identifies each row; exactly one per table; cannot be `NULL`.
+    - Unique key — also enforces uniqueness on a column, but a table can have several unique keys, and (in most databases) a unique key column may contain one `NULL` value.
+    - Foreign key — a column referencing another table's primary key, enforcing a relationship between the two tables.
+
+17. **Database Management System (DBMS) বলতে কী বোঝেন? Relational database -এ Primary key এবং Foreign key -এর ভূমিকা উদাহরণসহ সংক্ষেপে বর্ণনা করুন?** *[41th BCS 2021 compact it 882 (ET: N/A)]*
+
+    Answer: A DBMS is software that lets users create, store, query and manage data in a database efficiently and securely.
+
+    Role of primary and foreign key in a relational database
+    - Primary key uniquely identifies each row within its own table, e.g., `dept_id` in `Department`.
+    - Foreign key links a row in one table to a row in another by referencing that table's primary key, e.g., `dept_id` in `Employee` referencing `Department(dept_id)` — this is how relational tables stay connected and consistent.
+
+18. **(b) Explain the different type of database keys with examples.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+
+    Answer:
+
+    | Key type | Meaning | Example |
+    |---|---|---|
+    | Super key | Any attribute set that uniquely identifies a row | `{roll, name}` in Student |
+    | Candidate key | Minimal super key | `{roll}` |
+    | Primary key | Chosen candidate key | `roll` |
+    | Alternate key | A candidate key not chosen as primary | `email` |
+    | Composite key | A primary key made of multiple columns | `(student_id, course_id)` |
+    | Foreign key | References another table's primary key | `dept_id` in Employee referencing Department |
+
+19. **What is the Primary key, Candidate key and Super key?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 921 (ET: N/A)]*
+
+    Answer:
+
+    - Super key — any attribute set that can uniquely identify a row, possibly with redundant extra attributes.
+    - Candidate key — a minimal super key.
+    - Primary key — the candidate key formally chosen to identify the table's rows.
+
+20. **Difference between Primary key and Unique Key, Drop and Purge, Delete and Truncate.** *[RAKUB Assistant Database Administrator 2020 compact it 1013-1014 (ET: E-Zone)]*
+
+    Answer:
+
+    | Point | Primary key | Unique key |
+    |---|---|---|
+    | Count per table | Exactly one | Can be several |
+    | NULL allowed | No | Usually one NULL allowed |
+
+    | Point | DROP | PURGE |
+    |---|---|---|
+    | Effect | Removes the table, moving it to a recycle bin (Oracle) | Permanently removes it, bypassing the recycle bin |
+    | Recoverable | Yes, via `FLASHBACK` (Oracle) | No |
+
+    | Point | DELETE | TRUNCATE |
+    |---|---|---|
+    | Type | DML | DDL |
+    | Filtering | Can use `WHERE` to remove specific rows | Removes all rows, no filtering |
+    | Speed | Slower (logs each row) | Faster |
+    | Rollback | Possible before commit | Usually cannot be rolled back |
+
+21. **Example Foreign key in RDBMS.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035 (ET: BUET)]*
+
+    Answer:
+
+    ```sql
+    CREATE TABLE Employee (
+        emp_id INT PRIMARY KEY,
+        name VARCHAR(50),
+        dept_id INT,
+        FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    );
+    ```
+    - Here `dept_id` in `Employee` is a foreign key referencing `Department`'s primary key, so every employee must belong to a department that actually exists.
+
+22. **What is the difference between primary key and candidate key? Explain the foreign key with an example.** *[Bangladesh Competition Commission Programmer 2019 compact it 1061-1062 (ET: DU)]*
+
+    Answer:
+
+    - A candidate key is any minimal unique identifier a table has; a primary key is the one candidate key actually chosen to be the official identifier. So a primary key is always a candidate key, but a table may have other candidate keys (alternate keys) that were not chosen.
+    - Foreign key example: `Loan(loan_id, customer_id, amount)` where `customer_id` references `Customer(customer_id)` — this ensures every loan belongs to a customer who genuinely exists in the `Customer` table.
+
+23. **(খ) Candidate key and Composite key কাকে বলে?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069 (ET: N/A)]*
+
+    Answer:
+
+    - Candidate key — any minimal attribute set that can uniquely identify each row of a relation; a table can have more than one.
+    - Composite key — a key (candidate or primary) formed by combining two or more columns, needed when no single column is unique by itself, e.g., `(order_id, product_id)` in an order-items table.
+
+24. **(b) What happens when someone tries to delete an entry of a table that has referential integrity constraint? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
+
+    Answer: If a row is referenced by a foreign key in another table, deleting it depends on the `ON DELETE` rule defined for that foreign key.
+
+    - No rule / `RESTRICT` (default in many databases) — the delete is rejected with an error, because dependent rows still reference it.
+    - `ON DELETE CASCADE` — deleting the parent row automatically deletes all dependent rows too.
+    - `ON DELETE SET NULL` — the dependent rows' foreign key column is set to `NULL` instead of being deleted.
+
+    Example: deleting a `Department` row that still has `Employee` rows pointing to it via `dept_id` will fail with a foreign key constraint violation, unless `ON DELETE CASCADE`/`SET NULL` was specified when the foreign key was created.
+
+25. **What is foreign key? When foreign key used?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: KUET)]*
+
+    Answer: A foreign key is a column (or column set) in one table that references the primary key of another table, creating and enforcing a link between them.
+
+    - It is used whenever two tables need to be related — for example, connecting each `Order` to the `Customer` who placed it, or each `Employee` to their `Department`.
+    - It also protects referential integrity, preventing a row from referencing a parent record that does not exist.
+
+26. **Difference between primary key, foreign key and candidate key.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Primary key | Foreign key | Candidate key |
+    |---|---|---|---|
+    | Role | Uniquely identifies rows in its own table | Links to another table's primary key | Any minimal unique identifier, one of which becomes the primary key |
+    | Count | Exactly one per table | Can be several | Can be several |
+    | Duplicates | Never | Allowed | Never (by definition) |
+
+27. **Define weak Entity? What are the difference between primary key and super key?** *[Palli Sanchay Bank Programmer 2018 compact it 1171 (ET: N/A)]*
+
+    Answer:
+
+    Weak entity — an entity that has no primary key of its own and depends on an owner (strong) entity for identification; it is identified by a partial key combined with the owner's key.
+
+    Primary key vs super key
+    - A super key is any attribute set that uniquely identifies a row, possibly with extra unneeded attributes.
+    - A primary key is the minimal super key (candidate key) chosen as the table's official identifier — every primary key is a super key, but not every super key is minimal enough to be a primary key.
+
+28. **Difference between Super Key and UNIQUE key?** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Super key | Unique key |
+    |---|---|---|
+    | Concept | A theoretical/logical notion — any attribute set that uniquely identifies rows | An actual database constraint enforced by the DBMS |
+    | Minimality | May contain unnecessary extra attributes | Declared explicitly on specific column(s) |
+    | NULL | Not directly relevant | Usually allows one NULL value |
+    | Enforcement | Not enforced by itself; it is just a property | Enforced automatically by the DBMS on every insert/update |
+
+29. **Define Super key and Primary key.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
+
+    Answer:
+
+    - Super key — any set of one or more attributes that, taken together, uniquely identify a row in a relation.
+    - Primary key — the candidate (minimal) super key selected to be the table's main, permanent identifier; it must be unique and can never be `NULL`.
+
+30. **What are the difference among Candidate key, Primary key and Foreign key?** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Candidate key | Primary key | Foreign key |
+    |---|---|---|---|
+    | Definition | Minimal unique identifier | The chosen candidate key | References another table's primary key |
+    | Count per table | Can be several | Exactly one | Can be several |
+    | Purpose | Potential row identifier | Actual row identifier | Establishes inter-table relationship |
+
+31. **Explain with examples: Candidate key, foreign key and horizontal scaling.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1223 (ET: N/A)]*
+
+    Answer:
+
+    - Candidate key — a minimal unique identifier, e.g., both `roll` and `email` in `Student(roll, name, email)` if both happen to be unique.
+    - Foreign key — a column referencing another table's primary key, e.g., `dept_id` in `Employee` referencing `Department(dept_id)`.
+    - Horizontal scaling — increasing capacity by adding more machines/servers to share the load (as opposed to vertical scaling, which upgrades one machine's hardware), e.g., adding more database replica servers to handle more read traffic.
+
+32. **Write down the differences between super key and candidate key with example.** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1225 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Super key | Candidate key |
+    |---|---|---|
+    | Minimality | May include extra, unnecessary attributes | Minimal — every attribute is necessary |
+    | Count | Many possible combinations | Fewer; only the minimal ones |
+    | Example | `{roll, name}` in Student | `{roll}` alone (already unique, so `name` is unnecessary) |
+
+    - Every candidate key is also a super key, but a super key is a candidate key only if it cannot be reduced any further while staying unique.
+
+33. **What do you mean by primary key and foreign key?** *[Multiple Ministry Assistant Programmer 2017 compact it 1230 (ET: N/A)]*
+
+    Answer:
+
+    - Primary key — the column (or columns) chosen to uniquely identify every row of a table; cannot be `NULL` or duplicated.
+    - Foreign key — a column in one table that references the primary key of another table, creating a link between the two and enforcing that the referenced value must actually exist.
+
+34. **Define ‘integrity rules’ of database systems. Write a SQL query to get the second highest salary from Employee table.** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265 (ET: N/A)]*
+
+    Answer:
+
+    Integrity rules
+    - Entity integrity — the primary key of a table must be unique and cannot be `NULL`.
+    - Referential integrity — a foreign key value must either be `NULL` or match an existing primary key value in the referenced table.
+    - Domain integrity — every column's value must come from its allowed data type/domain (e.g., age cannot be negative if constrained as such).
+
+    Second highest salary
+    ```sql
+    SELECT MAX(salary) AS second_highest
+    FROM Employee
+    WHERE salary < (SELECT MAX(salary) FROM Employee);
+    ```
+    - The inner query finds the overall highest salary; the outer query then finds the highest salary that is still less than that, which is the second-highest overall.
+
 ## DBMS Architecture & Features (26)
 
 1. **(a) DBMS এর মূল বৈশিষ্ট্য লিখুন। (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
