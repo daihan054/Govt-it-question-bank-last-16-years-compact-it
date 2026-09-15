@@ -7052,6 +7052,295 @@ Answer:
     DROP VIEW HighSalaryEmployees;
     ```
 
+## DBMS Architecture & Features (26)
+
+1. **(a) DBMS এর মূল বৈশিষ্ট্য লিখুন। (b) HTTP ও HTTPS প্রোটোকলের মধ্যে সুরক্ষার দিক থেকে পার্থক্য ব্যাখ্যা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+   Answer:
+
+   (a) Main features of DBMS
+   - Data independence — physical storage details are hidden from the application.
+   - Efficient data access using indexing and query optimisation.
+   - Data integrity and security, enforced through constraints and access control.
+   - Concurrent access control, so many users can safely use the database at once.
+   - Backup and recovery support to protect against data loss.
+   - Reduced data redundancy compared to separate flat files.
+
+   (b) HTTP vs HTTPS (security)
+   - HTTP sends data in plain text, so it can be intercepted and read by anyone on the network path.
+   - HTTPS wraps HTTP inside SSL/TLS encryption, so data in transit is encrypted, the server's identity is verified with a certificate, and tampering is detectable — HTTPS is the secure option and is required for any page handling login or payment data.
+
+2. **ODBC এর পূর্ণ রূপ কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: ODBC stands for Open Database Connectivity.
+
+   - It is a standard API that lets an application connect to any database (MySQL, SQL Server, Oracle, etc.) using the same code, through a database-specific ODBC driver.
+
+3. **Data about data is Called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: Metadata.
+
+   - Metadata describes the structure of the actual data — table names, column names, data types, constraints and relationships — and is stored in the DBMS's data dictionary/system catalog.
+
+4. **Difference between MSAccess and MS FoxPro in SQL.** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 317 (ET: N/A)]*
+
+   Answer:
+
+   | Point | MS Access | MS FoxPro |
+   |---|---|---|
+   | Type | A true RDBMS with a query engine (Jet/ACE) | Originally a file-based/xBase system, later added relational features |
+   | SQL support | Full SQL via its query designer and SQL view | Supports SQL commands but historically leaned on its own xBase command language |
+   | GUI tools | Strong built-in forms, reports and query designer | More programming-oriented, less GUI-focused |
+   | Scale | Suited for small to medium desktop applications | Also desktop-oriented; largely superseded by modern RDBMS today |
+   | Current status | Still maintained as part of Microsoft Office | Discontinued by Microsoft (last version 2007) |
+
+5. **(খ) DBMS কী? দুটি সুবিধা লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
+
+   Answer: A DBMS (Database Management System) is software that lets users create, store, manage, and retrieve data in a database efficiently and securely.
+
+   Two advantages
+   - Reduces data redundancy by storing data centrally instead of in many separate files.
+   - Enforces data integrity and security through constraints, user permissions and access control.
+
+6. **What is Database?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
+
+   Answer: A database is an organised, persistent collection of related data, structured so it can be efficiently stored, retrieved, updated and managed, typically through a DBMS.
+
+7. **What is data about data?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: Metadata — data that describes other data, such as a column's name, data type, and the constraints placed on it, stored in the database's system catalog.
+
+8. **(খ) Centralized System ও Client Server System সম্পর্কে সচিত্র বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   flowchart TD
+       subgraph Centralized
+           T1[Terminal] --> CPU[Central Computer + DB]
+           T2[Terminal] --> CPU
+           T3[Terminal] --> CPU
+       end
+   ```
+   ```mermaid
+   flowchart TD
+       subgraph "Client-Server"
+           C1[Client 1] --> S[Server + DB]
+           C2[Client 2] --> S
+           C3[Client 3] --> S
+       end
+   ```
+   - Centralized system: all processing and storage happen on one central machine; terminals are just input/output devices with no processing power of their own.
+   - Client-server system: processing is shared — the server hosts the database and handles requests, while each client runs its own application logic and sends only queries/results over the network, giving better scalability and independence per client.
+
+9. **(ক) একজন ডাটাবেস এডমিন এর কাজ কী? কিছু ডাটাবেস সিস্টেম অ্যাপ্লিকেশনের নাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
+
+   Answer:
+
+   Work of a Database Administrator (DBA)
+   - Installing, configuring and upgrading the DBMS software.
+   - Designing and maintaining the database schema.
+   - Managing user accounts, roles and access permissions.
+   - Performance tuning (indexing, query optimisation).
+   - Taking regular backups and handling disaster recovery.
+   - Monitoring the database for security threats and unusual activity.
+
+   Database system applications
+   - MySQL, Oracle Database, Microsoft SQL Server, PostgreSQL, MongoDB.
+
+10. **(খ) ডাটাবেস ব্যবস্থাপনা সিস্টেমের তিন স্তরবিশিষ্ট আর্কিটেকচার ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 626 (ET: N/A)]*
+
+    Answer: The three-schema (ANSI/SPARC) architecture separates how data is physically stored from how users see it, giving strong data independence.
+
+    ```mermaid
+    flowchart TD
+        E[External Level<br/>individual user views] --> C[Conceptual Level<br/>whole logical schema]
+        C --> I[Internal Level<br/>physical storage details]
+    ```
+    - External level — many different views tailored to different users or applications (a cashier sees only transaction fields, a manager sees summary reports).
+    - Conceptual level — the single, complete logical structure of the whole database: all entities, relationships and constraints, independent of any one application.
+    - Internal level — how the data is actually stored on disk: file organisation, indexing, storage structures.
+    - Mappings between levels give logical data independence (conceptual can change without breaking external views) and physical data independence (internal can change without breaking the conceptual level).
+
+11. **(ক) সাধারণ ফাইলভিত্তিক সিস্টেমের চেয়ে DBMS এর সুবিধা কী কী?** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)]*
+
+    Answer: Advantages of a DBMS over a plain file-based system:
+
+    - Reduces data redundancy — data is stored once and shared, instead of being duplicated across many files.
+    - Prevents data inconsistency that redundancy would otherwise cause.
+    - Enforces data integrity through constraints (primary key, foreign key, check).
+    - Provides concurrent access control, so many users can safely use the data at once.
+    - Provides backup and recovery facilities.
+    - Provides security through user authentication and access permissions.
+    - Supports efficient querying (SQL) instead of writing custom code to search flat files.
+
+12. **What is Database administrator role?** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 662 (ET: N/A)]*
+
+    Answer: The Database Administrator (DBA) is responsible for the overall management, performance, security and availability of an organisation's databases.
+
+    - Designs and maintains the database schema.
+    - Manages user access and security permissions.
+    - Performs backups, and plans/executes disaster recovery.
+    - Monitors and tunes performance (indexes, queries, hardware resources).
+    - Applies patches/upgrades and ensures the database stays available and consistent.
+
+13. **Explain difference between Data Administrator and Database Administrator.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 681 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Data Administrator (DA) | Database Administrator (DBA) |
+    |---|---|---|
+    | Focus | Managing data as an organisational asset — policy, standards, data quality | Managing the technical database system itself |
+    | Level | Strategic/managerial | Technical/operational |
+    | Tasks | Defines data naming standards, data ownership, data governance policy | Installs DBMS, tunes performance, manages backups, security, users |
+    | Tools | Data dictionaries, governance frameworks | SQL, DBMS admin consoles, monitoring tools |
+
+14. **Describe the advantages and disadvantages of DBMS-provided and application provided security.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 684 (ET: N/A)]*
+
+    Answer:
+
+    DBMS-provided security
+    - Advantages: enforced consistently for every application and user accessing the database directly; centrally managed (roles, grants); cannot be bypassed by a careless application.
+    - Disadvantages: less flexible for complex, business-specific rules; may be harder to customise per-application.
+
+    Application-provided security
+    - Advantages: can implement rich, business-specific logic (e.g., "only the branch manager can approve a loan above X amount"); tailored user experience.
+    - Disadvantages: only effective if every application enforces it correctly; a user who connects directly to the database can bypass it entirely; duplicated logic if there are multiple applications.
+
+15. **(a) What is database schema? What are dangling tuple and descriptive attribute?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 693 (ET: N/A)]*
+
+    Answer:
+
+    Database schema
+    - The overall logical structure/design of the database — the tables, their columns, data types and constraints — independent of the actual data (instance) stored in it at any moment.
+
+    Dangling tuple
+    - A row in one table that references a value (typically a foreign key) which does not exist in the related table, breaking referential integrity — e.g., an `Employee` row pointing to a `dept_id` that was deleted from `Department`.
+
+    Descriptive attribute
+    - An attribute attached to a relationship (not to an entity) that describes a property of that relationship itself, e.g., `enroll_date` on a Student-Course "enrolls in" relationship.
+
+16. **What is data Independence? How many types of data independence?** *[BDCCL Assistant Engineer (Network) 2022 compact it 742 (ET: N/A)]*
+
+    Answer: Data independence is the ability to change the database's schema at one level without needing to change the schema or programs at the level above it.
+
+    Two types
+    - Logical data independence — the ability to change the conceptual schema (add a table, add a column) without changing external views or application programs.
+    - Physical data independence — the ability to change the internal/physical storage structure (add an index, change file organisation) without changing the conceptual schema.
+    - Physical data independence is generally easier to achieve than logical data independence, since logical changes are more likely to actually affect what applications expect to see.
+
+17. **(ii) Database এর Table and View এর মধ্যে পার্থক্য লিখুন। E-R diagram এর প্রয়োজনীয়তা লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 785 (ET: N/A)]*
+
+    Answer:
+
+    Table vs View
+
+    | Point | Table | View |
+    |---|---|---|
+    | Storage | Physically stores data | Virtual — stores only a query definition |
+    | Data | Its own independent data | Data pulled live from underlying table(s) |
+    | Update | Data changes directly | Changes only allowed if the view is simple/updatable |
+    | Purpose | Base storage of data | Simplify complex queries, restrict access to certain columns/rows |
+
+    Need for an E-R diagram
+    - Plans the database's entities, attributes and relationships visually before implementation, catching design errors early and helping communicate the design to stakeholders.
+
+18. **(a) Distinguish between table and view in database management system.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 802 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Table | View |
+    |---|---|---|
+    | Nature | A real, physical structure holding data | A virtual table defined by a stored `SELECT` query |
+    | Storage | Occupies its own disk space | Occupies no data storage of its own (except a materialized view) |
+    | Independence | Exists on its own | Depends on the underlying table(s); breaks if they are dropped |
+    | Use case | Storing raw data | Simplifying a complex join, hiding sensitive columns, giving a restricted view of data |
+
+19. **Database এর সর্বনিম্ন Unit কোনটি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
+
+    Answer: A bit is the absolute smallest unit of data storage, but in the context of a database's logical structure, the smallest meaningful unit is a field/attribute (a single column value in a row). <!-- verify -->
+
+20. **DBMS বলতে কী বোঝানো হয়? DBMS শ্রেণিভিন্যাস বর্ণনা করুন।** *[40th BCS 2020 compact it 971-972 (ET: BPSC)]*
+
+    Answer: A DBMS (Database Management System) is software that creates, manages and provides controlled access to a database, sitting between the user/application and the actual stored data.
+
+    Classification of DBMS
+    - By data model: Hierarchical, Network, Relational (RDBMS), Object-oriented, NoSQL.
+    - By number of users: Single-user, Multi-user.
+    - By site: Centralized, Distributed.
+    - By purpose: General-purpose (MySQL, Oracle) vs special-purpose (built for one specific application).
+
+21. **Define View, Materialized View. Difference between View and Materialized View and Usage of two.** *[RAKUB Assistant Database Administrator 2020 compact it 1012-1013 (ET: E-Zone)]*
+
+    Answer:
+
+    - View — a virtual table defined by a stored query; it has no data of its own and is re-computed from the base tables every time it is queried.
+    - Materialized View — a view whose result is actually computed once and physically stored, then refreshed on a schedule or on demand, instead of being recomputed on every query.
+
+    | Point | View | Materialized View |
+    |---|---|---|
+    | Storage | None (just the query) | Stores the actual result data |
+    | Freshness | Always live/up to date | Can be stale until refreshed |
+    | Query speed | Same cost as the underlying query every time | Fast — reads pre-computed data |
+    | Usage | Simplifying queries, restricting access to columns | Speeding up expensive aggregate reports/dashboards that do not need second-by-second accuracy |
+
+22. **What are the roles of Database Engineer?** *[RAKUB Assistant Database Administrator 2020 compact it 1014 (ET: E-Zone)]*
+
+    Answer: A Database Engineer designs, builds and optimises the systems that store and move data, focusing more on architecture and pipelines than day-to-day administration.
+
+    - Designs the database schema and data models for new applications.
+    - Builds and optimises ETL pipelines that move and transform data between systems.
+    - Tunes queries and indexing strategy for performance.
+    - Works with DevOps on scaling, replication and high availability.
+    - Collaborates with application developers to ensure the database design fits the application's needs.
+
+23. **A company needs key person for DBMS. What is his/her duty as key person?** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
+
+    Answer: That key person is the Database Administrator (DBA), whose duties are:
+
+    - Installing, configuring and maintaining the DBMS.
+    - Designing and evolving the database schema.
+    - Managing security: creating users, assigning roles and permissions.
+    - Performing regular backups and handling disaster recovery.
+    - Monitoring and tuning performance.
+    - Ensuring data integrity and enforcing organisational data policies.
+
+24. **What is RDBMS? Why data are stored in database system instead of file?** *[ICT Ministry Assistant Programmer 2017 compact it 1236 (ET: N/A)]*
+
+    Answer:
+
+    RDBMS
+    - A Relational Database Management System stores data in tables (relations) of rows and columns, with relationships expressed through common key values, and provides SQL to query and manage that data.
+
+    Why a database instead of plain files
+    - Reduces data redundancy — flat files often duplicate the same data across many files.
+    - Enforces data integrity through constraints, which plain files cannot do.
+    - Provides concurrent, safe multi-user access, whereas files are prone to conflicts when edited simultaneously.
+    - Provides transaction support (ACID), backup/recovery, and security — none of which a plain file system offers out of the box.
+    - Supports fast, flexible querying (SQL) instead of custom code to search through files.
+
+25. **a) What is a database? Discuss the importance of database.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
+    Answer: A database is an organised, persistent collection of related data that can be efficiently accessed, managed and updated, typically through a DBMS.
+
+    Importance of a database
+    - Centralises data, reducing duplication and inconsistency.
+    - Provides fast, structured access via queries instead of manual searching.
+    - Enforces data integrity and security through constraints and access control.
+    - Supports many users working with the same data concurrently and safely.
+    - Forms the backbone of virtually every modern application — banking, e-commerce, healthcare records, and more.
+
+26. **b) Specify the functions of the database administration.** *[Ministry of Finance Programmer 2013 compact it 1272 (ET: N/A)]*
+
+    Answer: Functions of database administration (the DBA's job):
+
+    - Schema design and maintenance.
+    - User account creation and access-permission management.
+    - Backup scheduling and disaster recovery planning.
+    - Performance monitoring and tuning (indexing, query optimisation).
+    - Enforcing data integrity and security policies.
+    - Coordinating software upgrades and patches to the DBMS.
+
 ## ER Diagram & Database Design (25)
 
 1. **BSCPL regularly publishes multiple job vacancies, where each Job is identified by a unique Job ID and contains information such as Job Title, Starting Salary, Job Description, and other relevant attributes. An Applicant is identified by a unique Applicant ID and has attributes such as Name, Date of Birth, Starting/Joining Date, Contact Information, and other details. An applicant can apply for only one job, while a particular job can receive applications from many applicants. Design the ER diagram for this system, showing the entities, attributes, primary keys, relationship, cardinalities, and participation constraints.** *[BSCCPL AME 21-08-2026 (BUET)]*
