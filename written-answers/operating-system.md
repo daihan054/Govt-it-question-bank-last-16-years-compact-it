@@ -6847,6 +6847,301 @@ Answer:
     - Working Set Model: Ensure that a process is allocated sufficient frames to hold its active working set before dispatching.
     - Page Fault Frequency (PFF): Dynamically monitor page fault rates; allocate frames if PFF is too high, or suspend processes if memory is saturated.
 
+## Process Management & Process States (12)
+
+1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+
+   Answer: A process is a program in execution — it includes the program's code, its current activity (program counter, registers), and the resources (memory, open files) it is using.
+
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admitted
+       Ready --> Running: scheduler dispatch
+       Running --> Ready: interrupt / time slice expired
+       Running --> Waiting: I/O or event wait
+       Waiting --> Ready: I/O or event completed
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   - New — the process is being created.
+   - Ready — the process is loaded in memory, waiting only for the CPU.
+   - Running — instructions are actively being executed.
+   - Waiting (Blocked) — the process is waiting for an I/O operation or event to complete.
+   - Terminated — the process has finished execution and is being removed.
+
+2. **(c) Define context switch with proper example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
+
+   Answer: A context switch is the process of saving the state (registers, program counter, memory maps) of the currently running process and loading the saved state of another process, so the CPU can switch from one process to another.
+
+   - Example: Process A is running and a timer interrupt occurs (its time slice ends). The OS saves A's CPU registers and program counter into A's PCB, then loads process B's saved registers and program counter from B's PCB, and B resumes exactly where it left off.
+   - Context switches are pure overhead — no useful work is done during the switch itself — so frequent switching (as with a very short time quantum) reduces overall system throughput.
+
+3. **(খ) Process কী? বিভিন্ন ধরনের Process state এর কাজ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 414 (ET: N/A)]*
+
+   Answer: A process is an instance of a program currently being executed, along with its associated resources (memory, CPU registers, open files).
+
+   Process states and their role
+   - New — the OS is setting up the process (allocating a PCB and initial resources).
+   - Ready — the process is fully set up and only waiting for CPU time.
+   - Running — the process's instructions are being executed by the CPU.
+   - Waiting — the process cannot proceed until an I/O operation or event finishes.
+   - Terminated — execution is complete; the OS reclaims its resources.
+
+4. **Explain the process state.** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
+
+   Answer: As a process executes, it moves through a sequence of states, tracked by the OS in the process's PCB.
+
+   - New → Ready: the process is admitted once enough memory/resources are available.
+   - Ready → Running: the scheduler picks the process to run on the CPU.
+   - Running → Waiting: the process requests I/O or waits for an event.
+   - Waiting → Ready: the awaited event completes, so the process can run again once scheduled.
+   - Running → Terminated: the process finishes or is killed.
+   - Only one process can be in the Running state per CPU core at any instant; many processes can be Ready or Waiting at once.
+
+5. **(ক) Process কী? একটি Process এর বিভিন্ন ধাপগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
+
+   Answer: A process is a program loaded into memory and being executed, distinct from the program itself (which is just passive code on disk).
+
+   Stages (states) of a process: New, Ready, Running, Waiting, Terminated — the same five-state model described above, tracked and transitioned by the OS scheduler as the process runs, blocks on I/O, and eventually finishes.
+
+6. **অথবা, (ক) Process Control Block (PCB) কী? এটি একটি Process সংক্রান্ত যে যে তথ্য রাখে সেগুলো লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 624 (ET: N/A)]*
+
+   Answer: A Process Control Block (PCB) is a data structure the OS maintains for every process, storing all the information needed to manage and later resume that process.
+
+   Information stored in a PCB
+   - Process ID (PID) and process state (New, Ready, Running, Waiting, Terminated).
+   - Program counter — the address of the next instruction to execute.
+   - CPU registers — their saved values when the process is not running.
+   - CPU scheduling information — priority, pointers to scheduling queues.
+   - Memory management information — base/limit registers, page tables.
+   - Accounting information — CPU time used, time limits, process ID of parent.
+   - I/O status information — list of open files and allocated I/O devices.
+
+7. **Write down the name of four information stored in PCB (Process Control Block).** *[RPGCL Assistant Manager (ICT) 2022 compact it 653 (ET: BUET)]*
+
+   Answer: Four pieces of information stored in a PCB:
+
+   - Process ID and process state.
+   - Program counter (address of the next instruction).
+   - CPU registers (saved values for context switching).
+   - Memory management information (base/limit registers or page table pointers).
+
+8. **Operating System এর Process state diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
+
+   Answer:
+
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready
+       Ready --> Running
+       Running --> Ready
+       Running --> Waiting
+       Waiting --> Ready
+       Running --> Terminated
+       Terminated --> [*]
+   ```
+   - Running → Ready happens on a timer interrupt or preemption; Running → Waiting happens on an I/O request; Waiting → Ready happens once the I/O completes.
+
+9. **(i) Operating System এর Process State Transition Diagram আঁকুন ও ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Ready: admit
+       Ready --> Running: dispatch
+       Running --> Ready: interrupt
+       Running --> Waiting: I/O or event wait
+       Waiting --> Ready: I/O or event completion
+       Running --> Terminated: exit
+       Terminated --> [*]
+   ```
+   - `admit`: the process is loaded into memory and joins the ready queue.
+   - `dispatch`: the short-term scheduler selects it to run on the CPU.
+   - `interrupt`: the CPU is taken away (time slice expiry or a higher-priority process arrives), returning it to Ready.
+   - `I/O or event wait`: the process cannot continue and moves to Waiting until its request is satisfied.
+   - `exit`: the process finishes and is Terminated, and its resources are reclaimed.
+
+10. **Operating System এর ক্ষেত্রে নিম্নোক্ত Process State গুলো ব্যবহার করে State Diagram অংকন করুন। [New, ready, Wait, Run, Terminated]** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
+
+    Answer:
+
+    ```mermaid
+    stateDiagram-v2
+        [*] --> New
+        New --> Ready
+        Ready --> Run
+        Run --> Ready
+        Run --> Wait
+        Wait --> Ready
+        Run --> Terminated
+        Terminated --> [*]
+    ```
+    - Same five-state model: New (being created), Ready (waiting for CPU), Run (executing), Wait (blocked on I/O/event), Terminated (finished).
+
+11. **(c) What are the difference between process and threads?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1130 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Process | Thread |
+    |---|---|---|
+    | Definition | An independent program in execution | A lightweight unit of execution within a process |
+    | Memory | Has its own separate address space | Shares the address space of its parent process |
+    | Creation cost | Expensive (new memory space, PCB) | Cheap (shares most resources with siblings) |
+    | Communication | Needs IPC (pipes, sockets, shared memory) | Can communicate directly via shared memory |
+    | Crash effect | One process crashing does not affect others | One thread crashing can crash the whole process |
+    | Context switch | Slower (full memory map switch) | Faster (only registers and stack switch) |
+
+12. **(b) What are the difference between process and thread?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+
+    Answer: (Same distinction as above.)
+
+    - A process is a self-contained, independent execution unit with its own memory space; a thread is a lighter execution unit that lives inside a process and shares that process's memory and resources with its sibling threads.
+    - Multiple threads within one process can run concurrently and communicate cheaply through shared variables, whereas separate processes are isolated and need explicit inter-process communication (IPC) to exchange data.
+
+## Concurrency, Threads & Synchronization (11)
+
+1. **Multi-threaded processing and distributed computing have become essential.** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
+
+   Answer: Multi-threaded processing lets a single program run several parts of its work concurrently within one process, sharing memory, which makes far better use of modern multi-core CPUs. Distributed computing spreads work across multiple independent machines connected by a network, letting a system scale beyond what a single machine can do and stay available even if one machine fails.
+
+   - Together they are essential today because workloads (web services, big-data processing, real-time applications) have grown far beyond what a single-threaded program on a single machine can handle within an acceptable time.
+
+2. **What is Multithreading programming? Why Multithreading used in programming?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 296 (ET: BIBM)]*
+
+   Answer: Multithreading is a programming technique where a single process runs multiple threads concurrently, with all threads sharing the same memory space and resources.
+
+   Why it is used
+   - Better CPU utilisation — one thread can do I/O-bound work (waiting) while another does CPU-bound work.
+   - Improved responsiveness — a GUI application stays responsive to the user while a background thread does heavy processing.
+   - Resource sharing — threads of the same process share memory directly, avoiding the overhead of inter-process communication.
+   - Economy — creating and switching between threads is much cheaper than creating and switching between full processes.
+
+3. **What is Multithreading System?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1460 (ET: N/A)]*
+
+   Answer: A multithreading system is an operating system or programming environment that allows a single process to be divided into multiple threads of execution, which run concurrently and share the process's memory and resources, improving parallelism and responsiveness compared to a strictly single-threaded system.
+
+4. **What is the output of the following code?** *[BAERA Assistant Engineer (CSE) 2023 compact it 574 (ET: BUET)]*
+   ```c
+   #include <stdlib.h>
+   #include <sys/types.h>
+   #include <sys/wait.h>
+   #include <unistd.h>
+   int main(int argc, char *argv[]){
+       int i;
+       for(i=0;i<4;i++){
+           int pid = fork();
+           if(pid==0){
+               printf("%d\n",i);
+               exit(0);
+           }
+       }
+       for(i=0;i<4;i++){
+           wait(NULL);
+       }
+       return 0;
+   }
+   ```
+
+   Answer: The program prints `0, 1, 2, 3`, one per line, but the exact order can vary between runs.
+
+   - The outer loop runs 4 times. On each iteration `fork()` creates a new child process; the child gets `pid == 0` and immediately prints the current value of `i` and exits.
+   - Because each child is created before `i` is incremented in that same iteration, the values printed are exactly `0, 1, 2, 3` — one per child.
+   - The parent process does not print anything; it only calls `fork()` 4 times and then `wait()`s for all 4 children to finish.
+   - The order `0, 1, 2, 3` is the most likely output since children tend to be scheduled soon after creation, but the OS scheduler does not strictly guarantee this order — it is possible (though less common) to see them printed out of order. <!-- verify -->
+
+5. **অথবা, (ক) Thread এর সংজ্ঞা দিন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 619 (ET: N/A)]*
+
+   Answer: A thread is the smallest unit of CPU execution within a process — a lightweight sub-process that has its own program counter, register set and stack, but shares the code, data and other resources of the process it belongs to with its sibling threads.
+
+6. **Write down the thread life cycle.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 755 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   stateDiagram-v2
+       [*] --> New
+       New --> Runnable: start()
+       Runnable --> Running: scheduler picks it
+       Running --> Runnable: yield / time slice ends
+       Running --> Blocked: waiting for I/O, lock or signal
+       Blocked --> Runnable: event received
+       Running --> Terminated: run completes
+       Terminated --> [*]
+   ```
+   - New — the thread object is created but `start()` has not been called yet.
+   - Runnable — the thread is eligible to run and waiting for the CPU.
+   - Running — the thread is currently executing.
+   - Blocked/Waiting — the thread is paused, waiting on I/O, a lock, or a signal from another thread.
+   - Terminated (Dead) — the thread has finished executing.
+
+7. **What is Multi-threading and multi-tasking? Difference between Multi-threading and Multi-tasking?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
+
+   Answer:
+
+   - Multitasking — the OS runs multiple independent processes concurrently by rapidly switching the CPU between them.
+   - Multithreading — a single process runs multiple threads concurrently, all sharing that one process's memory space.
+
+   | Point | Multitasking | Multithreading |
+   |---|---|---|
+   | Unit of execution | Whole processes | Threads within one process |
+   | Memory | Each process has its own address space | All threads share the same address space |
+   | Communication | Needs IPC | Direct via shared memory |
+   | Overhead | Higher (separate memory, context switch) | Lower (lightweight context switch) |
+   | Example | Running a browser and a music player at once | A browser using separate threads for rendering, networking and UI |
+
+8. **(c) What is thread? Give some benefits of multi-threaded programming.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 889-890 (ET: N/A)]*
+
+   Answer: A thread is a lightweight, independently schedulable sequence of execution within a process, sharing that process's code and memory with its sibling threads.
+
+   Benefits of multithreaded programming
+   - Responsiveness — the application can keep responding to input even while some threads perform long operations.
+   - Resource sharing — threads share memory, avoiding the cost of inter-process communication.
+   - Economy — thread creation and context switching cost far less than for full processes.
+   - Scalability — on a multi-core/multiprocessor system, different threads can run truly in parallel on different cores, increasing throughput.
+
+9. **(d) Differentiate between thread and process.** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
+
+   Answer: (Same distinction as Q11 in Process Management above.)
+
+   | Point | Process | Thread |
+   |---|---|---|
+   | Address space | Own, independent | Shared with sibling threads |
+   | Creation/switch cost | Heavier | Lighter |
+   | Communication | Requires IPC | Direct via shared memory |
+   | Isolation | Fully isolated from other processes | Threads of the same process can affect each other |
+
+10. **What is multitasking and multithreading? What are the advantage threads over process?** *[Bangladesh Competition Commission Programmer 2019 compact it 1060 (ET: DU)]*
+
+    Answer: Multitasking runs several independent processes concurrently; multithreading runs several threads concurrently within a single process, sharing its memory.
+
+    Advantages of threads over processes
+    - Much faster to create and terminate, since no new address space needs to be set up.
+    - Much faster context switch, since the memory map does not need to change.
+    - Threads communicate directly through shared memory, with no need for IPC mechanisms.
+    - Lower overall memory consumption, since threads share code and data segments instead of duplicating them.
+
+11. **Define thread cancellation, target thread. Enumerate the different RAID level.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1106-1107 (ET: AUST)]*
+
+    Answer:
+
+    Thread cancellation
+    - The task of terminating a thread before it has completed its normal execution. The thread being terminated is called the target thread.
+    - Two forms: asynchronous cancellation (the target thread is terminated immediately) and deferred cancellation (the target thread periodically checks whether it should terminate, allowing it to clean up safely).
+
+    RAID levels
+    - RAID 0 — striping, no redundancy, best performance, no fault tolerance.
+    - RAID 1 — mirroring, full duplication, tolerates one disk failure.
+    - RAID 2 — bit-level striping with Hamming code error correction (rarely used commercially).
+    - RAID 3 — byte-level striping with a dedicated parity disk.
+    - RAID 4 — block-level striping with a dedicated parity disk.
+    - RAID 5 — block-level striping with distributed parity, tolerates one disk failure.
+    - RAID 6 — like RAID 5 but with double distributed parity, tolerates two disk failures.
+    - RAID 10 (1+0) — a stripe of mirrors, combining RAID 1's redundancy with RAID 0's performance.
+
 ## File Systems & Disk Management (7)
 
 1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
