@@ -441,10 +441,6 @@ Answer: `Object-Oriented Programming` organises a program around `objects` — b
  * **Member functions to deposit() money, withdraw() money (ensuring sufficient balance), and display() account details.**
 **Demonstrate the concept of encapsulation by keeping data member's private and providing appropriate public methods for accessing and modifying them.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
 
-* **A class BankAccount with data members for account holder's name, account number, and balance.**
- * **Member functions to deposit() money, withdraw() money (ensuring sufficient balance), and display() account details.**
-**Demonstrate the concept of encapsulation by keeping data member's private and providing appropriate public methods for accessing and modifying them.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
-
    Answer: The program demonstrates `encapsulation`: the data members are `private`, and all access goes through `public` methods that validate what they are given.
 
    Java version
@@ -5364,22 +5360,6 @@ Public class class B extends class A {
 ```
 **Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
-```java
-Public class Class A {
-    Public void m1() {}
-    Public void m2(int i) {}
-    Public void m3(int i) {}
-    Public static void m4(int i) {}
-}
-Public class class B extends class A {
-    Public static void m1(int i) {}
-    Public void m2(int i) {}
-    Public void m3(string s) {}
-    Public static void m4(int i) {}
-}
-```
-**Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
-
    Answer: The code as printed contains typing errors — `Public` should be `public`, `class Class A` should be `class A`, and `string` should be `String`. Corrected, it reads:
    ```java
    public class A {
@@ -6476,11 +6456,6 @@ Answer: The class holds the three properties, and `totalAmount` returns the comp
    iii) WAR
    iv) JDK
 
-i) JAR
-   ii) JRE
-   iii) WAR
-   iv) JDK
-
     Answer: The four full forms.
     ```
        i)   JAR  =  Java ARchive
@@ -6553,14 +6528,6 @@ i) JAR
     | Used for | Libraries and desktop applications | Web applications |
 
 16. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
-```text
-1
-1 2
-1 2 3
-1 2 3 4
-1 2 3 4 5
-```
-
 ```text
 1
 1 2
@@ -8429,7 +8396,7 @@ Answer:
     | Feature | while Loop | do-while Loop |
     |---|---|---|
     | Loop Type | Entry-Controlled Loop (Pre-test) | Exit-Controlled Loop (Post-test) |
-    | Condition Check | Condition is evaluated **before** executing the loop body | Condition is evaluated **after** executing the loop body |
+    | Condition Check | Condition is evaluated before executing the loop body | Condition is evaluated after executing the loop body |
     | Minimum Execution | 0 times (If condition is initially false, body never executes) | At least 1 time (Body always executes once before testing condition) |
     | Semicolon Syntax | No semicolon after condition: `while (condition) { ... }` | Semicolon required at end: `do { ... } while (condition);` |
     | Primary Use Case | When exact iteration count depends on dynamic preconditions | When user input or menu selection must be prompted at least once |
@@ -8531,7 +8498,7 @@ Answer:
     - Initial Girls $= 3 \times 12 = 36$
     - Total Initial People $= 24 + 36 = 60$.
 
-    Final Answer: **60 people** were in the room at the start.
+    Final Answer: 60 people were in the room at the start.
 
 8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
 a) What is Series? b) Write a program using C/C++ to find n^{th} Fibonacci.
@@ -8645,7 +8612,7 @@ Answer:
     Step 3: Calculate students who failed in both subjects:
     $$\text{Failed in both} = n(U) - n(B \cup E) = 100 - 98 = 2$$
 
-    Final Answer: **2 students** failed in both subjects.
+    Final Answer: 2 students failed in both subjects.
 
 ## Output Tracing & Recursion (10)
 
@@ -9328,35 +9295,6 @@ public class Main{
    - Points the question is testing: the `comma operator` in the update section, a `compound condition` with `&&`, and the fact that a variable declared before the loop `survives` it — after the loop, `i` is 3 and `j` is out of scope.
 
 7. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1192-1193 (ET: N/A)]*
-```cpp
-using namespace std;
-class A{
-    private:
-        int a;
-        int b;
-        void set_a(int a) {
-            this->a=a;
-        }
-        void set_b(int b) {
-            this->b=b;
-        }
-    public:
-        void getValues(int x, int y) {
-            set_a(x); //calling private number
-            set_b(x); //calling private number
-        }
-        void putValues() {
-            cout << "a=" << a << " ,b=" << b << endl;
-        }
-};
-int main() {
-    A objA; //creating object
-    objA.getValues(100,200);
-    objA.putValues(); //print values
-    return 0;
-}
-```
-
 ```cpp
 using namespace std;
 class A{
@@ -11927,14 +11865,6 @@ Answer: `throw` and `throws` look alike but do entirely different jobs. The sing
 ## C++ OOP Concepts & Friend Functions (3)
 
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1355 (ET: N/A)]*
-```cpp
-class myclass{
-    int num;
-public:
-    myclass (int i) {num = i;}
-};
-```
-
 ```cpp
 class myclass{
     int num;
