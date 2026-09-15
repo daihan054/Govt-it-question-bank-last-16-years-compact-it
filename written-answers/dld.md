@@ -6970,7 +6970,28 @@ Answer: (Answered in English, as required for IT topics.) The function is
    ```
    - Twelve literals have reduced to four, and the circuit is one NAND plus one inverter and one AND gate.
 
-6. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
+6. **(b) Use Algebraic manipulation to convert the following equation to sum-of-product form: y(z + \bar{w}) + x(\bar{z} + \bar{y})\bar{w} + (zw)(\overline{xy})** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+
+   Answer: The expression is F = y(z + w') + x(z' + y')w' + zw(xy)'
+
+   Step 1 — expand each term using the distributive law
+   ```
+   y(z + w')          = yz + yw'
+   x(z' + y')w'       = xz'w' + xy'w'
+   zw(xy)'            = zw(x' + y')        De Morgan: (xy)' = x' + y'
+                      = x'zw + y'zw
+   ```
+
+   Step 2 — collect all product terms (SOP form)
+   ```
+   F = yz + yw' + xz'w' + xy'w' + x'zw + y'zw
+   ```
+
+   This is the final Sum-of-Products form. Each term is a product of literals; all terms are ORed together.
+   - No further simplification is guaranteed without a complete minterm list, since variables w, x, y, z appear in non-overlapping combinations across terms.
+
+7. **Simplify the Boolean expression as possible: AB\bar{C}D + ABCD + \bar{A}BD** *[APSCL Assistant Engineer (ICT/MIS) 12.11.2021 compact it 867 (ET: BUET)]*
+
 
 Answer: The expression is
    ```
