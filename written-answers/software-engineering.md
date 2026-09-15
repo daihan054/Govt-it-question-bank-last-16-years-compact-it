@@ -3411,16 +3411,6 @@ Answer: What SQA is
 | (vi) Security Testing | (f) identifying and addressing security vulnerabilities in a software application. |
 | (vii) Usability Testing | (g) a method of testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. |
 
-| Testing method | Topic |
-|---|---|
-| (i) Unit Testing | (a) the process where you test the smallest functional unit of code. |
-| (ii) Integration Testing | (b) is a type of software testing in which the different units, modules or components of a software application are tested as a combined entity. |
-| (iii) System Testing | (c) examines every component of an application to make sure that they work as a complete and unified whole. |
-| (iv) Acceptance Testing | (d) software testing that evaluates whether a system meets its business and user requirements |
-| (v) Performance Testing | (e) a testing measure that evaluates the speed, responsiveness and stability of a computer, network, software program or device under a workload. |
-| (vi) Security Testing | (f) identifying and addressing security vulnerabilities in a software application. |
-| (vii) Usability Testing | (g) a method of testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. |
-
    Answer: The question is `incomplete` — the table to be matched was not captured, so the exact pairing cannot be given. The material such a question is normally set on is below, in the form a matching question uses.
 
    Testing terms and their definitions
@@ -5440,17 +5430,6 @@ Answer: The `implementation stage` is where code is written, so the tests conduc
    i) Try to enter invalid pin more than 3 times and see if the account gets locked.
    j) Verify how much time the system takes to log out.
 
-a) Withdrawing money less than the account balance
-   b) Withdrawing money greater than the account balance
-   c) Withdrawing money equal to the account balance
-   d) Withdrawing money from an ATM and from the internet at the same time
-   e) Withdrawing money when the connection to the bank's network is lost
-   f) Withdrawing money from multiple ATMs simultaneously
-   g) Check the balance available
-   h) Verify the error message by entering an incorrect PIN
-   i) Try to enter invalid pin more than 3 times and see if the account gets locked.
-   j) Verify how much time the system takes to log out.
-
     Answer: Testing an ATM in a banking system covers `functional`, `non-functional`, `hardware` and `security` aspects. The approach below is organised by test level.
 
     1. Unit testing
@@ -6127,6 +6106,103 @@ Answer: The test program below drives the sorting function and checks `two prope
 Answer:
     Penetration Testing (Ethical Hacking / Pen Testing) for a network service is an authorized simulated cyberattack performed on computer systems, network devices, and service ports to identify, safely exploit, and report security vulnerabilities (such as open ports, misconfigurations, and outdated protocols) before malicious attackers can exploit them.
 
+## Data Flow Diagrams (DFD) (2)
+
+1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) A Data Flow Diagram (DFD) is a graphical tool that shows how data moves through a system — where it comes from, which processes change it, where it is stored, and where it finally goes.
+   Four standard symbols:
+   - `Process` (circle / rounded rectangle) — a function that transforms input data into output data, e.g. "Validate Order".
+   - `External Entity` (rectangle) — a source or destination outside the system, e.g. "Customer".
+   - `Data Store` (open-ended rectangle) — a place where data is held, e.g. "Order Database".
+   - `Data Flow` (labeled arrow) — the path data moves along between the three symbols above.
+
+2. **১ জন ব্যক্তি ১টি Bank Account খোলার জন্য একটি form fillup করেন। এরপর তাতে Manager স্বাক্ষর করেন। এবার উক্ত Account-এ ঐ ব্যক্তি কিছু টাকা Deposit করলে Account সচল হয়। এই Process টি DFD এর মাধ্যমে প্রকাশ করুন।** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   ```mermaid
+   flowchart LR
+       Customer([Customer]) -->|Filled Form| P1[1.0 Verify Form]
+       P1 -->|Verified Form| Manager([Manager])
+       Manager -->|Signature| P2[2.0 Approve Account]
+       P2 -->|Account Record| D1[(Account DB)]
+       Customer -->|Deposit Amount| P3[3.0 Activate Account]
+       D1 --> P3
+       P3 -->|Updated Balance| D1
+       P3 -->|Active Account| Customer
+   ```
+   - The customer fills a form, which Process 1.0 verifies; the Manager's signature drives Process 2.0, which stores the account in the Account DB; the customer's deposit then drives Process 3.0, which updates the balance and activates the account.
+
+## Code Smells & Refactoring (2)
+
+1. **Give examples of the following code smells:** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1366 (ET: BUET)]*
+
+Answer:
+   - (a) Feature envy: a method in an `Invoice` class that mostly calls getters on a `Customer` object to compute a discount — it is more interested in `Customer`'s data than its own, so the logic belongs in `Customer` instead.
+   - (b) Dead code: a function like `oldCalculateTax()` left in the codebase after being replaced, and never called from anywhere.
+   - (c) Duplicate code: the same validation block copy-pasted in three different classes instead of being written once and reused.
+   - (d) Shotgun surgery: changing one business rule (e.g. the tax rate) forces edits in ten different files because the same logic is scattered everywhere instead of living in one place.
+
+2. **What is reverse engineering and forward engineering?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 860-861 (ET: N/A)]*
+
+Answer:
+   - `Forward engineering` is the normal development path — going from requirements and design down to working source code.
+   - `Reverse engineering` is going the other way — analyzing existing code (or a compiled program) to recover its design or requirements, used mainly to understand undocumented legacy systems.
+   - `Re-engineering` combines both: reverse engineer the old system to understand it, then forward engineer an improved version from that understanding.
+
+## Open Source Software & Licensing (2)
+
+1. **Write down the advantages and disadvantages of Open source software with example.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 549 (ET: BIBM)]*
+
+Answer:
+   Advantages:
+   - Source code is free and publicly available, e.g. `Linux`, `MySQL` — anyone can use, study, and modify it.
+   - Community-driven development means fast bug fixes and security patches.
+   - No vendor lock-in; software can be customized for specific needs.
+   Disadvantages:
+   - Little or no official support/warranty — help mainly comes from community forums.
+   - Documentation can be incomplete or inconsistent between versions.
+   - Quality and compatibility can vary because contributions come from many different people.
+
+2. **Open source এবং Proprietary Software -এর মধ্যে পার্থক্য লিখুন। একটি Open source এবং একটি Proprietary Operating system এর উদাহরণ দিন।** *[41th BCS 2021 compact it 881-882 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   | Point | Open Source | Proprietary |
+   |---|---|---|
+   | Source code | Public, can be modified | Closed, owned by the vendor |
+   | Cost | Usually free | Usually a paid license |
+   | Support | Community-based | Official vendor support |
+   | Example OS | `Linux` | `Windows` |
+
+## CI/CD & DevOps Methodologies (1)
+
+1. **What is CI/DI development model?** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1333 (ET: BUET)]*
+
+Answer: `CI/CD` stands for Continuous Integration / Continuous Delivery (or Deployment) — a DevOps practice that automates building, testing, and releasing software.
+   - `Continuous Integration (CI)`: developers merge code into a shared repository often; each merge triggers an automatic build and test run, so integration bugs are caught early.
+   - `Continuous Delivery / Deployment (CD)`: every change that passes CI is automatically packaged for release (Delivery) or pushed straight to production (Deployment) without manual steps.
+   ```mermaid
+   flowchart LR
+       A[Code Commit] --> B[Automated Build]
+       B --> C[Automated Tests]
+       C --> D[Continuous Delivery: Staging]
+       D --> E[Continuous Deployment: Production]
+   ```
+
+## UI/UX Design (1)
+
+1. **What is UI/UX? What is the difference between them?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 1123-1124 (ET: BREB)]*
+
+Answer:
+   - `UI (User Interface)`: the visual layer of a product — buttons, colors, typography, layout — everything the user sees and touches.
+   - `UX (User Experience)`: the overall feel of using the product — how easy, efficient, and satisfying the interaction is, including the whole flow from start to finish.
+   | Point | UI | UX |
+   |---|---|---|
+   | Focus | Look and feel | Overall usability and satisfaction |
+   | Deals with | Visual elements | User journey and interaction flow |
+   | Goal | Make it attractive | Make it usable and efficient |
+   | Example activity | Choosing colors, fonts, icons | User research, wireframes, journey maps |
+
 ## Software Design, Architecture & Patterns (1)
 
 1. **(b) What is design pattern? List the basic design patterns with example codes. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 336]]*
@@ -6136,7 +6212,7 @@ Answer:
 
     Three Primary Classifications of Design Patterns:
     - 1. Creational Patterns (Object creation mechanisms):
-      - **Singleton Pattern**: Ensures a class has only one instance and provides a global access point.
+      - Singleton Pattern: Ensures a class has only one instance and provides a global access point.
       ```java
       class DatabaseConnection {
           private static DatabaseConnection instance;
@@ -6148,9 +6224,9 @@ Answer:
       }
       ```
     - 2. Structural Patterns (Class and object composition):
-      - **Adapter Pattern**: Allows incompatible interfaces to work together by wrapping an existing class with a new interface.
-      - **Decorator Pattern**: Dynamically attaches additional responsibilities to an object.
+      - Adapter Pattern: Allows incompatible interfaces to work together by wrapping an existing class with a new interface.
+      - Decorator Pattern: Dynamically attaches additional responsibilities to an object.
     - 3. Behavioral Patterns (Object communication and algorithms):
-      - **Observer Pattern**: Defines a one-to-many dependency where state changes in a subject automatically notify all registered observers.
-      - **Strategy Pattern**: Encapsulates interchangeable algorithms inside separate classes.
+      - Observer Pattern: Defines a one-to-many dependency where state changes in a subject automatically notify all registered observers.
+      - Strategy Pattern: Encapsulates interchangeable algorithms inside separate classes.
 
