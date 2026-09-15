@@ -52,7 +52,7 @@ Answer:
 3. **Number of SDGs (Sustainable Development Goals)?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
 Answer:
-    - Total number of SDGs = **17 Goals** (comprising **169 specific targets**).
+    - Total number of SDGs = 17 Goals (comprising 169 specific targets).
     - Adopted by the United Nations General Assembly in September 2015 under the 2030 Agenda for Sustainable Development (2016–2030).
 
 4. **Write the RSA Algorithm used for public key cryptography.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318-319]]*
@@ -68,8 +68,8 @@ Answer:
     - Step 5 (Private Exponent $d$): Calculate $d$ as the modular multiplicative inverse:
       $$d \equiv e^{-1} \pmod{\phi(n)} \implies d \times e \equiv 1 \pmod{\phi(n)}$$
     - Key Pairs:
-      - **Public Key**: $(e, n)$ (distributed openly for encryption)
-      - **Private Key**: $(d, n)$ (kept secret for decryption)
+      - Public Key: $(e, n)$ (distributed openly for encryption)
+      - Private Key: $(d, n)$ (kept secret for decryption)
     - Encryption: Given plaintext message $M$ ($M < n$):
       $$C = M^e \bmod n$$
     - Decryption: Given ciphertext $C$:
@@ -79,16 +79,16 @@ Answer:
 (a) He is capable to do the work. (Correct the sentence) (b) It is high time he leave the place. (Use the right form of verb) (c) Honesty is the best policy. (Transform the sentence into comparative degree) (d) Man is never content with long life. (e) The player (wear) Jersey No-10 is Messy. (Use the right form of verb) (f) I had been there. (Complete the sentence) (g) John, Tom and his friends were going to the playground. (Correct the sentence) (h) Four years - long time to complete the course. (Fill in the gap) (i) He is not loyal to me. (Correct the sentence) (j) He has said to me, “When will you come?” (Change the narration)
 
 Answer:
-    - (a) Corrected: He is capable **of doing** the work.
-    - (b) Right form of verb: It is high time he **left** the place.
-    - (c) Comparative degree: Honesty is **better than any other policy**.
+    - (a) Corrected: He is capable of doing the work.
+    - (b) Right form of verb: It is high time he left the place.
+    - (c) Comparative degree: Honesty is better than any other policy.
     - (d) Affirmative transformation: Man is always discontented with short life.
-    - (e) Right form of verb: The player **wearing** Jersey No-10 is Messi.
-    - (f) Completed sentence: I had been there **before the storm began**.
-    - (g) Corrected: John, Tom and **their** friends were going to the playground.
-    - (h) Fill in the gap: Four years **is a** long time to complete the course.
+    - (e) Right form of verb: The player wearing Jersey No-10 is Messi.
+    - (f) Completed sentence: I had been there before the storm began.
+    - (g) Corrected: John, Tom and their friends were going to the playground.
+    - (h) Fill in the gap: Four years is a long time to complete the course.
     - (i) Corrected: He is not loyal to me. (The sentence is already grammatically correct).
-    - (j) Indirect narration: He has asked me when I **would come** (or **would go**).
+    - (j) Indirect narration: He has asked me when I would come (or would go).
 
 6. **SDG বা “Sustainable Development Goal” কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
 
@@ -105,24 +105,24 @@ Answer:
     Number of Memory Frames = 4
 
     Step-by-Step Execution:
-    - 1. Ref `7`: Frames `[7, -, -, -]` $\to$ **Page Fault 1**
-    - 2. Ref `0`: Frames `[7, 0, -, -]` $\to$ **Page Fault 2**
-    - 3. Ref `1`: Frames `[7, 0, 1, -]` $\to$ **Page Fault 3**
-    - 4. Ref `2`: Frames `[7, 0, 1, 2]` $\to$ **Page Fault 4**
-    - 5. Ref `0`: Frames `[7, 0, 1, 2]` $\to$ **Hit** (Recency: 7, 1, 2, 0)
-    - 6. Ref `3`: Frames full. LRU page is `7`. Replace `7` with `3` $\to$ `[3, 0, 1, 2]` $\to$ **Page Fault 5** (Recency: 1, 2, 0, 3)
-    - 7. Ref `0`: Frames `[3, 0, 1, 2]` $\to$ **Hit** (Recency: 1, 2, 3, 0)
-    - 8. Ref `4`: Frames full. LRU page is `1`. Replace `1` with `4` $\to$ `[3, 0, 4, 2]` $\to$ **Page Fault 6** (Recency: 2, 3, 0, 4)
-    - 9. Ref `2`: Frames `[3, 0, 4, 2]` $\to$ **Hit** (Recency: 3, 0, 4, 2)
-    - 10. Ref `3`: Frames `[3, 0, 4, 2]` $\to$ **Hit** (Recency: 0, 4, 2, 3)
-    - 11. Ref `0`: Frames `[3, 0, 4, 2]` $\to$ **Hit** (Recency: 4, 2, 3, 0)
-    - 12. Ref `3`: Frames `[3, 0, 4, 2]` $\to$ **Hit** (Recency: 4, 2, 0, 3)
-    - 13. Ref `2`: Frames `[3, 0, 4, 2]` $\to$ **Hit** (Recency: 4, 0, 3, 2)
-    - 14. Ref `3`: Frames `[3, 0, 4, 2]` $\to$ **Hit** (Recency: 4, 0, 2, 3)
+    - 1. Ref `7`: Frames `[7, -, -, -]` $\to$ Page Fault 1
+    - 2. Ref `0`: Frames `[7, 0, -, -]` $\to$ Page Fault 2
+    - 3. Ref `1`: Frames `[7, 0, 1, -]` $\to$ Page Fault 3
+    - 4. Ref `2`: Frames `[7, 0, 1, 2]` $\to$ Page Fault 4
+    - 5. Ref `0`: Frames `[7, 0, 1, 2]` $\to$ Hit (Recency: 7, 1, 2, 0)
+    - 6. Ref `3`: Frames full. LRU page is `7`. Replace `7` with `3` $\to$ `[3, 0, 1, 2]` $\to$ Page Fault 5 (Recency: 1, 2, 0, 3)
+    - 7. Ref `0`: Frames `[3, 0, 1, 2]` $\to$ Hit (Recency: 1, 2, 3, 0)
+    - 8. Ref `4`: Frames full. LRU page is `1`. Replace `1` with `4` $\to$ `[3, 0, 4, 2]` $\to$ Page Fault 6 (Recency: 2, 3, 0, 4)
+    - 9. Ref `2`: Frames `[3, 0, 4, 2]` $\to$ Hit (Recency: 3, 0, 4, 2)
+    - 10. Ref `3`: Frames `[3, 0, 4, 2]` $\to$ Hit (Recency: 0, 4, 2, 3)
+    - 11. Ref `0`: Frames `[3, 0, 4, 2]` $\to$ Hit (Recency: 4, 2, 3, 0)
+    - 12. Ref `3`: Frames `[3, 0, 4, 2]` $\to$ Hit (Recency: 4, 2, 0, 3)
+    - 13. Ref `2`: Frames `[3, 0, 4, 2]` $\to$ Hit (Recency: 4, 0, 3, 2)
+    - 14. Ref `3`: Frames `[3, 0, 4, 2]` $\to$ Hit (Recency: 4, 0, 2, 3)
 
     Summary:
-    - Total Page Faults = **6**
-    - Total Hits = **8**
+    - Total Page Faults = 6
+    - Total Hits = 8
 
 ## Visual Basic & .NET (6)
 
