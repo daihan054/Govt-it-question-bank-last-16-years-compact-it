@@ -221,14 +221,6 @@ Answer: `GPU` stands for `Graphics Processing Unit`.
 | (d) Which system connects the hardware and software? | Operating System(OS) |
 | (e) Microprocessor and other peripherals are interfaced Microcontroller, with which board? | Microcontrollers, Motherboard |
 
-| Question | Answer |
-|---|---|
-| (a) Which bus transfers data between data and I/O Data Bus devices? | Data Bus |
-| (b) Which register contains the address of next instructions? | Program counter |
-| (c) Which register does the arithmetic and logical operation? | Arithmetic Logic Unit (ALU) |
-| (d) Which system connects the hardware and software? | Operating System(OS) |
-| (e) Microprocessor and other peripherals are interfaced Microcontroller, with which board? | Microcontrollers, Motherboard |
-
    Answer: (a) Which bus transfers data between the CPU and I/O devices?
    ```
       Data Bus
@@ -2196,7 +2188,7 @@ Answer:
 
     (ii) Cache Miss:
     - Definition: Occurs when the CPU requests data that is not currently stored in the cache memory.
-    - Result: The CPU stalls while the missing block is retrieved from slower main memory/DRAM and copied into the cache line. The resulting delay is termed the **Miss Penalty**.
+    - Result: The CPU stalls while the missing block is retrieved from slower main memory/DRAM and copied into the cache line. The resulting delay is termed the Miss Penalty.
     - Metric: $\text{Miss Ratio } (M) = 1 - H$.
     - Types of Cache Misses (3 Cs):
       1. Compulsory Miss (Cold Miss): First access to a memory block.
@@ -6119,11 +6111,6 @@ Answer: Stages of instruction pipelining
    * (iii) Complex decoding due to variable instruction length ______
    * (iv) Each instruction typically executes in a single clock cycle ______
 
-* (i) Pipelining is less efficient due to instruction complexity and variability ______
-   * (ii) Emphasis on hardware simplicity and efficiency ______
-   * (iii) Complex decoding due to variable instruction length ______
-   * (iv) Each instruction typically executes in a single clock cycle ______
-
    Answer: (i) Pipelining is less efficient due to instruction complexity and variability — `CISC`
    - CISC instructions vary in length (1 to 15 bytes in x86) and in how many cycles they take. A pipeline works best when every instruction is the same size and takes the same time, so this variability causes stalls and makes the pipeline control logic complicated.
 
@@ -6679,8 +6666,6 @@ Answer: What pipelining is
 1. **(a) চয়ন করুন: (i) Propagation delay; (ii) Transmission delay;**
    (b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-(b) SIMD instruction এর সংক্ষিপ্ত বর্ণনা লিখুন: MOV AX, A334H এবং MOV AX, [A334H] *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
    Answer: (a) Propagation delay and transmission delay
 
    `Propagation delay`
@@ -6836,8 +6821,6 @@ Answer: An `addressing mode` is the way an instruction specifies where its opera
    ```
 
 3. **(খ) নিচের instruction দুটির মাঝে পার্থক্য লিখুন:** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
-MOV AX, A534H এবং MOV AX, [A534H]
-
 MOV AX, A534H এবং MOV AX, [A534H]
 
    Answer: (Answered in English, as required for IT topics.) The two instructions differ only by the `square brackets`, and that changes the addressing mode completely.
@@ -8332,8 +8315,6 @@ Answer: `CISC` and `RISC` are the two design philosophies for a processor's inst
 
 1. **(a) Edge Computing এর ধারণা সংক্ষেপে ব্যাখ্যা করুন।**
    (b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
-(b) 8085 মাইক্রোপ্রসেসর কী? রেজিস্টারের ইফেক্টিভ মেমোরি অ্যাড্রেসিং কার্যকারিতা ব্যাখ্যা করুন। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
    Answer: (Answered in English, as required for IT topics.) `Edge computing` is a model in which data is processed `near where it is produced` — on or beside the device itself — instead of being sent to a distant central cloud.
 
