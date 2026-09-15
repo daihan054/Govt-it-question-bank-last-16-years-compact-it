@@ -1,0 +1,19 @@
+Amader "written-answers" folder er md file gula te TOC te jei subtopic ase erokom hoise, subtopic ta TOC te ase but etar question gulor answer nai. Jemon "written-answers/database.md" er "ER Diagram & Database Design" subtopic ta TOC te ase but etar ekta question er answer o lekha nai. Toh tumar kaj holo "Written-answers" folder gulor md file dhorba, TOC dhorba, dekhba oi TOC er shobgula question er answer ase kina (~\all-questions\written folder e corresponding md file er shob question ase), question er answer na thakle answer korba. Evabe shobgula md file check diba written-answers folder er. Loop ta lekhchi tor kajer shubidhar jonno.
+
+"~\all-questions\written" e loop ghurao, subtopic ta dhoro then answers folder er same md file er same subtopic tay dekho ki ki question answer kora missing. 
+loop:
+questionsMdFileArray[]
+for(i=0; i<questionsMdFileArray.count; i++ ) {
+  subtopicArray = questionsMdFileArray[i]
+   for(j = 0; j< subtopicArray ; j++) {
+      questionsArray[] = subtopicArray [j] 
+       for(k =0; k< questionsArray ; k++ ) {
+           step 1: search the same md file in "written-answers" folder
+           step 2: search the same subtopic in that md file
+           step 3: search the questionsArray[k] under that subtopic in "written-answers" folder
+           step 4: write answer of that question by following "answer-prompt"
+       }
+   }
+}
+
+ami tumake loop lekhsi ami ki bolte chai sheta bujhar jonno
