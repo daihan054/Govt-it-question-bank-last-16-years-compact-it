@@ -9799,10 +9799,10 @@ Answer:
     Third Normal Form (3NF):
     - A relational schema $R$ is in 3NF if:
       1. It is already in Second Normal Form (2NF) (no partial functional dependencies on candidate keys).
-      2. It contains **no transitive dependencies** (non-prime attributes must not depend on other non-prime attributes).
+      2. It contains no transitive dependencies (non-prime attributes must not depend on other non-prime attributes).
     - Formal Rule: For every non-trivial functional dependency $X \to Y$ in $R$:
-      - Either $X$ is a **Super Key**, OR
-      - $Y$ is a **Prime Attribute** (a member of any candidate key).
+      - Either $X$ is a Super Key, OR
+      - $Y$ is a Prime Attribute (a member of any candidate key).
     - Rule of Thumb: Every non-key attribute must depend on "the key, the whole key, and nothing but the key".
 
 ## SQL Commands (DDL, DML, DCL, TCL) (18)
