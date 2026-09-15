@@ -6009,3 +6009,283 @@ Answer:
     - 2. Queue Scenario — Shared Printer Spooling & Customer Service Ticket System:
       - In an office network where 20 employees submit print jobs to a shared printer simultaneously, the print requests are placed in a FIFO print queue. The document submitted first is printed first. A queue ensures fairness and prevents job starvation.
 
+## Queue (6)
+
+1. **Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** [SO IT 25-07-2026]
+
+   Answer: In a linear queue, once the `rear` pointer reaches the end of the allocated array, no new element can be added — even if empty slots exist at the front (freed by earlier dequeues). This wastes memory.
+
+   A circular queue fixes this by wrapping the `rear` pointer back to index 0 using modulo arithmetic (`rear = (rear + 1) % capacity`), so vacated slots are reused. This makes it memory-efficient and avoids costly element-shifting.
+
+   OS Example — Round-Robin CPU Scheduling:
+   - The OS maintains the ready process list in a circular queue.
+   - Each process gets a fixed time slice (quantum). When its slice expires, it is re-enqueued at the rear.
+   - The scheduler always dequeues from the front.
+   - Because the queue is circular, the OS cycles through processes continuously without ever reallocating or shifting memory.
+
+   Key difference:
+   | Feature | Linear Queue | Circular Queue |
+   |---|---|---|
+   | Memory use | Wastes front slots | Reuses all slots |
+   | Rear pointer | Moves only forward | Wraps around (modulo) |
+   | Element shifting | Needed to reclaim space | Not needed |
+   | Best for | Simple tasks | OS buffers, scheduling |
+
+2. **FIFO is used which data structure?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
+
+   Answer: Queue uses the FIFO (First-In, First-Out) principle.
+   - The first element inserted is the first to be removed.
+   - Insertion happens at the rear; deletion happens at the front.
+   - Examples: print spooler, CPU ready queue, OS process scheduling.
+
+3. **6.6 Why is a Circular Queue preferred over a Linear Queue in many operating systems? Explain with one example.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
+
+   Answer: A circular queue is preferred because it eliminates memory wastage that occurs in a linear queue when the rear reaches the end of the array while free slots exist at the front.
+
+   In a circular queue, `rear = (rear + 1) % size` wraps the pointer around. This allows continuous reuse of the fixed-size buffer.
+
+   OS Example — I/O Buffer (Keyboard Buffer):
+   - Characters typed by the user are stored in a circular buffer.
+   - The OS reads from the front at its own pace; the keyboard writes to the rear.
+   - When the rear reaches the end, it wraps to the front. This ensures no data is dropped and no memory is wasted.
+
+4. **What is a Circular Queue? Describe its implementation.** *[BDCCL Assistant Engineer (Network) 2022 compact it 743 (ET: N/A)]*
+
+   Answer: A circular queue is a linear data structure that uses a fixed-size array as if it were connected end-to-end. The rear pointer wraps back to index 0 after reaching the last index, so the queue reuses freed slots.
+
+   Key pointers:
+   - `front` — index of the element to dequeue next.
+   - `rear` — index where the next element will be enqueued.
+   - Empty condition: `front == -1`.
+   - Full condition: `(rear + 1) % size == front`.
+
+   Enqueue steps:
+   - If full → overflow error.
+   - If empty → set `front = 0`, `rear = 0`, insert.
+   - Else → `rear = (rear + 1) % size`, insert at `arr[rear]`.
+
+   Dequeue steps:
+   - If empty → underflow error.
+   - Save `arr[front]`.
+   - If `front == rear` → set both to -1 (queue now empty).
+   - Else → `front = (front + 1) % size`.
+
+   ```
+   Circular Queue (size = 5):
+   Index:   0    1    2    3    4
+   Array: [ 10 | 20 | 30 |    |    ]
+             ^              ^
+           front           rear
+   After enqueue(40): rear = (3+1)%5 = 4
+   After dequeue():   front = (0+1)%5 = 1  (10 removed, slot 0 freed)
+   After enqueue(50): rear = (4+1)%5 = 0   (wraps! slot 0 reused)
+   ```
+
+5. **Circular Queue and Priority Queue কীভাবে কাজ করে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 912-913 (ET: BUET)]*
+
+   Answer:
+
+   Circular Queue:
+   - Fixed-size array where rear wraps to front using `(rear + 1) % size`.
+   - Follows FIFO order.
+   - Used in OS scheduling, ring buffers, and I/O queues.
+   - Enqueue at rear, dequeue from front; pointers move circularly.
+
+   Priority Queue:
+   - Each element has a priority value.
+   - The element with the highest priority is dequeued first, regardless of insertion order.
+   - Implemented using a Min-Heap (lowest value = highest priority) or Max-Heap.
+   - Example: OS process scheduling with priority levels — a high-priority interrupt preempts a low-priority process.
+   - Operations: insert O(log n), extract-min/max O(log n).
+
+6. **Queue is an abstract data structure. A queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Write the steps of Enqueue Operation of Queue.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 983 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+   Answer: A queue follows FIFO — the element inserted first is removed first. Insertion (enqueue) happens at the rear; removal (dequeue) happens at the front.
+
+   Enqueue operation steps (linear queue with array of size N):
+   - Step 1: Check if queue is full. Full condition: `rear == N - 1`. If full, print "Queue Overflow" and stop.
+   - Step 2: If queue is empty (`front == -1`), set `front = 0`.
+   - Step 3: Increment rear: `rear = rear + 1`.
+   - Step 4: Insert the new element at `arr[rear]`.
+   - Step 5: Done.
+
+   ```
+   Enqueue(Queue, item):
+       if rear == N - 1:
+           print "Overflow"
+           return
+       if front == -1:
+           front = 0
+       rear = rear + 1
+       Queue[rear] = item
+   ```
+
+   Example — Enqueue 10, 20, 30 into empty queue (N=5):
+   ```
+   After Enqueue(10): front=0, rear=0  →  [10, _, _, _, _]
+   After Enqueue(20): front=0, rear=1  →  [10, 20, _, _, _]
+   After Enqueue(30): front=0, rear=2  →  [10, 20, 30, _, _]
+   ```
+
+## Data Structure Fundamentals (6)
+
+1. **(ক) ডাটা স্ট্রাকচার কী? Linear এবং non-linear data structures উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 621 (ET: N/A)]*
+
+   Answer: A data structure is a way of organizing and storing data in a computer so that it can be accessed and modified efficiently. It defines the relationship between data and the operations that can be performed on it.
+
+   Linear Data Structure:
+   - Elements are arranged sequentially; each element has exactly one predecessor and one successor (except the first and last).
+   - Easy to implement because memory is inherently linear.
+   - Examples: Array, Stack (LIFO), Queue (FIFO), Linked List.
+   - Array example: `[10, 20, 30, 40]` — elements stored contiguously, accessed by index.
+
+   Non-Linear Data Structure:
+   - Elements are not in a sequence; one element can connect to multiple others.
+   - Better for representing hierarchical or network relationships.
+   - Examples: Tree, Graph, Heap.
+   - Tree example: file system directory — one parent folder has many child folders.
+
+   | Feature | Linear | Non-Linear |
+   |---|---|---|
+   | Arrangement | Sequential | Hierarchical/networked |
+   | Traversal | Single pass | Multiple passes |
+   | Memory | Contiguous or linked | Nodes with multiple links |
+   | Examples | Array, Stack, Queue | Tree, Graph |
+
+2. **Linear Data Structure এবং Non Linear Data Structure বলতে কি বুঝায়?** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1040 (ET: DPI)]*
+
+   Answer:
+
+   Linear Data Structure:
+   - Data elements are arranged in a single sequence.
+   - Each element has at most one predecessor and one successor.
+   - Memory allocation can be contiguous (array) or dynamic (linked list).
+   - Traversal is done in one single run.
+   - Examples: Array, Stack, Queue, Linked List.
+
+   Non-Linear Data Structure:
+   - Data elements are not in a sequence; they form a hierarchy or network.
+   - One element can be connected to multiple elements.
+   - Traversal requires multiple runs or recursive visits.
+   - Examples: Tree (hierarchical), Graph (network).
+
+3. **What are the operations performed on a data structure? What is Prefix, Postfix and Infix operation?** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105 (ET: AUST)]*
+
+   Answer:
+
+   Common operations on a data structure:
+   - Traversal — visit every element exactly once.
+   - Insertion — add a new element.
+   - Deletion — remove an element.
+   - Searching — find an element by value.
+   - Sorting — arrange elements in order.
+   - Merging — combine two data structures.
+
+   Expression notations:
+
+   Infix — operator is placed between operands. This is the standard human-readable form; parentheses are needed to override precedence.
+   - Example: `A + B`, `(A + B) * C`
+
+   Prefix (Polish Notation) — operator comes before operands. No parentheses needed; evaluated right to left.
+   - Example: `+ A B`, `* + A B C`
+
+   Postfix (Reverse Polish Notation) — operator comes after operands. No parentheses needed; easy for computers using a stack.
+   - Example: `A B +`, `A B + C *`
+
+   | Notation | Operator position | Example for (A+B)*C | Uses |
+   |---|---|---|---|
+   | Infix | Between operands | `(A+B)*C` | Human use |
+   | Prefix | Before operands | `*+ABC` | Lisp, some compilers |
+   | Postfix | After operands | `AB+C*` | Stack evaluation, compilers |
+
+   Converting Infix `(A+B)*C` to Postfix: `AB+C*`
+   - Push `(`, see `A` → output `A`.
+   - See `+` → push `+`.
+   - See `B` → output `B`.
+   - See `)` → pop `+`, output `+`. Result: `AB+`.
+   - See `*` → push `*`.
+   - See `C` → output `C`.
+   - End → pop `*`. Final: `AB+C*`.
+
+4. **(b) Implement Array List using following integer value and show operational method of the following: 52, 50, 27, 66, 82.** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+   i) Insert data into array list
+   ii) Remove 27 from array list
+   iii) Insert 99 into 2nd position
+   iv) Show array list
+
+   Answer: An array list stores elements at contiguous index positions, starting from index 0.
+
+   i) Insert data into array list:
+   ```
+   Initial:  [ ]
+   Insert 52: [52]
+   Insert 50: [52, 50]
+   Insert 27: [52, 50, 27]
+   Insert 66: [52, 50, 27, 66]
+   Insert 82: [52, 50, 27, 66, 82]
+   Array List: Index 0→52, 1→50, 2→27, 3→66, 4→82
+   ```
+
+   ii) Remove 27 from array list:
+   - Find 27 at index 2.
+   - Shift all elements after index 2 one position left.
+   ```
+   Before: [52, 50, 27, 66, 82]
+   After:  [52, 50, 66, 82]     (size = 4)
+   ```
+
+   iii) Insert 99 into 2nd position (index 1):
+   - Shift all elements from index 1 onwards one position right.
+   - Place 99 at index 1.
+   ```
+   Before: [52, 50, 66, 82]
+   After:  [52, 99, 50, 66, 82]  (size = 5)
+   ```
+
+   iv) Show array list:
+   ```
+   Index:  0    1    2    3    4
+   Value: [52,  99,  50,  66,  82]
+   ```
+
+5. **What is linear and Non-linear data structure? Write an example of data structure which represents logarithmic complexity?** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1150 (ET: KUET)]*
+
+   Answer:
+
+   Linear data structure — elements stored in a sequential order, one after another. Each element has one predecessor and one successor. Examples: Array, Stack, Queue, Linked List.
+
+   Non-linear data structure — elements are connected in a hierarchical or networked way. One element can connect to multiple others. Examples: Tree, Graph.
+
+   Data structure with logarithmic complexity:
+   - Binary Search Tree (BST) — search, insert, and delete each take O(log n) on average.
+   - B-Tree / B+ Tree — used in databases; search is O(log n).
+   - Heap — insert and extract-min/max are O(log n).
+   - Binary Search on a sorted array — not a data structure itself, but O(log n) search.
+
+   Example — BST search for 40 in a balanced BST:
+   ```
+             50
+            /  \
+           30   70
+          /  \
+         20   40
+   ```
+   - Compare 40 with 50 → go left.
+   - Compare 40 with 30 → go right.
+   - Found 40. Only 3 comparisons for 5 nodes → O(log n).
+
+6. **Difference between linear and nonlinear data structure.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+   Answer:
+
+   | Feature | Linear Data Structure | Non-Linear Data Structure |
+   |---|---|---|
+   | Arrangement | Sequential; one after another | Hierarchical or network |
+   | Relationship | Each element has one predecessor and one successor | One element can have multiple predecessors/successors |
+   | Memory | Contiguous (array) or dynamic chain (linked list) | Nodes with multiple pointers |
+   | Traversal | Single pass covers all elements | Requires multiple passes or recursion |
+   | Level | Single level | Multiple levels |
+   | Time efficiency | Less efficient for complex relationships | More efficient for hierarchical/networked data |
+   | Examples | Array, Stack, Queue, Linked List | Tree, Graph, Heap |
+   | Use cases | Sequential processing, undo-redo, print queue | File systems, social networks, routing algorithms |
+
