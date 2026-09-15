@@ -8716,6 +8716,218 @@ Answer:
       - $Y$ is a **Prime Attribute** (a member of any candidate key).
     - Rule of Thumb: Every non-key attribute must depend on "the key, the whole key, and nothing but the key".
 
+## SQL Commands (DDL, DML, DCL, TCL) (18)
+
+1. **Example Query of DDL, DML, DCL.** *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+
+   Answer:
+
+   ```sql
+   -- DDL (Data Definition Language) - defines structure
+   CREATE TABLE Employee (emp_id INT PRIMARY KEY, name VARCHAR(50));
+
+   -- DML (Data Manipulation Language) - manipulates data
+   INSERT INTO Employee VALUES (1, 'Karim');
+   UPDATE Employee SET name = 'Rahim' WHERE emp_id = 1;
+
+   -- DCL (Data Control Language) - controls access/permissions
+   GRANT SELECT ON Employee TO 'analyst_user';
+   REVOKE SELECT ON Employee FROM 'analyst_user';
+   ```
+
+2. **What is SQL?** *[BBA Assistant Programmer 12.07.2025 compact it 1433 (ET: BUET)]*
+
+   Answer: SQL (Structured Query Language) is the standard language used to create, query, update and manage data in a relational database.
+
+   - It has sub-languages: DDL (define structure), DML (manipulate data), DCL (control access), and TCL (manage transactions).
+   - It is declarative — the user states what result is wanted (`SELECT name FROM Employee WHERE salary > 50000`), and the database engine decides how to fetch it.
+
+3. **ডাটাবেজ এ টেবিলের শুধু গঠন ডিলিট করার SQL কমান্ড কি?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+   Answer: `DROP TABLE table_name;`
+
+   - `DROP TABLE` removes both the table's structure and all of its data permanently.
+   - If only the data should be removed while keeping the structure, `TRUNCATE TABLE table_name;` is used instead.
+
+4. **(খ) SQL এ DDL এবং DML এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)], [17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 611 (ET: N/A)]*
+
+   Answer:
+
+   | Point | DDL (Data Definition Language) | DML (Data Manipulation Language) |
+   |---|---|---|
+   | Purpose | Defines/changes the structure of database objects | Manipulates the actual data inside tables |
+   | Commands | `CREATE`, `ALTER`, `DROP`, `TRUNCATE` | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
+   | Transaction | Auto-commits immediately in most databases | Can be rolled back before commit |
+   | Effect | Changes the schema | Changes the data rows |
+
+5. **SQL query to insert data into table. (A table was given with 3 row)** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
+
+   Answer: The exact table rows were not printed with the question, so a representative 3-row insert is shown.
+
+   ```sql
+   INSERT INTO Student (roll, name, dept) VALUES
+   (1, 'Karim', 'CSE'),
+   (2, 'Rahim', 'EEE'),
+   (3, 'Salma', 'BBA');
+   ```
+
+6. **How can you Revoke permissions from a database table? Give SQL command for it.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 666 (ET: N/A)]*
+
+   Answer:
+
+   ```sql
+   REVOKE SELECT, INSERT ON Employee FROM 'username';
+   ```
+   - `REVOKE` is the DCL command that removes previously granted privileges from a user or role on a specific database object.
+
+7. **What is DDL and DML?** *[CAAB Assistant Programmer (AP) 2022 compact it 726 (ET: N/A)]*
+
+   Answer:
+
+   - DDL (Data Definition Language) — defines and modifies the structure of database objects: `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.
+   - DML (Data Manipulation Language) — reads and modifies the actual data stored in tables: `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+
+8. **(i) নিচের Table টি তৈরি করার SQL কমান্ড লিখুন। student_info (std_id, name, department, phone_number) (a) Table তে ২টি record (insert) প্রবেশ করার SQL কমান্ড লিখুন। (b) Table টি থেকে CSE বিভাগের ছাত্র/ছাত্রীদের নামের তালিকা বের করার SQL command লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 785 (ET: N/A)]*
+
+   Answer:
+
+   ```sql
+   CREATE TABLE student_info (
+       std_id INT PRIMARY KEY,
+       name VARCHAR(50),
+       department VARCHAR(30),
+       phone_number VARCHAR(15)
+   );
+
+   INSERT INTO student_info VALUES (1, 'Karim', 'CSE', '01711111111');
+   INSERT INTO student_info VALUES (2, 'Rahim', 'EEE', '01722222222');
+
+   SELECT name FROM student_info WHERE department = 'CSE';
+   ```
+
+9. **Write the create table command for the ‘Employee’ table with the following column: Emp_ID, Emp_Name, Date_of_Birth.** *[BCC CA Monitoring System Project 2021 compact it 829 (ET: N/A)]*
+
+   Answer:
+
+   ```sql
+   CREATE TABLE Employee (
+       Emp_ID INT PRIMARY KEY,
+       Emp_Name VARCHAR(50) NOT NULL,
+       Date_of_Birth DATE
+   );
+   ```
+
+10. **৪. ডাটাবেইজে টেবিল ডিলেট করার কমান্ড লিখ?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
+
+    Answer: `DROP TABLE table_name;`
+
+    - This deletes the table structure along with all its data. Use `TRUNCATE TABLE table_name;` instead if only the rows should be removed and the table kept.
+
+11. **ডাটাবেইজ ম্যানেজমেন্ট সিস্টেমের মধ্যে CRUD এর কাজ কি?** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947 (ET: BUET)]*
+
+    Answer: CRUD stands for Create, Read, Update, Delete — the four basic operations any application performs on persistent data.
+
+    | CRUD operation | SQL command |
+    |---|---|
+    | Create | `INSERT` |
+    | Read | `SELECT` |
+    | Update | `UPDATE` |
+    | Delete | `DELETE` |
+
+    - Almost every database-backed application, from a banking system to a to-do list, is fundamentally built around these four operations.
+
+12. **Main components of SQL are DDL (Data definition Language), DML (Data Manipulation Language) and DCL (Data Control Language). Give some examples of DDL, DML and DCL commands.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 988-989 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
+
+    Answer:
+
+    | Category | Example commands |
+    |---|---|
+    | DDL | `CREATE TABLE`, `ALTER TABLE`, `DROP TABLE`, `TRUNCATE TABLE` |
+    | DML | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
+    | DCL | `GRANT`, `REVOKE` |
+
+    - A fourth category, TCL (Transaction Control Language), manages transactions with `COMMIT`, `ROLLBACK` and `SAVEPOINT`.
+
+13. **How to find duplicate data in database? Explain DDL and DML.** *[RAKUB Assistant Database Administrator 2020 compact it 1017-1018 (ET: E-Zone)]*
+
+    Answer:
+
+    Finding duplicate data
+    ```sql
+    SELECT name, COUNT(*) AS cnt
+    FROM Employee
+    GROUP BY name
+    HAVING COUNT(*) > 1;
+    ```
+    - `GROUP BY` groups rows with the same value, and `HAVING COUNT(*) > 1` keeps only the groups that appear more than once — the duplicates.
+
+    DDL and DML
+    - DDL defines/changes database structure: `CREATE`, `ALTER`, `DROP`.
+    - DML manipulates the actual data: `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+
+14. **(a) How can you revoke permissions from a database table? Give SQL command for it.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
+
+    Answer:
+
+    ```sql
+    REVOKE UPDATE, DELETE ON Employee FROM 'username';
+    ```
+    - `REVOKE` withdraws a specific privilege that was earlier granted with `GRANT`, without deleting the user account itself.
+
+15. **(c) Differentiate between “delete from” and “drop table” SQL statement.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1136-1138 (ET: N/A)]*
+
+    Answer:
+
+    | Point | DELETE FROM | DROP TABLE |
+    |---|---|---|
+    | Type | DML | DDL |
+    | Effect | Removes rows (optionally filtered by `WHERE`) | Removes the entire table, structure and data |
+    | Table remains? | Yes, empty or partially filled | No, the table no longer exists |
+    | Rollback | Can be rolled back before commit | Auto-commits immediately in most databases; cannot be rolled back |
+    | Speed | Slower (logs each row deleted) | Faster |
+
+16. **Write an SQL query to insert a tuple in the table: Employee (ID, Name, Designation, and Salary).** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
+
+    Answer:
+
+    ```sql
+    INSERT INTO Employee (ID, Name, Designation, Salary)
+    VALUES (101, 'Karim', 'Officer', 45000);
+    ```
+
+17. **Construct a database table “Customer”, Where CustomerID is primary key of the table.** *[Jiban Bima Corporation Assistant Programmer 2018 compact it 1211 (ET: N/A)]*
+   | CustomerID | CustomerName | Address | PostCode |
+   |---|---|---|---|
+   | 1 | Sakib | Khulna | 1212 |
+   | 2 | Tamim | Barisal | 2100 |
+   | 3 | Musfiq | Dhaka | 1205 |
+
+    Answer:
+
+    ```sql
+    CREATE TABLE Customer (
+        CustomerID INT PRIMARY KEY,
+        CustomerName VARCHAR(50),
+        Address VARCHAR(50),
+        PostCode VARCHAR(10)
+    );
+
+    INSERT INTO Customer VALUES (1, 'Sakib', 'Khulna', '1212');
+    INSERT INTO Customer VALUES (2, 'Tamim', 'Barisal', '2100');
+    INSERT INTO Customer VALUES (3, 'Musfiq', 'Dhaka', '1205');
+    ```
+
+18. **What are the difference among DDL, DML and DCL?** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
+
+    Answer:
+
+    | Point | DDL | DML | DCL |
+    |---|---|---|---|
+    | Full form | Data Definition Language | Data Manipulation Language | Data Control Language |
+    | Purpose | Defines/changes structure | Manipulates data | Controls access/permissions |
+    | Commands | `CREATE`, `ALTER`, `DROP` | `SELECT`, `INSERT`, `UPDATE`, `DELETE` | `GRANT`, `REVOKE` |
+    | Auto-commit | Yes, immediately | No, can be rolled back | Yes |
+
 ## Transaction Management & ACID Properties (15)
 
 1. **Explain the concept of ACID properties in a database transaction. Describe how each property—Atomicity, Consistency, Isolation, and Durability—ensures the reliability and integrity of a database system.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
