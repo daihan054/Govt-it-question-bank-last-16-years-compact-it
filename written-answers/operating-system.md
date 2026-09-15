@@ -272,11 +272,6 @@ i) passwd
    * **(c) Shows disk usage for all mounted file systems.**
    * **(d) Displays information about system memory (RAM and swap).** *[BCIC Assistant Programmer 14.02.2025 compact it 1325 (ET: BUET)]*
 
-* **(a) Displays real-time system statistics, including CPU usage, memory usage, running processes, and system load.**
-   * **(b) Searches for a specified pattern in a file or output.**
-   * **(c) Shows disk usage for all mounted file systems.**
-   * **(d) Displays information about system memory (RAM and swap).** *[BCIC Assistant Programmer 14.02.2025 compact it 1325 (ET: BUET)]*
-
    Answer: (a) Real-time system statistics — CPU, memory, processes, load
    ```bash
       top                    # the classic real-time process viewer
@@ -698,14 +693,6 @@ Answer: File move — `mv`
 | Download a file from an URL |
 *[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 474 (ET: N/A)]*
 
-| Questions |
-|---|
-| Show hidden files and directories |
-| Delete a directory and its file |
-| Prints last five lines of a text file |
-| Download a file from an URL |
-*[Milk Vita Assistant Manager (CSE/MIS) 2023 compact it 474 (ET: N/A)]*
-
     Answer: The four commands.
 
     | Requirement | Command |
@@ -770,10 +757,6 @@ Answer: File move — `mv`
 
 11. **Write Linux command to find out the following question:** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
    (a) To show current file directory.
-   (b) To show 11^{\text{th}} to 15^{\text{th}} line from file name myfile.
-   (c) To show permission for read, write and execution file name myfile.
-
-(a) To show current file directory.
    (b) To show 11^{\text{th}} to 15^{\text{th}} line from file name myfile.
    (c) To show permission for read, write and execution file name myfile.
 
@@ -1156,10 +1139,6 @@ Answer: The command is `cron`, configured through `crontab`. For a task that sho
 
 16. **Linux Command লিখ:** *[BTCL Junior Assistant Manager 2022 compact it 640 (ET: BUET)]*
    a) একটি ফোল্ডারের সকল ফাইল দেখানোর কমান্ড।
-   b) নতুন ডিরেক্টরি তৈরির কমান্ড।
-   c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
-
-a) একটি ফোল্ডারের সকল ফাইল দেখানোর কমান্ড।
    b) নতুন ডিরেক্টরি তৈরির কমান্ড।
    c) ফাইল এ্যাকসেস পারমিশন দেখানোর কমান্ড।
 
@@ -3240,11 +3219,6 @@ Answer: The question is `incomplete` — the pattern the script should produce w
    iii. Put a read/write permission to a file
    iv. Find the mac address using command
 
-i. Rename a file test.docs to test.txt
-   ii. Delete a file from a folder
-   iii. Put a read/write permission to a file
-   iv. Find the mac address using command
-
     Answer: i. Rename `test.docs` to `test.txt`
     ```bash
        mv test.docs test.txt
@@ -3492,11 +3466,6 @@ Answer: (Answered in English, as required for IT topics.) Several commands creat
    (iii) None other then the other users can read the file.
    Write a shell command based on those conditions.
 
-(i) Anyone can execute the file named “sample”.
-   (ii) Only the owner or the user group can edit the file.
-   (iii) None other then the other users can read the file.
-   Write a shell command based on those conditions.
-
     Answer: The three conditions must be read carefully, because the third one is oddly worded.
     ```
        (i) Anyone can EXECUTE the file        -> x for owner, group and others
@@ -3566,15 +3535,6 @@ Answer: (Answered in English, as required for IT topics.) Several commands creat
 
 47. **Linux Command:** *[BTCL Assistant Manager (Technical) 2017 compact it 1255-1256 (ET: N/A)]*
    i) passwd
-   ii) cat>file.txt
-   iii) telnet
-   iv) ls
-   v) ping
-   vi) su
-   vii) nslookup
-   viii) mkdir
-
-i) passwd
    ii) cat>file.txt
    iii) telnet
    iv) ls
@@ -4044,20 +4004,6 @@ Answer: The process table is not printed with the question, so the standard set 
    ```
 
 5. **(a) Consider the following set of process with the length of CPU burst given in milliseconds-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1351 (ET: N/A)]*
-
-| Process | Burst time | Priority |
-|---|---|---|
-| P1 | 10 | 3 |
-| P2 | 1 | 1 |
-| P3 | 2 | 3 |
-| P4 | 1 | 4 |
-| P5 | 5 | 2 |
-
-All process arrived at time 0. Lower number has higher priority.
- * (i) Draw the Gantt chart using FCFS, Non-preemptive priority, SJF and RR (Quantum = 1).
- * (ii) What is the turnaround time of each process for each of the scheduling algorithms in (i)?
- * (iii) What is waiting time of each process for each of the scheduling algorithms in (i)?
- * (iv) Which algorithm resulting minimum average waiting time?
 
 | Process | Burst time | Priority |
 |---|---|---|
@@ -4699,18 +4645,6 @@ Answer: Round Robin is a `preemptive` scheduling algorithm.
 i) FCFS এবং SJF Scheduling algorithm ব্যবহার করে Gantt Chart এর মাধ্যমে process গুলোর execution দেখান।
 ii) উপরের উভয় algorithm এর জন্য প্রত্যেকটি process এর turnaround সময় নির্ণয় করুন।
 
-| Process | Burst Time (milli second) | Priority |
-|---|---|---|
-| P₁ | 15 | 3 |
-| P₂ | 2 | 1 |
-| P₃ | 4 | 3 |
-| P₄ | 2 | 4 |
-| P₅ | 8 | 2 |
-
-সমস্ত process একই সাথে 0 সময়ে এসে পৌঁছে।
-i) FCFS এবং SJF Scheduling algorithm ব্যবহার করে Gantt Chart এর মাধ্যমে process গুলোর execution দেখান।
-ii) উপরের উভয় algorithm এর জন্য প্রত্যেকটি process এর turnaround সময় নির্ণয় করুন।
-
     Answer: (Answered in English, as required for IT topics.) Given
     ```
        Process   Burst Time (ms)   Priority
@@ -4787,17 +4721,6 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
     - Note that the total time is `31 ms` under both algorithms. Scheduling never changes the total work; it only changes `who waits for whom`.
 
 14. **Consider the following six processes each having its own unique processing time and arrival time.**
-| Processes | Arrival time | Processing time |
-|---|---|---|
-| P1 | 0 | 8 |
-| P2 | 0 | 4 |
-| P3 | 0 | 5 |
-| P4 | 1 | 9 |
-| P5 | 1 | 7 |
-| P6 | 0 | 1 |
-**Find average turnaround time using shortest job first scheduling algorithm.**
-*[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 461 (ET: BUET)]*
-
 | Processes | Arrival time | Processing time |
 |---|---|---|
 | P1 | 0 | 8 |
@@ -4897,14 +4820,6 @@ ii) উপরের উভয় algorithm এর জন্য প্রত্�
     ```
 
 15. **Find average turnaround time and average waiting time using round robin and FCFS algorithm?**
-| Process | Arrival Time | Execute Time |
-|---|---|---|
-| P0 | 0 | 5 |
-| P1 | 1 | 3 |
-| P2 | 2 | 8 |
-| P3 | 3 | 6 |
-*[Teletalk Assistant Manager (IT) 2023 compact it 467 (ET: N/A)]*
-
 | Process | Arrival Time | Execute Time |
 |---|---|---|
 | P0 | 0 | 5 |
@@ -5819,9 +5734,9 @@ Answer:
     - 5. Multilevel Queue (MLQ) & Multilevel Feedback Queue (MLFQ): Partitions ready queue into multiple priority queues with dynamic process migration.
 
     CPU Scheduling Method with Best Performance:
-    - **Shortest Job First (SJF) / SRTF** is provably optimal for minimizing average waiting time for a given set of processes.
+    - Shortest Job First (SJF) / SRTF is provably optimal for minimizing average waiting time for a given set of processes.
     - How it works: By executing shortest jobs first, shorter processes release resources rapidly, drastically lowering the queue waiting time for all subsequent processes.
-    - For interactive time-sharing systems, **Round Robin (with an optimal time quantum where 80% of bursts are shorter than $q$)** provides the best interactive responsiveness and fairness.
+    - For interactive time-sharing systems, Round Robin (with an optimal time quantum where 80% of bursts are shorter than $q$) provides the best interactive responsiveness and fairness.
 
 ## OS Concepts & System Software (24)
 
@@ -6275,9 +6190,6 @@ Answer:
    **(i) How many pages are in logical address space?**
    **(ii) How many bits are used for the page number and offset?** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
 
-**(i) How many pages are in logical address space?**
-   **(ii) How many bits are used for the page number and offset?** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
-
    Answer: Given
    ```
       Logical address size = 16 bits
@@ -6330,9 +6242,6 @@ Answer:
 
 2. **Consider a logical address space of 512 pages, each of 2-KB page size, mapped onto a physical memory containing 128 frames.**
    **a. How many bits are required in the logical address?**
-   **b. How many bits are required in the physical address?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
-
-**a. How many bits are required in the logical address?**
    **b. How many bits are required in the physical address?** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1420 (ET: E-Zone)]*
 
    Answer: Given
@@ -6404,14 +6313,6 @@ Answer:
 
 3. **(a) Consider a computer system with the following specifications:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1351 (ET: N/A)]*
  * Physical memory (RAM): 4\text{ GB}
- * Page size: 4\text{ KB}
- * Virtual address space: 32\text{ bits}
- * Page table entry size: 8\text{ bytes}
-**Answer the following:**
- * **(i) How many pages are there in the virtual address space? Explain your answer.**
- * **(ii) What is the size of the page table? Explain your answer.**
-
-* Physical memory (RAM): 4\text{ GB}
  * Page size: 4\text{ KB}
  * Virtual address space: 32\text{ bits}
  * Page table entry size: 8\text{ bytes}
@@ -7459,7 +7360,7 @@ Answer:
 
     Answer: The exact wording is ambiguous (it is unclear whether "minimum" means Optimal replacement, and whether "inserted in reverse order" means the very same 64 pages are referenced a second time from page 64 down to page 1), so the concept is explained rather than one fixed number.
 
-    - First pass (pages 1 to 64, forward, 8 frames): every one of the 64 references is a page fault, since each page is completely new and none of them repeats within this pass. That gives **64 faults** in the first pass, ending with frames holding pages 57-64.
+    - First pass (pages 1 to 64, forward, 8 frames): every one of the 64 references is a page fault, since each page is completely new and none of them repeats within this pass. That gives 64 faults in the first pass, ending with frames holding pages 57-64.
     - Second pass (pages 64 down to 1, reverse order): page 64 is still resident (a hit), but from page 63 downward the working set of 64 distinct pages is far larger than the 8 available frames, so almost every subsequent reference is again a fault, because a page needed now was pushed out long ago to make room for later pages. In the worst case nearly all of the remaining 63 references also fault.
     - Overall lesson: when the number of distinct pages actively cycled through (64) vastly exceeds the number of frames (8), the system is in a thrashing-like state and the fault rate approaches 100%, regardless of which replacement algorithm (FIFO, LRU or Optimal) is used — none of them can do much better when the working set simply does not fit. <!-- verify -->
 
@@ -7953,7 +7854,7 @@ Answer:
 5. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
 Answer:
-    Execution speed is strictly determined by the **actual execution time per instruction**, not raw clock frequency alone:
+    Execution speed is strictly determined by the actual execution time per instruction, not raw clock frequency alone:
 
     - Computer A:
       - Execution Time per Instruction ($T_A$) = $250\text{ picoseconds} = 250 \times 10^{-12}\text{ seconds}$.
@@ -7964,7 +7865,7 @@ Answer:
     $$\text{Speedup Ratio} = \frac{T_B}{T_A} = \frac{500\text{ ps}}{250\text{ ps}} = 2.0$$
 
     Conclusion:
-    - **Computer A is 2 times faster than Computer B** because it requires only half the time ($250\text{ ps}$ vs $500\text{ ps}$) to execute each instruction.
+    - Computer A is 2 times faster than Computer B because it requires only half the time ($250\text{ ps}$ vs $500\text{ ps}$) to execute each instruction.
 
 6. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
@@ -8283,7 +8184,7 @@ Answer:
       - Wait-Die Scheme (Non-preemptive): If an older transaction requests a resource held by a younger one, it waits; if a younger transaction requests a resource from an older one, the younger transaction dies (rolls back).
       - Wound-Wait Scheme (Preemptive): If an older transaction requests a resource from a younger one, the older transaction preempts ("wounds") the younger one; if younger requests from older, younger waits.
     - 2. Deadlock Detection:
-      - Allows deadlocks to occur, periodically constructing a directed **Wait-For Graph (WFG)** where vertices represent active transactions and edges represent lock requests.
+      - Allows deadlocks to occur, periodically constructing a directed Wait-For Graph (WFG) where vertices represent active transactions and edges represent lock requests.
       - A cycle in the Wait-For Graph indicates a deadlock.
     - 3. Deadlock Recovery:
       - Once a cycle is detected, the DBMS initiates recovery by selecting a victim transaction (based on lowest rollback cost/work done), rolling it back to a previous checkpoint, and releasing its held locks to let others proceed.
