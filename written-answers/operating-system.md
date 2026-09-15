@@ -5823,6 +5823,250 @@ Answer:
     - How it works: By executing shortest jobs first, shorter processes release resources rapidly, drastically lowering the queue waiting time for all subsequent processes.
     - For interactive time-sharing systems, **Round Robin (with an optimal time quantum where 80% of bursts are shorter than $q$)** provides the best interactive responsiveness and fairness.
 
+## OS Concepts & System Software (24)
+
+1. **Difference Between Firmware and OS.** *[BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Firmware | Operating System |
+   |---|---|---|
+   | Storage | Stored in non-volatile memory (ROM/flash) on the device itself | Stored on disk, loaded into RAM at boot |
+   | Purpose | Low-level control of specific hardware (e.g., BIOS, router firmware) | General-purpose management of all hardware and software resources |
+   | Update frequency | Rarely updated | Regularly updated with patches and new versions |
+   | Complexity | Small, simple, hardware-specific | Large, complex, supports many applications |
+   | Example | BIOS/UEFI, a printer's internal software | Windows, Linux, macOS |
+
+2. **Define: Socket, Kernel, Process, Program, Multiprogramming, Context Switching; Explain Preemptive Priority Scheduling algorithm with illustration; Explain LRU and NRU Page Replacement algorithm.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 302 (ET: BIBM)]*
+
+   Answer:
+
+   Definitions
+   - Socket — an endpoint for network communication, identified by an IP address and port number.
+   - Kernel — the core part of the OS that directly manages the CPU, memory and hardware, running in privileged mode.
+   - Process — a program in execution, with its own memory space and resources.
+   - Program — a passive set of instructions stored on disk; it becomes a process only once loaded and run.
+   - Multiprogramming — keeping several programs in memory at once so the CPU always has something to run, maximising CPU utilisation.
+   - Context switching — saving the state of the currently running process and loading another process's saved state, so the CPU can switch between them.
+
+   Preemptive Priority Scheduling
+   - Each process is assigned a priority; the CPU always runs the highest-priority ready process, and a running process is preempted immediately if a higher-priority process becomes ready.
+   - Illustration: if P1 (priority 3) is running and P2 (priority 1, lower number = higher priority) arrives, the CPU immediately switches to P2, resuming P1 later.
+   - Drawback: low-priority processes can starve; fixed by "aging" — gradually raising the priority of a process the longer it waits.
+
+   LRU and NRU page replacement
+   - LRU (Least Recently Used) — evicts the page that has not been used for the longest time, based on actual past access history.
+   - NRU (Not Recently Used) — a cheaper approximation: pages are classified using reference and modify bits into four classes (not referenced/not modified, not referenced/modified, referenced/not modified, referenced/modified), and a page is evicted from the lowest non-empty class, avoiding the cost of tracking exact access order like true LRU.
+
+3. **Explain how can multiprogramming be achieved on a uniprocessor system?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
+
+   Answer: Multiprogramming on a single CPU is achieved by keeping several processes in memory simultaneously and rapidly switching the CPU between them, so it always has a ready process to execute.
+
+   - When the running process needs to wait (e.g., for I/O), the OS immediately switches the CPU to another ready process instead of leaving it idle.
+   - A timer interrupt also periodically forces a switch, so no single process can monopolise the CPU (this becomes time-sharing/multitasking).
+   - The illusion of "simultaneous" execution comes purely from this fast switching (context switching), even though only one instruction from one process actually executes at any given instant on a uniprocessor.
+
+4. **Write the difference between shell and kernel?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
+
+   Answer:
+
+   | Point | Shell | Kernel |
+   |---|---|---|
+   | Role | A command-line interpreter — the user interface to the OS | The core of the OS, managing hardware, memory, processes |
+   | Privilege | Runs in user mode | Runs in privileged (kernel) mode |
+   | Interaction | Takes user commands and translates them into system calls | Executes system calls and directly controls hardware |
+   | Examples | Bash, Zsh, PowerShell | Linux kernel, Windows NT kernel |
+   | Replaceable | Yes, a user can switch shells easily | No, replacing it means replacing the OS itself |
+
+5. **DOS কী? অপারেটিং সিস্টেমের কাজ ও প্রকারভেদ ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
+
+   Answer:
+
+   DOS (Disk Operating System) — an early single-user, single-tasking, command-line operating system (e.g., MS-DOS) that managed disk-based file storage and ran one program at a time.
+
+   Functions of an operating system
+   - Process management, memory management, file management, device (I/O) management, and security/access control.
+
+   Types of operating system
+   - Batch OS — processes jobs in batches with no user interaction during execution.
+   - Time-sharing OS — rapidly switches the CPU among multiple interactive users, giving each the illusion of a dedicated system.
+   - Distributed OS — manages a group of independent computers as a single coherent system.
+   - Real-time OS — guarantees a response within a strict, predictable time limit (hard or soft real-time).
+   - Network OS — manages data, users and security across a network of computers.
+   - Mobile OS — designed for smartphones/tablets (Android, iOS).
+
+6. **Write down the difference between Multitasking and Multiprocessing.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)]*
+
+   Answer:
+
+   | Point | Multitasking | Multiprocessing |
+   |---|---|---|
+   | Definition | Running multiple tasks/processes concurrently on one CPU via time-sharing | Using two or more CPUs/cores within one system to run tasks truly in parallel |
+   | Hardware | Works with a single processor | Requires multiple processors or cores |
+   | True parallelism | No — only one instruction runs at any instant | Yes — instructions from different processes run at the same instant on different cores |
+   | Speed | Limited by one CPU's speed | Higher throughput possible from parallel execution |
+
+7. **(b) What is the difference between micro kernel and macro kernel in the context of OS?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Microkernel | Monolithic (Macro) kernel |
+   |---|---|---|
+   | Design | Only essential services (IPC, basic scheduling, memory) run in kernel space; everything else runs as user-space servers | Most OS services (file system, device drivers, networking) run inside the kernel itself |
+   | Size | Small | Large |
+   | Reliability | A crashing service does not crash the kernel | A bug in any kernel component can crash the whole system |
+   | Performance | Slower, due to more inter-process communication between services | Faster, since everything runs in the same address space |
+   | Examples | Minix, QNX, seL4 | Linux, traditional Unix, older Windows kernels |
+
+8. **অথবা, (ক) Blocking এবং Buffering OS এর পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Blocking I/O | Buffering |
+   |---|---|---|
+   | What it is | The calling process is suspended until the I/O operation completes | A temporary memory area used to hold data while it is being transferred between a device and a process |
+   | Purpose | Simplifies program logic — wait until data is ready | Smooths out speed differences between a fast CPU and a slower device, and reduces the number of actual I/O operations |
+   | Effect on CPU | CPU is idle (or switched to another process) while blocked | CPU can keep working while data accumulates in the buffer |
+
+9. **(গ) Real Time System বলতে কী বোঝায় ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 625 (ET: N/A)]*
+
+   Answer: A real-time system is one in which correctness depends not only on the logical result of a computation but also on the time at which the result is produced — a late answer can be as wrong as an incorrect one.
+
+   - Hard real-time — missing a deadline causes total system failure (e.g., an aircraft flight-control system, a pacemaker).
+   - Soft real-time — missing a deadline degrades quality but the system still functions (e.g., video streaming, online gaming).
+
+10. **Explain context switching in Operating System.** *[MGMCL Assistant Manager (ICT) 20.05.2022 compact it 649 (ET: BUET)]*
+
+    Answer: Context switching is the mechanism of saving the CPU state (registers, program counter, stack pointer) of the currently running process into its PCB, and loading the saved state of another process, so execution can switch between processes.
+
+    - Triggered by: a timer interrupt (time slice expiry), a higher-priority process becoming ready, or the running process blocking for I/O.
+    - It is pure overhead — no useful instruction executes during the switch itself — so an OS tries to minimise both the frequency and cost of context switches.
+
+11. **Which Operating system is considered as an Open source?** *[BARI Assistant Maintenance Engineer 26.08.2022 compact it 702 (ET: N/A)]*
+
+    Answer: Linux (and its many distributions such as Ubuntu, Fedora, Debian) is the most well-known open-source operating system; its full source code is freely available for anyone to study, modify and redistribute under the GNU GPL license.
+
+12. **What is kernel? Write down the objectives of kernel.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
+
+    Answer: The kernel is the core component of an operating system, running in privileged mode with direct control over the CPU, memory and all hardware devices.
+
+    Objectives of the kernel
+    - Manage and schedule processes, deciding which one runs on the CPU and when.
+    - Manage memory allocation between processes and provide virtual memory.
+    - Provide a controlled interface (system calls) for applications to request services safely.
+    - Manage devices through drivers, abstracting hardware details from applications.
+    - Enforce protection and security between processes and users.
+
+13. **IBM প্রতিষ্ঠান কর্তৃক কোন Operating System প্রস্তুত করা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
+
+    Answer: IBM developed OS/2 (jointly with Microsoft initially, later solely by IBM), as well as z/OS and AIX for its mainframe and server hardware.
+
+14. **Explain: Kernel, Cache, Virtual Memory and RAID.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 872-873 (ET: N/A)]*
+
+    Answer:
+
+    - Kernel — the core of the OS that manages the CPU, memory and hardware directly, running in privileged mode.
+    - Cache — a small, fast memory layer between CPU and RAM that stores recently/frequently used data to speed up access.
+    - Virtual Memory — a technique that gives each process a large, private address space, backed by disk when physical RAM is insufficient.
+    - RAID (Redundant Array of Independent Disks) — combines multiple physical disks into one logical unit to improve performance (striping), reliability (mirroring/parity), or both.
+
+15. **(a) Briefly describe the function that measure the efficiency of an operating system.** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025 (ET: N/A)]*
+
+    Answer: The efficiency of an OS is typically measured through:
+
+    - CPU utilisation — the percentage of time the CPU is actively doing useful work, not idle.
+    - Throughput — the number of processes completed per unit time.
+    - Turnaround time — the total time from a process's submission to its completion.
+    - Waiting time — the total time a process spends in the ready queue.
+    - Response time — the time from submitting a request to the first response being produced (important for interactive systems).
+
+16. **What is the difference between micro kernel and macro kernel? What are the sub components of I/O manager in Windows NT?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1052-1053 (ET: BUET)]*
+
+    Answer: (Microkernel vs monolithic kernel — same distinction as Q7 above.)
+
+    Windows NT I/O Manager sub-components
+    - Device drivers — control specific hardware devices.
+    - File system drivers — handle NTFS, FAT and other file system formats.
+    - Cache manager — caches file data to speed up repeated I/O.
+    - Network drivers/redirectors — handle network file access.
+    - Plug and Play manager and Power manager — closely cooperate with I/O manager for device detection and power states. <!-- verify -->
+
+17. **What is operating System? What are the main components of operating System?** *[Bangladesh Competition Commission Programmer 2019 compact it 1059 (ET: DU)]*
+
+    Answer: An operating system is system software that manages computer hardware and software resources and provides common services for application programs, acting as an intermediary between the user/applications and the hardware.
+
+    Main components
+    - Process management, Memory management, File system management, I/O (device) management, Security and access control, and the User interface (CLI/GUI).
+
+18. **(গ) Operating System-এর সংগঠন সহ কাজ উল্লেখ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1067-1068 (ET: N/A)]*
+
+    Answer: An OS is organised in layers (or modules): the kernel at the core (process, memory, device management), system call interface above it, and utility programs/shell/GUI as the outermost layer that users interact with directly.
+
+    Main functions: process scheduling, memory allocation, file storage and retrieval, device/I/O control, security enforcement, and providing the user interface.
+
+19. **(খ) Time shearing operating system and Real time operating system-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Time-sharing OS | Real-time OS |
+    |---|---|---|
+    | Goal | Fair, responsive service to many interactive users | Guaranteed response within a strict deadline |
+    | Scheduling | Round robin / priority, fairness-oriented | Deadline-driven (e.g., rate-monotonic, EDF) |
+    | Missing a deadline | Just feels slow, no failure | Can be a system failure (hard real-time) |
+    | Example | A multi-user Unix server | Flight control system, pacemaker |
+
+20. **(ক) মাল্টি প্রোগ্রামিং অপারেটিং সিস্টেম কী? সচিত্র বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1092 (ET: N/A)]*
+
+    Answer: A multiprogramming operating system keeps several jobs in memory at once, running one on the CPU while the others wait, so that whenever the running job blocks for I/O, the CPU immediately switches to another ready job instead of sitting idle.
+
+    ```mermaid
+    flowchart TD
+        M[Main Memory] --> J1[Job 1]
+        M --> J2[Job 2]
+        M --> J3[Job 3]
+        J1 -.CPU switches among ready jobs.-> CPU[(CPU)]
+        J2 -.-> CPU
+        J3 -.-> CPU
+    ```
+    - This maximises CPU utilisation, since there is almost always some job ready to use the CPU while others are doing I/O.
+
+21. **Discuss the Operating System architecture and how it works?** *[BINA Assistant Programmer 2019 compact it 1155 (ET: IBA)]*
+
+    Answer: A typical OS architecture is layered: hardware at the bottom, the kernel directly above it (process, memory, device and file management), then the system-call interface, and finally shells/GUIs and user applications at the top.
+
+    How it works
+    - Applications request services through system calls, which trap into the kernel.
+    - The kernel performs the privileged operation (e.g., reading a file, allocating memory) and returns control to the application.
+    - The scheduler continuously decides which process gets the CPU, and the memory manager keeps each process's data safely isolated, giving the appearance of many programs running smoothly and securely together.
+
+22. **Difference between Multiprocessing and Multitasking.** *[Palli Sanchay Bank Assistant Database Administrator 2018 compact it 1169 (ET: N/A)]*
+
+    Answer: (Same distinction as Q6 above.)
+
+    - Multitasking runs many tasks concurrently on a single CPU via rapid switching; multiprocessing uses multiple physical CPUs/cores to run tasks truly simultaneously, giving genuine parallelism and higher throughput.
+
+23. **Difference between Multitasking and Multiprogramming.** *[NWPGCL Assistant Engineer (CSE) 2018 compact it 1213 (ET: N/A)]*
+
+    Answer:
+
+    | Point | Multiprogramming | Multitasking |
+    |---|---|---|
+    | Goal | Maximise CPU utilisation by never leaving it idle | Give the illusion of several programs running at once, for user responsiveness |
+    | Switching trigger | Mainly when a job blocks for I/O | Also uses a timer, switching even if a job has not blocked, for fairness |
+    | User interaction | Originally batch-oriented, no interactivity | Interactive, time-shared among users/tasks |
+    | Relationship | The foundational concept | An evolution/refinement of multiprogramming with time-slicing for responsiveness |
+
+24. **Explain the functionalities of operating system.** *[ICT Ministry Assistant Programmer 2017 compact it 1239-1240 (ET: N/A)]*
+
+    Answer: Core functionalities of an operating system:
+
+    - Process management — creating, scheduling and terminating processes, and providing synchronisation.
+    - Memory management — allocating and tracking memory, and implementing virtual memory.
+    - File system management — organising, storing, naming and protecting files on storage devices.
+    - Device/I/O management — controlling hardware devices through drivers and buffering/spooling.
+    - Security and protection — authenticating users and controlling access to resources.
+    - User interface — providing a CLI or GUI so users and programs can interact with the system.
+
 ## Deadlock & Resource Allocation (23)
 
 1. **What is Deadlock? Given a scenery and find out the process is face deadlock sitiation?** *[IFIC Bank Officer IT 2025 compact it 1448 (ET: IFIC)]*
