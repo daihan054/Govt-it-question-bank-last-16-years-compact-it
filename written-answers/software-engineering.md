@@ -6106,6 +6106,160 @@ Answer: The test program below drives the sorting function and checks `two prope
 Answer:
     Penetration Testing (Ethical Hacking / Pen Testing) for a network service is an authorized simulated cyberattack performed on computer systems, network devices, and service ports to identify, safely exploit, and report security vulnerabilities (such as open ports, misconfigurations, and outdated protocols) before malicious attackers can exploit them.
 
+## Software Requirements Engineering (10)
+
+1. **What is the difference between functional and non-functional requirements? What is requirement validation?** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
+
+Answer:
+   | Point | Functional Requirement | Non-Functional Requirement |
+   |---|---|---|
+   | Meaning | What the system should do | How well the system does it |
+   | Example | "User can log in with email and password" | "Login must respond within 2 seconds" |
+   | Deals with | Features and behavior | Performance, security, usability, reliability |
+   | Testing | Verified by functional testing | Verified by performance/security testing |
+
+   Requirement validation is the process of checking that the documented requirements actually describe what the customer wants — that they are complete, consistent, feasible and unambiguous — usually done through reviews or a requirements walkthrough with the customer before design begins.
+
+2. **Which of the following are not needed in software Requirement Specifications (SRS)?** *[BCIC Assistant Programmer 14.02.2025 compact it 1330 (ET: BUET)]*
+   * (a) Functional Requirments
+   * (b) Non- Functional Requirments
+   * (c) Testing Requirments
+   * (d) Interface Requirments
+
+Answer: (c) Testing Requirements. An SRS documents `what` the system must do and its constraints — functional, non-functional and interface requirements all belong there. Detailed test plans and test cases are written later, in a separate `Test Plan` document, based on the SRS, not inside the SRS itself.
+
+3. **(b) Which contents shoud be consider when you setup a new system?** *[BARC Programmer 04.08.2023 compact it 598 (ET: N/A)]*
+
+Answer:
+   - Business requirements and objectives of the new system.
+   - Hardware and software resources needed.
+   - Data to be stored and its sources/format.
+   - Security and access-control requirements.
+   - User training and change-management needs.
+   - Budget, timeline and expected return on investment. <!-- verify -->
+
+4. **You have been given a responsibility to elicit requirements from a customer, who tells you that he is too busy to meet with you. What should you do?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 639 (ET: N/A)]*
+
+Answer:
+   - Ask for a short, scheduled slot (even 15-20 minutes) instead of an open-ended meeting.
+   - Send a short written questionnaire or a list of specific questions the customer can answer asynchronously.
+   - Identify a delegate — a manager or end-user who knows the business process — who can represent the customer's needs.
+   - Use existing documents (old system manuals, reports, forms) to draft an initial requirement set, then get the customer to just confirm or correct it, which takes less of their time than starting from scratch.
+
+5. **(ক) Software development এর ক্ষেত্রে কত প্রকার requirements পাওয়া যায়। উদাহরণসহ requirements সমূহ লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Two main types of requirements:
+   - Functional Requirements: describe what the system should do, e.g. "the system shall allow a user to search for a book by title".
+   - Non-Functional Requirements: describe quality attributes/constraints, e.g. "the system shall support 1000 concurrent users" (performance), or "all passwords shall be encrypted" (security).
+
+6. **(খ) Software Requirement Specification (SRS) বলতে কি বুঝায়? Software Development এর কোন ধাপে SRS তৈরি করা হয়?** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 768 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) A Software Requirement Specification (SRS) is a document that fully describes what a software system should do, including its functional requirements, non-functional requirements, interfaces and constraints. It is written during the `Requirement Analysis` phase of the SDLC, right after the feasibility study and before design begins, and serves as the agreed contract between the customer and the development team.
+
+7. **Assume that you are going to implement an ecommerce site of "XYZ" company. The CEO of the company is Mr. X. You have to identify the following: (i) Stakeholder (ii) Functional requirements (iii) Non-functional requirements (iv) Deployment requirements** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
+
+Answer:
+   - (i) Stakeholders: CEO (Mr. X), customers, product/inventory managers, payment gateway provider, delivery/logistics partner, IT support team.
+   - (ii) Functional requirements: browse/search products, add to cart, checkout, make payment, track order, manage inventory (admin).
+   - (iii) Non-functional requirements: the site should be secure (HTTPS, encrypted payment data), scalable to handle traffic spikes (e.g. sales events), and responsive across devices.
+   - (iv) Deployment requirements: cloud/web hosting with load balancing, a database server, SSL certificate, and a CDN for fast content delivery. <!-- verify -->
+
+8. **Software Requirement Specification (SRS) বলতে কী বোঝেন? Software development -এর কোন স্তরে SRS প্রস্তুত করা হয়?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) A Software Requirement Specification (SRS) is the formal document that captures everything the software must do (functional requirements) and the quality constraints it must meet (non-functional requirements), along with external interfaces. It is prepared in the `Requirement Analysis` stage of the SDLC, right after the initial feasibility study, so that the design and coding phases have a clear, agreed target to build against.
+
+9. **(ক) Feasibility Test কী? সফটওয়্যার উন্নয়নে উহার প্রয়োজনীয়তা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) A `feasibility study` (feasibility test) is an early investigation to decide whether a proposed project is worth pursuing before real money and effort are committed to it.
+   Why it is needed:
+   - It avoids wasting resources on a project that cannot succeed technically, financially, or operationally.
+   - It identifies major risks early, when they are still cheap to address.
+   - It gives management the information needed to decide: proceed, revise scope, or cancel the project.
+
+10. **(খ) Feasibility Analysis এর বিভিন্ন ধাপসমূহের সংক্ষিপ্ত বিবরণ দিন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1087 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Feasibility analysis has four common types, usually studied together:
+   - Technical feasibility: can the required technology, tools and skills actually deliver the system?
+   - Economic feasibility: do the expected benefits outweigh the development and running cost (cost-benefit analysis)?
+   - Operational feasibility: will the organization's people and processes actually be able to use and support the new system?
+   - Schedule feasibility: can the project realistically be completed within the required time frame?
+
+## Software Project Management & Organization (9)
+
+1. **সংগঠনিক নির্দেশকগুলো কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Organizational directives are the high-level rules, standards and guidelines set by an organization's management that a software project must follow — such as its chosen SDLC methodology, coding standards, security policy, and reporting structure — so that every project stays consistent with company-wide practice. <!-- verify -->
+
+2. **Which you build about real life software project? What problems you faced during that time and how to solve this?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
+
+Answer: This is an open, experience-based question — describe one real or realistic project briefly, then the problems and fixes. A typical model answer:
+   - Project: a small inventory management system for a retail shop.
+   - Problem 1 — changing requirements: the client kept requesting new fields after design was frozen. Solved by switching from a rigid Waterfall approach to short Agile sprints, so changes could be absorbed each iteration.
+   - Problem 2 — unclear requirements: some features were vague at first. Solved by holding short requirement-review meetings with the client before starting each module.
+   - Problem 3 — integration issues near deadline: modules built by different developers didn't fit together smoothly. Solved by introducing continuous integration and daily build checks instead of one big integration at the end.
+
+3. **Project management related question (what are the approaches)** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 520 (ET: MIST)]*
+
+Answer: Common approaches to software project management:
+   - Waterfall / Predictive approach: plan the whole project upfront, execute in fixed sequential phases — suited to well-understood, stable requirements.
+   - Agile approach (Scrum, Kanban): iterative development in short cycles (sprints), with continuous customer feedback — suited to changing requirements.
+   - Hybrid approach: combines a Waterfall-style overall plan with Agile execution inside individual phases.
+   - Critical Path Method (CPM) / PERT: schedule-focused approaches that map task dependencies to find the shortest possible completion time.
+
+4. **(খ) User story ও Product backlog কী?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+   - A `user story` is a short, simple description of a feature written from the end user's point of view, in the form: "As a [user], I want [goal], so that [reason]." Example: "As a customer, I want to reset my password, so that I can regain access to my account."
+   - The `product backlog` is the complete, prioritized list of all user stories, features and fixes that could be built for the product; items are pulled from the top of this list into each sprint.
+
+5. **Assume you are a project manager and your job is to develop an application which is similar to what you have developed is past only larger and complex. The customer has documented the requirements clearly. What team structure would you choose in this case and why?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
+
+Answer: A `Chief Programmer Team` (or a hierarchical/centralized team structure) fits best here.
+   - Why: the requirements are already clear and well documented, and the project is large but similar to past work — so the risk is mainly `size and coordination`, not uncertainty about what to build. A chief programmer team, with one lead architect making key design decisions and a structured team under them, gives fast, consistent decisions and efficient reuse of the team's past experience.
+   - A more democratic/self-organizing (egoless) team would be preferred instead if the requirements were unclear or the problem were novel, since that structure is better at exploring alternatives — which is not needed here. <!-- verify -->
+
+6. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+Answer: A `git merge conflict` happens when Git cannot automatically combine changes from two branches because both branches edited the same lines of the same file differently.
+   ```
+   <<<<<<< HEAD
+   your version of the line
+   =======
+   their version of the line
+   >>>>>>> branch-name
+   ```
+   To resolve it: open the conflicted file, manually decide which version (or a combination) to keep, remove the `<<<<<<<`, `=======`, `>>>>>>>` markers, then `git add` the file and complete the merge with `git commit`.
+
+7. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+Answer:
+   | Point | Patch | Upgrade |
+   |---|---|---|
+   | Purpose | Fixes a specific bug or security hole | Adds new features / major version change |
+   | Size | Small | Large |
+   | Frequency | Released often, as needed | Released periodically (major releases) |
+   | Risk | Low, targeted change | Higher, can change behavior significantly |
+
+8. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
+
+Answer:
+   - Strong technical knowledge to guide and review the team's work.
+   - Good communication skills, to clearly convey goals and give constructive feedback.
+   - Ability to plan, prioritize and manage time/resources under deadlines.
+   - Conflict-resolution and people-management skills to keep the team motivated.
+   - Accountability — takes responsibility for the team's outcome, not just individual tasks.
+
+9. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
+
+Answer: (Interpreting this as: pros and cons of hiring based on formal qualifications.) <!-- verify -->
+   Pros:
+   - Easier and faster to screen large numbers of applicants.
+   - A degree/certificate gives some assurance of baseline theoretical knowledge.
+   Cons:
+   - Qualifications do not always reflect real practical/coding skill.
+   - Can filter out capable self-taught candidates who lack a formal degree.
+   - Encourages hiring for credentials rather than for actual problem-solving ability.
+
 ## Software Design Principles (Coupling & Cohesion) (5)
 
 1. **Write concepts of Coupling and Cohesion with Example?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
