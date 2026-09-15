@@ -95,9 +95,6 @@ Answer: The requirement is one row per department, so `GROUP BY Department` with
    * **I.** Write an SQL query to display only StudentID, Name, and Marks for students scoring more than 80 marks.
    * **II.** Write an SQL query to count how many students scored more than 80 marks in each Department. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
-* **I.** Write an SQL query to display only StudentID, Name, and Marks for students scoring more than 80 marks.
-   * **II.** Write an SQL query to count how many students scored more than 80 marks in each Department. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
-
    Answer:
 
    Table: `STUDENTS(StudentID, Name, Department, Marks)`
@@ -162,11 +159,6 @@ Answer: The requirement is one row per department, so `GROUP BY Department` with
 
 3. **SQL Query: Find department name and Average salary form 2 table Department and Employee.......** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
    Department table
-   Department (dept_id, dept_name)
-   Employee table
-   Employee (emp_id, emp_name, salary, dept_id)
-
-Department table
    Department (dept_id, dept_name)
    Employee table
    Employee (emp_id, emp_name, salary, dept_id)
@@ -237,16 +229,6 @@ Department table
    ```
 
 4. **Consider the following database schema, find out the employees whose manager's region is same as the employee working under him.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1363 (ET: BUET)]*
-```sql
-REGIONS (REGION_ID, REGION_NAME)
-COUNTRIES (COUNTRY_ID, COUNTRY_NAME, REGION_ID)
-LOCATIONS (LOCATION_ID, STREET_ADDRESS, POSTAL_CODE, CITY, STATE_PROVINCE, COUNTRY_ID)
-DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID)
-EMPLOYEES (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID)
-JOB_HISTORY (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID)
-JOBS (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY)
-```
-
 ```sql
 REGIONS (REGION_ID, REGION_NAME)
 COUNTRIES (COUNTRY_ID, COUNTRY_NAME, REGION_ID)
@@ -415,9 +397,6 @@ Answer: The specific problem was not printed, so the standard database-query pat
    **(a) Find out the employees who join the same date:** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
    **(b) Find those employees whose salary greater than 8,000 and Less than 25,000** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
-**(a) Find out the employees who join the same date:** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
-   **(b) Find those employees whose salary greater than 8,000 and Less than 25,000** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
-
    Answer:
 
    (a) Employees who joined on the same date
@@ -482,17 +461,6 @@ Answer: The specific problem was not printed, so the standard database-query pat
    ```
 
 7. **Write down the Query for the following table?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1361 (ET: BUET)]*
-
-| StudentID | StudentName | Age | Department |
-|---|---|---|---|
-| 1 | Alice | 20 | CSE |
-| 2 | Bob | 22 | EEE |
-| 3 | Charlie | 21 | CSE |
-| 4 | David | 23 | BBA |
-
-* **(i) Shows only students in the CSE department.**
-* **(ii) Shows all students sorted by age (highest first).**
-* **(iii) Shows how many students are in each department.**
 
 | StudentID | StudentName | Age | Department |
 |---|---|---|---|
@@ -592,8 +560,6 @@ Answer: The specific problem was not printed, so the standard database-query pat
 
 **Write an SQL query to display the region, average sale amount, and total number of sales for each region where: The average sale amount exceeds BDT 50,000 and the total number of sales in that region is at least 5.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
 
-**Write an SQL query to display the region, average sale amount, and total number of sales for each region where: The average sale amount exceeds BDT 50,000 and the total number of sales in that region is at least 5.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1425 (ET: E-Zone)]*
-
    Answer: Two conditions must be applied to the `groups`, not to individual rows, so both belong in the `HAVING` clause.
 
    Assumed relation
@@ -654,9 +620,6 @@ Answer: The specific problem was not printed, so the standard database-query pat
    - This shows the division of labour clearly: `WHERE` narrows the rows that enter the grouping, `HAVING` discards whole groups afterwards.
 
 9. **Given two tables:**
-
-**a) Write an SQL query to retrieve all student names, their courses, and grades.**
-**b) Write an SQL query to retrieve names of students who obtained grade 'A'.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
 
 **a) Write an SQL query to retrieve all student names, their courses, and grades.**
 **b) Write an SQL query to retrieve names of students who obtained grade 'A'.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
@@ -752,15 +715,6 @@ company (employee_name, city)
  * **(i) Find the names of all employees who live in the city 'Dhaka'.**
  * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
 
-```sql
-employee (employee_name, street, city)
-works (employee_name, company_name, salary)
-company (employee_name, city)
-```
-**Write the SQL commands to perform the following operations:**
- * **(i) Find the names of all employees who live in the city 'Dhaka'.**
- * **(ii) Find the names of all employees whose salary in greater than BDT 1,00,000.**
-
     Answer:
 
     Schema
@@ -830,34 +784,6 @@ company (employee_name, city)
     ```
 
 11. **Given the following two tables (Students and Marks) in a database, write down the output of the given SQL queries and write down the SQL queries for the outputs:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1344 (ET: N/A)]*
-
-| Students |  |
-|---|---|
-| StudentId | StudentName |
-| 1 | Mr. A |
-| 2 | Mr. B |
-| 3 | Mr. C |
-| 4 | Mr. D |
-
-| Marks |  |  |
-|---|---|---|
-| StudentId | Subject | Mark |
-| 1 | Math | 70 |
-| 2 | Math | 90 |
-| 3 | Math | 30 |
-| 1 | Bangali | 50 |
-| 2 | Bangali | 60 |
-| 3 | Bangali | 70 |
-| 1 | Physics | 80 |
-| 2 | Physics | 70 |
-| 3 | Physics | 60 |
-
- * **(i) SELECT Count (*) FROM Students S LEFT JOIN Marks M;**
- * **(ii) SELECT StudentName From Students S JOIN Marks M**
-**ON S.StudentId=M.StudentId GROUP BY S.StudentId, S.StudentName HAVING SUM (Mark)>=200;**
- * **(iii) List all the students name and number of subjects they have completed.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
- * **(iv) List all the students who have not completed any subject.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
- * **(v) List all the subject names.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1345 (ET: N/A)]*
 
 | Students |  |
 |---|---|
@@ -1001,15 +927,6 @@ company (employee_name, city)
     - `DISTINCT` is necessary, since each subject appears three times in the Marks table.
 
 12. **Given a Patient table in a hospital database below.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1340 (ET: N/A)]*
-
-| Patient_ID | Disease_Name |
-|---|---|
-| 1 | Covid-19 |
-| 2 | Dialysis |
-| 3 | Covid-19 |
-| 4 | Dengue |
-
-Write down an SQL query to display the total number of patients under each disease category.
 
 | Patient_ID | Disease_Name |
 |---|---|
@@ -1437,10 +1354,6 @@ Answer: The specific query was not printed, so the SQL query patterns that these
     * **Supplier** (sid, sname, address)
     * **Product** (pid, pname, etc)
 
-* **Catalog** (sid, pid, price)
-    * **Supplier** (sid, sname, address)
-    * **Product** (pid, pname, etc)
-
     Answer:
 
     Schema
@@ -1515,26 +1428,6 @@ Answer: The specific query was not printed, so the SQL query patterns that these
     ```
 
 19. **Let a database has two tables, Customers and Orders. The following figure shows the partial data of these two tables. Based on this partial data, explain Inner, Left, Right and Full join. Show the result set of each join operation.**
-
-**Table: Customers**
-| ID | First name |
-|---|---|
-| 1 | Rahim |
-| 2 | Karim |
-| 3 | Belal |
-| 4 | Rony |
-| 5 | Helal |
-
-**Table: Orders**
-| Order id | Amount | Customer id |
-|---|---|---|
-| 1 | 200 | 10 |
-| 2 | 500 | 3 |
-| 3 | 300 | 6 |
-| 4 | 800 | 5 |
-| 5 | 150 | 8 |
-
-*[Combined Bank Senior Officer (IT) 17.05.2024 compact it 335 (ET: BIBM)]*
 
 **Table: Customers**
 | ID | First name |
@@ -1670,9 +1563,6 @@ Answer: The specific query was not printed, so the SQL query patterns that these
    * **(i) Group by**
    * **(ii) Average Salary** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
-* **(i) Group by**
-   * **(ii) Average Salary** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
-
     Answer:
 
     (i) GROUP BY
@@ -1742,11 +1632,6 @@ Answer: The specific query was not printed, so the SQL query patterns that these
 
 21. **Consider that you are given a database of a 'Pet Society' with the following relations.**
    * **Animals(*ID*: integer, *Name*: string, *PrevOwner*: string, *DateAdmitted*: date, *Type*: string)**
-   * **Adopter(*PSIN*: integer, *Name*: string, *Address*: string, *OtherAnimals*: integer)**
-   * **Adoption(*AnimalID*: integer, *PSIN*: integer, *AdoptDate*: date, *chipNo*: integer)**
-   **Give a sql query that list total number of adoptions on June 30, 2024 for each animal type.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
-
-* **Animals(*ID*: integer, *Name*: string, *PrevOwner*: string, *DateAdmitted*: date, *Type*: string)**
    * **Adopter(*PSIN*: integer, *Name*: string, *Address*: string, *OtherAnimals*: integer)**
    * **Adoption(*AnimalID*: integer, *PSIN*: integer, *AdoptDate*: date, *chipNo*: integer)**
    **Give a sql query that list total number of adoptions on June 30, 2024 for each animal type.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 429 (ET: BIBM)]*
@@ -1950,9 +1835,6 @@ Answer:
    * **(i) Write the employee name who got same salary named Rahim but not same job of Rahim.**
    * **(ii) Write the employee's name who's average salary is more than company's average salary** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
 
-* **(i) Write the employee name who got same salary named Rahim but not same job of Rahim.**
-   * **(ii) Write the employee's name who's average salary is more than company's average salary** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 380 (ET: BUET)]*
-
     Answer:
 
     (i) Employees on the same salary as Rahim, but with a different job
@@ -2029,10 +1911,6 @@ Answer:
 
 25. **EMPLOYEES (Emp_ID, Emp_Name, Manager_ID, Dept_ID);**
    **DEPARTMENTS (Dept ID, Salary, Dept Name, Emp_ID);**
-   * **(a) Find out the names of the manager for each employee:**
-   * **(b) Sort the employees total salary of each department based on salary in descending order.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
-
-**DEPARTMENTS (Dept ID, Salary, Dept Name, Emp_ID);**
    * **(a) Find out the names of the manager for each employee:**
    * **(b) Sort the employees total salary of each department based on salary in descending order.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 431 (ET: BUET)]*
 
@@ -2120,14 +1998,6 @@ Answer:
 
 26. **Given Four table:**
    * **Employee (empno(PK), empname, monthlysalary, deptno, mqrnd(FK))**
-   * **Department(deptno, deptname, deptlocation)**
-   * **Course(erscode(pk) erd dese, ers category, ers duration)**
-   * **Offering (of begingate, erscode fk, offeringlocation, empno fk)**
-   **Write query for:**
-   * **(a) Find Departments with Average Monthly Salary Greater than 1000.**
-   * **(b) Find Courses with More Than 2 Offerings.** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1456 (ET: BUET)]*
-
-* **Employee (empno(PK), empname, monthlysalary, deptno, mqrnd(FK))**
    * **Department(deptno, deptname, deptlocation)**
    * **Course(erscode(pk) erd dese, ers category, ers duration)**
    * **Offering (of begingate, erscode fk, offeringlocation, empno fk)**
@@ -2280,17 +2150,6 @@ ORDER BY average_salary desc
 ```
 *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 521 (ET: MIST)]*
 
-```sql
-SELECT department_name, AVG(salary) as average_salary
-FROM employees
-JOIN department d ON e.department_id = d.department_id
-WHERE salary > (SELECT AVG(salary) FROM employees )
-GROUP BY department_name
-HAVING COUNT(*) > 2
-ORDER BY average_salary desc
-```
-*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 521 (ET: MIST)]*
-
     Answer: The query is intended to list departments whose average salary is high, but as written it `will not run`, and its logic is also questionable.
 
     The code
@@ -2424,16 +2283,6 @@ Answer: Assuming the table `Employee(emp_id, Employee_Name, Salary, dept_id)`.
     ```
 
 30. **Analyze the output of the following SQL :** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 543 (ET: MIST)]*
-```sql
-SELECT department_name, AVG(salary) AS average_salary
-FROM employees e
-JOIN departments d ON e.department_id=d.department_id
-WHERE salary> (SELECT AVG(salary) FROM employees WHERE department_id=d.department_id)
-GROUP BY department_name
-HAVING COUNT(*)>2
-ORDER BY average_salary DESC;
-```
-
 ```sql
 SELECT department_name, AVG(salary) AS average_salary
 FROM employees e
@@ -2697,9 +2546,6 @@ Answer: The exact query was not printed, so the employee-table queries that appe
    **(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
    **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 496 (ET: N/A)]*
 
-**(A) Write an SQL query that returns all records of the form sid, uid where sid is the key of an S- record and uid is the key of a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.**
-   **(B) Write an SQL query that returns records of the form A, C where the A-value is from an S- record and the C-value is from a U-record and these two records are related through the relations R and Q. Use SELECT and not SELECT DISTINCT in your query.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 496 (ET: N/A)]*
-
     Answer:
 
     Schema
@@ -2931,13 +2777,6 @@ Answer:
    **Has Genre (\underline{\text{gid}, \text{mid}})**
    **Write a SQL query to return the number of movies that are romantic comedies.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 
-**Movies (\underline{\text{mid}}, title, year)**
-   **People (\underline{\text{pid}}, name)**
-   **Genres (\underline{\text{gid}}, genre)**
-   **HasRole (\underline{\text{pid}, \text{mid}}, role)**
-   **Has Genre (\underline{\text{gid}, \text{mid}})**
-   **Write a SQL query to return the number of movies that are romantic comedies.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
-
     Answer:
 
     Schema
@@ -3068,13 +2907,6 @@ Answer: (Answered in English, as required for IT topics.)
 
 38. **অথবা, নিম্নোক্ত টেবিলগুলো হতে (ক), (খ) এবং (গ) এর উত্তর দিন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 627 (ET: N/A)]*
    Restaurant (rid, rname, rcity, phone, seat-capacity)
-   Dishes (did, dname, dtype)
-   Customer (cid, cname, ccity)
-   Serves (rid, did)
-
-   **(ক) যে যে রেস্টুরেন্টগুলো ‘Burger’ পরিবেশন করে সেগুলোর নাম খুঁজে বের করার জন্য SQL Query লিখুন। (খ) ‘Ziman’ নামক একজন Customer যে যে খাবারগুলো অ্যালার্জি সংক্রান্ত সমস্যা এড়িয়ে খেতে পারেন তার তালিকা তৈরি করুন। (গ) যে যে খাবারগুলো ঢাকার সকল রেস্টুরেন্টে পাওয়া যায় তার তালিকা তৈরি করুন।**
-
-Restaurant (rid, rname, rcity, phone, seat-capacity)
    Dishes (did, dname, dtype)
    Customer (cid, cname, ccity)
    Serves (rid, did)
@@ -3941,18 +3773,6 @@ SELECT count(Distinct val) val_count
 From t;
 ```
 
-```sql
-CREATE Table t(
-val INT
-);
-INSERT INTO t(val)
-values (1), (2), (3), (null), (null), (4), (5);
-SELECT count (*) val_count
-From t;
-SELECT count(Distinct val) val_count
-From t;
-```
-
     Answer:
 
     The statements
@@ -4490,12 +4310,6 @@ Answer: (Answered in English, as required for IT topics.)
     ```
 
 57. **Database table by name Loan Records is given below: What is the output of the following SQL query?** *[BAUST Assistant Programmer 2021 compact it 919-920 (ET: N/A)]*
-```sql
-SELECT count (*) FROM (
-(SELECT Borrower, Bank_Manager, FROM Loan_Records) AS S NATURAL JOIN
-(SELECT Bank_Manager, Loan_Amount FROM Loan_Records) AS T);
-```
-
 ```sql
 SELECT count (*) FROM (
 (SELECT Borrower, Bank_Manager, FROM Loan_Records) AS S NATURAL JOIN
@@ -6286,9 +6100,6 @@ Answer: "Top 10 percent" means a fraction of the row count, which varies with th
    (i) Find the customer details for those salesman get commission greater than 12% commission.
    (ii) Count the salesman by their order_id and date.
 
-(i) Find the customer details for those salesman get commission greater than 12% commission.
-   (ii) Count the salesman by their order_id and date.
-
     Answer:
 
     Schema
@@ -6561,9 +6372,6 @@ Answer: Duplicate rows are found by grouping on the columns that define a duplic
    a. find out the min salary from table
    b. find out a matched string
 
-a. find out the min salary from table
-   b. find out a matched string
-
     Answer: The table was not printed, so a standard `Employee(emp_id, emp_name, salary, city, designation)` is assumed.
 
     (a) Minimum salary from the table
@@ -6625,9 +6433,6 @@ a. find out the min salary from table
 
 84. **Probably a SQL query** *[BTCL Assistant Manager (Technical) 2017 compact it 1256 (ET: N/A)]*
    (a) Show the branch name with the minimum balance
-   (b) Select all dept_name, roll from Student
-
-(a) Show the branch name with the minimum balance
    (b) Select all dept_name, roll from Student
 
     Answer:
@@ -6833,10 +6638,6 @@ Answer: The modifier used to remove duplicate rows is `DISTINCT`.
     - `GROUP BY department` produces the same rows as `SELECT DISTINCT department`, but GROUP BY is intended for aggregation and DISTINCT for de-duplication.
 
 87. **What dose following query do?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
-```sql
-SELECT *FROM students ORDER BY ID, NAME DESC
-```
-
 ```sql
 SELECT *FROM students ORDER BY ID, NAME DESC
 ```
@@ -8516,15 +8317,6 @@ Answer:
 | It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
 | The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
 
-| 2NF(Second Normal Form) | 3NF(Third Normal Form) |
-|---|---|
-| It is already in 1NF. | It is already in 1NF as well as in 2NF also. |
-| In 2NF, non-prime attributes (attributes that are not part of any candidate key) must depend on the entire candidate key. | In 3NF non-prime attributes are only allowed to be functionally dependent on Super key of relation. |
-| No partial functional dependency of non-prime attributes on any proper subset of a candidate key is allowed. | No transitive functional dependency of non-prime attributes on any super key is allowed. |
-| Stronger normal form than 1NF but lesser than 3NF. | Stronger normal form than 1NF and 2NF. |
-| It eliminates repeating groups in relation. | It virtually eliminates all the redundancies. |
-| The goal of the second normal form is to eliminate redundant data. | The goal of the third normal form is to ensure referential integrity. |
-
    Answer:
 
    The two definitions
@@ -8639,10 +8431,6 @@ Answer: The logical design of a database is called the `schema` — more precise
 
 5. **A Bank schema is given below:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1322 (ET: DU)]*
    $$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
-   * (a) Provided and Normalize and point out Primary and Foreign Key?
-   * (b) Show that is the schema and state that why your schema is in good form.
-
-$$\text{Bank}(\text{Br\_Name}, \text{Br\_City}, \text{Assets}, \text{Acc\_name}, \text{Acc\_Num}, \text{Balance})$$
    * (a) Provided and Normalize and point out Primary and Foreign Key?
    * (b) Show that is the schema and state that why your schema is in good form.
 
@@ -9391,10 +9179,6 @@ Answer: Normalisation is needed because an unnormalised table stores the same fa
 
 15. **Let a relational function is R(A, B, C, D, E), Write Yes or No based on those are the follow n functional dependency.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 822 (ET: BUET)]*
    AB \to C
-   B \to B
-   DE \to A
-
-AB \to C
    B \to B
    DE \to A
 
