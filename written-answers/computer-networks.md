@@ -153,9 +153,6 @@ Answer:
    (b) Classfull এবং Classless IP address এর মধ্যে পার্থক্য লেখ।
    (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-(b) Classfull এবং Classless IP address এর মধ্যে পার্থক্য লেখ।
-   (c) 11000001 00001001 00001010 00010101 এই IP এর Class লিখ। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
    Answer:
 
 (a) IP address vs MAC address
@@ -190,10 +187,6 @@ Answer:
    - Class: `Class C`
 
 6. **A bank has the network block 192.168.10.0/24. The IT manager wants to divide this into 4 equal subnets.** *[Senior Officer IT (Job ID: 10225) Date: 22-05-2026 (ET: N/A)]*
-(a) How many bits do you need to borrow to make 4 subnets?
-(b) What is the new Subnet Mask in dotted-decimal format?
-(c) Write down the Network Address, the First Usable IP, and the Broadcast Address for the second subnet created. Show your calculation.
-
 (a) How many bits do you need to borrow to make 4 subnets?
 (b) What is the new Subnet Mask in dotted-decimal format?
 (c) Write down the Network Address, the First Usable IP, and the Broadcast Address for the second subnet created. Show your calculation.
@@ -319,15 +312,6 @@ Quick reference table
    **(ii) The IP address valid range.**
    **(iii) The number of valid hosts.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
 
-**(a) Manager: half of the address space.**
-   **(b) HR: one-quarter of the address space.**
-   **(c) Admin: the remaining one-quarter.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1437 (ET: BUET)]*
-
-   **For each department, determine:**
-   **(i) The network block (in CIDR notation).**
-   **(ii) The IP address valid range.**
-   **(iii) The number of valid hosts.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1438 (ET: BUET)]*
-
    Answer: Given 245.248.128.0/20 = 4096 addresses, range 245.248.128.0 – 245.248.143.255.
 
    Step 1 – size each share
@@ -363,15 +347,6 @@ Answer: /28 means host bits = 32 − 28 = 4, block size = 2^4 = 16, mask = 255.2
    ```
 
 13. **(a) An organization wants to divide its LAN IP address 192.168.0.0/24 into 4 subnets according to buildings. The buildings IP address creiteria are given below.**
-
-| Building block | Hosts need |
-|---|---|
-| A | 110 |
-| B | 50 |
-| C | 20 |
-| D | 8 |
-
-**Calculate the network and broadcast address of this network for each building block.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1443 (ET: N/A)]*
 
 | Building block | Hosts need |
 |---|---|
@@ -444,12 +419,6 @@ Examples
  * **(iv) Direct broadcast address**
  * **(v) Limited broadcast address.**
 
-* **(i) Total number of IP addresses**
- * **(ii) Range of usable IP addresses**
- * **(iii) Network address**
- * **(iv) Direct broadcast address**
- * **(v) Limited broadcast address.**
-
    Answer: Given 200.1.2.0/24 (Class C), 3 subnets required.
 
    Step 1 – bits to borrow
@@ -470,12 +439,6 @@ Step 2 – details for each subnet
 
 16. **The IP address of a device in a network is 172.16.128.123/22. Answer the following questions:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
    * **i) What is the network address?**
-   * **ii) What is the subnet mask for the given network?**
-   * **iii) What is the broadcast address?**
-   * **iv) What is the maximum number of devices this network can connect?**
-   * **v) What is the IP address of the first host device in the network?**
-
-* **i) What is the network address?**
    * **ii) What is the subnet mask for the given network?**
    * **iii) What is the broadcast address?**
    * **iv) What is the maximum number of devices this network can connect?**
@@ -892,9 +855,6 @@ Answer: The interface table was not printed with the question, so the method for
 i) 00000001 00001011 00001011 11101111
 ii) 211.10.15.4
 
-i) 00000001 00001011 00001011 11101111
-ii) 211.10.15.4
-
    Answer:
 
 (a) Classful vs Classless IP addressing
@@ -980,8 +940,6 @@ Answer: Mask 255.255.255.224 = /27.
 43. **Write down the basic differences of the following:**
    **(i) Public vs Private IP address** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 534 (ET: MIST)]*
 
-**(i) Public vs Private IP address** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 534 (ET: MIST)]*
-
    Answer: Public vs Private IP address
 
 | Point | Public IP | Private IP |
@@ -1021,12 +979,6 @@ Answer:
    - It uses areas (with Area 0 as the backbone) to keep large networks scalable, and authentication to secure routing updates.
 
 45. **Convert the decimal IP address 192.168.101.5 into binary IP address. Fill-up the following in tabular form:** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
-
-| Address Class | First Octet Decimal Range | Example of IP Address (IPA) | Network ID of IPA | Host ID of IPA |
-|---|---|---|---|---|
-| Class A |  |  |  |  |
-| Class B |  |  |  |  |
-| Class C |  |  |  |  |
 
 | Address Class | First Octet Decimal Range | Example of IP Address (IPA) | Network ID of IPA | Host ID of IPA |
 |---|---|---|---|---|
@@ -1101,8 +1053,6 @@ Answer:
 
 48. **In HR department have 12 IP enable devices are available in our office and have a big IP block 172.16.5.0/24. To consider your HR department find a suitable IP block than also answer the following question.**
    **i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
-
-**i. Subnet mask; ii. Number of usable IP address; iii. First and last IP Address of that block iv. Broadcast IP address** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 596 (ET: N/A)]*
 
    Answer: Given the block 172.16.5.0/24 and a requirement of 12 IP-enabled devices in HR.
 
@@ -2283,8 +2233,8 @@ Answer:
 Answer:
    - Number of subnets required = $8 = 2^3 \implies$ Borrow 3 bits from the host portion.
    - New Prefix Length = $16 + 3 = 19$.
-   - CIDR Notation: **/19**
-   - Subnet Mask in Dotted Decimal: **255.255.224.0** (since $11100000_2 = 224$).
+   - CIDR Notation: /19
+   - Subnet Mask in Dotted Decimal: 255.255.224.0 (since $11100000_2 = 224$).
    - Block size in 3rd octet = $256 - 224 = 32$.
 
    Subnet Boundaries:
@@ -2293,8 +2243,8 @@ Answer:
    - 3rd Subnet: 10.10.64.0/19 (Range: 10.10.64.1 - 10.10.95.254, Broadcast: 10.10.95.255)
 
    Results for the 3rd Subnet:
-   - First Usable IP Address: **10.10.64.1**
-   - Last Usable IP Address: **10.10.95.254**
+   - First Usable IP Address: 10.10.64.1
+   - Last Usable IP Address: 10.10.95.254
 
 112. **Define the states of the DNS (Domain Name System). How does DNS resolve a domain name into an IP address?** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 224-225]]*
 
@@ -2323,10 +2273,10 @@ Answer:
    - Since $160 \le 165 \le 175$ ($10 	imes 16 = 160$):
 
    Calculations:
-   - Network Address: **192.168.111.160**
-   - Minimum Host Address: **192.168.111.161**
-   - Maximum Host Address: **192.168.111.174**
-   - Broadcast Address: **192.168.111.175**
+   - Network Address: 192.168.111.160
+   - Minimum Host Address: 192.168.111.161
+   - Maximum Host Address: 192.168.111.174
+   - Broadcast Address: 192.168.111.175
 
 114. **Write down the Private IP address ranges of Class A, Class B, and Class C.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
 
@@ -2348,8 +2298,8 @@ Answer:
    - The 4th octet value $120$ falls in the range $0$ to $127$.
 
    Answers:
-   - (i) Network Address: **172.16.128.0**
-   - (ii) Maximum number of usable host devices = $2^{(32 - 25)} - 2 = 2^7 - 2 = 128 - 2 =$ **126 devices**.
+   - (i) Network Address: 172.16.128.0
+   - (ii) Maximum number of usable host devices = $2^{(32 - 25)} - 2 = 2^7 - 2 = 128 - 2 =$ 126 devices.
 
 116. **Given a Sub net mask 255.255.255.240 and IP address 192.168.1.50. Then find the network address, usable host range and broadcast address.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
@@ -2360,9 +2310,9 @@ Answer:
    - The value 50 falls in the subnet starting at 48 ($3 	imes 16 = 48$).
 
    Calculations:
-   - Network Address: **192.168.1.48**
-   - Usable Host Range: **192.168.1.49 to 192.168.1.62**
-   - Broadcast Address: **192.168.1.63**
+   - Network Address: 192.168.1.48
+   - Usable Host Range: 192.168.1.49 to 192.168.1.62
+   - Broadcast Address: 192.168.1.63
 
 117. **Mention the public and private address ranges of IPv4 for class A, class B and class C.** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378]]*
 
@@ -2394,7 +2344,7 @@ Answer:
 
    (ii) Usable host capacity for `20.20.20.20/20`:
    - Number of host bits = $32 - 20 = 12	ext{ bits}$.
-   - Total Usable Hosts = $2^{12} - 2 = 4096 - 2 =$ **4,094 usable hosts**.
+   - Total Usable Hosts = $2^{12} - 2 = 4096 - 2 =$ 4,094 usable hosts.
 
 119. **Given an IP address: 212.15.180.0/24 and wants to divide into 16 subnet.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 401]]*
 a) What will be the subnet mask and how many hosts belongs to every subnet. b) What is the first and last address of first and last subnet address?
@@ -2403,23 +2353,23 @@ Answer:
    a) Subnet Mask & Hosts Calculation:
    - Number of subnets = $16 = 2^4 \implies$ Borrow 4 bits.
    - New Prefix Length = $24 + 4 = 28$.
-   - Subnet Mask = **255.255.255.240** (CIDR: **/28**).
+   - Subnet Mask = 255.255.255.240 (CIDR: /28).
    - Total IP addresses per subnet = $2^{(32-28)} = 16$.
-   - Usable hosts per subnet = $16 - 2 =$ **14 usable hosts**.
+   - Usable hosts per subnet = $16 - 2 =$ 14 usable hosts.
 
    b) First and Last Subnet Addresses:
    - First Subnet (Subnet 0):
-     - Network Address (First address): **212.15.180.0**
-     - Broadcast Address (Last address): **212.15.180.15**
+     - Network Address (First address): 212.15.180.0
+     - Broadcast Address (Last address): 212.15.180.15
      - (Usable Host Range: 212.15.180.1 – 212.15.180.14)
    - Last Subnet (Subnet 15):
-     - Network Address (First address): **212.15.180.240**
-     - Broadcast Address (Last address): **212.15.180.255**
+     - Network Address (First address): 212.15.180.240
+     - Broadcast Address (Last address): 212.15.180.255
      - (Usable Host Range: 212.15.180.241 – 212.15.180.254)
 
 ## OSI & TCP/IP Reference Model (57)
 
-> **Best Tutorial:** [GeeksforGeeks - Open Systems Interconnection Model (OSI)](https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/)
+> Best Tutorial: [GeeksforGeeks - Open Systems Interconnection Model (OSI)](https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/)
 
 1. **Mention the layers of the OSI Model and the function of each layer.** *[Combined Bank Officer (IT) 03.01.2026 debug it (ET: N/A)]*
 
@@ -2435,7 +2385,7 @@ Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, split
 | 2 | Data Link | Node-to-node delivery, framing, MAC addressing, error detection | Frame | Ethernet, ARP |
 | 1 | Physical | Sends raw bits as electrical, light or radio signals | Bit | Cables, Hubs |
 
-   **PDU Visual Structures (Network Layer Packet & Data Link Layer Frame):**
+   PDU Visual Structures (Network Layer Packet & Data Link Layer Frame):
 
    ```mermaid
    flowchart LR
@@ -2528,9 +2478,9 @@ Cyber threats at three layers:
 
 | Layer | Cyber Threat | How It Works & Defense |
 |---|---|---|
-| 7 Application | Phishing | Fake login pages trick users to steal passwords.<br>**Defense:** 2FA / MFA, User awareness training. |
-| 4 Transport | TCP SYN Flood | Floods server with half-open requests to crash it.<br>**Defense:** SYN cookies, Rate limiting. |
-| 3 Network | IP Spoofing | Uses a fake source IP to bypass firewall rules.<br>**Defense:** Packet filtering on routers, IPsec. |
+| 7 Application | Phishing | Fake login pages trick users to steal passwords.<br>Defense: 2FA / MFA, User awareness training. |
+| 4 Transport | TCP SYN Flood | Floods server with half-open requests to crash it.<br>Defense: SYN cookies, Rate limiting. |
+| 3 Network | IP Spoofing | Uses a fake source IP to bypass firewall rules.<br>Defense: Packet filtering on routers, IPsec. |
 
 5. **Write bottom to top OSI reference Model.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
@@ -2925,14 +2875,6 @@ Answer: The OSI layers in top-down order:
    - This is the direction data takes at the sender, where each layer adds its own header (encapsulation).
 
 21. **Fill up the following protocol table by work at which layer?** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 452 (ET: BUET)]*
-
-| Protocol Name | Layer |
-|---|---|
-| Carrier-Sense Multiple Access (CSMA) |  |
-| Open Shortest Path First (OSPF) |  |
-| Transmission Control Protocol (TCP) |  |
-| Routing Information Protocol (RIP) |  |
-| User datagram protocol (UDP) |  |
 
 | Protocol Name | Layer |
 |---|---|
@@ -3576,12 +3518,6 @@ Answer: The OSI model has `7 layers` and the TCP/IP model has `4 layers`.
    d) Data link layer responsible for convert IP address into \_\_\_\_\_\_\_\_?
    e) HTTP service provides using which protocol \_\_\_\_\_\_\_\_?
 
-a) IP address converted into physical address \_\_\_\_\_\_\_\_?
-   b) Name are converted into domain name \_\_\_\_\_\_\_\_?
-   c) Mail is transferred between various devices using \_\_\_\_\_\_\_\_ protocol.
-   d) Data link layer responsible for convert IP address into \_\_\_\_\_\_\_\_?
-   e) HTTP service provides using which protocol \_\_\_\_\_\_\_\_?
-
    Answer:
 
 | # | Blank | Answer |
@@ -3776,9 +3712,9 @@ Answer:
 55. **Add suitable prepositions (২টি বাক্য দেওয়া হয়).** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
 Answer:
-   - 1. He is proficient **in** computer programming.
-   - 2. She has been suffering **from** fever since Monday.
-   - (Additional standard exam forms: He died **of** malaria; He is senior **to** me).
+   - 1. He is proficient in computer programming.
+   - 2. She has been suffering from fever since Monday.
+   - (Additional standard exam forms: He died of malaria; He is senior to me).
 
 56. **Given a positive integer N, return the \text{N}^\text{th} row of Pascal's triangle. (Pascal's triangle is a triangular array of the binomial coefficients formed by summing up the elements or previous row.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 324]]*
 
@@ -3803,10 +3739,10 @@ Answer:
 Answer:
    A preposition is a word placed before a noun or pronoun to indicate relation, direction, time, place, or location. Common exam rules and correct prepositions:
    - 1. Appropriate Prepositions:
-     - Abide **by** (rules)
-     - Agree **with** (a person) / Agree **to** (a proposal)
-     - Congratulate **on** (success)
-     - Prevent **from** (doing something)
+     - Abide by (rules)
+     - Agree with (a person) / Agree to (a proposal)
+     - Congratulate on (success)
+     - Prevent from (doing something)
    - 2. Time & Place:
      - In (months/years/large cities): in 2024, in Dhaka
      - On (days/dates): on Sunday, on 26th March
@@ -4911,14 +4847,14 @@ Answer:
    (ক)
    - মোট চাঁদার পরিমাণ = ৯০ টাকা = $90 	imes 100 = 9000$ পয়সা।
    - প্রত্যেকের চাঁদা = ১০ পয়সা।
-   - অতএব, মোট শিক্ষার্থীর সংখ্যা = $rac{9000}{10} =$ **৯০০ জন**।
+   - অতএব, মোট শিক্ষার্থীর সংখ্যা = $rac{9000}{10} =$ ৯০০ জন।
 
    (খ)
    - দেওয়া আছে: $a + b = 7$ এবং $ab = 10$
    $$\frac{1}{a^2} + \frac{1}{b^2} = \frac{a^2 + b^2}{a^2 b^2} = \frac{(a + b)^2 - 2ab}{(ab)^2}$$
    - মান বসিয়ে:
    $$= \frac{7^2 - 2(10)}{10^2} = \frac{49 - 20}{100} = \frac{29}{100} = 0.29$$
-   - নির্ণেয় মান: **$\frac{29}{100}$** (বা **০.২৯**)।
+   - নির্ণেয় মান: $\frac{29}{100}$ (বা ০.২৯)।
 
 22. **(ক) চীন, যুক্তরাষ্ট্র, জাপান ও কানাডা এদের মধ্যে কে G-7 এর সদস্য নয়।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 (খ) chat gpt এর প্রতিষ্ঠাতা কে? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
@@ -4938,26 +4874,26 @@ Answer:
 (ঝ) বাংলাদেশ মহিলা ফুটবল দল আন্তর্জাতিক কোন টুর্নামেন্ট এর জন্য নির্বাচিত হয়েছেন? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
 Answer:
-   - (ক) **চীন** G-7 এর সদস্য নয় (G-7 সদস্য: যুক্তরাষ্ট্র, কানাডা, জাপান, যুক্তরাজ্য, ফ্রান্স, জার্মানি, ইতালি)।
-   - (খ) ChatGPT তৈরি করেছে কৃত্রিম বুদ্ধিমত্তা গবেষণা প্রতিষ্ঠান **OpenAI** (প্রতিষ্ঠাতাদের মধ্যে স্যাম অল্টম্যান, গ্রেগ ব্রকম্যান, ইলন মাস্ক প্রমুখ উল্লেখযোগ্য)।
-   - (গ) বাংলাদেশ **ASEAN (আসিয়ান)**-এর সদস্য নয় (বাংলাদেশ NAM ও OIC-এর সদস্য)।
-   - (ঘ) বিমসটেক (BIMSTEC)-এর সদস্য রাষ্ট্র **৭টি** (বাংলাদেশ, ভুটান, ভারত, মায়ানমার, নেপাল, শ্রীলঙ্কা ও থাইল্যান্ড)।
-   - (ঙ) নির্বাচন ব্যবস্থা সংস্কার কমিশনের প্রধান: **ড. বদিউল আলম মজুমদার**; সংবিধান সংস্কার কমিশনের প্রধান: **অধ্যাপক আলী রীয়াজ**।
+   - (ক) চীন G-7 এর সদস্য নয় (G-7 সদস্য: যুক্তরাষ্ট্র, কানাডা, জাপান, যুক্তরাজ্য, ফ্রান্স, জার্মানি, ইতালি)।
+   - (খ) ChatGPT তৈরি করেছে কৃত্রিম বুদ্ধিমত্তা গবেষণা প্রতিষ্ঠান OpenAI (প্রতিষ্ঠাতাদের মধ্যে স্যাম অল্টম্যান, গ্রেগ ব্রকম্যান, ইলন মাস্ক প্রমুখ উল্লেখযোগ্য)।
+   - (গ) বাংলাদেশ ASEAN (আসিয়ান)-এর সদস্য নয় (বাংলাদেশ NAM ও OIC-এর সদস্য)।
+   - (ঘ) বিমসটেক (BIMSTEC)-এর সদস্য রাষ্ট্র ৭টি (বাংলাদেশ, ভুটান, ভারত, মায়ানমার, নেপাল, শ্রীলঙ্কা ও থাইল্যান্ড)।
+   - (ঙ) নির্বাচন ব্যবস্থা সংস্কার কমিশনের প্রধান: ড. বদিউল আলম মজুমদার; সংবিধান সংস্কার কমিশনের প্রধান: অধ্যাপক আলী রীয়াজ।
    - (চ) ২০২৫ সালের একুশে পদক ও জাতীয় স্বীকৃতিতে বৈষম্যবিরোধী ছাত্র আন্দোলনের তরুণ ও শহীদদের আত্মত্যাগ বিশেষভাবে সম্মানিত হয়েছে।
    - (ছ) উইঘুর (Uighur) চীনের জিনজিয়াং প্রদেশের প্রধান মুসলিম সংখ্যালঘু সম্প্রদায়।
-   - (জ) বাংলাদেশ সংবিধানের **১১৮ নং অনুচ্ছেদ** অনুযায়ী প্রধান নির্বাচন কমিশনার ও অন্যান্য নির্বাচন কমিশনারদের **রাষ্ট্রপতি** নিয়োগ প্রদান করেন।
-   - (ঝ) বাংলাদেশ জাতীয় নারী ফুটবল দল **সাফ নারী চ্যাম্পিয়নশিপ (SAFF Women's Championship)** এবং এএফসি উইমেন্স এশিয়ান কাপ বাছাইপর্বের জন্য নির্বাচিত হয়েছে।
+   - (জ) বাংলাদেশ সংবিধানের ১১৮ নং অনুচ্ছেদ অনুযায়ী প্রধান নির্বাচন কমিশনার ও অন্যান্য নির্বাচন কমিশনারদের রাষ্ট্রপতি নিয়োগ প্রদান করেন।
+   - (ঝ) বাংলাদেশ জাতীয় নারী ফুটবল দল সাফ নারী চ্যাম্পিয়নশিপ (SAFF Women's Championship) এবং এএফসি উইমেন্স এশিয়ান কাপ বাছাইপর্বের জন্য নির্বাচিত হয়েছে।
 
 23. **(ক) থ্রি জিরো তত্ত্বের উদ্ভাবক কে? সংক্ষেপে লিখ।** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 (খ) STP কত সালে প্রনয়ন করা হয়? এর সাথে মেট্রোরেলের সম্পর্ক কি? __(Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15) [bitbox it book 92]__
 
 Answer:
-   - (ক) থ্রি জিরো তত্ত্বের (3 Zero Theory) প্রবক্তা শান্তিতে নোবেলজয়ী অর্থনীতিবিদ **অধ্যাপক ড. মুহাম্মদ ইউনূস**।
+   - (ক) থ্রি জিরো তত্ত্বের (3 Zero Theory) প্রবক্তা শান্তিতে নোবেলজয়ী অর্থনীতিবিদ অধ্যাপক ড. মুহাম্মদ ইউনূস।
      তত্ত্বটির মূল ৩টি লক্ষ্য হলো:
      1. Zero Poverty (শূন্য দারিদ্র্য)
      2. Zero Unemployment (শূন্য বেকারত্ব - যুবসমাজকে চাকরিপ্রার্থীর বদলে উদ্যোক্তা হিসেবে গড়ে তোলা)
      3. Zero Net Carbon Emission (শূন্য কার্বন নিঃসরণ - পরিবেশবান্ধব টেকসই পৃথিবী গঠন)।
-   - (খ) স্ট্র্যাটেজিক ট্রান্সপোর্ট প্ল্যান (STP) **২০০৫ সালে** ২০ বছর মেয়াদে প্রণয়ন করা হয় (পরবর্তীতে ২০১৫ সালে RSTP সংশোধিত হয়)।
+   - (খ) স্ট্র্যাটেজিক ট্রান্সপোর্ট প্ল্যান (STP) ২০০৫ সালে ২০ বছর মেয়াদে প্রণয়ন করা হয় (পরবর্তীতে ২০১৫ সালে RSTP সংশোধিত হয়)।
      সম্পর্ক: ঢাকা মহানগরীর তীব্র যানজট নিরসনে STP-এর সুপারিশের ভিত্তিতেই কৌশলগত গণপরিবহন ব্যবস্থা হিসেবে ম্যাস র‍্যাপিড ট্রানজিট (MRT বা মেট্রোরেল নেটওয়ার্কের ৫টি রুট) নির্মাণের মহাপরিকল্পনা গৃহীত ও বাস্তবায়ন করা হয়।
 
 24. **What is the topology in data communication? What are the differences between Bus, Ring, Tree & star topology?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 515]]*
@@ -5603,24 +5539,11 @@ Answer:
    - a. SQL (Structured Query Language): A domain-specific standard programming language designed for managing, querying, defining, and manipulating data held in Relational Database Management Systems (RDBMS). Includes DDL (CREATE, ALTER), DML (SELECT, INSERT, UPDATE, DELETE), and DCL (GRANT, REVOKE).
    - b. API (Application Programming Interface): A formalized set of definitions, rules, and communication protocols that enables disparate software systems to interact, exchange data, and leverage each other's functionalities (e.g., RESTful APIs, SOAP, GraphQL).
    - c. Recursion: A computational method where a function solves a problem by calling itself repeatedly on smaller sub-problems until it reaches a terminating base case (e.g., factorial computation, DFS graph traversal).
-   - d. DNS Port Number: **Port 53**. Standard name resolution queries use **UDP port 53** for low-latency lookups; zone transfers and responses exceeding 512 bytes use **TCP port 53**.
+   - d. DNS Port Number: Port 53. Standard name resolution queries use UDP port 53 for low-latency lookups; zone transfers and responses exceeding 512 bytes use TCP port 53.
 
 ## Transport Layer (TCP & UDP) (22)
 
 1. **A client needs to send 4000\text{ bytes} of data to a database server. The client divides the data into packets of 500\text{ bytes} each. The sequence number of the first packet is 3001. After 2500\text{ bytes} have been successfully sent, 2 packets are lost/failed. Assuming TCP cumulative ACK, complete the following table:** [BSCCPL AME 21-08-2026 (BUET)]
-
-| SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-
-Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packets 6 and 7 are lost, while packet 8 arrives. The server sends a cumulative ACK for the next byte it is expecting. Find the missing values in the table.
 
 | SL | Client Packet Sequence No. | DB Server Sequence No. | ACK Sequence No. |
 |---|---|---|---|
@@ -6345,11 +6268,11 @@ Answer:
 22. **Write the full form of the protocols: NAT, DHCP, MAC, TCP-IP, HTTPS** *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 379]]*
 
 Answer:
-   - **NAT** — Network Address Translation
-   - **DHCP** — Dynamic Host Configuration Protocol
-   - **MAC** — Media Access Control
-   - **TCP/IP** — Transmission Control Protocol / Internet Protocol
-   - **HTTPS** — HyperText Transfer Protocol Secure
+   - NAT — Network Address Translation
+   - DHCP — Dynamic Host Configuration Protocol
+   - MAC — Media Access Control
+   - TCP/IP — Transmission Control Protocol / Internet Protocol
+   - HTTPS — HyperText Transfer Protocol Secure
 
 ## Physical Layer & Transmission Media (Cables & Wiring) (21)
 
@@ -6925,7 +6848,7 @@ Answer:
    - `n -= n1;` -> `n = n - n1 = 10 - 10 = 0` (`n = 0`).
    - `printf("%d", n);` prints `0`.
 
-   Output: **0**
+   Output: 0
 
 18. **b) After compiling and executing the following code what will be the output?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 340]]*
 Output: The recursive function is: F(n) = F(n-1)+F(n-2); with F(0)=0, F(1)=1
@@ -6940,7 +6863,7 @@ Answer:
    $$F(5) = F(4) + F(3) = 3 + 2 = 5$$
    $$F(6) = F(5) + F(4) = 5 + 3 = 8$$
 
-   Output Sequence: **0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...**
+   Output Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
 19. **What is the output of the following program? Also explain the output.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 352-353]]*
 ```cpp
@@ -7983,19 +7906,12 @@ Answer:
    *(Note: Using decimal $2.5 \times 1000 \times 8 = 20,000\text{ bits}$, $T_{trans} = 20\text{ }\mu\text{s}$ or $0.02\text{ ms}$)*
 
    Summary:
-   - Propagation Time = **50 ms** (or $0.05\text{ s}$)
-   - Transmission Time = **0.02048 ms** (or $20.48\text{ }\mu\text{s}$)
+   - Propagation Time = 50 ms (or $0.05\text{ s}$)
+   - Transmission Time = 0.02048 ms (or $20.48\text{ }\mu\text{s}$)
 
 ## Routing Protocols & Route Configuration (19)
 
 1. **A BGP router receives multiple routes to the same destination network from different neighboring autonomous systems. The available routes are given in the following table, containing Path, LOCAL_PREF, AS_PATH, ORIGIN, and MED values. Using the standard BGP best-path selection rules, analyze the attributes in the given order and determine which path will be selected as the best route, showing the comparison and justification for each step.** [BSCCPL AME 21-08-2026 (BUET)]
-
-| Path | LOCAL_PREF | AS_PATH | ORIGIN | MED |
-|---|---|---|---|---|
-| Path 1 | 200 | 65001 65010 | IGP | 50 |
-| Path 2 | 150 | 65020 | IGP | 5 |
-| Path 3 | 200 | 65030 65040 | IGP | 10 |
-| Path 4 | 200 | 65050 65060 | IGP | 20 |
 
 | Path | LOCAL_PREF | AS_PATH | ORIGIN | MED |
 |---|---|---|---|---|
@@ -8177,11 +8093,6 @@ Answer: OSPF (Open Shortest Path First) is a link-state, classless interior gate
    * **(C) RIP and OSPF**
    * **(D) ARP and RARP**
 
-* **(A) TCP and IP**
-   * **(B) HTTP and FTP**
-   * **(C) RIP and OSPF**
-   * **(D) ARP and RARP**
-
    Answer: The correct option is `(C) RIP and OSPF`.
 
    - RIP (Routing Information Protocol) — a distance-vector interior gateway protocol using hop count as its metric, with a maximum of 15 hops. Based on the Bellman-Ford algorithm.
@@ -8325,26 +8236,6 @@ Answer:
    - Host-specific routing is still used, sparingly, for special cases: a /32 route for a critical server, policy routing for one host, or troubleshooting. It is checked first, because the longest prefix always wins.
 
 10. **Consider the following routing table at an IP router:** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 461 (ET: BUET)]*
-
-| Network | Subnet mask | Outgoing Interface |
-|---|---|---|
-| 172.168.164.0 | 255.255.254.0 | Interface 0 |
-| 172.168.166.0 | 255.255.254.0 | Interface 1 |
-| 172.168.168.0 | 255.255.254.0 | Interface 2 |
-| 172.168.170.0 | 255.255.254.0 | Interface 3 |
-| 0.0.0.0 | Default | Interface 4 |
-
-**For each IP address in Group: I indentify the correct choice of the outgoing from Group: II using the entries from the routing table above.**
-
-| Group: I | Group: II |
-|---|---|
-| 172.168.165.121 | Interface 0 |
-| 172.168.167.151 | Interface 1 |
-| 172.168.163.151 | Interface 2 |
-| 172.168.171.92 | Interface 3 |
-| 0.0.0.0 | Interface 4 |
-
-*[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 462 (ET: BUET)]*
 
 | Network | Subnet mask | Outgoing Interface |
 |---|---|---|
@@ -8694,7 +8585,7 @@ Answer:
 
    - $5.25\text{ hours} = 5\frac{1}{4}\text{ hours} = 5\text{ hours and } 15\text{ minutes}$.
 
-   Final Answer: **5.25 hours** (or **$5\frac{1}{4}$ hours**).
+   Final Answer: 5.25 hours (or $5\frac{1}{4}$ hours).
 
 ## Communication System & Transmission Modes (17)
 
@@ -9014,9 +8905,6 @@ Answer:
 
 1. **Network Address Translation (NAT) maps internal networks to the public internet.**
    * (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
-   * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
-
-* (a) Explain the historical IP addressing limitation that made NAT a necessity globally.
    * (b) Explain the step-by-step logical translation process that occurs at a branch router when an internal employee (IP 192.168.1.5) sends a web request to an external server, and how the router correctly handles the returning response packet. *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
    Answer:
