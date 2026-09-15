@@ -1,9 +1,9 @@
 <!-- TOC START -->
-**Table of Contents** — 7 subtopics · 80 questions
+**Table of Contents** — 7 subtopics · 79 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-33) | 33 |
+| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-32) | 32 |
 | 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-16) | 16 |
 | 3 | [HTTP Protocol](#http-protocol-10) | 10 |
 | 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
@@ -15,7 +15,7 @@
 
 ---
 
-## HTML & Web Fundamentals (33)
+## HTML & Web Fundamentals (32)
 
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
@@ -130,17 +130,12 @@ Answer: What a URL is
 
 3. **(খ) নিচের টেবিলটি তৈরি করার জন্য HTML কোড লিখুন :** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 413 (ET: N/A)]*
 
-| Std name | Compulsory | Optional |
-|---|---|---|
+| Std name | Compulsory | Compulsory | Compulsory | Optional |
+|---|---|---|---|---|
 | Hasan | Bangla | English | ICT | Math |
 | Nafis | Bangla | English | ICT | Biology |
 
-| Std name | Compulsory | Optional |
-|---|---|---|
-| Hasan | Bangla | English | ICT | Math |
-| Nafis | Bangla | English | ICT | Biology |
-
-   Answer: (Answered in English, as required for IT topics.) The table needs `5 columns`, and the two header cells `Compulsory` and `Optional` span more than one column, so `colspan` is used.
+   Answer: (Answered in English, as required for IT topics.) The table needs `5 columns`, and the header cell `Compulsory` spans three of those columns (Bangla, English, ICT), so `colspan` is used.
 
    The HTML code
    ```html
@@ -1788,12 +1783,6 @@ Answer: (Answered in English, as required for IT topics.) What a website is
 |  |  |  |  | HP |
 |  |  |  |  | ASUS |
 
-| Customer Name | Product Name |  |  | Product Manufacturer |
-|---|---|---|---|---|
-| Mr. Jhon | Computer | Printer | Modem | HP |
-|  |  |  |  | HP |
-|  |  |  |  | ASUS |
-
     Answer: (Answered in English, as required for IT topics.) The table has `5 columns`. `Product Name` spans three of them in the header, and in the body the customer name and the three product cells span all three data rows, while the manufacturer column has a separate value in each row. So both `colspan` and `rowspan` are needed.
 
     The HTML code
@@ -2770,8 +2759,8 @@ Answer: The minimum HTML tags used in a web page
 31. **What are SOAP and RESTful APIs? Discuss the differences between them in terms of architecture, format, and usage.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 223]]*
 
 Answer:
-    - **SOAP (Simple Object Access Protocol)**: A standardized, contract-based XML communication protocol that strictly relies on WSDL (Web Services Description Language) definitions and WS-Security specifications.
-    - **RESTful API (Representational State Transfer)**: An architectural design style that utilizes standard stateless HTTP methods (GET, POST, PUT, DELETE) to manipulate resources identified by URIs.
+    - SOAP (Simple Object Access Protocol): A standardized, contract-based XML communication protocol that strictly relies on WSDL (Web Services Description Language) definitions and WS-Security specifications.
+    - RESTful API (Representational State Transfer): An architectural design style that utilizes standard stateless HTTP methods (GET, POST, PUT, DELETE) to manipulate resources identified by URIs.
 
     Comparison between SOAP and REST:
 
