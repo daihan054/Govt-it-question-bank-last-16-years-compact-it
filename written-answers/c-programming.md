@@ -123,13 +123,6 @@ Answer:
 4
 ```
 
-```
-1 2 3 4
-2 3 4
-3 4
-4
-```
-
    Answer: The number is read as a string of digits. Row `i` prints digits from position `i` to the end, so each row drops one digit from the left.
 
    ```c
@@ -378,16 +371,6 @@ Answer: This is the Taylor series for `sin(x)`. Each term is obtained from the p
    * **a. Write a program using any language to the calculate the total tax of employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
    * **b. From the three employee salary find the highest tax paying employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
 
-| Salary Range | Tax |
-|---|---|
-| 0-250000 | 0 |
-| 250001-5000000 | 10% |
-| 500001-100000 | 20% |
-| >10,00000 | 30% |
-
-   * **a. Write a program using any language to the calculate the total tax of employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
-   * **b. From the three employee salary find the highest tax paying employee.** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 290 (ET: BUET)]*
-
    Answer: The slab boundaries in the printed table have typing errors, so the standard reading is used: 0–2,50,000 → 0%; 2,50,001–5,00,000 → 10%; 5,00,001–10,00,000 → 20%; above 10,00,000 → 30%. Tax is charged slab by slab, not on the whole salary at one rate.
 
    ```c
@@ -521,18 +504,13 @@ Answer:
    6 9 11 6 32
    ```
 
-   - The **format is the whole question here**. Printing `Sum of row 1 = 10` on separate lines loses marks — the row total must be appended as an extra column on the same line as the row itself.
+   - The format is the whole question here. Printing `Sum of row 1 = 10` on separate lines loses marks — the row total must be appended as an extra column on the same line as the row itself.
    - Row sum: the row index `i` stays fixed while `j` moves across. Column sum: the roles are swapped — `j` is fixed and `i` moves down.
-   - The last line holds the column totals. Its final value (32) is the **grand total**, and it works out the same whether you add the row sums (10+14+8) or the column sums (6+9+11+6) — a quick way to check your answer.
+   - The last line holds the column totals. Its final value (32) is the grand total, and it works out the same whether you add the row sums (10+14+8) or the column sums (6+9+11+6) — a quick way to check your answer.
    - Time complexity `O(m × n)`, space `O(m × n)` for the matrix.
 
 16. **Write a program in any language to find the prime numbers between 1.......n, where n is taken as user input.**
    **Sample input:**
-   **Enter value of n: 20**
-   **Sample Output:**
-   **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
-
-**Sample input:**
    **Enter value of n: 20**
    **Sample Output:**
    **Prime Numbers: 2, 3, 5, 7, 11, 13, 17, 19** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
@@ -602,15 +580,6 @@ Answer:
     - Time complexity `O(n√n)`.
 
 18. **Write a Program Floyds triangle n=5**
-```text
-1
-01
-101
-0101
-10101
-```
-*[Combined Bank Assistant Programmer 09.02.2024 compact it 295 (ET: BIBM)]*
-
 ```text
 1
 01
@@ -794,8 +763,6 @@ Answer:
 23. **Find the output from the following: take input and looks the output:**
    **Suppose Input: 6789; Output: 9876** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
 
-**Suppose Input: 6789; Output: 9876** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 379 (ET: BUET)]*
-
    Answer: The program reverses the digits of the number. Each digit is peeled off from the right and appended to the result from the left.
 
    ```c
@@ -840,16 +807,6 @@ int main() {
 }
 ```
 
-```c
-#include<stdio.h>
-int main() {
-    int a[] = {0,1,2,3,4};
-    int b[] = {10,20,30,40,50};
-    printf("%d", b[a[2]]);
-    return 0;
-}
-```
-
    Answer: Output is `30`.
 
    Step-by-step
@@ -861,15 +818,6 @@ int main() {
    - This is array indexing with a nested subscript — the inner subscript is evaluated first and its value is used as the index for the outer array.
 
 25. **Given a code with a variable value "a=85" and finds its output a=85**
-```c
-if a>=90 point A;
-if a>=80 point B;
-if a>=70 point C;
-if a>=60 point D;
-else print F;
-```
-*[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
-
 ```c
 if a>=90 point A;
 if a>=80 point B;
@@ -987,37 +935,6 @@ Answer:
     - Caution: both methods fail if the same variable is passed twice (`swap(&x, &x)`), because the value becomes 0. The arithmetic version can also overflow for very large values.
 
 29. **Find the output from this code-** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 590 (ET: BUET)]*
-```c
-#include <stdio.h>
-void PrintArray(int num[], int n) {
-    int i;
-    for(i=0;i<n;i++)
-    {
-        printf("%d", num[i]);
-    }
-    printf("\n");
-}
-void FunctionArray(int num[], int n) {
-    int i, j, key;
-    for (i=1;i<n;i++)
-    {
-        key=num[i];
-        j--;
-        while(j>=0 && j<=n){
-            num[j] = num[j+1];
-            key=num[j];
-        }
-        num[i-1]=key;
-        PrintArray(num,n);
-    }}
-int main() {
-    int num[]={11,2,3,4,5};
-    PrintArray(num,5);
-    FunctionArray(num,5);
-    return 0;
-}
-```
-
 ```c
 #include <stdio.h>
 void PrintArray(int num[], int n) {
@@ -1345,15 +1262,6 @@ Answer:
    ```
    **b) Write a C or C++ Program to print an array of five fruits.**
 
-**a) Sample Output:**
-   ```text
-   1
-   1 2
-   1 2 3
-   1 2 3 4
-   ```
-   **b) Write a C or C++ Program to print an array of five fruits.**
-
    Answer:
 
    (a) Number triangle of 4 rows
@@ -1390,10 +1298,6 @@ Answer:
 
 38. **Write a program in any language that takes two matrices A and B as inputs ensure your code handles matrices of different dimensions—**
    **A) Find matrices C that is multiplication A and B.**
-   **B) Find average in A and B.**
-   **C) Max from matrices C** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 515 (ET: MIST)]*
-
-**A) Find matrices C that is multiplication A and B.**
    **B) Find average in A and B.**
    **C) Max from matrices C** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 515 (ET: MIST)]*
 
@@ -1523,12 +1427,6 @@ Answer: The array should hold 1 to 10 once each, but some entries were replaced 
    **Input: A[] = {1, 2, 3}**
    **Output: -1**
 
-**Input: A[] = {-7, 1, 5, 2, -4, 3, 0}**
-   **Output: 3**
-   **3 is an equilibrium index, because: A[0] + A[1] + A[2] = A[4] + A[5] + A[6]**
-   **Input: A[] = {1, 2, 3}**
-   **Output: -1**
-
    Answer: Compute the total sum once, then sweep left to right keeping a running left sum. At each index the right sum is `total − leftSum − arr[i]`.
 
    ```c
@@ -1566,14 +1464,6 @@ Answer: The array should hold 1 to 10 once each, but some entries were replaced 
    - The brute-force method of recomputing both sums for every index would cost `O(n²)`.
 
 42. **Write a C program to print the following pattern:**
-```text
-0
-010
-01010
-
-```
-*[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
-
 ```text
 0
 010
@@ -1915,14 +1805,6 @@ Answer:
     - Time complexity `O(n)`.
 
 53. **Print the following matrix using for loop.** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 682 (ET: N/A)]*
-```text
-1
-22
-333
-4444
-55555
-```
-
 ```text
 1
 22
@@ -2461,14 +2343,6 @@ Answer: This value is called the digital root. Keep summing the digits until a s
     - Shortcut formula: `digitalRoot(n) = 1 + (n − 1) % 9` for `n > 0`, which gives the answer in `O(1)`. For 12345: `1 + 12344 % 9 = 1 + 5 = 6`.
 
 70. **Pattern this print using C++ program-** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
-```text
-1 2 3 4 5
-1 2 3 4
-1 2 3
-1 2
-1
-```
-
 ```text
 1 2 3 4 5
 1 2 3 4
@@ -3188,11 +3062,6 @@ for(a=1; a<=100; a++)
     printf("%d\n", a*a);
 ```
 
-```c
-for(a=1; a<=100; a++)
-    printf("%d\n", a*a);
-```
-
     Answer:
 
     ```c
@@ -3442,14 +3311,6 @@ Answer:
     - Time complexity `O(n)`, space `O(n)`.
 
 100. **Write program for following pattern:** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
-```text
-12345
-1234
-123
-12
-1
-```
-
 ```text
 12345
 1234
@@ -4286,10 +4147,10 @@ Answer:
     Total common elements = 2
     ```
 
-    - The nested loop compares every element of `A` against every element of `B` → time complexity **O(n×m)**.
+    - The nested loop compares every element of `A` against every element of `B` → time complexity O(n×m).
     - The inner `break` stops after the first hit so a value present twice in `B` is not counted twice.
     - The `already` check skips duplicates inside `A` itself, so `A = {2,2,3}` and `B = {2}` reports `2` once, not twice.
-    - Faster alternative: sort both arrays and walk them with two pointers → **O(n log n + m log m)**; or use a hash table / frequency array for **O(n+m)** when the value range is small.
+    - Faster alternative: sort both arrays and walk them with two pointers → O(n log n + m log m); or use a hash table / frequency array for O(n+m) when the value range is small.
 
 126. **Find the sum of the series: $1 + \frac{1}{2} + \frac{1}{3} + \dots\dots\dots\dots + \frac{1}{n}$** *[Uttara Bank Assistant Programmer 2019 habib collection 13 (ET: N/A)]*
 
@@ -4313,7 +4174,7 @@ Answer:
     }
     ```
 
-    - This is the **harmonic series** H(n). For n = 5 the answer is 1 + 0.5 + 0.3333 + 0.25 + 0.2 = **2.283333**.
+    - This is the harmonic series H(n). For n = 5 the answer is 1 + 0.5 + 0.3333 + 0.25 + 0.2 = 2.283333.
     - The classic mistake is writing `1 / i`. Both operands are `int`, so C does integer division and every term after the first becomes 0, making the sum exactly 1. Writing `1.0 / i` (or casting `(double)1 / i`) fixes it.
     - The series has no closed form, but it grows like `ln(n) + 0.5772` (the Euler–Mascheroni constant), so it diverges very slowly — H(1000) is only about 7.49.
 
@@ -4342,9 +4203,9 @@ Answer:
     ```
 
     - The odd terms are added and the even terms subtracted, so `sign` toggles between `+1` and `-1` each pass. The alternative is `if (i % 2 == 0) sum -= i*i; else sum += i*i;`.
-    - Closed-form check: the sum is `n(n+1)/2` when **n is odd** and `-n(n+1)/2` when **n is even**.
-    - n = 5 → 1 − 4 + 9 − 16 + 25 = **15**, and 5×6/2 = 15 ✓
-    - n = 4 → 1 − 4 + 9 − 16 = **−10**, and −(4×5/2) = −10 ✓
+    - Closed-form check: the sum is `n(n+1)/2` when n is odd and `-n(n+1)/2` when n is even.
+    - n = 5 → 1 − 4 + 9 − 16 + 25 = 15, and 5×6/2 = 15 ✓
+    - n = 4 → 1 − 4 + 9 − 16 = −10, and −(4×5/2) = −10 ✓
     - `(long)i * i` casts before multiplying so the square does not overflow `int` for large n.
 
 128. **Find the number of occurrences of a digit in a number.** *[Dutch-Bangla Bank Limited 2018 habib collection 15 (ET: N/A)]*
@@ -4388,7 +4249,7 @@ Answer:
     ```
 
     - `temp % 10` peels off the last digit and `temp /= 10` removes it — the standard digit-extraction idiom in C.
-    - The loop runs once per digit, so the complexity is **O(log₁₀ n)**.
+    - The loop runs once per digit, so the complexity is O(log₁₀ n).
     - The `temp == 0` guard matters: `while (temp > 0)` never executes for input 0, so searching for digit 0 in the number 0 would otherwise wrongly report 0 occurrences.
 
 129. **Evaluate the series: $1\times3 + 2\times5 + 3\times7 + \dots\dots\dots\dots + n\times(2n+1)$** *[Dutch-Bangla Bank Limited 2018 habib collection 16 (ET: N/A)]*
@@ -4415,8 +4276,8 @@ Answer:
 
     - Spotting the pattern is the whole trick: the first factor is `i` (1, 2, 3, …) and the second is the odd number `2i+1` (3, 5, 7, …).
     - Closed form: `Σ i(2i+1) = Σ (2i² + i) = n(n+1)(4n+5) / 6`.
-    - n = 3 → 1×3 + 2×5 + 3×7 = 3 + 10 + 21 = **34**, and 3×4×17/6 = 34 ✓
-    - Using the formula gives the answer in **O(1)** instead of **O(n)**, which is worth mentioning in the exam script.
+    - n = 3 → 1×3 + 2×5 + 3×7 = 3 + 10 + 21 = 34, and 3×4×17/6 = 34 ✓
+    - Using the formula gives the answer in O(1) instead of O(n), which is worth mentioning in the exam script.
 
 130. **Array - Reverse the whole array.** *[Huo Academy Coding Practice Set habib collection 48 (ET: N/A)]*
 
@@ -4451,8 +4312,8 @@ Answer:
     }
     ```
 
-    - **Two-pointer swap**: one index walks forward from the start, the other backward from the end, swapping as they go, and they meet in the middle.
-    - Time **O(n)**, extra space **O(1)** — no second array is needed, which is why this beats the naive "copy backwards into a new array" approach.
+    - Two-pointer swap: one index walks forward from the start, the other backward from the end, swapping as they go, and they meet in the middle.
+    - Time O(n), extra space O(1) — no second array is needed, which is why this beats the naive "copy backwards into a new array" approach.
     - `while (start < end)` (not `<=`) is deliberate: for an odd-length array the middle element stays where it is and swapping it with itself is pointless.
 
 131. **Array - Frequency count of elements.** *[Huo Academy Coding Practice Set habib collection 49 (ET: N/A)]*
@@ -4497,8 +4358,8 @@ Answer:
     ```
 
     - The `counted[]` flag array is what keeps the output clean; without it the element `1` would be printed three times with counts 3, 2 and 1.
-    - Complexity **O(n²)** with **O(n)** extra space.
-    - When the values are small non-negative integers, a **counting array** is far better: `freq[arr[i]]++` in one pass gives **O(n)** time, at the cost of an array as large as the maximum value.
+    - Complexity O(n²) with O(n) extra space.
+    - When the values are small non-negative integers, a counting array is far better: `freq[arr[i]]++` in one pass gives O(n) time, at the cost of an array as large as the maximum value.
 
 132. **Matrix - Sum of two matrices.** *[Huo Academy Coding Practice Set habib collection 52 (ET: N/A)]*
 
@@ -4538,9 +4399,9 @@ Answer:
     }
     ```
 
-    - Matrix addition is **element-wise**: `C[i][j] = A[i][j] + B[i][j]`.
-    - Both matrices must have **exactly the same dimensions** (m×n). This is the key difference from multiplication, which only needs the columns of A to match the rows of B.
-    - Time complexity **O(m×n)** — one pass over every cell.
+    - Matrix addition is element-wise: `C[i][j] = A[i][j] + B[i][j]`.
+    - Both matrices must have exactly the same dimensions (m×n). This is the key difference from multiplication, which only needs the columns of A to match the rows of B.
+    - Time complexity O(m×n) — one pass over every cell.
 
 133. **Matrix - Find the transpose.** *[Huo Academy Coding Practice Set habib collection 54 (ET: N/A)]*
 
@@ -4584,8 +4445,8 @@ Answer:
     ```
 
     - The whole operation is the single line `T[j][i] = A[i][j]` — row index and column index are swapped, so an m×n matrix becomes n×m.
-    - For a **square** matrix it can be done in place by swapping only the upper triangle: loop `j` from `i+1`, and swap `A[i][j]` with `A[j][i]`. Looping `j` from 0 would swap every pair twice and give back the original matrix.
-    - Time **O(m×n)**.
+    - For a square matrix it can be done in place by swapping only the upper triangle: loop `j` from `i+1`, and swap `A[i][j]` with `A[j][i]`. Looping `j` from 0 would swap every pair twice and give back the original matrix.
+    - Time O(m×n).
 
 134. **Matrix - Check identity matrix.** *[Huo Academy Coding Practice Set habib collection 56 (ET: N/A)]*
 
@@ -4620,12 +4481,12 @@ Answer:
     }
     ```
 
-    - An **identity matrix** is square, has 1 on every main-diagonal cell (`i == j`) and 0 everywhere else.
-    - ```
-      1 0 0
-      0 1 0   →  Identity matrix of order 3 (I₃)
-      0 0 1
-      ```
+    - An identity matrix is square, has 1 on every main-diagonal cell (`i == j`) and 0 everywhere else, for example:
+    ```
+    1 0 0
+    0 1 0   ->  Identity matrix of order 3 (I3)
+    0 0 1
+    ```
     - The two `break` statements plus the `&& isIdentity` in the outer loop make it exit as soon as one bad cell is found, instead of scanning the rest pointlessly.
     - Multiplying any matrix A by I leaves A unchanged (`A × I = I × A = A`), which is why I is the multiplicative identity for matrices.
 
@@ -4899,21 +4760,6 @@ return 0;
 }
 ```
 
-```c
-#include<stdio.h>
-
-int main() {
-
-float p=10.5;
-
-int a=5*p +5.0;
-
-printf("%d", a);
-
-return 0;
-}
-```
-
    Answer: Output is `57`.
 
    Step-by-step
@@ -5095,24 +4941,6 @@ Answer: The question is `incomplete` — the input for which the function must r
    - The pattern every such function follows: `return 1 when the property holds and 0 otherwise`, exiting early the moment a counter-example is found. C has no built-in boolean type in C89, so `int` with 0 and 1 is the convention; `<stdbool.h>` in C99 adds `bool`, `true` and `false`, which compile to the same values.
 
 9. **In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.**
-```c
-#include <stdio.h>
-int main() {
-    int n, reversed = 0, remainder, original;
-    printf("Enter an integer: ");
-    scanf("%d", &n);
-    original = n;
-    while (n!= 0) {
-        remainder = n % 10;
-        reversed = reversed * 10 + remainder;
-        n /= 10;
-    }
-    if (original == reversed)
-        printf("%d is a palindrome.", original);
-
-```
-*[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 464 (ET: BUET)]*
-
 ```c
 #include <stdio.h>
 int main() {
@@ -5368,18 +5196,6 @@ if __name__ == "__main__":
     main()
 ```
 
-```python
-def main():
-    x, y = 8, 4
-    if(x < y):
-        st= "x is less than y"
-    else:
-        st= "x is greater than y"
-    print (st)
-if __name__ == "__main__":
-    main()
-```
-
     Answer: Output is
 
     ```
@@ -5396,22 +5212,6 @@ if __name__ == "__main__":
     - The `__name__` guard exists so that the code does not run automatically when this file is imported as a module by another program.
 
 13. **Output Tracing:** *[NSDA Assistant Programmer Date: 04-03-2022 compact it 657 (ET: N/A)]*
-A)
-```c
-char str[20] = "Development";
-str[5] = '\0';
-int len = strlen(str);
-printf("%s", str);
-```
-B)
-```c
-int i;
-for (i=0; i<9; i++) {
-    if(i==5) continue;
-    printf ("%d\n", i);
-}
-```
-
 A)
 ```c
 char str[20] = "Development";
@@ -5492,16 +5292,6 @@ int main() {
 }
 ```
 
-```c
-#include<stdio.h>
-int main() {
-    int a=2, b=5, c;
-    c = a++ + b;
-    printf("%d %d %d", a, b, c);
-    return 0;
-}
-```
-
     Answer: Output is `3 5 7`.
 
     Step-by-step
@@ -5514,18 +5304,6 @@ int main() {
     - Unlike question 14, this statement is well defined, because `a` is modified only once.
 
 16. **What will be the output of the program?** *[Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
-```c
-#include<stdio.h>
-void main() {
-    int a[5]={5,1,15,20,25};
-    int i,j,m;
-    i=++a[1];
-    j=a[1]++;
-    m=a[i++];
-    printf("%d, %d, %d",i,j,m);
-}
-```
-
 ```c
 #include<stdio.h>
 void main() {
@@ -5560,16 +5338,6 @@ int main() {
 }
 ```
 
-```c
-#include <stdio.h>
-int isLeapYear(int year);
-int main() {
-    int a = 1;
-    printf("%d %d %d", ++a, a, a++);
-    return 0;
-}
-```
-
     Answer: On GCC the output is `2 2 2`, but the code is undefined behaviour and the answer is compiler dependent.
 
     Why the result is not reliable
@@ -5582,20 +5350,6 @@ int main() {
     - The declared function `isLeapYear` is never defined or called, which is harmless but pointless here.
 
 18. **Output programs:** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)], [Water Supply and Sewerage Authority (WASA); Assistant Programmer 25.11.2022 compact it 763 (ET: N/A)]*
-```c
-#include <stdio.h>
-int fun(int n) {
-    if (n == 4)
-        return n;
-    else
-        return 2 * fun(n + 1);
-}
-int main() {
-    printf("%d", fun(2));
-    return 0;
-}
-```
-
 ```c
 #include <stdio.h>
 int fun(int n) {
@@ -5636,17 +5390,6 @@ void main() {
 }
 ```
 
-```c
-#include <stdio.h>
-#define x 9+2/4*3-2*4+(5-4)*3
-void main() {
-    int i,y;
-    y=6+3*3/5;
-    i=x*x+y;
-    printf("%d", i);
-}
-```
-
     Answer: Output is `30`.
 
     Step 1 - compute y
@@ -5672,18 +5415,6 @@ void main() {
     - Moral of the question: always wrap a macro body in parentheses — `#define x (9+2/4*3-2*4+(5-4)*3)` — otherwise textual substitution produces surprises like this one.
 
 20. **(ii) নিচের C প্রোগ্রামটির ভুলগুলো সঠিক করুন এবং প্রোগ্রামটির আউটপুট লিখুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 783 (ET: N/A)]*
-```c
-include<stdio.h>
-int main{
-    int i, sum=0
-    for(i=1,i<=10,i++;{
-        sum=sum+i
-    }
-    printf(Sum of number=d, sum)
-    return 0
-}
-```
-
 ```c
 include<stdio.h>
 int main{
@@ -5748,23 +5479,6 @@ int main(){
 }
 ```
 
-```c
-#include<stdio.h>
-int function(int x[],int i){
-    int s=x[i];
-    if(i>0){
-        s+=function(x,i-1);
-    }
-    printf("%d",s);
-    return s;
-}
-int main(){
-    int y[]={1,3,2,8};
-    function(y,2);
-    return 0;
-}
-```
-
     Answer: Output is `146`.
 
     The function returns the sum of `x[0]` through `x[i]`, and prints each partial sum on the way back up the recursion.
@@ -5780,26 +5494,6 @@ int main(){
     - `y[3] = 8` is never touched, because the call started at index 2.
 
 22. **Write Output from below code:** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 819 (ET: BUET)]*
-```c
-#include<stdio.h>
-int main() {
-    int i;
-    char s[]="Bangladesh Industrial and Technical Assistant Center";
-    char*s1;
-    s1=s;
-    for(i=0; i<10; i++) {
-        printf("%c", s[i]);
-        ++s1;
-    }
-    printf("\n");
-    for(i=0; i<10; i++) {
-        printf("%c", s1[i]);
-        ++s1;
-    }
-    return 0;
-}
-```
-
 ```c
 #include<stdio.h>
 int main() {
@@ -5868,23 +5562,6 @@ int main(){
 }
 ```
 
-```c
-#include<stdio.h>
-int power(int n, int r){
-    int sum, i;
-    sum=1;
-    for(i=1; i<=r; i++)
-        sum*=n;
-    return sum;
-}
-int main(){
-    int n, r;
-    scanf("%d %d", &n, &r);
-    printf("%d", power(n, r));
-    return 0;
-}
-```
-
     Answer: The program computes `n` raised to the power `r`, that is `nʳ`.
 
     How it works
@@ -5904,16 +5581,6 @@ int main(){
     - Limitation: `int` overflows quickly — `2³¹` already exceeds the range, so `long long` would be safer.
 
 24. **Find out program output of f(\text{arr}, 2), f(\text{arr}, 3), f(\text{arr}, 5), f(\text{arr}, 8). \text{arr}[] = [0, 1, 1, 0, 1, 1, 0, 1]** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861-862 (ET: N/A)]*
-```c
-int f(int *arr, int arrSize) {
-    int r = 0;
-    for (int i = 0; i < arrSize; ++i) {
-        r = r ^ *(arr + i);
-    }
-    return r;
-}
-```
-
 ```c
 int f(int *arr, int arrSize) {
     int r = 0;
@@ -6188,23 +5855,6 @@ int main(){
 }
 ```
 
-```c
-#include<stdio.h>
-int main(){
-    int i=0, j=5, x=0, count=0;
-    while(j>i){
-        if(i==7)
-            break;
-        x=x+i+count;
-        count=count+2;
-        i++;
-    }
-    printf("i=%d, count=%d", i, count);
-    printf("j=%d, x=%d", i, x);
-    return 0;
-}
-```
-
     Answer: Output is `i=5, count=10j=5, x=30`.
 
     Step-by-step trace
@@ -6225,20 +5875,6 @@ int main(){
     - Also, neither `printf` has a newline, so the two lines run together as one.
 
 30. **Find out the output of the following program.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
-```c
-#include<stdlib.h>
-#include<string.h>
-int main(){
-    int i=0, length;
-    char string[] = "Hello\0 World!!";
-    length = strlen(string);
-    char*s = string;
-    for(i=0; i<length; ++i)
-        printf("%c", *++s);
-    return 0;
-}
-```
-
 ```c
 #include<stdlib.h>
 #include<string.h>
@@ -6756,12 +6392,6 @@ For(i=100; i<=0; --i)
     Printf("%d",i);
 ```
 
-```c
-Unsigned inti
-For(i=100; i<=0; --i)
-    Printf("%d",i);
-```
-
     Answer: The code has both syntax errors and a logic error.
 
     Syntax errors
@@ -6791,15 +6421,6 @@ For(i=100; i<=0; --i)
     - This prints 100 down to 1.
 
 37. **What is the output of following code?** *[Bangladesh Competition Commission Programmer 2019 compact it 1062 (ET: DU)]*
-```c
-#include<stdio.h>
-void main () {
-    char *f [] = {"Ronaldo", "Messi", "Zidan", "Maradona"}, str[20];
-    printf("%s\n", f[1]+2);
-    printf("%s", f[2]+1);
-}
-```
-
 ```c
 #include<stdio.h>
 void main () {
@@ -6894,17 +6515,6 @@ void main() {
 }
 ```
 
-```c
-#include <stdio.h>
-#define x 9+2/4*3-2*4+(5-4)*3
-void main() {
-    int i,y;
-    y=6+3*3/5;
-    i=x*x+y;
-    printf("%d",i);
-}
-```
-
     Answer: Output is `30`.
 
     Step 1 - value of y
@@ -6927,18 +6537,6 @@ void main() {
     - The lesson: a macro must be written as `#define x (9+2/4*3-2*4+(5-4)*3)`. With the parentheses, `x*x` would correctly be `(-2)*(-2) = 4` and `i` would be `11` instead.
 
 40. **What is the output of the following program?** *[NPCBL Junior Technical Engineer 2019 compact it 1148 (ET: BUET)]*
-```c
-#define x 9+2/4*3-2*4+(5-4)*3
-int main() {
-    int i;
-    int y;
-    y=6+3*3/5;
-    i=x*x+y;
-    printf("%d",i);
-    return 0;
-}
-```
-
 ```c
 #define x 9+2/4*3-2*4+(5-4)*3
 int main() {
@@ -6997,16 +6595,6 @@ while(i!=n) {
     - Had the condition been `i != 5`, the `continue` at `i == 3` would have skipped the `i++` as well and caused an infinite loop. That is the classic danger of `continue` inside a `while` loop.
 
 42. **Find the output of the following code:** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1160-1161 (ET: BUET)]*
-```c
-int i=0; int n=3;
-while(i!=n) {
-    if(i==3)
-        continue;
-    printf("%d", i);
-    i++;
-}
-```
-
 ```c
 int i=0; int n=3;
 while(i!=n) {
@@ -7227,16 +6815,6 @@ int main() {
 }
 ```
 
-```c
-int main() {
-    int a=5, b=2, c=1;
-    if (a&&b>c)
-        printf("Bangladesh");
-    else
-        break;
-}
-```
-
     Answer: The program does not compile. There is no output.
 
     Error
@@ -7331,16 +6909,6 @@ int main() {
    - Time complexity `O(2ⁿ)` because `F(3)` and lower are recomputed many times. Memoization brings this down to `O(n)`.
 
 47. **What will be the output of following program?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190 (ET: N/A)]*
-```c
-#include <stdio.h>
-int main() {
-    int i=-1, j=-1, k=0, l=2, m;
-    m= i++ && j++ && k++ || l++;
-    printf("%d %d %d %d %d", i, j, k, l, m);
-    return 0;
-}
-```
-
 ```c
 #include <stdio.h>
 int main() {
@@ -7481,16 +7049,6 @@ int main() {
 }
 ```
 
-```cpp
-#include<stdio.h>
-int main() {
-    int i=1,j=1,k=1;
-    cout<<++i || ++j && ++k;
-    cout<<i<<j<<k;
-    return 0;
-}
-```
-
     Answer: The program does not compile as written.
 
     Compilation error
@@ -7508,13 +7066,6 @@ int main() {
     - A second subtlety: without parentheses, `cout << ++i || ...` would actually parse as `(cout << ++i) || ...` because `<<` binds tighter than `||`. That is why the parentheses matter.
 
 51. **Find the mistake in the following program and write it correct form.** *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
-```c
-unsigned int i;
-for(i=100; i<=0; --i)
-printf("%d",i);
-return 0;
-```
-
 ```c
 unsigned int i;
 for(i=100; i<=0; --i)
@@ -7546,17 +7097,6 @@ return 0;
     - If counting down to 0 inclusive is required, use a signed `int` with the condition `i >= 0`.
 
 52. **Find the output of a program.** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
-```c
-#include<stdio.h>
-#define N 7
-void main() {
-    char str[] = "abpqx";
-    for(int i=0; i<N-2; i++)
-        if(i%2) printf("%d ", str[i]++);
-        else printf("%d ", str[i]--);
-}
-```
-
 ```c
 #include<stdio.h>
 #define N 7
@@ -7837,8 +7377,6 @@ int main() {
 1. **(a) Microprocessor এবং Microcontroller এর মধ্যে পার্থক্য লিখুন।**
    (b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-(b) কোন প্রোগ্রামিং ভাষাকে 'C' programming language বলা হয়? একটি ছোট প্রোগ্রাম লিখুন, যা recursive function ব্যবহার করে ডিসপ্লেতে ৫ এর ফ্যাক্টোরিয়াল গণনা করবে। *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
    Answer:
 
    (a) Microprocessor vs Microcontroller
@@ -7944,13 +7482,6 @@ for(int i=1, i<n; i++)
             X=X+1
 ```
 
-```c
-for(int i=1, i<n; i++)
-    for(int j=0 ; j<i ; j ++)
-        For( int k =0; k<i ; k++)
-            X=X+1
-```
-
    Answer: The three nested loops increment `X` once for every combination, so `X` grows by `i × i` for each value of `i`. The recursive version replaces each loop with a function that calls itself.
 
    ```c
@@ -8005,22 +7536,6 @@ int main() {
 }
 ```
 
-```c
-#include <stdio.h>
-void fun(int x){
-    if(x<0) {
-        return;
-    }
-    printf("%d\n",x--);
-    fun(--x);
-    printf("%d\n",x);
-}
-int main() {
-    fun(5);
-    return 0;
-}
-```
-
    Answer: Output is
 
    ```
@@ -8045,20 +7560,6 @@ int main() {
    - The two key points: `printf("%d", x--)` prints the value BEFORE decrementing, and each recursive call has its own separate copy of `x`.
 
 6. **Find the output of following program:**
-```c
-int F(n) {
-    if n == 0
-    return 0;
-    if n == 1
-    return 1;
-    return F(n-2)+F(n-1);
-}
-int main() {
-    result F(5);
-}
-```
-*[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 522 (ET: MIST)]*
-
 ```c
 int F(n) {
     if n == 0
@@ -8257,7 +7758,7 @@ Answer:
 
 12. **When a function is called more than one time that is called?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
-Answer: When a function calls itself repeatedly, it is called **recursion**, and such a function is a recursive function.
+Answer: When a function calls itself repeatedly, it is called recursion, and such a function is a recursive function.
 
     - If the question means a function invoked several times from different places in a program, that is simply reusability — the main reason functions exist.
     - Two forms of recursion: direct recursion, where a function calls itself; and indirect recursion, where function A calls B and B calls A back.
@@ -8702,22 +8203,6 @@ Answer: Recursion is the process where a function calls itself to solve a smalle
     - Disadvantage: each call consumes a stack frame, so very large `n` risks a stack overflow. An iterative loop avoids that.
 
 26. **Given an integer number the following C program finds the sum of the digits of the number using recursion. You need to complete the recursive function in the following program. So that it does the intended task.** *[BTCL Assistant Manager (Technical) 2021 compact it 764 (ET: BUET)]*
-```c
-#include<stdio.h>
-int someDigits(int num) {
-    if(num==0)
-        return 0;
-    else
-        return num%10+sumDigits(num/10);
-}
-int main() {
-    int n;
-    scanf("%d",&n);
-    printf("%d", sumDigits(n));
-    return 0;
-}
-```
-
 ```c
 #include<stdio.h>
 int someDigits(int num) {
@@ -9763,12 +9248,6 @@ Answer: The condition checks whether `ch` is a vowel. The `::` in the printed qu
    d. The Size of the character variable in C is \_\_\_\_\_?
    e. In Java what is true about private constructor?
 
-a. Polymorphism refers to \_\_\_\_\_\_\_?
-   b. What is the simplest method to prove that a graph is bipartite?
-   c. In C what is the correct syntax to a send a 3- dimension array as a parameter?
-   d. The Size of the character variable in C is \_\_\_\_\_?
-   e. In Java what is true about private constructor?
-
    Answer:
 
    (a) Polymorphism refers to the ability of one interface or name to take many forms — a single function name or operator behaving differently depending on the object or the arguments. In Greek it literally means "many forms".
@@ -9783,7 +9262,7 @@ a. Polymorphism refers to \_\_\_\_\_\_\_?
    ```
    - The first dimension may be left empty because the array decays into a pointer; the remaining dimensions are needed so the compiler can compute the address arithmetic.
 
-   (d) The size of a `char` variable in C is **1 byte** (8 bits). This is fixed by the standard — `sizeof(char)` is always exactly 1. Its range is −128 to 127 for `signed char` and 0 to 255 for `unsigned char`.
+   (d) The size of a `char` variable in C is 1 byte (8 bits). This is fixed by the standard — `sizeof(char)` is always exactly 1. Its range is −128 to 127 for `signed char` and 0 to 255 for `unsigned char`.
 
    (e) A private constructor in Java means the class cannot be instantiated from outside itself. Consequences:
    - `new ClassName()` from another class causes a compile error.
@@ -9922,7 +9401,7 @@ Answer: The options were not printed with the question, so the standard C operat
     | 12 | `=` `+=` `-=` and other assignments | Right to left |
     | 13 | `,` | Left to right |
 
-    Common memory aid: **BODMAS extended** — brackets, unary, multiplicative, additive, shift, relational, equality, bitwise, logical, conditional, assignment, comma.
+    Common memory aid: BODMAS extended — brackets, unary, multiplicative, additive, shift, relational, equality, bitwise, logical, conditional, assignment, comma.
 
     - Example: `a = 2 + 3 * 4` gives 14, not 20, because `*` outranks `+`.
     - Example: `a && b || c` is `(a && b) || c`, because `&&` outranks `||`.
@@ -10535,12 +10014,6 @@ Answer:
 | Summation value: | 1 7 -1 5 -7 |  |
 |  | 6 |  |
 
-| Length: | Input | Output |
-|---|---|---|
-| Array | 5 | {1,5}, {7,-1} |
-| Summation value: | 1 7 -1 5 -7 |  |
-|  | 6 |  |
-
     Answer:
 
     Pseudocode — brute force, `O(n²)`
@@ -10969,9 +10442,6 @@ Answer: An uppercase letter is 32 less than its lowercase counterpart in ASCII.
    Sample Input: 192.168.0.0
    Sample Output: Class C
 
-Sample Input: 192.168.0.0
-   Sample Output: Class C
-
    Answer: The class is decided entirely by the FIRST octet.
 
    | Class | First octet range | Purpose |
@@ -11101,11 +10571,6 @@ Answer: A palindrome number reads the same forwards and backwards, such as 121, 
 | str1=x str2=x^x | Yes |
 | str1=x str2=x^2 | No |
 
-| Input | Output |
-|---|---|
-| str1=x str2=x^x | Yes |
-| str1=x str2=x^2 | No |
-
     Answer: From the sample data, `str2` is a "superscript" of `str1` only when `str2` has the exact form `str1 ^ str1` — that is, the base and the exponent are both `str1`.
 
     - `str1 = "x"`, `str2 = "x^x"` → base `x` and exponent `x` both equal `str1` → Yes.
@@ -11192,7 +10657,7 @@ Answer:
       r       2
    ```
 
-   - This is the **counting / hashing** technique: the character itself is used as the array index, so `freq['a']` is `freq[97]`. One pass over the string is enough → **O(n)** time and **O(1)** extra space (a fixed 256-slot table).
+   - This is the counting / hashing technique: the character itself is used as the array index, so `freq['a']` is `freq[97]`. One pass over the string is enough → O(n) time and O(1) extra space (a fixed 256-slot table).
    - The cast `(unsigned char)` matters. `char` is signed on most compilers, so a byte above 127 becomes negative and `freq[-56]++` writes outside the array — undefined behaviour.
    - Printing in index order gives the characters sorted alphabetically for free.
    - To make the count case-insensitive, fold the case first with `tolower(str[i])` from `<ctype.h>`.
@@ -11226,10 +10691,10 @@ Answer:
    }
    ```
 
-   - **Formula:** `1³ + 2³ + … + n³ = [n(n+1)/2]²`
-   - Notice that this is exactly the **square of the sum of the first n natural numbers**, i.e. `(1+2+…+n)²`.
-   - n = 4 → 1 + 8 + 27 + 64 = **100**, and [4×5/2]² = 10² = 100 ✓
-   - The formula answers in **O(1)** while the loop needs **O(n)**.
+   - Formula: `1³ + 2³ + … + n³ = [n(n+1)/2]²`
+   - Notice that this is exactly the square of the sum of the first n natural numbers, i.e. `(1+2+…+n)²`.
+   - n = 4 → 1 + 8 + 27 + 64 = 100, and [4×5/2]² = 10² = 100 ✓
+   - The formula answers in O(1) while the loop needs O(n).
    - Divide before squaring (`n(n+1)/2` first) to keep the intermediate value small; `n(n+1)` is always even so the division is exact and no precision is lost.
 
 2. **Geometric Progression (GP) — find the sum of a geometric series using its closed-form formula.** *[Huo Academy Coding Practice Set habib collection 28 (ET: N/A)]*
@@ -11263,10 +10728,10 @@ Answer:
    }
    ```
 
-   - A **GP** multiplies by a fixed ratio each step: `a, ar, ar², ar³, …`
-   - **Formula:** `Sₙ = a(rⁿ − 1) / (r − 1)` for r ≠ 1, and `Sₙ = a·n` when r = 1.
-   - a = 2, r = 3, n = 4 → 2 + 6 + 18 + 54 = **80**, and 2(81−1)/(3−1) = 160/2 = 80 ✓
-   - **Infinite GP:** when |r| < 1 the series converges to `S∞ = a / (1 − r)`.
+   - A GP multiplies by a fixed ratio each step: `a, ar, ar², ar³, …`
+   - Formula: `Sₙ = a(rⁿ − 1) / (r − 1)` for r ≠ 1, and `Sₙ = a·n` when r = 1.
+   - a = 2, r = 3, n = 4 → 2 + 6 + 18 + 54 = 80, and 2(81−1)/(3−1) = 160/2 = 80 ✓
+   - Infinite GP: when |r| < 1 the series converges to `S∞ = a / (1 − r)`.
    - The `r == 1.0` guard is essential — without it the program divides by zero. This is the case examiners look for.
    - Compile with `-lm` on Linux/Mac because `pow()` lives in the math library.
 
@@ -11299,10 +10764,10 @@ Answer:
    }
    ```
 
-   - An **AP** adds a fixed difference each step: `a, a+d, a+2d, a+3d, …`
-   - **nth term:** `aₙ = a + (n−1)d`
-   - **Sum:** `Sₙ = n/2 × [2a + (n−1)d]`, which can also be written `Sₙ = n/2 × (first term + last term)`.
-   - a = 3, d = 2, n = 5 → 3 + 5 + 7 + 9 + 11 = **35**, and 5/2 × (3 + 11) = 2.5 × 14 = 35 ✓
+   - An AP adds a fixed difference each step: `a, a+d, a+2d, a+3d, …`
+   - nth term: `aₙ = a + (n−1)d`
+   - Sum: `Sₙ = n/2 × [2a + (n−1)d]`, which can also be written `Sₙ = n/2 × (first term + last term)`.
+   - a = 3, d = 2, n = 5 → 3 + 5 + 7 + 9 + 11 = 35, and 5/2 × (3 + 11) = 2.5 × 14 = 35 ✓
    - Write `n / 2.0` and not `n / 2`. With two `int` operands C truncates, so n = 5 would give 2 instead of 2.5 and the answer would be wrong.
    - The familiar `1 + 2 + … + n = n(n+1)/2` is just this formula with a = 1 and d = 1.
 
@@ -11330,9 +10795,9 @@ Answer:
    }
    ```
 
-   - There is **no closed-form formula** for this series, so it must be computed term by term.
-   - The efficient trick is to **carry the factorial forward** instead of recomputing it: since `i! = (i−1)! × i`, one multiplication per term is enough. The whole program is **O(n)**. Calling a `factorial()` function inside the loop would make it **O(n²)**.
-   - n = 5 → 1 + 2 + 6 + 24 + 120 = **153**
+   - There is no closed-form formula for this series, so it must be computed term by term.
+   - The efficient trick is to carry the factorial forward instead of recomputing it: since `i! = (i−1)! × i`, one multiplication per term is enough. The whole program is O(n). Calling a `factorial()` function inside the loop would make it O(n²).
+   - n = 5 → 1 + 2 + 6 + 24 + 120 = 153
    - Factorials overflow fast. `unsigned long long` (64-bit) holds up to 20!; plain `int` overflows already at 13!. Beyond that, big-integer arithmetic with an array of digits is needed.
 
 5. **Fibonacci Series Sum — find the sum of the first n terms of the Fibonacci series.** *[Huo Academy Coding Practice Set habib collection 31 (ET: N/A)]*
@@ -11362,10 +10827,10 @@ Answer:
    ```
 
    - The Fibonacci series is `1, 1, 2, 3, 5, 8, 13, …` where each term is the sum of the previous two: `F(n) = F(n−1) + F(n−2)`.
-   - **Identity:** `F(1) + F(2) + … + F(n) = F(n+2) − 1`
-   - n = 5 → 1 + 1 + 2 + 3 + 5 = **12**, and F(7) − 1 = 13 − 1 = 12 ✓
-   - Only two variables are kept instead of a whole array, so the program uses **O(n)** time and **O(1)** space.
-   - Never compute this with a naive recursive `fib()` inside a loop — that is exponential, **O(2ⁿ)**, because the same subproblems are recomputed over and over.
+   - Identity: `F(1) + F(2) + … + F(n) = F(n+2) − 1`
+   - n = 5 → 1 + 1 + 2 + 3 + 5 = 12, and F(7) − 1 = 13 − 1 = 12 ✓
+   - Only two variables are kept instead of a whole array, so the program uses O(n) time and O(1) space.
+   - Never compute this with a naive recursive `fib()` inside a loop — that is exponential, O(2ⁿ), because the same subproblems are recomputed over and over.
 
 ## File Handling (4)
 
