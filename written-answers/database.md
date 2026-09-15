@@ -9530,6 +9530,166 @@ Answer:
       - Once a transaction successfully commits, its changes are permanently written to non-volatile secondary storage and will survive subsequent power outages, hardware failures, or system crashes.
       - Managed by: Recovery Manager using write-ahead logging (WAL) and checkpointing.
 
+## Relational Data Model & ER Relationships (14)
+
+1. **What are the different types of relationships in a relational database? Explain each with examples.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+   Answer: A relationship describes how rows of one table relate to rows of another table, based on a shared key.
+
+   | Relationship type | Meaning | Example |
+   |---|---|---|
+   | One-to-One (1:1) | One row in A relates to exactly one row in B | A person and their passport |
+   | One-to-Many (1:N) | One row in A relates to many rows in B | One department has many employees |
+   | Many-to-Many (M:N) | Many rows in A relate to many rows in B, via a junction table | Students and courses (a student takes many courses, a course has many students) |
+
+   - Many-to-many relationships cannot be stored directly in a relational model; they are implemented with a bridge/junction table holding the foreign keys of both sides.
+
+2. **Discuss about different types of relations in DBMS.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
+
+   Answer: In DBMS, "relation" can refer either to a table itself, or to how two tables connect. Both senses are commonly examined.
+
+   Types of relation (table)
+   - Base relation — an actual stored table.
+   - Derived relation (view) — a virtual table computed from a query on base relations.
+
+   Types of relationship (connection) between relations
+   - One-to-one, one-to-many, many-to-many (as above).
+   - Recursive/unary relationship — a table relates to itself, e.g., an `Employee` table with a `manager_id` referencing another employee.
+
+3. **What is the degree of relation in dbms?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+   Answer: The degree of a relation is the number of attributes (columns) it has.
+
+   - A relation with 4 columns has degree 4.
+   - This is different from cardinality, which is the number of tuples (rows) in the relation.
+   - Example: `Student(roll, name, dept, cgpa)` has degree 4; if it holds 500 rows, its cardinality is 500.
+
+4. **(খ) One-to-one এবং One-to-many রিলেশন উদাহরণসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 614 (ET: N/A)]*
+
+   Answer:
+
+   One-to-one (1:1)
+   - Each row of table A matches exactly one row of table B, and vice versa.
+   - Example: `Person(person_id, name)` and `Passport(passport_id, person_id, passport_no)` — one person has exactly one passport.
+
+   One-to-many (1:N)
+   - One row of table A matches many rows of table B, but each row of B matches only one row of A.
+   - Example: `Department(dept_id, dept_name)` and `Employee(emp_id, name, dept_id)` — one department has many employees, but each employee belongs to only one department.
+
+5. **Weak Entity and strong entity difference with relation.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 660 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Strong entity | Weak entity |
+   |---|---|---|
+   | Primary key | Has its own primary key | Has no primary key of its own |
+   | Existence | Exists independently | Existence depends on a related (owner/identifying) strong entity |
+   | Identification | Identified by its own key | Identified using a partial key plus the owner entity's key |
+   | ER notation | Single rectangle | Double-outlined rectangle |
+   | Example | `Employee(emp_id, name)` | `Dependent(dependent_name, emp_id)` — a dependent cannot exist without the employee it belongs to |
+
+6. **(b) Give example of week and strong entity sets.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 694 (ET: N/A)]*
+
+   Answer:
+
+   - Strong entity set example: `Order(order_id, order_date, total)` — has its own primary key `order_id` and exists independently.
+   - Weak entity set example: `Order_Item(item_no, product, qty)` — `item_no` is only unique WITHIN one order, so `Order_Item` needs `order_id` (from `Order`) combined with `item_no` to be uniquely identified; it cannot exist without a parent `Order`.
+
+7. **(a) What is referential integrity? How do you impose in your database design?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 795 (ET: N/A)]*
+
+   Answer: Referential integrity is the rule that a foreign key value in one table must either be `NULL` or match an existing primary key value in the referenced table — it stops a row from pointing to a parent record that does not exist.
+
+   Enforcing it in design
+   ```sql
+   CREATE TABLE Employee (
+       emp_id INT PRIMARY KEY,
+       dept_id INT,
+       FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+           ON DELETE CASCADE
+           ON UPDATE CASCADE
+   );
+   ```
+   - Declaring the `FOREIGN KEY` constraint makes the DBMS reject any insert/update that references a non-existent `dept_id`.
+   - `ON DELETE`/`ON UPDATE` rules (`CASCADE`, `RESTRICT`, `SET NULL`) decide what happens to dependent rows when the referenced parent row changes or is deleted.
+
+8. **What is a weak entity for data modeling using the entity relationship model find out any weak entity and its identify relationship for the school database? Which of the following table? Student(student_id, student_name, admission_year) Teacher(teacher_id, teacher_name, teacher_joindate) Course(course_id, subject_name, credit)** *[BCC Assistant Programmer 12.02.2021 compact it 814 (ET: BUET)]*
+
+   Answer: None of the three given tables (`Student`, `Teacher`, `Course`) is a weak entity — each already has its own independent primary key (`student_id`, `teacher_id`, `course_id`) and can exist on its own.
+
+   - A weak entity would only appear if the schema had something like `Guardian(guardian_name, phone, student_id)` for a student's guardian — `guardian_name` alone might not be unique, so it needs `student_id` (the identifying/owner entity) combined with it to form a full key. That makes `Guardian` a weak entity, identified through its relationship with `Student`. <!-- verify -->
+
+9. **(c) What is a weak entity set? How the primary key is generated for weak entity set?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 896 (ET: N/A)]*
+
+   Answer: A weak entity set is a set of entities that does not have enough attributes of its own to form a primary key, and so depends on an "owner" (identifying) strong entity set for its existence.
+
+   Generating its key
+   - The weak entity has a partial key (also called a discriminator) — an attribute that is unique only among the entities related to the same owner.
+   - Its full primary key = the owner entity's primary key + the weak entity's partial key.
+   - Example: `Dependent(emp_id, dependent_name)` — `dependent_name` is the partial key, and the full primary key is `(emp_id, dependent_name)`, since two different employees can each have a dependent named "Rahim".
+
+10. **(a) Write down Integrity rules in database.** *[National University Assistant Programmer 2020 compact it 976 (ET: DU)]*
+
+    Answer: The two fundamental integrity rules of the relational model are:
+
+    - Entity Integrity — every table's primary key value must be unique and cannot be `NULL`, so every row can always be uniquely identified.
+    - Referential Integrity — a foreign key value must either be `NULL` or match an existing primary key value in the referenced table, so relationships between tables always stay valid.
+
+    - A third commonly listed rule, Domain Integrity, requires every column's value to come from its defined domain (correct data type, and any `CHECK`/`NOT NULL` restriction).
+
+11. **What is constraints? Why use constraint? Difference between table level Cosntraint and column level Cosntraint.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
+
+    Answer: A constraint is a rule enforced on a table's data by the DBMS itself, to keep the data accurate and consistent.
+
+    Why constraints are used
+    - Prevent invalid data (e.g., a negative salary) from ever being stored.
+    - Enforce relationships between tables (foreign keys).
+    - Guarantee uniqueness where required (primary keys, `UNIQUE`).
+
+    | Point | Column-level constraint | Table-level constraint |
+    |---|---|---|
+    | Where written | Right after the column definition | Separately, usually at the end of the table definition |
+    | Scope | Applies to a single column | Can apply to one or more columns together |
+    | Example | `age INT CHECK (age > 0)` | `CONSTRAINT pk_emp PRIMARY KEY (emp_id, dept_id)` |
+    | Use case | Simple single-column rules | Composite keys, multi-column checks, named constraints |
+
+12. **(ক) Relationship degree কাকে বলে? উহা কত প্রকার ও কি কি? সংক্ষেপে লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1068 (ET: N/A)]*
+
+    Answer: Relationship degree is the number of entity sets participating in a relationship.
+
+    Types
+    - Unary (degree 1) — an entity set relates to itself, e.g., an `Employee` "manages" another `Employee`.
+    - Binary (degree 2) — two entity sets relate to each other, e.g., `Student` "enrolls in" `Course` (the most common case).
+    - Ternary (degree 3) — three entity sets participate together, e.g., `Supplier`-`Part`-`Project` in a single "supplies" relationship.
+    - N-ary (degree n) — a general form with `n` participating entity sets.
+
+13. **(খ) Relational Database Model কী? অন্যান্য মডেলের তুলনায় এর সুবিধা ও অসুবিধা গুলো লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1094-1095 (ET: N/A)]*
+
+    Answer: The relational model organises data into tables (relations) of rows and columns, where relationships between tables are represented using common key values rather than physical links.
+
+    Advantages over other models (hierarchical, network)
+    - Simple, intuitive table structure that is easy to understand and query with SQL.
+    - Data independence — the physical storage can change without affecting how users query the data.
+    - Flexible ad-hoc querying, unlike hierarchical/network models that require navigating fixed paths.
+    - Strong theoretical foundation (relational algebra) supports optimisation and integrity constraints.
+
+    Disadvantages
+    - Can be slower for very deep, complex hierarchical relationships compared to a model built specifically for them.
+    - Requires normalization design effort; a badly designed relational schema can still perform poorly.
+    - Not naturally suited to some modern workloads (huge unstructured or rapidly changing data), which is why NoSQL models emerged.
+
+14. **What is cardinality and modality?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1265-1266 (ET: N/A)]*
+
+    Answer:
+
+    Cardinality
+    - The maximum number of times an instance of one entity can relate to instances of another entity in a relationship — expressed as one (1) or many (N).
+    - Example: in a 1:N relationship between `Department` and `Employee`, the cardinality is "one department to many employees".
+
+    Modality
+    - Whether the relationship is mandatory or optional — the minimum number of times an entity instance must participate (0 or 1).
+    - Modality 0 means participation is optional (an employee might have zero dependents); modality 1 means participation is mandatory (every employee must belong to exactly one department).
+    - Together, cardinality and modality are often written as a pair, e.g., "(0, N)" or "(1, 1)", fully describing a relationship's participation constraints.
+
 ## Indexing & Query Optimization (B-Tree, B+ Tree) (10)
 
 1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
