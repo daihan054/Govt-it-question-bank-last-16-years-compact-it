@@ -6106,6 +6106,166 @@ Answer: The test program below drives the sorting function and checks `two prope
 Answer:
     Penetration Testing (Ethical Hacking / Pen Testing) for a network service is an authorized simulated cyberattack performed on computer systems, network devices, and service ports to identify, safely exploit, and report security vulnerabilities (such as open ports, misconfigurations, and outdated protocols) before malicious attackers can exploit them.
 
+## Software Design Principles (Coupling & Cohesion) (5)
+
+1. **Write concepts of Coupling and Cohesion with Example?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
+
+Answer:
+   - Coupling: how much one module depends on another. Low coupling is desired — a change in one module should rarely break another. Example: a `PaymentService` that talks to a `PaymentGateway` only through a defined interface (loose coupling) instead of reading the gateway's internal variables directly (tight coupling).
+   - Cohesion: how strongly the responsibilities inside one module are related to each other. High cohesion is desired — a module should do one well-defined job. Example: a `MathUtils` class that has only math functions (high cohesion), versus a class that mixes math, file I/O and networking (low cohesion).
+   - Goal of good design: `low coupling, high cohesion` — modules that are internally focused but loosely connected to one another.
+
+2. **Software design table matching.......** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
+
+3. **(ক) Modularization কী? উহার সুবিধা সম্পর্কে লিখুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 602 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Modularization is dividing a software system into separate, independent modules, each handling one specific piece of functionality.
+   Advantages:
+   - Each module can be understood, developed and tested in isolation.
+   - Different modules can be built in parallel by different teams.
+   - Easier to maintain — a fix in one module is less likely to affect others.
+   - Modules can be reused in other projects.
+
+4. **(খ) Software interface কত প্রকার ও কী কী? Interfacing এর ক্ষেত্রে কী কী error পাওয়া যেতে পারে?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Types of software interface:
+   - User Interface: interaction between the software and a human user.
+   - Software Interface: interaction between two software components, e.g. an API.
+   - Hardware Interface: interaction between software and a hardware device, e.g. a device driver.
+   Common interfacing errors:
+   - Interface misuse — calling a function with the wrong parameters or wrong order.
+   - Interface misunderstanding — one side assumes a different data format or unit than the other actually provides.
+   - Timing errors — one module expects data before the other module has produced it.
+
+5. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+
+Answer:
+   - Cluttered screens that show too much information at once and overwhelm the user.
+   - Inconsistent layout, colors and terminology across different screens.
+   - Unclear or unhelpful error messages.
+   - Poor accessibility — small text, low contrast, no keyboard navigation.
+   - Designing for the developer's convenience instead of the end user's actual workflow.
+
+## Software Cost Estimation & Build vs Buy Decisions (4)
+
+1. **If you are CEO of a software company. You need to develop an ERP software from following three options (i) Buy (ii) Build (iii) Open Source Modification** *[NWPGCL Assistant Manager (ICT) 12.01.2024 compact it 292 (ET: BUET)]*
+
+Answer: This is a decision-tree / expected-cost problem — choose the option with the lowest expected cost.
+   Given:
+   - Buy: fixed cost = 50 lac (certain, no probability involved).
+   - Build: 40 lac with 30% chance (easy) OR 50 lac with 70% chance (hard).
+   - Open Source Modification: 30 lac with 20% chance (small) OR 50 lac with 80% chance (large).
+
+   Expected cost = Σ (probability × cost)
+   - Build: $E = 0.30 \times 40 + 0.70 \times 50 = 12 + 35 = 47$ lac
+   - Open Source Modification: $E = 0.20 \times 30 + 0.80 \times 50 = 6 + 40 = 46$ lac
+   - Buy: $E = 50$ lac (no risk, single fixed value)
+
+   Decision: Choose `Open Source Modification` — it has the lowest expected cost (46 lac), slightly better than Build (47 lac) and better than Buy (50 lac). <!-- verify -->
+   - Note for the exam: if the company instead wants a `zero-risk`, guaranteed cost (e.g. a fixed government budget), `Buy` at 50 lac is the safer choice, since Build and Open Source Modification both carry uncertainty about which cost will actually occur.
+
+2. **Given the following values, compute function point when all complexity adjustment factor (CAF) and weighting factors are average.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 492 (ET: N/A)]*
+
+Answer: Function Point (FP) analysis measures software size from its functional components, each weighted by complexity.
+   Given: User Input = 50, User Output = 40, User Inquiries = 35, User Files (ILF) = 6, External Interface (EIF) = 4.
+
+   Standard average complexity weights:
+   | Component | Count | Avg. Weight | Subtotal |
+   |---|---|---|---|
+   | External Input | 50 | 4 | 200 |
+   | External Output | 40 | 5 | 200 |
+   | External Inquiry | 35 | 4 | 140 |
+   | Internal Logical File | 6 | 10 | 60 |
+   | External Interface File | 4 | 7 | 28 |
+
+   Unadjusted Function Points (UFP) = $200 + 200 + 140 + 60 + 28 = 628$
+
+   Since the complexity adjustment factor is average (Value Adjustment Factor $VAF = 1$), the Adjusted Function Points:
+   $$FP = UFP \times VAF = 628 \times 1 = 628$$ <!-- verify -->
+
+3. **Your company earn a contract to develop a system for a government agency. The project team is considering whether to build the system from scratch, or reuse existing partial-experience components, or buy an available software product and modify it to meet the requirement. As analyst you have made a decision tree as a figure.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 459 (ET: BUET)]*
+
+Answer:
+   ```mermaid
+   flowchart TD
+       A[Development Decision] --> B[Build from Scratch]
+       A --> C[Reuse Existing Components]
+       A --> D[Buy & Modify Product]
+       B --> B1[Highest cost & time, full control]
+       C --> C1[Medium cost, some integration risk]
+       D --> D1[Lowest cost & time, less customization]
+   ```
+   - Each branch of the tree is evaluated on estimated cost, time and risk; the analyst attaches a probability and cost to each outcome (as in a Buy/Build/Open-Source cost problem) and picks the branch with the lowest expected cost that still meets the agency's requirements.
+   - `Build` gives full control but the highest cost and risk; `Buy & Modify` is usually fastest and cheapest but may not fit every requirement; `Reuse` sits in between.
+
+4. **Which factors are to be consider as software pricing?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 678 (ET: N/A)]*
+
+Answer:
+   - Development effort/cost (estimated using models like `COCOMO` or `Function Points`).
+   - Maintenance and support cost after delivery.
+   - Market conditions and competitor pricing.
+   - Risk buffer for uncertain or changing requirements.
+   - Licensing model — one-time purchase, subscription, or per-user.
+   - Customer's budget and expected return on investment.
+
+## IT Governance, Audit & Risk Management (4)
+
+1. **Difference between: Policy, Guideline, Procedure; why auditor must focus on control as a system? Explain four types of risks auditor faces, Explain each of theme.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 310 (ET: BIBM)]*
+
+Answer:
+   | Term | Meaning |
+   |---|---|
+   | Policy | A high-level statement of intent, e.g. "All passwords must be changed every 90 days" |
+   | Guideline | A recommended, non-mandatory way to follow a policy |
+   | Procedure | Step-by-step instructions to carry out a policy, e.g. exact steps to reset a password |
+
+   Why an auditor must focus on control as a `system`: individual controls can each look fine on their own but still fail to prevent a fraud or error if they do not work together consistently — the auditor must check that controls interact correctly across the whole process, not just that each one exists.
+
+   Four types of audit risk:
+   - Inherent Risk: the risk that exists in a process before any controls are applied (e.g. cash handling is naturally high-risk).
+   - Control Risk: the risk that an existing control fails to prevent or detect an error.
+   - Detection Risk: the risk that the auditor's own testing fails to catch a material misstatement.
+   - Business Risk: the overall risk to the organization's objectives, from external factors like market or regulatory change.
+
+2. **A bank has association with two different service providers as their payment gateways. The bank hires Mr. X to audit the payment gateway based on risk and threat detection. Which possible scenarios Mr. X will face?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 443 (ET: BIBM)]*
+
+Answer:
+   - Inconsistent security standards between the two providers, creating a weak link.
+   - Data breach or downtime at one provider without a clear failover to the other.
+   - Reconciliation mismatches between transactions recorded by the two gateways.
+   - Compliance gaps — one provider may not fully meet PCI-DSS or Bangladesh Bank guidelines.
+   - Vendor lock-in and unclear SLA (Service Level Agreement) responsibility if a transaction fails between the two. <!-- verify -->
+
+3. **(ক) Software risk কত প্রকার ও কী কী? Risk management process চিত্রের মাধ্যমে বুঝিয়ে লিখুন।** *[Software Assistant Programmer 13.10.2022 compact it 709 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Three types of software risk:
+   - Project risk: threatens the project plan, e.g. schedule slip, budget overrun, staff turnover.
+   - Technical risk: threatens the quality/correctness of the software, e.g. an unproven technology, ambiguous specification.
+   - Business risk: threatens the viability of the software in the market, e.g. building a product nobody wants.
+
+   ```mermaid
+   flowchart LR
+       A[Risk Identification] --> B[Risk Analysis]
+       B --> C[Risk Prioritization]
+       C --> D[Risk Mitigation Planning]
+       D --> E[Risk Monitoring]
+       E --> A
+   ```
+   - The process is a continuous loop: risks are identified, analyzed for probability/impact, prioritized, mitigated, and then monitored throughout the project, feeding new risks back into identification.
+
+4. **Draw risk analysis digram.** *[NESCO Manager (Software) 2018 compact it 1210 (ET: N/A)]*
+
+Answer:
+   ```mermaid
+   flowchart LR
+       A[Identify Risk] --> B[Estimate Probability & Impact]
+       B --> C[Prioritize Risks]
+       C --> D[Plan Mitigation]
+       D --> E[Monitor & Review]
+       E --> A
+   ```
+   - Risks are first listed, then each one is scored by likelihood and impact, ranked, and given a mitigation plan; the cycle repeats as the project progresses since new risks can appear at any stage.
+
 ## Data Flow Diagrams (DFD) (2)
 
 1. **(ক) Data Flow diagram (DFD) কী? DFD- তে কী কী Symbols ব্যবহার করা হয়?** *[Software Assistant Programmer 13.10.2022 compact it 707 (ET: N/A)]*
