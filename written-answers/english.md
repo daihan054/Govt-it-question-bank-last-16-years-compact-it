@@ -30,8 +30,6 @@ Answer: Sustainable banking refers to integrating environmental, social, and gov
 2. **Write an essay on “Digital Citizenship on Social Media” using the following hints:** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1463 (ET: N/A)], [ENGLISH, Subject Code: 102, Marks: 40 - Passport Office Assistant Programmer 2024 (ET: N/A)]*
 *[Introduction- Concept of Digital citizenship- Benefits of social media- Challenges and risks- Online ethics and responsible behavior- Combating fake news and misinformation- Role of digital literacy and awareness- Conclusion]*
 
-*[Introduction- Concept of Digital citizenship- Benefits of social media- Challenges and risks- Online ethics and responsible behavior- Combating fake news and misinformation- Role of digital literacy and awareness- Conclusion]*
-
    Answer:
    Introduction: As social media platforms become central to human interaction, the concept of digital citizenship has gained paramount importance.
    Concept of Digital Citizenship: Digital citizenship refers to the responsible, ethical, and safe use of digital technology and internet platforms.
@@ -66,8 +64,6 @@ Answer:
 
 6. **Write an essay on 'The Internet' using the hints given below:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
    *[Hints: What internet is- Great Communication tool-Various uses-Storehouse of information-Impact of the internet on our daily life- Social impact- Changing life- Uses and abuses- Conclusion.]*
-
-*[Hints: What internet is- Great Communication tool-Various uses-Storehouse of information-Impact of the internet on our daily life- Social impact- Changing life- Uses and abuses- Conclusion.]*
 
    Answer:
    What Internet Is: The Internet is a global network of interconnected computers communicating via standardized protocols (TCP/IP).
@@ -366,17 +362,6 @@ Answer: Information and Communication Technology (ICT) has fundamentally revolut
 (i) The man disturbed me and said “I am sorry _____ disturbing you”. (Use a preposition)
 (j) The baby is crying. (Make it passive)
 
-(a) Rangu Mia saw Alta Begum and Bedena Begum (discuss) _____ a funny thing. [Use the right form of verb in bracket]
-(b) It was long gap since they (meet) _____ each other. [Use the right form of verb in bracket]
-(c) He uttered something in his speech and it was disappointing. (Make it complex)
-(d) Why do you prefer bus journey to train journey.? (Use positive degree)
-(e) He is going to cut his hair. (Correct the sentence)
-(f) There is a girl's high school at my village. (Correct the sentence)
-(g) Make a meaningful sentence with “Give vent to”
-(h) Make a meaningful sentence with “By leaps and bounds”
-(i) The man disturbed me and said “I am sorry _____ disturbing you”. (Use a preposition)
-(j) The baby is crying. (Make it passive)
-
    Answer:
    - (a) discussing
    - (b) had met
@@ -393,9 +378,6 @@ Answer: Information and Communication Technology (ICT) has fundamentally revolut
 i. "He doesn't know anything about computers."
 ii. The data were collected and it were analyzed carefully.
 
-i. "He doesn't know anything about computers."
-ii. The data were collected and it were analyzed carefully.
-
    Answer:
    - i. He doesn't know anything about computers. (The sentence is already correct)
    - ii. The data were collected and they were analyzed carefully. (Alternatively: "The data was collected and it was analyzed carefully.")
@@ -406,17 +388,6 @@ Answer: through
 
 4. **Rewrite the following sentences using the instruction given in the brackets:** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * (a) She explained the matter. [Correct the sentence]
- * (b) Between the mostly popular drinks are coffee and tea. [Correct the sentence]
- * (c) I like (cook). [Use the right form of the verb]
- * (d) He recommended that she (write) the letter. [Use the right form of the verb in bracket]
- * (e) He is endowed _____ talents. Fill in the gap with apre position]
- * (f) She reached just _____ time. [Fill in the gap with a preposition]
- * (g) He made me do the work. [Make it passive]
- * (h) It is said that she is a spy. [Make it active]
- * (i) He said to me, "Please wait here till I return". [Turn it into indirect speech]
- * (ii) She did not listen to me. [Rewrite by using the idiom "turn a deaf ear"]
-
-* (a) She explained the matter. [Correct the sentence]
  * (b) Between the mostly popular drinks are coffee and tea. [Correct the sentence]
  * (c) I like (cook). [Use the right form of the verb]
  * (d) He recommended that she (write) the letter. [Use the right form of the verb in bracket]
@@ -441,17 +412,6 @@ Answer: through
 
 5. **Rewrite the following sentences and use the idiom as directed:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
  * (a) The cost of all these articles have risen. [Correct the sentence]
- * (b) The film is definitely worth to see. [Correct the sentence]
- * (c) Light alternates-darkness. [Fill in the blank with an appropriate preposition] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (d) What he says is based-truth. [Fill in the gap with an appropriate preposition] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (e) I (to know) him for a long time. [Use the right form of the verb] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (f) When he (takes) his food normally? [Use the correct form of the verb] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (g) The doctor advised me to take complete rest. [Make it passive] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (h) Our goal has been achieved. [Make it active] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (i) Amzad said to me, "I shall be grateful if you help me." [Turn into indirect speech] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
- * (j) Make a sentence with the idiom: 'in respect of' *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
-
-* (a) The cost of all these articles have risen. [Correct the sentence]
  * (b) The film is definitely worth to see. [Correct the sentence]
  * (c) Light alternates-darkness. [Fill in the blank with an appropriate preposition] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
  * (d) What he says is based-truth. [Fill in the gap with an appropriate preposition] *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1349 (ET: N/A)]*
@@ -629,9 +589,7 @@ Answer: import
 1. **Translate the following passage into English:**
 "এক কুখ্যাত চোর একটি আঙুর ক্ষেতের পাশ দিয়ে যাচ্ছিল। উঁচুতে ঝুলানো আঙুর দেখে সে তা খাওয়ার চেষ্টা করল, কিন্তু বারবার চেষ্টা করেও ব্যর্থ হলো। অবশেষে সে হতাশ হয়ে চলে গেল। যাওয়ার সময় বলল, আঙুরগুলো আসলেও টক।" *[Officer (IT) 31 Jul 2026 bscs 01 (ET: N/A)]*
 
-করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
-
-    Answer: Once the coronavirus vaccine enters the market, the government intends to procure it for everyone in the country. It is estimated that 17,000 crore taka will be needed to procure vaccines for all. The government has decided to seek assistance from development partners to raise these funds. It is estimated that two doses of vaccine may be required per person, costing around $10 to $12 or approximately 1,000 taka. According to data from the Bangladesh Bureau of Statistics (BBS), the country's population now stands at 16.5 crore (165 million). Accordingly, a total of 17,200 crore taka will be required. Sources have indicated that this preliminary calculation was formulated by the Ministry of Health. Assistance from development partners is being sought keeping this financial requirement in view.
+    Answer: A notorious thief was passing by a vineyard. Seeing the grapes hanging high up, he tried to eat them, but failed despite repeated attempts. At last, he went away in disappointment, saying as he left that the grapes were really sour.
 
 2. **Translation English to Bangla:** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
@@ -641,9 +599,6 @@ Answer:
 
 3. **Bengali to English:** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
    * **(a)** শনিবার হতে সে অফিসে আসছে না।
-   * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন
-
-* **(a)** শনিবার হতে সে অফিসে আসছে না।
    * **(b)** আপনার ব্যাংক একাউন্ট এর স্থিতি জানার জন্য মোবাইল ব্যাংকিং এপ্লিকেশন এ লগইন করুন
 
    Answer:
@@ -656,16 +611,12 @@ Answer: ধরিত্রী দিবস অংশগ্রহণমূলক 
 
 5. **Translation Bangla to English** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)], [NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 660 (ET: N/A)], [Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)], [Sonali Bank Ltd. Officer IT 2021 compact it 910 (ET: N/A)], [Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)], [RAKUB Network System Engineer (PO) 10.10.2021 compact it 844 (ET: N/A)], [RAKUB Programmer (PO) 12.10.2021 compact it 854 (ET: N/A)], [RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 858 (ET: N/A)], [BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 875 (ET: BUET)], [BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)], [Janata Bank Assistant System Administrator 2021 compact it 940 (ET: N/A)]*
 
-**যুব উন্নয়ন বিষয়ক......** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
-
-   Answer:
-   - Bangla: যুব সমাজ যেকোনো দেশের সবচেয়ে শক্তিশালী চালিকাশক্তি। উপযুক্ত কারিগরি প্রশিক্ষণ ও কর্মসংস্থানের সুযোগ সৃষ্টির মাধ্যমে তাদেরকে জাতীয় উন্নয়নের মূল স্রোতে সম্পৃক্ত করা সম্ভব।
-   - English: The youth represent the most potent driving force of any nation. By creating opportunities for appropriate technical training and employment, it is possible to integrate them into the mainstream of national development.
+   Answer: The exact passage was not printed with the question, so a representative sentence is translated to show the method.
+   - Bangla: তথ্যপ্রযুক্তির যথাযথ ব্যবহার শিক্ষার মান উন্নয়নে গুরুত্বপূর্ণ ভূমিকা পালন করে।
+   - English: The proper use of information technology plays a vital role in improving the quality of education.
 
 6. **Bengali to English Translation:** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 312 (ET: BIBM)]*
    > পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
-
-> পরীক্ষায় ভালো করতে হলে অবশ্যই আত্মবিশ্বাস রাখতে হবে। মনে এ বিশ্বাস রাখবেন যে, আমি ভালোভাবে সব প্রশ্নের উত্তর দিতে পারব বা আমার পরীক্ষাটা অবশ্যই ভালো হবে। একজন শিক্ষার্থীর মনেই যদি আত্মবিশ্বাস না থাকে বা আত্মবিশ্বাস কম থাকে, তাহলে পরীক্ষা নিয়ে তার মনে আগেই দুর্বলতা তৈরী হয়ে যায়। এর ফলে পড়ায় মন বসে না, মনোযোগও বাড়ে না, প্রস্তুতিও ভালো হয়না। তাই মনোযোগ বাড়াতে দরকার আত্মবিশ্বাস, যেদিকে অবশ্যই খেয়াল রাখতে হবে।
 
    Answer: To perform well in examinations, one must possess self-confidence. You must hold the belief in your mind that "I will be able to answer all questions properly" or "My examination will definitely go well." If a student lacks self-confidence or has low confidence, a sense of weakness regarding the examination develops beforehand in their mind. Consequently, they lose focus on their studies, concentration does not improve, and preparation remains inadequate. Therefore, self-confidence is essential to enhance concentration, which must definitely be kept in mind.
 
@@ -678,14 +629,10 @@ Answer:
 8. **Translate the following passage into English:** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 “কথায় আছে, সময়ের এক ফোঁড় অসময়ের দশ ফোঁড়। অথচ আমরা আজ করব কাল করব বলে কাজ ফেলে রেখে ভাগ্যের দোহাই দিতে পছন্দ করি। আকাশকুসুম কল্পনা করে জীবনে রাতারাতি সফল হওয়া যায় না। যে জাতি যত বেশি পরিশ্রমী, সে জাতি তত বেশি উন্নত। তাই কথায় কথায় অজুহাত না দেখিয়ে আমাদের এখনই কাজে নেমে পড়া উচিত।”
 
-করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
-
-    Answer: Once the coronavirus vaccine enters the market, the government intends to procure it for everyone in the country. It is estimated that 17,000 crore taka will be needed to procure vaccines for all. The government has decided to seek assistance from development partners to raise these funds. It is estimated that two doses of vaccine may be required per person, costing around $10 to $12 or approximately 1,000 taka. According to data from the Bangladesh Bureau of Statistics (BBS), the country's population now stands at 16.5 crore (165 million). Accordingly, a total of 17,200 crore taka will be required. Sources have indicated that this preliminary calculation was formulated by the Ministry of Health. Assistance from development partners is being sought keeping this financial requirement in view.
+    Answer: There is a saying, a stitch in time saves nine. Yet we prefer to put off our work for tomorrow and blame it on fate. One cannot achieve overnight success in life by building castles in the air. The more hardworking a nation is, the more developed it becomes. Therefore, instead of making excuses at every turn, we should get down to work right now.
 
 9. **Translation (Bangla to English)**
     **যুব উন্নয়ন বিষয়ক......** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
-
-**যুব উন্নয়ন বিষয়ক......** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
 
    Answer:
    - Bangla: যুব সমাজ যেকোনো দেশের সবচেয়ে শক্তিশালী চালিকাশক্তি। উপযুক্ত কারিগরি প্রশিক্ষণ ও কর্মসংস্থানের সুযোগ সৃষ্টির মাধ্যমে তাদেরকে জাতীয় উন্নয়নের মূল স্রোতে সম্পৃক্ত করা সম্ভব।
@@ -745,8 +692,6 @@ Answer:
     - (৪) তিনি আজীবন নিপীড়িত মানুষের মুক্তির জন্য সংগ্রাম করেছেন। -> Throughout his life, he struggled for the emancipation of oppressed people.
 
 18. **Translate the following passage into English.** *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
-করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
-
 করোনার টিকা বাজারে এলে দেশের সবার জন্য তা সংগ্রহ করতে চায় সরকার। ধারণা করা হচ্ছে, সবার জন্য টিকা সংগ্রহে ১৭ হাজার কোটি টাকার প্রয়োজন হবে। এই অর্থ সংগ্রহে উন্নয়ন সহযোগীদের সহায়তা চাওয়ার সিদ্ধান্ত নিয়েছে সরকার। ধারণা করা হচ্ছে, জনপ্রতি দুই ডোজ টিকার প্রয়োজন হতে পারে। এর দাম পড়তে পারে ১০ থেকে ১২ ডলার বা কমবেশি এক হাজার টাকা। পরিসংখ্যান ব্যুরো (বিবিএস) তথ্য অনুযায়ী দেশের জনসংখ্যা এখন ১৬ কোটি ৫০ লাখ। সে হিসাবে মোট ১৭ হাজার ২০০ কোটি টাকার প্রয়োজন হবে। স্বাস্থ্য মন্ত্রণালয় থেকে প্রাথমিক এই হিসাব করা হয়েছে বলে ইতোমধ্যে সূত্র জানিয়েছে। এই অর্থের চাহিদা মাথায় রেখেই উন্নয়ন সহযোগীদের সহায়তা চাওয়া হচ্ছে।
 
     Answer: Once the coronavirus vaccine enters the market, the government intends to procure it for everyone in the country. It is estimated that 17,000 crore taka will be needed to procure vaccines for all. The government has decided to seek assistance from development partners to raise these funds. It is estimated that two doses of vaccine may be required per person, costing around $10 to $12 or approximately 1,000 taka. According to data from the Bangladesh Bureau of Statistics (BBS), the country's population now stands at 16.5 crore (165 million). Accordingly, a total of 17,200 crore taka will be required. Sources have indicated that this preliminary calculation was formulated by the Ministry of Health. Assistance from development partners is being sought keeping this financial requirement in view.
@@ -978,13 +923,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
 (d) What would be the appropriate title of the above passage? Justify the title in two sentences.
 (e) What is the consequence of radiation?
 
-Various kinds of nuclear weapons have been produced in the past few years by many countries. There is a new and terrible development in the history of man. Very few events can be more frightful than nuclear war. In a nuclear war, most of the world’s population will be exterminated. The few living creatures that survive will be exposed to radiation or to electrical rays harmful to life. It has been said by scientists that many new diseases will be caused by radiation. There will also be an acute shortage of food. Most of the areas on which nuclear bombs have been dropped have been ruined. Therefore, the survivors of a nuclear war will be sick, hungry and homeless. It might be better, perhaps, to be killed in a nuclear war than to survive it. It would be better still for men to learn to live in peace with one another. If this can be achieved, there will be no nuclear wars.
-(a) What is the result of a nuclear war?
-(b) How will the survivors of nuclear war survive?
-(c) What is the best way to avoid nuclear war?
-(d) What would be the appropriate title of the above passage? Justify the title in two sentences.
-(e) What is the consequence of radiation?
-
    Answer:
    - (a) The result of a nuclear war will be the extermination of most of the world's population, massive destruction of infrastructure, acute food shortages, and catastrophic environmental contamination.
    - (b) The survivors of a nuclear war will live an agonizing life—sick, hungry, homeless, and constantly exposed to lethal radiation.
@@ -1001,14 +939,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
  * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
  * **(e) Write in brief your response to the author's take on discipline.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
 
-> I am convinced that inculcating of discipline at home and in the educational institutions is essential for the growth of every individual. It is however unfortunate that the need for discipline in the youth is not sufficiently appreciated in this country. People seem to believe that to insist on discipline is to be unkind to the young. I have a different opinion. For me, what is unkind is to let a young person indulge in whatever s/he wants to do without parental, educational and ethical guidance. Discipline does not mean illogical harshness or oppressive imposition of law. Discipline involves ethics, i.e. responsible concern for the well-being of oneself and the other. Discipline involves guidance from the outside and control from the inside (self-control). Lack of guidance and control may lead a young person to waste her/his strength because s/he is yet to experience things in full. I feel sad when I see our youth-often individuals of talent, spirit and imagination-talking, behaving and acting as if they are their own judge and have the vision of predicting the future. I consider it as a wrong trend because it is detrimental to the physical, mental and social well-being of theirs and others as well.
-> 
- * **(a) At what points do the author's and people's beliefs are different?**
- * **(b) How does the author perceive discipline?**
- * **(c) What according to the author, may befall when a youth lacks discipline?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
- * **(d) What do you think is the dominant tone of the passage prescriptive dialogic? Engaging or distant? Why do you think so?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
- * **(e) Write in brief your response to the author's take on discipline.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1358 (ET: N/A)]*
-
    Answer:
    - (a) Most people believe that enforcing discipline on the young is unkind, whereas the author believes that leaving youth without ethical and parental guidance is the true unkindness.
    - (b) The author perceives discipline not as harsh oppression, but as an ethical balance between external guidance and internal self-control that nurtures personal well-being.
@@ -1017,15 +947,6 @@ Various kinds of nuclear weapons have been produced in the past few years by man
    - (e) The author's view is highly realistic and constructive. Meaningful discipline is not punitive restriction but empathetic mentoring that helps young individuals harness their full creative potential safely.
 
 3. **Read the following passage and then answer the questions that follow:** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1348 (ET: N/A)]*
-> The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
-> 
-**Question:**
- * (a) Which is the worst of the problems that affects plants and animals?
- * (b) What may happen to plants and animals as a dire consequence of increasing temperature?
- * (c) What are the two major reasons for increasing temperature in the world?
- * (d) How does global warming affect the sea level?
- * (e) What message does the passage convey?
-
 > The Change of Climate is a major concern nowadays. The worst of all the problems that affects all the flora and fauna is the climate change. There are many plants and animals that are vulnerable to climate change. As a result of increasing temperature, they are likely to be extinct from nature. The reasons of increasing temperature are multifarious. Every day many industries, mills and factories in different countries are excreting Carbon Dioxide. Besides, a significant number of vehicles ply on the roads creating smoke which emits Carbon Dioxide. In addition to these, industrially developed countries are emitting tons of Carbon on the sea, which is indirectly responsible for producing Carbon Dioxide. The more Carbon Dioxide will increase, the more the temperature will increase. Over the last century, the sea level had risen by 10-20 cm possibly in response to global warming.
 > 
 **Question:**
