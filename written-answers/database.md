@@ -9530,6 +9530,358 @@ Answer:
       - Once a transaction successfully commits, its changes are permanently written to non-volatile secondary storage and will survive subsequent power outages, hardware failures, or system crashes.
       - Managed by: Recovery Manager using write-ahead logging (WAL) and checkpointing.
 
+## Indexing & Query Optimization (B-Tree, B+ Tree) (10)
+
+1. **How indexing improve query performance?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
+
+   Answer: An index lets the database jump directly to the matching rows instead of scanning the whole table.
+
+   - Without an index, a query does a full table scan — `O(n)` comparisons for `n` rows.
+   - With a B+ tree index, the same lookup becomes `O(log n)`, since the tree narrows down the search at every level.
+   - Indexes also speed up `ORDER BY`, `GROUP BY` and join operations when built on the columns involved, because the data is already available in sorted order.
+   - Trade-off: every `INSERT`, `UPDATE` or `DELETE` must also update the index, so indexes speed up reads but slow down writes and use extra storage.
+
+2. **Briefly describe primary key, foreign key and indexing in relational database and their relationship. Do you think database indexing always makes applications faster? Explain your answer.**
+
+   Answer:
+
+   - Primary key — uniquely identifies each row of a table; the DBMS automatically builds an index on it.
+   - Foreign key — a column that references the primary key of another table, enforcing referential integrity between them; indexing a foreign key speeds up joins on it.
+   - Index — a separate structure (usually a B+ tree) built on one or more columns to speed up lookups on those columns.
+   - Relationship: primary and foreign keys are the columns most commonly indexed, because they are the columns most often used in `WHERE` clauses and joins.
+
+   Does indexing always make an application faster?
+   - No. Indexing speeds up reads (`SELECT`) but slows down writes, since every `INSERT`/`UPDATE`/`DELETE` must also update every index on that table.
+   - An index on a column with very few distinct values (low cardinality), or on a small table that fits easily in memory, gives little or no benefit and just adds overhead.
+   - Too many indexes on a write-heavy table (like the `STUDENT` and `Course_enrollment` tables here) can make inserts noticeably slower, so indexes should be added only on columns that are actually queried or joined on frequently, such as `Stu_Id`.
+
+3. **অথবা, (ক) Indexing এবং Hashing এর পদ্ধতিগুলো বর্ণনা করুন** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 612 (ET: N/A)]*
+
+   Answer:
+
+   Indexing
+   - Builds an ordered structure (commonly a B+ tree) on a column, so a lookup narrows down the search range level by level.
+   - Naturally supports range queries (`BETWEEN`, `<`, `>`) and sorted output, since the index itself is ordered.
+
+   Hashing
+   - Applies a hash function to the search key to compute the exact bucket/address where the record is stored.
+   - Gives `O(1)` average lookup time for exact-match queries, but cannot support range queries efficiently, since hashing destroys the original ordering.
+   - Two forms: static hashing (fixed number of buckets) and dynamic/extendible hashing (buckets grow as data grows, avoiding the need to rehash everything).
+
+4. **How does index tuning help in improving query performance?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 747 (ET: N/A)]*
+
+   Answer: Index tuning is the process of reviewing and adjusting which indexes exist on a database, based on the actual queries the system runs, so the indexes match real usage instead of guesswork.
+
+   - Identifies slow queries (via the query execution plan) and adds an index on the columns used in their `WHERE`, `JOIN` or `ORDER BY` clauses.
+   - Removes unused or redundant indexes, since every extra index slows down writes without helping any query.
+   - Considers composite (multi-column) indexes when queries filter on more than one column together.
+   - Result: faster reads for the queries that matter, without paying the write-cost of indexes nobody uses.
+
+5. **Construct a B+ tree index structure on emp_id for the given relation employee as shown below with n=4.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 824 (ET: BUET)]*
+
+   Answer: The exact `employee` data was not printed with the question, so the general construction method for a B+ tree of order `n = 4` is shown instead.
+
+   Rules for order `n = 4`
+   - Each internal node holds at most `n − 1 = 3` keys and up to `n = 4` child pointers.
+   - Each leaf holds at most `n − 1 = 3` keys, and all leaves sit at the same depth, linked left to right for fast range scans.
+   - A node that would exceed 3 keys is split into two, and the middle key is pushed up to the parent.
+
+   Example with `emp_id` values `10, 20, 30, 40, 50, 60, 70`
+   ```
+                [30 , 50]
+               /    |    \
+        [10,20]  [30,40]  [50,60,70]   <- leaf level, linked left-to-right
+   ```
+   - All actual records are referenced only from the leaf level; internal nodes hold copies of keys purely to guide the search.
+   - Searching for `emp_id = 45` compares against `30` and `50` at the root, goes to the middle leaf `[30,40]`, and reports "not found" once it sees the leaf's values do not include 45.
+
+6. **What is Indexing? Write down the usages of Indexing.** *[RAKUB Assistant Database Administrator 2020 compact it 1015 (ET: E-Zone)]*
+
+   Answer: Indexing is a technique that builds a separate, ordered data structure on one or more columns of a table so that rows can be found quickly, instead of scanning every row.
+
+   Usages of indexing
+   - Speeds up `WHERE` clause lookups on the indexed column.
+   - Speeds up `JOIN` operations between tables on the indexed join columns.
+   - Speeds up `ORDER BY` and `GROUP BY`, since sorted data is already available.
+   - Enforces uniqueness when a `UNIQUE INDEX` is created on a column.
+   - Helps maintain referential integrity efficiently on foreign key columns.
+
+7. **(খ) Database এর ক্ষেত্রে Indexing এর কার্যকারিতা বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
+
+   Answer: Indexing works by keeping a sorted, searchable copy of one or more columns alongside a pointer to the actual row, so the database engine can locate matching rows without reading the whole table.
+
+   - A B+ tree index lets the engine narrow the search in `O(log n)` steps instead of scanning all `n` rows.
+   - It benefits `SELECT` queries with equality or range filters, joins, and sorted output the most.
+   - It comes at a cost: every write operation must also update the index, and the index itself takes extra disk space.
+
+8. **(ক) Sorting and Indexing-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1096 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Sorting | Indexing |
+   |---|---|---|
+   | What it does | Physically rearranges rows in a chosen order | Builds a separate structure pointing to rows, without moving them |
+   | Persistence | A one-time operation; the order is not maintained automatically afterwards | Persistent; the DBMS keeps the index up to date as data changes |
+   | Storage | Uses the same table storage | Uses additional storage for the index structure |
+   | Purpose | Presents data in a required order for output | Speeds up search, filtering and joins |
+   | Maintenance cost | None after the sort completes | Must be updated on every insert/update/delete |
+
+9. **What is the purpose of index in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+
+   Answer: The purpose of an index is to reduce the amount of data the database has to examine to answer a query, turning a slow full-table scan into a fast, targeted lookup.
+
+   - Without an index: the engine reads every row to check the condition — `O(n)`.
+   - With an index: the engine uses the index's ordered structure to jump straight to the matching rows — `O(log n)` for a B+ tree.
+   - It is especially valuable on large tables and on columns frequently used in searches, joins and sorting.
+
+10. **How hashtable is used in database?** *[DESCO Assistant Engineer (CSE) 2016 compact it 1267 (ET: N/A)]*
+
+    Answer: A database uses a hash table (hash index) to map a search-key value directly to the disk block/bucket that stores the matching record, using a hash function.
+
+    - The hash function converts the key into a bucket address; the record is stored in (or looked up from) that bucket directly.
+    - Gives `O(1)` average-time lookups for exact-match queries (`WHERE id = 5`), much faster than scanning.
+    - Not useful for range queries (`WHERE age > 30`), because hashing scatters the keys and destroys their natural order — a B+ tree index is used instead for those.
+    - Used internally for hash joins and hash-based `GROUP BY` as well as for hash indexes on columns queried by exact match only.
+
+## Data Warehousing, Data Mining & Business Intelligence (9)
+
+1. **Differentiate among Database, Data Warehouse and Data Mining with real world example.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 517 (ET: MIST)]*
+
+   Answer:
+
+   | Point | Database | Data Warehouse | Data Mining |
+   |---|---|---|---|
+   | Purpose | Day-to-day operations (OLTP) | Historical analysis and reporting (OLAP) | Discovering hidden patterns in data |
+   | Data | Current, frequently updated | Historical, integrated from many sources | Whatever data is being analysed (often warehouse data) |
+   | Operations | Insert, update, delete, short transactions | Complex read-heavy queries, aggregation | Clustering, classification, association-rule mining |
+   | Example | A bank's live account database recording every transaction | A bank's warehouse combining 5 years of branch data to spot regional trends | Mining that warehouse to detect fraud patterns or customer churn |
+
+2. **Discuss different tools and techniques to develop a Business Intelligence Dashboard for a bank. How can data be captured and aggregated from various sources within the bank to monitor the business performance?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 519 (ET: MIST)]*
+
+   Answer:
+
+   Tools and techniques for a BI dashboard
+   - ETL tools (Informatica, Talend, SSIS) extract data from core banking, CRM and loan systems, transform it into a common format, and load it into a data warehouse.
+   - A data warehouse or data mart (Oracle, SQL Server, Snowflake) stores the integrated, historical data used for reporting.
+   - OLAP cubes summarise data along dimensions such as branch, product and time, so users can drill down or roll up quickly.
+   - Visualisation tools (Power BI, Tableau, QlikView) turn the summarised data into charts, KPIs and dashboards for management.
+
+   Capturing and aggregating data across the bank
+   - Each source system (core banking, ATM network, mobile banking, CRM) exports data on a schedule.
+   - An ETL pipeline extracts this data, cleans and standardises it (currency, date formats, account IDs), and loads it into the central warehouse.
+   - Fact tables (transactions, loans disbursed) are linked to dimension tables (branch, customer, time, product) so the dashboard can aggregate metrics like total deposits by branch by month.
+   - The dashboard refreshes on a schedule (daily/hourly) and presents KPIs such as NPL ratio, deposit growth and branch profitability to management in near real time.
+
+3. **Software scenario question- Business Intelligence Model** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 521 (ET: MIST)]*
+
+   Answer: The exact scenario was not printed with the question, so the standard Business Intelligence (BI) model is described.
+
+   Layers of a BI model
+   - Data sources — operational databases, spreadsheets, external feeds.
+   - ETL layer — extracts, cleans and loads data into the warehouse.
+   - Data warehouse / data marts — stores integrated historical data, organised as fact and dimension tables (star or snowflake schema).
+   - Analytics layer — OLAP cubes, data mining models, ad-hoc SQL queries.
+   - Presentation layer — dashboards, reports and KPI scorecards for decision-makers.
+   - Feedback loop: decisions made from the BI output feed back into operational systems, improving future data quality.
+
+4. **(খ) Big data বলতে কি বুঝায়? Big data এর বৈশিষ্ট্যগুলো লিখুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 766 (ET: N/A)]*
+
+   Answer: Big data refers to datasets so large, fast-moving or varied that traditional database tools cannot efficiently store, manage or analyse them.
+
+   Characteristics of Big Data (the 5 Vs)
+   - Volume — massive amounts of data, often terabytes to petabytes.
+   - Velocity — data generated and needing processing at very high speed (e.g., sensor streams, social media feeds).
+   - Variety — structured (tables), semi-structured (JSON, XML) and unstructured (video, text, images) data mixed together.
+   - Veracity — uncertainty and noise in the data; quality and trustworthiness must be managed.
+   - Value — the ultimate goal: extracting useful insight and business value from the raw data.
+
+5. **Write down different stage of data mining?** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
+   a) Data Purification
+   b) Data Integration
+   c) Data Selection
+   d) Data Transformation
+   e) Data Mining (The Final Stage)
+   f) Pattern Evaluation
+   g) Knowledge Representation
+
+   Answer: The stages given in the question form the standard Knowledge Discovery in Databases (KDD) pipeline.
+
+   - a) Data Cleaning/Purification — removes noise, missing values and inconsistent data.
+   - b) Data Integration — combines data coming from multiple heterogeneous sources into one consistent store.
+   - c) Data Selection — retrieves only the data relevant to the analysis task from the integrated store.
+   - d) Data Transformation — converts data into a form suitable for mining, e.g., normalisation or aggregation.
+   - e) Data Mining — applies algorithms (clustering, classification, association rules) to extract patterns.
+   - f) Pattern Evaluation — identifies the genuinely interesting, useful patterns among everything the mining step produced.
+   - g) Knowledge Representation — presents the discovered knowledge to the user through visualisation, reports or dashboards.
+
+6. **Database tuning and database mining বলতে কী বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077 (ET: N/A)]*
+
+   Answer:
+
+   Database tuning
+   - The process of adjusting a database's configuration, indexes, queries and hardware allocation to get the best possible performance for its actual workload.
+   - Includes adding/removing indexes, rewriting slow queries, adjusting memory buffers, and partitioning large tables.
+
+   Data(base) mining
+   - The process of discovering hidden, previously unknown patterns and relationships in large volumes of data, using techniques such as clustering, classification and association-rule mining.
+   - Example: a bank mining transaction data to detect unusual spending patterns that indicate fraud.
+
+7. **(ক) Data Mining and Data Warehousing বলতে কী বোঝায়? এদের মধ্যে সম্পর্ক কী? এদের উপকারিতা কী?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095-1096 (ET: N/A)]*
+
+   Answer:
+
+   - Data Warehousing — the process of collecting and integrating data from many operational sources into one large, subject-oriented, historical repository, optimised for analysis rather than day-to-day transactions.
+   - Data Mining — the process of analysing that (or any large) dataset to discover hidden patterns, trends and relationships that are not obvious from a simple query.
+
+   Relationship
+   - A data warehouse is usually the clean, integrated, historical source that data mining works on — mining is much easier and more effective on well-organised warehouse data than on raw operational data.
+
+   Benefits
+   - Better, faster business decisions based on integrated historical data.
+   - Detection of trends, customer behaviour patterns and anomalies (e.g., fraud) that would be invisible in day-to-day transactional systems.
+   - A single, consistent view of the organisation's data, instead of scattered, inconsistent operational silos.
+
+8. **What is Data warehouse? Why We Need Data Warehouse? Advantages of Data warehousing.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
+
+   Answer: A data warehouse is a central, subject-oriented, integrated, time-variant and non-volatile repository of data collected from multiple sources, built specifically to support reporting and analysis (OLAP) rather than daily transactions (OLTP).
+
+   Why it is needed
+   - Operational databases are optimised for fast transactions, not for complex analytical queries spanning years of history — running heavy analysis on them would slow down live operations.
+   - Data from many separate operational systems needs to be integrated into one consistent format before it can be analysed together.
+
+   Advantages
+   - Provides a single, consistent view of data across the whole organisation.
+   - Speeds up complex analytical and historical queries, since the data is pre-aggregated and indexed for that purpose.
+   - Improves decision-making with reliable historical trends.
+   - Keeps analytical workloads from interfering with live operational systems.
+
+9. **Explain data warehouse with figure. Describe fact table and dimension table with example.** *[ICT Ministry Assistant Programmer 2017 compact it 1243-1244 (ET: N/A)]*
+
+   Answer:
+
+   ```mermaid
+   flowchart LR
+       A[Operational Source 1] --> E[ETL: Extract, Transform, Load]
+       B[Operational Source 2] --> E
+       C[External Data] --> E
+       E --> W[(Data Warehouse)]
+       W --> O[OLAP / BI Tools]
+       O --> D[Dashboards & Reports]
+   ```
+
+   Fact table
+   - Holds the measurable, numeric business facts — the "what happened" — such as `sale_amount`, `quantity_sold`. It also stores foreign keys pointing to the related dimension tables.
+   - Example: `Sales_Fact(product_id, store_id, date_id, quantity_sold, sale_amount)`.
+
+   Dimension table
+   - Holds the descriptive context around a fact — the "who, what, where, when" — such as product name, store location or calendar date.
+   - Example: `Product_Dim(product_id, product_name, category, brand)`, `Store_Dim(store_id, city, region)`, `Date_Dim(date_id, day, month, year)`.
+
+   - Together they form a star schema: one central fact table surrounded by its dimension tables, which is the standard layout for a data warehouse.
+
+## Database Backup & Disaster Recovery (8)
+
+1. **Difference between incremental backup and differential backup. Which is more suitable for the banking system?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)]*
+
+   Answer:
+
+   | Point | Incremental backup | Differential backup |
+   |---|---|---|
+   | What it backs up | Only data changed since the last backup (full or incremental) | Only data changed since the last full backup |
+   | Backup size | Smallest, fastest to take | Grows larger each day until the next full backup |
+   | Restore process | Restore the last full backup, then every incremental in order | Restore the last full backup, then only the latest differential |
+   | Restore speed | Slower (many small backups to apply) | Faster (only two backups needed) |
+   | Storage use | Lowest | Higher than incremental |
+
+   Which is more suitable for banking
+   - A differential backup is generally preferred for core banking systems, because restore speed matters most when recovering from a failure — banking cannot tolerate a long, error-prone chain of many incremental restores. Many banks combine both: frequent incrementals through the day plus a differential/full backup at day end. <!-- verify -->
+
+2. **Database Data Loss based case study type question......**
+
+   Answer: The specific case study was not printed with the question, so the general approach to a database data-loss scenario is given.
+
+   Standard recovery approach
+   - Stop further writes immediately to prevent overwriting recoverable data.
+   - Identify the point of failure using the transaction log / write-ahead log.
+   - Restore the most recent full backup, then apply the transaction logs (or incremental/differential backups) up to the point just before the failure — this is called point-in-time recovery.
+   - Verify data integrity (row counts, checksums, application-level checks) before bringing the system back online.
+   - Perform a root-cause analysis afterward and update the backup/recovery plan to prevent recurrence.
+
+3. **What do you understand about the IT disaster recovery plan? Describe your approach to disaster recovery and business continuity planning for the data centre of your office.** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 333 (ET: BIBM)]*
+
+   Answer: An IT disaster recovery (DR) plan is a documented, tested procedure for restoring IT systems and data after a disruptive event (hardware failure, fire, flood, cyberattack), so the organisation can resume operations within an agreed time.
+
+   Approach to DR and business continuity for a data centre
+   - Risk assessment — identify likely threats (power failure, natural disaster, ransomware) and their business impact.
+   - Set RTO (Recovery Time Objective) and RPO (Recovery Point Objective) — how quickly systems must be back up, and how much data loss is acceptable.
+   - Maintain a geographically separate disaster recovery site with replicated data (hot/warm/cold standby).
+   - Automated, regularly tested backups following the 3-2-1 rule: 3 copies of data, on 2 different media, with 1 copy off-site.
+   - Documented failover and failback procedures, with clear roles and responsibilities.
+   - Regular DR drills to confirm the plan actually works, not just on paper.
+
+4. **একটি MySQL database এর ডাটা ব্যাক আপ ও ব্যাক আপ করা ডাটা রিস্টোর করার কমান্ড লিখ।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
+
+   Answer:
+
+   Backup
+   ```bash
+   mysqldump -u root -p mydatabase > mydatabase_backup.sql
+   ```
+
+   Restore
+   ```bash
+   mysql -u root -p mydatabase < mydatabase_backup.sql
+   ```
+   - `mysqldump` exports the database's schema and data as a plain SQL script; redirecting it back into the `mysql` client with `<` replays those statements to rebuild the database.
+
+5. **In the context of data management, what are the primary differences between data recovery and data backup? Provide real-world examples of when each is employed effectively.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 539 (ET: MIST)]*
+
+   Answer:
+
+   | Point | Data backup | Data recovery |
+   |---|---|---|
+   | What it is | Proactively making a copy of data before anything goes wrong | Reactively restoring or reconstructing data after loss or corruption |
+   | When it happens | On a schedule, before any incident | After an incident has already occurred |
+   | Goal | Have a safe copy available | Get the system back to a usable, correct state |
+
+   Examples
+   - Backup: a bank taking a nightly full backup of its core banking database, purely as a precaution.
+   - Recovery: after a server disk fails at 2 pm, the DBA restores last night's backup and replays the transaction log to bring the database back to the exact state just before the crash.
+
+6. **To achieve a '0-bit data loss' for its 24 x 7 x 365 banking operation, what steps or technology should an online bank employ to safeguard its data against any potential threats of data loss?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 518 (ET: MIST)]*
+
+   Answer: "Zero data loss" means an RPO (Recovery Point Objective) of 0 — no committed transaction can ever be lost, even in a disaster.
+
+   - Synchronous replication to a secondary (standby) data centre, so a transaction is not confirmed as committed until it is written at both sites.
+   - Redundant hardware within each site: RAID storage, dual power supplies, redundant network paths.
+   - Continuous transaction-log shipping / mirroring, so every committed change is durably recorded in more than one location before the application receives a success response.
+   - Automatic failover (clustering) so a site failure switches to the standby with no data gap.
+   - Regular, tested backups as the last line of defence, even though replication is the primary zero-loss mechanism.
+
+7. **MySQL database এর ক্ষেত্রে Backup and Restore করার কমান্ড লিখ?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865 (ET: BUET)]*
+
+   Answer:
+
+   ```bash
+   # Backup
+   mysqldump -u root -p mydatabase > backup.sql
+
+   # Restore
+   mysql -u root -p mydatabase < backup.sql
+   ```
+   - `mysqldump` writes the database out as SQL statements; feeding that file back into `mysql` re-creates the tables and re-inserts the data.
+
+8. **Describe what are the ways for no data loss?** *[RAKUB Assistant Database Administrator 2020 compact it 1015-1016 (ET: E-Zone)]*
+
+   Answer:
+
+   - Regular backups (full, incremental and differential) stored in more than one physical location.
+   - RAID storage, so a single disk failure does not lose data.
+   - Replication to a standby server/data centre, ideally synchronous for zero data loss.
+   - Write-ahead logging (transaction log), so committed transactions can always be replayed after a crash.
+   - Uninterruptible Power Supply (UPS) and generator backup to survive power failures gracefully instead of crashing mid-write.
+   - Regular testing of the backup and restore process itself — an untested backup is not a guarantee.
+
 ## Distributed & Parallel Databases (5)
 
 1. **(খ) Speedup এবং Scaleup চিত্রসহ ব্যাখ্যা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 613 (ET: N/A)]*
