@@ -1,5 +1,5 @@
 <!-- TOC START -->
-**Table of Contents** — 10 subtopics · 154 questions
+**Table of Contents** — 10 subtopics · 157 questions
 
 | # | Subtopic | Questions |
 |---|---|---|
@@ -7,10 +7,10 @@
 | 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
 | 3 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-24) | 24 |
 | 4 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
-| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-17) | 17 |
+| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
 | 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
 | 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
-| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-3) | 3 |
+| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
 | 9 | [Number Systems & Codes](#number-systems--codes-3) | 3 |
 | 10 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
 
@@ -2175,10 +2175,6 @@ Answer: Universality of a logic gate
    **ii. Octal number 2671 to decimal number.**
    **iii. Octal number 756 to hexadecimal number.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
 
-**i. Decimal number 9 to binary number.**
-   **ii. Octal number 2671 to decimal number.**
-   **iii. Octal number 756 to hexadecimal number.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1447 (ET: N/A)]*
-
    Answer: i. Decimal 9 to binary — divide by 2 and read the remainders upward
    ```
       9 / 2 = 4  remainder 1   (LSB)
@@ -3379,10 +3375,6 @@ Answer: Binary number system
    ii. $(\text{AB8C})_{16}$ to Decimal number
    iii. $(1101111010)_2$ to Hexadecimal
 
-i. $(11101)_2$ to Decimal number
-   ii. $(\text{AB8C})_{16}$ to Decimal number
-   iii. $(1101111010)_2$ to Hexadecimal
-
     Answer: A computer stores and processes everything in `binary`, because a transistor has only two clean states. People, programs and peripherals, however, work in other bases. Conversion is the bridge between them.
 
     1. Human input and output are decimal
@@ -3577,9 +3569,6 @@ Answer: The question is `incomplete` — the Boolean function to be simplified w
 
 3. **(a) Consider the following logic circuit-** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1350 (ET: N/A)]*
  * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
- * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
-
-* **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
  * **(ii) Use K-map to simplify these expressions F1 and F2, and show that they are equivalent to the ones obtained in (i).**
 
    Answer: The question is `incomplete` — the logic circuit that defines T1 to T4 was printed as a figure and is not present here, so the specific expressions cannot be derived. The method, and the standard circuit this question is taken from, are given below.
@@ -4437,8 +4426,6 @@ Answer: The question is `incomplete` — the two K-maps, which were printed as f
 14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
 
-F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
-
     Answer: The function is
     ```
        F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD
@@ -4915,11 +4902,11 @@ Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
 
 Answer:
     Sentence Correction (5 sentences):
-    - 1. Incorrect: One of the boy is absent. -> Correct: One of the **boys is** absent.
-    - 2. Incorrect: He is senior than me. -> Correct: He is senior **to** me.
-    - 3. Incorrect: I prefer tea than coffee. -> Correct: I prefer tea **to** coffee.
-    - 4. Incorrect: Neither of them were present. -> Correct: Neither of them **was** present.
-    - 5. Incorrect: He died from malaria. -> Correct: He died **of** malaria.
+    - 1. Incorrect: One of the boy is absent. -> Correct: One of the boys is absent.
+    - 2. Incorrect: He is senior than me. -> Correct: He is senior to me.
+    - 3. Incorrect: I prefer tea than coffee. -> Correct: I prefer tea to coffee.
+    - 4. Incorrect: Neither of them were present. -> Correct: Neither of them was present.
+    - 5. Incorrect: He died from malaria. -> Correct: He died of malaria.
 
     ক) প্রমাণ:
     - বামপক্ষ (LHS) $= (a+b)^4 - (a-b)^4 = [(a+b)^2]^2 - [(a-b)^2]^2$
@@ -4936,7 +4923,7 @@ Answer:
     - বিক্রয়মূল্যের পার্থক্য $= 108 - 92.5 = 15.5$ টাকা।
     - বিক্রয়মূল্য $15.5$ টাকা বেশি হলে ক্রয়মূল্য $= 100$ টাকা।
     - বিক্রয়মূল্য $31$ টাকা বেশি হলে ক্রয়মূল্য $= \frac{100 \times 31}{15.5} = \frac{100 \times 310}{155} = 200$ টাকা।
-    - উত্তর: দ্রব্যটির ক্রয়মূল্য **২০০ টাকা**।
+    - উত্তর: দ্রব্যটির ক্রয়মূল্য ২০০ টাকা।
 
 21. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 (a) Buy: Buy a software with cost 50 Lakh. (b) Building: Developed by developer cost 30 lakhs, possibility is 30% to develop complete software. (c) Modification: Buy and small modifications cost 30 lakh, for large modifications cost 80% increase.
@@ -4948,8 +4935,8 @@ Answer:
     - Option (c) Buy & Customize: Base cost BDT 30 Lakhs. For large modifications, cost increases by 80% $\implies 30 \times 1.80 =$ BDT 54 Lakhs.
 
     Strategic Recommendation:
-    - Select **Option (c) (Buy & Modify with bounded small customizations)** if tailored features are strictly required at BDT 30–35 Lakhs.
-    - Otherwise, select **Option (a) (Direct Buy)** to eliminate all project failure risks and ensure guaranteed production stability. Avoid Option (b) due to unacceptable failure probability (70%).
+    - Select Option (c) (Buy & Modify with bounded small customizations) if tailored features are strictly required at BDT 30–35 Lakhs.
+    - Otherwise, select Option (a) (Direct Buy) to eliminate all project failure risks and ensure guaranteed production stability. Avoid Option (b) due to unacceptable failure probability (70%).
 
 22. **Using a Karnaugh map, simplify the function (A,B,C,D) = \Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
 
@@ -4971,9 +4958,9 @@ Answer:
     ```
 
     Grouping:
-    - Group 1 (Quad of m5, m7, m13, m15): Middle column with $C=0, D=1$ and $C=1, D=1$ for $B=1 \implies$ **$B D$**
-    - Group 2 (Quad of m0, m1, m8, m9): Top and bottom rows for $C=0 \implies$ **$\bar{B} \bar{C}$**
-    - Group 3 (Quad of 4 Corners: m0, m2, m8, m10): Four corner cells with $B=0, D=0 \implies$ **$\bar{B} \bar{D}$**
+    - Group 1 (Quad of m5, m7, m13, m15): Middle column with $C=0, D=1$ and $C=1, D=1$ for $B=1 \implies$ $B D$
+    - Group 2 (Quad of m0, m1, m8, m9): Top and bottom rows for $C=0 \implies$ $\bar{B} \bar{C}$
+    - Group 3 (Quad of 4 Corners: m0, m2, m8, m10): Four corner cells with $B=0, D=0 \implies$ $\bar{B} \bar{D}$
 
     Minimal SOP Expression:
     $$F(A, B, C, D) = B D + \bar{B} \bar{C} + \bar{B} \bar{D}$$
@@ -5006,10 +4993,10 @@ Answer:
     ```
 
     Grouping:
-    - Group 1 (Quad of m1, m3, m9, m11): Cells where $B=0$ and $D=1 \implies$ **$\bar{B} D$**
-    - Group 2 (Quad of m1, m5, m9, m13): Column $01$ where $C=0, D=1 \implies$ **$\bar{C} D$**
-    - Group 3 (Pair of m12, m13): $AB=11, CD=00, 01 \implies$ **$A B \bar{C}$**
-    - Group 4 (Pair of m12, m14): $AB=11, CD=00, 10 \implies$ **$A B \bar{D}$**
+    - Group 1 (Quad of m1, m3, m9, m11): Cells where $B=0$ and $D=1 \implies$ $\bar{B} D$
+    - Group 2 (Quad of m1, m5, m9, m13): Column $01$ where $C=0, D=1 \implies$ $\bar{C} D$
+    - Group 3 (Pair of m12, m13): $AB=11, CD=00, 01 \implies$ $A B \bar{C}$
+    - Group 4 (Pair of m12, m14): $AB=11, CD=00, 10 \implies$ $A B \bar{D}$
 
     Minimal SOP Expression:
     $$F(A, B, C, D) = \bar{B} D + \bar{C} D + A B \bar{D}$$
@@ -5390,19 +5377,6 @@ Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and
    - Point worth noting: `C1 and C2 can never both be 1`, so the OR gate could equally be an XOR gate. C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0.
 
 6. **Multiplexing:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
-```
-          +-----------+
-    A ---|>|---| I_3       |
-          | I_2  4x1  |--- F(A, B, C)
-    1 --------| I_1  MUX  |
-    0 --------| I_0       |
-          +-----------+
-                 |  |
-                 B  C
-                 |  |
-                S_1 S_0
-```
-
 ```
           +-----------+
     A ---|>|---| I_3       |
@@ -6655,7 +6629,7 @@ Answer: The function is
 
     - Method to remember: put the `higher-order` variables on the select lines, split the truth table into one block per select value, and read off what the output does in terms of the remaining variables — it can only be `0`, `1`, a variable, or its complement. A 4x1 MUX can therefore realise any function of 3 variables directly, and many functions of 4 variables as here.
 
-## Boolean Algebra & De Morgan’s Theorem (17)
+## Boolean Algebra & De Morgan’s Theorem (19)
 
 1. **(a) State De-Morgan’s law with an appropriate example.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 488 (ET: N/A)]*
 
@@ -7052,7 +7026,7 @@ Answer: The expression is
    ```
    - A single AND gate replaces three 4-input AND gates and one OR gate. A and C disappear completely — the output does not depend on them.
 
-7. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876 (ET: BUET)]*
+8. **Simplify the Boolean expression: AB\bar{C}D + \bar{A}\bar{B}\bar{C}D + ABCD + \bar{A}\bar{B}CD + ABC\bar{D} + \bar{A}\bar{B}C\bar{D}** *[BGDCL (Bakhrabad Gas) Assistant Engineer (CSE) 19.11.2021 compact it 876 (ET: BUET)]*
 
 Answer: The expression is
    ```
@@ -7123,7 +7097,7 @@ Answer: The expression is
    ```
    - Laws used: `X + X' = 1`, `X + X = X`, and the distributive law to factor `(C + D)` out of both groups.
 
-8. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
+9. **(b) Simplify the following expression using Boolean Algebra: \bar{x}\bar{y}z + \bar{x}yz + x\bar{y}** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
 Answer: The expression is
    ```
@@ -7189,7 +7163,7 @@ Answer: The expression is
    ```
    - Laws used: distributive to factor `x'z`, and `y + y' = 1`. Seven literals have reduced to four.
 
-9. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
+10. **AB\bar{C}D + \bar{A}BD + ABCD convert it into minimum lateral.** *[SGFL Assistant General Engineer 2021 compact it 935 (ET: BUET)]*
 
 Answer: The expression is
     ```
@@ -7254,7 +7228,32 @@ Answer: The expression is
     ```
     - One AND gate replaces three multi-input AND gates and a 3-input OR gate. `A and C disappear` — the output does not depend on them at all.
 
-10. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
+11. **(a) Simplify the following Boolean expression: (x+y+xy)(x+z)** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 890-891 (ET: N/A)]*
+
+    Answer: The expression is `(x + y + xy)(x + z)`.
+
+    Step 1 - simplify the first bracket
+    ```
+       x + y + xy
+       = x + y(1 + x)      // factor y out of y + xy
+       = x + y·1           // 1 + x = 1 (identity/annulment law)
+       = x + y
+    ```
+
+    Step 2 - simplify `(x + y)(x + z)` using the standard absorption identity
+    ```
+       (x + y)(x + z) = xx + xz + xy + yz
+                      = x + xz + xy + yz      // xx = x
+                      = x(1 + z + y) + yz     // factor x out
+                      = x·1 + yz              // 1 + z + y = 1
+                      = x + yz
+    ```
+
+    Final answer
+    - `(x + y + xy)(x + z) = x + yz`
+    - This is the well-known distribution identity `(x + y)(x + z) = x + yz`, used directly once the first bracket is reduced to `x + y`.
+
+12. **Simply the following function: ABCD + \bar{A}BD + AB\bar{C}D** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
 Answer: The expression is
     ```
@@ -7319,7 +7318,7 @@ Answer: The expression is
     ```
     - Eleven literals reduce to two, and the whole circuit becomes a single AND gate. Both `A and C are redundant`.
 
-11. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
+13. **De-Morgans Law গুলো বর্ণনা করুন।** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1022 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) `De Morgan's laws` state how a complement bar is removed from over an AND or an OR term. They are the most used rules in digital logic design.
 
@@ -7386,7 +7385,7 @@ Answer: (Answered in English, as required for IT topics.) `De Morgan's laws` sta
     - They convert a two-level AND-OR circuit into an all-NAND circuit with no change of structure.
     - They also let a designer move bubbles across a circuit diagram, which is how real schematics are simplified.
 
-12. **(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
+14. **(ক) বুলিয়ান অ্যালজেবরার সাহায্যে সরল করুন: $\overline{x+y(x+z)}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The expression is
     ```
@@ -7445,7 +7444,7 @@ Answer: (Answered in English, as required for IT topics.) The expression is
     - One NAND, one inverter and one AND gate.
     - Laws used: distributive, absorption `x + xy = x`, `1 + y = 1`, and both forms of De Morgan.
 
-13. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
+15. **(খ) প্রমাণ করুন: $A \oplus B = AB + \bar{A}\bar{B}$** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1073-1074 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The statement to prove is
     ```
@@ -7500,7 +7499,7 @@ Answer: (Answered in English, as required for IT topics.) The statement to prove
 
     - If the question intends the statement as printed, the correct exam answer is to say that `AB + A'B'` is the `XNOR` (equivalence) function, and that XOR is `A'B + AB'`. XNOR is used in comparators, because it outputs 1 when the two bits are equal.
 
-14. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+16. **(ক) তিন চলকের De Morgan's উপপাদ্য দুইটি লিখুন এবং Truth table-এর সাহায্যে প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) De Morgan's theorems for three variables are
     ```
@@ -7565,7 +7564,7 @@ Answer: (Answered in English, as required for IT topics.) De Morgan's theorems f
 
     - Importance: these theorems are the reason `NAND and NOR are universal gates`, and they let a two-level AND-OR circuit be converted into an all-NAND circuit without changing its structure.
 
-15. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
+17. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
 
 Answer: The expression is
     ```
@@ -7631,7 +7630,7 @@ Answer: The expression is
        C ---|/
     ```
 
-16. **Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$ where $\lor = \text{OR}, \land = \text{AND}, \neg = \text{NOT}, \oplus = \text{XOR}$** *[Combined 3 Banks Assistant Programmer 2018 compact it 1198 (ET: N/A)]*
+18. **Construct a truth table for the following function: $(r \lor (q \land \neg p)) \land \neg(r \land (q \land \neg p))$ is the same as $r \oplus (q \land \neg p)$ where $\lor = \text{OR}, \land = \text{AND}, \neg = \text{NOT}, \oplus = \text{XOR}$** *[Combined 3 Banks Assistant Programmer 2018 compact it 1198 (ET: N/A)]*
 
 Answer: The expression is
     ```
@@ -7685,7 +7684,7 @@ Answer: The expression is
 
     - Point worth noting: `(X + Y)(XY)'` is one of the standard alternative forms of XOR, along with `X'Y + XY'` and `(X (+) Y) = (X' + Y')(X + Y)`. Recognising it saves the whole truth table in an exam.
 
-17. **Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
+19. **Trouth table construction for $f(A,B,C,D) = (A+B) \oplus (CD)$** *[DESCO Assistant Engineer (CSE) 2016 compact it 1268 (ET: N/A)]*
 
 Answer: The function is
     ```
@@ -8690,10 +8689,6 @@ Answer: Both store one bit of data. The difference is `when` each responds to it
  * **(ii) Noise**
  * **(iii) Power consumption.**
 
-* **(i) Speed**
- * **(ii) Noise**
- * **(iii) Power consumption.**
-
    Answer: `TTL` (Transistor-Transistor Logic) is built from bipolar junction transistors; `CMOS` (Complementary Metal-Oxide-Semiconductor) is built from complementary pairs of PMOS and NMOS transistors.
 
    (i) Speed
@@ -9010,7 +9005,7 @@ Answer: What an IC is
 
    - The result: a discrete gate built from transistors and resistors might dissipate tens of milliwatts, while an equivalent CMOS gate on a chip dissipates nanowatts when idle. That difference is exactly what makes a battery-powered smartphone possible.
 
-## 2's Complement & Binary Arithmetic (3)
+## 2's Complement & Binary Arithmetic (4)
 
 1. **2-এর পরিপূরক পদ্ধতি কী? 2-এর পরিপূরক পদ্ধতি ব্যবহার করে (-15)_{10} থেকে (+11)_{10} বিয়োগ করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
@@ -9155,7 +9150,42 @@ Answer: `BCD` (Binary Coded Decimal) writes each decimal digit separately as a 4
 
    - In this question `no correction was needed`, because both groups stayed within 0 to 9. Stating the correction rule anyway shows the examiner that the method is understood.
 
-3. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
+3. **(a) For two 8bit binary numbers. What will be output values in 2’s complement format: (i) (10000000+10000000) (ii) (11111111-01111111)** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
+
+   Answer:
+
+   (i) `10000000 + 10000000`
+   ```
+       1000 0000
+     + 1000 0000
+     -----------
+      1 0000 0000    ->  carry out of the 8th bit is discarded
+
+     8-bit result = 0000 0000
+   ```
+   - Overflow check: adding two negative numbers (`10000000` = -128 each) produced a non-negative result (0), which is the classic sign of overflow — the true sum, -256, cannot fit in 8 bits.
+   - Formally, the carry into the sign bit (0) differs from the carry out of the sign bit (1), confirming `overflow`.
+   - Output: `00000000`, with the overflow flag set (the result is not mathematically valid).
+
+   (ii) `11111111 - 01111111`
+   - Subtraction is done by adding the 2's complement of the second number.
+   ```
+     2's complement of 01111111:
+        invert : 1000 0000
+        add 1  : 1000 0001
+
+     1111 1111
+   + 1000 0001
+   -----------
+    1 0000 0000   ->  carry out of the 8th bit is discarded
+
+     8-bit result = 1000 0000
+   ```
+   - Carry into the sign bit (1) equals carry out of the sign bit (1), so there is `no overflow` here.
+   - As signed numbers: `11111111 = -1` and `01111111 = +127`, so `-1 - 127 = -128`, and `10000000` is indeed `-128` in 8-bit 2's complement — the result checks out.
+   - Output: `10000000` (decimal -128), no overflow.
+
+4. **How many bits have to change to convert int A to int B. Sample A=31 and B=14.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1164 (ET: N/A)]*
 
 Answer: The number of bit positions in which two numbers differ is called their `Hamming distance`. It is found by taking the `XOR` of the two numbers and counting the 1s in the result.
 
@@ -9289,9 +9319,9 @@ Answer:
 
     Step 3: Represent $+2_{10}$ in 6-bit Signed 2's Complement:
     - $+2_{10} = 000010_2$.
-    - (Using 6-bit binary sign-extension addition: $000110 + 111100 = 1000010 \implies$ discard overflow carry bit $\implies$ **000010**).
+    - (Using 6-bit binary sign-extension addition: $000110 + 111100 = 1000010 \implies$ discard overflow carry bit $\implies$ 000010).
 
-    Final Answer: **000010**
+    Final Answer: 000010
 
 3. **Convert the following octal number into decimal and hexadecimal: (651.124)_8.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
 
@@ -9300,7 +9330,7 @@ Answer:
     1. Conversion to Decimal:
     $$\text{Integer part: } 6 \times 8^2 + 5 \times 8^1 + 1 \times 8^0 = 6 \times 64 + 5 \times 8 + 1 = 384 + 40 + 1 = 425$$
     $$\text{Fractional part: } 1 \times 8^{-1} + 2 \times 8^{-2} + 4 \times 8^{-3} = \frac{1}{8} + \frac{2}{64} + \frac{4}{512} = 0.125 + 0.03125 + 0.0078125 = 0.1640625$$
-    - Decimal Value: **$(425.1640625)_{10}$**
+    - Decimal Value: $(425.1640625)_{10}$
 
     2. Conversion to Hexadecimal:
     - Convert each octal digit to 3-bit binary:
@@ -9309,7 +9339,7 @@ Answer:
     - Regroup into 4-bit nibbles:
       - Integer: $0001 \quad 1010 \quad 1001 \implies 1 \quad \text{A} \quad 9$
       - Fractional: $0010 \quad 1010 \quad 1000 \implies 2 \quad \text{A} \quad 8$
-    - Hexadecimal Value: **$(1\text{A}9.2\text{A}8)_{16}$** (or **$(1\text{A}9.2\text{A})_{16}$**)
+    - Hexadecimal Value: $(1\text{A}9.2\text{A}8)_{16}$ (or $(1\text{A}9.2\text{A})_{16}$)
 
 ## Finite State Machines (FSM) (1)
 
