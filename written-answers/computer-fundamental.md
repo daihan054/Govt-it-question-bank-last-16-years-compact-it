@@ -214,9 +214,9 @@ Answer: The question as printed is `incomplete and garbled`. Read as it stands, 
 3. **Write the full meaning: HTTP, DVD, and SMTP?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1335 (ET: N/A)]*
 
 Answer:
-   - **HTTP** — HyperText Transfer Protocol. The application-layer protocol used by web browsers to fetch web pages. Port 80.
-   - **DVD** — Digital Versatile Disc (originally Digital Video Disc). An optical storage disc holding 4.7 GB single layer.
-   - **SMTP** — Simple Mail Transfer Protocol. Used to SEND email between mail servers. Port 25.
+   - HTTP — HyperText Transfer Protocol. The application-layer protocol used by web browsers to fetch web pages. Port 80.
+   - DVD — Digital Versatile Disc (originally Digital Video Disc). An optical storage disc holding 4.7 GB single layer.
+   - SMTP — Simple Mail Transfer Protocol. Used to SEND email between mail servers. Port 25.
 
 4. **Provide the full form of the following terms: HTTP, SMTP, ASCII, DHCP, ICMP.** *[BBA Assistant Maintenance Engineer 12.07.2025 compact it 1432 (ET: BUET)]*
 
@@ -232,12 +232,12 @@ Answer:
 
 5. **MOOC stands for __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-Answer: **Massive Open Online Course.**
+Answer: Massive Open Online Course.
    - An online course open to unlimited participants, free or low cost. Examples: Coursera, edX, Udacity, Khan Academy.
 
 6. **Write down the full form of VIRUS?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-Answer: **VIRUS — Vital Information Resources Under Seize.**
+Answer: VIRUS — Vital Information Resources Under Seize.
    - It is a malicious program that attaches itself to a host file and replicates when that file runs.
 
 7. **(b) What is register? What are the common register found in a basic computer?** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)]*
@@ -262,7 +262,7 @@ Answer: A register is a very small, very fast storage location inside the CPU. I
 
 8. **1TB = কত বাইট?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)], [BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
-Answer: **1 TB = 2⁴⁰ bytes = 1,099,511,627,776 bytes** (binary measure, about 1.1 trillion bytes).
+Answer: 1 TB = 2⁴⁰ bytes = 1,099,511,627,776 bytes (binary measure, about 1.1 trillion bytes).
 
    - In powers of 1024: `1 TB = 1024 GB = 1024 × 1024 MB = 1024 × 1024 × 1024 KB`
    - Storage manufacturers use the decimal measure instead: `1 TB = 10¹² = 1,000,000,000,000 bytes`. This is why a "1 TB" disk shows as about 931 GB in Windows.
@@ -271,14 +271,14 @@ Answer: **1 TB = 2⁴⁰ bytes = 1,099,511,627,776 bytes** (binary measure, abou
 9. **Write full form of NAT, DHCP, MAC and TCP-IP** *[NSDA Assistant Maintenance Engineer 11.05.2024 compact it 384 (ET: N/A)]*
 
 Answer:
-   - **NAT** — Network Address Translation. Maps private IP addresses to a public one so many devices share a single public IP.
-   - **DHCP** — Dynamic Host Configuration Protocol. Assigns IP address, subnet mask, gateway and DNS automatically.
-   - **MAC** — Media Access Control. A 48-bit hardware address burned into the network card, written as `00:1A:2B:3C:4D:5E`.
-   - **TCP/IP** — Transmission Control Protocol / Internet Protocol. The 4-layer protocol suite the internet runs on.
+   - NAT — Network Address Translation. Maps private IP addresses to a public one so many devices share a single public IP.
+   - DHCP — Dynamic Host Configuration Protocol. Assigns IP address, subnet mask, gateway and DNS automatically.
+   - MAC — Media Access Control. A 48-bit hardware address burned into the network card, written as `00:1A:2B:3C:4D:5E`.
+   - TCP/IP — Transmission Control Protocol / Internet Protocol. The 4-layer protocol suite the internet runs on.
 
 10. **What is the base of 5th generation Computer?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
-Answer: The base of the fifth generation computer is **Artificial Intelligence (AI)**, built on **ULSI (Ultra Large Scale Integration)** technology.
+Answer: The base of the fifth generation computer is Artificial Intelligence (AI), built on ULSI (Ultra Large Scale Integration) technology.
 
     - Fifth generation runs from 1980 to the present.
     - Features: parallel processing, AI and expert systems, natural language processing, voice and image recognition, and quantum and nanotechnology research.
@@ -298,42 +298,35 @@ Answer: A computer generation means a stage of development in computer technolog
     | Fifth | 1980-present | ULSI, AI | LISP, PROLOG, parallel processing | Modern PCs, IBM Watson |
 
     Key characteristics by generation
-    - **First** — huge machines filling a room, very high power use and heat, punch-card input, magnetic drum memory, extremely unreliable.
-    - **Second** — transistors replaced vacuum tubes, so machines became smaller, faster and far more reliable. Magnetic core memory appeared.
-    - **Third** — ICs packed many transistors on one chip. Keyboard and monitor replaced punch cards, and operating systems allowed multiprogramming.
-    - **Fourth** — the whole CPU fitted on one microprocessor chip. Personal computers, GUI, mouse and networking became normal.
-    - **Fifth** — focus shifted from raw speed to intelligence: AI, natural language, parallel processing and quantum research.
+    - First — huge machines filling a room, very high power use and heat, punch-card input, magnetic drum memory, extremely unreliable.
+    - Second — transistors replaced vacuum tubes, so machines became smaller, faster and far more reliable. Magnetic core memory appeared.
+    - Third — ICs packed many transistors on one chip. Keyboard and monitor replaced punch cards, and operating systems allowed multiprogramming.
+    - Fourth — the whole CPU fitted on one microprocessor chip. Personal computers, GUI, mouse and networking became normal.
+    - Fifth — focus shifted from raw speed to intelligence: AI, natural language, parallel processing and quantum research.
 
 12. **Write short note : SMTP, RIP, RDBMS, ITSQN** *[Sheikh Kamal IT Training & Incubation Center Assistant Programmer/Instructor 04.08.2023 compact it 599 (ET: N/A)]*
 
 Answer:
-    - **SMTP (Simple Mail Transfer Protocol)** — the push protocol used to SEND email from a client to a server and between mail servers. Uses port 25 (587 with authentication). It only sends; POP3 and IMAP are used to receive.
-    - **RIP (Routing Information Protocol)** — a distance-vector routing protocol that uses hop count as its metric, with a maximum of 15 hops. Simple but slow to converge, so it suits only small networks. Based on the Bellman-Ford algorithm.
-    - **RDBMS (Relational Database Management System)** — software that stores data in related tables of rows and columns, enforces primary and foreign keys, and supports SQL and ACID transactions. Examples: Oracle, MySQL, PostgreSQL, SQL Server.
-    - **ITSQN** — this acronym is not a standard IT term; it appears to be a transcription error in the question paper. The likely intended term is **ISQL** (Interactive SQL) or **SQL** itself.  <!-- verify -->
+    - SMTP (Simple Mail Transfer Protocol) — the push protocol used to SEND email from a client to a server and between mail servers. Uses port 25 (587 with authentication). It only sends; POP3 and IMAP are used to receive.
+    - RIP (Routing Information Protocol) — a distance-vector routing protocol that uses hop count as its metric, with a maximum of 15 hops. Simple but slow to converge, so it suits only small networks. Based on the Bellman-Ford algorithm.
+    - RDBMS (Relational Database Management System) — software that stores data in related tables of rows and columns, enforces primary and foreign keys, and supports SQL and ACID transactions. Examples: Oracle, MySQL, PostgreSQL, SQL Server.
+    - ITSQN — this acronym is not a standard IT term; it appears to be a transcription error in the question paper. The likely intended term is ISQL (Interactive SQL) or SQL itself.  <!-- verify -->
 
 13. **Write down the Meaning: MIME, PNG, JPGE, OSPF** *[Sheikh Hasina National Institute of Youth Development Instructor ICT 20.05.2023 compact it 507 (ET: N/A)]*
 
 Answer:
-    - **MIME** — Multipurpose Internet Mail Extensions. Extends email to carry non-text content such as images, audio and attachments, and defines content types like `text/html` and `image/png`.
-    - **PNG** — Portable Network Graphics. A lossless image format supporting transparency; replaced GIF for still images.
-    - **JPEG** — Joint Photographic Experts Group. A lossy compressed image format, best for photographs. (The question spells it "JPGE".)
-    - **OSPF** — Open Shortest Path First. A link-state interior gateway routing protocol that uses Dijkstra's algorithm and cost as its metric.
+    - MIME — Multipurpose Internet Mail Extensions. Extends email to carry non-text content such as images, audio and attachments, and defines content types like `text/html` and `image/png`.
+    - PNG — Portable Network Graphics. A lossless image format supporting transparency; replaced GIF for still images.
+    - JPEG — Joint Photographic Experts Group. A lossy compressed image format, best for photographs. (The question spells it "JPGE".)
+    - OSPF — Open Shortest Path First. A link-state interior gateway routing protocol that uses Dijkstra's algorithm and cost as its metric.
 
 14. **Full meaning of : HTTPs** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
-Answer: **HTTPS — HyperText Transfer Protocol Secure.**
+Answer: HTTPS — HyperText Transfer Protocol Secure.
     - It is HTTP running inside an SSL/TLS encrypted tunnel, using port 443 instead of 80.
     - It provides encryption (data cannot be read in transit), authentication (the server proves its identity with a certificate) and integrity (data cannot be altered undetected).
 
 15. **Here some idea in computer architecture. You fill the idea part of the table which describe the best? GUI, RAID, API, LRU** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 453 (ET: BUET)]*
-| Term | Description |
-|---|---|
-| GUI |  |
-| RAID |  |
-| API |  |
-| LRU |  |
-
 | Term | Description |
 |---|---|
 | GUI |  |
@@ -358,16 +351,16 @@ Answer: **HTTPS — HyperText Transfer Protocol Secure.**
 
 Answer: The options were not printed. The common image file extensions are:
 
-    - **Raster (bitmap)**: `.jpg` / `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`, `.webp`
-    - **Vector**: `.svg`, `.ai`, `.eps`
-    - **Camera raw**: `.raw`, `.cr2`, `.nef`
+    - Raster (bitmap): `.jpg` / `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`, `.webp`
+    - Vector: `.svg`, `.ai`, `.eps`
+    - Camera raw: `.raw`, `.cr2`, `.nef`
 
     - Not image extensions: `.doc`, `.pdf`, `.mp3`, `.mp4`, `.txt`, `.exe`.
     - In a multiple-choice question the correct option is whichever of the list above appears.
 
 17. **What is OCR? Write down the difference between OCR and OMR.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
-Answer: **OCR (Optical Character Recognition)** is the technology that reads printed or handwritten TEXT from a scanned image and converts it into editable, machine-readable text.
+Answer: OCR (Optical Character Recognition) is the technology that reads printed or handwritten TEXT from a scanned image and converts it into editable, machine-readable text.
 
     | Point | OCR | OMR |
     |---|---|---|
@@ -380,15 +373,15 @@ Answer: **OCR (Optical Character Recognition)** is the technology that reads pri
     | Special paper | Not required | Requires a pre-printed form with fixed mark positions |
     | Use | Scanning books, passport reading, number-plate recognition, cheque processing | MCQ answer sheets, ballot papers, surveys, attendance sheets |
 
-    - A third related technology is **MICR (Magnetic Ink Character Recognition)**, used on bank cheques, which reads characters printed in magnetic ink.
+    - A third related technology is MICR (Magnetic Ink Character Recognition), used on bank cheques, which reads characters printed in magnetic ink.
 
 18. **১৬. পূর্ণরূপ লিখুন: HTTP, POP, ATM, PROM** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 670 (ET: N/A)]*
 
 Answer:
-    - **HTTP** — HyperText Transfer Protocol
-    - **POP** — Post Office Protocol (POP3 is version 3, used to download email, port 110)
-    - **ATM** — Automated Teller Machine (in networking it also means Asynchronous Transfer Mode)
-    - **PROM** — Programmable Read Only Memory (write-once memory; EPROM is erasable by UV light, EEPROM electrically)
+    - HTTP — HyperText Transfer Protocol
+    - POP — Post Office Protocol (POP3 is version 3, used to download email, port 110)
+    - ATM — Automated Teller Machine (in networking it also means Asynchronous Transfer Mode)
+    - PROM — Programmable Read Only Memory (write-once memory; EPROM is erasable by UV light, EEPROM electrically)
 
 19. **Write short notes on: (i) RAM (ii) ROM (iii) Primary key (iv) Foreign key (v) Data** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 671 (ET: N/A)]*
 
@@ -420,17 +413,17 @@ Answer:
 
 20. **Write down the full meaning of SMTP?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-Answer: **SMTP — Simple Mail Transfer Protocol.**
+Answer: SMTP — Simple Mail Transfer Protocol.
     - An application-layer protocol used to SEND email from a client to a mail server, and between mail servers.
     - Default port 25; port 587 with authentication and port 465 for SMTPS.
     - It only pushes mail out. Receiving mail uses POP3 (port 110) or IMAP (port 143).
 
 21. **What is first programming language?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-Answer: **FORTRAN (Formula Translation)** is regarded as the first high-level programming language. It was developed by John Backus at IBM in 1957 for scientific and engineering computation.
+Answer: FORTRAN (Formula Translation) is regarded as the first high-level programming language. It was developed by John Backus at IBM in 1957 for scientific and engineering computation.
 
-    - The first programming language of any kind was **Plankalkül**, designed by Konrad Zuse in 1945, but it was never implemented at the time.
-    - **Ada Lovelace** wrote the first algorithm intended for a machine in 1843, which is why she is called the first programmer.
+    - The first programming language of any kind was Plankalkül, designed by Konrad Zuse in 1945, but it was never implemented at the time.
+    - Ada Lovelace wrote the first algorithm intended for a machine in 1843, which is why she is called the first programmer.
     - Before high-level languages, programs were written in machine language (binary) and then assembly language.
     - Other early languages: COBOL (1959, business), LISP (1958, AI), ALGOL (1958).
 
@@ -447,11 +440,11 @@ Answer:
     | Example | A desktop CPU box | The whole banking system: servers, banking software, database, operators and operating rules |
 
     The five elements of a computer system
-    - **Hardware** — the physical parts.
-    - **Software** — system and application programs.
-    - **Data** — the raw facts the system processes.
-    - **People (liveware)** — users, operators, programmers.
-    - **Procedures** — the documented rules for operating it.
+    - Hardware — the physical parts.
+    - Software — system and application programs.
+    - Data — the raw facts the system processes.
+    - People (liveware) — users, operators, programmers.
+    - Procedures — the documented rules for operating it.
 
     - In short: a computer is a component; a computer system is the whole working solution.
 
@@ -459,31 +452,31 @@ Answer:
 
 Answer:
 
-    - **(a) Plaintext** — the original readable message before encryption. After encryption it becomes ciphertext.
-    - **(b) HTTP** — HyperText Transfer Protocol; the application-layer protocol that transfers web pages, port 80. It is stateless and request-response based.
-    - **(c) Gateway** — operates at the **Application layer** (layer 7), the highest layer. It connects two networks that use completely different protocols and can translate between them. (A router works at layer 3, a switch at layer 2, a repeater at layer 1.)
-    - **(d) VIRUS** — Vital Information Resources Under Seize.
-    - **(e) Father of Computer** — **Charles Babbage**, for designing the Analytical Engine. (Alan Turing is called the father of modern computing and AI; John von Neumann gave the stored-program architecture.)
-    - **(f) Cyber security** — the practice of protecting computers, networks, programs and data from unauthorised access, attack and damage. Its three goals are the CIA triad: Confidentiality, Integrity and Availability.
-    - **(g) Malware** — malicious software written to damage or gain unauthorised access to a system. Types: virus, worm, trojan horse, ransomware, spyware, adware, rootkit.
-    - **(h) IEEE standards** — Wi-Fi is **IEEE 802.11** (802.11a/b/g/n/ac/ax); WiMAX is **IEEE 802.16**.
-    - **(i) Two HTML empty tags** — `<br>` (line break) and `<img>` (image). Others: `<hr>`, `<input>`, `<meta>`, `<link>`. An empty tag has no closing tag and no content.
+    - (a) Plaintext — the original readable message before encryption. After encryption it becomes ciphertext.
+    - (b) HTTP — HyperText Transfer Protocol; the application-layer protocol that transfers web pages, port 80. It is stateless and request-response based.
+    - (c) Gateway — operates at the Application layer (layer 7), the highest layer. It connects two networks that use completely different protocols and can translate between them. (A router works at layer 3, a switch at layer 2, a repeater at layer 1.)
+    - (d) VIRUS — Vital Information Resources Under Seize.
+    - (e) Father of Computer — Charles Babbage, for designing the Analytical Engine. (Alan Turing is called the father of modern computing and AI; John von Neumann gave the stored-program architecture.)
+    - (f) Cyber security — the practice of protecting computers, networks, programs and data from unauthorised access, attack and damage. Its three goals are the CIA triad: Confidentiality, Integrity and Availability.
+    - (g) Malware — malicious software written to damage or gain unauthorised access to a system. Types: virus, worm, trojan horse, ransomware, spyware, adware, rootkit.
+    - (h) IEEE standards — Wi-Fi is IEEE 802.11 (802.11a/b/g/n/ac/ax); WiMAX is IEEE 802.16.
+    - (i) Two HTML empty tags — `<br>` (line break) and `<img>` (image). Others: `<hr>`, `<input>`, `<meta>`, `<link>`. An empty tag has no closing tag and no content.
 
 24. **Write full form: DHCP, POP3, VSAT and LCD.** *[IDRA Assistant Network Administrator 2022 compact it 728 (ET: N/A)]*
 
 Answer:
-    - **DHCP** — Dynamic Host Configuration Protocol. Automatically assigns IP address, subnet mask, default gateway and DNS to a host.
-    - **POP3** — Post Office Protocol version 3. Downloads email from the server to the client, port 110.
-    - **VSAT** — Very Small Aperture Terminal. A small satellite dish used for two-way data communication, widely used for remote bank branches and rural connectivity.
-    - **LCD** — Liquid Crystal Display. A flat-panel display that uses liquid crystals and a backlight.
+    - DHCP — Dynamic Host Configuration Protocol. Automatically assigns IP address, subnet mask, default gateway and DNS to a host.
+    - POP3 — Post Office Protocol version 3. Downloads email from the server to the client, port 110.
+    - VSAT — Very Small Aperture Terminal. A small satellite dish used for two-way data communication, widely used for remote bank branches and rural connectivity.
+    - LCD — Liquid Crystal Display. A flat-panel display that uses liquid crystals and a backlight.
 
 25. **বিশ্বের সবচেয়ে শক্তিশালী সুপার কম্পিউটারের নাম কী?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-Answer: As of the TOP500 list of June 2026, the world's most powerful supercomputer is **LineShine**, installed at the National Supercomputing Centre in Shenzhen, China.
+Answer: As of the TOP500 list of June 2026, the world's most powerful supercomputer is LineShine, installed at the National Supercomputing Centre in Shenzhen, China.
 
-    - Performance: **2.198 Exaflop/s** on the High Performance Linpack (HPL) benchmark.
+    - Performance: 2.198 Exaflop/s on the High Performance Linpack (HPL) benchmark.
     - It is built on a custom Chinese processor and the "LingKun" platform.
-    - It displaced **El Capitan** (Lawrence Livermore National Laboratory, USA, 1.809 Exaflop/s), which is now second.
+    - It displaced El Capitan (Lawrence Livermore National Laboratory, USA, 1.809 Exaflop/s), which is now second.
     - This is the first China-based system to lead the list since Sunway TaihuLight in 2017.
 
     Recent order of the TOP500
@@ -498,9 +491,9 @@ Answer: As of the TOP500 list of June 2026, the world's most powerful supercompu
 
 26. **“Copy and Paste” এর উদ্ভাবক কে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
-Answer: **Larry Tesler** invented cut, copy and paste.
+Answer: Larry Tesler invented cut, copy and paste.
 
-    - He developed it with his colleague Tim Mott at **Xerox PARC in the 1970s**, while building the Gypsy word processor.
+    - He developed it with his colleague Tim Mott at Xerox PARC in the 1970s, while building the Gypsy word processor.
     - The idea came from the physical practice of cutting text with scissors and pasting it onto a page.
     - Larry Tesler later worked at Apple, Amazon and Yahoo. He died in February 2020 at the age of 74.
 
@@ -519,44 +512,44 @@ Answer:
     | Example | `45`, `Rahim`, `2024` | "Rahim scored 45 marks in the 2024 exam" |
 
     The information hierarchy
-    - **Data → Information → Knowledge → Wisdom**
+    - Data → Information → Knowledge → Wisdom
     - Data is raw facts; information is data with meaning; knowledge is information plus experience and rules; wisdom is knowing how to apply it.
 
 28. **পূর্ণরূপ লিখুন: BTRC, MICR, SMTP, Virus, Wimax.** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
 
 Answer:
-    - **BTRC** — Bangladesh Telecommunication Regulatory Commission. The national regulator for telecom and internet, established in 2002.
-    - **MICR** — Magnetic Ink Character Recognition. Reads characters printed in magnetic ink, used on the bottom line of bank cheques.
-    - **SMTP** — Simple Mail Transfer Protocol. Sends email, port 25.
-    - **VIRUS** — Vital Information Resources Under Seize.
-    - **WiMAX** — Worldwide Interoperability for Microwave Access. A long-range wireless broadband standard, IEEE 802.16.
+    - BTRC — Bangladesh Telecommunication Regulatory Commission. The national regulator for telecom and internet, established in 2002.
+    - MICR — Magnetic Ink Character Recognition. Reads characters printed in magnetic ink, used on the bottom line of bank cheques.
+    - SMTP — Simple Mail Transfer Protocol. Sends email, port 25.
+    - VIRUS — Vital Information Resources Under Seize.
+    - WiMAX — Worldwide Interoperability for Microwave Access. A long-range wireless broadband standard, IEEE 802.16.
 
 29. **Internet চালু হয় কত সালে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
 Answer: The answer depends on which milestone is meant, so all three should be stated.
 
-    - **1969** — ARPANET, the ancestor of the internet, went live. The first message was sent between UCLA and Stanford on 29 October 1969. This is the usual exam answer for "when did the internet start".
-    - **1 January 1983** — ARPANET switched to TCP/IP. This date is considered the official birth of the modern INTERNET, because networks could now interconnect.
-    - **1991** — Tim Berners-Lee released the World Wide Web to the public. The WWW is a service running ON the internet, not the internet itself.
+    - 1969 — ARPANET, the ancestor of the internet, went live. The first message was sent between UCLA and Stanford on 29 October 1969. This is the usual exam answer for "when did the internet start".
+    - 1 January 1983 — ARPANET switched to TCP/IP. This date is considered the official birth of the modern INTERNET, because networks could now interconnect.
+    - 1991 — Tim Berners-Lee released the World Wide Web to the public. The WWW is a service running ON the internet, not the internet itself.
 
-    - In Bangladesh, internet arrived in **1996** with VSAT connectivity, and submarine cable connection (SEA-ME-WE 4) came in **2006**.
+    - In Bangladesh, internet arrived in 1996 with VSAT connectivity, and submarine cable connection (SEA-ME-WE 4) came in 2006.
 
 30. **আধুনিক Computer এর জনক কাকে বলা হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: **Charles Babbage** is called the Father of the Computer, for designing the Analytical Engine in 1837 — the first design of a general-purpose programmable computer.
+Answer: Charles Babbage is called the Father of the Computer, for designing the Analytical Engine in 1837 — the first design of a general-purpose programmable computer.
 
-    - **Alan Turing** is called the Father of Modern Computing and Artificial Intelligence, for the Turing machine model (1936) and the Turing Test (1950).
-    - **John von Neumann** gave the stored-program architecture (1945) that all modern computers still follow.
-    - **Ada Lovelace** is called the first programmer, for writing an algorithm for Babbage's Analytical Engine in 1843.
+    - Alan Turing is called the Father of Modern Computing and Artificial Intelligence, for the Turing machine model (1936) and the Turing Test (1950).
+    - John von Neumann gave the stored-program architecture (1945) that all modern computers still follow.
+    - Ada Lovelace is called the first programmer, for writing an algorithm for Babbage's Analytical Engine in 1843.
 
-    - If the Bangla question specifically says "আধুনিক" (modern), **Alan Turing** is the expected answer; for plain "Father of Computer" it is Charles Babbage.
+    - If the Bangla question specifically says "আধুনিক" (modern), Alan Turing is the expected answer; for plain "Father of Computer" it is Charles Babbage.
 
 31. **Unicode এর মাধ্যমে সম্ভাব্য কতগুলো চিহ্নকে নির্দিষ্ট করা যায়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: Unicode defines **1,114,112 code points** in total.
+Answer: Unicode defines 1,114,112 code points in total.
 
     How that number arises
-    - Unicode is organised into **17 planes**, numbered 0 to 16.
+    - Unicode is organised into 17 planes, numbered 0 to 16.
     - Each plane holds `2¹⁶ = 65,536` code points.
     - Total = `17 × 65,536 = 1,114,112`.
 
@@ -567,24 +560,24 @@ Answer: Unicode defines **1,114,112 code points** in total.
 
 32. **Computer এর IQ কত?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: **The IQ of a computer is zero.**
+Answer: The IQ of a computer is zero.
 
     - A computer has no intelligence of its own. It only follows the instructions written by a programmer, exactly and without understanding.
     - It cannot think, reason, feel or make an independent judgement, so no IQ can be assigned to it.
-    - This is why the classic saying is **GIGO — Garbage In, Garbage Out**: a computer will faithfully produce a wrong answer from wrong input.
+    - This is why the classic saying is GIGO — Garbage In, Garbage Out: a computer will faithfully produce a wrong answer from wrong input.
     - Its real strengths are speed, accuracy, tireless repetition and huge storage — not intelligence.
 
 33. **Bangla font এর উদ্ভাবক কে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: **Mustafa Jabbar** developed the **Bijoy** Bangla keyboard and font package in 1988, and it became the standard for Bangla computing in Bangladesh for decades. He later served as Minister of Posts and Telecommunications.
+Answer: Mustafa Jabbar developed the Bijoy Bangla keyboard and font package in 1988, and it became the standard for Bangla computing in Bangladesh for decades. He later served as Minister of Posts and Telecommunications.
 
-    - Before Bijoy, **Shahid Lipi** — developed by Saif ud Doula in 1985 — was the first Bangla software for computers.
-    - **Avro Keyboard**, developed by Mehdi Hasan Khan in 2003, was the first free and open-source Unicode-based Bangla writing software, and is now the most widely used.
+    - Before Bijoy, Shahid Lipi — developed by Saif ud Doula in 1985 — was the first Bangla software for computers.
+    - Avro Keyboard, developed by Mehdi Hasan Khan in 2003, was the first free and open-source Unicode-based Bangla writing software, and is now the most widely used.
     - For the older ASCII-based system the expected exam answer is Mustafa Jabbar (Bijoy); for the free Unicode system it is Mehdi Hasan Khan (Avro).
 
 34. **How many bit is use of Unicode digit? (a) 8 (b) 16 (c) 20 (d) 24** *[BCC Assistant Programmer 12.02.2021 compact it 811 (ET: BUET)]*
 
-Answer: **(b) 16 bits.**
+Answer: (b) 16 bits.
 
     - The original Unicode standard used 16 bits per character, giving `2¹⁶ = 65,536` characters. This is the range now called the Basic Multilingual Plane.
     - Modern Unicode has extended beyond 16 bits to 17 planes and 1,114,112 code points, and UTF-8 uses 1 to 4 bytes per character.
@@ -592,16 +585,16 @@ Answer: **(b) 16 bits.**
 
 35. **Which year gmail is started? (a) 1998 (b) 1988 (c) 2004 (d) 2021** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-Answer: **(c) 2004.**
+Answer: (c) 2004.
 
-    - Gmail was launched by Google on **1 April 2004**, initially as an invitation-only beta service.
+    - Gmail was launched by Google on 1 April 2004, initially as an invitation-only beta service.
     - It offered 1 GB of free storage at a time when rivals gave 2-4 MB, which is why many people first thought the announcement was an April Fool's joke.
     - It opened to everyone in 2007 and left beta status in 2009.
     - Note: 1998 is the year Google itself was founded.
 
 36. **Meaning of the GPS system? (a) Global Pointing System (b) Global Positioning System (c) Global Partion System (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-Answer: **(b) Global Positioning System.**
+Answer: (b) Global Positioning System.
 
     - A satellite-based navigation system operated by the United States, giving location and time anywhere on Earth.
     - It uses a constellation of at least 24 satellites. A receiver needs signals from at least 4 satellites to fix latitude, longitude, altitude and time, using a technique called trilateration.
@@ -611,103 +604,103 @@ Answer: **(b) Global Positioning System.**
 
 Answer:
 
-    **(i) x = −1**
+    (i) x = −1
     - Precedence: `*`, `%` and `/` bind tighter than `+` and `−`, and they are evaluated left to right.
     - `3 * 7 = 21`
     - `21 % 4 = 1`
     - `1 / 2 = 0` (integer division truncates)
     - `x = 2 + 0 − 3 = −1`
 
-    **(ii) Merge sort, Quick sort and Binary search** are based on divide and conquer.
+    (ii) Merge sort, Quick sort and Binary search are based on divide and conquer.
     - Also: Strassen's matrix multiplication, closest pair of points, and the Fast Fourier Transform.
 
-    **(iii) IP (Internet Protocol)**
+    (iii) IP (Internet Protocol)
     - IP is the internetworking protocol — it routes packets between different networks and provides the logical addressing that makes internetworking possible.
 
-    **(iv) Concurrency control**
+    (iv) Concurrency control
     - Locking protocols such as Two-Phase Locking (2PL) prevent concurrent transactions from interfering, preserving the isolation property of ACID and avoiding lost updates and dirty reads.
 
-    **(v) rwx-----x**
+    (v) rwx-----x
     - `chmod 701` sets the three octal digits: owner = 7 = `rwx`, group = 0 = `---`, others = 1 = `--x`.
     - The previous permission `rwxrw---x` is completely replaced, not merged.
 
-    **(vi) Adjacency matrix is better for a DENSE graph** — so option (a), read as "adjacency matrix is better [for a] dense graph".
+    (vi) Adjacency matrix is better for a DENSE graph — so option (a), read as "adjacency matrix is better [for a] dense graph".
     - A matrix costs `O(V²)` space regardless of edge count, which is only justified when `E` approaches `V²`. For a sparse graph the adjacency list at `O(V + E)` is far better.
 
-    **(vii) Starvation** (also called indefinite blocking).
+    (vii) Starvation (also called indefinite blocking).
     - If resources are always taken away from the same process, that process never completes. Aging — gradually raising the priority of a waiting process — is the standard solution.
 
-    **(viii) The constructor**, invoked by the `new` keyword.
+    (viii) The constructor, invoked by the `new` keyword.
     - `Student s = new Student();` — `new` allocates memory and the constructor initialises the object.
 
-    **(ix) The view level** — the user's individual view of the database.
+    (ix) The view level — the user's individual view of the database.
     - The three-schema architecture is: external level (individual user views), conceptual level (the whole logical structure) and internal level (physical storage).
 
-    **(x) Error detection** — the checksum detects errors but cannot correct them.
+    (x) Error detection — the checksum detects errors but cannot correct them.
     - The sender adds the data words and sends the complement of the sum. The receiver adds everything including the checksum; a result of all 1s means no error was detected.
 
 38. **Facebook এর জনক কে?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-Answer: **Mark Zuckerberg** is the founder of Facebook.
+Answer: Mark Zuckerberg is the founder of Facebook.
 
-    - He created it in **February 2004** while a student at Harvard University, originally as "TheFacebook".
+    - He created it in February 2004 while a student at Harvard University, originally as "TheFacebook".
     - Co-founders: Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.
-    - The parent company was renamed **Meta Platforms** in October 2021.
+    - The parent company was renamed Meta Platforms in October 2021.
 
 39. **Write the full form of: VIRUS, BIOS, DoS attack, OSPF, DVD, WiFi.** *[BCC CA Monitoring System Project 2021 compact it 830 (ET: N/A)]*
 
 Answer:
-    - **VIRUS** — Vital Information Resources Under Seize
-    - **BIOS** — Basic Input Output System. Firmware in ROM that starts the hardware and loads the operating system.
-    - **DoS attack** — Denial of Service attack. Floods a server so that legitimate users cannot reach it. DDoS is the distributed version, using many machines.
-    - **OSPF** — Open Shortest Path First. A link-state routing protocol using Dijkstra's algorithm.
-    - **DVD** — Digital Versatile Disc
-    - **Wi-Fi** — Wireless Fidelity (a marketing name; the standard is IEEE 802.11)
+    - VIRUS — Vital Information Resources Under Seize
+    - BIOS — Basic Input Output System. Firmware in ROM that starts the hardware and loads the operating system.
+    - DoS attack — Denial of Service attack. Floods a server so that legitimate users cannot reach it. DDoS is the distributed version, using many machines.
+    - OSPF — Open Shortest Path First. A link-state routing protocol using Dijkstra's algorithm.
+    - DVD — Digital Versatile Disc
+    - Wi-Fi — Wireless Fidelity (a marketing name; the standard is IEEE 802.11)
 
 40. **Write down the full meaning: DHCP, ICMP, ACNS, GARP.** *[RAKUB Network System Engineer (PO) 10.10.2021 compact it 842 (ET: N/A)]*
 
 Answer:
-    - **DHCP** — Dynamic Host Configuration Protocol. Automatically assigns IP address, subnet mask, gateway and DNS to hosts. Uses ports 67 and 68.
-    - **ICMP** — Internet Control Message Protocol. Carries error and diagnostic messages; used by `ping` and `traceroute`.
-    - **GARP** — Gratuitous ARP. An ARP message a device sends about its OWN address, unasked, to announce a changed IP or MAC or to detect an address conflict. (In switching, GARP also stands for Generic Attribute Registration Protocol, IEEE 802.1D.)
-    - **ACNS** — this is not a standard networking acronym. It most likely refers to **Cisco ACNS (Application and Content Networking System)**, Cisco's content delivery and caching platform.  <!-- verify -->
+    - DHCP — Dynamic Host Configuration Protocol. Automatically assigns IP address, subnet mask, gateway and DNS to hosts. Uses ports 67 and 68.
+    - ICMP — Internet Control Message Protocol. Carries error and diagnostic messages; used by `ping` and `traceroute`.
+    - GARP — Gratuitous ARP. An ARP message a device sends about its OWN address, unasked, to announce a changed IP or MAC or to detect an address conflict. (In switching, GARP also stands for Generic Attribute Registration Protocol, IEEE 802.1D.)
+    - ACNS — this is not a standard networking acronym. It most likely refers to Cisco ACNS (Application and Content Networking System), Cisco's content delivery and caching platform.  <!-- verify -->
 
 41. **Write the full form: TCP/IP, DHCP, XML, PoSQL, CSMA** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 920 (ET: N/A)]*
 
 Answer:
-    - **TCP/IP** — Transmission Control Protocol / Internet Protocol. The 4-layer suite the internet runs on.
-    - **DHCP** — Dynamic Host Configuration Protocol.
-    - **XML** — eXtensible Markup Language. A self-describing text format for storing and transporting structured data.
-    - **PoSQL** — almost certainly a transcription of **PostgreSQL** (Postgres + SQL), the open-source object-relational database. Alternatively **PL/SQL** — Procedural Language extension to SQL, used in Oracle.  <!-- verify -->
-    - **CSMA** — Carrier Sense Multiple Access. A media access method where a station listens before transmitting. Variants: CSMA/CD (Collision Detection, used in wired Ethernet) and CSMA/CA (Collision Avoidance, used in Wi-Fi).
+    - TCP/IP — Transmission Control Protocol / Internet Protocol. The 4-layer suite the internet runs on.
+    - DHCP — Dynamic Host Configuration Protocol.
+    - XML — eXtensible Markup Language. A self-describing text format for storing and transporting structured data.
+    - PoSQL — almost certainly a transcription of PostgreSQL (Postgres + SQL), the open-source object-relational database. Alternatively PL/SQL — Procedural Language extension to SQL, used in Oracle.  <!-- verify -->
+    - CSMA — Carrier Sense Multiple Access. A media access method where a station listens before transmitting. Variants: CSMA/CD (Collision Detection, used in wired Ethernet) and CSMA/CA (Collision Avoidance, used in Wi-Fi).
 
 42. **Which It company nickname is “The Big Blue”?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-Answer: **IBM (International Business Machines Corporation).**
+Answer: IBM (International Business Machines Corporation).
 
     - The nickname comes from the company's blue logo, its blue mainframe cabinets and the traditional blue suits of its salesmen.
     - IBM was founded in 1911 and is one of the oldest technology companies still operating.
 
 43. **Whose codename was Longhorn?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-Answer: **Windows Vista** — "Longhorn" was its development codename at Microsoft.
+Answer: Windows Vista — "Longhorn" was its development codename at Microsoft.
 
     - Windows Vista was released in January 2007, between Windows XP and Windows 7.
     - Other Microsoft codenames: Windows XP was "Whistler", Windows 7 was "Blackcomb" / "Vienna", and Windows Server 2003 was "Whistler Server".
 
 44. **What does COBOL stand for?** *[BSEC Assistant Director (MIS) 2021 compact it 938 (ET: IBA)]*
 
-Answer: **COBOL — COmmon Business Oriented Language.**
+Answer: COBOL — COmmon Business Oriented Language.
 
-    - Developed in 1959, largely through the work of **Grace Hopper**, for business, finance and administrative data processing.
+    - Developed in 1959, largely through the work of Grace Hopper, for business, finance and administrative data processing.
     - Its English-like syntax was designed so that non-programmers could read it.
     - It is still heavily used in banking, insurance and government mainframe systems — a large share of the world's daily financial transactions still passes through COBOL code.
 
 45. **১৭. কোন প্রজন্মের কম্পিউটারে VLSI (Very Large Scale Integration) চিপ ব্যবহার শুরু হয়?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-Answer: **The fourth generation (1971-1980).**
+Answer: The fourth generation (1971-1980).
 
-    - VLSI packed thousands of transistors onto a single chip, which made the **microprocessor** possible — the entire CPU on one chip.
+    - VLSI packed thousands of transistors onto a single chip, which made the microprocessor possible — the entire CPU on one chip.
     - This is what created the personal computer. The Intel 4004 (1971) was the first microprocessor.
 
     Integration levels by generation
@@ -721,25 +714,25 @@ Answer: **The fourth generation (1971-1980).**
 46. **JPEG and RAID full form কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 943-944 (ET: N/A)]*
 
 Answer:
-    - **JPEG** — Joint Photographic Experts Group. A lossy image compression standard, best suited to photographs. File extension `.jpg` or `.jpeg`.
-    - **RAID** — Redundant Array of Independent Disks (originally "Inexpensive"). Combines several physical disks into one logical unit for speed, redundancy or both.
+    - JPEG — Joint Photographic Experts Group. A lossy image compression standard, best suited to photographs. File extension `.jpg` or `.jpeg`.
+    - RAID — Redundant Array of Independent Disks (originally "Inexpensive"). Combines several physical disks into one logical unit for speed, redundancy or both.
     - Common RAID levels: RAID 0 (striping, speed only), RAID 1 (mirroring, redundancy), RAID 5 (striping with distributed parity), RAID 10 (mirror + stripe).
 
 47. **VGA, EGA এর পূর্ণ নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
 Answer:
-    - **VGA** — Video Graphics Array. Introduced by IBM in 1987, resolution 640 × 480 with 16 colours, or 320 × 200 with 256 colours. The blue 15-pin D-sub connector is still called a VGA port.
-    - **EGA** — Enhanced Graphics Adapter. Introduced in 1984, resolution 640 × 350 with 16 colours from a 64-colour palette. It came before VGA.
+    - VGA — Video Graphics Array. Introduced by IBM in 1987, resolution 640 × 480 with 16 colours, or 320 × 200 with 256 colours. The blue 15-pin D-sub connector is still called a VGA port.
+    - EGA — Enhanced Graphics Adapter. Introduced in 1984, resolution 640 × 350 with 16 colours from a 64-colour palette. It came before VGA.
 
     - Order of display standards: MDA → CGA → EGA → VGA → SVGA → XGA.
 
 48. **পূর্ণরূপ লিখ: (a) LTE (b) IOT (c) RDBMS (d) FORTRAN** *[PGCL Sub Assistant Engineer (CSE) 2021 compact it 947-948 (ET: BUET)]*
 
 Answer:
-    - **LTE** — Long Term Evolution. The 4G mobile broadband standard, giving high-speed data over cellular networks.
-    - **IoT** — Internet of Things. A network of physical devices with sensors and software that collect and exchange data over the internet.
-    - **RDBMS** — Relational Database Management System. Stores data in related tables and uses SQL; examples are Oracle, MySQL, PostgreSQL.
-    - **FORTRAN** — FORmula TRANslation. The first high-level programming language, created by John Backus at IBM in 1957 for scientific computation.
+    - LTE — Long Term Evolution. The 4G mobile broadband standard, giving high-speed data over cellular networks.
+    - IoT — Internet of Things. A network of physical devices with sensors and software that collect and exchange data over the internet.
+    - RDBMS — Relational Database Management System. Stores data in related tables and uses SQL; examples are Oracle, MySQL, PostgreSQL.
+    - FORTRAN — FORmula TRANslation. The first high-level programming language, created by John Backus at IBM in 1957 for scientific computation.
 
 49. **Write down the full meaning: (i) DNS (ii) TCP (iii) FTP (iv) ARP (v) UDP** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1045-1046 (ET: BUET)]*
 
@@ -792,45 +785,25 @@ Answer: By size, capacity and processing power, digital computers are divided in
    b) How many bits in IPv6 address?
    c) What is used as a barrier to protect network host/computer?
 
-a) Write the abbreviation of the following terms: HTTP, GUI and ALU.
-   b) How many bits in IPv6 address?
-   c) What is used as a barrier to protect network host/computer?
-
    Answer:
 
-   **(a) Abbreviations**
-   - **HTTP** — HyperText Transfer Protocol. Transfers web pages, port 80.
-   - **GUI** — Graphical User Interface. Windows, icons, menus and pointer, instead of typed commands.
-   - **ALU** — Arithmetic Logic Unit. The part of the CPU that performs arithmetic (`+`, `−`, `×`, `÷`) and logic (`AND`, `OR`, `NOT`, comparison) operations.
+   (a) Abbreviations
+   - HTTP — HyperText Transfer Protocol. Transfers web pages, port 80.
+   - GUI — Graphical User Interface. Windows, icons, menus and pointer, instead of typed commands.
+   - ALU — Arithmetic Logic Unit. The part of the CPU that performs arithmetic (`+`, `−`, `×`, `÷`) and logic (`AND`, `OR`, `NOT`, comparison) operations.
 
-   **(b) IPv6 address = 128 bits**
+   (b) IPv6 address = 128 bits
    - Written as 8 groups of 4 hexadecimal digits, separated by colons: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
    - Total address space is `2¹²⁸`, about 340 undecillion addresses.
    - IPv4 by contrast is 32 bits, giving about 4.3 billion addresses — which is why IPv6 was needed.
 
-   **(c) A firewall**
+   (c) A firewall
    - A firewall is the barrier placed between a trusted internal network and an untrusted external network. It inspects incoming and outgoing traffic against a rule set and blocks anything not permitted.
    - Types: packet-filtering, stateful inspection, proxy (application-level) and next-generation firewalls.
    - It may be hardware, software or both.
 
 52. **Short question:** *[BINA Assistant Programmer 2019 compact it 1154 (ET: IBA)]*
    a) What is full name of ASCII?
-   b) The short cut key to replace a data with another in an Excel sheet is \_\_\_.
-   c) What is full of USB?
-   d) Which function key is use to check spelling?
-   e) The common keyboard arrangement is called the \_\_\_.
-   f) The file system "NTFS" stands for \_\_\_.
-   g) Which of the following properties of a monitor is measured in hertz?
-   h) $(11111110)_2 = (?)_{10}$
-   i) Nibble = ?
-   j) The OSI model has \_\_\_.
-   k) VGA stands for \_\_\_.
-   l) How many bits comprise a unit of a Unicode?
-   m) The brain of any computer system is \_\_\_.
-   n) Which of the following is the save button in computer keyboard?
-   o) How long is an IPv6?
-
-a) What is full name of ASCII?
    b) The short cut key to replace a data with another in an Excel sheet is \_\_\_.
    c) What is full of USB?
    d) Which function key is use to check spelling?
@@ -893,24 +866,24 @@ Answer:
 
 Answer:
 
-    **URL — Uniform Resource Locator**
+    URL — Uniform Resource Locator
     - The complete address of a resource on the internet.
     - Structure: `protocol://domain:port/path?query#fragment`
     - Example: `https://www.example.com:443/products/item?id=25#top`
     - Parts: `https` is the protocol, `www.example.com` the domain, `/products/item` the path, `id=25` the query string.
 
-    **FTP — File Transfer Protocol**
+    FTP — File Transfer Protocol
     - An application-layer protocol for transferring files between a client and a server.
     - Uses two connections: port 21 for control commands and port 20 for the data.
     - Two modes: active and passive. Passive mode is used when the client sits behind a firewall or NAT.
     - FTP sends credentials in plain text, so SFTP or FTPS should be used instead.
 
-    **ASCII — American Standard Code for Information Interchange**
+    ASCII — American Standard Code for Information Interchange
     - A 7-bit character encoding standard defining 128 characters: digits, uppercase and lowercase letters, punctuation and control codes.
     - Key values: `'A'` = 65, `'a'` = 97, `'0'` = 48, space = 32.
     - Extended ASCII uses 8 bits for 256 characters. Unicode has since superseded it for multilingual text.
 
-    **BIOS — Basic Input Output System**
+    BIOS — Basic Input Output System
     - Firmware stored in ROM on the motherboard, the first code that runs when the machine is powered on.
     - Tasks: run POST (Power-On Self-Test) to check hardware, initialise devices, then load the bootloader from the boot device and hand control to the operating system.
     - Settings are stored in CMOS memory, kept alive by a small battery.
@@ -920,34 +893,34 @@ Answer:
 
 Answer:
 
-    **Firewall**
+    Firewall
     - A security barrier between a trusted internal network and an untrusted external one, filtering traffic against a rule set.
     - Types: packet filtering (checks IP and port), stateful inspection (tracks connection state), proxy/application gateway, and next-generation firewalls with deep packet inspection.
 
-    **Microcontroller**
+    Microcontroller
     - A complete small computer on a single chip: CPU, RAM, ROM, I/O ports and timers together.
     - Designed for one dedicated embedded task, with very low power use and low cost.
     - Examples: 8051, Atmel AVR, PIC, Arduino. Used in washing machines, microwave ovens, cars and IoT devices.
 
-    **COCOMO — Constructive Cost Model**
+    COCOMO — Constructive Cost Model
     - A software cost-estimation model by Barry Boehm (1981) that predicts effort and schedule from the estimated lines of code.
     - Basic formula: `Effort = a × (KLOC)^b` person-months.
     - Three project modes: Organic (small, familiar), Semi-detached (medium), Embedded (large, tightly constrained). Each has its own `a` and `b` constants.
 
-    **Query Optimization**
+    Query Optimization
     - The DBMS process of choosing the cheapest execution plan for a SQL query.
     - Steps: parse the query, generate alternative plans, estimate the cost of each using table statistics, and pick the cheapest.
     - Techniques: choosing between index scan and full table scan, reordering joins, selecting a join algorithm (nested loop, hash join, merge join), and pushing selections down so fewer rows flow upward.
 
-    **Genetic Algorithm**
+    Genetic Algorithm
     - A search and optimization technique inspired by natural evolution.
     - Steps: start with a random population of candidate solutions, evaluate each with a fitness function, select the fittest, apply crossover and mutation to produce a new generation, and repeat until the solution is good enough.
     - Used for scheduling, routing, machine learning tuning and other problems where the search space is too large for exhaustive search.
 
-    **UML — Unified Modeling Language**
+    UML — Unified Modeling Language
     - A standard visual notation for designing and documenting software systems.
-    - **Structural diagrams**: class, object, component, deployment, package.
-    - **Behavioural diagrams**: use case, sequence, activity, state, collaboration.
+    - Structural diagrams: class, object, component, deployment, package.
+    - Behavioural diagrams: use case, sequence, activity, state, collaboration.
     - Class diagrams and use case diagrams are the two most used in practice.
 
 56. **You have created a file containing 1 million characters. Suppose you want to save the file in ASCII format. How much memory space in MB in needed to store the file?** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1264 (ET: N/A)]*
@@ -955,7 +928,7 @@ Answer:
 Answer:
 
     Step 1 - bytes per character
-    - ASCII stores each character in **1 byte** (7 bits used, stored in 8 bits).
+    - ASCII stores each character in 1 byte (7 bits used, stored in 8 bits).
 
     Step 2 - total bytes
     - `1,000,000 characters × 1 byte = 1,000,000 bytes`
@@ -965,8 +938,8 @@ Answer:
     - `1,000,000 ÷ 1,048,576 = 0.9537 MB`
 
     Final answer
-    - **Approximately 0.95 MB**, that is roughly 1 MB.
-    - If the decimal standard `1 MB = 1,000,000 bytes` is used instead, the answer is exactly **1 MB**.
+    - Approximately 0.95 MB, that is roughly 1 MB.
+    - If the decimal standard `1 MB = 1,000,000 bytes` is used instead, the answer is exactly 1 MB.
 
     - Note for comparison: in Unicode UTF-16 the same file would need 2 bytes per character and take about 1.91 MB. In UTF-8 it would take 1 byte per character for plain English text, so the same 0.95 MB.
 
@@ -974,19 +947,19 @@ Answer:
 
 Answer:
 
-    **URL — Uniform Resource Locator**
+    URL — Uniform Resource Locator
     - The address that identifies a resource on the web and tells the browser how to fetch it.
     - Format: `protocol://domain/path?query`
     - Example: `https://www.bb.org.bd/econdata/index.php`
 
-    **VoIP — Voice over Internet Protocol**
+    VoIP — Voice over Internet Protocol
     - Technology that carries voice calls over an IP network instead of the traditional telephone circuit.
     - How it works: the analogue voice is digitised, compressed by a codec, split into IP packets and sent over the internet, then reassembled at the other end.
     - Advantages: far cheaper for long distance, works with video and messaging, needs no separate phone line.
     - Drawbacks: quality depends on bandwidth, jitter and packet loss; it fails during a power or internet outage.
     - Examples: WhatsApp calls, Skype, Zoom, Google Meet, IP-PBX systems in offices.
 
-    **Broadband**
+    Broadband
     - A high-speed, always-on internet connection with a data rate well above dial-up. It carries several signals on different frequencies at once, which is where the name comes from.
     - Types: DSL/ADSL over telephone lines, cable over TV coaxial, fibre optic (FTTH), wireless broadband (Wi-Fi, WiMAX) and mobile broadband (4G LTE, 5G) and satellite.
     - Key advantage over dial-up: always connected, far higher speed, and the telephone line stays usable.
@@ -999,66 +972,59 @@ Answer:
    v. ASCII code
    vi. OCR and OMR
 
-i. Search Engine
-   ii. Operating System
-   iii. Website
-   iv. Computer memory
-   v. ASCII code
-   vi. OCR and OMR
-
    Answer:
 
-   **(i) Search Engine**
+   (i) Search Engine
    - A software system that searches the web for pages matching a keyword and ranks the results by relevance.
    - It works in three steps: crawling (bots follow links to discover pages), indexing (storing the page content in a searchable index) and ranking (ordering results by an algorithm such as PageRank).
    - Examples: Google, Bing, DuckDuckGo, Yahoo.
 
-   **(ii) Operating System**
+   (ii) Operating System
    - System software that manages hardware and software resources and provides services to application programs.
    - Functions: process management, memory management, file management, device management, security and user interface.
    - Examples: Windows, Linux, macOS, Android, iOS.
 
-   **(iii) Website**
+   (iii) Website
    - A collection of related web pages hosted under one domain name and accessible over the internet.
    - Built with HTML, CSS and JavaScript, stored on a web server and reached through a URL.
    - Types: static (fixed content) and dynamic (content generated from a database).
 
-   **(iv) Computer memory**
+   (iv) Computer memory
    - The storage that holds data and instructions for the computer.
-   - **Primary memory** — RAM (volatile, working memory) and ROM (non-volatile, firmware).
-   - **Secondary memory** — hard disk, SSD, USB drive, optical disc; non-volatile and much larger.
-   - **Cache memory** — very fast small memory between CPU and RAM.
+   - Primary memory — RAM (volatile, working memory) and ROM (non-volatile, firmware).
+   - Secondary memory — hard disk, SSD, USB drive, optical disc; non-volatile and much larger.
+   - Cache memory — very fast small memory between CPU and RAM.
    - Speed hierarchy from fastest: registers → cache → RAM → SSD → hard disk.
 
-   **(v) ASCII code**
+   (v) ASCII code
    - American Standard Code for Information Interchange, a 7-bit encoding defining 128 characters.
    - Each character maps to a number: `'A'` = 65, `'a'` = 97, `'0'` = 48, space = 32.
    - Extended ASCII uses 8 bits for 256 characters. Unicode replaced it for multilingual text.
 
-   **(vi) OCR and OMR**
-   - **OCR (Optical Character Recognition)** reads printed or handwritten TEXT from a scanned image and converts it into editable text. Used for scanning books, number plates and passports.
-   - **OMR (Optical Mark Recognition)** detects filled MARKS at fixed positions on a pre-printed form. Used for MCQ answer sheets, ballots and surveys. It is faster and more accurate than OCR because it only checks whether a position is dark.
+   (vi) OCR and OMR
+   - OCR (Optical Character Recognition) reads printed or handwritten TEXT from a scanned image and converts it into editable text. Used for scanning books, number plates and passports.
+   - OMR (Optical Mark Recognition) detects filled MARKS at fixed positions on a pre-printed form. Used for MCQ answer sheets, ballots and surveys. It is faster and more accurate than OCR because it only checks whether a position is dark.
 
 59. **What are the characteristics and elements of a computer system?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1277-1278 (ET: N/A)]*
 
 Answer:
 
     Characteristics of a computer
-    - **Speed** — performs millions of operations per second, measured in MIPS or FLOPS.
-    - **Accuracy** — always produces the correct result for correct input; errors come from bad data or bad programs, not the machine (GIGO).
-    - **Automation** — once a program is loaded, it runs without human intervention.
-    - **Diligence** — never gets tired or bored, so the millionth calculation is as accurate as the first.
-    - **Versatility** — the same machine can do accounting, play video and control a factory, just by changing the program.
-    - **Storage capacity** — stores huge volumes of data and retrieves it instantly.
-    - **Reliability** — consistent output over long periods.
-    - **No intelligence and no feelings** — it cannot decide for itself; its IQ is zero.
+    - Speed — performs millions of operations per second, measured in MIPS or FLOPS.
+    - Accuracy — always produces the correct result for correct input; errors come from bad data or bad programs, not the machine (GIGO).
+    - Automation — once a program is loaded, it runs without human intervention.
+    - Diligence — never gets tired or bored, so the millionth calculation is as accurate as the first.
+    - Versatility — the same machine can do accounting, play video and control a factory, just by changing the program.
+    - Storage capacity — stores huge volumes of data and retrieves it instantly.
+    - Reliability — consistent output over long periods.
+    - No intelligence and no feelings — it cannot decide for itself; its IQ is zero.
 
     Elements of a computer system — five parts
-    - **Hardware** — the physical components: CPU, memory, input devices (keyboard, mouse, scanner), output devices (monitor, printer) and storage.
-    - **Software** — the programs: system software (OS, compilers, utilities) and application software (word processor, browser, banking application).
-    - **Data** — the raw facts the system processes, and the information it produces.
-    - **People (liveware)** — users, operators, programmers, system analysts and administrators.
-    - **Procedures** — the documented rules and instructions for operating the system correctly.
+    - Hardware — the physical components: CPU, memory, input devices (keyboard, mouse, scanner), output devices (monitor, printer) and storage.
+    - Software — the programs: system software (OS, compilers, utilities) and application software (word processor, browser, banking application).
+    - Data — the raw facts the system processes, and the information it produces.
+    - People (liveware) — users, operators, programmers, system analysts and administrators.
+    - Procedures — the documented rules and instructions for operating the system correctly.
 
     Functional units of the computer itself
     ```mermaid
@@ -1071,7 +1037,7 @@ Answer:
             U[Control Unit]
         end
     ```
-    - **Input unit** accepts data, **memory** stores it, the **ALU** computes, the **control unit** directs everything, and the **output unit** presents the result.
+    - Input unit accepts data, memory stores it, the ALU computes, the control unit directs everything, and the output unit presents the result.
 
 60. **(c) Compare TTL and CMOS logic family in terms of (i) Speed (ii) Noise and (iii) Power consumption.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 
@@ -1088,10 +1054,10 @@ Answer:
 61. **শুদ্ধ বানান লিখ: স্বায়ত্বশাসন, ব্যাকুল, নীশিথিনী, কুসংস্কার,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
 
     Answer:
-    - অশুদ্ধ: স্বায়ত্বশাসন -> শুদ্ধ: **স্বায়ত্তশাসন**
-    - অশুদ্ধ: ব্যাকুল -> শুদ্ধ: **ব্যাকুল** (সঠিক)
-    - অশুদ্ধ: নীশিথিনী -> শুদ্ধ: **নিশীথিনী**
-    - অশুদ্ধ: কুসংস্কার -> শুদ্ধ: **কুসংস্কার** (সঠিক)
+    - অশুদ্ধ: স্বায়ত্বশাসন -> শুদ্ধ: স্বায়ত্তশাসন
+    - অশুদ্ধ: ব্যাকুল -> শুদ্ধ: ব্যাকুল (সঠিক)
+    - অশুদ্ধ: নীশিথিনী -> শুদ্ধ: নিশীথিনী
+    - অশুদ্ধ: কুসংস্কার -> শুদ্ধ: কুসংস্কার (সঠিক)
 
 62. **বাগধারা: বিড়াল তপস্বী,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
 
@@ -1106,11 +1072,11 @@ Answer:
 64. **Verb correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 
     Answer:
-    - 1. He (go) to school yesterday. -> He **went** to school yesterday.
-    - 2. The train (leave) before we reached the station. -> The train **had left** before we reached the station.
-    - 3. If it rains, we (not go) out. -> If it rains, we **will not go** out.
-    - 4. It (rain) since morning. -> It **has been raining** since morning.
-    - 5. The boy (read) a book now. -> The boy **is reading** a book now.
+    - 1. He (go) to school yesterday. -> He went to school yesterday.
+    - 2. The train (leave) before we reached the station. -> The train had left before we reached the station.
+    - 3. If it rains, we (not go) out. -> If it rains, we will not go out.
+    - 4. It (rain) since morning. -> It has been raining since morning.
+    - 5. The boy (read) a book now. -> The boy is reading a book now.
 
 65. **Phrase -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 
@@ -1160,71 +1126,71 @@ Answer:
 70. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
 
     Answer:
-    - ১. অশুদ্ধ: সব পাখিরা উড়ে গেল। -> শুদ্ধ: **সব পাখি উড়ে গেল** (অথবা **পাখিরা উড়ে গেল**)।
-    - ২. অশুদ্ধ: তার সৌজন্যতায় মুগ্ধ হলাম। -> শুদ্ধ: **তার সৌজন্যে মুগ্ধ হলাম**।
-    - ৩. অশুদ্ধ: দৈনতা সর্বদা প্রশংসনীয় নয়। -> শুদ্ধ: **দীনতা** (বা **দৈন্য**) সর্বদা প্রশংসনীয় নয়।
-    - ৪. অশুদ্ধ: তিনি সস্ত্রীকসহ উপস্থিত ছিলেন। -> শুদ্ধ: **তিনি সস্ত্রীক উপস্থিত ছিলেন**।
-    - ৫. অশুদ্ধ: শুধুমাত্র আপনি আসবেন। -> শুদ্ধ: **মাত্র আপনি আসবেন** (অথবা **শুধু আপনি আসবেন**)।
+    - ১. অশুদ্ধ: সব পাখিরা উড়ে গেল। -> শুদ্ধ: সব পাখি উড়ে গেল (অথবা পাখিরা উড়ে গেল)।
+    - ২. অশুদ্ধ: তার সৌজন্যতায় মুগ্ধ হলাম। -> শুদ্ধ: তার সৌজন্যে মুগ্ধ হলাম।
+    - ৩. অশুদ্ধ: দৈনতা সর্বদা প্রশংসনীয় নয়। -> শুদ্ধ: দীনতা (বা দৈন্য) সর্বদা প্রশংসনীয় নয়।
+    - ৪. অশুদ্ধ: তিনি সস্ত্রীকসহ উপস্থিত ছিলেন। -> শুদ্ধ: তিনি সস্ত্রীক উপস্থিত ছিলেন।
+    - ৫. অশুদ্ধ: শুধুমাত্র আপনি আসবেন। -> শুদ্ধ: মাত্র আপনি আসবেন (অথবা শুধু আপনি আসবেন)।
 
 71. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
     - Incorrect: neumonia
-    - Correct: **Pneumonia**
+    - Correct: Pneumonia
 
 72. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
     - Active: Do not close the door.
-    - Passive: **Let not the door be closed.**
+    - Passive: Let not the door be closed.
 
 73. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
-    - Sentence Type: **Complex Sentence** (It has one principal clause "he is honest" and one subordinate adverbial clause "Though he is poor" connected by the subordinating conjunction "Though").
+    - Sentence Type: Complex Sentence (It has one principal clause "he is honest" and one subordinate adverbial clause "Though he is poor" connected by the subordinating conjunction "Though").
 
 74. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
     - Affirmative: Everybody hates a liar.
-    - Negative: **There is nobody but hates a liar.** (or **Nobody likes a liar.**)
+    - Negative: There is nobody but hates a liar. (or Nobody likes a liar.)
 
 75. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
     - Affirmative: Man is mortal.
-    - Negative: **No man is immortal.**
+    - Negative: No man is immortal.
 
 76. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
-    - Bangladesh Computer Council (BCC) was established in **1990** (under Act No. IX of 1990).
+    - Bangladesh Computer Council (BCC) was established in 1990 (under Act No. IX of 1990).
 
 77. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
-    - বিশ্বের দীর্ঘতম নদী: **নীলনদ** (Nile River, length ~6,650 km).
-    - বাংলাদেশের দীর্ঘতম নদী: **সুরমা-মেঘনা** (Surma-Meghna system).
+    - বিশ্বের দীর্ঘতম নদী: নীলনদ (Nile River, length ~6,650 km).
+    - বাংলাদেশের দীর্ঘতম নদী: সুরমা-মেঘনা (Surma-Meghna system).
 
 78. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
-    - তথ্য ও যোগাযোগ প্রযুক্তি (ICT) বিভাগ কার্যক্রম শুরু করে **৪ ডিসেম্বর ২০১১** তারিখে (পরবর্তীতে ২০১৪ সালে ডাক, টেলিযোগাযোগ ও তথ্যপ্রযুক্তি মন্ত্রণালয়ের অধীনে ন্যস্ত হয়)।
+    - তথ্য ও যোগাযোগ প্রযুক্তি (ICT) বিভাগ কার্যক্রম শুরু করে ৪ ডিসেম্বর ২০১১ তারিখে (পরবর্তীতে ২০১৪ সালে ডাক, টেলিযোগাযোগ ও তথ্যপ্রযুক্তি মন্ত্রণালয়ের অধীনে ন্যস্ত হয়)।
 
 79. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
-    - বাংলাদেশে এ পর্যন্ত মোট **৮টি** পঞ্চবার্ষিক পরিকল্পনা (Five-Year Plans) এবং ১টি দ্বিবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে (সর্বশেষ: ৮ম পঞ্চবার্ষিক পরিকল্পনা ২০২০-২০২৫)।
+    - বাংলাদেশে এ পর্যন্ত মোট ৮টি পঞ্চবার্ষিক পরিকল্পনা (Five-Year Plans) এবং ১টি দ্বিবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে (সর্বশেষ: ৮ম পঞ্চবার্ষিক পরিকল্পনা ২০২০-২০২৫)।
 
 80. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
     Answer:
-    - সার্কভুক্ত (SAARC) সদস্য দেশ **৮টি** (বাংলাদেশ, ভারত, পাকিস্তান, শ্রীলঙ্কা, নেপাল, ভুটান, মালদ্বীপ ও আফগানিস্তান)।
+    - সার্কভুক্ত (SAARC) সদস্য দেশ ৮টি (বাংলাদেশ, ভারত, পাকিস্তান, শ্রীলঙ্কা, নেপাল, ভুটান, মালদ্বীপ ও আফগানিস্তান)।
 
 81. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
     Answer:
-    - Web 3.0 মূলত **ব্লকচেইন প্রযুক্তি (Blockchain Technology)**, বিকেন্দ্রীকরণ (Decentralization), স্মার্ট কন্ট্রাক্ট (Smart Contracts), কৃত্রিম বুদ্ধিমত্তা (AI) এবং ক্রিপ্টোকারেন্সির সঙ্গে সম্পর্কিত।
+    - Web 3.0 মূলত ব্লকচেইন প্রযুক্তি (Blockchain Technology), বিকেন্দ্রীকরণ (Decentralization), স্মার্ট কন্ট্রাক্ট (Smart Contracts), কৃত্রিম বুদ্ধিমত্তা (AI) এবং ক্রিপ্টোকারেন্সির সঙ্গে সম্পর্কিত।
 
 82. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 0.25 নম্বর কাটা হয়। একজন পরীক্ষার্থী সবকটি প্রশ্নের উত্তর দিয়ে 75 নম্বর পেল। সে কতটি প্রশ্নের সঠিক উত্তর দিয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
@@ -1238,7 +1204,7 @@ Answer:
     $$1.25x = 105$$
     $$x = rac{105}{1.25} = 84$$
 
-    - সে **৮৪টি** প্রশ্নের সঠিক উত্তর দিয়েছে (এবং ৩৬টি ভুল উত্তর দিয়েছে)।
+    - সে ৮৪টি প্রশ্নের সঠিক উত্তর দিয়েছে (এবং ৩৬টি ভুল উত্তর দিয়েছে)।
 
 83. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
@@ -1294,8 +1260,8 @@ Answer:
 (ক) যা পূর্বে দেখা যায়নি- (খ) অক্ষির সমীপে-
 
     Answer:
-    - (ক) যা পূর্বে দেখা যায়নি -> **অদৃষ্টপূর্ব**
-    - (খ) অক্ষির সমীপে -> **সমক্ষ**
+    - (ক) যা পূর্বে দেখা যায়নি -> অদৃষ্টপূর্ব
+    - (খ) অক্ষির সমীপে -> সমক্ষ
 
 87. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ২০ শতাংশ বৃদ্ধি পায় তবে তিনি প্রতি মাসে মোট কত টাকা পাবেন? (০৪)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
 
@@ -1398,7 +1364,7 @@ Answer:
     $$0.765 P = 306$$
     $$P = rac{306}{0.765} = 400$$
 
-    - Final Answer: The original cost was **$400**.
+    - Final Answer: The original cost was $400.
 
 94. **Given a table for person income:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 371]]*
 Write a Python program to calculate the tax based on the given income slabs.
@@ -1430,23 +1396,23 @@ Write a Python program to calculate the tax based on the given income slabs.
 95. **168.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
-    - Address Class: **Class B** IPv4 Address (First octet 168 falls in the Class B range 128–191).
+    - Address Class: Class B IPv4 Address (First octet 168 falls in the Class B range 128–191).
     - Default Subnet Mask: `255.255.0.0` (`/16`).
 
 96. **0.0.5** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
-    - Address Scope: **Reserved / Current Network** address in IPv4 (`0.0.0.0/8` block reserved for local identification per RFC 1122).
+    - Address Scope: Reserved / Current Network address in IPv4 (`0.0.0.0/8` block reserved for local identification per RFC 1122).
 
 97. **0.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
-    - Address Scope: **Reserved address** within the `0.0.0.0/8` host identification block.
+    - Address Scope: Reserved address within the `0.0.0.0/8` host identification block.
 
 98. **16.0.10** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
-    - Address Class: **Class A** IPv4 Public Address (First octet 16 falls in Class A range 1–126). Default subnet mask: `255.0.0.0` (`/8`).
+    - Address Class: Class A IPv4 Public Address (First octet 16 falls in Class A range 1–126). Default subnet mask: `255.0.0.0` (`/8`).
 
 99. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
@@ -1500,10 +1466,10 @@ Write a Python program to calculate the tax based on the given income slabs.
 101. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
     Answer: Protocol Data Units (PDUs) across OSI Layers:
-    - 1. Physical Layer: **Bits** (Binary 0s and 1s transmitted as electrical/optical signals).
-    - 2. Data Link Layer: **Frames** (Packets encapsulated with MAC source/destination addresses and CRC).
-    - 3. Network Layer: **Packets / Datagrams** (Data encapsulated with logical IP headers).
-    - 4. Transport Layer: **Segments** (in TCP) or **Datagrams** (in UDP).
+    - 1. Physical Layer: Bits (Binary 0s and 1s transmitted as electrical/optical signals).
+    - 2. Data Link Layer: Frames (Packets encapsulated with MAC source/destination addresses and CRC).
+    - 3. Network Layer: Packets / Datagrams (Data encapsulated with logical IP headers).
+    - 4. Transport Layer: Segments (in TCP) or Datagrams (in UDP).
 
 102. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
@@ -1546,37 +1512,37 @@ Write a Python program to calculate the tax based on the given income slabs.
       1. Tree (e.g., Binary Tree, AVL Tree)
       2. Graph
       3. Heap
-    - Binary Search Tree (BST) Classification: A Binary Search Tree is a **Non-Linear (Hierarchical)** data structure.
+    - Binary Search Tree (BST) Classification: A Binary Search Tree is a Non-Linear (Hierarchical) data structure.
 
 104. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
     Answer:
-    - জাতীয় গ্রিডে যুক্ত হওয়া বাংলাদেশের প্রথম সৌর বিদ্যুৎ কেন্দ্র (২৮ মেগাওয়াট) স্থাপিত হয় কক্সবাজারের **টেকনাফে** (২০১৮ সালে)।
+    - জাতীয় গ্রিডে যুক্ত হওয়া বাংলাদেশের প্রথম সৌর বিদ্যুৎ কেন্দ্র (২৮ মেগাওয়াট) স্থাপিত হয় কক্সবাজারের টেকনাফে (২০১৮ সালে)।
 
 105. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
     Answer:
-    - "ভূষণ্ডির কাক" বাগধারাটির অর্থ: **দীর্ঘজীবী ব্যক্তি** (বা অত্যন্ত অভিজ্ঞ ও প্রবীণ ব্যক্তি)।
+    - "ভূষণ্ডির কাক" বাগধারাটির অর্থ: দীর্ঘজীবী ব্যক্তি (বা অত্যন্ত অভিজ্ঞ ও প্রবীণ ব্যক্তি)।
 
 106. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
     Answer:
-    - "কোথায় যাওয়া হচ্ছে?" বাক্যটি **ভাববাচ্যের** (Impersonal Voice) উদাহরণ (যে বাচ্যে ক্রিয়ার অর্থই প্রধানরূপে প্রতীয়মান হয়)।
+    - "কোথায় যাওয়া হচ্ছে?" বাক্যটি ভাববাচ্যের (Impersonal Voice) উদাহরণ (যে বাচ্যে ক্রিয়ার অর্থই প্রধানরূপে প্রতীয়মান হয়)।
 
 107. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
     Answer:
-    - I wish I **were** a king. (In unreal/hypothetical wishes, the subjunctive form "were" is used for all persons).
+    - I wish I were a king. (In unreal/hypothetical wishes, the subjunctive form "were" is used for all persons).
 
 108. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
 
     Answer:
-    - Where are you **going**? (or **Where are you from?**)
+    - Where are you going? (or Where are you from?)
 
 109. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
 
     Answer:
-    - Adjective form of "misery" is **Miserable**.
+    - Adjective form of "misery" is Miserable.
 
 110. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
 
@@ -1588,7 +1554,7 @@ Write a Python program to calculate the tax based on the given income slabs.
     - Substitute given values ($a + b + c = 15$, $ab + bc + ca = 83$):
       $$a^2 + b^2 + c^2 = (15)^2 - 2(83) = 225 - 166 = 59$$
 
-    - Final Answer: **59**.
+    - Final Answer: 59.
 
 111. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than it will be profit of 12%. Find the cost of the product.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
 
@@ -1603,7 +1569,7 @@ Write a Python program to calculate the tax based on the given income slabs.
     $$0.20x = 800$$
     $$x = rac{800}{0.20} = 4000$$
 
-    - Final Answer: The cost of the product is **4,000 Taka**.
+    - Final Answer: The cost of the product is 4,000 Taka.
 
 112. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514]]*
 
@@ -1633,30 +1599,30 @@ Write a Python program to calculate the tax based on the given income slabs.
 Answer:
 
    (a) Positive impacts on Bangladeshi banking
-   - **Fraud detection** — ML models flag unusual card and MFS transactions in real time, cutting losses.
-   - **Credit scoring** — alternative data (mobile wallet history, utility payments) lets banks lend to customers with no formal credit record, widening financial inclusion.
-   - **Chatbots and virtual assistants** — handle routine balance, statement and account queries in Bangla around the clock, easing call-centre load.
-   - **Automated back office (RPA)** — cheque clearing, KYC verification, account opening and reconciliation are processed faster with fewer errors.
-   - **AML compliance** — automated transaction monitoring meets Bangladesh Bank reporting requirements more reliably than manual review.
-   - **Personalised products** — customer segmentation drives targeted loan and deposit offers.
-   - **Cost reduction** — fewer manual steps means lower operating cost per transaction, which matters in a low-margin market.
+   - Fraud detection — ML models flag unusual card and MFS transactions in real time, cutting losses.
+   - Credit scoring — alternative data (mobile wallet history, utility payments) lets banks lend to customers with no formal credit record, widening financial inclusion.
+   - Chatbots and virtual assistants — handle routine balance, statement and account queries in Bangla around the clock, easing call-centre load.
+   - Automated back office (RPA) — cheque clearing, KYC verification, account opening and reconciliation are processed faster with fewer errors.
+   - AML compliance — automated transaction monitoring meets Bangladesh Bank reporting requirements more reliably than manual review.
+   - Personalised products — customer segmentation drives targeted loan and deposit offers.
+   - Cost reduction — fewer manual steps means lower operating cost per transaction, which matters in a low-margin market.
 
    (b) Negative impacts and risks
-   - **Job displacement** — tellers, data entry operators and back-office clerks are the most exposed roles.
-   - **Skill gap** — existing staff lack data science and cloud skills.
-   - **Algorithmic bias** — a model trained on past lending data can systematically reject rural or female applicants.
-   - **Cybersecurity risk** — greater automation widens the attack surface.
-   - **Digital divide** — customers without smartphones or literacy are left behind.
-   - **Regulatory gap** — Bangladesh has no comprehensive AI governance framework yet.
+   - Job displacement — tellers, data entry operators and back-office clerks are the most exposed roles.
+   - Skill gap — existing staff lack data science and cloud skills.
+   - Algorithmic bias — a model trained on past lending data can systematically reject rural or female applicants.
+   - Cybersecurity risk — greater automation widens the attack surface.
+   - Digital divide — customers without smartphones or literacy are left behind.
+   - Regulatory gap — Bangladesh has no comprehensive AI governance framework yet.
 
    (c) Strategies to balance technology and employment
-   - **Reskill rather than retrench** — retrain tellers as relationship managers, digital advisors and fraud analysts. This is cheaper than hiring and preserves institutional knowledge.
-   - **Redeploy to advisory roles** — automation removes routine work, freeing staff for sales, complaint handling and elderly or rural customer support, which machines handle poorly.
-   - **Phased adoption** — automate gradually so attrition absorbs most of the reduction, avoiding mass layoffs.
-   - **Human-in-the-loop** — keep human approval for loan rejections and large transactions, which protects both jobs and customers.
-   - **Create new roles** — data engineers, ML engineers, cybersecurity analysts, AI ethics and compliance officers.
-   - **Partner with universities** — internship and training pipelines with local institutions.
-   - **Policy support** — Bangladesh Bank should issue AI governance guidelines covering model explainability, bias testing and data protection.
+   - Reskill rather than retrench — retrain tellers as relationship managers, digital advisors and fraud analysts. This is cheaper than hiring and preserves institutional knowledge.
+   - Redeploy to advisory roles — automation removes routine work, freeing staff for sales, complaint handling and elderly or rural customer support, which machines handle poorly.
+   - Phased adoption — automate gradually so attrition absorbs most of the reduction, avoiding mass layoffs.
+   - Human-in-the-loop — keep human approval for loan rejections and large transactions, which protects both jobs and customers.
+   - Create new roles — data engineers, ML engineers, cybersecurity analysts, AI ethics and compliance officers.
+   - Partner with universities — internship and training pipelines with local institutions.
+   - Policy support — Bangladesh Bank should issue AI governance guidelines covering model explainability, bias testing and data protection.
 
    - Balanced conclusion: AI in Bangladeshi banking is best treated as augmentation, not replacement. The realistic outcome is a change in the JOB MIX rather than a fall in total employment, provided reskilling begins before automation, not after.
 
@@ -1664,16 +1630,16 @@ Answer:
 
 Answer: ICT has changed banking from a branch-based, paper-driven business into a 24/7 digital service. Ten innovative applications:
 
-   - **Internet and mobile banking** — balance check, fund transfer, bill payment and statements from anywhere, removing the need to visit a branch.
-   - **Mobile Financial Services (MFS)** — bKash, Nagad and Rocket bring banking to people with no bank account, driving financial inclusion in rural Bangladesh.
-   - **ATM and CDM networks** — round-the-clock cash withdrawal and deposit without staff.
-   - **Real-time payment systems** — BEFTN, RTGS and NPSB settle interbank transfers within minutes instead of days.
-   - **AI chatbots** — answer routine customer queries in Bangla and English at any hour, cutting call-centre cost.
-   - **AI fraud detection** — machine learning flags abnormal transaction patterns in real time and blocks suspected card fraud.
-   - **Biometric authentication** — fingerprint and face recognition for account opening (e-KYC) and login, replacing paper signatures.
-   - **Blockchain for trade finance** — tamper-proof letters of credit and remittance tracking, reducing settlement time and fraud.
-   - **Big data analytics** — customer segmentation, credit scoring from alternative data, and churn prediction.
-   - **Cloud core banking** — elastic capacity and disaster recovery without building a second data centre.
+   - Internet and mobile banking — balance check, fund transfer, bill payment and statements from anywhere, removing the need to visit a branch.
+   - Mobile Financial Services (MFS) — bKash, Nagad and Rocket bring banking to people with no bank account, driving financial inclusion in rural Bangladesh.
+   - ATM and CDM networks — round-the-clock cash withdrawal and deposit without staff.
+   - Real-time payment systems — BEFTN, RTGS and NPSB settle interbank transfers within minutes instead of days.
+   - AI chatbots — answer routine customer queries in Bangla and English at any hour, cutting call-centre cost.
+   - AI fraud detection — machine learning flags abnormal transaction patterns in real time and blocks suspected card fraud.
+   - Biometric authentication — fingerprint and face recognition for account opening (e-KYC) and login, replacing paper signatures.
+   - Blockchain for trade finance — tamper-proof letters of credit and remittance tracking, reducing settlement time and fraud.
+   - Big data analytics — customer segmentation, credit scoring from alternative data, and churn prediction.
+   - Cloud core banking — elastic capacity and disaster recovery without building a second data centre.
 
    Additional applications worth naming
    - QR-code merchant payments, agent banking software, robotic process automation for reconciliation, and open banking APIs.
@@ -1691,9 +1657,9 @@ Answer: A viral video is a video that spreads rapidly and widely across the inte
    - An algorithmic boost once early engagement is high.
 
    Three advantages
-   - **Massive reach at near-zero cost** — organic sharing does the distribution work that would otherwise need a large advertising budget.
-   - **Rapid brand awareness and credibility** — a shared video carries an implicit recommendation from the person sharing it, which is far more trusted than an advertisement.
-   - **Fast public-message delivery** — governments and NGOs use it for awareness campaigns on health, disaster warning and civic duty, reaching millions within hours.
+   - Massive reach at near-zero cost — organic sharing does the distribution work that would otherwise need a large advertising budget.
+   - Rapid brand awareness and credibility — a shared video carries an implicit recommendation from the person sharing it, which is far more trusted than an advertisement.
+   - Fast public-message delivery — governments and NGOs use it for awareness campaigns on health, disaster warning and civic duty, reaching millions within hours.
 
    - Risk to note: virality cannot be controlled. Negative content spreads just as fast, and misinformation is the main danger, which is why source verification matters.
 
@@ -1711,17 +1677,17 @@ Answer: IR 4.0 means the Fourth Industrial Revolution — the ongoing transforma
    | IR 4.0 | 2010s onward | Cyber-physical systems, IoT, AI, data |
 
    Key components of IR 4.0
-   - **Internet of Things (IoT)** — sensors on machines, vehicles and products that continuously report data.
-   - **Artificial Intelligence and Machine Learning** — systems that learn from that data and predict, classify and decide.
-   - **Big Data and analytics** — collecting and analysing very large data volumes to guide decisions.
-   - **Cloud computing** — elastic storage and compute that make the above affordable.
-   - **Cyber-Physical Systems (CPS)** — physical machines controlled by software, the core idea of IR 4.0.
-   - **Robotics and automation** — collaborative robots working alongside people.
-   - **3D printing (additive manufacturing)** — on-demand production and rapid prototyping.
-   - **Blockchain** — trusted, tamper-proof records across a supply chain.
-   - **Augmented and Virtual Reality** — used for training, maintenance guidance and design.
-   - **5G connectivity** — the low-latency network that makes real-time machine communication possible.
-   - **Cybersecurity** — essential, because everything is now connected.
+   - Internet of Things (IoT) — sensors on machines, vehicles and products that continuously report data.
+   - Artificial Intelligence and Machine Learning — systems that learn from that data and predict, classify and decide.
+   - Big Data and analytics — collecting and analysing very large data volumes to guide decisions.
+   - Cloud computing — elastic storage and compute that make the above affordable.
+   - Cyber-Physical Systems (CPS) — physical machines controlled by software, the core idea of IR 4.0.
+   - Robotics and automation — collaborative robots working alongside people.
+   - 3D printing (additive manufacturing) — on-demand production and rapid prototyping.
+   - Blockchain — trusted, tamper-proof records across a supply chain.
+   - Augmented and Virtual Reality — used for training, maintenance guidance and design.
+   - 5G connectivity — the low-latency network that makes real-time machine communication possible.
+   - Cybersecurity — essential, because everything is now connected.
 
    - Impact on Bangladesh: RMG automation, smart agriculture, e-governance and freelancing are the main areas, with reskilling the central policy challenge.
 
@@ -1730,14 +1696,14 @@ Answer: IR 4.0 means the Fourth Industrial Revolution — the ongoing transforma
 Answer: Four e-commerce sites.
 
    Bangladeshi e-commerce sites
-   - **Daraz Bangladesh** (daraz.com.bd) — the largest general marketplace.
-   - **Chaldal** (chaldal.com) — online grocery delivery.
-   - **Rokomari** (rokomari.com) — books and stationery.
-   - **Pickaboo** (pickaboo.com) — electronics and mobile phones.
+   - Daraz Bangladesh (daraz.com.bd) — the largest general marketplace.
+   - Chaldal (chaldal.com) — online grocery delivery.
+   - Rokomari (rokomari.com) — books and stationery.
+   - Pickaboo (pickaboo.com) — electronics and mobile phones.
    - Others: AjkerDeal, Bagdoom, Othoba, Priyoshop, Bikroy (classified).
 
    International e-commerce sites
-   - **Amazon** (amazon.com), **eBay** (ebay.com), **Alibaba** (alibaba.com), **Flipkart** (flipkart.com).
+   - Amazon (amazon.com), eBay (ebay.com), Alibaba (alibaba.com), Flipkart (flipkart.com).
 
    - Note the difference: Daraz and Amazon are marketplaces where many sellers list; Chaldal is a single-seller retail site. Bikroy and eBay are C2C platforms where individuals sell to each other.
 
@@ -1746,22 +1712,22 @@ Answer: Four e-commerce sites.
 Answer:
 
    (a) Post-COVID social challenges facing Bangladesh
-   - **Learning loss** — prolonged school closure widened the gap between urban and rural students.
-   - **Unemployment and income loss** — job losses in RMG, transport and informal sectors, and returning migrant workers.
-   - **Healthcare pressure** — overloaded hospitals, weak rural health access, vaccine record management.
-   - **Digital divide** — many rural households lack smartphones, internet or the literacy to use them.
-   - **Mental health** — isolation, anxiety and domestic stress rose sharply.
-   - **Widening inequality** — the poorest lost the most and recovered the slowest.
-   - **Small business collapse** — SMEs without an online presence lost their customer base.
+   - Learning loss — prolonged school closure widened the gap between urban and rural students.
+   - Unemployment and income loss — job losses in RMG, transport and informal sectors, and returning migrant workers.
+   - Healthcare pressure — overloaded hospitals, weak rural health access, vaccine record management.
+   - Digital divide — many rural households lack smartphones, internet or the literacy to use them.
+   - Mental health — isolation, anxiety and domestic stress rose sharply.
+   - Widening inequality — the poorest lost the most and recovered the slowest.
+   - Small business collapse — SMEs without an online presence lost their customer base.
 
    (b) How ICT can address them
-   - **Education** — online classrooms, recorded lessons broadcast on television (Sangsad TV's "Ghore Boshe Shikhi"), Muktopaath and Shikkhok Batayon for teacher training, and low-bandwidth mobile learning apps for rural students.
-   - **Employment** — freelancing and outsourcing training through the Learning and Earning Development Project, job-matching portals, and e-commerce and F-commerce enabling home-based businesses.
-   - **Healthcare** — telemedicine services, the Shastho Batayon 16263 helpline, the Surokkha vaccine registration platform, and digital health records.
-   - **Financial support** — direct cash transfer to the poor through MFS (bKash, Nagad), which reached beneficiaries without physical contact.
-   - **Digital divide** — Union Digital Centres, expanded broadband under the Info-Sarkar project, subsidised devices and community internet access.
-   - **Mental health** — online counselling and awareness campaigns on social media.
-   - **SME recovery** — training small traders to sell through Facebook pages and marketplaces, and digital payment adoption.
+   - Education — online classrooms, recorded lessons broadcast on television (Sangsad TV's "Ghore Boshe Shikhi"), Muktopaath and Shikkhok Batayon for teacher training, and low-bandwidth mobile learning apps for rural students.
+   - Employment — freelancing and outsourcing training through the Learning and Earning Development Project, job-matching portals, and e-commerce and F-commerce enabling home-based businesses.
+   - Healthcare — telemedicine services, the Shastho Batayon 16263 helpline, the Surokkha vaccine registration platform, and digital health records.
+   - Financial support — direct cash transfer to the poor through MFS (bKash, Nagad), which reached beneficiaries without physical contact.
+   - Digital divide — Union Digital Centres, expanded broadband under the Info-Sarkar project, subsidised devices and community internet access.
+   - Mental health — online counselling and awareness campaigns on social media.
+   - SME recovery — training small traders to sell through Facebook pages and marketplaces, and digital payment adoption.
 
    - Precondition for all of it: affordable connectivity, digital literacy and cybersecurity. Without these, ICT solutions reach only the already-connected and widen inequality instead of reducing it.
 
@@ -1770,7 +1736,7 @@ Answer:
 Answer: Copyright law is the legal protection given to the creator of an original work — literary, artistic, musical, film or software — giving the creator the exclusive right to reproduce, distribute, adapt and publicly display that work for a fixed period.
 
    In Bangladesh
-   - Governed by the **Copyright Act 2000** (amended 2005), administered by the Copyright Office under the Ministry of Cultural Affairs.
+   - Governed by the Copyright Act 2000 (amended 2005), administered by the Copyright Office under the Ministry of Cultural Affairs.
    - Protection generally lasts for the lifetime of the author plus 60 years.
    - Registration is not compulsory — copyright exists automatically on creation — but registration provides legal evidence in a dispute.
 
@@ -1779,13 +1745,13 @@ Answer: Copyright law is the legal protection given to the creator of an origina
    - It protects the EXPRESSION of an idea, not the idea itself.
 
    Why it is necessary
-   - **Protects the creator's rights** — no one can copy or sell the work without permission.
-   - **Ensures fair economic return** — royalties and licence fees give creators an income from their work.
-   - **Encourages creativity and innovation** — people invest time in creating only if the result cannot simply be taken.
-   - **Prevents plagiarism and piracy** — a major issue for the software and music industries.
-   - **Supports the creative economy** — publishing, film, music and software are significant contributors to national income.
-   - **Enables lawful sharing** — licensing, including open licences like Creative Commons, works only because copyright exists to license.
-   - **International recognition** — Bangladesh is a member of the Berne Convention, so protection extends abroad.
+   - Protects the creator's rights — no one can copy or sell the work without permission.
+   - Ensures fair economic return — royalties and licence fees give creators an income from their work.
+   - Encourages creativity and innovation — people invest time in creating only if the result cannot simply be taken.
+   - Prevents plagiarism and piracy — a major issue for the software and music industries.
+   - Supports the creative economy — publishing, film, music and software are significant contributors to national income.
+   - Enables lawful sharing — licensing, including open licences like Creative Commons, works only because copyright exists to license.
+   - International recognition — Bangladesh is a member of the Berne Convention, so protection extends abroad.
 
    - Balancing provision: "fair dealing" allows limited use for education, research, criticism and news reporting without permission.
 
@@ -1809,14 +1775,14 @@ Answer:
    - Relationship: MIS answers "what happened"; DSS answers "what if" and "what should we do". A DSS often draws on data produced by the MIS.
 
    Roles of MIS in the banking sector
-   - **Daily operational reporting** — branch-wise deposits, withdrawals, cash position and transaction volumes.
-   - **Loan portfolio monitoring** — outstanding loans, classified loans, recovery status, sector-wise exposure.
-   - **Regulatory reporting** — CIB reports, CRR and SLR statements and other returns required by Bangladesh Bank.
-   - **Customer information management** — account profiles, KYC records, transaction history.
-   - **Branch performance evaluation** — comparing branches on deposit growth, profit and cost.
-   - **Fraud and risk monitoring** — reports on unusual transactions and limit breaches.
-   - **HR and payroll management** — staff records, attendance, salary processing.
-   - **Budgeting and planning** — actual versus budget comparison to guide targets.
+   - Daily operational reporting — branch-wise deposits, withdrawals, cash position and transaction volumes.
+   - Loan portfolio monitoring — outstanding loans, classified loans, recovery status, sector-wise exposure.
+   - Regulatory reporting — CIB reports, CRR and SLR statements and other returns required by Bangladesh Bank.
+   - Customer information management — account profiles, KYC records, transaction history.
+   - Branch performance evaluation — comparing branches on deposit growth, profit and cost.
+   - Fraud and risk monitoring — reports on unusual transactions and limit breaches.
+   - HR and payroll management — staff records, attendance, salary processing.
+   - Budgeting and planning — actual versus budget comparison to guide targets.
 
 9. **E-commerce and F-commerce -এর মধ্যে পার্থক্য লিখুন। নারী গোষ্ঠী দ্বারা পরিচালিত F-Commerce -এর সামাজিক প্রভাব সম্বন্ধে লিখুন।** *[41th BCS 2021 compact it 883 (ET: N/A)]*
 
@@ -1839,14 +1805,14 @@ Answer:
    - F-commerce is a subset of e-commerce, distinguished by using a social platform instead of an owned storefront.
 
    (b) Social impact of women-led F-commerce in Bangladesh
-   - **Economic empowerment** — women earn an independent income, which raises their bargaining position within the household.
-   - **Work from home** — the business can be run alongside childcare and household duties, removing the mobility barrier that keeps many women out of formal jobs.
-   - **Near-zero entry barrier** — no capital, no shop rent and no formal education required, so rural and less-educated women can participate.
-   - **Skill development** — sellers learn photography, pricing, customer service, packaging and basic digital marketing.
-   - **Employment creation** — successful pages hire tailors, packers and delivery helpers, often other women.
-   - **Preserving traditional crafts** — nakshi kantha, jamdani, handloom and pitha reach a national market instead of a local one.
-   - **Changing social attitudes** — visible female entrepreneurship gradually normalises women earning and running businesses.
-   - **Financial inclusion** — sellers open MFS and bank accounts to receive payments.
+   - Economic empowerment — women earn an independent income, which raises their bargaining position within the household.
+   - Work from home — the business can be run alongside childcare and household duties, removing the mobility barrier that keeps many women out of formal jobs.
+   - Near-zero entry barrier — no capital, no shop rent and no formal education required, so rural and less-educated women can participate.
+   - Skill development — sellers learn photography, pricing, customer service, packaging and basic digital marketing.
+   - Employment creation — successful pages hire tailors, packers and delivery helpers, often other women.
+   - Preserving traditional crafts — nakshi kantha, jamdani, handloom and pitha reach a national market instead of a local one.
+   - Changing social attitudes — visible female entrepreneurship gradually normalises women earning and running businesses.
+   - Financial inclusion — sellers open MFS and bank accounts to receive payments.
 
    Challenges that remain
    - No legal registration or consumer protection, product quality disputes, online harassment, dependence on a single platform's algorithm, and difficulty accessing formal credit without documented turnover.
@@ -1855,9 +1821,9 @@ Answer:
 
 10. **১৪. বাংলাদেশের প্রথম ভিডিও লাইভ শেয়ারিং অ্যাপস কোনটি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-Answer: **Bioscope** is generally cited as Bangladesh's first live video streaming and sharing app. It was launched by Grameenphone in 2016, with the live TV and video-on-demand app following in August 2017.
+Answer: Bioscope is generally cited as Bangladesh's first live video streaming and sharing app. It was launched by Grameenphone in 2016, with the live TV and video-on-demand app following in August 2017.
 
-    - Before it, **Bongo BD** (2013) was the country's pioneer video-on-demand platform, but it was streaming rather than live sharing.
+    - Before it, Bongo BD (2013) was the country's pioneer video-on-demand platform, but it was streaming rather than live sharing.
     - Other Bangladeshi platforms that followed: Toffee (Banglalink), Hoichoi Bangladesh, Binge (Robi) and Chorki.
     - The exam paper may intend a specific app; the answer expected in most BPSC keys is Bioscope.  <!-- verify -->
 
@@ -1875,22 +1841,22 @@ Answer: The Fourth Industrial Revolution (IR 4.0) is the current era in which ph
 
 12. **What is ERP? Write down the Implementation Challenges of ERP?** *[BREB Junior Assistant Manager (ICT) 2021 compact it 948 (ET: N/A)]*
 
-Answer: **ERP (Enterprise Resource Planning)** is integrated software that runs all the core business functions of an organisation — finance, HR, procurement, inventory, production, sales and customer service — on a SINGLE shared database, so every department sees the same data in real time.
+Answer: ERP (Enterprise Resource Planning) is integrated software that runs all the core business functions of an organisation — finance, HR, procurement, inventory, production, sales and customer service — on a SINGLE shared database, so every department sees the same data in real time.
 
     - Popular systems: SAP, Oracle ERP Cloud, Microsoft Dynamics 365, Odoo, ERPNext.
     - Main benefit: it removes data silos. Without ERP, finance, stores and production each keep their own numbers and they never agree.
 
     Implementation challenges
-    - **High cost** — licence, hardware, consultants, customisation and training often run into crores, and the total is usually underestimated.
-    - **Long implementation time** — a full ERP rollout typically takes one to three years.
-    - **Resistance to change** — staff accustomed to old manual processes resist a system that makes their work visible and auditable.
-    - **Business process re-engineering** — the organisation usually has to change its processes to fit the software, which is politically difficult.
-    - **Data migration** — cleaning and transferring years of inconsistent legacy data is the most underestimated task in any ERP project.
-    - **Over-customisation** — heavy modification breaks the upgrade path and multiplies cost.
-    - **Inadequate training** — a good system fails if users cannot operate it.
-    - **Lack of top-management commitment** — ERP is an organisational change project, not an IT project. Without executive sponsorship it stalls.
-    - **Integration with existing systems** — legacy applications and third-party tools must be connected.
-    - **Choosing the wrong vendor or product** — a mismatch between business size and system complexity.
+    - High cost — licence, hardware, consultants, customisation and training often run into crores, and the total is usually underestimated.
+    - Long implementation time — a full ERP rollout typically takes one to three years.
+    - Resistance to change — staff accustomed to old manual processes resist a system that makes their work visible and auditable.
+    - Business process re-engineering — the organisation usually has to change its processes to fit the software, which is politically difficult.
+    - Data migration — cleaning and transferring years of inconsistent legacy data is the most underestimated task in any ERP project.
+    - Over-customisation — heavy modification breaks the upgrade path and multiplies cost.
+    - Inadequate training — a good system fails if users cannot operate it.
+    - Lack of top-management commitment — ERP is an organisational change project, not an IT project. Without executive sponsorship it stalls.
+    - Integration with existing systems — legacy applications and third-party tools must be connected.
+    - Choosing the wrong vendor or product — a mismatch between business size and system complexity.
 
     - Success factors: strong executive sponsorship, a realistic phased rollout, minimum customisation, thorough data cleansing before migration, and continuous user training.
 
@@ -1898,17 +1864,17 @@ Answer: **ERP (Enterprise Resource Planning)** is integrated software that runs 
 
 Answer: BREB (Bangladesh Rural Electrification Board) has taken several IR 4.0 aligned initiatives to bring electricity service to people's doorsteps.
 
-    - **Prepaid and smart metering** — replacing manual meter reading with prepaid and smart meters, so consumers recharge like a mobile phone and the utility gets accurate, real-time consumption data with no meter-reader visit.
-    - **Online billing and digital payment** — bills paid through bKash, Nagad, Rocket, internet banking and agent points, removing the need to travel to a Palli Bidyut office.
-    - **Online new-connection application** — the whole application, document upload, fee payment and tracking done through a web portal, cutting middlemen and delay.
-    - **Complaint management through a hotline and app** — a call centre and mobile app to report outages, with automatic ticket routing to the nearest crew, replacing the old practice of visiting the office.
-    - **SCADA and automated distribution monitoring** — remote monitoring of substations and feeders, so faults are detected and isolated quickly instead of waiting for consumer complaints.
+    - Prepaid and smart metering — replacing manual meter reading with prepaid and smart meters, so consumers recharge like a mobile phone and the utility gets accurate, real-time consumption data with no meter-reader visit.
+    - Online billing and digital payment — bills paid through bKash, Nagad, Rocket, internet banking and agent points, removing the need to travel to a Palli Bidyut office.
+    - Online new-connection application — the whole application, document upload, fee payment and tracking done through a web portal, cutting middlemen and delay.
+    - Complaint management through a hotline and app — a call centre and mobile app to report outages, with automatic ticket routing to the nearest crew, replacing the old practice of visiting the office.
+    - SCADA and automated distribution monitoring — remote monitoring of substations and feeders, so faults are detected and isolated quickly instead of waiting for consumer complaints.
 
     Other initiatives worth mentioning
-    - **GIS-based network mapping** — every pole, transformer and line recorded on a digital map for faster fault location and planning.
-    - **ERP for internal operations** — integrated billing, inventory, HR and accounts across all Palli Bidyut Samities.
-    - **Solar and renewable integration**, including net metering for rooftop solar consumers.
-    - **100% electrification achievement** and continuing work on reducing system loss through digital monitoring.
+    - GIS-based network mapping — every pole, transformer and line recorded on a digital map for faster fault location and planning.
+    - ERP for internal operations — integrated billing, inventory, HR and accounts across all Palli Bidyut Samities.
+    - Solar and renewable integration, including net metering for rooftop solar consumers.
+    - 100% electrification achievement and continuing work on reducing system loss through digital monitoring.
 
     - Common thread: all of these replace a manual, physically-present process with a data-driven remote one — which is exactly what IR 4.0 means for a utility.
 
@@ -1932,7 +1898,7 @@ Answer:
 
     (c) Search engine
     - A software system that searches the web for pages matching a user's keywords and ranks the results by relevance.
-    - It works in three stages: **crawling** (bots follow links to discover pages), **indexing** (page content is stored in a searchable index) and **ranking** (results ordered by an algorithm such as PageRank).
+    - It works in three stages: crawling (bots follow links to discover pages), indexing (page content is stored in a searchable index) and ranking (results ordered by an algorithm such as PageRank).
 
     (d) Examples of search engines
     - Google, Bing, Yahoo, DuckDuckGo, Baidu (China), Yandex (Russia), Ask.com.
@@ -1956,26 +1922,26 @@ Answer:
     - MFS platforms: bKash, Nagad, Rocket, Upay.
 
     (b) Essential features of successful banking software and apps
-    - **Security** — end-to-end encryption, two-factor authentication, biometric login, session timeout and device binding. This is non-negotiable.
-    - **Reliability and uptime** — 24/7 availability with failover and disaster recovery; a bank app that is down at month end loses customers.
-    - **Real-time transaction processing** — instant balance update and instant fund transfer.
-    - **Simple, clear user interface** — usable by customers with limited digital literacy, with Bangla language support.
-    - **Regulatory compliance** — meets Bangladesh Bank guidelines, AML/CFT rules, KYC and e-KYC requirements, and audit trail retention.
-    - **Scalability** — handles peak load at salary day and festival periods.
-    - **Integration** — connects to NPSB, BEFTN, RTGS, MFS wallets, card networks and utility billers.
-    - **Comprehensive audit logging** — every transaction traceable to a user, device and time.
-    - **Notification system** — SMS and push alerts for every debit and credit, which is itself a fraud control.
-    - **Offline and low-bandwidth support** — USSD banking for feature phones and poor network areas.
-    - **Customer support inside the app** — chat, complaint tracking and card block.
+    - Security — end-to-end encryption, two-factor authentication, biometric login, session timeout and device binding. This is non-negotiable.
+    - Reliability and uptime — 24/7 availability with failover and disaster recovery; a bank app that is down at month end loses customers.
+    - Real-time transaction processing — instant balance update and instant fund transfer.
+    - Simple, clear user interface — usable by customers with limited digital literacy, with Bangla language support.
+    - Regulatory compliance — meets Bangladesh Bank guidelines, AML/CFT rules, KYC and e-KYC requirements, and audit trail retention.
+    - Scalability — handles peak load at salary day and festival periods.
+    - Integration — connects to NPSB, BEFTN, RTGS, MFS wallets, card networks and utility billers.
+    - Comprehensive audit logging — every transaction traceable to a user, device and time.
+    - Notification system — SMS and push alerts for every debit and credit, which is itself a fraud control.
+    - Offline and low-bandwidth support — USSD banking for feature phones and poor network areas.
+    - Customer support inside the app — chat, complaint tracking and card block.
 
 16. **RFID has huge applications in business, especially in supply chain management and toll collection system. Show the basic working principle of RFID in brief.** *[Sonali & Janata Bank Officer (IT) 2020 compact it 987-988 (ET: DU)]* *[Bangladesh Bank Recruitment Test 2020 (ET: N/A)]*
 
-Answer: **RFID (Radio Frequency Identification)** identifies and tracks objects automatically using radio waves, without contact and without line of sight.
+Answer: RFID (Radio Frequency Identification) identifies and tracks objects automatically using radio waves, without contact and without line of sight.
 
     Three components
-    - **Tag (transponder)** — attached to the object. Contains a microchip storing a unique ID and an antenna.
-    - **Reader (interrogator)** — sends out radio waves and receives the tag's reply.
-    - **Backend system** — a database and software that turns the ID into meaningful information.
+    - Tag (transponder) — attached to the object. Contains a microchip storing a unique ID and an antenna.
+    - Reader (interrogator) — sends out radio waves and receives the tag's reply.
+    - Backend system — a database and software that turns the ID into meaningful information.
 
     Working principle
     ```mermaid
@@ -1992,13 +1958,13 @@ Answer: **RFID (Radio Frequency Identification)** identifies and tracks objects 
     - Step 4 — the reader passes the ID to the backend, which looks it up and returns the product, vehicle or person details.
 
     Types of tag
-    - **Passive** — no battery, powered by the reader, range up to a few metres, cheap. Used on retail items and library books.
-    - **Active** — has its own battery, range up to 100 m, more expensive. Used for vehicle and container tracking.
-    - **Semi-passive** — battery powers the chip but not the transmission.
+    - Passive — no battery, powered by the reader, range up to a few metres, cheap. Used on retail items and library books.
+    - Active — has its own battery, range up to 100 m, more expensive. Used for vehicle and container tracking.
+    - Semi-passive — battery powers the chip but not the transmission.
 
     Applications
-    - **Supply chain** — pallets and cartons are read in bulk as a truck passes a gate, without unloading. Inventory count that took hours takes minutes.
-    - **Toll collection** — a tag on the windscreen is read while the vehicle moves, and the toll is deducted automatically.
+    - Supply chain — pallets and cartons are read in bulk as a truck passes a gate, without unloading. Inventory count that took hours takes minutes.
+    - Toll collection — a tag on the windscreen is read while the vehicle moves, and the toll is deducted automatically.
     - Also: access control cards, library book management, animal tracking, passport chips, and hospital asset tracking.
 
     - Advantage over barcode: no line of sight needed, many tags read simultaneously, the tag is rewritable, and it survives dirt and rough handling. Disadvantage: higher cost per tag and possible radio interference near metal or liquid.
@@ -2011,21 +1977,21 @@ Answer:
     - The use of ICT by government to deliver public services, share information and interact with citizens, businesses and other government offices efficiently and transparently.
 
     Four interaction models
-    - **G2C (Government to Citizen)** — services to the public: NID, e-passport, birth registration, tax payment.
-    - **G2B (Government to Business)** — trade licence, e-GP procurement, VAT registration.
-    - **G2G (Government to Government)** — data sharing between ministries and departments.
-    - **G2E (Government to Employee)** — payroll, HR and training systems for civil servants.
+    - G2C (Government to Citizen) — services to the public: NID, e-passport, birth registration, tax payment.
+    - G2B (Government to Business) — trade licence, e-GP procurement, VAT registration.
+    - G2G (Government to Government) — data sharing between ministries and departments.
+    - G2E (Government to Employee) — payroll, HR and training systems for civil servants.
 
     (b) Implementation through the Digital Bangladesh vision
-    - **Infrastructure first** — the Info-Sarkar project laid optical fibre to union level, and Union Digital Centres (about 5,000 of them) put a service point within reach of every village.
-    - **National Portal** — a single web gateway linking all ministry and district websites.
-    - **e-Service delivery** — e-passport, e-TIN, online birth and death registration, land record digitisation (e-Porcha) and e-mutation.
-    - **e-GP (electronic Government Procurement)** — all public tenders online, which cut collusion and tender manipulation sharply.
-    - **e-Nothi (Digital File System)** — files move electronically between officers instead of on paper, with full tracking.
-    - **e-Payment** — government fees paid through MFS and cards.
-    - **Digital literacy and capacity** — training of civil servants and citizens, without which the systems go unused.
-    - **Legal framework** — ICT Act, Digital Security Act, Right to Information Act, and a data protection framework.
-    - **Interoperability** — a shared national data architecture so ministries can exchange data instead of each rebuilding the same database.
+    - Infrastructure first — the Info-Sarkar project laid optical fibre to union level, and Union Digital Centres (about 5,000 of them) put a service point within reach of every village.
+    - National Portal — a single web gateway linking all ministry and district websites.
+    - e-Service delivery — e-passport, e-TIN, online birth and death registration, land record digitisation (e-Porcha) and e-mutation.
+    - e-GP (electronic Government Procurement) — all public tenders online, which cut collusion and tender manipulation sharply.
+    - e-Nothi (Digital File System) — files move electronically between officers instead of on paper, with full tracking.
+    - e-Payment — government fees paid through MFS and cards.
+    - Digital literacy and capacity — training of civil servants and citizens, without which the systems go unused.
+    - Legal framework — ICT Act, Digital Security Act, Right to Information Act, and a data protection framework.
+    - Interoperability — a shared national data architecture so ministries can exchange data instead of each rebuilding the same database.
 
     - The four pillars of Digital Bangladesh (declared 2009, target 2021): human resource development, connecting citizens, digital government, and promoting the ICT industry.
 
@@ -2033,70 +1999,70 @@ Answer:
 
 Answer: Successful implementation depends on several factors working together.
 
-    - **ICT infrastructure** — nationwide broadband and optical fibre, reliable electricity, data centres and submarine cable capacity.
-    - **Affordable internet and devices** — low-cost data packages and smartphones, otherwise services reach only the well-off.
-    - **Digital literacy** — training for citizens and for government officers; a service nobody can use is not a service.
-    - **Skilled human resources** — programmers, network engineers, cybersecurity specialists and data analysts, produced through education reform.
-    - **Political commitment and continuity** — sustained funding and priority across governments.
-    - **Legal and regulatory framework** — ICT Act, digital security law, data protection law and e-signature recognition.
-    - **Cybersecurity** — protection of national data centres, financial systems and citizen data; a single major breach destroys public trust.
-    - **Interoperability and standards** — common data formats so ministries can share data.
-    - **e-Payment ecosystem** — MFS, cards and internet banking integrated with government services.
-    - **Private sector participation** — local software industry, startups and public-private partnership.
-    - **Content in Bangla** — services and information in the local language.
-    - **Rural focus** — Union Digital Centres and agent networks so services reach beyond the cities.
-    - **Change management** — many officials resist systems that make their work transparent; this is a bigger obstacle than technology.
+    - ICT infrastructure — nationwide broadband and optical fibre, reliable electricity, data centres and submarine cable capacity.
+    - Affordable internet and devices — low-cost data packages and smartphones, otherwise services reach only the well-off.
+    - Digital literacy — training for citizens and for government officers; a service nobody can use is not a service.
+    - Skilled human resources — programmers, network engineers, cybersecurity specialists and data analysts, produced through education reform.
+    - Political commitment and continuity — sustained funding and priority across governments.
+    - Legal and regulatory framework — ICT Act, digital security law, data protection law and e-signature recognition.
+    - Cybersecurity — protection of national data centres, financial systems and citizen data; a single major breach destroys public trust.
+    - Interoperability and standards — common data formats so ministries can share data.
+    - e-Payment ecosystem — MFS, cards and internet banking integrated with government services.
+    - Private sector participation — local software industry, startups and public-private partnership.
+    - Content in Bangla — services and information in the local language.
+    - Rural focus — Union Digital Centres and agent networks so services reach beyond the cities.
+    - Change management — many officials resist systems that make their work transparent; this is a bigger obstacle than technology.
 
 19. **c) Mention some government entities that have taken E-Government initiatives. What initiatives are taken by the Bangladesh Public Service Commission?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
 Answer:
 
     (a) Government entities with e-Government initiatives
-    - **a2i (Aspire to Innovate)** — the ICT Division programme that drives most digital service innovation, including Union Digital Centres and the National Portal.
-    - **NID Wing, Election Commission** — national ID card, voter database and online NID services.
-    - **Department of Immigration and Passports** — e-passport and online application system.
-    - **National Board of Revenue (NBR)** — e-TIN registration, online return submission, VAT online.
-    - **CPTU, Ministry of Planning** — e-GP electronic tendering platform.
-    - **Ministry of Land** — e-Porcha, e-mutation and online land development tax.
-    - **Registrar General's office** — online birth and death registration (BDRIS).
-    - **Bangladesh Bank** — BEFTN, RTGS, NPSB, online CIB.
-    - **Directorate General of Health Services** — Shastho Batayon 16263, Surokkha vaccine platform.
-    - **BTRC, Bangladesh Police (online GD), BRTA (online licence and fitness)**.
+    - a2i (Aspire to Innovate) — the ICT Division programme that drives most digital service innovation, including Union Digital Centres and the National Portal.
+    - NID Wing, Election Commission — national ID card, voter database and online NID services.
+    - Department of Immigration and Passports — e-passport and online application system.
+    - National Board of Revenue (NBR) — e-TIN registration, online return submission, VAT online.
+    - CPTU, Ministry of Planning — e-GP electronic tendering platform.
+    - Ministry of Land — e-Porcha, e-mutation and online land development tax.
+    - Registrar General's office — online birth and death registration (BDRIS).
+    - Bangladesh Bank — BEFTN, RTGS, NPSB, online CIB.
+    - Directorate General of Health Services — Shastho Batayon 16263, Surokkha vaccine platform.
+    - BTRC, Bangladesh Police (online GD), BRTA (online licence and fitness).
 
     (b) BPSC initiatives
-    - **Online application system** — BCS and non-cadre applications submitted through the BPSC website with online fee payment through Teletalk.
-    - **Online admit card download** and result publication on the website.
-    - **SMS notification** — exam date, admit card and result alerts.
-    - **Digital question bank and OMR-based MCQ evaluation** — automated marking of preliminary examinations.
-    - **Online viva scheduling and applicant tracking**.
-    - **BPSC website and mobile app** for circulars, syllabus and notices.
-    - **Digital archive of records** for cadre and non-cadre recruitment.
+    - Online application system — BCS and non-cadre applications submitted through the BPSC website with online fee payment through Teletalk.
+    - Online admit card download and result publication on the website.
+    - SMS notification — exam date, admit card and result alerts.
+    - Digital question bank and OMR-based MCQ evaluation — automated marking of preliminary examinations.
+    - Online viva scheduling and applicant tracking.
+    - BPSC website and mobile app for circulars, syllabus and notices.
+    - Digital archive of records for cadre and non-cadre recruitment.
 
 20. **d) State the E-Government initiatives taken in health and education sectors of Bangladesh?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1031 (ET: N/A)]*
 
 Answer:
 
     (a) Health sector initiatives
-    - **Shastho Batayon 16263** — a 24-hour national health call centre giving medical advice by phone.
-    - **Surokkha platform** — online COVID-19 vaccine registration and certificate download.
-    - **Telemedicine services** — upazila health complexes connected to specialist doctors in district and medical college hospitals.
-    - **DHIS2 health information system** — nationwide reporting of health data from every facility.
-    - **Online doctor and hospital directory** and appointment booking.
-    - **e-Health records and MIS** under the Directorate General of Health Services.
-    - **Mobile health (mHealth)** — SMS-based maternal health advice such as the Aponjon service.
-    - **Online medicine and blood donor platforms** (Sandhani, Badhan digital registries).
+    - Shastho Batayon 16263 — a 24-hour national health call centre giving medical advice by phone.
+    - Surokkha platform — online COVID-19 vaccine registration and certificate download.
+    - Telemedicine services — upazila health complexes connected to specialist doctors in district and medical college hospitals.
+    - DHIS2 health information system — nationwide reporting of health data from every facility.
+    - Online doctor and hospital directory and appointment booking.
+    - e-Health records and MIS under the Directorate General of Health Services.
+    - Mobile health (mHealth) — SMS-based maternal health advice such as the Aponjon service.
+    - Online medicine and blood donor platforms (Sandhani, Badhan digital registries).
 
     (b) Education sector initiatives
-    - **Shikkhok Batayon** — a national portal where teachers share and download digital lesson content.
-    - **Muktopaath** — a free e-learning platform for teachers and skills training.
-    - **Multimedia classrooms** — laptops and projectors supplied to schools nationwide.
-    - **"Ghore Boshe Shikhi"** — televised lessons on Sangsad TV during COVID-19 school closure.
-    - **Online textbook distribution** — all NCTB textbooks freely downloadable.
-    - **Online admission** — school, college and university admission applications and results online.
-    - **Online result publication** — SSC, HSC and board results by web and SMS.
-    - **e-Primary school census and EMIS** — digital record of every institution, teacher and student.
-    - **Digital content for the disabled** — audio and sign-language learning material.
-    - **BANBEIS database** and the education MIS for planning and monitoring.
+    - Shikkhok Batayon — a national portal where teachers share and download digital lesson content.
+    - Muktopaath — a free e-learning platform for teachers and skills training.
+    - Multimedia classrooms — laptops and projectors supplied to schools nationwide.
+    - "Ghore Boshe Shikhi" — televised lessons on Sangsad TV during COVID-19 school closure.
+    - Online textbook distribution — all NCTB textbooks freely downloadable.
+    - Online admission — school, college and university admission applications and results online.
+    - Online result publication — SSC, HSC and board results by web and SMS.
+    - e-Primary school census and EMIS — digital record of every institution, teacher and student.
+    - Digital content for the disabled — audio and sign-language learning material.
+    - BANBEIS database and the education MIS for planning and monitoring.
 
 21. **(a) Differentiate between e-commerce and e-business. How does e-commerce exploit self-serviced strategy to increase the market share?** *[BPSC Assistant Programmer (CSE) 2019 compact it 1127-1129 (ET: N/A)]*
 
@@ -2115,15 +2081,15 @@ Answer:
     | Example | Buying a phone on Daraz | Daraz's whole operation — supplier portal, warehouse system, HR, analytics, plus the storefront |
 
     (b) How e-commerce uses the self-service strategy to increase market share
-    - **Self-service means the customer performs the work the seller's staff used to do** — browsing, comparing, ordering, paying and tracking — through the platform itself.
-    - **Lower operating cost** — no salespeople, no shop rent. Savings are passed on as lower prices, which attracts price-sensitive customers and grows share.
-    - **24/7 availability** — the store never closes, so sales are captured outside business hours and across time zones.
-    - **Unlimited shelf space** — a physical shop stocks hundreds of items; an online store lists millions. This "long tail" captures demand no physical retailer can serve.
-    - **Personalisation at scale** — recommendation engines show each customer relevant products automatically, raising basket size without any human effort.
-    - **Customer self-management** — order tracking, returns, invoice download and account settings handled by the customer, cutting support cost and improving satisfaction because there is no waiting.
-    - **Reviews and ratings** — customers generate the trust content themselves, which is more persuasive than advertising and costs nothing.
-    - **Frictionless checkout** — saved addresses, saved cards and one-click ordering reduce cart abandonment.
-    - **Geographic reach** — one platform serves the whole country without opening a single branch.
+    - Self-service means the customer performs the work the seller's staff used to do — browsing, comparing, ordering, paying and tracking — through the platform itself.
+    - Lower operating cost — no salespeople, no shop rent. Savings are passed on as lower prices, which attracts price-sensitive customers and grows share.
+    - 24/7 availability — the store never closes, so sales are captured outside business hours and across time zones.
+    - Unlimited shelf space — a physical shop stocks hundreds of items; an online store lists millions. This "long tail" captures demand no physical retailer can serve.
+    - Personalisation at scale — recommendation engines show each customer relevant products automatically, raising basket size without any human effort.
+    - Customer self-management — order tracking, returns, invoice download and account settings handled by the customer, cutting support cost and improving satisfaction because there is no waiting.
+    - Reviews and ratings — customers generate the trust content themselves, which is more persuasive than advertising and costs nothing.
+    - Frictionless checkout — saved addresses, saved cards and one-click ordering reduce cart abandonment.
+    - Geographic reach — one platform serves the whole country without opening a single branch.
 
     - Net effect: cost per transaction falls as volume rises, allowing lower prices and wider reach — a self-reinforcing loop that steadily takes market share from traditional retail.
 
@@ -2154,33 +2120,33 @@ Answer:
 Answer:
 
     (a) Advantages of the internet in a business organisation
-    - **Global market reach** — a small firm can sell worldwide without opening foreign offices.
-    - **Low-cost communication** — email, VoIP and video conferencing replace expensive travel and long-distance calls.
-    - **24/7 operation** — the online storefront and self-service portal never close.
-    - **Faster information access** — market research, competitor data and supplier catalogues available instantly.
-    - **Cheaper marketing** — search, social media and email marketing cost a fraction of print and television.
-    - **Improved customer service** — chat, ticket systems, FAQs and self-service reduce cost while improving response time.
-    - **Supply chain efficiency** — suppliers and logistics partners connected through extranets and EDI.
-    - **Remote work and collaboration** — cloud documents and video calls let teams work across locations.
-    - **Cloud services** — computing and storage rented on demand instead of bought.
-    - **Data-driven decisions** — web and sales analytics guide pricing, stocking and marketing.
+    - Global market reach — a small firm can sell worldwide without opening foreign offices.
+    - Low-cost communication — email, VoIP and video conferencing replace expensive travel and long-distance calls.
+    - 24/7 operation — the online storefront and self-service portal never close.
+    - Faster information access — market research, competitor data and supplier catalogues available instantly.
+    - Cheaper marketing — search, social media and email marketing cost a fraction of print and television.
+    - Improved customer service — chat, ticket systems, FAQs and self-service reduce cost while improving response time.
+    - Supply chain efficiency — suppliers and logistics partners connected through extranets and EDI.
+    - Remote work and collaboration — cloud documents and video calls let teams work across locations.
+    - Cloud services — computing and storage rented on demand instead of bought.
+    - Data-driven decisions — web and sales analytics guide pricing, stocking and marketing.
 
     (b) How a legacy system is included in the intranet
     - A legacy system is an old but business-critical application — typically a mainframe or a decades-old database — that cannot simply be discarded because it holds essential data and logic.
 
     Integration methods
-    - **Web front-end (screen scraping / terminal emulation)** — a browser-based interface is placed in front of the legacy green-screen application, so intranet users reach it through a normal web page.
-    - **Middleware / integration layer** — software such as an ESB (Enterprise Service Bus) sits between the intranet and the legacy system, translating between formats and protocols.
-    - **API wrapper** — the legacy functions are exposed as REST or SOAP web services, so modern intranet applications can call them without knowing the old technology.
-    - **Database gateway** — the intranet application reads and writes the legacy database directly through an ODBC or JDBC connector.
-    - **Data replication / ETL** — legacy data is extracted, transformed and loaded into a modern database or data warehouse that the intranet uses, with periodic synchronisation.
-    - **Gradual migration (strangler pattern)** — new modules are built on the intranet and take over legacy functions one at a time, until the old system can finally be switched off.
+    - Web front-end (screen scraping / terminal emulation) — a browser-based interface is placed in front of the legacy green-screen application, so intranet users reach it through a normal web page.
+    - Middleware / integration layer — software such as an ESB (Enterprise Service Bus) sits between the intranet and the legacy system, translating between formats and protocols.
+    - API wrapper — the legacy functions are exposed as REST or SOAP web services, so modern intranet applications can call them without knowing the old technology.
+    - Database gateway — the intranet application reads and writes the legacy database directly through an ODBC or JDBC connector.
+    - Data replication / ETL — legacy data is extracted, transformed and loaded into a modern database or data warehouse that the intranet uses, with periodic synchronisation.
+    - Gradual migration (strangler pattern) — new modules are built on the intranet and take over legacy functions one at a time, until the old system can finally be switched off.
 
     - Why this matters: replacing a working legacy system outright is expensive and risky. Wrapping it and exposing it through the intranet gives users a modern interface while the proven core keeps running.
 
 24. **What is E-Commerce? What are the types of E-commerce?** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
-Answer: **E-commerce (electronic commerce)** is the buying and selling of goods and services over the internet, together with the electronic payment, marketing and delivery arrangements that support it.
+Answer: E-commerce (electronic commerce) is the buying and selling of goods and services over the internet, together with the electronic payment, marketing and delivery arrangements that support it.
 
     Components of an e-commerce system
     - An online catalogue, a shopping cart, a payment gateway, a delivery mechanism and a customer account system.
@@ -2189,17 +2155,17 @@ Answer: **E-commerce (electronic commerce)** is the buying and selling of goods 
 
     | Type | Meaning | Example |
     |---|---|---|
-    | **B2B** — Business to Business | A business sells to another business, usually in bulk with negotiated pricing | Alibaba, a wholesaler supplying retail shops |
-    | **B2C** — Business to Consumer | A business sells directly to the end consumer | Daraz, Amazon, Chaldal, Rokomari |
-    | **C2C** — Consumer to Consumer | Individuals sell to each other through a platform that takes a fee | Bikroy, eBay, Facebook Marketplace |
-    | **C2B** — Consumer to Business | An individual offers a product or service to a business | Upwork and Fiverr freelancers, stock photo sellers |
-    | **B2G / G2B** — Business and Government | Business transactions with government | e-GP electronic tendering |
-    | **G2C** — Government to Citizen | Government delivers paid services to citizens online | e-passport fee, online tax payment |
+    | B2B — Business to Business | A business sells to another business, usually in bulk with negotiated pricing | Alibaba, a wholesaler supplying retail shops |
+    | B2C — Business to Consumer | A business sells directly to the end consumer | Daraz, Amazon, Chaldal, Rokomari |
+    | C2C — Consumer to Consumer | Individuals sell to each other through a platform that takes a fee | Bikroy, eBay, Facebook Marketplace |
+    | C2B — Consumer to Business | An individual offers a product or service to a business | Upwork and Fiverr freelancers, stock photo sellers |
+    | B2G / G2B — Business and Government | Business transactions with government | e-GP electronic tendering |
+    | G2C — Government to Citizen | Government delivers paid services to citizens online | e-passport fee, online tax payment |
 
     Other models sometimes listed
-    - **B2B2C** — a business sells through another business to the consumer, as marketplaces do.
-    - **D2C (Direct to Consumer)** — a manufacturer sells straight to the customer, bypassing retailers.
-    - **F-commerce** — selling through a Facebook page; a subset of B2C very common in Bangladesh.
+    - B2B2C — a business sells through another business to the consumer, as marketplaces do.
+    - D2C (Direct to Consumer) — a manufacturer sells straight to the customer, bypassing retailers.
+    - F-commerce — selling through a Facebook page; a subset of B2C very common in Bangladesh.
 
     Advantages and limitations
     - Advantages: wider reach, lower cost, 24/7 availability, easy price comparison, personalisation.
@@ -2217,7 +2183,7 @@ Answer: The CMOS battery is a small coin cell (usually CR2032, 3 V) on the mothe
    - BIOS password, if one is set.
 
    Typical performance
-   - Lifespan is about **3 to 5 years**, and up to 10 years in a machine that is usually left powered on.
+   - Lifespan is about 3 to 5 years, and up to 10 years in a machine that is usually left powered on.
    - It drains faster in a machine that stays unplugged for long periods, because CMOS then draws from the battery continuously.
 
    Symptoms of a failing CMOS battery
@@ -2254,15 +2220,15 @@ Answer:
        K --> L[Kernel initialises drivers and starts the OS]
    ```
 
-   - **Step 1 — Power on.** The power supply stabilises and sends a "Power Good" signal to the motherboard.
-   - **Step 2 — CPU reset vector.** The CPU begins executing at a fixed address that points into the BIOS ROM.
-   - **Step 3 — POST (Power-On Self-Test).** BIOS tests the essential hardware: CPU, RAM, keyboard, display adapter and storage controller. Failure is reported by beep codes or an on-screen message, because the display may not be available yet.
-   - **Step 4 — Device initialisation.** BIOS initialises the video card, disks and other devices, and reads its saved configuration from CMOS.
-   - **Step 5 — Boot device selection.** BIOS follows the configured boot order — hard disk, SSD, USB, network — and picks the first bootable device found.
-   - **Step 6 — Load the MBR.** It reads the first sector (512 bytes) of that device, the Master Boot Record, into RAM.
-   - **Step 7 — Run the bootloader.** The MBR code locates and starts the bootloader (GRUB on Linux, Windows Boot Manager on Windows).
-   - **Step 8 — Load the kernel.** The bootloader loads the operating system kernel into memory and transfers control to it.
-   - **Step 9 — OS initialisation.** The kernel initialises drivers, mounts the file system, starts system services and presents the login screen.
+   - Step 1 — Power on. The power supply stabilises and sends a "Power Good" signal to the motherboard.
+   - Step 2 — CPU reset vector. The CPU begins executing at a fixed address that points into the BIOS ROM.
+   - Step 3 — POST (Power-On Self-Test). BIOS tests the essential hardware: CPU, RAM, keyboard, display adapter and storage controller. Failure is reported by beep codes or an on-screen message, because the display may not be available yet.
+   - Step 4 — Device initialisation. BIOS initialises the video card, disks and other devices, and reads its saved configuration from CMOS.
+   - Step 5 — Boot device selection. BIOS follows the configured boot order — hard disk, SSD, USB, network — and picks the first bootable device found.
+   - Step 6 — Load the MBR. It reads the first sector (512 bytes) of that device, the Master Boot Record, into RAM.
+   - Step 7 — Run the bootloader. The MBR code locates and starts the bootloader (GRUB on Linux, Windows Boot Manager on Windows).
+   - Step 8 — Load the kernel. The bootloader loads the operating system kernel into memory and transfers control to it.
+   - Step 9 — OS initialisation. The kernel initialises drivers, mounts the file system, starts system services and presents the login screen.
 
    - Modern machines use UEFI in place of BIOS. UEFI skips the MBR and reads an `.efi` executable directly from the EFI System Partition, which is faster and supports disks larger than 2 TB.
 
@@ -2271,33 +2237,33 @@ Answer:
 Answer: In a server, BIOS (now almost always UEFI) does the same job as on a PC — initialise hardware, run POST and start the bootloader — but it carries additional enterprise features.
 
    Server-specific BIOS features
-   - **RAID configuration** — the disk controller's RAID level (0, 1, 5, 10) is set from within BIOS setup before any OS is installed.
-   - **Boot order and network boot (PXE)** — servers are frequently installed and reimaged over the network, so PXE boot order matters.
-   - **Virtualization support** — Intel VT-x / AMD-V and VT-d must be ENABLED in BIOS, otherwise hypervisors such as ESXi or Hyper-V will not run.
-   - **Power management profiles** — performance versus power-saving modes affect both throughput and electricity cost.
-   - **Memory settings** — ECC memory, memory mirroring and rank sparing are configured here.
-   - **Remote management** — iLO (HP), iDRAC (Dell) and IPMI let an administrator reach BIOS setup and power-cycle the server remotely, which is essential in a data centre.
-   - **Secure Boot and TPM** — enforce that only signed bootloaders run.
-   - **Hardware monitoring** — fan speed, temperature and voltage thresholds.
+   - RAID configuration — the disk controller's RAID level (0, 1, 5, 10) is set from within BIOS setup before any OS is installed.
+   - Boot order and network boot (PXE) — servers are frequently installed and reimaged over the network, so PXE boot order matters.
+   - Virtualization support — Intel VT-x / AMD-V and VT-d must be ENABLED in BIOS, otherwise hypervisors such as ESXi or Hyper-V will not run.
+   - Power management profiles — performance versus power-saving modes affect both throughput and electricity cost.
+   - Memory settings — ECC memory, memory mirroring and rank sparing are configured here.
+   - Remote management — iLO (HP), iDRAC (Dell) and IPMI let an administrator reach BIOS setup and power-cycle the server remotely, which is essential in a data centre.
+   - Secure Boot and TPM — enforce that only signed bootloaders run.
+   - Hardware monitoring — fan speed, temperature and voltage thresholds.
 
    Effect on booting configuration during hardware maintenance
-   - **After adding or replacing a disk** — the RAID array must be rebuilt or re-imported through BIOS/controller setup, otherwise the server will not find its boot volume.
-   - **After a motherboard replacement** — all BIOS settings return to default: boot order, RAID mode (AHCI vs RAID), virtualization flags and Secure Boot. The server will fail to boot until these are restored. Settings should therefore be documented or exported before maintenance.
-   - **After a CMOS battery failure** — the same loss of settings occurs, plus a wrong system clock, which breaks Kerberos authentication and certificate validation.
-   - **After a firmware update** — BIOS updates can reset settings and occasionally change device enumeration order.
-   - **Changing boot mode** — switching between Legacy BIOS and UEFI makes an existing OS installation unbootable, because MBR and GPT partitioning are not interchangeable.
+   - After adding or replacing a disk — the RAID array must be rebuilt or re-imported through BIOS/controller setup, otherwise the server will not find its boot volume.
+   - After a motherboard replacement — all BIOS settings return to default: boot order, RAID mode (AHCI vs RAID), virtualization flags and Secure Boot. The server will fail to boot until these are restored. Settings should therefore be documented or exported before maintenance.
+   - After a CMOS battery failure — the same loss of settings occurs, plus a wrong system clock, which breaks Kerberos authentication and certificate validation.
+   - After a firmware update — BIOS updates can reset settings and occasionally change device enumeration order.
+   - Changing boot mode — switching between Legacy BIOS and UEFI makes an existing OS installation unbootable, because MBR and GPT partitioning are not interchangeable.
 
    - Practical rule for maintenance: record the BIOS configuration (or export it through iDRAC/iLO) before any hardware work, and verify boot order, RAID status and virtualization flags immediately after.
 
 4. **What is BIOS?** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
 
-Answer: **BIOS — Basic Input Output System.** It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
+Answer: BIOS — Basic Input Output System. It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
 
    Four main tasks
-   - **POST** — tests CPU, RAM, keyboard, display and storage before anything else runs.
-   - **Initialise hardware** — prepares devices so the operating system can use them.
-   - **Boot the OS** — finds the boot device, loads the Master Boot Record and starts the bootloader.
-   - **Provide setup** — a configuration screen (Del or F2 at startup) for boot order, device enable/disable, passwords and clock settings.
+   - POST — tests CPU, RAM, keyboard, display and storage before anything else runs.
+   - Initialise hardware — prepares devices so the operating system can use them.
+   - Boot the OS — finds the boot device, loads the Master Boot Record and starts the bootloader.
+   - Provide setup — a configuration screen (Del or F2 at startup) for boot order, device enable/disable, passwords and clock settings.
 
    - Settings are stored in CMOS memory and preserved by a coin-cell battery.
    - UEFI is its modern replacement, offering faster boot, disks larger than 2 TB, a mouse-driven graphical interface and Secure Boot.
@@ -2325,13 +2291,13 @@ Answer:
 Answer:
 
    Components of a computer system
-   - **Input unit** — accepts data and instructions from the user and converts them into machine-readable form. Examples: keyboard, mouse, scanner.
-   - **CPU (Central Processing Unit)** — the brain of the computer, made of two parts:
-     - **ALU (Arithmetic Logic Unit)** — performs arithmetic and logical operations.
-     - **CU (Control Unit)** — fetches, decodes and directs the execution of instructions, coordinating all other units.
-   - **Memory unit** — stores data and instructions. Primary memory (RAM, ROM) is fast and directly accessible; secondary memory (HDD, SSD) is large and permanent.
-   - **Output unit** — presents the processed result to the user. Examples: monitor, printer, speaker.
-   - **Storage unit** — retains data permanently for future use.
+   - Input unit — accepts data and instructions from the user and converts them into machine-readable form. Examples: keyboard, mouse, scanner.
+   - CPU (Central Processing Unit) — the brain of the computer, made of two parts:
+     - ALU (Arithmetic Logic Unit) — performs arithmetic and logical operations.
+     - CU (Control Unit) — fetches, decodes and directs the execution of instructions, coordinating all other units.
+   - Memory unit — stores data and instructions. Primary memory (RAM, ROM) is fast and directly accessible; secondary memory (HDD, SSD) is large and permanent.
+   - Output unit — presents the processed result to the user. Examples: monitor, printer, speaker.
+   - Storage unit — retains data permanently for future use.
 
    ```mermaid
    flowchart LR
@@ -2342,8 +2308,8 @@ Answer:
    ```
 
    Two optical input devices
-   - **Optical scanner** — reads printed images and text by shining light on the page and measuring the reflection.
-   - **Barcode reader** — reads the bar pattern on a product using a laser or LED and converts it to a number.
+   - Optical scanner — reads printed images and text by shining light on the page and measuring the reflection.
+   - Barcode reader — reads the bar pattern on a product using a laser or LED and converts it to a number.
    - Others in the same family: OMR reader, OCR device, optical mouse, webcam, MICR reader (magnetic, not optical).
 
 7. **What are the components of a Micro computer system?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 670 (ET: N/A)]*
@@ -2351,28 +2317,28 @@ Answer:
 Answer: A microcomputer is a computer built around a single microprocessor — a desktop, laptop, tablet or smartphone.
 
    Hardware components
-   - **Microprocessor (CPU)** — the single chip containing the ALU, control unit and registers. Examples: Intel Core, AMD Ryzen.
-   - **Motherboard** — the main circuit board connecting every component, carrying the chipset, buses and expansion slots.
-   - **Primary memory** — RAM for working data, ROM holding the BIOS.
-   - **Secondary storage** — hard disk, SSD, optical drive, USB drive.
-   - **Input devices** — keyboard, mouse, scanner, microphone, webcam.
-   - **Output devices** — monitor, printer, speaker.
-   - **Power supply unit (SMPS)** — converts AC mains to the DC voltages the components need.
-   - **Expansion cards** — graphics card, sound card, network interface card.
-   - **System bus** — data bus, address bus and control bus connecting CPU, memory and I/O.
-   - **Ports** — USB, HDMI, Ethernet, audio.
+   - Microprocessor (CPU) — the single chip containing the ALU, control unit and registers. Examples: Intel Core, AMD Ryzen.
+   - Motherboard — the main circuit board connecting every component, carrying the chipset, buses and expansion slots.
+   - Primary memory — RAM for working data, ROM holding the BIOS.
+   - Secondary storage — hard disk, SSD, optical drive, USB drive.
+   - Input devices — keyboard, mouse, scanner, microphone, webcam.
+   - Output devices — monitor, printer, speaker.
+   - Power supply unit (SMPS) — converts AC mains to the DC voltages the components need.
+   - Expansion cards — graphics card, sound card, network interface card.
+   - System bus — data bus, address bus and control bus connecting CPU, memory and I/O.
+   - Ports — USB, HDMI, Ethernet, audio.
 
    Software components
-   - **System software** — operating system, device drivers, utilities.
-   - **Application software** — browser, office suite, media player.
+   - System software — operating system, device drivers, utilities.
+   - Application software — browser, office suite, media player.
 
    - The defining characteristic of a microcomputer is that the entire CPU sits on ONE chip, which is what made personal computing affordable from the fourth generation onward.
 
 8. **What do understand by the resolution of computer screen?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 676 (ET: N/A)]*
 
-Answer: Screen resolution is the total number of pixels a display shows, written as **horizontal pixels × vertical pixels**, for example 1920 × 1080.
+Answer: Screen resolution is the total number of pixels a display shows, written as horizontal pixels × vertical pixels, for example 1920 × 1080.
 
-   - A **pixel** (picture element) is the smallest addressable dot on the screen. Every image is built from these dots.
+   - A pixel (picture element) is the smallest addressable dot on the screen. Every image is built from these dots.
    - A resolution of 1920 × 1080 means 1920 pixels across and 1080 down, giving `1920 × 1080 = 2,073,600` pixels in total.
    - Higher resolution means more pixels in the same area, so the picture is sharper and more detail fits on screen.
 
@@ -2386,29 +2352,29 @@ Answer: Screen resolution is the total number of pixels a display shows, written
    | QHD (2K) | 2560 × 1440 | 3,686,400 |
    | UHD (4K) | 3840 × 2160 | 8,294,400 |
 
-   - Resolution alone is not the whole story. **Pixel density (PPI — pixels per inch)** matters too: 1920 × 1080 looks sharp on a 15-inch laptop but noticeably coarse on a 32-inch monitor, because the same pixels are spread over more area.
-   - **Aspect ratio** is the shape: 4:3 (old), 16:9 (standard widescreen), 21:9 (ultrawide).
+   - Resolution alone is not the whole story. Pixel density (PPI — pixels per inch) matters too: 1920 × 1080 looks sharp on a 15-inch laptop but noticeably coarse on a 32-inch monitor, because the same pixels are spread over more area.
+   - Aspect ratio is the shape: 4:3 (old), 16:9 (standard widescreen), 21:9 (ultrawide).
 
 9. **What is BIOS?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-Answer: **BIOS — Basic Input Output System.** It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
+Answer: BIOS — Basic Input Output System. It is firmware permanently stored in a ROM or flash chip on the motherboard, and it is the first software that runs when a computer is powered on.
 
    Four main tasks
-   - **POST** — tests CPU, RAM, keyboard, display and storage before anything else runs.
-   - **Initialise hardware** — prepares devices so the operating system can use them.
-   - **Boot the OS** — finds the boot device, loads the Master Boot Record and starts the bootloader.
-   - **Provide setup** — a configuration screen (Del or F2 at startup) for boot order, device enable/disable, passwords and clock settings.
+   - POST — tests CPU, RAM, keyboard, display and storage before anything else runs.
+   - Initialise hardware — prepares devices so the operating system can use them.
+   - Boot the OS — finds the boot device, loads the Master Boot Record and starts the bootloader.
+   - Provide setup — a configuration screen (Del or F2 at startup) for boot order, device enable/disable, passwords and clock settings.
 
    - Settings are stored in CMOS memory and preserved by a coin-cell battery.
    - UEFI is its modern replacement, offering faster boot, disks larger than 2 TB, a mouse-driven graphical interface and Secure Boot.
 
 10. **Pixel number 130 হলে রেজুলেশন কত হবে?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
 
-Answer: The question as printed is incomplete — a single number cannot give a resolution, because resolution is always expressed as **width × height**.
+Answer: The question as printed is incomplete — a single number cannot give a resolution, because resolution is always expressed as width × height.
 
     Two possible readings
 
-    (a) If 130 means **130 PPI (pixels per inch)** — that is pixel DENSITY, not resolution.
+    (a) If 130 means 130 PPI (pixels per inch) — that is pixel DENSITY, not resolution.
     - `PPI = √(horizontal pixels² + vertical pixels²) / diagonal size in inches`
     - Example: a 15.6-inch laptop at 1920 × 1080 gives `√(1920² + 1080²) / 15.6 = 2202 / 15.6 ≈ 141 PPI`.
     - A density of about 130 PPI corresponds roughly to a 1920 × 1080 display on a 17-inch screen, or 1366 × 768 on a 12-inch screen.
@@ -2423,15 +2389,15 @@ Answer: The question as printed is incomplete — a single number cannot give a 
 Answer: A computer system has five elements: hardware, software, data, people and procedures.
 
     (a) Hardware — the physical parts
-    - **Input unit** — keyboard, mouse, scanner; accepts data and converts it to machine form.
-    - **CPU** — the brain, containing the ALU (calculations and comparisons) and the Control Unit (fetches, decodes and directs instructions).
-    - **Memory unit** — RAM (fast, volatile working memory) and ROM (permanent firmware).
-    - **Storage unit** — hard disk, SSD, USB drive; keeps data permanently.
-    - **Output unit** — monitor, printer, speaker; presents the result.
+    - Input unit — keyboard, mouse, scanner; accepts data and converts it to machine form.
+    - CPU — the brain, containing the ALU (calculations and comparisons) and the Control Unit (fetches, decodes and directs instructions).
+    - Memory unit — RAM (fast, volatile working memory) and ROM (permanent firmware).
+    - Storage unit — hard disk, SSD, USB drive; keeps data permanently.
+    - Output unit — monitor, printer, speaker; presents the result.
 
     (b) Software — the programs
-    - **System software** — operating system, device drivers, utilities, compilers.
-    - **Application software** — word processor, browser, banking application.
+    - System software — operating system, device drivers, utilities, compilers.
+    - Application software — word processor, browser, banking application.
 
     (c) Data
     - The raw facts the system processes, and the information produced from them.
@@ -2455,23 +2421,23 @@ Answer: A computer system has five elements: hardware, software, data, people an
 
 Answer: Three components with the greatest effect on system performance:
 
-    (a) **Processor (CPU)**
+    (a) Processor (CPU)
     - Decides how many instructions can be executed per second.
     - Key factors: clock speed in GHz, number of cores and threads, cache size (L1, L2, L3), and instruction set architecture.
     - A faster CPU with more cores handles multitasking and heavy computation far better. Cache size matters greatly, because a cache miss costs hundreds of CPU cycles waiting for RAM.
 
-    (b) **Primary memory (RAM)**
+    (b) Primary memory (RAM)
     - Decides how much data and how many programs can be held in fast memory at once.
     - Key factors: capacity in GB, speed in MHz, and generation (DDR4, DDR5).
     - Insufficient RAM forces the OS to swap pages to disk, which is thousands of times slower — this is usually the single biggest cause of a "slow computer".
 
-    (c) **Secondary storage (HDD vs SSD)**
+    (c) Secondary storage (HDD vs SSD)
     - Decides how fast programs load and files are read or written.
     - An SSD reads at 500 MB/s to 7 GB/s with near-zero seek time; a mechanical HDD manages about 100 MB/s with several milliseconds of seek delay.
     - Replacing an HDD with an SSD gives the most visible speed improvement on an older machine, often more than a CPU upgrade.
 
     Other components that also matter
-    - **GPU** for graphics, video and AI workloads; **motherboard chipset and bus speed**; **cooling**, since an overheating CPU throttles its own clock speed; and **power supply quality**.
+    - GPU for graphics, video and AI workloads; motherboard chipset and bus speed; cooling, since an overheating CPU throttles its own clock speed; and power supply quality.
 
 13. **What is the difference between UEFI and BIOS?** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
@@ -2499,16 +2465,16 @@ Answer:
 
 14. **Plotter কোন ধরনের Device?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: A plotter is an **output device** — specifically a hard-copy output device.
+Answer: A plotter is an output device — specifically a hard-copy output device.
 
     - It draws continuous LINES using one or more pens moving across the paper, rather than printing dots like a normal printer.
     - Because it draws vectors, it produces very accurate large-format line drawings.
     - Uses: engineering and architectural drawings, CAD output, maps, circuit layouts, banners and large posters.
 
     Types of plotter
-    - **Drum plotter** — the paper moves over a rotating drum while the pen moves sideways.
-    - **Flatbed plotter** — the paper stays flat and still while the pen moves in both directions.
-    - **Inkjet plotter** — modern large-format plotters use inkjet heads instead of pens.
+    - Drum plotter — the paper moves over a rotating drum while the pen moves sideways.
+    - Flatbed plotter — the paper stays flat and still while the pen moves in both directions.
+    - Inkjet plotter — modern large-format plotters use inkjet heads instead of pens.
 
     | Point | Plotter | Printer |
     |---|---|---|
@@ -2521,20 +2487,20 @@ Answer: A plotter is an **output device** — specifically a hard-copy output de
 
 Answer:
 
-    **Pixel**
+    Pixel
     - Short for "picture element", the smallest addressable unit of a digital image or display.
     - Every image is a grid of pixels, and each pixel holds one colour value.
     - In colour displays each pixel is made of three sub-pixels — red, green and blue — whose brightness combines to produce the final colour.
     - Colour depth decides how many colours a pixel can show: 8-bit gives 256 colours, 24-bit gives about 16.7 million.
 
-    **Resolution**
+    Resolution
     - The total number of pixels in a display or image, written as width × height.
     - Example: 1920 × 1080 means 1920 pixels horizontally and 1080 vertically, that is 2,073,600 pixels in total.
     - More pixels in the same physical area means a sharper, more detailed picture.
 
     Relationship between the two
     - Pixels are the building blocks; resolution is the count of those blocks.
-    - **Pixel density (PPI)** links them to physical size: `PPI = √(width² + height²) / diagonal inches`. The same resolution looks sharp on a small screen and coarse on a large one.
+    - Pixel density (PPI) links them to physical size: `PPI = √(width² + height²) / diagonal inches`. The same resolution looks sharp on a small screen and coarse on a large one.
 
     | Standard | Resolution | Also called |
     |---|---|---|
@@ -2544,7 +2510,7 @@ Answer:
     | QHD | 2560 × 1440 | 2K |
     | UHD | 3840 × 2160 | 4K |
 
-    - Related term: **DPI (dots per inch)** is the printing equivalent of PPI, describing how many ink dots a printer places per inch.
+    - Related term: DPI (dots per inch) is the printing equivalent of PPI, describing how many ink dots a printer places per inch.
 
 16. **Write the difference between BIOS and CMOS?** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
 
@@ -2571,15 +2537,15 @@ Answer: BIOS is the PROGRAM; CMOS is the MEMORY that stores the BIOS settings. T
 Answer: A graphics card (also called a video card, display adapter or GPU card) is an expansion card that generates the image sent to the monitor. It takes over all graphics computation from the CPU.
 
     Main parts
-    - **GPU (Graphics Processing Unit)** — the processor, containing thousands of small cores designed for parallel work.
-    - **VRAM (Video RAM)** — dedicated high-speed memory holding textures and frame buffers, typically GDDR6.
-    - **Cooling** — heatsink and fans, since GPUs generate a lot of heat.
-    - **Output ports** — HDMI, DisplayPort, DVI, VGA.
-    - **Interface** — connects to the motherboard through a PCIe slot.
+    - GPU (Graphics Processing Unit) — the processor, containing thousands of small cores designed for parallel work.
+    - VRAM (Video RAM) — dedicated high-speed memory holding textures and frame buffers, typically GDDR6.
+    - Cooling — heatsink and fans, since GPUs generate a lot of heat.
+    - Output ports — HDMI, DisplayPort, DVI, VGA.
+    - Interface — connects to the motherboard through a PCIe slot.
 
     Two types
-    - **Integrated graphics** — the GPU is built into the CPU or chipset and shares system RAM. Cheap and power-efficient, adequate for office work and video.
-    - **Dedicated (discrete) graphics** — a separate card with its own VRAM. Far more powerful. Examples: NVIDIA GeForce/RTX, AMD Radeon.
+    - Integrated graphics — the GPU is built into the CPU or chipset and shares system RAM. Cheap and power-efficient, adequate for office work and video.
+    - Dedicated (discrete) graphics — a separate card with its own VRAM. Far more powerful. Examples: NVIDIA GeForce/RTX, AMD Radeon.
 
     Uses
     - Gaming, video editing and 3D rendering, CAD, animation.
@@ -2587,38 +2553,38 @@ Answer: A graphics card (also called a video card, display adapter or GPU card) 
 
 18. **ডট মেট্রিক্স প্রিন্টারের মূল উপাদান কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
-Answer: The main component of a dot matrix printer is the **print head containing a matrix of pins (needles)**.
+Answer: The main component of a dot matrix printer is the print head containing a matrix of pins (needles).
 
     How it works
     - The print head holds a vertical column of tiny pins, usually 9 or 24.
-    - Electromagnets fire selected pins forward, striking an **inked ribbon** against the paper.
+    - Electromagnets fire selected pins forward, striking an inked ribbon against the paper.
     - Each strike leaves a dot, and characters are formed from patterns of these dots — hence the name "dot matrix".
     - The head moves across the line while the paper advances, building the page dot by dot.
 
     Essential components
-    - **Print head with pins** — the core element.
-    - **Inked ribbon** — supplies the ink.
-    - **Platen** — the roller behind the paper that the pins strike against.
-    - **Carriage and stepper motors** — move the head horizontally and the paper vertically.
-    - **Tractor feed** — sprockets that pull continuous perforated paper.
+    - Print head with pins — the core element.
+    - Inked ribbon — supplies the ink.
+    - Platen — the roller behind the paper that the pins strike against.
+    - Carriage and stepper motors — move the head horizontally and the paper vertically.
+    - Tractor feed — sprockets that pull continuous perforated paper.
 
     Why it is still used
-    - It is an **impact printer**, so it can print through carbon paper and produce multiple copies in one pass. This is why banks, utility billing counters and railway ticket offices still use it.
+    - It is an impact printer, so it can print through carbon paper and produce multiple copies in one pass. This is why banks, utility billing counters and railway ticket offices still use it.
     - Very low running cost and extremely durable.
     - Drawbacks: noisy, slow and poor print quality compared with inkjet or laser.
 
 19. **Touch Screen কি জাতীয় ডিভাইস?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 945 (ET: N/A)]*
 
-Answer: A touch screen is **both an input and an output device**, so it is classified as an **input-output (I/O) device**.
+Answer: A touch screen is both an input and an output device, so it is classified as an input-output (I/O) device.
 
-    - As an **output device**, it is a display that shows the image.
-    - As an **input device**, it senses the position of a finger or stylus touching the surface and passes those coordinates to the computer as input.
+    - As an output device, it is a display that shows the image.
+    - As an input device, it senses the position of a finger or stylus touching the surface and passes those coordinates to the computer as input.
 
     Types of touch screen
-    - **Resistive** — two conductive layers press together at the touch point. Works with any object including a gloved finger or stylus, but is less clear and does not support multi-touch well. Used in older ATMs and POS terminals.
-    - **Capacitive** — senses the change in an electric field caused by a finger. Sharper display, supports multi-touch, but needs a conductive object (a bare finger). Used in all modern smartphones.
-    - **Infrared** — an IR grid across the surface is broken by the touch. Used in large interactive displays.
-    - **Surface Acoustic Wave (SAW)** — ultrasonic waves are absorbed at the touch point.
+    - Resistive — two conductive layers press together at the touch point. Works with any object including a gloved finger or stylus, but is less clear and does not support multi-touch well. Used in older ATMs and POS terminals.
+    - Capacitive — senses the change in an electric field caused by a finger. Sharper display, supports multi-touch, but needs a conductive object (a bare finger). Used in all modern smartphones.
+    - Infrared — an IR grid across the surface is broken by the touch. Used in large interactive displays.
+    - Surface Acoustic Wave (SAW) — ultrasonic waves are absorbed at the touch point.
 
     - Other examples of I/O devices: modem, network interface card, hard disk, USB flash drive, headset with microphone.
 
@@ -2660,20 +2626,20 @@ Answer: Several hardware and software factors together decide how fast a compute
 Answer: Overheating is caused by heat being generated faster than it can be removed. The fix is either to improve heat removal or to reduce heat generation.
 
     (a) Hardware and physical solutions
-    - **Clean the vents and fan** — dust blocking the exhaust is the single most common cause. Blow out with compressed air every few months.
-    - **Replace the thermal paste** — the paste between CPU/GPU and heatsink dries out after 2-3 years and stops conducting heat. Reapplying it often drops temperatures by 10-20 °C.
-    - **Use a hard, flat surface** — placing the laptop on a bed, pillow or lap blocks the intake vents underneath.
-    - **Use a cooling pad** — an external fan base improves airflow.
-    - **Check the fan is spinning** — a failed fan must be replaced.
-    - **Improve room ventilation** — avoid direct sunlight and hot enclosed spaces.
+    - Clean the vents and fan — dust blocking the exhaust is the single most common cause. Blow out with compressed air every few months.
+    - Replace the thermal paste — the paste between CPU/GPU and heatsink dries out after 2-3 years and stops conducting heat. Reapplying it often drops temperatures by 10-20 °C.
+    - Use a hard, flat surface — placing the laptop on a bed, pillow or lap blocks the intake vents underneath.
+    - Use a cooling pad — an external fan base improves airflow.
+    - Check the fan is spinning — a failed fan must be replaced.
+    - Improve room ventilation — avoid direct sunlight and hot enclosed spaces.
 
     (b) Software and usage solutions
-    - **Close unnecessary background programs** — check Task Manager for processes using high CPU.
-    - **Scan for malware** — crypto-mining malware pins the CPU at 100%.
-    - **Update BIOS and drivers** — fan curve and power management fixes often come through firmware updates.
-    - **Change the power plan** — use Balanced or Power Saver instead of High Performance.
-    - **Undervolting** — reducing CPU voltage lowers heat with almost no performance loss.
-    - **Limit heavy multitasking** — avoid running games, video rendering and many browser tabs together.
+    - Close unnecessary background programs — check Task Manager for processes using high CPU.
+    - Scan for malware — crypto-mining malware pins the CPU at 100%.
+    - Update BIOS and drivers — fan curve and power management fixes often come through firmware updates.
+    - Change the power plan — use Balanced or Power Saver instead of High Performance.
+    - Undervolting — reducing CPU voltage lowers heat with almost no performance loss.
+    - Limit heavy multitasking — avoid running games, video rendering and many browser tabs together.
 
     - Warning signs to act on: fan constantly at full speed, machine hot to touch, sudden shutdowns, or performance dropping after a few minutes of use (this is thermal throttling).
 
@@ -2705,7 +2671,7 @@ Answer:
     | Changed by | Flashing a firmware update | Reinstalling or reconfiguring |
     | Examples | BIOS, UEFI, router firmware, printer firmware, embedded device firmware | GRUB, LILO, Windows Boot Manager, U-Boot |
 
-    - Relationship in the boot chain: **Firmware (BIOS/UEFI) → Bootloader (GRUB / Windows Boot Manager) → OS kernel → Operating system**.
+    - Relationship in the boot chain: Firmware (BIOS/UEFI) → Bootloader (GRUB / Windows Boot Manager) → OS kernel → Operating system.
     - BIOS and UEFI are themselves types of firmware; the bootloader is ordinary software stored on the disk, not in a chip.
 
 23. **Suppose you are entering data into computer but facing some problem with your monitor. You need to buy a new monitor. What factor should you consider in case of monitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
@@ -2713,27 +2679,27 @@ Answer:
 Answer: For a data-entry workstation, eye comfort and text clarity matter more than gaming specifications.
 
     (a) Display quality
-    - **Resolution** — Full HD (1920 × 1080) minimum; text is noticeably sharper than at 1366 × 768.
-    - **Screen size** — 22 to 24 inches suits data entry; larger than 27 inches at 1080p makes text look coarse.
-    - **Panel type** — IPS gives the best colour accuracy and viewing angles; TN is cheaper and faster but colours shift off-axis; VA sits between them.
-    - **Pixel density (PPI)** — decides how sharp text actually looks, not resolution alone.
+    - Resolution — Full HD (1920 × 1080) minimum; text is noticeably sharper than at 1366 × 768.
+    - Screen size — 22 to 24 inches suits data entry; larger than 27 inches at 1080p makes text look coarse.
+    - Panel type — IPS gives the best colour accuracy and viewing angles; TN is cheaper and faster but colours shift off-axis; VA sits between them.
+    - Pixel density (PPI) — decides how sharp text actually looks, not resolution alone.
 
     (b) Eye comfort — the critical factor for long data-entry sessions
-    - **Flicker-free technology** and a **blue light filter** reduce eye strain and headaches.
-    - **Anti-glare (matte) coating** rather than glossy, especially under office tube lights.
-    - **Adjustable brightness and contrast**.
-    - **Ergonomic stand** with height, tilt and swivel adjustment, so the top of the screen sits at eye level.
+    - Flicker-free technology and a blue light filter reduce eye strain and headaches.
+    - Anti-glare (matte) coating rather than glossy, especially under office tube lights.
+    - Adjustable brightness and contrast.
+    - Ergonomic stand with height, tilt and swivel adjustment, so the top of the screen sits at eye level.
 
     (c) Technical compatibility
-    - **Ports** — HDMI, DisplayPort or VGA, matching the computer's output.
-    - **Refresh rate** — 60 Hz is sufficient for data entry; higher rates only matter for gaming.
-    - **Response time** — not important for office work.
+    - Ports — HDMI, DisplayPort or VGA, matching the computer's output.
+    - Refresh rate — 60 Hz is sufficient for data entry; higher rates only matter for gaming.
+    - Response time — not important for office work.
 
     (d) Practical factors
-    - **Power consumption** — LED-backlit monitors use far less than old CCFL or CRT.
-    - **Warranty and after-sales service** in the local market.
-    - **Price and brand reliability**.
-    - **VESA mount support** if a wall or arm mount is planned.
+    - Power consumption — LED-backlit monitors use far less than old CCFL or CRT.
+    - Warranty and after-sales service in the local market.
+    - Price and brand reliability.
+    - VESA mount support if a wall or arm mount is planned.
 
     - Summary priority for data entry: IPS panel, Full HD at 22-24 inches, flicker-free with a blue light filter, matte finish, and a height-adjustable stand.
 
@@ -2758,7 +2724,7 @@ Answer:
     - A cheque passes through many hands and gets stamped, folded and written over. Optical reading would fail; magnetic reading still works because the magnetic signal is unaffected by ink marks on top.
     - The MICR line at the bottom of a cheque carries the cheque number, routing number, account number and transaction code.
 
-    - The third related technology is **OCR (Optical Character Recognition)**, which reads ordinary printed or handwritten TEXT — more flexible than both, but less accurate.
+    - The third related technology is OCR (Optical Character Recognition), which reads ordinary printed or handwritten TEXT — more flexible than both, but less accurate.
 
 ## Software Types & Classification (17)
 
@@ -2779,26 +2745,26 @@ Answer:
    | Examples | Operating system, device drivers, compilers, utilities, BIOS | MS Word, browsers, media players, banking apps, games |
 
    - Relationship: application software sits ON TOP of system software. When Word saves a file, it does not touch the disk directly — it asks the operating system, which uses the disk driver.
-   - A third category, **utility software** (antivirus, disk cleanup, backup), is usually grouped under system software.
+   - A third category, utility software (antivirus, disk cleanup, backup), is usually grouped under system software.
 
 2. **What is platform independent software discuss with example?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 514 (ET: MIST)]*
 
 Answer: Platform-independent software runs on different operating systems and hardware architectures WITHOUT being rewritten or recompiled for each one. It is also called cross-platform software.
 
    How platform independence is achieved
-   - **Virtual machine approach** — the source is compiled to an intermediate form, and a platform-specific runtime executes it. Java compiles to bytecode which the JVM runs; there is a different JVM for Windows, Linux and macOS, but the same bytecode runs on all.
-   - **Interpreted approach** — the source itself is shipped and an interpreter on each platform runs it. Python and JavaScript work this way.
-   - **Web-based approach** — the application runs inside a browser, so any device with a browser can use it.
+   - Virtual machine approach — the source is compiled to an intermediate form, and a platform-specific runtime executes it. Java compiles to bytecode which the JVM runs; there is a different JVM for Windows, Linux and macOS, but the same bytecode runs on all.
+   - Interpreted approach — the source itself is shipped and an interpreter on each platform runs it. Python and JavaScript work this way.
+   - Web-based approach — the application runs inside a browser, so any device with a browser can use it.
 
    Example — Java
-   - Java's slogan is **WORA: Write Once, Run Anywhere**.
+   - Java's slogan is WORA: Write Once, Run Anywhere.
    - `javac Hello.java` produces `Hello.class` containing bytecode, not machine code.
    - The same `Hello.class` file runs unchanged on Windows, Linux and macOS, because each has its own JVM.
 
    Other examples
-   - **Python**, **JavaScript** and **PHP** — interpreted, so the same script runs anywhere the interpreter exists.
-   - **HTML/CSS/JS web applications** — Gmail runs identically on every OS.
-   - **Electron and Flutter apps** — VS Code and many mobile apps ship one codebase for several platforms.
+   - Python, JavaScript and PHP — interpreted, so the same script runs anywhere the interpreter exists.
+   - HTML/CSS/JS web applications — Gmail runs identically on every OS.
+   - Electron and Flutter apps — VS Code and many mobile apps ship one codebase for several platforms.
 
    Platform-DEPENDENT software for contrast
    - A C program compiled on Windows produces a `.exe` that will not run on Linux, because the executable format and system calls differ. It must be recompiled for each platform.
@@ -2822,16 +2788,16 @@ Answer:
    | Examples | Machine language (binary), Assembly language | C, C++, Java, Python, COBOL, FORTRAN |
 
    Examples of the same operation
-   - **Machine language**: `10110000 01100001` — pure binary, directly executable.
-   - **Assembly language**: `MOV AL, 61h` — mnemonics, needs an assembler.
-   - **High-level language**: `a = 97;` — readable, needs a compiler.
+   - Machine language: `10110000 01100001` — pure binary, directly executable.
+   - Assembly language: `MOV AL, 61h` — mnemonics, needs an assembler.
+   - High-level language: `a = 97;` — readable, needs a compiler.
 
-   - **C is often called a middle-level language**, because it has high-level structure but also allows pointer arithmetic and direct memory access like a low-level language.
+   - C is often called a middle-level language, because it has high-level structure but also allows pointer arithmetic and direct memory access like a low-level language.
    - Choice in practice: low-level for device drivers, embedded systems and operating system kernels; high-level for almost everything else.
 
 4. **Computer এ হিসাব কার্যক্রম করার জন্য কোন Software টি ব্যবহৃত হয়?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: **Spreadsheet software** is used for calculation work on a computer. The most common one is **Microsoft Excel**.
+Answer: Spreadsheet software is used for calculation work on a computer. The most common one is Microsoft Excel.
 
    Spreadsheet software
    - Organises data in a grid of rows and columns and performs calculations using formulas and functions.
@@ -2839,41 +2805,41 @@ Answer: **Spreadsheet software** is used for calculation work on a computer. The
    - Common functions: `SUM`, `AVERAGE`, `COUNT`, `MAX`, `MIN`, `IF`, `VLOOKUP`.
 
    Dedicated accounting software
-   - For formal book-keeping, purpose-built accounting software is used instead: **Tally**, QuickBooks, Zoho Books, SAP FICO and Oracle Financials.
+   - For formal book-keeping, purpose-built accounting software is used instead: Tally, QuickBooks, Zoho Books, SAP FICO and Oracle Financials.
 
    - So the answer depends on the scope: for general calculation, a spreadsheet; for organisational accounts, dedicated accounting software.
 
 5. **Spreed sheet program এ অসংখ্য ঘর বিশিষ্ট ছককে কি বলে?** *[BPSC Computer Operator 2021 compact it 781 (ET: N/A)]*
 
-Answer: The grid of many cells in a spreadsheet program is called a **worksheet** (also called a spreadsheet or sheet).
+Answer: The grid of many cells in a spreadsheet program is called a worksheet (also called a spreadsheet or sheet).
 
    Related terms
-   - **Cell** — a single box formed by the intersection of a row and a column, addressed as `A1`, `B5`.
-   - **Row** — a horizontal line of cells, numbered 1, 2, 3, ...
-   - **Column** — a vertical line of cells, lettered A, B, C, ...
-   - **Worksheet** — one complete grid of cells.
-   - **Workbook** — a file containing several worksheets. An Excel `.xlsx` file is a workbook.
-   - **Range** — a selected block of cells, written as `A1:C10`.
-   - **Cell reference / cell address** — the name of a cell, `A1`.
+   - Cell — a single box formed by the intersection of a row and a column, addressed as `A1`, `B5`.
+   - Row — a horizontal line of cells, numbered 1, 2, 3, ...
+   - Column — a vertical line of cells, lettered A, B, C, ...
+   - Worksheet — one complete grid of cells.
+   - Workbook — a file containing several worksheets. An Excel `.xlsx` file is a workbook.
+   - Range — a selected block of cells, written as `A1:C10`.
+   - Cell reference / cell address — the name of a cell, `A1`.
 
    - Modern Excel supports 1,048,576 rows and 16,384 columns (A to XFD) in a single worksheet.
 
 6. **Which language help you to learn android programming? (a) C (b) C++ (c) Java (d) IOS** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
-Answer: **(c) Java.**
+Answer: (c) Java.
 
    - Java was the official primary language for Android development from the platform's launch, and the Android SDK and framework APIs are written for it.
-   - **Kotlin** has since become Google's officially preferred language (announced 2017, made preferred in 2019), but Kotlin runs on the JVM and interoperates fully with Java, so Java knowledge remains the foundation.
+   - Kotlin has since become Google's officially preferred language (announced 2017, made preferred in 2019), but Kotlin runs on the JVM and interoperates fully with Java, so Java knowledge remains the foundation.
    - C and C++ are used only through the Android NDK for performance-critical parts such as game engines.
-   - **iOS is not a language at all** — it is Apple's mobile operating system. Its languages are Swift and Objective-C.
+   - iOS is not a language at all — it is Apple's mobile operating system. Its languages are Swift and Objective-C.
 
 7. **LOGO কি ধরনের প্রোগ্রাম?** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-Answer: **LOGO is an educational programming language**, designed to teach programming concepts to children.
+Answer: LOGO is an educational programming language, designed to teach programming concepts to children.
 
    - Developed in 1967 at MIT by Seymour Papert, Wally Feurzeig and Cynthia Solomon.
    - It is derived from LISP, so it is a functional and interpreted language.
-   - Its best-known feature is **turtle graphics**: a small on-screen "turtle" is moved with simple commands and draws lines as it goes.
+   - Its best-known feature is turtle graphics: a small on-screen "turtle" is moved with simple commands and draws lines as it goes.
 
    Sample commands
    ```
@@ -2920,51 +2886,51 @@ Answer: The `IF` function tests a condition and returns one value if true and an
 
 9. **Software বলতে কী বোঝেন? উদাহরণসহ System Software and Application Software -এর সংক্ষিপ্ত বর্ণনা দিন?** *[41th BCS 2021 compact it 881 (ET: N/A)]*
 
-Answer: **Software** is the set of programs, instructions and associated data that tells the computer hardware what to do. It has no physical existence — it can be seen and used but not touched.
+Answer: Software is the set of programs, instructions and associated data that tells the computer hardware what to do. It has no physical existence — it can be seen and used but not touched.
 
    (a) System Software
    - Software that runs and manages the computer hardware and provides a platform for other software to run on. It works for the MACHINE, not directly for the user.
 
    Types with examples
-   - **Operating System** — Windows, Linux, macOS, Android. Manages processes, memory, files and devices.
-   - **Device driver** — printer driver, graphics driver. Lets the OS talk to specific hardware.
-   - **Language translator** — compiler (GCC), interpreter (Python), assembler.
-   - **Utility software** — antivirus, disk defragmenter, backup tools, file compression.
-   - **Firmware** — BIOS/UEFI.
+   - Operating System — Windows, Linux, macOS, Android. Manages processes, memory, files and devices.
+   - Device driver — printer driver, graphics driver. Lets the OS talk to specific hardware.
+   - Language translator — compiler (GCC), interpreter (Python), assembler.
+   - Utility software — antivirus, disk defragmenter, backup tools, file compression.
+   - Firmware — BIOS/UEFI.
 
    (b) Application Software
    - Software written to perform a specific task for the USER. It runs on top of system software.
 
    Types with examples
-   - **Word processing** — MS Word, Google Docs.
-   - **Spreadsheet** — MS Excel, LibreOffice Calc.
-   - **Presentation** — MS PowerPoint.
-   - **Database** — MS Access, MySQL client tools.
-   - **Web browser** — Chrome, Firefox.
-   - **Multimedia** — VLC, Photoshop.
-   - **Custom business software** — core banking system, payroll, ERP.
+   - Word processing — MS Word, Google Docs.
+   - Spreadsheet — MS Excel, LibreOffice Calc.
+   - Presentation — MS PowerPoint.
+   - Database — MS Access, MySQL client tools.
+   - Web browser — Chrome, Firefox.
+   - Multimedia — VLC, Photoshop.
+   - Custom business software — core banking system, payroll, ERP.
 
    - Key relationship: application software cannot run without system software. When Excel saves a file it does not write to the disk itself; it asks the operating system, which uses the disk driver.
 
 10. **১৫. বাংলায় ই-মেইল করার সফটওয়্যারের নাম কি?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
-Answer: **Email Bangla** (emailbangla.com) is a well-known service for writing email in Bangla. It provides phonetic Bangla webmail so the user can type Bangla without installing any keyboard software.
+Answer: Email Bangla (emailbangla.com) is a well-known service for writing email in Bangla. It provides phonetic Bangla webmail so the user can type Bangla without installing any keyboard software.
 
-    - More generally, Bangla email can be written in any modern email client — Gmail, Outlook, Thunderbird — because they all support Unicode. The Bangla text is typed using a Bangla input tool such as **Avro Keyboard** or **Bijoy**, then pasted or typed into the mail.
-    - **Avro Keyboard** (Mehdi Hasan Khan, 2003) is the most widely used Unicode Bangla input software, and it works inside every application including email.
+    - More generally, Bangla email can be written in any modern email client — Gmail, Outlook, Thunderbird — because they all support Unicode. The Bangla text is typed using a Bangla input tool such as Avro Keyboard or Bijoy, then pasted or typed into the mail.
+    - Avro Keyboard (Mehdi Hasan Khan, 2003) is the most widely used Unicode Bangla input software, and it works inside every application including email.
     - Before Unicode, ASCII-based fonts like Bijoy could not be emailed reliably, because the recipient needed the same font installed. Unicode solved this.  <!-- verify -->
 
 11. **Graphics Design এর চারটি Software এর নাম লিখ।** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
 Answer: Four graphics design software:
 
-    - **Adobe Photoshop** — raster (bitmap) editing; photo retouching, digital painting, web graphics.
-    - **Adobe Illustrator** — vector graphics; logos, icons, illustrations that scale without quality loss.
-    - **CorelDRAW** — vector graphics; very widely used in Bangladesh for banners, business cards and print design.
-    - **Adobe InDesign** — page layout and desktop publishing; books, magazines, brochures.
+    - Adobe Photoshop — raster (bitmap) editing; photo retouching, digital painting, web graphics.
+    - Adobe Illustrator — vector graphics; logos, icons, illustrations that scale without quality loss.
+    - CorelDRAW — vector graphics; very widely used in Bangladesh for banners, business cards and print design.
+    - Adobe InDesign — page layout and desktop publishing; books, magazines, brochures.
 
     Free and open-source alternatives
-    - **GIMP** (raster, alternative to Photoshop), **Inkscape** (vector, alternative to Illustrator), **Scribus** (layout), **Canva** (web-based, template driven), **Figma** (UI and web design).
+    - GIMP (raster, alternative to Photoshop), Inkscape (vector, alternative to Illustrator), Scribus (layout), Canva (web-based, template driven), Figma (UI and web design).
 
     - Key distinction to state: Photoshop and GIMP work with PIXELS, so enlarging an image loses quality. Illustrator, CorelDRAW and Inkscape work with mathematical PATHS, so the artwork scales to any size without loss — which is why logos are always made in vector software.
 
@@ -2981,20 +2947,20 @@ Answer:
     | (v) | Data dictionary (also called the system catalogue) |
 
     Explanations
-    - **(i)** Other Run commands: `excel` for Excel, `powerpnt` for PowerPoint, `notepad`, `calc`, `cmd`, `mspaint`.
-    - **(ii)** A macro records a sequence of actions so it can be replayed with one click or keystroke. In Office it is written in VBA (Visual Basic for Applications). It saves time on repetitive formatting, calculation and report generation.
-    - **(iii)** A cell is the box formed where a row meets a column, addressed as `A1`, `B5`.
-    - **(iv)** The root folder is the topmost directory of a storage device, written as `C:\` in Windows and `/` in Linux. Every other folder lies inside it.
-    - **(v)** The data dictionary stores metadata — the definitions of tables, columns, data types, indexes, constraints and users. It is the database's description of itself.
+    - (i) Other Run commands: `excel` for Excel, `powerpnt` for PowerPoint, `notepad`, `calc`, `cmd`, `mspaint`.
+    - (ii) A macro records a sequence of actions so it can be replayed with one click or keystroke. In Office it is written in VBA (Visual Basic for Applications). It saves time on repetitive formatting, calculation and report generation.
+    - (iii) A cell is the box formed where a row meets a column, addressed as `A1`, `B5`.
+    - (iv) The root folder is the topmost directory of a storage device, written as `C:\` in Windows and `/` in Linux. Every other folder lies inside it.
+    - (v) The data dictionary stores metadata — the definitions of tables, columns, data types, indexes, constraints and users. It is the database's description of itself.
 
 13. **What is DSS? Write the difference between MIS and DSS.** *[NWPGCL Assistant Engineer (CSE) 2019 compact it 1152 (ET: RUET)]*
 
-Answer: **DSS (Decision Support System)** is a computer-based information system that helps managers make SEMI-STRUCTURED and UNSTRUCTURED decisions by providing analytical models, simulation and what-if analysis on both internal and external data.
+Answer: DSS (Decision Support System) is a computer-based information system that helps managers make SEMI-STRUCTURED and UNSTRUCTURED decisions by providing analytical models, simulation and what-if analysis on both internal and external data.
 
     Components of a DSS
-    - **Database** — internal and external data.
-    - **Model base** — statistical, financial and optimisation models.
-    - **User interface** — interactive, so the manager drives the analysis directly.
+    - Database — internal and external data.
+    - Model base — statistical, financial and optimisation models.
+    - User interface — interactive, so the manager drives the analysis directly.
 
     MIS vs DSS
 
@@ -3031,7 +2997,7 @@ Answer:
 
     Relationship between them
     - TPS is the FOUNDATION of the information system hierarchy. It captures the raw data.
-    - That data flows upward: **TPS → MIS → DSS → ESS**.
+    - That data flows upward: TPS → MIS → DSS → ESS.
     - A DSS cannot work without the transaction data a TPS collects. The layers serve different management levels, from operational at the bottom to strategic at the top.
 
 15. **Differentiate between system software and application software.** *[Multiple Ministry Assistant Programmer 2017 compact it 1228-1229 (ET: N/A)]*
@@ -3050,27 +3016,27 @@ Answer:
     | Installation | Installed first, often pre-loaded | Installed later by the user |
     | Examples | Windows, Linux, device drivers, compilers, BIOS, antivirus | MS Word, Excel, Chrome, VLC, banking software, games |
 
-    - Layered view: **Hardware → System software → Application software → User**. Each layer talks only to the one below it.
+    - Layered view: Hardware → System software → Application software → User. Each layer talks only to the one below it.
 
 16. **Define system software and application software with three examples of each.** *[Bangladesh Bank Assistant Maintenance Engineer 2016 compact it 1263 (ET: N/A)]*
 
 Answer:
 
-    **System software**
+    System software
     - Software that operates and controls the computer hardware and provides an environment in which application software can run. It works for the machine rather than directly for the user.
 
     Three examples
-    - **Operating System (Windows, Linux)** — manages processes, memory, files and devices.
-    - **Device driver (printer driver, graphics driver)** — allows the OS to communicate with a specific piece of hardware.
-    - **Compiler (GCC, javac)** — translates high-level source code into machine code.
+    - Operating System (Windows, Linux) — manages processes, memory, files and devices.
+    - Device driver (printer driver, graphics driver) — allows the OS to communicate with a specific piece of hardware.
+    - Compiler (GCC, javac) — translates high-level source code into machine code.
 
-    **Application software**
+    Application software
     - Software written to perform a particular task for the user, running on top of system software.
 
     Three examples
-    - **Microsoft Word** — creating and editing documents.
-    - **Microsoft Excel** — spreadsheet calculation and data analysis.
-    - **Google Chrome** — browsing the web.
+    - Microsoft Word — creating and editing documents.
+    - Microsoft Excel — spreadsheet calculation and data analysis.
+    - Google Chrome — browsing the web.
 
     - Other common application software: VLC media player, Photoshop, core banking systems, ERP and payroll software.
 
@@ -3094,7 +3060,7 @@ Answer:
     Relationship
     - Hardware is the body, software is the mind. Neither is useful alone.
     - Hardware without software is inert metal; software without hardware is just a file that cannot execute.
-    - **Firmware** sits between them — software permanently stored inside a hardware chip, such as BIOS or router firmware.
+    - Firmware sits between them — software permanently stored inside a hardware chip, such as BIOS or router firmware.
 
     Example illustrating both
     - Printing a document: MS Word (software) sends the print command, the operating system and printer driver (software) translate it, and the printer (hardware) physically puts ink on paper. Remove any part and nothing prints.
@@ -3103,29 +3069,29 @@ Answer:
 
 1. **To maintain a data center cooling system sometimes where you need a DC generator. Which type of generator do you prefer based on fuel type generator type, cost, energy, and budget?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 305 (ET: BIBM)]*
 
-Answer: For a data centre cooling load, a **diesel standby generator** is the standard and preferred choice.
+Answer: For a data centre cooling load, a diesel standby generator is the standard and preferred choice.
 
    Comparison by fuel type
 
    | Fuel | Cost | Availability | Runtime | Suitability |
    |---|---|---|---|---|
-   | **Diesel** | Moderate purchase, moderate running cost | Widely available and easily stored on site | Long — large fuel tanks are practical | **Best for standby data centre use** |
+   | Diesel | Moderate purchase, moderate running cost | Widely available and easily stored on site | Long — large fuel tanks are practical | Best for standby data centre use |
    | Natural gas | Lower running cost | Needs a piped supply, which may fail in a disaster | Unlimited while the pipe works | Good only where the gas grid is reliable |
    | Petrol (gasoline) | Cheap unit, expensive to run | Available | Short, fuel degrades in storage | Small loads only, not data centres |
    | Solar + battery | Very high capital | Free energy | Depends on battery bank | Supplementary, not primary standby |
 
    Why diesel is preferred
-   - **Reliability on start** — a diesel genset reaches full load within 10-15 seconds, which is what the UPS bridge is sized for.
-   - **High power density** — cooling loads (CRAC/CRAH units and chillers) draw large currents; diesel handles them well.
-   - **On-site fuel storage** — during a flood or grid failure the piped gas supply may also fail, but stored diesel does not.
-   - **Proven and serviceable** — spare parts and technicians are available locally in Bangladesh.
+   - Reliability on start — a diesel genset reaches full load within 10-15 seconds, which is what the UPS bridge is sized for.
+   - High power density — cooling loads (CRAC/CRAH units and chillers) draw large currents; diesel handles them well.
+   - On-site fuel storage — during a flood or grid failure the piped gas supply may also fail, but stored diesel does not.
+   - Proven and serviceable — spare parts and technicians are available locally in Bangladesh.
 
    Recommendation summary
-   - **Generator type**: three-phase, water-cooled diesel standby genset with an AMF (Auto Mains Failure) panel and ATS (Automatic Transfer Switch).
-   - **Sizing**: rated for the full cooling load plus 25% headroom, so it is not run at 100% continuously.
-   - **Redundancy**: N+1 configuration for Tier III or Tier IV, so one generator can fail or be serviced without loss of cooling.
-   - **Fuel storage**: at least 24-72 hours of runtime on site, with a refuelling contract.
-   - **Budget note**: diesel costs more to run than natural gas, but for a STANDBY unit that runs only a few hours a year, reliability matters far more than fuel efficiency.
+   - Generator type: three-phase, water-cooled diesel standby genset with an AMF (Auto Mains Failure) panel and ATS (Automatic Transfer Switch).
+   - Sizing: rated for the full cooling load plus 25% headroom, so it is not run at 100% continuously.
+   - Redundancy: N+1 configuration for Tier III or Tier IV, so one generator can fail or be serviced without loss of cooling.
+   - Fuel storage: at least 24-72 hours of runtime on site, with a refuelling contract.
+   - Budget note: diesel costs more to run than natural gas, but for a STANDBY unit that runs only a few hours a year, reliability matters far more than fuel efficiency.
 
    - Note on the wording: the generator supplies AC to the building, and the UPS/rectifier converts it to DC where DC is needed. A pure DC generator is used only in specialised DC-powered telecom plants.
 
@@ -3139,13 +3105,13 @@ Answer: A banking data centre carries different priorities from a general one, b
    - Dual utility feeds, UPS banks and standby generators.
 
    (b) Security
-   - **Physical** — biometric access control, mantrap, CCTV, 24/7 guards, visitor logging.
-   - **Logical** — firewalls, IPS/IDS, network segmentation, encryption at rest and in transit.
-   - **Compliance** — Bangladesh Bank ICT Security Guideline, PCI DSS for card data, ISO 27001.
+   - Physical — biometric access control, mantrap, CCTV, 24/7 guards, visitor logging.
+   - Logical — firewalls, IPS/IDS, network segmentation, encryption at rest and in transit.
+   - Compliance — Bangladesh Bank ICT Security Guideline, PCI DSS for card data, ISO 27001.
 
    (c) Disaster recovery and business continuity
-   - A **DR site in a geographically separate seismic and flood zone**, which Bangladesh Bank requires.
-   - Defined **RTO (Recovery Time Objective)** and **RPO (Recovery Point Objective)**, with regular DR drills.
+   - A DR site in a geographically separate seismic and flood zone, which Bangladesh Bank requires.
+   - Defined RTO (Recovery Time Objective) and RPO (Recovery Point Objective), with regular DR drills.
    - Real-time or near-real-time data replication.
 
    (d) Power
@@ -3168,19 +3134,19 @@ Answer: A banking data centre carries different priorities from a general one, b
 
 3. **What are the challenges in optimizing energy efficiency of data centers? Explain!** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 442 (ET: BIBM)]*
 
-Answer: Energy efficiency is measured by **PUE (Power Usage Effectiveness) = Total facility power ÷ IT equipment power**. A PUE of 1.0 is perfect; a typical older data centre sits at 1.8-2.0, meaning almost as much power goes to cooling and losses as to the servers themselves.
+Answer: Energy efficiency is measured by PUE (Power Usage Effectiveness) = Total facility power ÷ IT equipment power. A PUE of 1.0 is perfect; a typical older data centre sits at 1.8-2.0, meaning almost as much power goes to cooling and losses as to the servers themselves.
 
    Main challenges
-   - **Cooling dominates non-IT power** — cooling can be 35-40% of total consumption. Reducing it without risking equipment temperature is the central difficulty.
-   - **Redundancy conflicts with efficiency** — N+1 and 2N designs mean UPS units and chillers run at partial load, where their efficiency is lowest. A UPS at 30% load is far less efficient than at 80%.
-   - **Server underutilisation** — many servers run at 10-20% CPU while drawing 50-60% of peak power. Idle servers consume power for no output.
-   - **Legacy equipment** — older servers, UPS units and CRAC units are far less efficient, but replacing working equipment is capital-expensive.
-   - **Poor airflow management** — hot and cold air mixing forces the cooling system to work harder. Missing blanking panels and untidy cabling under raised floors are common causes.
-   - **Variable and unpredictable load** — capacity must be sized for peak, so it is oversized most of the time.
-   - **Measurement gaps** — without per-rack and per-circuit metering, there is no data to optimise against.
-   - **Uptime versus efficiency trade-off** — operators are judged on availability, so they run cooling colder than necessary "to be safe".
-   - **Local climate** — in Bangladesh's hot, humid climate, free cooling (using outside air) is viable for far fewer hours per year than in temperate countries.
-   - **Cost and disruption of retrofitting** — containment, airflow redesign and equipment replacement need downtime, which a bank cannot easily schedule.
+   - Cooling dominates non-IT power — cooling can be 35-40% of total consumption. Reducing it without risking equipment temperature is the central difficulty.
+   - Redundancy conflicts with efficiency — N+1 and 2N designs mean UPS units and chillers run at partial load, where their efficiency is lowest. A UPS at 30% load is far less efficient than at 80%.
+   - Server underutilisation — many servers run at 10-20% CPU while drawing 50-60% of peak power. Idle servers consume power for no output.
+   - Legacy equipment — older servers, UPS units and CRAC units are far less efficient, but replacing working equipment is capital-expensive.
+   - Poor airflow management — hot and cold air mixing forces the cooling system to work harder. Missing blanking panels and untidy cabling under raised floors are common causes.
+   - Variable and unpredictable load — capacity must be sized for peak, so it is oversized most of the time.
+   - Measurement gaps — without per-rack and per-circuit metering, there is no data to optimise against.
+   - Uptime versus efficiency trade-off — operators are judged on availability, so they run cooling colder than necessary "to be safe".
+   - Local climate — in Bangladesh's hot, humid climate, free cooling (using outside air) is viable for far fewer hours per year than in temperate countries.
+   - Cost and disruption of retrofitting — containment, airflow redesign and equipment replacement need downtime, which a bank cannot easily schedule.
 
    Practical measures that work
    - Hot-aisle/cold-aisle containment and blanking panels, raising the supply air temperature within ASHRAE limits, virtualization and consolidation to raise server utilisation, decommissioning "zombie" servers, variable-speed fans and pumps, high-efficiency modular UPS, and DCIM-based continuous monitoring.
@@ -3196,31 +3162,31 @@ Answer: A national data centre is a centralised, government-owned facility that 
    - Reduces duplicated spending, since each ministry no longer builds its own server room.
 
    In Bangladesh
-   - The **National Data Center (NDC)** at Bangladesh Computer Council (BCC), Agargaon, Dhaka.
-   - The **Bangladesh Data Center Company Limited (BDCCL)** operates the **4-Tier National Data Center at Kaliakoir Hi-Tech Park**, one of the largest Tier IV facilities in the region, inaugurated in 2019.
+   - The National Data Center (NDC) at Bangladesh Computer Council (BCC), Agargaon, Dhaka.
+   - The Bangladesh Data Center Company Limited (BDCCL) operates the 4-Tier National Data Center at Kaliakoir Hi-Tech Park, one of the largest Tier IV facilities in the region, inaugurated in 2019.
    - It hosts the National Portal, NID database, e-GP, land records, health and education systems, and the Bangladesh Government Cloud (BGD e-GOV cloud).
-   - A separate **Disaster Recovery site in Jessore** keeps a replica, so a disaster at one location does not lose national data.
+   - A separate Disaster Recovery site in Jessore keeps a replica, so a disaster at one location does not lose national data.
 
    Key requirements
    - Very high availability (Tier III or IV), strong physical and cyber security, disaster recovery in a separate seismic zone, scalability, and 24/7 monitoring.
 
 5. **What is DCIM in a data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 745 (ET: N/A)]*
 
-Answer: **DCIM (Data Center Infrastructure Management)** is software that monitors, measures and manages the physical infrastructure of a data centre — power, cooling, space and assets — and links it with the IT equipment running on top.
+Answer: DCIM (Data Center Infrastructure Management) is software that monitors, measures and manages the physical infrastructure of a data centre — power, cooling, space and assets — and links it with the IT equipment running on top.
 
    What DCIM monitors
-   - **Power** — intelligent rack PDUs, floor PDUs, UPS status, battery health, load percentage and runtime estimates, remote power panels and busways.
-   - **Cooling** — CRAC/CRAH units, chiller status, temperature and humidity sensors, airflow.
-   - **Space and capacity** — rack elevation diagrams, free U-space, weight limits.
-   - **Assets** — a complete inventory of every server, switch and cable, with its exact rack location and port.
-   - **Environment** — leak detection, smoke, door access.
+   - Power — intelligent rack PDUs, floor PDUs, UPS status, battery health, load percentage and runtime estimates, remote power panels and busways.
+   - Cooling — CRAC/CRAH units, chiller status, temperature and humidity sensors, airflow.
+   - Space and capacity — rack elevation diagrams, free U-space, weight limits.
+   - Assets — a complete inventory of every server, switch and cable, with its exact rack location and port.
+   - Environment — leak detection, smoke, door access.
 
    Main functions
-   - **Real-time monitoring and alerting** — an alarm before a problem becomes an outage.
-   - **Capacity planning** — answers "where can I install 5 more servers with enough power and cooling?" without a physical survey.
-   - **Energy efficiency** — measures PUE and identifies where energy is wasted.
-   - **Change and workflow management** — plans and tracks installations and moves.
-   - **Reporting** — for management, audit and regulatory compliance.
+   - Real-time monitoring and alerting — an alarm before a problem becomes an outage.
+   - Capacity planning — answers "where can I install 5 more servers with enough power and cooling?" without a physical survey.
+   - Energy efficiency — measures PUE and identifies where energy is wasted.
+   - Change and workflow management — plans and tracks installations and moves.
+   - Reporting — for management, audit and regulatory compliance.
 
    Benefits
    - Prevents outages caused by overloaded circuits or hot spots, avoids stranded capacity, extends equipment life, and provides the documented evidence auditors require.
@@ -3229,7 +3195,7 @@ Answer: **DCIM (Data Center Infrastructure Management)** is software that monito
 
 6. **What do you mean by TIERing data center? Difference between data center TIER standards with illustrative figures.** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 750 (ET: N/A)]*
 
-Answer: Data centre tiering is the classification system defined by the **Uptime Institute**, rating a facility from Tier I to Tier IV according to the redundancy of its power and cooling infrastructure, and therefore its guaranteed availability.
+Answer: Data centre tiering is the classification system defined by the Uptime Institute, rating a facility from Tier I to Tier IV according to the redundancy of its power and cooling infrastructure, and therefore its guaranteed availability.
 
    Comparison of the four tiers
 
@@ -3239,8 +3205,8 @@ Answer: Data centre tiering is the classification system defined by the **Uptime
    | Annual downtime | about 28.8 hours | about 22.0 hours | about 1.6 hours | about 26.3 minutes |
    | Power/cooling paths | Single | Single | Multiple, one active | Multiple, all active |
    | Redundant components | None | Partial (N+1) | N+1 | 2N or 2N+1 |
-   | Concurrently maintainable | No | No | **Yes** | Yes |
-   | Fault tolerant | No | No | No | **Yes** |
+   | Concurrently maintainable | No | No | Yes | Yes |
+   | Fault tolerant | No | No | No | Yes |
    | Maintenance needs shutdown | Yes | Yes | No | No |
    | Typical user | Small business | SME | Enterprise, bank | National infrastructure, large bank |
    | Relative cost | Lowest | Low | High | Highest |
@@ -3270,14 +3236,14 @@ Answer: Data centre tiering is the classification system defined by the **Uptime
    ```
 
    The two key distinctions to state
-   - **Concurrently maintainable (Tier III)** — any single component can be taken out for maintenance without stopping the IT load.
-   - **Fault tolerant (Tier IV)** — any single UNPLANNED failure is survived automatically, with no human intervention.
+   - Concurrently maintainable (Tier III) — any single component can be taken out for maintenance without stopping the IT load.
+   - Fault tolerant (Tier IV) — any single UNPLANNED failure is survived automatically, with no human intervention.
 
    - Bangladesh's Kaliakoir National Data Center is a Tier IV facility; most commercial bank data centres in the country target Tier III.
 
 7. **What do you mean by dynamic capacity provisioning? Why it is essential for data center?** *[BDCCL Assistant Manager (Cloud) 14.10.2022 compact it 751 (ET: N/A)]*
 
-Answer: **Dynamic capacity provisioning** means automatically adding or removing computing resources — servers, VMs, containers, storage, bandwidth — in real time as the workload rises and falls, instead of keeping a fixed amount of capacity permanently allocated.
+Answer: Dynamic capacity provisioning means automatically adding or removing computing resources — servers, VMs, containers, storage, bandwidth — in real time as the workload rises and falls, instead of keeping a fixed amount of capacity permanently allocated.
 
    How it works
    - Monitoring agents watch metrics such as CPU utilisation, memory, request rate and queue length.
@@ -3286,13 +3252,13 @@ Answer: **Dynamic capacity provisioning** means automatically adding or removing
    - Idle physical servers can then be powered down or put into a low-power state.
 
    Why it is essential for a data centre
-   - **Cost efficiency** — capacity is paid for only while it is used. Static provisioning for peak load means most capacity sits idle most of the time.
-   - **Energy saving** — idle servers still draw 50-60% of peak power. Consolidating workloads and powering down empty hosts directly reduces the electricity and cooling bill, improving PUE.
-   - **Handles unpredictable demand** — a bank's traffic spikes on salary day and before Eid. Manual provisioning cannot react fast enough.
-   - **Better resource utilisation** — raises typical server utilisation from 15% to 60-70%.
-   - **Performance and SLA compliance** — capacity grows before response time degrades, so service levels are met.
-   - **Faster deployment** — new capacity appears in minutes, not weeks of procurement.
-   - **Supports multi-tenancy** — resources move between tenants as their needs change.
+   - Cost efficiency — capacity is paid for only while it is used. Static provisioning for peak load means most capacity sits idle most of the time.
+   - Energy saving — idle servers still draw 50-60% of peak power. Consolidating workloads and powering down empty hosts directly reduces the electricity and cooling bill, improving PUE.
+   - Handles unpredictable demand — a bank's traffic spikes on salary day and before Eid. Manual provisioning cannot react fast enough.
+   - Better resource utilisation — raises typical server utilisation from 15% to 60-70%.
+   - Performance and SLA compliance — capacity grows before response time degrades, so service levels are met.
+   - Faster deployment — new capacity appears in minutes, not weeks of procurement.
+   - Supports multi-tenancy — resources move between tenants as their needs change.
 
    Challenges to note
    - Scaling delay (a VM takes minutes to boot, though a container takes seconds), the risk of oscillation if thresholds are badly tuned, licensing costs that scale with instance count, and stateful applications that cannot simply be duplicated.
@@ -3304,33 +3270,33 @@ Answer: **Dynamic capacity provisioning** means automatically adding or removing
 Answer: A data centre is built from four groups of elements.
 
    (a) IT infrastructure — the equipment that does the work
-   - **Servers** — rack, blade or tower servers running the applications.
-   - **Storage** — SAN, NAS, disk arrays and tape backup.
-   - **Network** — core and access switches, routers, firewalls, load balancers, structured cabling.
-   - **Racks and cabinets** — 42U racks housing the equipment, with cable management.
+   - Servers — rack, blade or tower servers running the applications.
+   - Storage — SAN, NAS, disk arrays and tape backup.
+   - Network — core and access switches, routers, firewalls, load balancers, structured cabling.
+   - Racks and cabinets — 42U racks housing the equipment, with cable management.
 
    (b) Power infrastructure
-   - **Utility feed**, ideally two independent feeds.
-   - **UPS** — bridges the gap until the generator starts, and conditions the power.
-   - **Standby generator** with on-site fuel storage.
-   - **ATS (Automatic Transfer Switch)** and **PDU (Power Distribution Unit)** at floor and rack level.
+   - Utility feed, ideally two independent feeds.
+   - UPS — bridges the gap until the generator starts, and conditions the power.
+   - Standby generator with on-site fuel storage.
+   - ATS (Automatic Transfer Switch) and PDU (Power Distribution Unit) at floor and rack level.
    - Earthing, surge protection and lightning arresters.
 
    (c) Cooling and environment
-   - **Precision air conditioning** — CRAC or CRAH units, not comfort AC.
-   - **Hot-aisle / cold-aisle layout** with containment.
-   - **Raised floor** or overhead cable trays for airflow and cabling.
+   - Precision air conditioning — CRAC or CRAH units, not comfort AC.
+   - Hot-aisle / cold-aisle layout with containment.
+   - Raised floor or overhead cable trays for airflow and cabling.
    - Temperature and humidity sensors, leak detection.
 
    (d) Physical security and safety
    - Biometric and card access control, mantrap entry, CCTV, 24/7 security staff.
-   - **Fire detection and suppression** — VESDA smoke detection with clean-agent suppression (FM-200 / NOVEC), never water over live equipment.
+   - Fire detection and suppression — VESDA smoke detection with clean-agent suppression (FM-200 / NOVEC), never water over live equipment.
 
    (e) Management and monitoring
-   - **DCIM software**, **NOC (Network Operations Centre)**, monitoring and alerting systems, and documented operating procedures.
+   - DCIM software, NOC (Network Operations Centre), monitoring and alerting systems, and documented operating procedures.
 
    (f) Redundancy and continuity
-   - N+1 or 2N configurations, and a **Disaster Recovery site** in a different geographic zone.
+   - N+1 or 2N configurations, and a Disaster Recovery site in a different geographic zone.
 
 9. **Write down difference between Online UPS and Offline UPS.** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159-1160 (ET: BUET)]*
 
@@ -3339,7 +3305,7 @@ Answer: The difference is whether the load is ALWAYS fed through the inverter, o
    | Point | Online UPS (double conversion) | Offline UPS (standby) |
    |---|---|---|
    | Normal operation | Mains → rectifier → battery/DC bus → inverter → load. The inverter always feeds the load | Mains passes straight to the load; the inverter is idle |
-   | Transfer time | **Zero** — there is nothing to switch | 4-10 milliseconds while the relay switches |
+   | Transfer time | Zero — there is nothing to switch | 4-10 milliseconds while the relay switches |
    | Power conditioning | Complete — output is a clean regenerated sine wave, isolated from all mains disturbance | None — mains noise, sag and surge pass through to the load |
    | Output waveform | Pure sine wave | Often simulated/square sine wave in cheaper units |
    | Protection against | All nine power problems including sag, surge, noise, frequency variation | Mainly blackout and severe voltage swing |
@@ -3366,28 +3332,28 @@ Answer: A data centre has five component groups, each essential.
         A --> F[Management<br/>DCIM, NOC, monitoring]
     ```
 
-    **(a) IT infrastructure**
-    - **Servers** — rack-mounted or blade servers running applications and databases.
-    - **Storage systems** — SAN and NAS arrays, backup tape libraries.
-    - **Network equipment** — core switches, access switches, routers, firewalls, load balancers.
-    - **Structured cabling** — fibre and copper, organised in trays and patch panels.
-    - **Racks** — standard 42U cabinets with cable management and blanking panels.
+    (a) IT infrastructure
+    - Servers — rack-mounted or blade servers running applications and databases.
+    - Storage systems — SAN and NAS arrays, backup tape libraries.
+    - Network equipment — core switches, access switches, routers, firewalls, load balancers.
+    - Structured cabling — fibre and copper, organised in trays and patch panels.
+    - Racks — standard 42U cabinets with cable management and blanking panels.
 
-    **(b) Power infrastructure**
-    - Dual utility feeds where available, **UPS** for instantaneous backup, **diesel generator** for extended outage, **ATS** for automatic changeover, and **PDUs** distributing power to each rack. Plus earthing and surge protection.
+    (b) Power infrastructure
+    - Dual utility feeds where available, UPS for instantaneous backup, diesel generator for extended outage, ATS for automatic changeover, and PDUs distributing power to each rack. Plus earthing and surge protection.
 
-    **(c) Cooling and environmental control**
-    - **Precision air conditioning (CRAC/CRAH)** maintaining about 18-27 °C and 40-60% relative humidity.
-    - **Hot-aisle / cold-aisle** arrangement with containment to stop hot and cold air mixing.
+    (c) Cooling and environmental control
+    - Precision air conditioning (CRAC/CRAH) maintaining about 18-27 °C and 40-60% relative humidity.
+    - Hot-aisle / cold-aisle arrangement with containment to stop hot and cold air mixing.
     - Raised floor or overhead distribution, temperature and humidity sensors, leak detection.
 
-    **(d) Physical security and fire safety**
+    (d) Physical security and fire safety
     - Biometric access control, mantrap entry, CCTV, 24/7 guards, visitor logging.
-    - **VESDA** early smoke detection with **clean-agent suppression (FM-200 / NOVEC)**, which extinguishes fire without damaging electronics.
+    - VESDA early smoke detection with clean-agent suppression (FM-200 / NOVEC), which extinguishes fire without damaging electronics.
 
-    **(e) Management and monitoring**
-    - **DCIM software** tracking power, cooling, space and assets.
-    - **NOC** staffed round the clock, alerting systems, documented SOPs, and a **Disaster Recovery site** in a separate geographic zone.
+    (e) Management and monitoring
+    - DCIM software tracking power, cooling, space and assets.
+    - NOC staffed round the clock, alerting systems, documented SOPs, and a Disaster Recovery site in a separate geographic zone.
 
     - All five must be designed together. A data centre with excellent servers but single-path power is still a Tier I facility, and its availability is set by its weakest component.
 
@@ -3395,13 +3361,13 @@ Answer: A data centre has five component groups, each essential.
 
 1. **What is Blockchain technology? How it works?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 324 (ET: BIBM)]*
 
-Answer: Blockchain is a **distributed, decentralised digital ledger** that records transactions across many computers in such a way that a recorded entry cannot be altered retroactively without altering every block after it and gaining the agreement of the network.
+Answer: Blockchain is a distributed, decentralised digital ledger that records transactions across many computers in such a way that a recorded entry cannot be altered retroactively without altering every block after it and gaining the agreement of the network.
 
    Structure of a block
-   - **Data** — the transactions themselves: who, what, when, how much.
-   - **Hash** — a unique fingerprint of this block's contents.
-   - **Previous block's hash** — the link that chains the blocks together.
-   - **Timestamp** and **nonce**.
+   - Data — the transactions themselves: who, what, when, how much.
+   - Hash — a unique fingerprint of this block's contents.
+   - Previous block's hash — the link that chains the blocks together.
+   - Timestamp and nonce.
 
    How it works, step by step
    ```mermaid
@@ -3416,13 +3382,13 @@ Answer: Blockchain is a **distributed, decentralised digital ledger** that recor
        H --> I[7. Transaction complete and permanent]
    ```
 
-   - **Step 1** — a user requests a transaction.
-   - **Step 2** — it is broadcast to every node in the peer-to-peer network.
-   - **Step 3** — nodes verify it against the rules and reach consensus (Proof of Work, Proof of Stake or similar).
-   - **Step 4** — verified transactions are grouped into a block with a timestamp.
-   - **Step 5** — the block is hashed, and the previous block's hash is stored inside it, forming the chain.
-   - **Step 6** — the new block is appended to every node's copy.
-   - **Step 7** — the record is now permanent, because changing it would require re-mining every subsequent block on a majority of nodes.
+   - Step 1 — a user requests a transaction.
+   - Step 2 — it is broadcast to every node in the peer-to-peer network.
+   - Step 3 — nodes verify it against the rules and reach consensus (Proof of Work, Proof of Stake or similar).
+   - Step 4 — verified transactions are grouped into a block with a timestamp.
+   - Step 5 — the block is hashed, and the previous block's hash is stored inside it, forming the chain.
+   - Step 6 — the new block is appended to every node's copy.
+   - Step 7 — the record is now permanent, because changing it would require re-mining every subsequent block on a majority of nodes.
 
    - Applications: cryptocurrency (Bitcoin, Ethereum), supply chain tracking, land registry, trade finance, digital identity, and smart contracts.
 
@@ -3432,13 +3398,13 @@ Answer: Blockchain is a distributed ledger shared across a peer-to-peer network,
 
    Why it is more secure than a traditional centralised database
 
-   - **Decentralisation** — there is no single server to attack. Every node holds a full copy, so destroying or compromising one machine achieves nothing.
-   - **Cryptographic hashing** — each block stores the hash of the previous block. Changing any past transaction changes that block's hash, which breaks the link to every following block, making tampering immediately visible.
-   - **Immutability** — to alter a record an attacker must re-compute the proof of work for that block AND every block after it, faster than the rest of the network combined. This is computationally infeasible on a large chain.
-   - **Consensus mechanism** — a new block is accepted only when the majority of nodes agree. A fraudulent block is rejected by the honest majority.
-   - **Digital signatures** — every transaction is signed with the sender's private key, so authenticity and non-repudiation are provable.
-   - **Transparency and auditability** — all participants see the same ledger, so a discrepancy is detected instantly.
-   - **51% attack requirement** — to rewrite history an attacker must control more than half the network's computing power, which on a large public chain costs more than the possible gain.
+   - Decentralisation — there is no single server to attack. Every node holds a full copy, so destroying or compromising one machine achieves nothing.
+   - Cryptographic hashing — each block stores the hash of the previous block. Changing any past transaction changes that block's hash, which breaks the link to every following block, making tampering immediately visible.
+   - Immutability — to alter a record an attacker must re-compute the proof of work for that block AND every block after it, faster than the rest of the network combined. This is computationally infeasible on a large chain.
+   - Consensus mechanism — a new block is accepted only when the majority of nodes agree. A fraudulent block is rejected by the honest majority.
+   - Digital signatures — every transaction is signed with the sender's private key, so authenticity and non-repudiation are provable.
+   - Transparency and auditability — all participants see the same ledger, so a discrepancy is detected instantly.
+   - 51% attack requirement — to rewrite history an attacker must control more than half the network's computing power, which on a large public chain costs more than the possible gain.
 
    Limitations to state honestly
    - Blockchain secures the LEDGER, not the endpoints. Stolen private keys, phishing and buggy smart contracts remain the real-world attack routes.
@@ -3450,21 +3416,21 @@ Answer: Blockchain is a distributed ledger shared across a peer-to-peer network,
 Answer: Blockchain is a distributed, decentralised and immutable digital ledger that records transactions across a network of computers, where each record is cryptographically linked to the one before it.
 
    Key characteristics
-   - **Decentralised** — no central authority; every node holds a copy.
-   - **Immutable** — a recorded block cannot practically be changed.
-   - **Transparent** — all participants see the same ledger.
-   - **Secure** — protected by cryptographic hashing and digital signatures.
-   - **Consensus driven** — new blocks are added only by agreement of the network.
+   - Decentralised — no central authority; every node holds a copy.
+   - Immutable — a recorded block cannot practically be changed.
+   - Transparent — all participants see the same ledger.
+   - Secure — protected by cryptographic hashing and digital signatures.
+   - Consensus driven — new blocks are added only by agreement of the network.
 
    Types of blockchain
-   - **Public** — open to everyone, fully decentralised. Bitcoin, Ethereum.
-   - **Private** — controlled by one organisation, restricted membership. Hyperledger Fabric.
-   - **Consortium** — governed by a group of organisations, common in banking.
-   - **Hybrid** — combines public and private elements.
+   - Public — open to everyone, fully decentralised. Bitcoin, Ethereum.
+   - Private — controlled by one organisation, restricted membership. Hyperledger Fabric.
+   - Consortium — governed by a group of organisations, common in banking.
+   - Hybrid — combines public and private elements.
 
    Consensus mechanisms
-   - **Proof of Work (PoW)** — nodes solve a computational puzzle. Secure but energy-intensive.
-   - **Proof of Stake (PoS)** — validators are chosen by the stake they hold. Far more energy efficient.
+   - Proof of Work (PoW) — nodes solve a computational puzzle. Secure but energy-intensive.
+   - Proof of Stake (PoS) — validators are chosen by the stake they hold. Far more energy efficient.
    - Others: Delegated PoS, Practical Byzantine Fault Tolerance.
 
    Applications
@@ -3485,11 +3451,11 @@ Answer:
    - A transaction is requested and broadcast to all nodes → nodes validate it by consensus → valid transactions are grouped into a block → the block is hashed and linked to the previous block's hash → the block is appended to every node's copy → the record becomes permanent.
 
    (c) Five top benefits
-   - **Security** — cryptographic hashing plus decentralisation makes tampering computationally infeasible.
-   - **Transparency** — every participant sees the same ledger, so disputes are settled by the record itself.
-   - **Immutability and auditability** — a complete, unalterable history, which auditors and regulators can verify directly.
-   - **No intermediary needed** — parties transact directly, removing the cost and delay of a clearing house or correspondent bank.
-   - **Speed and cost in cross-border payments** — international settlement drops from days to minutes, at a fraction of the fee.
+   - Security — cryptographic hashing plus decentralisation makes tampering computationally infeasible.
+   - Transparency — every participant sees the same ledger, so disputes are settled by the record itself.
+   - Immutability and auditability — a complete, unalterable history, which auditors and regulators can verify directly.
+   - No intermediary needed — parties transact directly, removing the cost and delay of a clearing house or correspondent bank.
+   - Speed and cost in cross-border payments — international settlement drops from days to minutes, at a fraction of the fee.
 
    (d) Traditional banking vs digital banking
 
@@ -3508,9 +3474,9 @@ Answer:
 
 5. **A distributive ledger in a peer-to-peer network is called?** *[BCC Assistant Programmer 11.11.2023 compact it 544 (ET: N/A)]*
 
-Answer: It is called a **Blockchain**.
+Answer: It is called a Blockchain.
 
-   - More generally the category is called **Distributed Ledger Technology (DLT)**. Blockchain is the best-known form of DLT, in which records are grouped into blocks and chained together by hashes.
+   - More generally the category is called Distributed Ledger Technology (DLT). Blockchain is the best-known form of DLT, in which records are grouped into blocks and chained together by hashes.
    - Other forms of DLT exist that are not chains — for example DAG-based ledgers such as IOTA Tangle and Hashgraph.
    - Key properties: distributed across peers, no central authority, synchronised by consensus, cryptographically secured, and immutable once written.
 
@@ -3518,7 +3484,7 @@ Answer: It is called a **Blockchain**.
 
 Answer:
 
-   **(i) Blockchain technology**
+   (i) Blockchain technology
    - A distributed, decentralised ledger recording transactions across a peer-to-peer network, where each block stores the hash of the previous block, chaining them permanently.
    - Characteristics: decentralised, immutable, transparent, cryptographically secure, consensus-driven.
    - Working: transaction requested → broadcast to nodes → validated by consensus → grouped into a block → hashed and linked → appended to every node's copy.
@@ -3526,10 +3492,10 @@ Answer:
    - Applications: cryptocurrency, supply chain tracking, land registry, trade finance, digital identity, smart contracts.
    - Limitations: low throughput, high energy use in Proof of Work, regulatory uncertainty.
 
-   **(ii) Cloud computing**
+   (ii) Cloud computing
    - Delivery of computing services — servers, storage, databases, networking, software — over the internet on a pay-as-you-go basis instead of owning hardware.
    - Five essential characteristics: on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service.
-   - Service models: **IaaS** (virtual machines and storage — AWS EC2), **PaaS** (a development platform — Google App Engine), **SaaS** (finished software — Gmail).
+   - Service models: IaaS (virtual machines and storage — AWS EC2), PaaS (a development platform — Google App Engine), SaaS (finished software — Gmail).
    - Deployment models: public, private, hybrid, community.
    - Advantages: low upfront cost, elastic scaling, global access, automatic maintenance, built-in disaster recovery.
    - Limitations: internet dependency, data security and sovereignty concerns, limited control, vendor lock-in.
@@ -3538,27 +3504,27 @@ Answer:
 
 Answer:
 
-   **(a) Digital Signature**
+   (a) Digital Signature
    - A cryptographic mechanism that proves a digital message came from a specific sender and has not been altered.
-   - How it works: the sender hashes the message and encrypts the hash with their **private key** — that encrypted hash is the signature. The receiver decrypts it with the sender's **public key** and compares it with a freshly computed hash of the message. If they match, both authenticity and integrity are proven.
-   - Provides three guarantees: **authentication**, **integrity** and **non-repudiation** (the sender cannot later deny signing).
+   - How it works: the sender hashes the message and encrypts the hash with their private key — that encrypted hash is the signature. The receiver decrypts it with the sender's public key and compares it with a freshly computed hash of the message. If they match, both authenticity and integrity are proven.
+   - Provides three guarantees: authentication, integrity and non-repudiation (the sender cannot later deny signing).
    - Algorithms: RSA, DSA, ECDSA. Used in e-tendering, e-banking, software signing and SSL/TLS certificates.
    - In Bangladesh, digital signatures are legally recognised under the ICT Act 2006, with licensed Certifying Authorities issuing certificates.
 
-   **(b) Cloud Computing**
+   (b) Cloud Computing
    - On-demand delivery of computing resources over the internet, billed by usage.
    - Service models: IaaS, PaaS, SaaS. Deployment models: public, private, hybrid, community.
    - Benefits: no capital expense, elastic scaling, anywhere access, automatic updates, disaster recovery.
    - Drawbacks: internet dependency, security and data sovereignty concerns, vendor lock-in.
 
-   **(c) Blockchain**
+   (c) Blockchain
    - A distributed, immutable ledger where transactions are grouped into blocks, each carrying the hash of the previous block.
    - Secured by cryptographic hashing, digital signatures and network consensus; changing one record would require re-computing every block after it on a majority of nodes.
    - Applications: cryptocurrency, supply chain, land records, trade finance, smart contracts.
 
-   **(d) TOT**
-   - Most likely **Training of Trainers (ToT)** in a government and administrative context — a programme that trains selected people to become instructors, so they can then train others. It is the standard method for scaling capacity-building across a large workforce.
-   - In an engineering context TOT can also mean **Transfer of Technology**, an agreement under which technology and know-how pass from one organisation or country to another.
+   (d) TOT
+   - Most likely Training of Trainers (ToT) in a government and administrative context — a programme that trains selected people to become instructors, so they can then train others. It is the standard method for scaling capacity-building across a large workforce.
+   - In an engineering context TOT can also mean Transfer of Technology, an agreement under which technology and know-how pass from one organisation or country to another.
    - The BPSC ICT paper most likely intends Training of Trainers.  <!-- verify -->
 
 8. **Write short note on the folloing topics** *[BPSC Assistant Programmer (ICT) 2019 compact it 1144-1145 (ET: N/A)]*
@@ -3567,32 +3533,27 @@ Answer:
    iii) Big data
    iv) Robotics
 
-i) AI
-   ii) IoT
-   iii) Big data
-   iv) Robotics
-
    Answer:
 
-   **(i) AI — Artificial Intelligence**
+   (i) AI — Artificial Intelligence
    - The branch of computer science that builds machines able to perform tasks needing human intelligence: learning, reasoning, understanding language and deciding.
    - Branches: machine learning, deep learning, natural language processing, computer vision, robotics, expert systems.
    - Types by capability: Narrow AI (all AI today), General AI (theoretical), Super AI (hypothetical).
    - Applications: fraud detection, medical diagnosis, chatbots, recommendation systems, self-driving cars.
 
-   **(ii) IoT — Internet of Things**
+   (ii) IoT — Internet of Things
    - A network of physical objects embedded with sensors, software and connectivity, which collect and exchange data over the internet without human intervention.
    - Architecture: sensors/devices → connectivity (Wi-Fi, 4G, LoRa) → data processing (edge or cloud) → user interface and action.
    - Applications: smart home, smart agriculture, smart meters, wearable health monitors, industrial IoT, smart city traffic management.
    - Challenges: security (weak default passwords on devices), privacy, interoperability, and power for battery devices.
 
-   **(iii) Big Data**
+   (iii) Big Data
    - Data sets too large, too fast or too varied for traditional database tools to handle.
-   - Characterised by the **five V's**: **Volume** (scale), **Velocity** (speed of arrival), **Variety** (structured, semi-structured, unstructured), **Veracity** (reliability) and **Value** (usefulness).
+   - Characterised by the five V's: Volume (scale), Velocity (speed of arrival), Variety (structured, semi-structured, unstructured), Veracity (reliability) and Value (usefulness).
    - Technologies: Hadoop (HDFS and MapReduce), Apache Spark, NoSQL databases, data lakes and warehouses.
    - Applications: customer analytics, fraud detection, weather prediction, healthcare research, recommendation engines.
 
-   **(iv) Robotics**
+   (iv) Robotics
    - The engineering field concerned with designing, building and operating robots — programmable machines that sense, decide and act in the physical world.
    - Components: sensors (perception), actuators and motors (movement), controller (decision), power supply, and an end effector such as a gripper.
    - Types: industrial robots (welding, assembly), service robots, medical robots (surgical), autonomous mobile robots, humanoid robots, drones.
@@ -3615,15 +3576,15 @@ Answer: Server purchase decisions should start from the WORKLOAD, then match har
 
    (c) Memory
    - Capacity, and just as important, the number of free DIMM slots for future expansion.
-   - **ECC (Error Correcting Code) memory is mandatory** for a server — it detects and corrects single-bit errors that would otherwise silently corrupt data.
+   - ECC (Error Correcting Code) memory is mandatory for a server — it detects and corrects single-bit errors that would otherwise silently corrupt data.
 
    (d) Storage
-   - **SAS vs SATA vs NVMe SSD** — SAS or NVMe for databases, SATA for bulk storage.
-   - **RAID controller with battery-backed write cache**, and the RAID level appropriate to the workload (RAID 10 for databases, RAID 5/6 for file storage).
+   - SAS vs SATA vs NVMe SSD — SAS or NVMe for databases, SATA for bulk storage.
+   - RAID controller with battery-backed write cache, and the RAID level appropriate to the workload (RAID 10 for databases, RAID 5/6 for file storage).
    - Hot-swap drive bays and spare capacity.
 
    (e) Redundancy and availability
-   - **Dual redundant hot-swap power supplies** — non-negotiable for production.
+   - Dual redundant hot-swap power supplies — non-negotiable for production.
    - Redundant fans, hot-swap drives, and multiple network ports for teaming.
 
    (f) Network
@@ -3634,7 +3595,7 @@ Answer: Server purchase decisions should start from the WORKLOAD, then match har
 
    (h) Management and support
    - Out-of-band management (iDRAC, iLO, IPMI) for remote power control and console access — essential in a data centre.
-   - **Warranty and local service** — next-business-day on-site support and spare-part availability in Bangladesh matter more than a small price difference.
+   - Warranty and local service — next-business-day on-site support and spare-part availability in Bangladesh matter more than a small price difference.
 
    (i) Compatibility and compliance
    - Operating system and hypervisor certification (VMware HCL, Windows Server logo).
@@ -3648,9 +3609,9 @@ Answer: Server purchase decisions should start from the WORKLOAD, then match har
 Answer: A structured incident-handling approach should be described, since the exact scenario varies.
 
    (a) Immediate response
-   - **Identify and assess** — what exactly failed, which services are affected, how many users, is data at risk.
-   - **Communicate** — inform management and users with an initial estimate; silence causes more damage than bad news.
-   - **Contain** — isolate the failing server, fail over to the standby node or DR site to restore service first. Restoring service and finding the root cause are separate activities.
+   - Identify and assess — what exactly failed, which services are affected, how many users, is data at risk.
+   - Communicate — inform management and users with an initial estimate; silence causes more damage than bad news.
+   - Contain — isolate the failing server, fail over to the standby node or DR site to restore service first. Restoring service and finding the root cause are separate activities.
 
    (b) Diagnosis
    - Check hardware indicators: front-panel LEDs, iDRAC/iLO system log, POST errors.
@@ -3672,10 +3633,10 @@ Answer: A structured incident-handling approach should be described, since the e
    | Security incident | Isolate from the network immediately; preserve evidence | Patch, rebuild from clean image, rotate credentials, report per policy |
 
    (d) After the incident
-   - **Root cause analysis** and a written incident report.
-   - **Preventive action** — patching, monitoring thresholds, capacity planning, redundancy improvements.
-   - **Update runbooks** so the next person handles it faster.
-   - **Test backups and DR** — an untested backup is not a backup.
+   - Root cause analysis and a written incident report.
+   - Preventive action — patching, monitoring thresholds, capacity planning, redundancy improvements.
+   - Update runbooks so the next person handles it faster.
+   - Test backups and DR — an untested backup is not a backup.
 
    - Governing principle in a bank: restore service first, preserve evidence, then fix the root cause — and follow the documented escalation matrix throughout.
 
@@ -3685,17 +3646,17 @@ Answer:
 
    | Component | Contribution to performance and functionality |
    |---|---|
-   | **CPU (one or more sockets)** | Executes all instructions. Core count decides how many workloads run truly in parallel; clock speed decides single-thread performance; cache size reduces waiting for memory |
-   | **RAM (ECC, registered)** | Holds active data and running programs. Insufficient RAM forces swapping to disk, which is thousands of times slower. ECC corrects single-bit errors that would otherwise corrupt data silently |
-   | **Storage (SAS / SATA / NVMe SSD)** | Holds the OS, applications and data. IOPS and latency decide database and file-server responsiveness far more than raw capacity |
-   | **RAID controller** | Combines disks for redundancy and speed. A battery-backed write cache dramatically improves write performance and protects in-flight data during a power loss |
-   | **Motherboard and chipset** | Connects everything. Determines the number of sockets, DIMM slots, PCIe lanes and expansion capacity |
-   | **Network Interface Cards** | Move data in and out. Multiple NICs allow teaming for both throughput and failover |
-   | **Redundant power supplies (PSU)** | Two hot-swap units on separate feeds keep the server running when one PSU or one feed fails |
-   | **Cooling — fans and heatsinks** | Prevent thermal throttling. An overheating CPU deliberately slows itself, so cooling directly affects sustained performance |
-   | **Out-of-band management (iDRAC / iLO / IPMI)** | Remote power control, console and hardware monitoring even when the OS is down — essential for a data centre |
-   | **GPU / accelerator (optional)** | Handles parallel workloads such as ML training, video encoding and VDI far faster than the CPU |
-   | **Chassis and backplane** | Hot-swap bays and airflow design allow maintenance without shutdown |
+   | CPU (one or more sockets) | Executes all instructions. Core count decides how many workloads run truly in parallel; clock speed decides single-thread performance; cache size reduces waiting for memory |
+   | RAM (ECC, registered) | Holds active data and running programs. Insufficient RAM forces swapping to disk, which is thousands of times slower. ECC corrects single-bit errors that would otherwise corrupt data silently |
+   | Storage (SAS / SATA / NVMe SSD) | Holds the OS, applications and data. IOPS and latency decide database and file-server responsiveness far more than raw capacity |
+   | RAID controller | Combines disks for redundancy and speed. A battery-backed write cache dramatically improves write performance and protects in-flight data during a power loss |
+   | Motherboard and chipset | Connects everything. Determines the number of sockets, DIMM slots, PCIe lanes and expansion capacity |
+   | Network Interface Cards | Move data in and out. Multiple NICs allow teaming for both throughput and failover |
+   | Redundant power supplies (PSU) | Two hot-swap units on separate feeds keep the server running when one PSU or one feed fails |
+   | Cooling — fans and heatsinks | Prevent thermal throttling. An overheating CPU deliberately slows itself, so cooling directly affects sustained performance |
+   | Out-of-band management (iDRAC / iLO / IPMI) | Remote power control, console and hardware monitoring even when the OS is down — essential for a data centre |
+   | GPU / accelerator (optional) | Handles parallel workloads such as ML training, video encoding and VDI far faster than the CPU |
+   | Chassis and backplane | Hot-swap bays and airflow design allow maintenance without shutdown |
 
    - How they interact: the slowest component sets the ceiling. A 64-core CPU starved of RAM, or an NVMe array behind a 1 GbE NIC, wastes the money spent on the fast part. Balanced sizing against the actual workload matters more than maximising any single specification.
 
@@ -3704,39 +3665,39 @@ Answer:
 Answer:
 
    (a) Physical maintenance
-   - **Dust cleaning** every 3-6 months — dust blocks airflow, raises temperature and shortens component life. Use compressed air, never a vacuum near boards.
-   - **Check fans and cooling** — a failed fan causes a hot spot that throttles the CPU and eventually kills components.
-   - **Verify environment** — room temperature 18-27 °C, humidity 40-60%.
-   - **Inspect cabling** — loose or strained cables cause intermittent faults that are very hard to diagnose.
-   - **Test UPS batteries** — batteries degrade silently and fail exactly when needed.
+   - Dust cleaning every 3-6 months — dust blocks airflow, raises temperature and shortens component life. Use compressed air, never a vacuum near boards.
+   - Check fans and cooling — a failed fan causes a hot spot that throttles the CPU and eventually kills components.
+   - Verify environment — room temperature 18-27 °C, humidity 40-60%.
+   - Inspect cabling — loose or strained cables cause intermittent faults that are very hard to diagnose.
+   - Test UPS batteries — batteries degrade silently and fail exactly when needed.
 
    (b) Monitoring
-   - **Hardware health** — disk SMART status, RAID array state, temperature, fan speed, PSU status through iDRAC/iLO.
-   - **Resource utilisation** — CPU, memory, disk space and I/O, network. Set threshold alerts BEFORE saturation.
-   - **Log review** — system, security and application logs, ideally centralised in a SIEM.
-   - **Service and uptime monitoring** — synthetic checks that a service actually answers, not just that the machine pings.
+   - Hardware health — disk SMART status, RAID array state, temperature, fan speed, PSU status through iDRAC/iLO.
+   - Resource utilisation — CPU, memory, disk space and I/O, network. Set threshold alerts BEFORE saturation.
+   - Log review — system, security and application logs, ideally centralised in a SIEM.
+   - Service and uptime monitoring — synthetic checks that a service actually answers, not just that the machine pings.
 
    (c) Software and security
-   - **Patch management** — apply OS and application security patches on a defined schedule, tested in a staging environment first. This is the single most effective security control.
-   - **Firmware and driver updates** — BIOS, RAID controller and NIC firmware fix real stability bugs.
-   - **Antivirus / EDR** with current definitions.
-   - **Account and access review** — remove departed users, enforce least privilege, rotate service-account passwords.
-   - **Configuration and change management** — documented, approved changes with rollback plans.
+   - Patch management — apply OS and application security patches on a defined schedule, tested in a staging environment first. This is the single most effective security control.
+   - Firmware and driver updates — BIOS, RAID controller and NIC firmware fix real stability bugs.
+   - Antivirus / EDR with current definitions.
+   - Account and access review — remove departed users, enforce least privilege, rotate service-account passwords.
+   - Configuration and change management — documented, approved changes with rollback plans.
 
    (d) Backup and recovery
-   - Follow the **3-2-1 rule**: three copies, on two different media, one off-site.
-   - **Test restores regularly** — an untested backup is only a hope.
+   - Follow the 3-2-1 rule: three copies, on two different media, one off-site.
+   - Test restores regularly — an untested backup is only a hope.
    - Maintain and rehearse the disaster recovery plan.
 
    (e) Documentation
    - Asset inventory, network diagram, configuration baselines, runbooks and maintenance history.
 
    How these contribute
-   - **Longevity** — clean, cool, well-powered hardware lasts years longer; heat and dust are the main killers of electronics.
-   - **Performance** — no thermal throttling, no disk exhaustion, no resource starvation.
-   - **Availability** — problems are caught by monitoring before they become outages.
-   - **Security** — patching closes the vulnerabilities that attackers actually use.
-   - **Recoverability** — tested backups turn a disaster into an inconvenience.
+   - Longevity — clean, cool, well-powered hardware lasts years longer; heat and dust are the main killers of electronics.
+   - Performance — no thermal throttling, no disk exhaustion, no resource starvation.
+   - Availability — problems are caught by monitoring before they become outages.
+   - Security — patching closes the vulnerabilities that attackers actually use.
+   - Recoverability — tested backups turn a disaster into an inconvenience.
 
 5. **Difference between SAS and SATA. Which one is best server?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 565 (ET: N/A)]*
 
@@ -3758,83 +3719,83 @@ Answer:
    | Typical use | Databases, transaction systems, virtualization | Backup, archive, file storage, bulk data |
 
    Which is best for a server
-   - **SAS is the better choice for a production server**, especially for a bank. It is built for 24/7 operation, has far higher IOPS and lower latency for transactional database work, supports dual-port redundancy, and has a much higher MTBF.
-   - **SATA is appropriate within a server for bulk, sequential, non-critical storage** — backup targets, log archives and media files — where capacity per taka matters more than IOPS.
+   - SAS is the better choice for a production server, especially for a bank. It is built for 24/7 operation, has far higher IOPS and lower latency for transactional database work, supports dual-port redundancy, and has a much higher MTBF.
+   - SATA is appropriate within a server for bulk, sequential, non-critical storage — backup targets, log archives and media files — where capacity per taka matters more than IOPS.
 
    The practical modern answer
-   - Many enterprises now use a tiered mix: **NVMe SSD** for the hottest database data (hundreds of thousands of IOPS), **SAS** for general production workloads, and **SATA / nearline SAS** for archive.
+   - Many enterprises now use a tiered mix: NVMe SSD for the hottest database data (hundreds of thousands of IOPS), SAS for general production workloads, and SATA / nearline SAS for archive.
    - For a bank's core banking database, SAS SSD or NVMe is the correct specification; SATA is acceptable only for backup storage.
 
 ## Quantum Computing & Emerging Technologies (3)
 
 1. **কোয়ান্টাম কম্পিউটিং কি? এর গুরুত্ব এবং অসুবিধাগুলো কি কি? সংক্ষেপে আলোচনা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
-Answer: Quantum computing uses the principles of quantum mechanics to process information. Instead of the classical **bit**, which is either 0 or 1, it uses the **qubit**, which can be 0, 1, or both at the same time.
+Answer: Quantum computing uses the principles of quantum mechanics to process information. Instead of the classical bit, which is either 0 or 1, it uses the qubit, which can be 0, 1, or both at the same time.
 
    Two principles that give it power
-   - **Superposition** — a qubit can hold 0 and 1 simultaneously. `n` qubits represent `2ⁿ` states at once, so 300 qubits hold more states than there are atoms in the observable universe.
-   - **Entanglement** — two qubits become linked so that measuring one instantly determines the other, however far apart they are. This lets qubits work together rather than independently.
-   - A third property, **interference**, is used to amplify correct answers and cancel wrong ones.
+   - Superposition — a qubit can hold 0 and 1 simultaneously. `n` qubits represent `2ⁿ` states at once, so 300 qubits hold more states than there are atoms in the observable universe.
+   - Entanglement — two qubits become linked so that measuring one instantly determines the other, however far apart they are. This lets qubits work together rather than independently.
+   - A third property, interference, is used to amplify correct answers and cancel wrong ones.
 
    Importance
-   - **Cryptography** — Shor's algorithm can factor large numbers efficiently, which would break RSA and ECC encryption. This is driving the move to post-quantum cryptography today.
-   - **Drug discovery and chemistry** — simulating molecules is naturally a quantum problem, currently impossible at scale on classical machines.
-   - **Optimisation** — routing, scheduling, portfolio optimisation and supply chain problems with enormous search spaces.
-   - **Machine learning** — potentially faster training on certain problem classes.
-   - **Search** — Grover's algorithm searches an unsorted database in `√N` steps instead of `N`.
-   - **Weather and climate modelling**, and materials science.
+   - Cryptography — Shor's algorithm can factor large numbers efficiently, which would break RSA and ECC encryption. This is driving the move to post-quantum cryptography today.
+   - Drug discovery and chemistry — simulating molecules is naturally a quantum problem, currently impossible at scale on classical machines.
+   - Optimisation — routing, scheduling, portfolio optimisation and supply chain problems with enormous search spaces.
+   - Machine learning — potentially faster training on certain problem classes.
+   - Search — Grover's algorithm searches an unsorted database in `√N` steps instead of `N`.
+   - Weather and climate modelling, and materials science.
 
    Disadvantages and limitations
-   - **Decoherence** — qubits lose their quantum state within microseconds from the slightest environmental disturbance.
-   - **Extreme cooling** — most designs need temperatures near absolute zero (about 15 millikelvin), requiring dilution refrigerators.
-   - **High error rates** — quantum error correction may need thousands of physical qubits to make one reliable logical qubit.
-   - **Enormous cost** — tens of millions of dollars per machine, plus specialised facilities.
-   - **Not general purpose** — a quantum computer is faster only for specific algorithm classes; for everyday computing a classical machine is far better.
-   - **Shortage of expertise** and immature programming tools.
-   - **Security threat** — it will break today's public-key cryptography, forcing a global migration.
+   - Decoherence — qubits lose their quantum state within microseconds from the slightest environmental disturbance.
+   - Extreme cooling — most designs need temperatures near absolute zero (about 15 millikelvin), requiring dilution refrigerators.
+   - High error rates — quantum error correction may need thousands of physical qubits to make one reliable logical qubit.
+   - Enormous cost — tens of millions of dollars per machine, plus specialised facilities.
+   - Not general purpose — a quantum computer is faster only for specific algorithm classes; for everyday computing a classical machine is far better.
+   - Shortage of expertise and immature programming tools.
+   - Security threat — it will break today's public-key cryptography, forcing a global migration.
 
    - Current status: machines exist from IBM, Google, IonQ and others with hundreds to a few thousand physical qubits, but they are noisy and experimental. Practical, fault-tolerant quantum computing is still years away.
 
 2. **What is the name of molecular scale computer?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
-Answer: A molecular-scale computer is called a **Molecular Computer**, also known as a **DNA computer** or **biocomputer**.
+Answer: A molecular-scale computer is called a Molecular Computer, also known as a DNA computer or biocomputer.
 
-   - **DNA computing** was demonstrated by Leonard Adleman in 1994, who solved a small Hamiltonian path problem using DNA strands in a test tube.
+   - DNA computing was demonstrated by Leonard Adleman in 1994, who solved a small Hamiltonian path problem using DNA strands in a test tube.
    - It works by encoding data in DNA base sequences (A, T, G, C) and using biochemical reactions to perform the computation. Because billions of DNA strands react in parallel, it offers massive parallelism.
    - Advantages: extremely high storage density (a gram of DNA can theoretically hold exabytes), massive parallelism, and very low energy consumption.
    - Limitations: extremely slow for a single operation, error-prone, hard to read the result, and not general purpose.
 
    Related terms sometimes expected
-   - **Nanocomputer** — any computer built at nanometre scale, including molecular, quantum-dot and nanotube designs.
-   - **Molecular electronics** — using single molecules as switches and wires.
-   - **Optical computer** — uses photons instead of electrons.
+   - Nanocomputer — any computer built at nanometre scale, including molecular, quantum-dot and nanotube designs.
+   - Molecular electronics — using single molecules as switches and wires.
+   - Optical computer — uses photons instead of electrons.
 
 3. **Virtual Reality বলতে কি বুঝায় ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 826 (ET: N/A)]*
 
-Answer: **Virtual Reality (VR)** is a computer-generated simulation of a three-dimensional environment that a user can explore and interact with as if it were real, usually through a head-mounted display that replaces the view of the physical world entirely.
+Answer: Virtual Reality (VR) is a computer-generated simulation of a three-dimensional environment that a user can explore and interact with as if it were real, usually through a head-mounted display that replaces the view of the physical world entirely.
 
    How it works
-   - A **headset (HMD)** shows a slightly different image to each eye, producing stereoscopic depth.
-   - **Motion sensors and head tracking** update the view instantly as the user turns, which creates the sense of presence.
-   - **Controllers, gloves or hand tracking** let the user reach out and manipulate objects.
-   - **Spatial audio** and sometimes haptic feedback complete the illusion.
+   - A headset (HMD) shows a slightly different image to each eye, producing stereoscopic depth.
+   - Motion sensors and head tracking update the view instantly as the user turns, which creates the sense of presence.
+   - Controllers, gloves or hand tracking let the user reach out and manipulate objects.
+   - Spatial audio and sometimes haptic feedback complete the illusion.
 
    Key characteristics
-   - **Immersion** — the real world is shut out.
-   - **Interaction** — the user changes the environment, rather than only watching it.
-   - **Real-time response** — latency must stay under about 20 ms or the user feels motion sickness.
+   - Immersion — the real world is shut out.
+   - Interaction — the user changes the environment, rather than only watching it.
+   - Real-time response — latency must stay under about 20 ms or the user feels motion sickness.
 
    Applications
-   - **Education and training** — virtual laboratories, historical reconstructions, field trips.
-   - **Medical** — surgical training and rehearsal, phobia and PTSD therapy, rehabilitation.
-   - **Military and aviation** — flight and combat simulators, which are far cheaper and safer than real training.
-   - **Architecture and real estate** — walk through a building before it is built.
-   - **Gaming and entertainment**, **virtual tourism**, and remote collaboration.
+   - Education and training — virtual laboratories, historical reconstructions, field trips.
+   - Medical — surgical training and rehearsal, phobia and PTSD therapy, rehabilitation.
+   - Military and aviation — flight and combat simulators, which are far cheaper and safer than real training.
+   - Architecture and real estate — walk through a building before it is built.
+   - Gaming and entertainment, virtual tourism, and remote collaboration.
 
    Related technologies
-   - **AR (Augmented Reality)** — adds digital objects on top of the real world, seen through a phone or glasses. Example: Pokémon Go.
-   - **MR (Mixed Reality)** — digital and real objects interact with each other.
-   - **XR (Extended Reality)** — the umbrella term covering VR, AR and MR.
+   - AR (Augmented Reality) — adds digital objects on top of the real world, seen through a phone or glasses. Example: Pokémon Go.
+   - MR (Mixed Reality) — digital and real objects interact with each other.
+   - XR (Extended Reality) — the umbrella term covering VR, AR and MR.
 
    - Limitations: expensive hardware, motion sickness, limited content, physical space requirement, and eye strain during long sessions.
 
@@ -3863,25 +3824,25 @@ Answer:
    | Better suited to | Complex advice, large cash handling | Everyday transactions, payments, transfers |
 
    (c) How digital banking promotes financial inclusion
-   - **Removes the distance barrier** — a villager 30 km from the nearest branch can transact from a mobile phone or a local agent point. This is the single largest inclusion effect.
-   - **Removes the cost barrier** — no minimum balance and negligible transaction cost make small accounts viable for the bank, which branch banking never was.
-   - **Agent banking** — a local shop acts as a bank outlet with a POS device, bringing deposits, withdrawals and remittance to rural areas without the cost of a branch.
-   - **Mobile Financial Services (bKash, Nagad, Rocket)** — bring payments to people with no bank account at all, needing only a basic phone.
-   - **Simplified e-KYC** — NID-based digital verification removes the paperwork barrier for people with limited literacy.
-   - **Government-to-Person transfers** — social safety-net allowances, stipends and disaster relief paid directly to a wallet, eliminating leakage.
-   - **Remittance** — overseas workers send money directly to a family wallet within minutes, at far lower cost than informal channels.
-   - **Credit access** — transaction history in a wallet becomes an alternative credit score for people with no formal credit record, enabling nano-loans.
-   - **Women's inclusion** — an account controlled from a personal phone gives women financial privacy and control that a shared branch visit does not.
+   - Removes the distance barrier — a villager 30 km from the nearest branch can transact from a mobile phone or a local agent point. This is the single largest inclusion effect.
+   - Removes the cost barrier — no minimum balance and negligible transaction cost make small accounts viable for the bank, which branch banking never was.
+   - Agent banking — a local shop acts as a bank outlet with a POS device, bringing deposits, withdrawals and remittance to rural areas without the cost of a branch.
+   - Mobile Financial Services (bKash, Nagad, Rocket) — bring payments to people with no bank account at all, needing only a basic phone.
+   - Simplified e-KYC — NID-based digital verification removes the paperwork barrier for people with limited literacy.
+   - Government-to-Person transfers — social safety-net allowances, stipends and disaster relief paid directly to a wallet, eliminating leakage.
+   - Remittance — overseas workers send money directly to a family wallet within minutes, at far lower cost than informal channels.
+   - Credit access — transaction history in a wallet becomes an alternative credit score for people with no formal credit record, enabling nano-loans.
+   - Women's inclusion — an account controlled from a personal phone gives women financial privacy and control that a shared branch visit does not.
 
    Barriers that remain
    - Smartphone and internet cost, digital and financial literacy, weak rural network coverage, agent trust and fraud, and the gender gap in phone ownership.
 
 2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 
-Answer: An **Electronic Payment System (EPS)** is a system that allows money to be transferred from a payer to a payee electronically over a network, without exchanging physical cash or cheques.
+Answer: An Electronic Payment System (EPS) is a system that allows money to be transferred from a payer to a payee electronically over a network, without exchanging physical cash or cheques.
 
    Parties involved
-   - **Customer (payer)**, **Merchant (payee)**, **Issuing bank** (the customer's bank), **Acquiring bank** (the merchant's bank), and the **Payment gateway / switch** that connects them.
+   - Customer (payer), Merchant (payee), Issuing bank (the customer's bank), Acquiring bank (the merchant's bank), and the Payment gateway / switch that connects them.
 
    Diagram — how an online card payment flows
    ```mermaid
@@ -3895,14 +3856,14 @@ Answer: An **Electronic Payment System (EPS)** is a system that allows money to 
        G -->|7. confirmation| M
        M -->|8. receipt| C
    ```
-   - Steps 1-5 are **authorisation**, completed in seconds. The actual movement of funds, called **settlement**, happens later in a batch between the banks.
+   - Steps 1-5 are authorisation, completed in seconds. The actual movement of funds, called settlement, happens later in a batch between the banks.
 
    Five types of Electronic Payment System
-   - **Card-based payment** — debit cards, credit cards and prepaid cards, processed through networks such as VISA, Mastercard and the local NPSB.
-   - **Internet banking / fund transfer** — direct bank-to-bank transfer through BEFTN, RTGS or NPSB.
-   - **Mobile Financial Services (MFS) / e-wallet** — bKash, Nagad, Rocket, Upay; also PayPal and Google Pay internationally.
-   - **QR code payment** — the customer scans a merchant QR code and pays from a wallet or bank app. Bangladesh Bank's interoperable "Bangla QR" falls here.
-   - **e-Cheque / electronic clearing** — cheque images cleared electronically through BACH instead of physical movement.
+   - Card-based payment — debit cards, credit cards and prepaid cards, processed through networks such as VISA, Mastercard and the local NPSB.
+   - Internet banking / fund transfer — direct bank-to-bank transfer through BEFTN, RTGS or NPSB.
+   - Mobile Financial Services (MFS) / e-wallet — bKash, Nagad, Rocket, Upay; also PayPal and Google Pay internationally.
+   - QR code payment — the customer scans a merchant QR code and pays from a wallet or bank app. Bangladesh Bank's interoperable "Bangla QR" falls here.
+   - e-Cheque / electronic clearing — cheque images cleared electronically through BACH instead of physical movement.
 
    Others worth naming
    - Cryptocurrency payment, Direct Debit and standing instruction, and contactless NFC card payment.
@@ -3915,7 +3876,7 @@ Answer: An **Electronic Payment System (EPS)** is a system that allows money to 
 
 1. **What is CLI?** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
-Answer: **CLI (Command Line Interface)** is a text-based user interface in which the user types commands at a prompt and the system responds with text output. There are no windows, icons or menus.
+Answer: CLI (Command Line Interface) is a text-based user interface in which the user types commands at a prompt and the system responds with text output. There are no windows, icons or menus.
 
    Examples
    - Windows: Command Prompt (`cmd`), PowerShell.
@@ -3945,10 +3906,10 @@ Answer: **CLI (Command Line Interface)** is a text-based user interface in which
    | Error risk | High — a mistyped command can be destructive | Lower, with confirmation dialogs |
 
    Why CLI is still essential
-   - **Automation and scripting** — hundreds of servers configured by one script; impossible through a GUI.
-   - **Remote administration** — SSH over a slow or metered connection.
-   - **Server operating systems** often run without any GUI at all, to save resources and reduce attack surface.
-   - **Full functionality** — many advanced options are exposed only through the CLI.
-   - **Reproducibility** — a command can be documented, reviewed and repeated exactly; a sequence of mouse clicks cannot.
+   - Automation and scripting — hundreds of servers configured by one script; impossible through a GUI.
+   - Remote administration — SSH over a slow or metered connection.
+   - Server operating systems often run without any GUI at all, to save resources and reduce attack surface.
+   - Full functionality — many advanced options are exposed only through the CLI.
+   - Reproducibility — a command can be documented, reviewed and repeated exactly; a sequence of mouse clicks cannot.
 
    - In practice a system administrator uses both: a GUI for exploration and reporting, and the CLI for real work and automation.
