@@ -6847,6 +6847,186 @@ Answer:
     - Working Set Model: Ensure that a process is allocated sufficient frames to hold its active working set before dispatching.
     - Page Fault Frequency (PFF): Dynamically monitor page fault rates; allocate frames if PFF is too high, or suspend processes if memory is saturated.
 
+## Virtual Memory & Page Replacement (Thrashing) (16)
+
+1. **Consider the following page reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Assuming a system with 3 page frames initially empty, calculate the number of page faults using the following page replacement algorithms: (i) FIFO (First-In, First-Out), (ii) LRU (Least Recently Used), and (iii) Optimal Page Replacement.** *[BSCCPL AME 21-08-2026 (BUET)]*
+
+   Answer:
+
+   (i) FIFO — 15 page faults
+   ```
+   Ref:    7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
+   Fault:  F  F  F  F  .  F  F  F  F  F  F  .  .  F  F  .  .  F  F  F
+   ```
+   - FIFO always evicts the oldest-loaded page, regardless of how recently it was used, which is why it performs the worst of the three here.
+
+   (ii) LRU — 12 page faults
+   ```
+   Ref:    7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
+   Fault:  F  F  F  F  .  F  .  F  F  F  F  .  .  F  .  F  .  F  .  .
+   ```
+   - LRU evicts the page not used for the longest time so far; it adapts to actual usage patterns and needs fewer faults than FIFO.
+
+   (iii) Optimal — 9 page faults
+   ```
+   Ref:    7  0  1  2  0  3  0  4  2  3  0  3  2  1  2  0  1  7  0  1
+   Fault:  F  F  F  F  .  F  .  F  .  .  F  .  .  F  .  .  .  F  .  .
+   ```
+   - Optimal always evicts the page that will not be used for the longest time in the future (or never again). It requires future knowledge, so it is not implementable in practice, but it gives the theoretical minimum number of faults — the benchmark other algorithms are measured against.
+   - Result: `FIFO (15) > LRU (12) > Optimal (9)`, confirming the expected ordering.
+
+2. **Explain the concept of thrashing in an operating system, describing how it occurs in a demand-paged virtual memory system and how it impacts CPU utilization and overall system performance.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1422 (ET: E-Zone)]*
+
+   Answer: Thrashing is a state where the system spends most of its time swapping pages in and out of memory rather than executing actual process instructions, causing throughput to collapse.
+
+   How it occurs
+   - Too many processes are allowed to run concurrently (high degree of multiprogramming), and the combined working set of all active processes exceeds available physical frames.
+   - Each process keeps causing page faults for pages that were just evicted to make room for another process's pages.
+
+   Impact
+   - CPU utilisation actually drops, because most processes are stuck waiting for page-in I/O rather than running.
+   - The OS scheduler, seeing low CPU utilisation, mistakenly admits even more processes to "keep the CPU busy" — this makes the problem worse, not better, causing a feedback spiral.
+   - Overall throughput approaches zero even though the CPU and disk are both extremely busy (with paging overhead, not useful work).
+
+   ```mermaid
+   flowchart LR
+       A[More processes admitted] --> B[Less memory per process]
+       B --> C[More page faults]
+       C --> D[CPU idles waiting for disk]
+       D --> A
+   ```
+
+   Fixes: the working-set model (give each process enough frames for its active working set) and page-fault-frequency control (suspend a process if its fault rate is too high).
+
+3. **a) Write about notes on i) Virtual memory, and ii) Cache memory.** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1343 (ET: N/A)]*
+
+   Answer:
+
+   (i) Virtual memory
+   - A memory-management technique that gives each process the illusion of a large, contiguous address space, even though physical RAM may be much smaller, by keeping only the actively used pages in RAM and the rest on disk.
+   - Implemented via paging and a page table that maps virtual addresses to physical frames; a page fault brings in a missing page on demand.
+   - Benefits: allows programs larger than physical RAM to run, enables multiprogramming with process isolation, and simplifies memory allocation.
+
+   (ii) Cache memory
+   - A small, very fast memory (SRAM) placed between the CPU and main memory (RAM), holding copies of recently/frequently used data and instructions.
+   - Exploits the principle of locality (temporal and spatial), so most memory references are served from the cache, much faster than a main-memory access.
+   - Organised in levels (L1 closest and fastest/smallest, L2, L3 progressively larger and slower).
+
+4. **Consider a reference string 4,7,6,1,2,7,2 the number of frames in the memory is 3. Using page Replacement Algorithm (LRU), find the number of page fault.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 391 (ET: BUET)]*
+
+   Answer: 6 page faults.
+
+   ```
+   Ref:    4  7  6  1  2  7  2
+   Fault:  F  F  F  F  F  F  .
+   ```
+   - Steps 1-6 are all faults because each new page (4, 7, 6, 1, 2, 7) has not been seen recently enough to still be in the 3 frames — by the time 7 is referenced again at step 6, it was already evicted (LRU order after step 4 is `[7,6,1]`, then step 5 evicts LRU=7 to load 2, giving `[6,1,2]`).
+   - Step 7 (2) is a hit, since 2 was just loaded at step 5 and is still the most recently used.
+
+5. **Why virtual memory needed?** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 477 (ET: N/A)]*
+
+   Answer:
+
+   - Lets programs larger than physical RAM run, by keeping only actively used pages in memory.
+   - Enables multiprogramming — many processes can be partially resident at once, increasing CPU utilisation.
+   - Provides memory protection and isolation, since each process has its own virtual address space, unaware of others.
+   - Simplifies programming, since a programmer does not need to manage overlays or manual memory swapping.
+   - Allows efficient sharing of memory (e.g., shared libraries mapped into multiple processes' address spaces).
+
+6. **Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3 page frames. Find the number of page faults.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 493 (ET: N/A)]*
+
+   Answer: 6 page faults, using FIFO (the standard default algorithm when none is specified). <!-- verify -->
+
+   ```
+   Ref:    1  3  0  3  5  6  3
+   Fault:  F  F  F  .  F  F  F
+   ```
+   - Frames fill as `[1,3,0]`. Step 4 (3) is a hit. Step 5 (5) evicts the oldest (1) → `[3,0,5]`. Step 6 (6) evicts oldest (3) → `[0,5,6]`. Step 7 (3) is now a fault since 3 was evicted → evicts oldest (0) → `[5,6,3]`.
+
+7. **Difference between physical memory and virtual memory, also describe the advantages and disadvantages of virtual memory.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 553 (ET: BIBM)]*
+
+   Answer:
+
+   | Point | Physical memory | Virtual memory |
+   |---|---|---|
+   | What it is | The actual RAM chips installed in the machine | An abstraction giving each process its own large address space |
+   | Size | Fixed, limited by installed hardware | Can appear larger than physical RAM (backed by disk) |
+   | Addressing | Real physical addresses | Virtual addresses translated via page tables |
+   | Speed | Fast (direct access) | Slower when a page fault requires a disk fetch |
+
+   Advantages of virtual memory
+   - Programs can be larger than available RAM.
+   - Better multiprogramming — more processes fit "logically" in memory.
+   - Process isolation and protection.
+
+   Disadvantages
+   - Page faults add latency (disk I/O is orders of magnitude slower than RAM).
+   - Risk of thrashing if physical memory is insufficient for the active working sets.
+   - Extra hardware/software complexity (MMU, page tables, TLB management).
+
+8. **(c) Define paging and trashing in the context of OS.** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 490 (ET: N/A)]*
+
+   Answer:
+
+   - Paging — a memory management scheme that divides both physical memory (into frames) and a process's logical address space (into pages) of the same fixed size, so a process's pages can be scattered non-contiguously across available frames, eliminating external fragmentation.
+   - Thrashing — a state where the system spends most of its time swapping pages in and out rather than executing processes, because the combined active working sets of all processes exceed available physical memory.
+
+9. **What is page fault in computing systems? What does it occur?** *[BICIC Assistant Programmer 2022 compact it 632 (ET: BUET)]*
+
+   Answer: A page fault is a hardware trap raised by the MMU when a process references a page that is marked "not present" in its page table — i.e., the page is not currently loaded in physical memory.
+
+   - On a page fault, the OS: finds a free frame (or evicts a page using a replacement algorithm), loads the required page from disk into that frame, updates the page table, and then restarts the instruction that caused the fault.
+   - It occurs whenever a program accesses a page that has never been loaded yet, or one that was previously swapped out to make room for another page.
+
+10. **Write short note on Virtual Memory and Cache memory.** *[SPCB Sub-Assistant Programmer 2022 compact it 738 (ET: N/A)]*
+
+    Answer: (Same content as Q3 above — Virtual memory extends the illusion of large address space using disk-backed paging; Cache memory is a small, very fast SRAM layer between CPU and RAM that speeds up repeated memory access by exploiting locality of reference.)
+
+11. **(ii) Virtual Memory এর প্রয়োজনীয়তা কি ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 786 (ET: N/A)]*
+
+    Answer: Virtual memory is needed so that:
+    - Programs larger than physical RAM can still execute, since only the actively used pages need to be resident.
+    - Multiple processes can run together (multiprogramming) without each one demanding its full memory footprint be present at once.
+    - Each process gets an isolated, protected address space, preventing one process from corrupting another's memory.
+    - Memory allocation becomes simpler and more flexible, since pages need not be contiguous in physical memory.
+
+12. **A system uses 3 page frames for storing process pages in main memory. It uses the Least Recently Used (LRU) page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below? 4, 7, 6, 1, 7, 6, 1, 2, 7, 2.** *[BPDB Assistant Engineer (CSE) 2021 compact it 817 (ET: BUET)]*
+
+    Answer: 6 page faults.
+
+    ```
+    Ref:    4  7  6  1  7  6  1  2  7  2
+    Fault:  F  F  F  F  .  .  .  F  F  .
+    ```
+    - After the first three distinct pages (4, 7, 6) fill the frames, page 1 causes a fault and evicts the LRU page (4). Pages 7, 6, 1 are then each reused (hits) in steps 5-7, keeping the recency order refreshed.
+    - Page 2 (step 8) is new, so it faults and evicts the current LRU (7). Page 7 (step 9) is then a fault again since it was just evicted, evicting the new LRU (6). Page 2 (step 10) is a hit, since it was just loaded.
+
+13. **Briefly explain the concept of ‘Thrashing’ in terms of OS.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 822 (ET: BUET)]*
+
+    Answer: Thrashing is excessive paging activity where a process (or the whole system) spends more time swapping pages between RAM and disk than doing useful computation, typically caused by too many processes competing for too little physical memory relative to their working-set needs. It is fixed by giving each process enough frames for its working set, or by reducing the degree of multiprogramming.
+
+14. **(a) What do you mean by virtual memory?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 895 (ET: N/A)]*
+
+    Answer: Virtual memory is a memory management technique that separates a program's logical (virtual) address space from physical memory, letting the OS run a program even when it is larger than available RAM, by keeping only the currently needed pages resident and the rest on disk, brought in on demand via page faults.
+
+15. **A system uses 8 page frames to store process pages in main memory. It uses the minimum page replacement policy. Assume that all page frames are initially blank. 64 separate pages were inserted and then the pages were inserted in reverse order. How many pages will be miss?** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
+
+    Answer: The exact wording is ambiguous (it is unclear whether "minimum" means Optimal replacement, and whether "inserted in reverse order" means the very same 64 pages are referenced a second time from page 64 down to page 1), so the concept is explained rather than one fixed number.
+
+    - First pass (pages 1 to 64, forward, 8 frames): every one of the 64 references is a page fault, since each page is completely new and none of them repeats within this pass. That gives **64 faults** in the first pass, ending with frames holding pages 57-64.
+    - Second pass (pages 64 down to 1, reverse order): page 64 is still resident (a hit), but from page 63 downward the working set of 64 distinct pages is far larger than the 8 available frames, so almost every subsequent reference is again a fault, because a page needed now was pushed out long ago to make room for later pages. In the worst case nearly all of the remaining 63 references also fault.
+    - Overall lesson: when the number of distinct pages actively cycled through (64) vastly exceeds the number of frames (8), the system is in a thrashing-like state and the fault rate approaches 100%, regardless of which replacement algorithm (FIFO, LRU or Optimal) is used — none of them can do much better when the working set simply does not fit. <!-- verify -->
+
+16. **(খ) Virtual Memory বলতে কী বোঝায়? এর কার্যপদ্ধতি সংক্ষেপে বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1093 (ET: N/A)]*
+
+    Answer: Virtual memory is a technique that gives each process the illusion of a large, private, contiguous address space, independent of how much physical RAM is actually installed.
+
+    How it works
+    - A process's address space is divided into fixed-size pages; physical memory is divided into same-sized frames.
+    - A per-process page table maps virtual page numbers to physical frame numbers, with a "valid/invalid" bit marking whether the page is currently in RAM.
+    - When the CPU references a page marked invalid, the MMU raises a page fault; the OS loads the page from disk into a free (or newly freed) frame, updates the page table, and resumes the instruction.
+    - A page replacement algorithm (FIFO, LRU, Optimal, etc.) decides which page to evict when no free frame is available.
+
 ## Process Management & Process States (12)
 
 1. **(b) What is process? Describe different states of a process.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
