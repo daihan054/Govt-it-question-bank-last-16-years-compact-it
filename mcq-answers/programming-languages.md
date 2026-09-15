@@ -104,7 +104,7 @@
    D) 512, 64, 512
 
    answer: D — 512, 64, 512  
-   explanation: ** is right-associative, so 2**(3**2) and 2**3**2 both give 2⁹ = 512, while (2**3)**2 is 8² = 64.
+   explanation: The `**` operator is right-associative, so `2**(3**2)` and `2**3**2` both give 2⁹ = 512, while `(2**3)**2` is 8² = 64.
 
 ## Mobile & Android Development (7)
 
