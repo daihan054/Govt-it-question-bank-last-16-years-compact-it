@@ -21,7 +21,7 @@
 
 1. **A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** [SO IT 25-07-2026]
 
-Answer: **PaaS (Platform as a Service)** is the right model.
+Answer: PaaS (Platform as a Service) is the right model.
 
    Why PaaS fits exactly
    - The startup wants to write and deploy code only, and PaaS provides a ready-made platform where the provider manages servers, storage, operating system and runtime environment.
@@ -35,8 +35,8 @@ Answer: **PaaS (Platform as a Service)** is the right model.
    | SaaS | Nothing — just use the software | No — cannot deploy own code |
 
    Two real-world PaaS platforms
-   - **Google App Engine** — upload the code and Google handles servers, scaling and patching automatically.
-   - **AWS Elastic Beanstalk** — upload the application and AWS provisions capacity, load balancing, auto-scaling and health monitoring.
+   - Google App Engine — upload the code and Google handles servers, scaling and patching automatically.
+   - AWS Elastic Beanstalk — upload the application and AWS provisions capacity, load balancing, auto-scaling and health monitoring.
    - Others in the same category: Microsoft Azure App Service, Heroku, Red Hat OpenShift.
 
    - Trade-off to note: PaaS reduces customisation of the underlying infrastructure and creates some vendor lock-in, which is usually an acceptable price for a small startup.
@@ -49,9 +49,9 @@ Answer: Cloud computing is the delivery of computing services — servers, stora
    - On-demand self-service, broad network access, resource pooling, rapid elasticity and measured service (pay per use).
 
    Three service models
-   - **IaaS (Infrastructure as a Service)** — rents virtualised hardware: virtual machines, storage and networking. The customer manages the OS, runtime, applications and data. Examples: AWS EC2, Microsoft Azure VMs, Google Compute Engine.
-   - **PaaS (Platform as a Service)** — provides a ready development and deployment platform. The provider manages the OS and runtime; the customer manages only the application and its data. Examples: Google App Engine, AWS Elastic Beanstalk, Heroku.
-   - **SaaS (Software as a Service)** — delivers finished applications over a browser. The provider manages everything. Examples: Gmail, Google Docs, Salesforce, Microsoft 365.
+   - IaaS (Infrastructure as a Service) — rents virtualised hardware: virtual machines, storage and networking. The customer manages the OS, runtime, applications and data. Examples: AWS EC2, Microsoft Azure VMs, Google Compute Engine.
+   - PaaS (Platform as a Service) — provides a ready development and deployment platform. The provider manages the OS and runtime; the customer manages only the application and its data. Examples: Google App Engine, AWS Elastic Beanstalk, Heroku.
+   - SaaS (Software as a Service) — delivers finished applications over a browser. The provider manages everything. Examples: Gmail, Google Docs, Salesforce, Microsoft 365.
 
    Four deployment models
    - Public cloud, private cloud, hybrid cloud and community cloud.
@@ -92,14 +92,14 @@ Answer:
    | Single shared database with a `vendor_id` column | Cheapest, easiest to scale to many vendors, one schema to migrate | Weakest isolation; a missing `WHERE vendor_id` leaks data |
    | Separate database per vendor | Strongest isolation, easy per-vendor backup and restore, simple compliance | Expensive, hundreds of schemas to migrate, hard to run cross-vendor reports |
 
-   - My choice: a **single shared database with a `vendor_id` column on every table**, plus row-level security enforced in the database itself.
+   - My choice: a single shared database with a `vendor_id` column on every table, plus row-level security enforced in the database itself.
    - Reasons: an e-commerce marketplace expects a large and growing number of vendors, most of them small. Per-vendor databases would not scale operationally — every schema change would need to run hundreds of times. Cross-vendor features such as global search, marketplace-wide reporting and shared product catalogues are natural in one database and painful across many.
    - The isolation risk is handled by enforcing `vendor_id` filtering at the data-access layer and with database row-level security policies, so a forgotten filter in application code cannot expose data.
    - Exception: a very large enterprise vendor with strict regulatory requirements can be moved to its own database — a hybrid approach that keeps the shared model for the majority.
 
 4. **6.11 A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-Answer: **PaaS (Platform as a Service)** is the appropriate model.
+Answer: PaaS (Platform as a Service) is the appropriate model.
 
    Justification
    - The requirement names exactly what PaaS removes — hardware, operating system and runtime environment are all managed by the provider.
@@ -116,8 +116,8 @@ Answer: **PaaS (Platform as a Service)** is the appropriate model.
    | Virtualisation, servers, storage, networking | Provider |
 
    Two real-world examples
-   - **Google App Engine** — deploy code and Google handles provisioning, scaling and maintenance.
-   - **AWS Elastic Beanstalk** — upload the application; AWS sets up capacity, load balancing and auto-scaling automatically.
+   - Google App Engine — deploy code and Google handles provisioning, scaling and maintenance.
+   - AWS Elastic Beanstalk — upload the application; AWS sets up capacity, load balancing and auto-scaling automatically.
    - Also in this category: Microsoft Azure App Service, Heroku, Red Hat OpenShift.
 
    - Extra benefit for a startup: PaaS scales automatically as traffic grows, so no capacity planning is needed in the early months.
@@ -186,12 +186,12 @@ Answer: Multi-tenancy means a single instance of an application and its supporti
    - A separate database per tenant, with the application still shared.
 
    Why it benefits the cloud service provider
-   - **Cost efficiency** — one deployment serves thousands of customers, so infrastructure cost per customer falls dramatically.
-   - **Single codebase** — one version to develop, test, patch and monitor, instead of one per customer.
-   - **Instant updates** — a new feature or security fix reaches every tenant at once.
-   - **Better resource utilisation** — tenants peak at different times, so idle capacity of one serves another.
-   - **Fast onboarding** — adding a new tenant is a configuration record, not a new deployment.
-   - **Easier scaling and monitoring** — one system to observe and tune.
+   - Cost efficiency — one deployment serves thousands of customers, so infrastructure cost per customer falls dramatically.
+   - Single codebase — one version to develop, test, patch and monitor, instead of one per customer.
+   - Instant updates — a new feature or security fix reaches every tenant at once.
+   - Better resource utilisation — tenants peak at different times, so idle capacity of one serves another.
+   - Fast onboarding — adding a new tenant is a configuration record, not a new deployment.
+   - Easier scaling and monitoring — one system to observe and tune.
 
    Costs the provider must accept
    - Strong data isolation must be designed in and tested constantly, since one bug can leak data across tenants.
@@ -204,15 +204,15 @@ Answer: Multi-tenancy means a single instance of an application and its supporti
 
 Answer: Cloud computing offers three main service models.
 
-   - **IaaS (Infrastructure as a Service)** — virtual machines, storage, networking and load balancers rented on demand. Examples: AWS EC2, Azure VMs, Google Compute Engine.
-   - **PaaS (Platform as a Service)** — a development and deployment platform including the OS, runtime and middleware. Examples: Google App Engine, AWS Elastic Beanstalk, Heroku.
-   - **SaaS (Software as a Service)** — ready-made applications delivered over the browser. Examples: Gmail, Google Docs, Salesforce, Microsoft 365.
+   - IaaS (Infrastructure as a Service) — virtual machines, storage, networking and load balancers rented on demand. Examples: AWS EC2, Azure VMs, Google Compute Engine.
+   - PaaS (Platform as a Service) — a development and deployment platform including the OS, runtime and middleware. Examples: Google App Engine, AWS Elastic Beanstalk, Heroku.
+   - SaaS (Software as a Service) — ready-made applications delivered over the browser. Examples: Gmail, Google Docs, Salesforce, Microsoft 365.
 
    Other "as a Service" models now in common use
-   - **FaaS (Function as a Service)** / serverless — run individual functions without managing servers. Examples: AWS Lambda, Azure Functions.
-   - **DaaS (Database as a Service)** — managed databases such as Amazon RDS.
-   - **STaaS (Storage as a Service)** — Dropbox, Google Drive, Amazon S3.
-   - **DRaaS (Disaster Recovery as a Service)** and **SECaaS (Security as a Service)**.
+   - FaaS (Function as a Service) / serverless — run individual functions without managing servers. Examples: AWS Lambda, Azure Functions.
+   - DaaS (Database as a Service) — managed databases such as Amazon RDS.
+   - STaaS (Storage as a Service) — Dropbox, Google Drive, Amazon S3.
+   - DRaaS (Disaster Recovery as a Service) and SECaaS (Security as a Service).
 
    Deployment models
    - Public cloud, private cloud, hybrid cloud and community cloud.
@@ -224,21 +224,15 @@ Answer: Cloud computing offers three main service models.
    Drop box
    Amazon Web Services (AWS)
 
-Search engine for a web server
-   Google Docs
-   Microsoft Azure
-   Drop box
-   Amazon Web Services (AWS)
-
    Answer:
 
    | Cloud service | Category | Reason |
    |---|---|---|
-   | Search engine for a web server | **SaaS** | A finished application used through a browser; the user manages nothing |
-   | Google Docs | **SaaS** | Ready-made document software delivered over the web, no installation |
-   | Microsoft Azure | **IaaS** (also offers PaaS and SaaS) | Primarily rents virtual machines, storage and networking |
-   | Dropbox | **SaaS** | A complete file storage and sharing application; often called STaaS, a SaaS sub-type |
-   | Amazon Web Services (AWS) | **IaaS** (also offers PaaS and SaaS) | Core offering EC2 and S3 rents raw compute and storage |
+   | Search engine for a web server | SaaS | A finished application used through a browser; the user manages nothing |
+   | Google Docs | SaaS | Ready-made document software delivered over the web, no installation |
+   | Microsoft Azure | IaaS (also offers PaaS and SaaS) | Primarily rents virtual machines, storage and networking |
+   | Dropbox | SaaS | A complete file storage and sharing application; often called STaaS, a SaaS sub-type |
+   | Amazon Web Services (AWS) | IaaS (also offers PaaS and SaaS) | Core offering EC2 and S3 rents raw compute and storage |
 
    - Note that Azure and AWS are full platforms spanning all three models — Azure VMs and AWS EC2 are IaaS, Azure App Service and Elastic Beanstalk are PaaS, and Microsoft 365 is SaaS. In an exam answer they are classified by their primary offering, which is IaaS.
 
@@ -246,9 +240,9 @@ Search engine for a web server
 
 Answer: The cloud provides three service types.
 
-    - **IaaS — Infrastructure as a Service.** Rents virtualised hardware: servers, storage and networks. The customer manages the OS, runtime, applications and data. Examples: AWS EC2, Azure VMs.
-    - **PaaS — Platform as a Service.** Provides a ready platform with OS, runtime and development tools. The customer manages only the application and its data. Examples: Google App Engine, Heroku.
-    - **SaaS — Software as a Service.** Delivers complete applications over the internet. The provider manages everything. Examples: Gmail, Salesforce, Microsoft 365.
+    - IaaS — Infrastructure as a Service. Rents virtualised hardware: servers, storage and networks. The customer manages the OS, runtime, applications and data. Examples: AWS EC2, Azure VMs.
+    - PaaS — Platform as a Service. Provides a ready platform with OS, runtime and development tools. The customer manages only the application and its data. Examples: Google App Engine, Heroku.
+    - SaaS — Software as a Service. Delivers complete applications over the internet. The provider manages everything. Examples: Gmail, Salesforce, Microsoft 365.
 
     | Model | Customer manages | Provider manages |
     |---|---|---|
@@ -260,9 +254,9 @@ Answer: The cloud provides three service types.
 
 Answer: The three basic functions delivered by cloud services are:
 
-    - **Computing (processing)** — providing CPU power and memory to run applications, through virtual machines, containers or serverless functions. Delivered mainly by IaaS and PaaS.
-    - **Storage** — keeping data safely and retrieving it on demand, through object storage, block storage, file storage and managed databases. Examples: Amazon S3, Google Drive, Azure Blob Storage.
-    - **Networking** — connecting the resources and delivering them to users, including virtual networks, load balancers, CDNs, DNS and firewalls.
+    - Computing (processing) — providing CPU power and memory to run applications, through virtual machines, containers or serverless functions. Delivered mainly by IaaS and PaaS.
+    - Storage — keeping data safely and retrieving it on demand, through object storage, block storage, file storage and managed databases. Examples: Amazon S3, Google Drive, Azure Blob Storage.
+    - Networking — connecting the resources and delivering them to users, including virtual networks, load balancers, CDNs, DNS and firewalls.
 
     Read another way, the three basic functions map exactly onto the three service models
     - IaaS supplies raw infrastructure, PaaS supplies a development platform, and SaaS supplies finished software.
@@ -274,22 +268,22 @@ Answer: The three basic functions delivered by cloud services are:
 Answer:
 
     Advantages
-    - **Cost saving** — no capital spending on servers and data centres; pay only for what is used.
-    - **Scalability and elasticity** — resources grow during a traffic peak and shrink afterwards, within minutes.
-    - **Accessibility** — data and applications are reachable from anywhere with an internet connection, on any device.
-    - **Automatic updates and maintenance** — the provider patches and upgrades the platform.
-    - **Reliability and disaster recovery** — data is replicated across multiple data centres, so failures are survivable.
-    - **Fast deployment** — a new server takes minutes instead of weeks of procurement.
-    - **Collaboration** — several users can work on the same document or system simultaneously.
+    - Cost saving — no capital spending on servers and data centres; pay only for what is used.
+    - Scalability and elasticity — resources grow during a traffic peak and shrink afterwards, within minutes.
+    - Accessibility — data and applications are reachable from anywhere with an internet connection, on any device.
+    - Automatic updates and maintenance — the provider patches and upgrades the platform.
+    - Reliability and disaster recovery — data is replicated across multiple data centres, so failures are survivable.
+    - Fast deployment — a new server takes minutes instead of weeks of procurement.
+    - Collaboration — several users can work on the same document or system simultaneously.
 
     Disadvantages
-    - **Internet dependency** — no connectivity means no access, which is a real risk where the network is unreliable.
-    - **Security and privacy concerns** — sensitive data sits on someone else's infrastructure.
-    - **Limited control** — the customer cannot touch the underlying hardware or, in SaaS, even the software version.
-    - **Vendor lock-in** — moving from one provider to another is costly and technically hard.
-    - **Downtime risk** — an outage at the provider affects every customer at once.
-    - **Long-term cost** — for a steady, predictable workload, owning servers can eventually be cheaper than renting.
-    - **Compliance issues** — data may be stored in another country, which some regulations forbid.
+    - Internet dependency — no connectivity means no access, which is a real risk where the network is unreliable.
+    - Security and privacy concerns — sensitive data sits on someone else's infrastructure.
+    - Limited control — the customer cannot touch the underlying hardware or, in SaaS, even the software version.
+    - Vendor lock-in — moving from one provider to another is costly and technically hard.
+    - Downtime risk — an outage at the provider affects every customer at once.
+    - Long-term cost — for a steady, predictable workload, owning servers can eventually be cheaper than renting.
+    - Compliance issues — data may be stored in another country, which some regulations forbid.
 
 13. **What is cloud computing? Mention five advantages threat of cloud computing. Describe IaaS, PaaS and SaaS.** *[Combined 3 Banks Assistant Programmer 2018 compact it 1196 (ET: N/A)]*
 
@@ -314,9 +308,9 @@ Answer:
     - Also relevant: DDoS attacks and shared-technology vulnerabilities in a multi-tenant environment.
 
     IaaS, PaaS and SaaS
-    - **IaaS** — rents virtualised hardware. The customer manages OS, runtime, applications and data. Examples: AWS EC2, Azure VMs.
-    - **PaaS** — provides a ready development platform. The customer manages only the application and data. Examples: Google App Engine, Heroku.
-    - **SaaS** — delivers complete software over a browser. The provider manages everything. Examples: Gmail, Salesforce, Microsoft 365.
+    - IaaS — rents virtualised hardware. The customer manages OS, runtime, applications and data. Examples: AWS EC2, Azure VMs.
+    - PaaS — provides a ready development platform. The customer manages only the application and data. Examples: Google App Engine, Heroku.
+    - SaaS — delivers complete software over a browser. The provider manages everything. Examples: Gmail, Salesforce, Microsoft 365.
 
 ## Virtualization & Containers (VM vs Container) (8)
 
@@ -325,11 +319,7 @@ Approach A: Deploy each service in a separate Virtual Machine.
 Approach B: Deploy each service in a separate Container.
 A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
 
-Approach A: Deploy each service in a separate Virtual Machine.
-Approach B: Deploy each service in a separate Container.
-A submarine cable connects Bangladesh to an international data center. At the cable landing station, a server hosts 4 VMs, while another server runs 4 containers. Which one and why? [BSCCPL AME 21-08-2026 (BUET)]
-
-   Answer: For a national submarine cable landing station, **Approach A — separate Virtual Machines — is the better choice**, because isolation and security matter more here than density.
+   Answer: For a national submarine cable landing station, Approach A — separate Virtual Machines — is the better choice, because isolation and security matter more here than density.
 
    Core technical difference
    - A VM virtualises the HARDWARE. Each VM runs its own full guest operating system on top of a hypervisor.
@@ -346,11 +336,11 @@ A submarine cable connects Bangladesh to an international data center. At the ca
    | Managed by | Hypervisor (VMware ESXi, KVM, Hyper-V) | Container engine (Docker, containerd) |
 
    Why VMs win for this specific case
-   - **Security isolation** — the station serves SEVERAL DIFFERENT ORGANIZATIONS. Each VM is fully isolated, so a compromise of the Web VM cannot reach the Database VM. With containers, a kernel-level exploit can escape to every other container on the host.
-   - **Critical national infrastructure** — DNS and Network Management for international connectivity must not fail together. Full OS isolation limits the blast radius.
-   - **Different OS requirements** — the database or the network management system may need a specific OS version or kernel module that containers cannot provide, since they must share the host kernel.
-   - **Regulatory and audit needs** — per-organization VMs give clean boundaries for compliance and per-tenant auditing.
-   - **Stable, long-running services** — DNS, database and monitoring are not deployed dozens of times a day, so the container advantage of fast start-up is not valuable here.
+   - Security isolation — the station serves SEVERAL DIFFERENT ORGANIZATIONS. Each VM is fully isolated, so a compromise of the Web VM cannot reach the Database VM. With containers, a kernel-level exploit can escape to every other container on the host.
+   - Critical national infrastructure — DNS and Network Management for international connectivity must not fail together. Full OS isolation limits the blast radius.
+   - Different OS requirements — the database or the network management system may need a specific OS version or kernel module that containers cannot provide, since they must share the host kernel.
+   - Regulatory and audit needs — per-organization VMs give clean boundaries for compliance and per-tenant auditing.
+   - Stable, long-running services — DNS, database and monitoring are not deployed dozens of times a day, so the container advantage of fast start-up is not valuable here.
 
    When containers would be the better choice instead
    - If the five services all belonged to ONE organization, needed frequent redeployment, and had to be packed densely on limited hardware, containers would win on efficiency — 4 containers use far less RAM and CPU than 4 VMs and start in seconds.
@@ -362,21 +352,21 @@ A submarine cable connects Bangladesh to an international data center. At the ca
 Answer: Virtualization is the technology that creates a software-based (virtual) version of a physical resource — a server, storage device, network or operating system — so that one physical machine can run several isolated virtual machines at the same time. A software layer called the hypervisor sits between the hardware and the virtual machines and shares the CPU, memory and disk among them.
 
    Benefits of virtualization
-   - **Server consolidation** — one physical server replaces many under-used ones, cutting hardware cost, rack space and power consumption.
-   - **Better resource utilisation** — a typical physical server runs at 10-15% utilisation; virtualization can push it to 70-80%.
-   - **Isolation** — each VM is separate, so a crash or compromise in one does not affect the others.
-   - **Fast provisioning** — a new server takes minutes from a template instead of weeks of procurement.
-   - **Easy backup and disaster recovery** — a whole VM is a file, so it can be snapshotted, cloned and restored quickly.
-   - **Live migration** — a running VM can be moved to another host with no downtime, which allows maintenance without service interruption.
-   - **Testing and development** — multiple OS versions can be tested on one machine, and snapshots allow instant rollback.
-   - **Foundation of cloud computing** — IaaS is virtualization offered as a service.
+   - Server consolidation — one physical server replaces many under-used ones, cutting hardware cost, rack space and power consumption.
+   - Better resource utilisation — a typical physical server runs at 10-15% utilisation; virtualization can push it to 70-80%.
+   - Isolation — each VM is separate, so a crash or compromise in one does not affect the others.
+   - Fast provisioning — a new server takes minutes from a template instead of weeks of procurement.
+   - Easy backup and disaster recovery — a whole VM is a file, so it can be snapshotted, cloned and restored quickly.
+   - Live migration — a running VM can be moved to another host with no downtime, which allows maintenance without service interruption.
+   - Testing and development — multiple OS versions can be tested on one machine, and snapshots allow instant rollback.
+   - Foundation of cloud computing — IaaS is virtualization offered as a service.
 
    Top 5 virtualization platforms
-   - **VMware vSphere / ESXi** — the enterprise market leader, a Type 1 bare-metal hypervisor.
-   - **Microsoft Hyper-V** — Type 1 hypervisor built into Windows Server.
-   - **KVM (Kernel-based Virtual Machine)** — open source, built into the Linux kernel; the basis of most public clouds.
-   - **Oracle VirtualBox** — free Type 2 hypervisor, popular for desktops and testing.
-   - **Citrix Hypervisor (XenServer)** — Type 1, based on the Xen project.
+   - VMware vSphere / ESXi — the enterprise market leader, a Type 1 bare-metal hypervisor.
+   - Microsoft Hyper-V — Type 1 hypervisor built into Windows Server.
+   - KVM (Kernel-based Virtual Machine) — open source, built into the Linux kernel; the basis of most public clouds.
+   - Oracle VirtualBox — free Type 2 hypervisor, popular for desktops and testing.
+   - Citrix Hypervisor (XenServer) — Type 1, based on the Xen project.
 
 3. **What is Server Virtualization? Explain with example of its.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 551 (ET: BIBM)]*
 
@@ -406,14 +396,14 @@ Answer: Server virtualization is the process of dividing one physical server int
 
 Answer: Virtualization helps a physical server mainly by turning wasted capacity into useful work.
 
-   - **Raises utilisation** — a dedicated physical server usually runs at 10-15% of its capacity. Hosting several VMs on it pushes utilisation to 70-80%, so the same hardware does far more work.
-   - **Server consolidation** — ten lightly loaded physical servers can become ten VMs on one or two physical machines, cutting purchase cost, rack space, power and cooling.
-   - **Isolation without extra hardware** — each workload gets its own OS and its own failure boundary, which previously required a separate box.
-   - **Faster provisioning** — a new server is cloned from a template in minutes, with no procurement cycle.
-   - **Simpler backup and recovery** — an entire VM is just a set of files, so snapshots and restores are quick and complete.
-   - **Live migration** — running VMs move to another host, so the physical server can be shut down for maintenance without any service outage.
-   - **Hardware independence** — a VM is not tied to specific hardware, so replacing or upgrading the physical server does not require reinstalling the systems.
-   - **Testing and rollback** — snapshots allow a change to be undone instantly, which is impossible on bare metal.
+   - Raises utilisation — a dedicated physical server usually runs at 10-15% of its capacity. Hosting several VMs on it pushes utilisation to 70-80%, so the same hardware does far more work.
+   - Server consolidation — ten lightly loaded physical servers can become ten VMs on one or two physical machines, cutting purchase cost, rack space, power and cooling.
+   - Isolation without extra hardware — each workload gets its own OS and its own failure boundary, which previously required a separate box.
+   - Faster provisioning — a new server is cloned from a template in minutes, with no procurement cycle.
+   - Simpler backup and recovery — an entire VM is just a set of files, so snapshots and restores are quick and complete.
+   - Live migration — running VMs move to another host, so the physical server can be shut down for maintenance without any service outage.
+   - Hardware independence — a VM is not tied to specific hardware, so replacing or upgrading the physical server does not require reinstalling the systems.
+   - Testing and rollback — snapshots allow a change to be undone instantly, which is impossible on bare metal.
 
    - The cost of these benefits is a small performance overhead from the hypervisor, and the fact that a failure of the physical host now affects every VM on it — which is why clustering and live migration are used alongside virtualization.
 
@@ -460,16 +450,16 @@ Answer:
    - Unlike a VM, a container does not carry a guest OS. It shares the host kernel and is managed by the Docker Engine, so it is only megabytes in size and starts in seconds.
 
    Problems when moving a Windows application to a Linux server
-   - **Binary incompatibility** — a Windows `.exe` or `.dll` will not run on Linux at all, because the executable format and system calls are different (PE vs ELF).
-   - **Missing runtime and libraries** — .NET Framework, Windows-specific DLLs, COM components and the Windows registry do not exist on Linux.
-   - **File path and case sensitivity** — Windows uses `C:\folder\file` and is case-insensitive; Linux uses `/folder/file` and is case-sensitive.
-   - **Line endings** — CRLF on Windows versus LF on Linux breaks scripts and config parsing.
-   - **Permissions model** — Windows ACLs differ completely from Linux `rwx` permissions and ownership.
-   - **Services and dependencies** — IIS, Windows Services, Active Directory integration and Windows-only APIs have no direct Linux equivalent.
+   - Binary incompatibility — a Windows `.exe` or `.dll` will not run on Linux at all, because the executable format and system calls are different (PE vs ELF).
+   - Missing runtime and libraries — .NET Framework, Windows-specific DLLs, COM components and the Windows registry do not exist on Linux.
+   - File path and case sensitivity — Windows uses `C:\folder\file` and is case-insensitive; Linux uses `/folder/file` and is case-sensitive.
+   - Line endings — CRLF on Windows versus LF on Linux breaks scripts and config parsing.
+   - Permissions model — Windows ACLs differ completely from Linux `rwx` permissions and ownership.
+   - Services and dependencies — IIS, Windows Services, Active Directory integration and Windows-only APIs have no direct Linux equivalent.
 
    Can Docker solve it?
-   - **Partly, not fully.** Docker guarantees that an application runs identically wherever the container runs, which removes the "it works on my machine" class of problems — mismatched library versions, missing dependencies and configuration drift.
-   - **But Docker cannot change the kernel.** A Windows container needs a Windows host kernel; a Linux container needs a Linux kernel. A Windows container simply will not run on a Linux server.
+   - Partly, not fully. Docker guarantees that an application runs identically wherever the container runs, which removes the "it works on my machine" class of problems — mismatched library versions, missing dependencies and configuration drift.
+   - But Docker cannot change the kernel. A Windows container needs a Windows host kernel; a Linux container needs a Linux kernel. A Windows container simply will not run on a Linux server.
    - So the application must first be made Linux-compatible — for example by porting it from .NET Framework to .NET Core / .NET 5+, which runs cross-platform. Once it is Linux-capable, Docker packages it and makes deployment to any Linux server reliable and repeatable.
 
    - Summary: Docker solves the DEPENDENCY and ENVIRONMENT problem, not the PLATFORM problem. The rewrite to a cross-platform runtime is still required.
@@ -575,44 +565,44 @@ Answer: Cloud computing is the delivery of computing services — servers, stora
 Answer: Cloud computing delivers computing resources — compute, storage, networking, databases and software — as an on-demand service over the internet, billed by usage.
 
    Five essential characteristics (the NIST definition)
-   - **On-demand self-service** — a user provisions resources without contacting a person.
-   - **Broad network access** — available over the network from any standard device.
-   - **Resource pooling** — the provider's resources serve many customers, assigned and reassigned dynamically.
-   - **Rapid elasticity** — capacity scales out and back in quickly, appearing unlimited to the customer.
-   - **Measured service** — usage is metered, so billing matches consumption exactly.
+   - On-demand self-service — a user provisions resources without contacting a person.
+   - Broad network access — available over the network from any standard device.
+   - Resource pooling — the provider's resources serve many customers, assigned and reassigned dynamically.
+   - Rapid elasticity — capacity scales out and back in quickly, appearing unlimited to the customer.
+   - Measured service — usage is metered, so billing matches consumption exactly.
 
    Types by SERVICE MODEL
-   - **IaaS** — rents virtual machines, storage and networks. Examples: AWS EC2, Azure VMs.
-   - **PaaS** — provides a ready platform for developing and deploying applications. Examples: Google App Engine, Heroku.
-   - **SaaS** — delivers finished software over the browser. Examples: Gmail, Salesforce.
+   - IaaS — rents virtual machines, storage and networks. Examples: AWS EC2, Azure VMs.
+   - PaaS — provides a ready platform for developing and deploying applications. Examples: Google App Engine, Heroku.
+   - SaaS — delivers finished software over the browser. Examples: Gmail, Salesforce.
 
    Types by DEPLOYMENT MODEL
-   - **Public cloud** — owned by a provider and shared by many customers. Cheapest and most elastic. Examples: AWS, Azure, GCP.
-   - **Private cloud** — dedicated to one organization, on-premises or hosted. Most control and security, highest cost.
-   - **Hybrid cloud** — combines public and private, keeping sensitive data private while bursting to public capacity when demand rises.
-   - **Community cloud** — shared by several organizations with common requirements, such as a group of banks or government agencies.
+   - Public cloud — owned by a provider and shared by many customers. Cheapest and most elastic. Examples: AWS, Azure, GCP.
+   - Private cloud — dedicated to one organization, on-premises or hosted. Most control and security, highest cost.
+   - Hybrid cloud — combines public and private, keeping sensitive data private while bursting to public capacity when demand rises.
+   - Community cloud — shared by several organizations with common requirements, such as a group of banks or government agencies.
 
 3. **Explain cloud computing and evaluate its advantages and disadvantages.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
 Answer: Cloud computing means using computing resources — servers, storage, databases, networking and software — over the internet, provided on demand and paid for by usage, rather than owning the physical infrastructure.
 
    Advantages
-   - **Cost efficiency** — capital expenditure on hardware becomes an operating expense; pay only for what is used.
-   - **Scalability and elasticity** — resources expand during a peak and shrink afterwards, within minutes.
-   - **Global accessibility** — reachable from anywhere, on any device with a connection.
-   - **Automatic maintenance** — patching, upgrades and hardware replacement are the provider's responsibility.
-   - **Reliability and disaster recovery** — data is replicated across regions, and major providers offer 99.9%+ availability SLAs.
-   - **Speed to market** — a full environment is ready in minutes rather than after weeks of procurement.
-   - **Collaboration** — teams work on shared data simultaneously from different locations.
+   - Cost efficiency — capital expenditure on hardware becomes an operating expense; pay only for what is used.
+   - Scalability and elasticity — resources expand during a peak and shrink afterwards, within minutes.
+   - Global accessibility — reachable from anywhere, on any device with a connection.
+   - Automatic maintenance — patching, upgrades and hardware replacement are the provider's responsibility.
+   - Reliability and disaster recovery — data is replicated across regions, and major providers offer 99.9%+ availability SLAs.
+   - Speed to market — a full environment is ready in minutes rather than after weeks of procurement.
+   - Collaboration — teams work on shared data simultaneously from different locations.
 
    Disadvantages
-   - **Internet dependency** — no connectivity means no access, a serious constraint where the network is unreliable.
-   - **Security and privacy risk** — sensitive data resides on third-party infrastructure, exposed to breaches and insider threats.
-   - **Limited control** — the customer cannot touch the hardware and, in SaaS, cannot even choose the software version.
-   - **Vendor lock-in** — proprietary services make migrating to another provider expensive and technically hard.
-   - **Downtime risk** — a provider outage affects every customer at once.
-   - **Compliance and data sovereignty** — data may be stored abroad, which some regulations prohibit.
-   - **Long-term cost** — for a steady, predictable workload, owning hardware can eventually be cheaper.
+   - Internet dependency — no connectivity means no access, a serious constraint where the network is unreliable.
+   - Security and privacy risk — sensitive data resides on third-party infrastructure, exposed to breaches and insider threats.
+   - Limited control — the customer cannot touch the hardware and, in SaaS, cannot even choose the software version.
+   - Vendor lock-in — proprietary services make migrating to another provider expensive and technically hard.
+   - Downtime risk — a provider outage affects every customer at once.
+   - Compliance and data sovereignty — data may be stored abroad, which some regulations prohibit.
+   - Long-term cost — for a steady, predictable workload, owning hardware can eventually be cheaper.
 
    - Overall evaluation: the cloud is clearly advantageous for variable, growing or geographically distributed workloads. For stable, highly regulated workloads with predictable capacity, a private or hybrid model is usually the better fit.
 
@@ -621,13 +611,13 @@ Answer: Cloud computing means using computing resources — servers, storage, da
 Answer: Cloud computing is the on-demand delivery of computing services — servers, storage, databases, networking, software and analytics — over the internet, charged according to usage.
 
    Characteristics
-   - **On-demand self-service** — resources are provisioned automatically without human interaction with the provider.
-   - **Broad network access** — available over the network through standard mechanisms, from laptops, phones and tablets.
-   - **Resource pooling** — the provider's compute, storage and network serve multiple customers, dynamically assigned. The customer generally does not know the physical location.
-   - **Rapid elasticity** — capacity can be added or released quickly, and appears unlimited.
-   - **Measured service** — usage is monitored and reported, so charging is transparent and proportional.
-   - **Virtualization based** — every cloud rests on virtualization technology.
-   - **Multi-tenancy** — one instance serves many customers with logical data separation.
+   - On-demand self-service — resources are provisioned automatically without human interaction with the provider.
+   - Broad network access — available over the network through standard mechanisms, from laptops, phones and tablets.
+   - Resource pooling — the provider's compute, storage and network serve multiple customers, dynamically assigned. The customer generally does not know the physical location.
+   - Rapid elasticity — capacity can be added or released quickly, and appears unlimited.
+   - Measured service — usage is monitored and reported, so charging is transparent and proportional.
+   - Virtualization based — every cloud rests on virtualization technology.
+   - Multi-tenancy — one instance serves many customers with logical data separation.
 
    Advantages
    - No large upfront investment in hardware or a data centre.
@@ -667,13 +657,13 @@ Answer: Cloud computing is the delivery of IT resources — computing power, sto
 Answer: A cloud database is a database that runs on cloud infrastructure and is accessed over the internet. The provider handles the hardware, the operating system and usually the database software itself, so the customer works only with the data and the schema.
 
    Two ways it is offered
-   - **DBaaS (Database as a Service)** — fully managed. The provider handles installation, patching, backup, replication and scaling. Examples: Amazon RDS, Azure SQL Database, Google Cloud SQL, MongoDB Atlas.
-   - **Self-managed on a cloud VM** — the customer installs MySQL or PostgreSQL on an IaaS virtual machine and manages everything except the hardware.
+   - DBaaS (Database as a Service) — fully managed. The provider handles installation, patching, backup, replication and scaling. Examples: Amazon RDS, Azure SQL Database, Google Cloud SQL, MongoDB Atlas.
+   - Self-managed on a cloud VM — the customer installs MySQL or PostgreSQL on an IaaS virtual machine and manages everything except the hardware.
 
    Types by data model
-   - **Relational (SQL)** — structured tables with ACID guarantees. Amazon RDS, Azure SQL, Cloud SQL.
-   - **NoSQL** — document, key-value, column or graph stores for unstructured and very large data. DynamoDB, MongoDB Atlas, Firebase, Cassandra.
-   - **Data warehouse** — optimised for analytics on huge datasets. Amazon Redshift, Google BigQuery, Snowflake.
+   - Relational (SQL) — structured tables with ACID guarantees. Amazon RDS, Azure SQL, Cloud SQL.
+   - NoSQL — document, key-value, column or graph stores for unstructured and very large data. DynamoDB, MongoDB Atlas, Firebase, Cassandra.
+   - Data warehouse — optimised for analytics on huge datasets. Amazon Redshift, Google BigQuery, Snowflake.
 
    Advantages
    - No hardware to buy or maintain; storage and compute scale on demand.
@@ -796,13 +786,13 @@ Answer: MapReduce processes large data in parallel across many servers in two ph
 Answer: Distributed processing means dividing a computing task among several computers connected by a network, so that they work on it simultaneously and appear to the user as a single system.
 
    Characteristics
-   - **Resource sharing** — CPU, storage, printers and data are shared across the network.
-   - **Concurrency** — many nodes execute parts of the work at the same time.
-   - **Transparency** — the user sees one system and does not know which node did the work or where the data lives.
-   - **Scalability** — capacity grows by adding more nodes.
-   - **Fault tolerance** — the failure of one node does not stop the whole system.
-   - **Openness and heterogeneity** — nodes may run different hardware and operating systems, communicating through standard protocols.
-   - **No global clock** — nodes coordinate by message passing, which is why distributed algorithms are hard.
+   - Resource sharing — CPU, storage, printers and data are shared across the network.
+   - Concurrency — many nodes execute parts of the work at the same time.
+   - Transparency — the user sees one system and does not know which node did the work or where the data lives.
+   - Scalability — capacity grows by adding more nodes.
+   - Fault tolerance — the failure of one node does not stop the whole system.
+   - Openness and heterogeneity — nodes may run different hardware and operating systems, communicating through standard protocols.
+   - No global clock — nodes coordinate by message passing, which is why distributed algorithms are hard.
 
    Advantages
    - Higher performance through genuine parallel execution.
@@ -899,12 +889,12 @@ Answer: Both describe growth of capacity, but scalability is about long-term CAP
 Answer: An edge server is a computing node placed close to where the data is produced and consumed, instead of in a distant central data centre. It processes data locally and sends only what is necessary to the cloud.
 
    Why edge servers are needed
-   - **Low latency** — a round trip to a central cloud can take 100 ms or more. A self-driving car, an industrial robot or a remote surgery system cannot wait that long. An edge server responds in a few milliseconds.
-   - **Bandwidth saving** — a factory with 500 cameras cannot stream all its video to the cloud. The edge server analyses locally and uploads only alerts and summaries, cutting network cost dramatically.
-   - **Reliability during network failure** — an oil rig or a remote gas field may lose its internet link. The edge server keeps operating and synchronises later.
-   - **Data privacy and compliance** — sensitive data can be processed and discarded locally, so it never crosses a border or leaves the premises.
-   - **Real-time decision making** — IoT sensors on a pipeline can trigger a shutdown instantly rather than waiting for a cloud round trip.
-   - **Reduced cloud load and cost** — filtering at the edge means less storage and compute billed centrally.
+   - Low latency — a round trip to a central cloud can take 100 ms or more. A self-driving car, an industrial robot or a remote surgery system cannot wait that long. An edge server responds in a few milliseconds.
+   - Bandwidth saving — a factory with 500 cameras cannot stream all its video to the cloud. The edge server analyses locally and uploads only alerts and summaries, cutting network cost dramatically.
+   - Reliability during network failure — an oil rig or a remote gas field may lose its internet link. The edge server keeps operating and synchronises later.
+   - Data privacy and compliance — sensitive data can be processed and discarded locally, so it never crosses a border or leaves the premises.
+   - Real-time decision making — IoT sensors on a pipeline can trigger a shutdown instantly rather than waiting for a cloud round trip.
+   - Reduced cloud load and cost — filtering at the edge means less storage and compute billed centrally.
 
    ```mermaid
    flowchart LR
@@ -931,8 +921,8 @@ Answer: Edge computing is a distributed model in which data is processed near th
    - Improves privacy, since raw data can stay local.
 
    Related terms
-   - **Fog computing** sits between the edge and the cloud, at gateways and routers, aggregating data from many edge nodes. Edge is at the device; fog is one layer above it.
-   - **Cloud computing** remains the layer for long-term storage, heavy analytics and model training.
+   - Fog computing sits between the edge and the cloud, at gateways and routers, aggregating data from many edge nodes. Edge is at the device; fog is one layer above it.
+   - Cloud computing remains the layer for long-term storage, heavy analytics and model training.
 
    Applications
    - Self-driving vehicles, smart traffic signals, industrial IoT and predictive maintenance, smart CCTV with local face or object detection, healthcare wearables, AR/VR, and 5G base stations.
@@ -963,8 +953,8 @@ Answer:
    - `Maximum VMs = min(8, 6, 8) = 6`
 
    Final answer
-   - **Maximum number of VMs = 6**
-   - **The limiting resource is RAM.** It allows only 6 VMs while CPU and storage each allow 8.
+   - Maximum number of VMs = 6
+   - The limiting resource is RAM. It allows only 6 VMs while CPU and storage each allow 8.
 
    Step 3 - resources left unused with 6 VMs
 
@@ -985,21 +975,21 @@ Answer:
 Answer: High availability means the service keeps running even when a component fails. For DNS at a cable landing station, redundancy is needed at BOTH the server layer and the network layer — one alone is not enough.
 
    Where VM / container technology helps
-   - **Fast failover** — DNS runs as a VM or container on two or more physical hosts. If one host fails, a clustered hypervisor (VMware HA, Proxmox HA) restarts the VM on the surviving host automatically within seconds.
-   - **Live migration** — a running VM moves to another host before planned maintenance, so patching causes zero downtime.
-   - **Identical replicas** — a container image guarantees every DNS instance is configured exactly the same, removing configuration drift as a failure cause.
-   - **Rapid scaling** — extra DNS containers start in seconds during a query flood or a DDoS attempt.
-   - **Snapshot and rollback** — a bad configuration change is undone instantly by reverting to a snapshot.
-   - **Isolation** — DNS is separated from web and database workloads, so a fault in one does not take down the others.
+   - Fast failover — DNS runs as a VM or container on two or more physical hosts. If one host fails, a clustered hypervisor (VMware HA, Proxmox HA) restarts the VM on the surviving host automatically within seconds.
+   - Live migration — a running VM moves to another host before planned maintenance, so patching causes zero downtime.
+   - Identical replicas — a container image guarantees every DNS instance is configured exactly the same, removing configuration drift as a failure cause.
+   - Rapid scaling — extra DNS containers start in seconds during a query flood or a DDoS attempt.
+   - Snapshot and rollback — a bad configuration change is undone instantly by reverting to a snapshot.
+   - Isolation — DNS is separated from web and database workloads, so a fault in one does not take down the others.
 
    Where NETWORK redundancy is still required
-   - **VM technology cannot help if the network path fails.** If the single switch, single NIC or single upstream link dies, both healthy DNS servers become unreachable.
-   - **Dual NICs with bonding / LACP** on each server, connected to two different switches.
-   - **Redundant switches** in a stacked or MLAG pair, so one switch can fail.
-   - **VRRP / HSRP** to give a floating virtual IP that moves to the surviving gateway automatically.
-   - **Anycast DNS** — the same IP is advertised from multiple sites via BGP, so queries automatically route to the nearest live server. This is how real resilient DNS is built.
-   - **Diverse upstream links** — two different submarine cable paths or an alternative terrestrial route, so a single cable cut does not isolate the station.
-   - **Redundant power** — dual PSUs on separate feeds, UPS and generator.
+   - VM technology cannot help if the network path fails. If the single switch, single NIC or single upstream link dies, both healthy DNS servers become unreachable.
+   - Dual NICs with bonding / LACP on each server, connected to two different switches.
+   - Redundant switches in a stacked or MLAG pair, so one switch can fail.
+   - VRRP / HSRP to give a floating virtual IP that moves to the surviving gateway automatically.
+   - Anycast DNS — the same IP is advertised from multiple sites via BGP, so queries automatically route to the nearest live server. This is how real resilient DNS is built.
+   - Diverse upstream links — two different submarine cable paths or an alternative terrestrial route, so a single cable cut does not isolate the station.
+   - Redundant power — dual PSUs on separate feeds, UPS and generator.
 
    ```mermaid
    flowchart TD
@@ -1023,20 +1013,20 @@ Answer: High availability means the service keeps running even when a component 
 Answer: Assessment and audit reports turn the cloud's invisible configuration into a written, checkable record. They are the main evidence that security controls actually exist and work.
 
    How they help DETECT vulnerabilities
-   - **Configuration assessment** — automated scanners (AWS Security Hub, Azure Defender for Cloud, CSPM tools) compare live settings against a benchmark such as CIS, and report misconfigurations like a public S3 bucket, an open port 22 or an unencrypted database.
-   - **Vulnerability scanning reports** — list unpatched OS packages, outdated libraries and known CVEs in VM images and container images, ranked by severity.
-   - **IAM and access review** — reveal over-privileged accounts, unused keys, missing MFA and accounts that violate the least-privilege principle.
-   - **Penetration test reports** — show whether a vulnerability is actually exploitable, not just theoretically present.
-   - **Log and configuration drift analysis** — audit trails such as AWS CloudTrail show who changed what and when, exposing unauthorised changes.
-   - **Prioritisation** — a good report ranks findings by risk, so limited effort goes to the issues that matter most.
+   - Configuration assessment — automated scanners (AWS Security Hub, Azure Defender for Cloud, CSPM tools) compare live settings against a benchmark such as CIS, and report misconfigurations like a public S3 bucket, an open port 22 or an unencrypted database.
+   - Vulnerability scanning reports — list unpatched OS packages, outdated libraries and known CVEs in VM images and container images, ranked by severity.
+   - IAM and access review — reveal over-privileged accounts, unused keys, missing MFA and accounts that violate the least-privilege principle.
+   - Penetration test reports — show whether a vulnerability is actually exploitable, not just theoretically present.
+   - Log and configuration drift analysis — audit trails such as AWS CloudTrail show who changed what and when, exposing unauthorised changes.
+   - Prioritisation — a good report ranks findings by risk, so limited effort goes to the issues that matter most.
 
    How they ensure COMPLIANCE
-   - **Mapping to standards** — findings are mapped to controls in ISO 27001, PCI DSS, GDPR, HIPAA or the national data-protection rules, so gaps are visible per requirement.
-   - **Evidence for regulators** — an audit report is the documentary proof an auditor asks for; verbal assurance is not accepted.
-   - **Continuous compliance** — automated CSPM tools re-check continuously instead of once a year, so drift is caught within hours.
-   - **Shared-responsibility clarity** — the report distinguishes what the cloud provider secures from what the customer must secure, which is a common source of gaps.
-   - **Remediation tracking** — each finding gets an owner, a deadline and a closure status, turning the report into an action plan rather than a document.
-   - **Management reporting** — trends over time show whether the security posture is improving or degrading.
+   - Mapping to standards — findings are mapped to controls in ISO 27001, PCI DSS, GDPR, HIPAA or the national data-protection rules, so gaps are visible per requirement.
+   - Evidence for regulators — an audit report is the documentary proof an auditor asks for; verbal assurance is not accepted.
+   - Continuous compliance — automated CSPM tools re-check continuously instead of once a year, so drift is caught within hours.
+   - Shared-responsibility clarity — the report distinguishes what the cloud provider secures from what the customer must secure, which is a common source of gaps.
+   - Remediation tracking — each finding gets an owner, a deadline and a closure status, turning the report into an action plan rather than a document.
+   - Management reporting — trends over time show whether the security posture is improving or degrading.
 
    Typical cycle
    ```mermaid
