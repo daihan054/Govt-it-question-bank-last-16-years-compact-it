@@ -6847,6 +6847,81 @@ Answer:
     - Working Set Model: Ensure that a process is allocated sufficient frames to hold its active working set before dispatching.
     - Page Fault Frequency (PFF): Dynamically monitor page fault rates; allocate frames if PFF is too high, or suspend processes if memory is saturated.
 
+## File Systems & Disk Management (7)
+
+1. **NTFS stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
+
+   Answer: NTFS stands for New Technology File System — Microsoft's default file system for Windows since Windows NT, supporting large files, permissions, journaling and encryption.
+
+2. **(খ) Unix file system এর প্রকারভেদ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 610 (ET: N/A)]*
+
+   Answer: Unix organises files under a single-rooted hierarchical tree (`/`), and supports several file system types mounted at different points in that tree.
+
+   Common Unix file system types
+   - Regular file systems — `ext2/ext3/ext4` (Linux), `UFS` (BSD/Solaris), storing ordinary files and directories on disk.
+   - Journaling file systems — `ext3/ext4`, `XFS`, `JFS` — log changes before applying them, so recovery after a crash is fast and safe.
+   - Network file systems — `NFS`, letting a remote directory be mounted and used as if it were local.
+   - Special/virtual file systems — `/proc` (exposes kernel and process information as files), `/dev` (device files), `tmpfs` (RAM-based, temporary).
+   - Every file system type is treated uniformly through the Virtual File System (VFS) layer, which is why Unix commands work the same regardless of the underlying file system.
+
+3. **কোন ড্রাইভে ‘My Document’ রাখা হয় এবং NTFS কী?** *[BPSC Computer Operator 2021 compact it 780 (ET: N/A)]*
+
+   Answer: "My Documents" is stored by default on the `C:` drive (the system/boot drive), under the user's profile folder.
+
+   - NTFS (New Technology File System) is Microsoft's modern file system, supporting file permissions, encryption, compression, journaling (crash recovery) and files larger than 4 GB, unlike the older FAT32.
+
+4. **A file system with 300 GB uses a file descriptor with 8 direct block address, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system.** *[BAUST Assistant Programmer 2021 compact it 917 (ET: N/A)]*
+
+   Answer:
+
+   Given: block size = 128 bytes, address size = 8 bytes, so one block holds `128 / 8 = 16` addresses.
+
+   - Direct blocks: `8 × 128 = 1024` bytes.
+   - Single indirect block: it points to 16 data blocks → `16 × 128 = 2048` bytes.
+   - Doubly indirect block: it points to 16 indirect blocks, each pointing to 16 data blocks → `16 × 16 × 128 = 32,768` bytes.
+
+   Maximum file size
+   - `= 1024 + 2048 + 32768 = 35,840 bytes` (≈ 35 KB). <!-- verify -->
+
+5. **(খ) Direct or Random Access File-প্রক্রিয়াকরণ চিত্রসহ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1095 (ET: N/A)]*
+
+   Answer: A direct (random) access file lets a program read or write any record immediately, by computing its address, without reading through the records that come before it.
+
+   ```mermaid
+   flowchart LR
+       A[Record key] --> B[Address calculation<br/>e.g. key x record size]
+       B --> C[(Direct disk access<br/>at computed offset)]
+       C --> D[Record read/written]
+   ```
+   - This works because disks are random-access hardware, unlike tape, which only supports sequential access.
+   - Best suited for applications needing fast lookup of a specific record, such as a bank account file indexed by account number.
+
+6. **(a) An I/O system with a simple disk gets an average 50 I/O requests per second and average time for a disk to serve an I/O request is 10ms. Calculate the utilization of I/O system.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+   Answer:
+
+   Given: arrival rate `λ = 50` requests/second, service time = 10 ms = 0.01 s per request, so service rate `μ = 1 / 0.01 = 100` requests/second.
+
+   Utilisation formula
+   - `Utilisation (ρ) = λ / μ`
+   - `= 50 / 100 = 0.5`
+
+   Final answer
+   - The I/O system is `50%` utilised — on average, the disk is busy serving requests half of the time.
+
+7. **Explain inode data structures in Linux OS.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220-1221 (ET: N/A)]*
+
+   Answer: An inode (index node) is a data structure that stores all the metadata about a file in a Linux file system — everything except the file's name and its actual data.
+
+   Information stored in an inode
+   - File type (regular file, directory, symlink, etc.) and permissions (read/write/execute for owner, group, others).
+   - Owner (UID) and group (GID).
+   - File size, timestamps (last accessed, modified, and inode-changed).
+   - Link count (how many directory entries point to this inode).
+   - Pointers to the data blocks holding the file's actual content — direct, single indirect, double indirect and (on some systems) triple indirect pointers, exactly the structure used to compute maximum file size.
+
+   - The file name itself is stored only in the directory entry, which maps a name to an inode number; this is why a "hard link" (another name pointing to the same inode) does not duplicate the file's data.
+
 ## OS Concepts & Process Management (7)
 
 1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
