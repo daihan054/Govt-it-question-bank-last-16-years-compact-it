@@ -275,10 +275,10 @@ Answer:
    - Truth Table:
      | $p$ | $q$ | $\neg p$ | $\neg p \lor q$ | $p \land (\neg p \lor q)$ |
      |:---:|:---:|:---:|:---:|:---:|
-     | T | T | F | T | **T** |
-     | T | F | F | F | **F** |
-     | F | T | T | T | **F** |
-     | F | F | T | T | **F** |
+     | T | T | F | T | T |
+     | T | F | F | F | F |
+     | F | T | T | T | F |
+     | F | F | T | T | F |
    - বীজগাণিতিক প্রমাণ: $p \land (\neg p \lor q) \equiv (p \land \neg p) \lor (p \land q) \equiv F \lor (p \land q) \equiv p \land q$।
 
 7. **(খ) দেখাও যে, (p \land q) \rightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
@@ -287,11 +287,11 @@ Answer:
    - Truth Table:
      | $p$ | $q$ | $p \land q$ | $p \lor q$ | $(p \land q) \rightarrow (p \lor q)$ |
      |:---:|:---:|:---:|:---:|:---:|
-     | T | T | T | T | **T** |
-     | T | F | F | T | **T** |
-     | F | T | F | T | **T** |
-     | F | F | F | F | **T** |
-   - ব্যাখ্যা: সত্যক সারণির (Truth table) চূড়ান্ত কলামে $p$ ও $q$-এর সকল সম্ভাব্য সত্যমানের (Truth values) জন্য ফলাফল সর্বদা True (T) হওয়ায় $(p \land q) \rightarrow (p \lor q)$ একটি **Tautology (টটোলজি)**।
+     | T | T | T | T | T |
+     | T | F | F | T | T |
+     | F | T | F | T | T |
+     | F | F | F | F | T |
+   - ব্যাখ্যা: সত্যক সারণির (Truth table) চূড়ান্ত কলামে $p$ ও $q$-এর সকল সম্ভাব্য সত্যমানের (Truth values) জন্য ফলাফল সর্বদা True (T) হওয়ায় $(p \land q) \rightarrow (p \lor q)$ একটি Tautology (টটোলজি)।
 
 8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
@@ -303,14 +303,14 @@ Answer:
    - Membership Table:
      | $A$ | $B$ | $C$ | $B \cap C$ | $A \cup (B \cap C)$ | $\bar{A}$ | $\bar{B}$ | $\bar{C}$ | $\bar{C} \cup \bar{B}$ | $(\bar{C} \cup \bar{B}) \cap \bar{A}$ |
      |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-     | 1 | 1 | 1 | 1 | **1** | 0 | 0 | 0 | 0 | **0** |
-     | 1 | 1 | 0 | 0 | **1** | 0 | 0 | 1 | 1 | **0** |
-     | 1 | 0 | 1 | 0 | **1** | 0 | 1 | 0 | 1 | **0** |
-     | 1 | 0 | 0 | 0 | **1** | 0 | 1 | 1 | 1 | **0** |
-     | 0 | 1 | 1 | 1 | **1** | 1 | 0 | 0 | 0 | **0** |
-     | 0 | 1 | 0 | 0 | **0** | 1 | 0 | 1 | 1 | **1** |
-     | 0 | 0 | 1 | 0 | **0** | 1 | 1 | 0 | 1 | **1** |
-     | 0 | 0 | 0 | 0 | **0** | 1 | 1 | 1 | 1 | **1** |
+     | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+     | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 0 |
+     | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+     | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 1 | 0 |
+     | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+     | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 1 |
+     | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 1 | 1 |
+     | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
    - দ্রষ্টব্য: ডি মরগানের নিয়ম অনুযায়ী $\overline{A \cup (B \cap C)} = \bar{A} \cap \overline{(B \cap C)} = \bar{A} \cap (\bar{B} \cup \bar{C}) = (\bar{C} \cup \bar{B}) \cap \bar{A}$। অর্থাৎ ডানপক্ষটি মূলত বামপক্ষের পূরক সেট (Complement set)।
 
 9. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
@@ -343,11 +343,11 @@ Answer:
    - Truth Table for $p \to (p \lor \neg(p \land q))$:
      | $p$ | $q$ | $p \land q$ | $\neg(p \land q)$ | $p \lor \neg(p \land q)$ | $p \to (p \lor \neg(p \land q))$ |
      |:---:|:---:|:---:|:---:|:---:|:---:|
-     | T | T | T | F | T | **T** |
-     | T | F | F | T | T | **T** |
-     | F | T | F | T | T | **T** |
-     | F | F | F | T | T | **T** |
-   - Conclusion: The expression $p \to (p \lor \neg(p \land q))$ evaluates to True (T) under all possible truth value assignments. Therefore, it is a **Tautology**, and not a contradiction (a contradiction would evaluate to False for all assignments).
+     | T | T | T | F | T | T |
+     | T | F | F | T | T | T |
+     | F | T | F | T | T | T |
+     | F | F | F | T | T | T |
+   - Conclusion: The expression $p \to (p \lor \neg(p \land q))$ evaluates to True (T) under all possible truth value assignments. Therefore, it is a Tautology, and not a contradiction (a contradiction would evaluate to False for all assignments).
 
 12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 952-953 (ET: N/A)]*
 
