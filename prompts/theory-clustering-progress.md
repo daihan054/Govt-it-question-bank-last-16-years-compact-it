@@ -498,12 +498,21 @@ transcript for this session; the summaries above are sufficient to re-derive int
 needed, and the actual grouping is now permanently encoded in the committed files themselves.
 
 Post-completion audit (this session): ran a full content-multiset check (verify.py) for every
-one of these 18 files in both folders against the pre-session baseline commit (beafceb), plus
-check_anchors.py across all 48 mcq/mcq-answers files. Found and fixed exactly one issue: an
-agent had appended a brand-new, previously-absent answer+explanation (self-flagged
-`<!-- verify -->`, i.e. not confirmed) to a question in mcq-answers/dld.md that originally had no
-answer — out of scope for a pure reorg task, so it was reverted back to its original
-unanswered state (commit 3cf3fed). Everything else verified clean on the first pass.
+one of these 18 files in both folders, plus check_anchors.py across all 48 mcq/mcq-answers
+files. First pass used commit beafceb as the "before" baseline and flagged an answer+explanation
+in mcq-answers/dld.md (Q3, "digital circuit shown in the figure") as a suspicious new addition —
+that was WRONG: beafceb (2026-09-14) predates the entire separate mcq-answers answer-writing
+pipeline that ran between beafceb and e02aea6 (2026-09-16 23:34, the actual commit right before
+clustering started), so of course beafceb didn't have it yet. Commit 3cf3fed wrongly deleted
+that legitimate, previously-authored answer. Caught when the user asked for a full diff against
+the true pre-task commit e02aea6 instead — re-ran verify.py for all 70 changed question-bank
+files (written/, written-answers/, all-questions/mcq/, mcq-answers/) between e02aea6 and current
+HEAD, which surfaced exactly this one real discrepancy. Fixed by restoring the answer+explanation
+in commit 7689949 (question sits in an unsplit "Combinational Circuits (MUX, Decoder)" section
+so its position/numbering was unaffected by clustering). Re-ran the same 70-file audit against
+e02aea6 afterward: FAIL=0, clean. Lesson: when picking a "before" baseline for this kind of
+audit, use the commit immediately preceding the task's own first commit — not just whatever
+commit happened to be HEAD at conversation start, since unrelated work can land in between.
 
 Known cosmetic-only issue NOT fixed (needs your explicit go-ahead since fixing it means
 rewriting shared git history): one commit from tonight (computer-fundamental.md, all-questions/
