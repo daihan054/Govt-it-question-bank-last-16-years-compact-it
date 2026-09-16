@@ -1,29 +1,40 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 186 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Algebra](#algebra-48) | 48 |
-| 2 | [Geometry](#geometry-27) | 27 |
-| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-25) | 25 |
-| 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
-| 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
-| 6 | [Analytical Reasoning](#analytical-reasoning-10) | 10 |
-| 7 | [Time & Work](#time--work-9) | 9 |
-| 8 | [Set Theory](#set-theory-8) | 8 |
-| 9 | [Average & Age Problems](#average--age-problems-6) | 6 |
-| 10 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
-| 11 | [Permutation & Combination](#permutation--combination-5) | 5 |
-| 12 | [Trigonometry](#trigonometry-4) | 4 |
-| 13 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 14 | [Speed, Time & Distance](#speed-time--distance-4) | 4 |
-| 15 | [Basic Arithmetic](#basic-arithmetic-3) | 3 |
+- [Algebra (48)](#algebra-48)
+  - [Core Algebra & Equations (42)](#core-algebra--equations-42)
+  - [Off-topic / Misplaced (CS, OS & Security) (6)](#off-topic--misplaced-cs-os--security-6)
+- [Geometry (27)](#geometry-27)
+- [Percentage, Profit & Loss (25)](#percentage-profit--loss-25)
+  - [Percentage, Profit, Loss & Interest (22)](#percentage-profit-loss--interest-22)
+  - [Off-topic / Misplaced (GK, Web & Security) (3)](#off-topic--misplaced-gk-web--security-3)
+- [Arithmetic & Number Series (16)](#arithmetic--number-series-16)
+- [Time, Work & Distance (11)](#time-work--distance-11)
+- [Analytical Reasoning (10)](#analytical-reasoning-10)
+  - [Analytical Reasoning Puzzles (4)](#analytical-reasoning-puzzles-4)
+  - [Off-topic / Misplaced (Computer Architecture & Testing) (6)](#off-topic--misplaced-computer-architecture--testing-6)
+- [Time & Work (9)](#time--work-9)
+  - [Time & Work Rate Problems (4)](#time--work-rate-problems-4)
+  - [Off-topic / Misplaced (Networking & GK) (5)](#off-topic--misplaced-networking--gk-5)
+- [Set Theory (8)](#set-theory-8)
+- [Average & Age Problems (6)](#average--age-problems-6)
+- [Ratio & Proportion (6)](#ratio--proportion-6)
+- [Permutation & Combination (5)](#permutation--combination-5)
+- [Trigonometry (4)](#trigonometry-4)
+- [Probability & Statistics (4)](#probability--statistics-4)
+- [Speed, Time & Distance (4)](#speed-time--distance-4)
+- [Basic Arithmetic (3)](#basic-arithmetic-3)
+  - [Basic Arithmetic Problems (2)](#basic-arithmetic-problems-2)
+  - [Off-topic / Misplaced (Bangla Vocabulary) (1)](#off-topic--misplaced-bangla-vocabulary-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Algebra (48)
+
+### Core Algebra & Equations (42)
+
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **দুটি ধনাত্মক সংখ্যার পার্থক্য ৬। এদের বর্গের পার্থক্য ১০৮। সংখ্যা দুইটির যোগফল কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
@@ -282,49 +293,52 @@
    গ. ১৭
    ঘ. ২০
 
-42. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
-   (a) DFS  
-   (b) BFS  
-   (c) Hill climbing  
-   (d) A\*
-
-43. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
+42. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 13  
    (b) 17  
    (c) 23  
    (d) 21
 
-44. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+### Off-topic / Misplaced (CS, OS & Security) (6)
+
+1. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
+   (a) DFS  
+   (b) BFS  
+   (c) Hill climbing  
+   (d) A\*
+
+2. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) Bubble Sort  
    (b) Quick Sort  
    (c) Heap Sort  
    (d) Merge Sort
 
-45. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
+3. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
    (a) FCFS  
    (b) Round Robin  
    (c) Priority Scheduling  
    (d) FIFO
 
-46. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
+4. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) 0  
    (b) 10  
    (c) 8  
    (d) 12
 
-47. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
+5. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) SFTP  
    (b) SMTP  
    (c) SSL  
    (d) HTTP
 
-48. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
+6. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) Insertion sort  
    (b) Quick sort  
    (c) Heap sort  
    (d) Merge sort
 
 ## Geometry (27)
+
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ১২০°  
    খ. ১৮০°  
@@ -488,6 +502,9 @@
    (d) 26 ft
 
 ## Percentage, Profit & Loss (25)
+
+### Percentage, Profit, Loss & Interest (22)
+
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
 2. **Mr. X uses 30% of his salary for one expense, 20% for another, and 10% for another. His remaining amount is 12,000 Taka. What is his total salary?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
@@ -615,21 +632,23 @@
    গ. ২৪০০ টাকা
    ঘ. ২৩০০ টাকা
 
-22. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. নাপাম  
-   খ. নিউট্রন  
-   গ. হাইড্রোজেন  
-   ঘ. এটম
-
-23. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+22. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৪  
    খ) ৫  
    গ) ৬  
    ঘ) ৭
 
-24. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+### Off-topic / Misplaced (GK, Web & Security) (3)
 
-25. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+1. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. নাপাম  
+   খ. নিউট্রন  
+   গ. হাইড্রোজেন  
+   ঘ. এটম
+
+2. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+3. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
 ## Arithmetic & Number Series (16)
 
@@ -796,6 +815,9 @@
    d. 40 sec
 
 ## Analytical Reasoning (10)
+
+### Analytical Reasoning Puzzles (4)
+
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) 4.24 meters  
    (b) 5.24 meters  
@@ -846,49 +868,54 @@
    গ. ৬০
    ঘ. ৭২
 
-4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
-   (a) When a cache hit occurs, the CPU fetches data from ROM.  
-   (b) When a cache hit occurs, the CPU fetches data from main memory.  
-   (c) When a cache miss occurs, the CPU fetches data from cache memory.  
-   (d) When a cache miss occurs, the CPU fetches data from main memory.
-
-5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
-   (a) DRAM requires more power than SRAM  
-   (b) SRAM requires fewer transistors per bit than DRAM  
-   (c) SRAM does not need refreshing while DRAM does  
-   (d) SRAM stores data in capacitors while DRAM uses flip-flops
-
-6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
-   (a) Its content can be erased electrically in blocks  
-   (b) It requires periodin rewriting of data.  
-   (c) It can be rewritten at high speed and used as CPU cache  
-   (d) Its entire content is erased by ultraviolet light
-
-7. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. হাইড্রোজেন  
-   খ. তামা  
-   গ. কার্বন ডাই-অক্সাইড  
-   ঘ. নাইট্রোজেন
-
-8. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
+4. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) Contract : Agreement  
    (b) Deed : Attorney  
    (c) Title : Estate  
    (d) Job : Loyalty
 
-9. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
+### Off-topic / Misplaced (Computer Architecture & Testing) (6)
+
+1. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
+   (a) When a cache hit occurs, the CPU fetches data from ROM.  
+   (b) When a cache hit occurs, the CPU fetches data from main memory.  
+   (c) When a cache miss occurs, the CPU fetches data from cache memory.  
+   (d) When a cache miss occurs, the CPU fetches data from main memory.
+
+2. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
+   (a) DRAM requires more power than SRAM  
+   (b) SRAM requires fewer transistors per bit than DRAM  
+   (c) SRAM does not need refreshing while DRAM does  
+   (d) SRAM stores data in capacitors while DRAM uses flip-flops
+
+3. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
+   (a) Its content can be erased electrically in blocks  
+   (b) It requires periodin rewriting of data.  
+   (c) It can be rewritten at high speed and used as CPU cache  
+   (d) Its entire content is erased by ultraviolet light
+
+4. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. হাইড্রোজেন  
+   খ. তামা  
+   গ. কার্বন ডাই-অক্সাইড  
+   ঘ. নাইট্রোজেন
+
+5. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) White-box testing  
    (b) Black box testing  
    (c) Unit testing  
    (d) None of these
 
-10. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
+6. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Data store  
    (b) Data bank  
    (c) Meta Data  
    (d) Warehouse
 
 ## Time & Work (9)
+
+### Time & Work Rate Problems (4)
+
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*  
    ক. ৪ দিন  
    খ. ৫ দিন  
@@ -901,45 +928,47 @@
    গ. ৮ মিনিট
    ঘ. কোনোটিই নয়
 
-2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
-   (a) Switch  
-   (b) Hub  
-   (c) Router  
-   (d) Modem
-
-3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
+2. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 45  
    (b) 90  
    (c) 63  
    (d) 126
 
-4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
-   (A) Print screen  
-   (B) File open  
-   (C) Help  
-   (D) Save
-
-5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) ফজলুর রহমান  
-   খ) ইউসুফ আলী  
-   গ) তাজউদ্দিন আহমেদ  
-   ঘ) মনসুর আলী
-
-6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
-
-7. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
+3. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
    i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।  
    ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?  
    iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
 
-8. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
+4. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) Tk.  
    18. 000  
    (b) Tk. 16,000  
    (c) Tk. 15,000  
    (d) None of these
 
-9. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
+### Off-topic / Misplaced (Networking & GK) (5)
+
+1. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
+   (a) Switch  
+   (b) Hub  
+   (c) Router  
+   (d) Modem
+
+2. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+   (A) Print screen  
+   (B) File open  
+   (C) Help  
+   (D) Save
+
+3. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) ফজলুর রহমান  
+   খ) ইউসুফ আলী  
+   গ) তাজউদ্দিন আহমেদ  
+   ঘ) মনসুর আলী
+
+4. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+5. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) 30 feet  
    (b) 30 yards  
    (c) 30 miles  
@@ -1155,6 +1184,7 @@
    d. 1/6
 
 ## Speed, Time & Distance (4)
+
 1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*  
    ক. তরলের প্রবাহের মসৃণতা  
    খ. তরলের প্রবাহের আপেক্ষিক গতি  
@@ -1182,20 +1212,25 @@
    (d) 45
 
 ## Basic Arithmetic (3)
+
+### Basic Arithmetic Problems (2)
+
 1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*  
    ক. ৩৫ বছর  
    খ. ৪০ বছর  
    গ. ৫০ বছর  
    ঘ. কোনটিই নয়
 
-2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. প্রোষিতভর্তৃকা  
-   খ. প্রোষিতা  
-   গ. প্রবাসিনী  
-   ঘ. প্রোষিতপত্নীক
-
-3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
+2. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) m > n > o  
    (b) o > m > n  
    (c) n > m > o  
    (d) o > n > m
+
+### Off-topic / Misplaced (Bangla Vocabulary) (1)
+
+1. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. প্রোষিতভর্তৃকা  
+   খ. প্রোষিতা  
+   গ. প্রবাসিনী  
+   ঘ. প্রোষিতপত্নীক
