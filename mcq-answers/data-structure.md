@@ -1,21 +1,25 @@
 <!-- TOC START -->
 **Table of Contents** — 7 subtopics · 95 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Data Structure Basics](#data-structure-basics-25) | 25 |
-| 2 | [Stack & Queue](#stack--queue-23) | 23 |
-| 3 | [Tree & Binary Search Tree](#tree--binary-search-tree-20) | 20 |
-| 4 | [Data Structures & Algorithms](#data-structures--algorithms-12) | 12 |
-| 5 | [Linked List](#linked-list-10) | 10 |
-| 6 | [Priority Queue & Heap](#priority-queue--heap-3) | 3 |
-| 7 | [Hashing & Hash Tables](#hashing--hash-tables-2) | 2 |
+- [Data Structure Basics (25)](#data-structure-basics-25)
+  - [Core Data Structure Concepts (24)](#core-data-structure-concepts-24)
+  - [Off-topic / Misplaced Content (1)](#off-topic--misplaced-content-1)
+- [Stack & Queue (23)](#stack--queue-23)
+- [Tree & Binary Search Tree (20)](#tree--binary-search-tree-20)
+- [Data Structures & Algorithms (12)](#data-structures--algorithms-12)
+  - [Core Data Structures & Algorithms Concepts (11)](#core-data-structures--algorithms-concepts-11)
+  - [Off-topic / Misplaced Content (1)](#off-topic--misplaced-content-1)
+- [Linked List (10)](#linked-list-10)
+- [Priority Queue & Heap (3)](#priority-queue--heap-3)
+- [Hashing & Hash Tables (2)](#hashing--hash-tables-2)
 
 <!-- TOC END -->
 
 ---
 
 ## Data Structure Basics (25)
+
+### Core Data Structure Concepts (24)
 
 1. **Which of the following is a non linear data structure?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) Array  
@@ -206,16 +210,7 @@
    answer: A — Traversal  
    explanation: Traversal means visiting every element of the list once to process it.
 
-22. **Which is correct?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*  
-   A) <body color= 'yello'>  
-   B) <body bgcolor= 'yello'>  
-   C) <body background> yellow<body>  
-   D) <body background= 'yellow'>
-
-   answer: B — <body bgcolor= 'yello'>  
-   explanation: The background colour of a page is set with the bgcolor attribute of the body tag.
-
-23. **Which is not linear?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
+22. **Which is not linear?** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
    A) Linked list  
    B) array  
    C) graph  
@@ -224,7 +219,7 @@
    answer: C — graph  
    explanation: A graph has no single sequence of elements, so it is non-linear; arrays and linked lists are linear.
 
-24. **When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
+23. **When a new data is inserted into a data structure, but there is no available space; this situation is usually called ---** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) underflow  
    B) overflow  
    C) houseful  
@@ -233,7 +228,7 @@
    answer: B — overflow  
    explanation: Trying to insert into a full structure with no free space is called overflow; removing from an empty one is underflow.
 
-25. **To represent hierarchical relationship between element, which data Structure is suitable?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
+24. **To represent hierarchical relationship between element, which data Structure is suitable?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
    A) Desuetude  
    B) Priority  
    C) Tree  
@@ -241,6 +236,17 @@
 
    answer: C — Tree  
    explanation: A tree naturally models parent-child relationships, which is exactly a hierarchy.
+
+### Off-topic / Misplaced Content (1)
+
+1. **Which is correct?** *[Bangladesh Bank Assistant Programmer 2016 compact it 243 (ET: N/A)]*  
+   A) <body color= 'yello'>  
+   B) <body bgcolor= 'yello'>  
+   C) <body background> yellow<body>  
+   D) <body background= 'yellow'>
+
+   answer: B — <body bgcolor= 'yello'>  
+   explanation: The background colour of a page is set with the bgcolor attribute of the body tag.
 
 ## Stack & Queue (23)
 
@@ -634,6 +640,9 @@
    explanation: In-order traversal of a BST gives increasing order, not decreasing, so this statement is false.
 
 ## Data Structures & Algorithms (12)
+
+### Core Data Structures & Algorithms Concepts (11)
+
 1. **When sorting an array using randomized quicksort (pivot chosen randomly), what are the average-case and worst-case time complexities? [ যখন একটি অ্যারে randomized quicksort ব্যবহার করে sort করা হয় (pivot র‍্যান্ডমভাবে নির্বাচন করা হয়), তখন এর average-case এবং worst-case time complexity কী হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
    (a) O(n \\log n), O(n)  
    (b) O(n \\log n), O(n^2)  
@@ -652,16 +661,7 @@
    answer: c — Tree  
    explanation: A tree branches into children rather than following one sequence, so it is non-linear.
 
-3. **Which OS concept allows multiple processes to run simultaneously? [ কোন OS concept একাধিক process একসাথে চলার অনুমতি দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
-   (a) Multithreading  
-   (b) Multiprocessing  
-   (c) Multilevel Queue  
-   (d) Time slicing
-
-   answer: b — Multiprocessing  
-   explanation: Multiprocessing uses more than one CPU or core so processes genuinely run at the same instant, rather than merely interleaving.
-
-4. **Which data structure follows FIFO (First In First Out) principle? [ কোন ডেটা স্ট্রাকচার FIFO (First In First Out) নীতি মেনে চলে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
+3. **Which data structure follows FIFO (First In First Out) principle? [ কোন ডেটা স্ট্রাকচার FIFO (First In First Out) নীতি মেনে চলে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
    (A) Stack  
    (B) Queue  
    (C) Tree  
@@ -670,32 +670,32 @@
    answer: B — Queue  
    explanation: A queue removes from the front in the same order items were added at the rear.
 
-5. **How can you multiply two square 16\*16 matrices on a computer processor that can only handle 8\*8 matrix multiplications? Write an algorithm for this problem?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 380]]*
+4. **How can you multiply two square 16\*16 matrices on a computer processor that can only handle 8\*8 matrix multiplications? Write an algorithm for this problem?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 380]]*
 
    answer: Split each 16×16 matrix into four 8×8 blocks and use block multiplication  
    explanation: With A = [[A11,A12],[A21,A22]] and B likewise, C11 = A11B11 + A12B21, C12 = A11B12 + A12B22, C21 = A21B11 + A22B21, C22 = A21B12 + A22B22 — eight 8×8 multiplications and four 8×8 additions.
 
-6. **How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
+5. **How can a binary tree be represented using an array, and how are the positions of the left and right children determined based on the index of the parent node?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
 
    answer: Store the tree level by level in the array; for a parent at index i (1-based), left child = 2i, right child = 2i+1 and parent = i/2  
    explanation: With 0-based indexing the formulas become 2i+1 and 2i+2, and the parent is (i-1)/2; the scheme suits complete trees such as heaps because no space is wasted.
 
-7. **a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+6. **a) একটি Stack এ 1, 2, 2, 3, 3, 3 push করা হলো। এরপর পর পর দুইবার pop করা হলো। এর পর আবারো pop করা হলে কোন সংখ্যা বের হবে।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
    answer: 3  
    explanation: The stack holds 1,2,2,3,3,3 with the last 3 on top; two pops remove two 3s and the third pop returns the remaining 3.
 
-8. **b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+7. **b) মনে কর একটি Sorted array রয়েছে। সেখান থেকে একটি সংখ্যা খুঁজে বের করতে হবে যা minimum সময় নিবে তখন তুমি কোন সার্চিং Algorithm ব্যবহার করবে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
    answer: Binary search  
    explanation: On sorted data binary search halves the range at every step, finding the value in O(log n) instead of the O(n) of a linear scan.
 
-9. **BIDS published many Monographs every year. Now write an algorithm to sort them.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 485]]*
+8. **BIDS published many Monographs every year. Now write an algorithm to sort them.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 485]]*
 
    answer: Use merge sort on the monograph records, keyed on the chosen field (title, author or year)  
    explanation: Read the records into an array, split recursively until single elements remain, then merge sorted halves back together — guaranteed O(n log n) and stable, so equal keys keep their original order.
 
-10. **The minimum number of stacks needed to implement a queue is—[ একটি কিউ (Queue) ইমপ্লিমেন্ট করার জন্য সর্বনিম্ন কয়টি স্ট্যাক (Stack) প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
+9. **The minimum number of stacks needed to implement a queue is—[ একটি কিউ (Queue) ইমপ্লিমেন্ট করার জন্য সর্বনিম্ন কয়টি স্ট্যাক (Stack) প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) 1  
    (b) 2  
    (c) 3  
@@ -704,7 +704,7 @@
    answer: b — 2  
    explanation: Two stacks are enough: push onto the first, and when removing, pour it into the second so the order reverses into FIFO.
 
-11. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be—[ ১১টি নোড বিশিষ্ট একটি বাইনারি ট্রিতে প্রতিটি নোডের হয় ০ অথবা ২টি চাইল্ড আছে। এই ট্রির সর্বোচ্চ উচ্চতা (Height) কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
+10. **Suppose you are given a binary tree with 11 nodes, such that each node has exactly either zero or two children. The maximum height of the tree will be—[ ১১টি নোড বিশিষ্ট একটি বাইনারি ট্রিতে প্রতিটি নোডের হয় ০ অথবা ২টি চাইল্ড আছে। এই ট্রির সর্বোচ্চ উচ্চতা (Height) কত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) 2  
    (b) 3  
    (c) 4  
@@ -713,7 +713,7 @@
    answer: d — 5  
    explanation: 11 nodes in a full binary tree means 5 internal nodes, and putting one internal node per level stretches the height to 5.
 
-12. **The following method, which is intended to find the maximum element of the integer array, is incorrect.[ অ্যারোর সর্বোচ্চ মান খুঁজে বের করার নিচের মেথডটি ভুল কেন? ] public int max(int[]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511-512]]*  
+11. **The following method, which is intended to find the maximum element of the integer array, is incorrect.[ অ্যারোর সর্বোচ্চ মান খুঁজে বের করার নিচের মেথডটি ভুল কেন? ] public int max(int[]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 511-512]]*  
    a) \{
 
     int max = 0;
@@ -737,6 +737,17 @@
 
    answer: c — It fails whenever the array contains only negative numbers  
    explanation: max starts at 0, so if every element is below 0 no element ever beats it and the method wrongly returns 0; it should start from a[0].
+
+### Off-topic / Misplaced Content (1)
+
+1. **Which OS concept allows multiple processes to run simultaneously? [ কোন OS concept একাধিক process একসাথে চলার অনুমতি দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
+   (a) Multithreading  
+   (b) Multiprocessing  
+   (c) Multilevel Queue  
+   (d) Time slicing
+
+   answer: b — Multiprocessing  
+   explanation: Multiprocessing uses more than one CPU or core so processes genuinely run at the same instant, rather than merely interleaving.
 
 ## Linked List (10)
 
