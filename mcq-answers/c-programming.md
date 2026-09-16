@@ -1,18 +1,20 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 113 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Output Tracing](#output-tracing-36) | 36 |
-| 2 | [Control Statements & Loops](#control-statements--loops-16) | 16 |
-| 3 | [Arrays & Functions](#arrays--functions-15) | 15 |
-| 4 | [Data Types & Variables](#data-types--variables-14) | 14 |
-| 5 | [Operators & Expressions](#operators--expressions-11) | 11 |
-| 6 | [Programming Concepts](#programming-concepts-8) | 8 |
-| 7 | [Pointers & Memory Allocation](#pointers--memory-allocation-5) | 5 |
-| 8 | [Recursion](#recursion-4) | 4 |
-| 9 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
-| 10 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
+- [Output Tracing (36)](#output-tracing-36)
+- [Control Statements & Loops (16)](#control-statements--loops-16)
+- [Arrays & Functions (15)](#arrays--functions-15)
+  - [Arrays & Functions (14)](#arrays--functions-14)
+  - [Off-topic / Misplaced Questions (1)](#off-topic--misplaced-questions-1)
+- [Data Types & Variables (14)](#data-types--variables-14)
+- [Operators & Expressions (11)](#operators--expressions-11)
+- [Programming Concepts (8)](#programming-concepts-8)
+  - [Programming & OOP Concepts (4)](#programming--oop-concepts-4)
+  - [Off-topic / Misplaced Questions (4)](#off-topic--misplaced-questions-4)
+- [Pointers & Memory Allocation (5)](#pointers--memory-allocation-5)
+- [Recursion (4)](#recursion-4)
+- [Storage Classes & Scope (3)](#storage-classes--scope-3)
+- [Flowcharts & Algorithms (1)](#flowcharts--algorithms-1)
 
 <!-- TOC END -->
 
@@ -735,6 +737,8 @@
 
 ## Arrays & Functions (15)
 
+### Arrays & Functions (14)
+
 1. **The number of values a function can return at a time?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) 1  
    b) 2  
@@ -798,16 +802,7 @@
    answer: b — Random  
    explanation: Element i is reached by computing base + i×size, so any element takes the same constant time — random access.
 
-8. **Which of the following is correct?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
-   a. “X extends Y” is correct if and only if X is a class and Y is an interface  
-   b. “X extends Y” is correct if and only if X is an interface and Y is a class  
-   c. “X extends Y” is correct if X and Y are either both classes or both interfaces  
-   d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
-
-   answer: c — "X extends Y" is correct if X and Y are either both classes or both interfaces  
-   explanation: A class extends a class and an interface extends an interface; a class uses implements, not extends, for an interface.
-
-9. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
+8. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) 0  
    B) n-1  
    C) n^2-3n+2  
@@ -816,7 +811,7 @@
    answer: A — 0  
    explanation: The terms pair up as (i-j) and (j-i), which cancel, and the diagonal terms are 0, so the whole sum is 0.
 
-10. **When you pass array as an argument to a function, which actually gets passed?** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
+9. **When you pass array as an argument to a function, which actually gets passed?** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) Base address of the array  
    (b) The first element of the array  
    (c) Address of the first element of the array  
@@ -825,7 +820,7 @@
    answer: a — Base address of the array  
    explanation: An array name decays to a pointer to its first element, so only that address is passed, not a copy of the data (option c says the same thing).
 
-11. **int number [] = {10,20,30,40,50}; number[3] =?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
+10. **int number [] = {10,20,30,40,50}; number[3] =?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
    A) 10  
    B) 20  
    C) 30  
@@ -834,7 +829,7 @@
    answer: D — 40  
    explanation: Indexing is zero-based, so number[3] is the fourth element, 40.
 
-12. **Two dimensional arrays are also called?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
+11. **Two dimensional arrays are also called?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) table array  
    B) matrix array  
    C) both A and B  
@@ -843,7 +838,7 @@
    answer: C — both A and B  
    explanation: A 2-D array is arranged in rows and columns, so it is called both a table array and a matrix array.
 
-13. **The smallest element of array index is called it-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
+12. **The smallest element of array index is called it-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) Lower Bound  
    B) Upper Bound  
    C) Range  
@@ -852,7 +847,7 @@
    answer: A — Lower Bound  
    explanation: The smallest valid index is the lower bound and the largest is the upper bound.
 
-14. **What type of reference should be used in vector arithmetic in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
+13. **What type of reference should be used in vector arithmetic in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Dynamic  
    B) const  
    C) a and b  
@@ -861,7 +856,7 @@
    answer: B — const  
    explanation: Vector arithmetic passes operands by const reference, which avoids copying large objects while guaranteeing they are not modified.
 
-15. **In C, if you pass an array as an argument to a function, what actually gets passed?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
+14. **In C, if you pass an array as an argument to a function, what actually gets passed?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. Value of elements in array  
    b. First element of the array  
    c. Base address of the array  
@@ -869,6 +864,17 @@
 
    answer: c — Base address of the array  
    explanation: The array name decays to a pointer to element 0, so the function receives that base address and works on the original array.
+
+### Off-topic / Misplaced Questions (1)
+
+1. **Which of the following is correct?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
+   a. “X extends Y” is correct if and only if X is a class and Y is an interface  
+   b. “X extends Y” is correct if and only if X is an interface and Y is a class  
+   c. “X extends Y” is correct if X and Y are either both classes or both interfaces  
+   d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
+
+   answer: c — "X extends Y" is correct if X and Y are either both classes or both interfaces  
+   explanation: A class extends a class and an interface extends an interface; a class uses implements, not extends, for an interface.
 
 ## Data Types & Variables (14)
 
@@ -1127,6 +1133,9 @@
    explanation: & is bitwise AND, not a logical operator — the logical ones are && and ||. Note | is also bitwise, so the option set is loose.
 
 ## Programming Concepts (8)
+
+### Programming & OOP Concepts (4)
+
 1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Polymorphism  
    (b) Inheritance  
@@ -1136,12 +1145,7 @@
    answer: d — Encapsulation  
    explanation: Encapsulation bundles data with its methods and hides internal fields behind private access, so outside code cannot reach those details directly.
 
-2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
-
-   answer: Use a regular expression test inside a function, e.g. function validateEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }  
-   explanation: The pattern requires a non-empty local part, one @, a domain, and a dot followed by a top-level domain of at least two characters; it returns true or false.
-
-3. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+2. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (A) 5  
    (B) 0  
    (C) 1  
@@ -1150,34 +1154,7 @@
    answer: D — None of these  
    explanation: Inserting a node in the middle of a doubly linked list changes 4 pointers (the new node's prev and next, plus the neighbours' links), and 4 is not offered.
 
-4. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
-   (A) Class A, 8  
-   (B) Class A, 3  
-   (C) Class B, 3  
-   (D) Class B, 32
-
-   answer: B — Class A, 3  
-   explanation: The first octet 255 makes it Class A whose default mask is /8, and 224 = 11100000 adds 3 subnet bits, giving 255.224.0.0 = /11.
-
-5. **Martin Cooper is known for his invention of— [ Martin Cooper কোন উদ্ভাবনের জন্য পরিচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
-   (a) Digital Camera  
-   (b) X-ray  
-   (c) Mobile Phone  
-   (d) Telephone
-
-   answer: c — Mobile Phone  
-   explanation: Martin Cooper of Motorola made the first handheld mobile phone call in 1973.
-
-6. **What is the main goal of reinforcement learning?[ রিইনফোর্সমেন্ট লার্নিং (Reinforcement learning) এর প্রধান লক্ষ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
-   (a) To classify data into categories  
-   (b) To optimize a system for maximum efficiency  
-   (c) To make predinction based on historical data  
-   (d) To learn optima actions through trail and error
-
-   answer: d — To learn optima actions through trail and error  
-   explanation: A reinforcement learning agent explores an environment and uses reward and penalty signals to discover the actions that maximise long-term reward.
-
-7. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+3. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) for (i=n; i>0; i--)  
    (b) for (i=n-1; i>0; i--)  
    (c) for (i=0; i=0; i--)  
@@ -1186,7 +1163,7 @@
    answer: d — for (i=n-1; i>=0; i--)  
    explanation: The original loop covers indexes 0 to n-1; this one counts down from n-1 to 0, so it visits the same set of values.
 
-8. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
+4. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Object  
    (b) Entity  
    (c) Instance  
@@ -1194,6 +1171,40 @@
 
    answer: d — Class  
    explanation: A class is the blueprint that defines the common attributes and behaviour shared by all its objects.
+
+### Off-topic / Misplaced Questions (4)
+
+1. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+
+   answer: Use a regular expression test inside a function, e.g. function validateEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }  
+   explanation: The pattern requires a non-empty local part, one @, a domain, and a dot followed by a top-level domain of at least two characters; it returns true or false.
+
+2. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+   (A) Class A, 8  
+   (B) Class A, 3  
+   (C) Class B, 3  
+   (D) Class B, 32
+
+   answer: B — Class A, 3  
+   explanation: The first octet 255 makes it Class A whose default mask is /8, and 224 = 11100000 adds 3 subnet bits, giving 255.224.0.0 = /11.
+
+3. **Martin Cooper is known for his invention of— [ Martin Cooper কোন উদ্ভাবনের জন্য পরিচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
+   (a) Digital Camera  
+   (b) X-ray  
+   (c) Mobile Phone  
+   (d) Telephone
+
+   answer: c — Mobile Phone  
+   explanation: Martin Cooper of Motorola made the first handheld mobile phone call in 1973.
+
+4. **What is the main goal of reinforcement learning?[ রিইনফোর্সমেন্ট লার্নিং (Reinforcement learning) এর প্রধান লক্ষ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
+   (a) To classify data into categories  
+   (b) To optimize a system for maximum efficiency  
+   (c) To make predinction based on historical data  
+   (d) To learn optima actions through trail and error
+
+   answer: d — To learn optima actions through trail and error  
+   explanation: A reinforcement learning agent explores an environment and uses reward and penalty signals to discover the actions that maximise long-term reward.
 
 ## Pointers & Memory Allocation (5)
 
