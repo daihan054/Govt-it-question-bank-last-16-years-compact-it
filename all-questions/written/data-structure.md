@@ -1,18 +1,20 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 102 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Tree](#tree-27) | 27 |
-| 2 | [Stack](#stack-20) | 20 |
-| 3 | [Linked List](#linked-list-15) | 15 |
-| 4 | [Binary Search Tree (BST)](#binary-search-tree-bst-9) | 9 |
-| 5 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 6 | [Hashing & Hash Tables](#hashing--hash-tables-7) | 7 |
-| 7 | [Queue](#queue-6) | 6 |
-| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
-| 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-2) | 2 |
-| 10 | [Linear Data Structures (Arrays, Stacks, Queues, Linked Lists)](#linear-data-structures-arrays-stacks-queues-linked-lists-2) | 2 |
+- [Tree (27)](#tree-27)
+- [Stack (20)](#stack-20)
+  - [Stack Operations & Expression Conversion (15)](#stack-operations--expression-conversion-15)
+  - [Stack vs Queue / LIFO vs FIFO Comparison (5)](#stack-vs-queue--lifo-vs-fifo-comparison-5)
+- [Linked List (15)](#linked-list-15)
+  - [Linked List Fundamentals & Operations (9)](#linked-list-fundamentals--operations-9)
+  - [Array vs Linked List Comparison (6)](#array-vs-linked-list-comparison-6)
+- [Binary Search Tree (BST) (9)](#binary-search-tree-bst-9)
+- [Priority Queues & Heaps (Min/Max Heap) (8)](#priority-queues--heaps-minmax-heap-8)
+- [Hashing & Hash Tables (7)](#hashing--hash-tables-7)
+- [Queue (6)](#queue-6)
+- [Data Structure Fundamentals (6)](#data-structure-fundamentals-6)
+- [Tree Data Structures (BST, AVL, B-Tree, Heaps) (2)](#tree-data-structures-bst-avl-b-tree-heaps-2)
+- [Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) (2)](#linear-data-structures-arrays-stacks-queues-linked-lists-2)
 
 <!-- TOC END -->
 
@@ -80,37 +82,29 @@
 
 ## Stack (20)
 
+### Stack Operations & Expression Conversion (15)
+
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
 2. **Implementation of Stack using two Queues?** *[BCIC Assistant Programmer 14.02.2025 compact it 1326 (ET: BUET)]*
 
 3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
-4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
+4. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
-5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
+5. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
-6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
+6. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
-7. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
+7. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
 
-8. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
+8. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
-9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
+9. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
-10. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
+10. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
 
-11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
-
-12. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
-
-13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
-
-14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
-
-15. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
-
-16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
+11. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
 ```text
 Input: [0]{[00]0}
 Output: Balanced
@@ -118,15 +112,29 @@ Input: [())
 Output: Not Balanced
 ```
 
-17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
+12. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
-18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
+13. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
-19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
+14. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
-20. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
+15. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
+
+### Stack vs Queue / LIFO vs FIFO Comparison (5)
+
+1. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
+
+2. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
+
+3. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
+
+4. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
+
+5. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
 
 ## Linked List (15)
+
+### Linked List Fundamentals & Operations (9)
 
 1. **Explain with proper example of singly linked list.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
@@ -134,29 +142,31 @@ Output: Not Balanced
 
 3. **(ক) Linked list কী? উহার প্রকারভেদ চিত্রসহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
-4. **(a) Compare array and linked list with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
+4. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
-5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
+5. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 636 (ET: N/A)]*
 
-6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
+6. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
 
-7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 636 (ET: N/A)]*
+7. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
 
-8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
+8. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
-9. **(a) Computer and contrast between array and linked list.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
+9. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
-10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
+### Array vs Linked List Comparison (6)
 
-11. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+1. **(a) Compare array and linked list with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
 
-12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
+2. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
-13. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
+3. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
 
-14. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+4. **(a) Computer and contrast between array and linked list.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
 
-15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
+5. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+
+6. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
 ## Binary Search Tree (BST) (9)
 
