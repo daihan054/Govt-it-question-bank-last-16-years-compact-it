@@ -169,6 +169,36 @@ for fn in sorted(os.listdir(sys.argv[1])):
 
 ---
 
+# RULE 1b — Theory clustering within subtopics
+
+`all-questions/written/*.md`, `written-answers/*.md`, `all-questions/mcq/*.md` and `mcq-answers/*.md` additionally group the questions **inside** each `## Subtopic (N)` section by underlying theory/topic, using `### Theory (M)` sub-headings — e.g. inside `## OSI & TCP/IP Reference Model (57)`, the OSI-model questions live under `### OSI Model (30)` and the TCP/IP questions under `### TCP/IP Model (27)`.
+
+- **Only split a subtopic that actually mixes more than one distinct theme.** A subtopic whose questions are already one coherent theme is left flat — no `###` heading is added just to restate the subtopic's own name.
+- **A question belongs to exactly one theory — never duplicated.** If a question's content genuinely spans more than one theme, put it under whichever single theory fits best; do not split one question or list it twice.
+- **Question numbering restarts at 1 inside each `### Theory`**, the same way it restarts at 1 inside each `## Subtopic`.
+- **Count sync applies to `### Theory (M)` exactly like `## Subtopic (N)`**: the heading count, the TOC's nested count, and the anchor (which encodes the count) must all stay in sync — same mechanics as RULE 1, one heading level down.
+- **Theories within a subtopic are sorted by count, descending** (stable ties), same as subtopics within a file.
+- **No question or answer text is altered or lost** by this reorganization — only re-grouped and renumbered. Tables, mermaid blocks and code fences must still render correctly after the move.
+- **TOC format becomes a nested bullet list** (a flat markdown table cannot express the subtopic → theory hierarchy):
+
+  ```
+  <!-- TOC START -->
+  **Table of Contents** — 12 subtopics · 66 questions
+
+  - [Artificial Intelligence & Machine Learning (23)](#artificial-intelligence--machine-learning-23)
+    - [Cybersecurity & Information Security (6)](#cybersecurity--information-security-6)
+    - [Machine Learning Concepts (3)](#machine-learning-concepts-3)
+  - [Artificial Intelligence & Expert Systems (8)](#artificial-intelligence--expert-systems-8)
+
+  <!-- TOC END -->
+  ```
+
+  A subtopic with no split is just its own bullet, with no nested lines beneath it.
+- The written/ questions-only file and its written-answers/ counterpart (same for mcq/ and mcq-answers/) use the **identical** theory grouping and order, since they cover the same questions.
+- `all-theories-with-previous-questions-attached/` is a **separate, unrelated structure** (deep theory notes, not a reorganization of the question bank) — it is kept in sync with the *content* of written-answers/mcq-answers when that content changes, but it does not follow this subtopic→theory clustering.
+
+---
+
 # RULE 2 — Commits
 
 - Commit body must say **`Committed by Daihan`**.
