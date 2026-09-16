@@ -1,23 +1,37 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 97 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Arithmetic & Algebra Problems](#arithmetic--algebra-problems-17) | 17 |
-| 2 | [Set Theory & Discrete Math](#set-theory--discrete-math-13) | 13 |
-| 3 | [Percentage, Profit & Loss, Simple & Compound Interest](#percentage-profit--loss-simple--compound-interest-12) | 12 |
-| 4 | [Basic Arithmetic & Average](#basic-arithmetic--average-11) | 11 |
-| 5 | [Geometry & Coordinate Geometry](#geometry--coordinate-geometry-10) | 10 |
-| 6 | [Permutations & Combinations](#permutations--combinations-6) | 6 |
-| 7 | [Ratio, Proportion & Mixtures](#ratio-proportion--mixtures-4) | 4 |
-| 8 | [Speed, Time, Distance & Boats](#speed-time-distance--boats-4) | 4 |
-| 9 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 10 | [Propositional Logic & Logical Equivalence](#propositional-logic--logical-equivalence-4) | 4 |
-| 11 | [Discrete Mathematics & Recurrence Relations](#discrete-mathematics--recurrence-relations-3) | 3 |
-| 12 | [Analytical Ability & Logical Reasoning](#analytical-ability--logical-reasoning-3) | 3 |
-| 13 | [Calculus & Integration](#calculus--integration-2) | 2 |
-| 14 | [Comprehensive Math Problems](#comprehensive-math-problems-2) | 2 |
-| 15 | [Numerical Methods & Root Finding](#numerical-methods--root-finding-2) | 2 |
+- [Arithmetic & Algebra Problems (17)](#arithmetic--algebra-problems-17)
+  - [Word Problems (Linear Equations, Ages, Population, Loans) (7)](#word-problems-linear-equations-ages-population-loans-7)
+  - [Algebraic Identities (x + 1/x family) (4)](#algebraic-identities-x--1x-family-4)
+  - [Surds & Logarithms (3)](#surds--logarithms-3)
+  - [Number Series & Sequences (2)](#number-series--sequences-2)
+  - [Magic Square (1)](#magic-square-1)
+- [Set Theory & Discrete Math (13)](#set-theory--discrete-math-13)
+  - [Set Theory (7)](#set-theory-7)
+  - [Propositional & Predicate Logic (6)](#propositional--predicate-logic-6)
+- [Percentage, Profit & Loss, Simple & Compound Interest (12)](#percentage-profit--loss-simple--compound-interest-12)
+- [Basic Arithmetic & Average (11)](#basic-arithmetic--average-11)
+  - [Averages (4)](#averages-4)
+  - [Number Theory (GCD, LCM, Primes, Divisibility) (6)](#number-theory-gcd-lcm-primes-divisibility-6)
+  - [Number Series (1)](#number-series-1)
+- [Geometry & Coordinate Geometry (10)](#geometry--coordinate-geometry-10)
+- [Permutations & Combinations (6)](#permutations--combinations-6)
+- [Ratio, Proportion & Mixtures (4)](#ratio-proportion--mixtures-4)
+  - [Ratio, Proportion & Mixtures (3)](#ratio-proportion--mixtures-3)
+  - [Time & Work (1)](#time--work-1)
+- [Speed, Time, Distance & Boats (4)](#speed-time-distance--boats-4)
+- [Probability & Statistics (4)](#probability--statistics-4)
+  - [Probability (3)](#probability-3)
+  - [Statistics (Mean, Median, Mode) (1)](#statistics-mean-median-mode-1)
+- [Propositional Logic & Logical Equivalence (4)](#propositional-logic--logical-equivalence-4)
+- [Discrete Mathematics & Recurrence Relations (3)](#discrete-mathematics--recurrence-relations-3)
+  - [Recurrence Relations (1)](#recurrence-relations-1)
+  - [Mathematical Induction (2)](#mathematical-induction-2)
+- [Analytical Ability & Logical Reasoning (3)](#analytical-ability--logical-reasoning-3)
+- [Calculus & Integration (2)](#calculus--integration-2)
+- [Comprehensive Math Problems (2)](#comprehensive-math-problems-2)
+- [Numerical Methods & Root Finding (2)](#numerical-methods--root-finding-2)
 
 <!-- TOC END -->
 
@@ -25,15 +39,9 @@
 
 ## Arithmetic & Algebra Problems (17)
 
-1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+### Word Problems (Linear Equations, Ages, Population, Loans) (7)
 
-Answer:
-   - সূত্র: $n$ ক্রমের ম্যাজিক সংখ্যা $= \frac{n(n^2 + 1)}{2}$
-   - $n = 3$ হলে:
-     $$\text{Magic Number} = \frac{3(3^2 + 1)}{2} = \frac{3 \times 10}{2} = 15$$
-   - উত্তর: ১৫ (15)
-
-2. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝাটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝাটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
 Answer:
    - ধরি, মেঝের প্রস্থ $= w$ মিটার।
@@ -47,7 +55,7 @@ Answer:
      $$\implies w = 20$$
    - উত্তর: ২০ মিটার (20 meters)
 
-3. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+2. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
 
 Answer:
    - প্রারম্ভিক জনসংখ্যা $P = 80,00,000$
@@ -57,14 +65,7 @@ Answer:
      $$A = 80,00,000 \times (1.03)^3 = 80,00,000 \times 1.092727 = 87,41,816$$
    - উত্তর: ৮৭,৪১,৮১৬ জন (87,41,816)
 
-4. **প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
-
-Answer:
-   - সূত্র: প্রথম $n$ সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= n^2$
-   - অতএব, প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= \text{ক}^2$ (বা $k^2$)
-   - উত্তর: $\text{ক}^2$
-
-5. **A man could buy a certain number of notebooks for Rs.300. If each notebook cost is Rs.5 more, he could have bought 10 notebooks less for the same amount. Find the price of each notebook?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
+3. **A man could buy a certain number of notebooks for Rs.300. If each notebook cost is Rs.5 more, he could have bought 10 notebooks less for the same amount. Find the price of each notebook?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 559 (ET: BIBM)]*
 
 Answer:
    - Let the original price of each notebook be Rs. $x$.
@@ -79,21 +80,7 @@ Answer:
    - Since price cannot be negative, $x = 10$.
    - Answer: Rs. 10 (or 10 Taka)
 
-6. **If x is an Integer and x + \frac{1}{x} = \frac{17}{4}, then value of x - \frac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
-
-Answer:
-   - Given:
-     $$x + \frac{1}{x} = \frac{17}{4}$$
-   - Method 1 (Algebraic Identity):
-     $$\left(x - \frac{1}{x}\right)^2 = \left(x + \frac{1}{x}\right)^2 - 4 \cdot x \cdot \frac{1}{x}$$
-     $$\left(x - \frac{1}{x}\right)^2 = \left(\frac{17}{4}\right)^2 - 4 = \frac{289}{16} - \frac{64}{16} = \frac{225}{16}$$
-     $$x - \frac{1}{x} = \pm \sqrt{\frac{225}{16}} = \pm \frac{15}{4}$$
-   - Finding exact integer $x$:
-     $$4x^2 - 17x + 4 = 0 \implies (4x - 1)(x - 4) = 0$$
-     Since $x$ is an integer, $x = 4$.
-     $$x - \frac{1}{x} = 4 - \frac{1}{4} = \frac{15}{4} = 3.75$$
-
-7. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+4. **Students of a class are made to stand in rows. If students are extra in each row, then there would be 2 rows less. If four students are less in each row, then there would be 4 more rows. What is the number of students in the class?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
 
 Answer:
    - Let the number of students in each row be $x$ and the number of rows be $y$.
@@ -108,33 +95,7 @@ Answer:
    - Total number of students $= xy = 12 \times 8 = 96$.
    - Answer: 96 students
 
-8. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
-
-Answer:
-   - Simplifying the First Term:
-     $$\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} = \frac{4(\sqrt{6}+\sqrt{2})(\sqrt{6}+\sqrt{2})}{(\sqrt{6}-\sqrt{2})(\sqrt{6}+\sqrt{2})}$$
-     $$= \frac{4(6 + 2\sqrt{12} + 2)}{6 - 2} = \frac{4(8 + 4\sqrt{3})}{4} = 8 + 4\sqrt{3}$$
-   - Simplifying the Second Term:
-     $$\frac{2+\sqrt{3}}{2-\sqrt{3}} = \frac{(2+\sqrt{3})(2+\sqrt{3})}{(2-\sqrt{3})(2+\sqrt{3})}$$
-     $$= \frac{4 + 4\sqrt{3} + 3}{4 - 3} = \frac{7 + 4\sqrt{3}}{1} = 7 + 4\sqrt{3}$$
-   - Subtracting the Second Term from the First:
-     $$(8 + 4\sqrt{3}) - (7 + 4\sqrt{3}) = 8 + 4\sqrt{3} - 7 - 4\sqrt{3} = 1$$
-   - Answer: $1$
-
-9. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
-
-Answer:
-   - প্রথম পদ $a = 9$, সাধারণ অন্তর $d = 7 - 9 = -2$, সমষ্টি $S_n = -144$
-   - সমষ্টির সূত্র: $S_n = \frac{n}{2}[2a + (n - 1)d]$
-     $$-144 = \frac{n}{2}[2(9) + (n - 1)(-2)]$$
-     $$-144 = \frac{n}{2}[18 - 2n + 2] = \frac{n}{2}[20 - 2n] = n(10 - n)$$
-     $$-144 = 10n - n^2$$
-     $$n^2 - 10n - 144 = 0$$
-     $$(n - 18)(n + 8) = 0$$
-   - যেহেতু পদসংখ্যা $n$ ঋণাত্মক হতে পারে না, তাই $n = 18$।
-   - উত্তর: 18
-
-10. **পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ। ৫ বছর আগে পিতার বয়স পুত্রের বয়সের ৪ গুণ ছিল। পিতা ও পুত্রের বর্তমান বয়স কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+5. **পিতার বর্তমান বয়স পুত্রের বয়সের ৩ গুণ। ৫ বছর আগে পিতার বয়স পুত্রের বয়সের ৪ গুণ ছিল। পিতা ও পুত্রের বর্তমান বয়স কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
 Answer:
     - ধরি, পুত্রের বর্তমান বয়স $= x$ বছর।
@@ -148,7 +109,7 @@ Answer:
     - পুত্রের বর্তমান বয়স $= 15$ বছর এবং পিতার বর্তমান বয়স $= 3 \times 15 = 45$ বছর।
     - উত্তর: পিতার বয়স ৪৫ বছর এবং পুত্রের বয়স ১৫ বছর
 
-11. **দুইটি সংখ্যার যোগফল ১১২০ এবং বিয়োগফল বড় সংখ্যাটির ২/৩ অংশ। সংখ্যা দুইটি কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+6. **দুইটি সংখ্যার যোগফল ১১২০ এবং বিয়োগফল বড় সংখ্যাটির ২/৩ অংশ। সংখ্যা দুইটি কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
 Answer:
     - ধরি, বড় সংখ্যাটি $x$ এবং ছোট সংখ্যাটি $y$।
@@ -160,7 +121,66 @@ Answer:
     - অতএব, $x = 3 \times 280 = 840$
     - উত্তর: ৮৪০ এবং ২৮০ (840 and 280)
 
-12. **\log_3 \frac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+7. **একজন ৪% ও ৬% সুদে দুটি ঋণ নিয়েছে। মোট ঋণ এবং মোট সুদের মান দেওয়া আছে। ৪% ও ৬% হারে নেওয়া ঋণের পরিমাণ কত ছিল? [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+### Algebraic Identities (x + 1/x family) (4)
+
+1. **If x is an Integer and x + \frac{1}{x} = \frac{17}{4}, then value of x - \frac{1}{x} = ?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 439 (ET: BIBM)]*
+
+Answer:
+   - Given:
+     $$x + \frac{1}{x} = \frac{17}{4}$$
+   - Method 1 (Algebraic Identity):
+     $$\left(x - \frac{1}{x}\right)^2 = \left(x + \frac{1}{x}\right)^2 - 4 \cdot x \cdot \frac{1}{x}$$
+     $$\left(x - \frac{1}{x}\right)^2 = \left(\frac{17}{4}\right)^2 - 4 = \frac{289}{16} - \frac{64}{16} = \frac{225}{16}$$
+     $$x - \frac{1}{x} = \pm \sqrt{\frac{225}{16}} = \pm \frac{15}{4}$$
+   - Finding exact integer $x$:
+     $$4x^2 - 17x + 4 = 0 \implies (4x - 1)(x - 4) = 0$$
+     Since $x$ is an integer, $x = 4$.
+     $$x - \frac{1}{x} = 4 - \frac{1}{4} = \frac{15}{4} = 3.75$$
+
+2. **x + y = 7 এবং xy = 10 হলে এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+Answer:
+    - $(x - y)^2 = (x + y)^2 - 4xy = 7^2 - 4(10) = 49 - 40 = 9 \implies x - y = \pm 3$
+    - $x^2 + y^2 = (x + y)^2 - 2xy = 7^2 - 2(10) = 49 - 20 = 29$
+    - $x^3 + y^3 = (x + y)^3 - 3xy(x + y) = 7^3 - 3(10)(7) = 343 - 210 = 133$
+    - উত্তর: $x^2 + y^2 = 29$, $(x - y)^2 = 9$, $x^3 + y^3 = 133$
+
+3. **২. x + \frac{1}{x} = 4 হলে, x^2 + \frac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+Answer:
+   - দেওয়া আছে, $x + \frac{1}{x} = 4$
+   - সূত্র প্রয়োগ করে:
+     $$x^2 + \frac{1}{x^2} = \left(x + \frac{1}{x}\right)^2 - 2 \cdot x \cdot \frac{1}{x}$$
+     $$= 4^2 - 2 = 16 - 2 = 14$$
+   - উত্তর: $14$
+
+4. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+Answer:
+   - দেওয়া আছে, $x + \frac{1}{x} = \sqrt{3}$
+   - সূত্র প্রয়োগ করে:
+     $$x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right)^3 - 3 \cdot x \cdot \frac{1}{x} \left(x + \frac{1}{x}\right)$$
+     $$= (\sqrt{3})^3 - 3(\sqrt{3}) = 3\sqrt{3} - 3\sqrt{3} = 0$$
+   - উত্তর: $0$
+
+### Surds & Logarithms (3)
+
+1. **\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} - \frac{2+\sqrt{3}}{2-\sqrt{3}} = ?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 447 (ET: BIBM)]*
+
+Answer:
+   - Simplifying the First Term:
+     $$\frac{4(\sqrt{6}+\sqrt{2})}{\sqrt{6}-\sqrt{2}} = \frac{4(\sqrt{6}+\sqrt{2})(\sqrt{6}+\sqrt{2})}{(\sqrt{6}-\sqrt{2})(\sqrt{6}+\sqrt{2})}$$
+     $$= \frac{4(6 + 2\sqrt{12} + 2)}{6 - 2} = \frac{4(8 + 4\sqrt{3})}{4} = 8 + 4\sqrt{3}$$
+   - Simplifying the Second Term:
+     $$\frac{2+\sqrt{3}}{2-\sqrt{3}} = \frac{(2+\sqrt{3})(2+\sqrt{3})}{(2-\sqrt{3})(2+\sqrt{3})}$$
+     $$= \frac{4 + 4\sqrt{3} + 3}{4 - 3} = \frac{7 + 4\sqrt{3}}{1} = 7 + 4\sqrt{3}$$
+   - Subtracting the Second Term from the First:
+     $$(8 + 4\sqrt{3}) - (7 + 4\sqrt{3}) = 8 + 4\sqrt{3} - 7 - 4\sqrt{3} = 1$$
+   - Answer: $1$
+
+2. **\log_3 \frac{1}{81} এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
 Answer:
    - আমরা জানি, $81 = 3^4 \implies \frac{1}{81} = 3^{-4}$
@@ -170,33 +190,7 @@ Answer:
      $$= -4 \times 1 = -4$$
    - উত্তর: $-4$
 
-13. **x + y = 7 এবং xy = 10 হলে এর মান কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
-
-Answer:
-    - $(x - y)^2 = (x + y)^2 - 4xy = 7^2 - 4(10) = 49 - 40 = 9 \implies x - y = \pm 3$
-    - $x^2 + y^2 = (x + y)^2 - 2xy = 7^2 - 2(10) = 49 - 20 = 29$
-    - $x^3 + y^3 = (x + y)^3 - 3xy(x + y) = 7^3 - 3(10)(7) = 343 - 210 = 133$
-    - উত্তর: $x^2 + y^2 = 29$, $(x - y)^2 = 9$, $x^3 + y^3 = 133$
-
-14. **২. x + \frac{1}{x} = 4 হলে, x^2 + \frac{1}{x^2} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
-
-Answer:
-   - দেওয়া আছে, $x + \frac{1}{x} = 4$
-   - সূত্র প্রয়োগ করে:
-     $$x^2 + \frac{1}{x^2} = \left(x + \frac{1}{x}\right)^2 - 2 \cdot x \cdot \frac{1}{x}$$
-     $$= 4^2 - 2 = 16 - 2 = 14$$
-   - উত্তর: $14$
-
-15. **২. x + \frac{1}{x} = \sqrt{3} হলে x^3 + \frac{1}{x^3} এর মান কত?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
-
-Answer:
-   - দেওয়া আছে, $x + \frac{1}{x} = \sqrt{3}$
-   - সূত্র প্রয়োগ করে:
-     $$x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right)^3 - 3 \cdot x \cdot \frac{1}{x} \left(x + \frac{1}{x}\right)$$
-     $$= (\sqrt{3})^3 - 3(\sqrt{3}) = 3\sqrt{3} - 3\sqrt{3} = 0$$
-   - উত্তর: $0$
-
-16. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+3. **M^0 + \sqrt[3]{8} + \text{Logs}_5{125} + (0100)^2 + 5** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
 Answer:
    - প্রতিটি পদের মান নির্ণয়:
@@ -211,9 +205,41 @@ Answer:
      $$1 + 2 + 3 + 16 + 5 = 27$$
    - (ডেসিমাল ১০০ বিবেচনায় মান: $1 + 2 + 3 + 10000 + 5 = 10011$)
 
-17. **একজন ৪% ও ৬% সুদে দুটি ঋণ নিয়েছে। মোট ঋণ এবং মোট সুদের মান দেওয়া আছে। ৪% ও ৬% হারে নেওয়া ঋণের পরিমাণ কত ছিল? [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+### Number Series & Sequences (2)
+
+1. **প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+Answer:
+   - সূত্র: প্রথম $n$ সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= n^2$
+   - অতএব, প্রথম ক সংখ্যক বিজোড় স্বাভাবিক সংখ্যার সমষ্টি $= \text{ক}^2$ (বা $k^2$)
+   - উত্তর: $\text{ক}^2$
+
+2. **9+7+5+.......ধারাটির যোগফল -১৪৪ হলে, n = কত?** *[BARC Data Entry Officer 10.09.2022 compact it 703 (ET: N/A)]*
+
+Answer:
+   - প্রথম পদ $a = 9$, সাধারণ অন্তর $d = 7 - 9 = -2$, সমষ্টি $S_n = -144$
+   - সমষ্টির সূত্র: $S_n = \frac{n}{2}[2a + (n - 1)d]$
+     $$-144 = \frac{n}{2}[2(9) + (n - 1)(-2)]$$
+     $$-144 = \frac{n}{2}[18 - 2n + 2] = \frac{n}{2}[20 - 2n] = n(10 - n)$$
+     $$-144 = 10n - n^2$$
+     $$n^2 - 10n - 144 = 0$$
+     $$(n - 18)(n + 8) = 0$$
+   - যেহেতু পদসংখ্যা $n$ ঋণাত্মক হতে পারে না, তাই $n = 18$।
+   - উত্তর: 18
+
+### Magic Square (1)
+
+1. **তিন ক্রমের ম্যাজিক সংখ্যা কোনটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1368 (ET: BUET)]*
+
+Answer:
+   - সূত্র: $n$ ক্রমের ম্যাজিক সংখ্যা $= \frac{n(n^2 + 1)}{2}$
+   - $n = 3$ হলে:
+     $$\text{Magic Number} = \frac{3(3^2 + 1)}{2} = \frac{3 \times 10}{2} = 15$$
+   - উত্তর: ১৫ (15)
 
 ## Set Theory & Discrete Math (13)
+
+### Set Theory (7)
 
 1. **Given, n(A) = 20, n(B) = 30 and n(A \cup B) = 40 what is n(A \cap B)?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
@@ -258,42 +284,7 @@ Answer:
      $$\text{Total} - n(A \cup B) = 100 - 50 = 50$$
    - উত্তর: ৫০টি (50 numbers)
 
-5. **Express the following statement as a logical expression, “If someone is female and is a parent, then this person is someone's mother”.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
-
-Answer:
-   - Let predicates be:
-     - $F(x)$: $x$ is female
-     - $P(x, y)$: $x$ is a parent of $y$
-     - $M(x, y)$: $x$ is the mother of $y$
-   - Logical Expression:
-     $$\forall x \forall y \left( (F(x) \land P(x, y)) \to M(x, y) \right)$$
-     (Alternatively: $\forall x \left( (F(x) \land \exists y \, P(x, y)) \to \exists y \, M(x, y) \right)$)
-
-6. **(ক) p \land (\neg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
-
-Answer:
-   - Truth Table:
-     | $p$ | $q$ | $\neg p$ | $\neg p \lor q$ | $p \land (\neg p \lor q)$ |
-     |:---:|:---:|:---:|:---:|:---:|
-     | T | T | F | T | T |
-     | T | F | F | F | F |
-     | F | T | T | T | F |
-     | F | F | T | T | F |
-   - বীজগাণিতিক প্রমাণ: $p \land (\neg p \lor q) \equiv (p \land \neg p) \lor (p \land q) \equiv F \lor (p \land q) \equiv p \land q$।
-
-7. **(খ) দেখাও যে, (p \land q) \rightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
-
-Answer:
-   - Truth Table:
-     | $p$ | $q$ | $p \land q$ | $p \lor q$ | $(p \land q) \rightarrow (p \lor q)$ |
-     |:---:|:---:|:---:|:---:|:---:|
-     | T | T | T | T | T |
-     | T | F | F | T | T |
-     | F | T | F | T | T |
-     | F | F | F | F | T |
-   - ব্যাখ্যা: সত্যক সারণির (Truth table) চূড়ান্ত কলামে $p$ ও $q$-এর সকল সম্ভাব্য সত্যমানের (Truth values) জন্য ফলাফল সর্বদা True (T) হওয়ায় $(p \land q) \rightarrow (p \lor q)$ একটি Tautology (টটোলজি)।
-
-8. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+5. **(ক) Set, Power set এবং Proper set কী? Membership table এর মাধ্যমে প্রমাণ করুন যে, A \cup (B \cap C) = (\bar{C} \cup \bar{B}) \cap \bar{A}. এখানে A, B, C এগুলো Sets.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
 Answer:
    - সংজ্ঞা:
@@ -313,7 +304,7 @@ Answer:
      | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
    - দ্রষ্টব্য: ডি মরগানের নিয়ম অনুযায়ী $\overline{A \cup (B \cap C)} = \bar{A} \cap \overline{(B \cap C)} = \bar{A} \cap (\bar{B} \cup \bar{C}) = (\bar{C} \cup \bar{B}) \cap \bar{A}$। অর্থাৎ ডানপক্ষটি মূলত বামপক্ষের পূরক সেট (Complement set)।
 
-9. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
+6. **(খ) যদি A-B = \{1, 5, 7, 8\}, B-A = \{2, 10\} এবং A \cap B = \{3, 6, 9\} হয়, তবে A, B Set এর মান কত?** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 779 (ET: N/A)]*
 
 Answer:
    - $A = (A - B) \cup (A \cap B) = \{1, 5, 7, 8\} \cup \{3, 6, 9\} = \{1, 3, 5, 6, 7, 8, 9\}$
@@ -322,7 +313,7 @@ Answer:
      - $A = \{1, 3, 5, 6, 7, 8, 9\}$
      - $B = \{2, 3, 6, 9, 10\}$
 
-10. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
+7. **(a) Out of ten families, six families have dogs, four have cats and two have neither cats nor dogs. Find the number of families that have both cats and dogs?** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
 Answer:
     - Total families $N = 10$
@@ -337,7 +328,44 @@ Answer:
       $$n(D \cap C) = 10 - 8 = 2$$
     - Answer: 2 families
 
-11. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
+### Propositional & Predicate Logic (6)
+
+1. **Express the following statement as a logical expression, “If someone is female and is a parent, then this person is someone's mother”.** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 664 (ET: N/A)]*
+
+Answer:
+   - Let predicates be:
+     - $F(x)$: $x$ is female
+     - $P(x, y)$: $x$ is a parent of $y$
+     - $M(x, y)$: $x$ is the mother of $y$
+   - Logical Expression:
+     $$\forall x \forall y \left( (F(x) \land P(x, y)) \to M(x, y) \right)$$
+     (Alternatively: $\forall x \left( (F(x) \land \exists y \, P(x, y)) \to \exists y \, M(x, y) \right)$)
+
+2. **(ক) p \land (\neg p \lor q) - logical expression টির জন্য Truth table প্রস্তুত করুন। যেখানে p, q- Boolean variable.** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
+
+Answer:
+   - Truth Table:
+     | $p$ | $q$ | $\neg p$ | $\neg p \lor q$ | $p \land (\neg p \lor q)$ |
+     |:---:|:---:|:---:|:---:|:---:|
+     | T | T | F | T | T |
+     | T | F | F | F | F |
+     | F | T | T | T | F |
+     | F | F | T | T | F |
+   - বীজগাণিতিক প্রমাণ: $p \land (\neg p \lor q) \equiv (p \land \neg p) \lor (p \land q) \equiv F \lor (p \land q) \equiv p \land q$।
+
+3. **(খ) দেখাও যে, (p \land q) \rightarrow (p \lor q) is a tautology.** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
+
+Answer:
+   - Truth Table:
+     | $p$ | $q$ | $p \land q$ | $p \lor q$ | $(p \land q) \rightarrow (p \lor q)$ |
+     |:---:|:---:|:---:|:---:|:---:|
+     | T | T | T | T | T |
+     | T | F | F | T | T |
+     | F | T | F | T | T |
+     | F | F | F | F | T |
+   - ব্যাখ্যা: সত্যক সারণির (Truth table) চূড়ান্ত কলামে $p$ ও $q$-এর সকল সম্ভাব্য সত্যমানের (Truth values) জন্য ফলাফল সর্বদা True (T) হওয়ায় $(p \land q) \rightarrow (p \lor q)$ একটি Tautology (টটোলজি)।
+
+4. **(c) Using truth table finds which of the following implications are equivalent to p \to (p \lor \neg(p \land q)) is a contradiction.** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 890 (ET: N/A)]*
 
 Answer:
    - Truth Table for $p \to (p \lor \neg(p \land q))$:
@@ -349,7 +377,7 @@ Answer:
      | F | F | F | T | T | T |
    - Conclusion: The expression $p \to (p \lor \neg(p \land q))$ evaluates to True (T) under all possible truth value assignments. Therefore, it is a Tautology, and not a contradiction (a contradiction would evaluate to False for all assignments).
 
-12. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 952-953 (ET: N/A)]*
+5. **(ii) Propositional logic ও Predicate Logic উদাহরণসহ বর্ণনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 952-953 (ET: N/A)]*
 
 Answer:
     - Propositional Logic (প্রপোজিশনাল লজিক):
@@ -359,7 +387,7 @@ Answer:
       - এটি প্রপোজিশনাল লজিকের আধুনিক রূপ যা ব্যক্তিসত্তা (Subject), বৈশিষ্ট্য (Predicate) এবং কোয়ান্টিফায়ার ($\forall$ - সার্বজনীন, $\exists$ - অস্তিত্বমূলক) অন্তর্ভুক্ত করে।
       - উদাহরণ: "সকল মানুষ মরণশীল" $\implies \forall x (\text{Man}(x) \to \text{Mortal}(x))$।
 
-13. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
+6. **Propositional Logic and Predicate Logic উদাহরণসহ বুঝিয়ে লিখুন?** *[BPSC Assistant Maintenance Engineer (CSE) 2020 compact it 1020 (ET: N/A)]*
 
 Answer:
     - Propositional Logic: Deals with declarative propositions that are evaluated as atomic truth values (T/F) using Boolean operators ($\land, \lor, \neg, \to, \leftrightarrow$).
@@ -501,6 +529,8 @@ Answer:
 
 ## Basic Arithmetic & Average (11)
 
+### Averages (4)
+
 1. **What is the Average of 1 to 49 numbers?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1462 (ET: N/A)]*
 
 Answer:
@@ -509,19 +539,7 @@ Answer:
      $$\text{Average} = \frac{49 + 1}{2} = \frac{50}{2} = 25$$
    - Answer: 25
 
-2. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
-
-Answer:
-   - সূত্র: দুইটি সংখ্যার গুণফল = গ.সা.গু. $\times$ ল.সা.গু.
-   - অপর সংখ্যা:
-     $$\text{Other Number} = \frac{\text{গ.সা.গু.} \times \text{ল.সা.গু.}}{\text{একটি সংখ্যা}} = \frac{11 \times 7700}{275} = 308$$
-   - উত্তর: 308
-
-3. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
-
-Answer: 99
-
-4. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+2. **If the average of seven consecutive even numbers is 62, then the one-fourth of twice of total of first and sixth number is?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
 
 Answer:
    - Let the 7 consecutive even numbers be $x-6, x-4, x-2, x, x+2, x+4, x+6$.
@@ -533,45 +551,7 @@ Answer:
      $$\text{Result} = \frac{1}{4} \times 2 \times (56 + 66) = \frac{1}{2} \times 122 = 61$$
    - Answer: 61
 
-5. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
-
-Answer:
-   - প্রথম পদ $a = 99$, শেষ পদ $l = 40$, সাধারণ অন্তর $d = -1$
-   - পদসংখ্যা $n = \frac{\text{শেষ পদ} - \text{প্রথম পদ}}{d} + 1 = \frac{40 - 99}{-1} + 1 = 59 + 1 = 60$
-   - সমষ্টির সূত্র:
-     $$S_n = \frac{n}{2}(\text{প্রথম পদ} + \text{শেষ পদ}) = \frac{60}{2}(99 + 40) = 30 \times 139 = 4170$$
-   - উত্তর: 4170
-
-6. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
-
-Answer:
-   - ৩, ৫ এবং ৬ এর ল.সা.গু. (LCM) $= 30$
-   - নির্ণেয় ক্ষুদ্রতম সংখ্যা $= \text{LCM} + \text{ভাগশেষ} = 30 + 1 = 31$
-   - উত্তর: 31
-
-7. **১. তিন অংকের বৃহত্তম সংখ্যা ও ক্ষুদ্রতম সংখ্যার পার্থক্য কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
-
-Answer:
-   - তিন অংকের বৃহত্তম সংখ্যা $= 999$
-   - তিন অংকের ক্ষুদ্রতম সংখ্যা $= 100$
-   - পার্থক্য $= 999 - 100 = 899$
-   - উত্তর: 899
-
-8. **৪. দুইটি সংখ্যার গ. সা. গু ও ল. সা. গু যথাক্রমে ১২ ও ১৫। সংখ্যা দুইটির গুনফল কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
-
-Answer:
-   - সূত্র: সংখ্যা দুইটির গুণফল = গ.সা.গু $\times$ ল.সা.গু
-   - গুণফল $= 12 \times 15 = 180$
-   - উত্তর: 180
-
-9. **১. ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা কয়টি ও কি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
-
-Answer:
-   - ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা মোট ১০টি।
-   - সংখ্যাগুলো হলো: ২, ৩, ৫, ৭, ১১, ১৩, ১৭, ১৯, ২৩, ২৯ (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)।
-   - উত্তর: ১০টি
-
-10. **৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+3. **৩. একজনন ক্রিকেটারের 10 ইনিংসে রানের গড় 44.5. 11 তম ইনিংসে কত রান করে আউট হলে, সব ইনিংস মিলিয়ে তার রানের গড় 50 হবে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
 Answer:
     - ১০ ইনিংসে মোট রান $= 10 \times 44.5 = 445$ রান
@@ -579,13 +559,67 @@ Answer:
     - ১১তম ইনিংসে করতে হবে $= 550 - 445 = 105$ রান
     - উত্তর: 105 রান
 
-11. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+4. **৫. দুইটি সংখ্যার গড় xy. একটি সংখ্যা x হলে অপর সংখ্যাটি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
 
 Answer:
     - দুইটি সংখ্যার সমষ্টি $= 2 \times xy = 2xy$
     - একটি সংখ্যা $= x$
     - অতএব, অপর সংখ্যা $= 2xy - x = x(2y - 1)$
     - উত্তর: $2xy - x$ (বা $x(2y - 1)$)
+
+### Number Theory (GCD, LCM, Primes, Divisibility) (6)
+
+1. **দুইটি সংখ্যার গ.সা.গু. ১১ এবং ল.সা.গু. ৭৭০০। একটি সংখ্যা ২৭৫ হলে অপর সংখ্যাটি কত?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 597 (ET: N/A)]*
+
+Answer:
+   - সূত্র: দুইটি সংখ্যার গুণফল = গ.সা.গু. $\times$ ল.সা.গু.
+   - অপর সংখ্যা:
+     $$\text{Other Number} = \frac{\text{গ.সা.গু.} \times \text{ল.সা.গু.}}{\text{একটি সংখ্যা}} = \frac{11 \times 7700}{275} = 308$$
+   - উত্তর: 308
+
+2. **What is the largest two-digit natural number (a part of the number system, which includes all positive integers from 1 to infinity)?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+Answer: 99
+
+3. **কোন ক্ষুদ্রতম সংখ্যাকে ৩, ৫ এবং ৬ দ্বারা ভাগ করলে ভাগশেষ ১ হবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+Answer:
+   - ৩, ৫ এবং ৬ এর ল.সা.গু. (LCM) $= 30$
+   - নির্ণেয় ক্ষুদ্রতম সংখ্যা $= \text{LCM} + \text{ভাগশেষ} = 30 + 1 = 31$
+   - উত্তর: 31
+
+4. **১. তিন অংকের বৃহত্তম সংখ্যা ও ক্ষুদ্রতম সংখ্যার পার্থক্য কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+Answer:
+   - তিন অংকের বৃহত্তম সংখ্যা $= 999$
+   - তিন অংকের ক্ষুদ্রতম সংখ্যা $= 100$
+   - পার্থক্য $= 999 - 100 = 899$
+   - উত্তর: 899
+
+5. **৪. দুইটি সংখ্যার গ. সা. গু ও ল. সা. গু যথাক্রমে ১২ ও ১৫। সংখ্যা দুইটির গুনফল কত?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 943 (ET: N/A)]*
+
+Answer:
+   - সূত্র: সংখ্যা দুইটির গুণফল = গ.সা.গু $\times$ ল.সা.গু
+   - গুণফল $= 12 \times 15 = 180$
+   - উত্তর: 180
+
+6. **১. ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা কয়টি ও কি কি?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 946 (ET: N/A)]*
+
+Answer:
+   - ১ থেকে ৩০ পর্যন্ত মৌলিক সংখ্যা মোট ১০টি।
+   - সংখ্যাগুলো হলো: ২, ৩, ৫, ৭, ১১, ১৩, ১৭, ১৯, ২৩, ২৯ (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)।
+   - উত্তর: ১০টি
+
+### Number Series (1)
+
+1. **৯৯ + ৯৮ + ৯৭ + ------+৪০ = কত?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+
+Answer:
+   - প্রথম পদ $a = 99$, শেষ পদ $l = 40$, সাধারণ অন্তর $d = -1$
+   - পদসংখ্যা $n = \frac{\text{শেষ পদ} - \text{প্রথম পদ}}{d} + 1 = \frac{40 - 99}{-1} + 1 = 59 + 1 = 60$
+   - সমষ্টির সূত্র:
+     $$S_n = \frac{n}{2}(\text{প্রথম পদ} + \text{শেষ পদ}) = \frac{60}{2}(99 + 40) = 30 \times 139 = 4170$$
+   - উত্তর: 4170
 
 ## Geometry & Coordinate Geometry (10)
 
@@ -769,6 +803,8 @@ Answer:
 
 ## Ratio, Proportion & Mixtures (4)
 
+### Ratio, Proportion & Mixtures (3)
+
 1. **Math : Gold purity** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
 
 Answer:
@@ -811,7 +847,9 @@ Answer:
    - Resulting Ratio of Milk to Water $= 122 : 193$
    - Answer: $122 : 193$
 
-4. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
+### Time & Work (1)
+
+1. **১২ জন লোক একটি কাজ ৯ দিনে করতে পারে। একই হারে কাজ করলে ১৮ জনে কাজটি কত দিনে করতে পারবে?** *[BWMRI Assistant Maintenance Engineer 2022 compact it 736 (ET: N/A)]*
 
 Answer:
    - সূত্র: $M_1 \times D_1 = M_2 \times D_2$
@@ -882,6 +920,8 @@ Answer:
 
 ## Probability & Statistics (4)
 
+### Probability (3)
+
 1. **(b)** In Bangladesh Bank, there are 6 Assistant Directors (ADs) and 4 Deputy Directors (DDs). Each AD brings a bag, while only half of the DDs bring a bag. If a bag is selected at random from all the bags, what is the probability that the chosen bag belongs to a Deputy Director (DD)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1324 (ET: DU)]*
 
 Answer:
@@ -903,7 +943,18 @@ Answer:
      $$P(\text{Sum} = 7) = \frac{n(E)}{n(S)} = \frac{6}{36} = \frac{1}{6}$$
    - Answer: $\frac{1}{6}$
 
-3. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
+3. **10-bits number taken randomly, find the probability that all the bits are 1.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
+
+Answer:
+   - Total possible 10-bit binary combinations $= 2^{10} = 1024$.
+   - Favorable outcome (the exact sequence $1111111111$) $= 1$.
+   - Probability:
+     $$P(\text{all bits 1}) = \left(\frac{1}{2}\right)^{10} = \frac{1}{1024} \approx 0.000977$$
+   - Answer: $\frac{1}{1024}$
+
+### Statistics (Mean, Median, Mode) (1)
+
+1. **(b) Find out the mean, median, mode from the following sequence: 24, 24, 23, 25, 28, 30, 22, 12.** *[Bangladesh Submarine Cables PLC (BSCPLC) Assistant Manager (Engineering) 13.12.2024 compact it 433 (ET: BUET)]*
 
 Answer:
    - Total number of items $n = 8$.
@@ -917,15 +968,6 @@ Answer:
      - The value with maximum frequency is $24$ (occurs 2 times).
      $$\text{Mode} = 24$$
    - Answer: $\text{Mean} = 23.5, \text{Median} = 24, \text{Mode} = 24$
-
-4. **10-bits number taken randomly, find the probability that all the bits are 1.** *[Bangladesh Bank Assistant Programmer 2019 compact it 1155 (ET: DU)]*
-
-Answer:
-   - Total possible 10-bit binary combinations $= 2^{10} = 1024$.
-   - Favorable outcome (the exact sequence $1111111111$) $= 1$.
-   - Probability:
-     $$P(\text{all bits 1}) = \left(\frac{1}{2}\right)^{10} = \frac{1}{1024} \approx 0.000977$$
-   - Answer: $\frac{1}{1024}$
 
 ## Propositional Logic & Logical Equivalence (4)
 
@@ -986,6 +1028,8 @@ Answer:
 
 ## Discrete Mathematics & Recurrence Relations (3)
 
+### Recurrence Relations (1)
+
 1. **Find a recurrence relation and give initial conditions for the number of bit strings of length n that do not have two consecutive 0s.** *[Sylhet Gas Field Limited (SGFL) Assistant Engineer (IT) 2023 compact it 592 (ET: BUET)]*
 
 Answer:
@@ -999,7 +1043,9 @@ Answer:
      - $a_1 = 2$ (Strings: `0`, `1`)
      - $a_2 = 3$ (Strings: `01`, `10`, `11`)
 
-2. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
+### Mathematical Induction (2)
+
+1. **(b) Using mathematical induction, show that 3^n-1 is multiple of 2 for n>=1.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 806 (ET: N/A)]*
 
 Answer:
    - Let $P(n): 3^n - 1 \text{ is a multiple of } 2$.
@@ -1014,7 +1060,7 @@ Answer:
      Since $3m + 1$ is an integer, $3^{k+1} - 1$ is a multiple of $2$.
    - Conclusion: By mathematical induction, $3^n - 1$ is a multiple of $2$ for all $n \ge 1$.
 
-3. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
+2. **Proved that $1+2+3+4+\dots\dots\dots\dots+n = \frac{n(n+1)}{2}$** *[DESCO Sub-Assistant Engineer (CSE) 2019 compact it 1121 (ET: BUET)]*
 
 Answer:
    - Proof by Mathematical Induction:
