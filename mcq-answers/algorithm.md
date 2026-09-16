@@ -1,20 +1,24 @@
 <!-- TOC START -->
 **Table of Contents** — 6 subtopics · 70 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Sorting Algorithms](#sorting-algorithms-20) | 20 |
-| 2 | [Searching Algorithms](#searching-algorithms-18) | 18 |
-| 3 | [Graph Algorithms](#graph-algorithms-13) | 13 |
-| 4 | [Algorithm Design Paradigms](#algorithm-design-paradigms-9) | 9 |
-| 5 | [Dynamic Programming & Greedy](#dynamic-programming--greedy-6) | 6 |
-| 6 | [Complexity & Analysis](#complexity--analysis-4) | 4 |
+- [Sorting Algorithms (20)](#sorting-algorithms-20)
+  - [Sorting Algorithms (19)](#sorting-algorithms-19)
+  - [Off-topic / Misplaced (Data Compression) (1)](#off-topic--misplaced-data-compression-1)
+- [Searching Algorithms (18)](#searching-algorithms-18)
+- [Graph Algorithms (13)](#graph-algorithms-13)
+- [Algorithm Design Paradigms (9)](#algorithm-design-paradigms-9)
+  - [Algorithm Design Paradigms (5)](#algorithm-design-paradigms-5)
+  - [Algorithm Fundamentals & Definition (4)](#algorithm-fundamentals--definition-4)
+- [Dynamic Programming & Greedy (6)](#dynamic-programming--greedy-6)
+- [Complexity & Analysis (4)](#complexity--analysis-4)
 
 <!-- TOC END -->
 
 ---
 
 ## Sorting Algorithms (20)
+
+### Sorting Algorithms (19)
 
 1. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)], [Combined Bank Assistant Programmer 09.02.2024 compact it 20 (ET: BIBM)]*  
    (a) Insertion sort  
@@ -106,16 +110,7 @@
    answer: a — Bubble sort  
    explanation: The sequence is tiny and almost sorted, and bubble sort with an early-exit flag finishes such input in about O(n) passes with no recursion overhead.
 
-11. **Which of the following techniques is popular for Data Compression?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*  
-   a) Alpha-Beta pruning  
-   b) Checksum  
-   c) Huffman Coding  
-   d) Red Black Tree
-
-   answer: c — Huffman Coding  
-   explanation: Huffman coding builds a variable-length prefix code that gives short codes to frequent symbols, which is a standard lossless compression technique.
-
-12. **কোন Algorithm টি দ্রুত sorting করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
+11. **কোন Algorithm টি দ্রুত sorting করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Bubble sort  
    B) Selection sort  
    C) Quick sort  
@@ -124,7 +119,7 @@
    answer: C — Quick sort  
    explanation: Quick sort averages O(n log n) with small constants and good cache behaviour, so in practice it is faster than the O(n²) bubble, selection and insertion sorts.
 
-13. **Which of the following is not a stable sorting algorithm in its typical implementation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
+12. **Which of the following is not a stable sorting algorithm in its typical implementation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) Selection Sort  
    B) Quick Sort  
    C) Marge sort  
@@ -133,7 +128,7 @@
    answer: B — Quick Sort  
    explanation: Typical in-place quick sort swaps far-apart elements, so equal keys can change relative order; note selection sort is also unstable, so the option set is loose.
 
-14. **You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
+13. **You have to sort 1GB of data with only 100MB of available main memory. Which sorting technique will be more appropriate?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) Heap sort  
    B) Insertion sort  
    C) Quick sort  
@@ -142,7 +137,7 @@
    answer: D — Marge sort  
    explanation: Data far larger than memory is handled by external merge sort, which sorts memory-sized chunks, writes them to disk and merges the runs sequentially.
 
-15. **Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst-case complexity of sorting n numbers using randomized quicksort?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
+14. **Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst-case complexity of sorting n numbers using randomized quicksort?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
    A) \text{O(n)}  
    B) \text{O(n}^2)  
    C) \text{O (n log n)}  
@@ -151,7 +146,7 @@
    answer: B — O(n²)  
    explanation: Random pivots only improve the expected time to O(n log n); the worst case is still O(n²) when every pivot splits off one element.
 
-16. **The complexity of Bubble short algorithm is-** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*  
+15. **The complexity of Bubble short algorithm is-** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*  
    A) O(n)  
    B) O(\log n)  
    C) O(n^2)  
@@ -160,7 +155,7 @@
    answer: C — O(n²)  
    explanation: Bubble sort compares adjacent pairs over n passes of up to n comparisons each, giving O(n²) in average and worst case.
 
-17. **Bubble sort algorithm sorts n data items using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
+16. **Bubble sort algorithm sorts n data items using?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) O(n^2) Comparisons  
    B) O(n) Comparisons  
    C) O(n \log n) Comparisons  
@@ -169,7 +164,7 @@
    answer: A — O(n²) Comparisons  
    explanation: Bubble sort makes about n(n-1)/2 comparisons, which is O(n²).
 
-18. **Quicksort can be categorized as:** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
+17. **Quicksort can be categorized as:** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) Brute force technique  
    B) Divide and conquer  
    C) Greedy algorithm  
@@ -178,7 +173,7 @@
    answer: B — Divide and conquer  
    explanation: Quicksort partitions the array around a pivot and recursively sorts the two parts, so it follows the divide and conquer paradigm.
 
-19. **The complexity of Bubble sort algorithm is-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
+18. **The complexity of Bubble sort algorithm is-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
    A) O(n)  
    B) O(\text{long } n)  
    C) O(n^2)  
@@ -187,7 +182,7 @@
    answer: C — O(n²)  
    explanation: Bubble sort's average and worst case running time is O(n²).
 
-20. **Which is the slowest algorithm?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
+19. **Which is the slowest algorithm?** *[Bangladesh Bank Assistant Programmer 2016 compact it 244 (ET: N/A)]*  
    A) Bubble Sort  
    B) Quick sort  
    C) Heap sort  
@@ -195,6 +190,17 @@
 
    answer: A — Bubble Sort  
    explanation: Bubble sort is O(n²) with heavy adjacent swapping, while quick sort and heap sort run in O(n log n).
+
+### Off-topic / Misplaced (Data Compression) (1)
+
+1. **Which of the following techniques is popular for Data Compression?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 156 (ET: DU)]*  
+   a) Alpha-Beta pruning  
+   b) Checksum  
+   c) Huffman Coding  
+   d) Red Black Tree
+
+   answer: c — Huffman Coding  
+   explanation: Huffman coding builds a variable-length prefix code that gives short codes to frequent symbols, which is a standard lossless compression technique.
 
 ## Searching Algorithms (18)
 
@@ -492,6 +498,8 @@
 
 ## Algorithm Design Paradigms (9)
 
+### Algorithm Design Paradigms (5)
+
 1. **Which of the following belongs to the algorithm paradigm?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 26 (ET: BIBM)]*  
    (a) Minimum & Maximum problem  
    (b) Knapsack problem  
@@ -528,34 +536,7 @@
    answer: গ — None of (ক) and (খ)  
    explanation: Both can be written iteratively — Fibonacci with a simple loop, and Tower of Hanoi with an explicit stack — so neither needs recursion.
 
-5. **The step-by-step instruction that solve a problem is called:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
-   A) an algorithm  
-   B) a list  
-   C) a plan  
-   D) a sequential structure
-
-   answer: A — an algorithm  
-   explanation: An algorithm is a finite, ordered set of steps that solves a problem.
-
-6. **The step by step instruction that solved a problem are called ________.** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*  
-   A) An algorithm  
-   B) A list  
-   C) A plan  
-   D) None of the above
-
-   answer: A — An algorithm  
-   explanation: A step-by-step procedure that produces the solution to a problem is by definition an algorithm.
-
-7. **The step by step instructions that solve a problem are called?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
-   A) An algorithm  
-   B) A list  
-   C) A plan  
-   D) None of them
-
-   answer: A — An algorithm  
-   explanation: An algorithm is a finite sequence of well-defined steps that solves a given problem.
-
-8. **Divide and Conquer method is used in-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*  
+5. **Divide and Conquer method is used in-** *[DESCO Assistant Engineer (CSE) 2016 compact it 256 (ET: N/A)]*  
    a. Merge sort  
    b. Bubble sort  
    c. Quick sort  
@@ -564,7 +545,36 @@
    answer: d — Both a & c  
    explanation: Merge sort splits the array and merges sorted halves, and quick sort partitions and recurses; both follow divide and conquer, while bubble sort does not.
 
-9. **What is the name given to the sequence of steps which a computer follows?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
+### Algorithm Fundamentals & Definition (4)
+
+1. **The step-by-step instruction that solve a problem is called:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
+   A) an algorithm  
+   B) a list  
+   C) a plan  
+   D) a sequential structure
+
+   answer: A — an algorithm  
+   explanation: An algorithm is a finite, ordered set of steps that solves a problem.
+
+2. **The step by step instruction that solved a problem are called ________.** *[Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)]*  
+   A) An algorithm  
+   B) A list  
+   C) A plan  
+   D) None of the above
+
+   answer: A — An algorithm  
+   explanation: A step-by-step procedure that produces the solution to a problem is by definition an algorithm.
+
+3. **The step by step instructions that solve a problem are called?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 247 (ET: N/A)]*  
+   A) An algorithm  
+   B) A list  
+   C) A plan  
+   D) None of them
+
+   answer: A — An algorithm  
+   explanation: An algorithm is a finite sequence of well-defined steps that solves a given problem.
+
+4. **What is the name given to the sequence of steps which a computer follows?** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 262 (ET: N/A)]*  
    a. Instructions  
    b. Algorithms  
    c. Flowcharts  
