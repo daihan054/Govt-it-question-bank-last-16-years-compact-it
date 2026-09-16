@@ -1,21 +1,29 @@
 <!-- TOC START -->
 **Table of Contents** — 7 subtopics · 74 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Process Management & Scheduling](#process-management--scheduling-24) | 24 |
-| 2 | [OS Concepts & Multiprogramming](#os-concepts--multiprogramming-16) | 16 |
-| 3 | [Virtual Memory & Paging](#virtual-memory--paging-13) | 13 |
-| 4 | [Linux Commands & Administration](#linux-commands--administration-9) | 9 |
-| 5 | [Deadlock](#deadlock-6) | 6 |
-| 6 | [File Systems & Disk Management](#file-systems--disk-management-4) | 4 |
-| 7 | [Process Synchronization](#process-synchronization-2) | 2 |
+- [Process Management & Scheduling (24)](#process-management--scheduling-24)
+  - [Process States & Scheduling (20)](#process-states--scheduling-20)
+  - [Digital Logic Circuits (1)](#digital-logic-circuits-1)
+  - [Virtual Memory & Paging (1)](#virtual-memory--paging-1)
+  - [File System Mounting (1)](#file-system-mounting-1)
+  - [OS Kernel Concept (1)](#os-kernel-concept-1)
+- [OS Concepts & Multiprogramming (16)](#os-concepts--multiprogramming-16)
+- [Virtual Memory & Paging (13)](#virtual-memory--paging-13)
+- [Linux Commands & Administration (9)](#linux-commands--administration-9)
+  - [Linux/UNIX Commands & Administration (7)](#linuxunix-commands--administration-7)
+  - [Database Roles & Privileges (1)](#database-roles--privileges-1)
+  - [Windows Networking Utilities (1)](#windows-networking-utilities-1)
+- [Deadlock (6)](#deadlock-6)
+- [File Systems & Disk Management (4)](#file-systems--disk-management-4)
+- [Process Synchronization (2)](#process-synchronization-2)
 
 <!-- TOC END -->
 
 ---
 
 ## Process Management & Scheduling (24)
+
+### Process States & Scheduling (20)
 
 1. **A process needs I/O operations, it switches to _____** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*  
    (a) Ready  
@@ -59,7 +67,87 @@
    (c) Shortest Job First Scheduling  
    (d) None of the above
 
-8. **A jet Aircraft employs a system for monitoring the rpm, pressure and temperature values of its engines using sensors that operate as follows:** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*  
+8. **What is the disadvantage of multithreading?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
+   a) Share the same address space  
+   b) Simultaneous access to multiple application  
+   c) Low cost communication  
+   d) Difficulty in managing concurrency
+
+9. **The time needs from the process arrival to the completion of that process is called** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
+   a) Waiting time  
+   b) Response time  
+   c) Turnaround time  
+   d) Throughput
+
+10. **Which is not the state of a process in an Operating System?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
+   a) New  
+   b) Sleep  
+   c) Terminated  
+   d) Ready
+
+11. **The maximum number of processes that can be in ready state in computer system with n CPU's is—** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
+   A) n  
+   B) \text{n}^2  
+   C) 2n  
+   D) independent of n
+
+12. **In UNIX, processes that have finished execution but have not yet had their status collected are known as-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
+   A) Sleeping processes  
+   B) Stopped processes  
+   C) Zombie processes  
+   D) Orphan processes
+
+13. **Which of the following process scheduling algorithm may lead to starvation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*  
+   A) FIFO  
+   B) Round Robin  
+   C) Shortest Job Next  
+   D) None of these
+
+14. **A common representation of process scheduling is -** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
+   (a) Static diagram  
+   (b) Scheduling queues  
+   (c) Queuing diagram  
+   (d) Process control block
+
+15. **The scheduling queue is generally stored as-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
+   (a) A liner array  
+   (b) A stack  
+   (c) A linked list  
+   (d) A tree
+
+16. **To execute a program, an OS creates a number of ________, each one for, running a different program.** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*  
+   (a) Processors  
+   (b) Threads  
+   (c) Virtual processors  
+   (d) Kernel
+
+17. **What is long term scheduling?** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
+   A) It selects which process has to be brought into the ready queue  
+   B) It selects which process has to be executed next and allocates CPU  
+   C) It selects which process to remove from memory by swapping  
+   D) It selects which process needs to be killed next
+
+18. **Multi-Threaded programs are-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
+   A) Lesser prone to deadlocks  
+   B) more prone to deadlocks  
+   C) not at all prone to deadlock  
+   D) always results in deadlocks
+
+19. **The interval from the time of submission of a process to the time of completion is termed is ________.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
+   A) Waiting time  
+   B) processing time  
+   C) turnaround time  
+   D) throughput
+
+20. **Which of the following is not the state of a process in process Control Block (PCB)?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
+   A) Old  
+   B) New  
+   C) waiting  
+   D) Running
+
+### Digital Logic Circuits (1)
+
+1. **A jet Aircraft employs a system for monitoring the rpm, pressure and temperature values of its engines using sensors that operate as follows:** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*  
    RPM sensor (R) output = 0 only when \text{speed} < 4800\text{rpm}  
    Pressure sensor (P) output = 0 only when \text{pressure} < 220\text{ psi}  
    Temperature sensor (T) output = 0 only when \text{temperature} < 200^{\circ}\text{F}  
@@ -81,101 +169,29 @@
    c) Option (a) and (b)  
    d) d) None of the above
 
-9. **What is the disadvantage of multithreading?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
-   a) Share the same address space  
-   b) Simultaneous access to multiple application  
-   c) Low cost communication  
-   d) Difficulty in managing concurrency
+### Virtual Memory & Paging (1)
 
-10. **The time needs from the process arrival to the completion of that process is called** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
-   a) Waiting time  
-   b) Response time  
-   c) Turnaround time  
-   d) Throughput
-
-11. **Which is not the state of a process in an Operating System?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
-   a) New  
-   b) Sleep  
-   c) Terminated  
-   d) Ready
-
-12. **The maximum number of processes that can be in ready state in computer system with n CPU's is—** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 204 (ET: AUST)]*  
-   A) n  
-   B) \text{n}^2  
-   C) 2n  
-   D) independent of n
-
-13. **In UNIX, processes that have finished execution but have not yet had their status collected are known as-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
-   A) Sleeping processes  
-   B) Stopped processes  
-   C) Zombie processes  
-   D) Orphan processes
-
-14. **Which of the following process scheduling algorithm may lead to starvation?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)]*  
-   A) FIFO  
-   B) Round Robin  
-   C) Shortest Job Next  
-   D) None of these
-
-15. **A common representation of process scheduling is -** *[BPSC Assistant Maintenance Engineer 2019 compact it 192 (ET: N/A)]*  
-   (a) Static diagram  
-   (b) Scheduling queues  
-   (c) Queuing diagram  
-   (d) Process control block
-
-16. **The scheduling queue is generally stored as-** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
-   (a) A liner array  
-   (b) A stack  
-   (c) A linked list  
-   (d) A tree
-
-17. **To execute a program, an OS creates a number of ________, each one for, running a different program.** *[BPSC Assistant Maintenance Engineer 2019 compact it 194 (ET: N/A)]*  
-   (a) Processors  
-   (b) Threads  
-   (c) Virtual processors  
-   (d) Kernel
-
-18. **What is long term scheduling?** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
-   A) It selects which process has to be brought into the ready queue  
-   B) It selects which process has to be executed next and allocates CPU  
-   C) It selects which process to remove from memory by swapping  
-   D) It selects which process needs to be killed next
-
-19. **Multi-Threaded programs are-** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
-   A) Lesser prone to deadlocks  
-   B) more prone to deadlocks  
-   C) not at all prone to deadlock  
-   D) always results in deadlocks
-
-20. **When there is a large logical address space, the best way of paging would be ________.** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
+1. **When there is a large logical address space, the best way of paging would be ________.** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) Not to page  
    B) a two-level paging algorithm  
    C) not all prone to deadlock  
    D) all of the above
 
-21. **What is the mounting of file system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
+### File System Mounting (1)
+
+1. **What is the mounting of file system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) creating of a file system  
    B) deleting a file system  
    C) attaching portion of the file system into a directory structure  
    D) removing portion of the file system into a directory structure
 
-22. **The main program in an operating system is called:** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
+### OS Kernel Concept (1)
+
+1. **The main program in an operating system is called:** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) kernel  
    B) file manager  
    C) Directory  
    D) NOS
-
-23. **The interval from the time of submission of a process to the time of completion is termed is ________.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 259 (ET: N/A)]*  
-   A) Waiting time  
-   B) processing time  
-   C) turnaround time  
-   D) throughput
-
-24. **Which of the following is not the state of a process in process Control Block (PCB)?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
-   A) Old  
-   B) New  
-   C) waiting  
-   D) Running
 
 ## OS Concepts & Multiprogramming (16)
 
@@ -357,6 +373,8 @@
 
 ## Linux Commands & Administration (9)
 
+### Linux/UNIX Commands & Administration (7)
+
 1. **User passwords in Linux are stored as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
    (a) Direct text data  
    (b) Encrypted using some sort of hashing function  
@@ -381,7 +399,27 @@
    (c) chmod -X a+x progs  
    (d) chmod -X 222 progs
 
-5. **USER150, USER153 can do certain tasks and USER151, USER152 can also do certain tasks as depicted in the picture. For this reason, two ________ have been created.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*
+5. **In UNIX, the login prompt can be changed by changing the content of the file-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
+   A) gettydefs  
+   B) contrab  
+   C) inittab  
+   D) init
+
+6. **Which of the following UNIX commands allows scheduling a program to be executed at specifies time?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
+   A) nice  
+   B) cron  
+   C) date and time  
+   D) schedule
+
+7. **What command is used to remove files UNIX?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
+   A) dm  
+   B) rm  
+   C) delete  
+   D) erase
+
+### Database Roles & Privileges (1)
+
+1. **USER150, USER153 can do certain tasks and USER151, USER152 can also do certain tasks as depicted in the picture. For this reason, two ________ have been created.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 179 (ET: N/A)]*
    ```
    CREATE                    SELECT                   INSERT
    TABLE                   ON Orders                 ON Orders
@@ -399,25 +437,9 @@
    c) Functions  
    d) Stord Procedures
 
-6. **In UNIX, the login prompt can be changed by changing the content of the file-** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
-   A) gettydefs  
-   B) contrab  
-   C) inittab  
-   D) init
+### Windows Networking Utilities (1)
 
-7. **Which of the following UNIX commands allows scheduling a program to be executed at specifies time?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 205 (ET: AUST)]*  
-   A) nice  
-   B) cron  
-   C) date and time  
-   D) schedule
-
-8. **What command is used to remove files UNIX?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
-   A) dm  
-   B) rm  
-   C) delete  
-   D) erase
-
-9. **You need to determine whether IP information has been assigned to your Windows NT. Which utility should you use?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
+1. **You need to determine whether IP information has been assigned to your Windows NT. Which utility should you use?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
    A) NBTSTAT  
    B) NETSTAT  
    C) IPCONFIG  
