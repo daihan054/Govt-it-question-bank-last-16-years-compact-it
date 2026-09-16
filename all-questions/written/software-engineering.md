@@ -1,23 +1,25 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 156 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-48) | 48 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-41) | 41 |
-| 3 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-14) | 14 |
-| 4 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-13) | 13 |
-| 5 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
-| 6 | [Software Project Management & Organization](#software-project-management--organization-9) | 9 |
-| 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion-5) | 5 |
-| 8 | [Software Cost Estimation & Build vs Buy Decisions](#software-cost-estimation--build-vs-buy-decisions-4) | 4 |
-| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management-4) | 4 |
-| 10 | [Data Flow Diagrams (DFD)](#data-flow-diagrams-dfd-2) | 2 |
-| 11 | [Code Smells & Refactoring](#code-smells--refactoring-2) | 2 |
-| 12 | [Open Source Software & Licensing](#open-source-software--licensing-2) | 2 |
-| 13 | [CI/CD & DevOps Methodologies](#cicd--devops-methodologies-1) | 1 |
-| 14 | [UI/UX Design](#uiux-design-1) | 1 |
-| 15 | [Software Design, Architecture & Patterns](#software-design-architecture--patterns-0) | 0 |
+- [SDLC Phases & Models (48)](#sdlc-phases--models-48)
+- [Software Testing & Evaluation (41)](#software-testing--evaluation-41)
+- [UML Diagrams (Class, Use Case, Sequence) (14)](#uml-diagrams-class-use-case-sequence-14)
+- [Software Architecture & Design Patterns (MVC) (13)](#software-architecture--design-patterns-mvc-13)
+- [Software Requirements Engineering (10)](#software-requirements-engineering-10)
+- [Software Project Management & Organization (9)](#software-project-management--organization-9)
+  - [Project Management & Team Leadership (7)](#project-management--team-leadership-7)
+  - [Version Control & Software Maintenance (2)](#version-control--software-maintenance-2)
+- [Software Design Principles (Coupling & Cohesion) (5)](#software-design-principles-coupling--cohesion-5)
+  - [Software Design Principles (4)](#software-design-principles-4)
+  - [UI Design Mistakes (1)](#ui-design-mistakes-1)
+- [Software Cost Estimation & Build vs Buy Decisions (4)](#software-cost-estimation--build-vs-buy-decisions-4)
+- [IT Governance, Audit & Risk Management (4)](#it-governance-audit--risk-management-4)
+- [Data Flow Diagrams (DFD) (2)](#data-flow-diagrams-dfd-2)
+- [Code Smells & Refactoring (2)](#code-smells--refactoring-2)
+- [Open Source Software & Licensing (2)](#open-source-software--licensing-2)
+- [CI/CD & DevOps Methodologies (1)](#cicd--devops-methodologies-1)
+- [UI/UX Design (1)](#uiux-design-1)
+- [Software Design, Architecture & Patterns (0)](#software-design-architecture--patterns-0)
 
 <!-- TOC END -->
 
@@ -311,6 +313,8 @@
 
 ## Software Project Management & Organization (9)
 
+### Project Management & Team Leadership (7)
+
 1. **সংগঠনিক নির্দেশকগুলো কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **Which you build about real life software project? What problems you faced during that time and how to solve this?** *[Combined Bank Assistant Programmer 09.02.2024 compact it 299 (ET: BIBM)]*
@@ -321,15 +325,19 @@
 
 5. **Assume you are a project manager and your job is to develop an application which is similar to what you have developed is past only larger and complex. The customer has documented the requirements clearly. What team structure would you choose in this case and why?** *[Pubali Bank Limited; Assistant Engineer (SD) 2022 compact it 759 (ET: N/A)]*
 
-6. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+6. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
 
-7. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+7. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
 
-8. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
+### Version Control & Software Maintenance (2)
 
-9. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
+1. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+
+2. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 ## Software Design Principles (Coupling & Cohesion) (5)
+
+### Software Design Principles (4)
 
 1. **Write concepts of Coupling and Cohesion with Example?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
@@ -339,7 +347,9 @@
 
 4. **(খ) Software interface কত প্রকার ও কী কী? Interfacing এর ক্ষেত্রে কী কী error পাওয়া যেতে পারে?** *[Software Assistant Programmer 13.10.2022 compact it 710 (ET: N/A)]*
 
-5. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+### UI Design Mistakes (1)
+
+1. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
 ## Software Cost Estimation & Build vs Buy Decisions (4)
 
