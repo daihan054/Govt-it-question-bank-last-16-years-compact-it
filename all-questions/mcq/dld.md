@@ -1,14 +1,16 @@
 <!-- TOC START -->
 **Table of Contents** — 6 subtopics · 79 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Number Systems & Binary Arithmetic](#number-systems--binary-arithmetic-45) | 45 |
-| 2 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-16) | 16 |
-| 3 | [Sequential Circuits (Flip-Flops)](#sequential-circuits-flip-flops-6) | 6 |
-| 4 | [Digital Logic & Number Systems](#digital-logic--number-systems-6) | 6 |
-| 5 | [Boolean Algebra & Simplification](#boolean-algebra--simplification-4) | 4 |
-| 6 | [Combinational Circuits (MUX, Decoder)](#combinational-circuits-mux-decoder-2) | 2 |
+- [Number Systems & Binary Arithmetic (45)](#number-systems--binary-arithmetic-45)
+- [Logic Gates & Universal Gates (16)](#logic-gates--universal-gates-16)
+  - [Core Logic Gates & Universal Gates (15)](#core-logic-gates--universal-gates-15)
+  - [Off-topic / Misplaced Content (1)](#off-topic--misplaced-content-1)
+- [Sequential Circuits (Flip-Flops) (6)](#sequential-circuits-flip-flops-6)
+- [Digital Logic & Number Systems (6)](#digital-logic--number-systems-6)
+  - [Core Digital Logic & Number Systems (4)](#core-digital-logic--number-systems-4)
+  - [Off-topic / Misplaced Content (2)](#off-topic--misplaced-content-2)
+- [Boolean Algebra & Simplification (4)](#boolean-algebra--simplification-4)
+- [Combinational Circuits (MUX, Decoder) (2)](#combinational-circuits-mux-decoder-2)
 
 <!-- TOC END -->
 
@@ -301,6 +303,8 @@
 
 ## Logic Gates & Universal Gates (16)
 
+### Core Logic Gates & Universal Gates (15)
+
 1. **Which one is a Universal logic gate?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xviii (ET: DU)], [Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)], [Combined Bank Maintenance Engineer 2018 compact it 228 (ET: N/A)], [Sonali Bank Limited Assistant Programmer 2016 compact it 252 (ET: N/A)]*  
    (a) NAND  
    (b) AND  
@@ -331,71 +335,73 @@
    (গ) NOR gate  
    (ঘ) OR gate
 
-6. **What is the name of the following symbol?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
-   a) FET  
-   b) JFET  
-   c) Schottky Diode  
-   d) SCR
-
-7. **In which logic gate output is 1 when all inputs are zero?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
+6. **In which logic gate output is 1 when all inputs are zero?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. AND  
    খ. NAND  
    গ. OR  
    ঘ. NOR
 
-8. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
+7. **A technician testing a logic circuit sees that the output of a particular INVERTER is stuck LOW while its input is pulsing. Which one of the following is the possible reason for this faulty operation?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) The output of the INVERTER is internally grounded  
    b) The output of the INERTER is externally grounded  
    c) The input being driven by output of the INVERTER is internally grounded  
    d) All of the above
 
-9. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
+8. **\overline{A}\overline{B}\overline{C}(\overline{A} + \overline{B} + \overline{C}) Which is the simplified form of this?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
    a) \bar{A} + \bar{B} + \bar{C}  
    b) \bar{A}\bar{B}\bar{C}  
    c) \overline{ABC}  
    d) \overline{A B C}
 
-10. **Write the name of the Gate:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
+9. **Write the name of the Gate:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
    A) NOR  
    B) OR  
    C) NAND  
    D) None
 
-11. **The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
+10. **The OR, XOR & AND functions can be performed by ____ of the computer in a CPU.** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
    A) ALU  
    B) CU  
    C) Memory  
    D) Register
 
-12. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
+11. **Which of the following options is suitable, if A is “10110110”, B is “11100000” and C is “10100000”?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) C=A or B  
    B) C=\bar{A}  
    C) C=\bar{B}  
    D) C=A and B
 
-13. **When two variables are logically compared, the logic gate that tests the equivalence is–** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
+12. **When two variables are logically compared, the logic gate that tests the equivalence is–** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
    A) XNOR  
    B) XOR  
    C) AND  
    D) NOR
 
-14. **Binary circuit elements have** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
+13. **Binary circuit elements have** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
    A) One stable state  
    B) two stable state  
    C) Three stable state  
    D) None of these
 
-15. **Which is the universal gate?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
+14. **Which is the universal gate?** *[BREB Assistant General Manager (IT) 2016 compact it 255 (ET: N/A)]*  
    A) NOR  
    B) AND  
    C) NOT  
    D) OR
 
-16. **NAND gates are preferred over other because these ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
+15. **NAND gates are preferred over other because these ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 271 (ET: N/A)]*  
    a. Have lower function area  
    b. Can be used to make any gate  
    c. Consume least electronic power  
    d. Provide maximum density in a chip
+
+### Off-topic / Misplaced Content (1)
+
+1. **What is the name of the following symbol?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
+   a) FET  
+   b) JFET  
+   c) Schottky Diode  
+   d) SCR
 
 ## Sequential Circuits (Flip-Flops) (6)
 
@@ -453,6 +459,9 @@
    D) ফ্লিপ-ফ্লপ
 
 ## Digital Logic & Number Systems (6)
+
+### Core Digital Logic & Number Systems (4)
+
 1. **When the hexadecimal value ABCD in a 32-bit register is logically shifted right by two bits, which of the following is the resulting value in hexadecimal? [ একটি 32-bit register-এ থাকা hexadecimal মান ABCD কে logically right shift করা হলো 2 bit। তাহলে resulting hexadecimal মান কোনটি হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*  
    (a) 2AF3  
    (b) 6AF3  
@@ -477,13 +486,15 @@
    (c) 100000  
    (d) 111100
 
-5. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree.The binary search tree uses the usual ordering on natural numbers.What is the in-order traversal sequence of the resultant tree?[ যদি ৭, ৫, ১, ৮, ৩, ৬, ০, ৯, ৪, ২ সংখ্যাগুলো এই ক্রম অনুযায়ী একটি খালি বাইনারি সার্চ ট্রিতে (BST) প্রবেশ করানো হয়, তবে ইন-অর্ডার ট্রাভার্সাল (In-order traversal) সিকোয়েন্স কী হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
+### Off-topic / Misplaced Content (2)
+
+1. **Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree.The binary search tree uses the usual ordering on natural numbers.What is the in-order traversal sequence of the resultant tree?[ যদি ৭, ৫, ১, ৮, ৩, ৬, ০, ৯, ৪, ২ সংখ্যাগুলো এই ক্রম অনুযায়ী একটি খালি বাইনারি সার্চ ট্রিতে (BST) প্রবেশ করানো হয়, তবে ইন-অর্ডার ট্রাভার্সাল (In-order traversal) সিকোয়েন্স কী হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) 9 8 6 4 2 3 0 1 5 7  
    (b) 0 2 4 3 1 6 5 9 8 7  
    (c) 7 5 1 0 3 2 4 6 8 9  
    (d) 0 1 2 3 4 5 6 7 8 9
 
-6. **A binary search tree is constructed by inserting the numbers: 60, 25, 72, 15, 30, 68, 13, 18 in order. The number of nodes in the left sub tree is [ ৬০, ২৫, ৭২, ১৫, ৩০, ৬৮, ১৩, ১৮ এই সংখ্যাগুলো দিয়ে একটি BST তৈরি করলে বাম সাব-ট্রিতে (Left sub tree) কতটি নোড থাকবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
+2. **A binary search tree is constructed by inserting the numbers: 60, 25, 72, 15, 30, 68, 13, 18 in order. The number of nodes in the left sub tree is [ ৬০, ২৫, ৭২, ১৫, ৩০, ৬৮, ১৩, ১৮ এই সংখ্যাগুলো দিয়ে একটি BST তৈরি করলে বাম সাব-ট্রিতে (Left sub tree) কতটি নোড থাকবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) 4  
    (b) 5  
    (c) 6  
