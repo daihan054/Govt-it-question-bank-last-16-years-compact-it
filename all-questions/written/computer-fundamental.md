@@ -1,24 +1,30 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 208 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-114) | 114 |
-| 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
-| 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
-| 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
-| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-10) | 10 |
-| 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
-| 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
-| 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
-| 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion-2) | 2 |
-| 10 | [User Interfaces (CLI vs GUI)](#user-interfaces-cli-vs-gui-1) | 1 |
+- [Computer Fundamentals & Acronyms (114)](#computer-fundamentals--acronyms-114)
+  - [Computer Fundamentals & Acronyms (80)](#computer-fundamentals--acronyms-80)
+  - [Bangla Language (Grammar & Vocabulary) (8)](#bangla-language-grammar--vocabulary-8)
+  - [English Language (Grammar & Usage) (11)](#english-language-grammar--usage-11)
+  - [Mathematics & Aptitude (7)](#mathematics--aptitude-7)
+  - [General Knowledge (Bangladesh & World) (8)](#general-knowledge-bangladesh--world-8)
+- [ICT in Society & Governance (24)](#ict-in-society--governance-24)
+- [Hardware Components & BIOS (CMOS Battery) (24)](#hardware-components--bios-cmos-battery-24)
+- [Software Types & Classification (17)](#software-types--classification-17)
+- [Data Center Infrastructure & Power Management (10)](#data-center-infrastructure--power-management-10)
+- [Blockchain & Emerging Technologies (8)](#blockchain--emerging-technologies-8)
+- [Server Hardware & Enterprise Systems (5)](#server-hardware--enterprise-systems-5)
+- [Quantum Computing & Emerging Technologies (3)](#quantum-computing--emerging-technologies-3)
+- [Digital Banking & Financial Inclusion (2)](#digital-banking--financial-inclusion-2)
+- [User Interfaces (CLI vs GUI) (1)](#user-interfaces-cli-vs-gui-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Computer Fundamentals & Acronyms (114)
+
+### Computer Fundamentals & Acronyms (80)
+
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 2. **নিজের উল্লেখিত সূত্রের নাম রূপ (RAIN, FRAME, NAME, HEART) বিশ্লেষণ করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
@@ -174,76 +180,25 @@
 
 60. **(c) Compare TTL and CMOS logic family in terms of (i) Speed (ii) Noise and (iii) Power consumption.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 76]]*
 
-61. **শুদ্ধ বানান লিখ: স্বায়ত্বশাসন, ব্যাকুল, নীশিথিনী, কুসংস্কার,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+61. **A CPU has 512 pages of each size 2 KB, and total frames = 128. Determine the length of logical and physical addresses (in bits).** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 220-221]]*
 
-62. **বাগধারা: বিড়াল তপস্বী,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+62. **Solve a memory address calculation problem given the number of pages, frames, and page size. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-63. **ইংরেজি -১৫** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+63. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
-64. **Verb correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+64. **Draw a flowchart to print odd numbers from 1 to n.** *[Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4\*10=40; Date: 18 Oct 2025 [bitbox it book 242]]*
 
-65. **Phrase -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+65. **Draw State Diagram for an Online Shopping Website. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
 
-66. **A CPU has 512 pages of each size 2 KB, and total frames = 128. Determine the length of logical and physical addresses (in bits).** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 220-221]]*
+66. **(a) Write a short comparative note on “Static web page” and “Dynamic web page”. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
 
-67. **Solve a memory address calculation problem given the number of pages, frames, and page size. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+67. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
 
-68. **GK: Write short notes on the Rohingya issue — causes and current situation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+68. **(c) You have been given the responsibility of identifying software requirements from a customer who tells you he is too busy to meet with you. What should you do? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 336]]*
 
-69. **উপসর্গ কী? কত প্রকার ও কী কী?-** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+69. **What are the various types of relationships in Database? Define them.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354-355]]*
 
-70. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-71. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-72. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-73. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-74. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-75. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-76. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-77. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-78. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-79. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-80. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-81. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-82. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 1/4 নম্বর কর্তন করা হয়। একজন পরীক্ষার্থী সকল প্রশ্নের উত্তর দিয়ে 65 নম্বর প্রাপ্ত হয়েছে। পরীক্ষার্থী কতগুলো সঠিক এবং কতগুলো ভুল উত্তর দিয়েছিল?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-83. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
-
-84. **Draw a flowchart to print odd numbers from 1 to n.** *[Bangladesh Computer Council (BCC) Post: AP/TW Mark: 4\*10=40; Date: 18 Oct 2025 [bitbox it book 242]]*
-
-85. **Draw State Diagram for an Online Shopping Website. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
-
-86. **এক কথায় প্রকাশ করো: (০২)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 315]]*
-(ক) যা অতিক্রম করা যায় না (খ) দমন করা কষ্টকর যাকে
-
-87. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ১০ শতাংশ বৃদ্ধি পেত, তিনি প্রতি মাসে কত টাকা উপার্জন করতেন? (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
-
-88. **(a+b)^2 = 36 এবং (a-b)^2 = 16 হলে ab এবং (a^2+b^2)-এর মান নির্ণয় কর। (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
-
-89. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
-
-90. **(a) Write a short comparative note on “Static web page” and “Dynamic web page”. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
-
-91. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
-
-92. **(c) You have been given the responsibility of identifying software requirements from a customer who tells you he is too busy to meet with you. What should you do? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 336]]*
-
-93. **What are the various types of relationships in Database? Define them.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354-355]]*
-
-94. **An instrument store gives a 10% discount to all students off the original cost of an instrument. During a back to school sale an additional 15% is taken off the discounted price. James, a student at the local high school, purchases a flute for Tk 306. How much did it originally cost?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
-
-95. **Given a table for person income:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 370]]*
+70. **Given a table for person income:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 370]]*
 __Incomes__
 
 __Tax__
@@ -266,51 +221,110 @@ Above 1000000
 
 a) Write a funtcion using any language that calculates a person tax. b) If three person given income then calculate the tax and display which have the maximum tax.
 
-96. **168.0.1
+71. **168.0.1
 
 ?**
 
-97. **0.0.5
+72. **0.0.5
 
 ?**
 
-98. **0.0.1
+73. **0.0.1
 
 ?**
 
-99. **16.0.10
+74. **16.0.10
 
 ?**
 
-100. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398-399]]*
+75. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398-399]]*
 
-101. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 399]]*
+76. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 399]]*
 
-102. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+77. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
-103. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+78. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
 
-104. **Write the names of three linear and three non-linear data structures. Also, mention which type is more memory efficient — linear or non-linear?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+79. **Write the names of three linear and three non-linear data structures. Also, mention which type is more memory efficient — linear or non-linear?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
-105. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+80. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514-515]]*
 
-106. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+### Bangla Language (Grammar & Vocabulary) (8)
 
-107. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+1. **শুদ্ধ বানান লিখ: স্বায়ত্বশাসন, ব্যাকুল, নীশিথিনী, কুসংস্কার,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 
-108. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+2. **বাগধারা: বিড়াল তপস্বী,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 
-109. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+3. **উপসর্গ কী? কত প্রকার ও কী কী?-** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
-110. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+4. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
-111. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+5. **এক কথায় প্রকাশ করো: (০২)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 315]]*
+(ক) যা অতিক্রম করা যায় না (খ) দমন করা কষ্টকর যাকে
 
-112. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than its original price, then there is a profit of 8%. What is the original price of the product?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+6. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
-113. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514-515]]*
+7. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
-114. **Focus Writing in Bangla “কৃষি, ভূমি ও তথ্যানুযায়ী বাজারজাত”** *[compact it 523]*
+8. **Focus Writing in Bangla “কৃষি, ভূমি ও তথ্যানুযায়ী বাজারজাত”** *[compact it 523]*
+
+### English Language (Grammar & Usage) (11)
+
+1. **ইংরেজি -১৫** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+2. **Verb correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+3. **Phrase -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3\*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+4. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+5. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+6. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+7. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+8. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+9. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+10. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+11. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+### Mathematics & Aptitude (7)
+
+1. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 1/4 নম্বর কর্তন করা হয়। একজন পরীক্ষার্থী সকল প্রশ্নের উত্তর দিয়ে 65 নম্বর প্রাপ্ত হয়েছে। পরীক্ষার্থী কতগুলো সঠিক এবং কতগুলো ভুল উত্তর দিয়েছিল?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+2. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+3. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ১০ শতাংশ বৃদ্ধি পেত, তিনি প্রতি মাসে কত টাকা উপার্জন করতেন? (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+4. **(a+b)^2 = 36 এবং (a-b)^2 = 16 হলে ab এবং (a^2+b^2)-এর মান নির্ণয় কর। (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+5. **An instrument store gives a 10% discount to all students off the original cost of an instrument. During a back to school sale an additional 15% is taken off the discounted price. James, a student at the local high school, purchases a flute for Tk 306. How much did it originally cost?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
+
+6. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+7. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than its original price, then there is a profit of 8%. What is the original price of the product?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+### General Knowledge (Bangladesh & World) (8)
+
+1. **GK: Write short notes on the Rohingya issue — causes and current situation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+2. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+3. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+4. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+5. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+6. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+7. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+
+8. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
 ## ICT in Society & Governance (24)
 
