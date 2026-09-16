@@ -1,18 +1,22 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 128 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-54) | 54 |
-| 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
-| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-11) | 11 |
-| 4 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-11) | 11 |
-| 5 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
-| 6 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
-| 7 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 8 | [Exception Handling](#exception-handling-4) | 4 |
-| 9 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
-| 10 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
+- [OOP Concepts (Inheritance & Polymorphism) (54)](#oop-concepts-inheritance--polymorphism-54)
+- [Java Programming & Methods (18)](#java-programming--methods-18)
+  - [Java/C# Coding Exercises (11)](#javac-coding-exercises-11)
+  - [Java Platform Concepts (JVM/JDK/JRE/GC) (7)](#java-platform-concepts-jvmjdkjregc-7)
+- [Class Design & Object-Oriented Modeling (11)](#class-design--object-oriented-modeling-11)
+- [OOP Concepts (Inheritance, Polymorphism, Encapsulation) (11)](#oop-concepts-inheritance-polymorphism-encapsulation-11)
+  - [OOP Concepts (Polymorphism, Inheritance, Friend Function) (5)](#oop-concepts-polymorphism-inheritance-friend-function-5)
+  - [Basic Programming (Loops & Series) (3)](#basic-programming-loops--series-3)
+  - [Math & Aptitude Problems (2)](#math--aptitude-problems-2)
+  - [General English Essay (1)](#general-english-essay-1)
+- [Output Tracing & Recursion (10)](#output-tracing--recursion-10)
+- [Constructors & Destructors (8)](#constructors--destructors-8)
+- [Encapsulation & Access Modifiers (7)](#encapsulation--access-modifiers-7)
+- [Exception Handling (4)](#exception-handling-4)
+- [C++ OOP Concepts & Friend Functions (3)](#c-oop-concepts--friend-functions-3)
+- [Interfaces & Abstract Classes (2)](#interfaces--abstract-classes-2)
 
 <!-- TOC END -->
 
@@ -4933,6 +4937,8 @@ Answer: What polymorphism is
 
 ## Java Programming & Methods (18)
 
+### Java/C# Coding Exercises (11)
+
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
 Answer: A method that returns a value must declare a `return type` other than `void`, and every path through it must execute a `return` statement.
@@ -5197,153 +5203,7 @@ Answer: The question is `incomplete` — the paper printed only "Write a Java Co
 
    - The structure every Java program must have: a `class`, a `public static void main(String[] args)` entry point, and a file named exactly after the public class. `System.out.println` prints, `Scanner` reads input, and every field should be `private` with public methods giving controlled access.
 
-3. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
-
-Answer: `System.runFinalization()` asks the JVM to run the `finalize()` methods of objects that have been found unreachable and are waiting for finalization.
-
-   What finalization is
-   - `finalize()` is a method inherited from `Object`. Before the garbage collector reclaims an object's memory, the JVM was designed to call the object's `finalize()` once, giving it a last chance to release resources such as a file handle or a socket.
-   ```java
-   class Resource {
-       @Override
-       protected void finalize() throws Throwable {
-           System.out.println("Cleaning up before collection");
-           super.finalize();
-       }
-   }
-   ```
-
-   What runFinalization does
-   ```java
-      System.gc();                 // SUGGEST that garbage collection runs
-      System.runFinalization();    // SUGGEST that pending finalizers run
-   ```
-   - It is only a `request`, never a command. The JVM is free to ignore it, exactly as it may ignore `System.gc()`.
-   - It does not itself collect anything; it only asks that finalizers already queued be executed sooner rather than later.
-   - `Runtime.getRuntime().runFinalization()` is the same call through the Runtime object.
-
-   The order of events
-   ```
-      1. The object becomes unreachable.
-      2. The GC notices it and, if the class overrides finalize(),
-         places it on the FINALIZATION QUEUE instead of freeing it.
-      3. A finalizer thread runs finalize() at some unspecified later time.
-      4. Only on the NEXT collection cycle is the memory actually freed.
-   ```
-   - This is why a finalizable object needs `at least two` GC cycles to disappear.
-
-   Why finalization is deprecated and should not be used
-   ```
-      No guarantee it ever runs. If the program exits first, it never does.
-      No guarantee of WHEN it runs, or in what order.
-      It SLOWS DOWN garbage collection badly - a finalizable object survives
-           an extra cycle and needs an extra thread.
-      An exception thrown inside finalize() is silently swallowed.
-      An object can RESURRECT itself inside finalize() by storing 'this'
-           somewhere reachable, which breaks the collector's assumptions.
-      It has caused real security vulnerabilities (finalizer attacks).
-   ```
-   - `finalize()` was deprecated in `Java 9` and `removed in Java 18`.
-
-   What to use instead
-   ```java
-      // try-with-resources : close() is called automatically, always
-      try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
-          System.out.println(br.readLine());
-      }   // br.close() runs here even if an exception is thrown
-   ```
-   - Implement `AutoCloseable` and let `try-with-resources` handle cleanup, or use `java.lang.ref.Cleaner` for the rare case where a native resource must be released as a safety net.
-
-   - Short answer: `System.runFinalization()` requests that any pending `finalize()` methods be run. It guarantees nothing, and the whole finalization mechanism is deprecated in favour of `try-with-resources`.
-
-4. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
-
-Answer: A `static` method belongs to the `class` itself, not to any object, so it is called through the class name.
-   ```java
-      ClassName.methodName(arguments);
-   ```
-
-   Example
-   ```java
-   class MathUtil {
-
-       static int square(int n) {          // static method
-           return n * n;
-       }
-
-       static double PI = 3.1416;          // static variable
-
-       static double areaOfCircle(double r) {
-           return PI * r * r;
-       }
-   }
-
-   public class Main {
-       public static void main(String[] args) {
-
-           int s = MathUtil.square(5);              // CLASS NAME . METHOD
-           System.out.println(s);                   // 25
-
-           System.out.println(MathUtil.areaOfCircle(3));   // 28.2744
-           System.out.println(MathUtil.PI);                // 3.1416
-       }
-   }
-   ```
-
-   Built-in examples of the same syntax
-   ```java
-      Math.sqrt(25)                 // 5.0
-      Math.max(10, 20)              // 20
-      Integer.parseInt("123")       // 123
-      String.valueOf(45)            // "45"
-      Arrays.sort(myArray)
-      System.currentTimeMillis()
-   ```
-
-   Calling from inside the same class
-   ```java
-   class Demo {
-       static void greet() { System.out.println("Hello"); }
-
-       public static void main(String[] args) {
-           greet();              // no class name needed inside the same class
-           Demo.greet();         // also valid, and clearer
-       }
-   }
-   ```
-
-   Calling through an object — legal but bad practice
-   ```java
-      MathUtil m = new MathUtil();
-      m.square(5);              // COMPILES, but misleading
-   ```
-   - The compiler allows it and simply resolves it to `MathUtil.square(5)`, but it suggests the method belongs to the object when it does not. Most style guides and IDE warnings forbid it.
-
-   Key rules about static methods
-   ```
-      Called by CLASS NAME, no object needed
-      Can access only STATIC variables and other STATIC methods directly
-      CANNOT use 'this' or 'super', because there is no object
-      Cannot be OVERRIDDEN - a subclass method with the same signature
-           HIDES it, and is resolved by the REFERENCE type
-      Can be OVERLOADED normally
-      Loaded when the class is loaded, before any object exists
-      main() is static precisely so the JVM can call it without creating
-           an object first
-   ```
-
-   Why the distinction matters
-   ```java
-   class Counter {
-       static int count = 0;         // ONE copy, shared by all objects
-       int id;                       // one copy PER OBJECT
-
-       Counter() { count++; id = count; }
-   }
-   ```
-   - `Counter.count` belongs to the class; `c1.id` belongs to an object. Using the class name for one and an object reference for the other makes the intent obvious to the reader.
-
-5. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
+3. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 ```java
 Public class Class A {
     Public void m1() {}
@@ -5453,7 +5313,7 @@ Public class class B extends class A {
 
    - The essential distinction to state: `overriding` replaces an instance method and is resolved at run time by the object; `hiding` replaces a static method and is resolved at compile time by the reference type; `overloading` adds a new method beside the old one, since the signatures differ.
 
-6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
+4. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The `static` keyword means a member belongs to the `class itself` rather than to any individual object. There is exactly `one copy`, created when the class is loaded, shared by every object.
 
@@ -5564,7 +5424,7 @@ Answer: (Answered in English, as required for IT topics.) The `static` keyword m
       'static final' makes a constant :  static final double PI = 3.1416;
    ```
 
-7. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
+5. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
 Answer: A `vowel` is one of a, e, i, o, u (in either case); every other alphabetic character is a `consonant`. Digits, spaces and punctuation are neither.
 
@@ -5672,73 +5532,7 @@ Answer: A `vowel` is one of a, e, i, o, u (in either case); every other alphabet
       The loop runs in O(n) time and uses O(1) extra space
    ```
 
-8. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
-
-Answer: The garbage collector is most likely to be invoked when an object becomes `unreachable` and the JVM is under `memory pressure` — that is, when the heap is nearly full and a new allocation cannot be satisfied.
-
-   The main trigger
-   ```
-      A new object is allocated, the young generation (Eden space) is FULL,
-      and the JVM must free space  ->  a MINOR GC runs.
-   ```
-   - This is by far the commonest cause. Garbage collection in Java is `allocation-driven`: it happens because memory is needed, not because objects became garbage.
-
-   Situations that make collection likely
-   - `An object goes out of scope` — a local variable's object becomes unreachable when the method returns.
-   ```java
-      void method() {
-          Student s = new Student();     // created on the heap
-      }                                  // s is now unreachable -> eligible
-   ```
-   - `A reference is set to null`
-   ```java
-      Student s = new Student();
-      s = null;                          // the object is now eligible
-   ```
-   - `A reference is reassigned`
-   ```java
-      Student s = new Student("A");
-      s = new Student("B");              // the first object is now unreachable
-   ```
-   - `An island of isolation` — two objects referring only to each other, with nothing outside referring to either. Both are unreachable, so both are collected. Reference-counting collectors miss this case; Java's reachability-based collector does not.
-   - `The heap is nearly full`, which is the actual trigger for the collector to run.
-   - `System.gc()` or `Runtime.getRuntime().gc()` is called — but this is only a `request`, and the JVM may ignore it entirely. It is considered bad practice.
-
-   Where in the program it is most likely
-   ```
-      Inside a loop that creates many short-lived objects :
-
-           for (int i = 0; i < 1000000; i++) {
-               String s = new String("temp");    // becomes garbage immediately
-           }
-
-      This fills Eden space quickly, so minor collections run repeatedly.
-      Short-lived objects are exactly what the generational collector is
-      designed for, and collecting them is very cheap.
-   ```
-
-   The generational model
-   ```
-      YOUNG generation : Eden + two Survivor spaces
-           Most objects die young, so MINOR GC runs here often and fast.
-
-      OLD generation (tenured)
-           Objects that survive several minor collections are promoted here.
-           MAJOR / FULL GC runs here rarely and is much slower.
-   ```
-
-   What is NOT a trigger
-   ```
-      An object is NOT collected merely because finalize() exists
-      Setting a reference to null does not COLLECT the object; it only makes
-           it eligible
-      System.gc() does not guarantee collection
-      The JVM shutting down does not guarantee finalizers run
-   ```
-
-   - The precise answer: the garbage collector is invoked when `an allocation fails because the heap (usually Eden space) is full`. The objects it then removes are those that have become `unreachable` from any live thread — most often short-lived local objects created inside loops.
-
-9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
+6. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
 
 Answer: The tariff is `slab-wise`: each block of units is charged at its own rate, and only the units above a slab boundary attract the higher rate.
    ```
@@ -5842,7 +5636,7 @@ Answer: The tariff is `slab-wise`: each block of units is charged at its own rat
    - A flat-rate tariff has a discontinuity at the boundary: 100 units costs 400 taka but 101 units costs 555.50 — a jump of 155 taka for one extra unit. The slab-wise method avoids this, which is exactly why real tariffs use it.
    - Validate the input: negative units are meaningless, and the method should reject them.
 
-10. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
+7. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
 Answer: (Answered in English, as required for IT topics.) A complete C# program demonstrating classes, objects, encapsulation and inheritance.
 
@@ -6015,7 +5809,7 @@ Answer: (Answered in English, as required for IT topics.) A complete C# program 
     ```
     - C# is developed by Microsoft and runs on the `.NET` platform. It is very close to Java in design, with properties, `virtual`/`override` and value-type `struct` as its main differences.
 
-11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
+8. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
 
 Answer: The program uses a `class` to hold the customer's data and the billing logic, and an `object` for each customer.
     ```
@@ -6160,162 +5954,7 @@ Answer: The program uses a `class` to hold the customer's data and the billing l
                        the logic beside the data it works on
     ```
 
-12. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
-
-Answer: The three are separate pieces of the Java platform, and they nest inside one another.
-    ```
-       +---------------------------------------------------+
-       |  JDK  (Java Development Kit)                      |
-       |   compiler (javac), debugger, jar, javadoc ...    |
-       |   +-------------------------------------------+   |
-       |   |  JRE  (Java Runtime Environment)          |   |
-       |   |   class libraries (rt.jar), property files|   |
-       |   |   +-----------------------------------+   |   |
-       |   |   |  JVM  (Java Virtual Machine)      |   |   |
-       |   |   |   class loader, bytecode verifier,|   |   |
-       |   |   |   interpreter, JIT, GC            |   |   |
-       |   |   +-----------------------------------+   |   |
-       |   +-------------------------------------------+   |
-       +---------------------------------------------------+
-
-       JDK = JRE + development tools
-       JRE = JVM + class libraries
-    ```
-
-    JVM — Java Virtual Machine
-    - An `abstract machine` that actually `executes` the bytecode. It is a `specification`, and different vendors provide different implementations (HotSpot, OpenJ9).
-    - It is `platform dependent` — a separate JVM exists for Windows, Linux and macOS — and this is exactly what makes `Java itself platform independent`.
-    ```
-       Main components :
-          Class loader     : loads .class files into memory
-          Bytecode verifier: checks the code is safe and well formed
-          Runtime areas    : method area, heap, stacks, PC register
-          Execution engine : interpreter + JIT compiler
-          Garbage collector: reclaims unreachable objects
-    ```
-    - It cannot compile source code and cannot run a program on its own; it needs the libraries.
-
-    JRE — Java Runtime Environment
-    - The `JVM plus the standard class libraries` and supporting files needed to `run` a Java application.
-    - It is what an `end user` installs to run a Java program. It cannot compile anything.
-    ```
-       JRE = JVM + java.lang, java.util, java.io, java.net ... + property files
-    ```
-
-    JDK — Java Development Kit
-    - The `JRE plus the development tools` needed to `write and build` Java programs.
-    - It is what a `developer` installs.
-    ```
-       Tools included :
-          javac     : the compiler, .java -> .class bytecode
-          java      : launcher, runs a program
-          javadoc   : generates documentation
-          jar       : packages classes into a .jar archive
-          jdb       : debugger
-          javap     : disassembler
-    ```
-
-    Comparison
-
-    | Point | JDK | JRE | JVM |
-    |---|---|---|---|
-    | Full form | Java Development Kit | Java Runtime Environment | Java Virtual Machine |
-    | Contains | JRE + development tools | JVM + class libraries | Class loader, verifier, engine, GC |
-    | Purpose | Develop and run | Run only | Execute bytecode |
-    | Can compile | `Yes` (javac) | No | No |
-    | Can run a program | Yes | Yes | Only with libraries |
-    | Installed by | Developers | End users | Comes inside the JRE |
-    | Platform dependent | Yes | Yes | Yes |
-    | Physical or abstract | Physical (a set of files) | Physical | `Abstract` — a specification |
-
-    How a program flows through them
-    ```
-       Hello.java
-          |  javac   (JDK tool)
-          v
-       Hello.class  (bytecode - platform INDEPENDENT)
-          |  java    (JRE launcher)
-          v
-       JVM : class loader -> verifier -> interpreter / JIT -> machine code
-          |
-          v
-       Output
-    ```
-
-    - The key idea: bytecode is `written once` and runs on `any` JVM. The platform difference is absorbed by the JVM, not by the program — which is what "write once, run anywhere" means.
-    - From Java 11 onward Oracle no longer ships a separate JRE; the JDK is the single distribution, and `jlink` builds a trimmed runtime when one is needed.
-
-13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
-
-Answer: Java is called `platform independent` because a Java program is compiled once into `bytecode`, and that same bytecode runs unchanged on any operating system that has a `JVM`.
-
-    - The slogan is `WORA` — Write Once, Run Anywhere.
-
-    How it works
-    ```
-       Hello.java          (source code)
-            |
-            |  javac  - the Java compiler
-            v
-       Hello.class         (BYTECODE - platform INDEPENDENT)
-            |
-            +--------------+--------------+
-            |              |              |
-         JVM for        JVM for        JVM for
-         Windows         Linux          macOS
-            |              |              |
-            v              v              v
-       Windows        Linux          macOS
-       machine code   machine code   machine code
-    ```
-    - The `same Hello.class` file is copied to any machine and runs there. Nothing is recompiled.
-
-    The two-stage compilation
-    ```
-       Stage 1 : javac converts source to BYTECODE
-                 - an intermediate instruction set for a virtual machine
-                 - not tied to any real processor
-
-       Stage 2 : the JVM converts bytecode to the NATIVE machine code of
-                 whatever processor it is running on, by interpreting it and
-                 by compiling the hot paths with the JIT compiler
-    ```
-
-    The key point that examiners look for
-    ```
-       JAVA is platform independent.
-       The JVM is platform DEPENDENT.
-
-       A different JVM is written for each operating system and processor.
-       That JVM absorbs all the differences, so the program does not have to.
-    ```
-    - This is the opposite of C or C++, where the compiler produces machine code for one specific platform, and the program must be `recompiled` — often with source changes — for every other one.
-    ```
-       C program   : source -> Windows .exe   (runs only on Windows)
-                     source -> Linux binary   (must be recompiled)
-
-       Java program: source -> ONE .class file (runs on all of them)
-    ```
-
-    What else supports the independence
-    - `Fixed data type sizes.` In Java an `int` is always 32 bits and a `char` always 16 bits, on every platform. In C the size of `int` varies with the compiler and machine.
-    - `Standard class libraries.` `java.io`, `java.net` and the rest behave identically everywhere, so file and network code needs no changes.
-    - `No pointers and no direct memory access`, so a program cannot depend on a particular memory layout.
-    - `Unicode` for characters, so text behaves the same in every locale.
-
-    Limits worth stating honestly
-    ```
-       The JVM itself must be installed, and it is platform specific.
-       Native code called through JNI is NOT portable.
-       File paths, line separators and GUI look-and-feel still differ, so
-            File.separator and System.lineSeparator() must be used rather
-            than hard-coded "\\" or "\n".
-       Performance depends on the JVM implementation.
-    ```
-
-    - So the accurate statement is: Java achieves platform independence by `moving the platform-specific work out of the program and into the JVM`. The program is portable; the runtime is not.
-
-14. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
+9. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
 Answer: The class holds the three properties, and `totalAmount` returns the computed value.
 
@@ -6450,84 +6089,7 @@ Answer: The class holds the three properties, and `totalAmount` returns the comp
        printf with %-15s and %10.2f aligns the output into columns
     ```
 
-15. **Write the full form of following topics:** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
-   i) JAR
-   ii) JRE
-   iii) WAR
-   iv) JDK
-
-    Answer: The four full forms.
-    ```
-       i)   JAR  =  Java ARchive
-       ii)  JRE  =  Java Runtime Environment
-       iii) WAR  =  Web Application aRchive
-       iv)  JDK  =  Java Development Kit
-    ```
-
-    i) JAR — Java Archive
-    - A single compressed file, in ZIP format, that packages `.class` files, images, configuration files and a `MANIFEST.MF` together.
-    - Purpose: distribute a whole library or application as one file, with compression and optional digital signing.
-    ```
-       MyApp.jar
-          +-- META-INF/MANIFEST.MF        (declares the Main-Class)
-          +-- com/example/Main.class
-          +-- com/example/Helper.class
-          +-- resources/logo.png
-    ```
-    ```bash
-       jar cf MyApp.jar *.class          # create
-       java -jar MyApp.jar               # run an executable jar
-    ```
-
-    ii) JRE — Java Runtime Environment
-    - The `JVM plus the standard class libraries` needed to `run` a Java program.
-    - Installed by an `end user`. It cannot compile source code.
-    ```
-       JRE = JVM + java.lang, java.util, java.io, java.net ...
-    ```
-
-    iii) WAR — Web Application Archive
-    - A JAR file with a fixed internal structure, holding a complete `web application`: servlets, JSPs, HTML, CSS, JavaScript and their configuration.
-    - Deployed to a servlet container such as `Tomcat`, `JBoss` or `WebLogic`.
-    ```
-       MyWeb.war
-          +-- index.html , style.css
-          +-- WEB-INF/
-                 +-- web.xml              (deployment descriptor)
-                 +-- classes/             (compiled servlets)
-                 +-- lib/                 (dependency jar files)
-    ```
-    - The related `EAR` (Enterprise Archive) packages several WAR and JAR modules into one enterprise application.
-
-    iv) JDK — Java Development Kit
-    - The `JRE plus the development tools` needed to `write and build` Java programs.
-    - Installed by a `developer`.
-    ```
-       Tools : javac (compiler) , java (launcher) , javadoc , jar , jdb , javap
-    ```
-
-    How they relate
-    ```
-       JDK = JRE + development tools
-       JRE = JVM + class libraries
-
-       JAR = a package of classes and resources
-       WAR = a JAR with the standard web-application layout
-       EAR = a package of WAR and JAR modules
-    ```
-
-    Comparison of the archive types
-
-    | Point | JAR | WAR |
-    |---|---|---|
-    | Full form | Java Archive | Web Application Archive |
-    | Contains | Classes, resources, manifest | Servlets, JSP, HTML, CSS, `WEB-INF` |
-    | Structure | Free | Fixed — `WEB-INF` is required |
-    | Deployed to | Any JVM | A servlet container (Tomcat, JBoss) |
-    | Runs standalone | Yes, with `Main-Class` | No — needs a web server |
-    | Used for | Libraries and desktop applications | Web applications |
-
-16. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
+10. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
 ```text
 1
 1 2
@@ -6662,7 +6224,7 @@ Answer: The class holds the three properties, and `totalAmount` returns the comp
             to walk a jagged array
     ```
 
-17. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
+11. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
 
 Answer: `Camel case` writes the first word in lower case and capitalises the first letter of every following word, with all spaces removed.
     ```
@@ -6778,7 +6340,453 @@ Answer: `Camel case` writes the first word in lower case and capitalises the fir
             interview question.
     ```
 
-18. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
+### Java Platform Concepts (JVM/JDK/JRE/GC) (7)
+
+1. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+Answer: `System.runFinalization()` asks the JVM to run the `finalize()` methods of objects that have been found unreachable and are waiting for finalization.
+
+   What finalization is
+   - `finalize()` is a method inherited from `Object`. Before the garbage collector reclaims an object's memory, the JVM was designed to call the object's `finalize()` once, giving it a last chance to release resources such as a file handle or a socket.
+   ```java
+   class Resource {
+       @Override
+       protected void finalize() throws Throwable {
+           System.out.println("Cleaning up before collection");
+           super.finalize();
+       }
+   }
+   ```
+
+   What runFinalization does
+   ```java
+      System.gc();                 // SUGGEST that garbage collection runs
+      System.runFinalization();    // SUGGEST that pending finalizers run
+   ```
+   - It is only a `request`, never a command. The JVM is free to ignore it, exactly as it may ignore `System.gc()`.
+   - It does not itself collect anything; it only asks that finalizers already queued be executed sooner rather than later.
+   - `Runtime.getRuntime().runFinalization()` is the same call through the Runtime object.
+
+   The order of events
+   ```
+      1. The object becomes unreachable.
+      2. The GC notices it and, if the class overrides finalize(),
+         places it on the FINALIZATION QUEUE instead of freeing it.
+      3. A finalizer thread runs finalize() at some unspecified later time.
+      4. Only on the NEXT collection cycle is the memory actually freed.
+   ```
+   - This is why a finalizable object needs `at least two` GC cycles to disappear.
+
+   Why finalization is deprecated and should not be used
+   ```
+      No guarantee it ever runs. If the program exits first, it never does.
+      No guarantee of WHEN it runs, or in what order.
+      It SLOWS DOWN garbage collection badly - a finalizable object survives
+           an extra cycle and needs an extra thread.
+      An exception thrown inside finalize() is silently swallowed.
+      An object can RESURRECT itself inside finalize() by storing 'this'
+           somewhere reachable, which breaks the collector's assumptions.
+      It has caused real security vulnerabilities (finalizer attacks).
+   ```
+   - `finalize()` was deprecated in `Java 9` and `removed in Java 18`.
+
+   What to use instead
+   ```java
+      // try-with-resources : close() is called automatically, always
+      try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+          System.out.println(br.readLine());
+      }   // br.close() runs here even if an exception is thrown
+   ```
+   - Implement `AutoCloseable` and let `try-with-resources` handle cleanup, or use `java.lang.ref.Cleaner` for the rare case where a native resource must be released as a safety net.
+
+   - Short answer: `System.runFinalization()` requests that any pending `finalize()` methods be run. It guarantees nothing, and the whole finalization mechanism is deprecated in favour of `try-with-resources`.
+
+2. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+Answer: A `static` method belongs to the `class` itself, not to any object, so it is called through the class name.
+   ```java
+      ClassName.methodName(arguments);
+   ```
+
+   Example
+   ```java
+   class MathUtil {
+
+       static int square(int n) {          // static method
+           return n * n;
+       }
+
+       static double PI = 3.1416;          // static variable
+
+       static double areaOfCircle(double r) {
+           return PI * r * r;
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+
+           int s = MathUtil.square(5);              // CLASS NAME . METHOD
+           System.out.println(s);                   // 25
+
+           System.out.println(MathUtil.areaOfCircle(3));   // 28.2744
+           System.out.println(MathUtil.PI);                // 3.1416
+       }
+   }
+   ```
+
+   Built-in examples of the same syntax
+   ```java
+      Math.sqrt(25)                 // 5.0
+      Math.max(10, 20)              // 20
+      Integer.parseInt("123")       // 123
+      String.valueOf(45)            // "45"
+      Arrays.sort(myArray)
+      System.currentTimeMillis()
+   ```
+
+   Calling from inside the same class
+   ```java
+   class Demo {
+       static void greet() { System.out.println("Hello"); }
+
+       public static void main(String[] args) {
+           greet();              // no class name needed inside the same class
+           Demo.greet();         // also valid, and clearer
+       }
+   }
+   ```
+
+   Calling through an object — legal but bad practice
+   ```java
+      MathUtil m = new MathUtil();
+      m.square(5);              // COMPILES, but misleading
+   ```
+   - The compiler allows it and simply resolves it to `MathUtil.square(5)`, but it suggests the method belongs to the object when it does not. Most style guides and IDE warnings forbid it.
+
+   Key rules about static methods
+   ```
+      Called by CLASS NAME, no object needed
+      Can access only STATIC variables and other STATIC methods directly
+      CANNOT use 'this' or 'super', because there is no object
+      Cannot be OVERRIDDEN - a subclass method with the same signature
+           HIDES it, and is resolved by the REFERENCE type
+      Can be OVERLOADED normally
+      Loaded when the class is loaded, before any object exists
+      main() is static precisely so the JVM can call it without creating
+           an object first
+   ```
+
+   Why the distinction matters
+   ```java
+   class Counter {
+       static int count = 0;         // ONE copy, shared by all objects
+       int id;                       // one copy PER OBJECT
+
+       Counter() { count++; id = count; }
+   }
+   ```
+   - `Counter.count` belongs to the class; `c1.id` belongs to an object. Using the class name for one and an object reference for the other makes the intent obvious to the reader.
+
+3. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
+
+Answer: The garbage collector is most likely to be invoked when an object becomes `unreachable` and the JVM is under `memory pressure` — that is, when the heap is nearly full and a new allocation cannot be satisfied.
+
+   The main trigger
+   ```
+      A new object is allocated, the young generation (Eden space) is FULL,
+      and the JVM must free space  ->  a MINOR GC runs.
+   ```
+   - This is by far the commonest cause. Garbage collection in Java is `allocation-driven`: it happens because memory is needed, not because objects became garbage.
+
+   Situations that make collection likely
+   - `An object goes out of scope` — a local variable's object becomes unreachable when the method returns.
+   ```java
+      void method() {
+          Student s = new Student();     // created on the heap
+      }                                  // s is now unreachable -> eligible
+   ```
+   - `A reference is set to null`
+   ```java
+      Student s = new Student();
+      s = null;                          // the object is now eligible
+   ```
+   - `A reference is reassigned`
+   ```java
+      Student s = new Student("A");
+      s = new Student("B");              // the first object is now unreachable
+   ```
+   - `An island of isolation` — two objects referring only to each other, with nothing outside referring to either. Both are unreachable, so both are collected. Reference-counting collectors miss this case; Java's reachability-based collector does not.
+   - `The heap is nearly full`, which is the actual trigger for the collector to run.
+   - `System.gc()` or `Runtime.getRuntime().gc()` is called — but this is only a `request`, and the JVM may ignore it entirely. It is considered bad practice.
+
+   Where in the program it is most likely
+   ```
+      Inside a loop that creates many short-lived objects :
+
+           for (int i = 0; i < 1000000; i++) {
+               String s = new String("temp");    // becomes garbage immediately
+           }
+
+      This fills Eden space quickly, so minor collections run repeatedly.
+      Short-lived objects are exactly what the generational collector is
+      designed for, and collecting them is very cheap.
+   ```
+
+   The generational model
+   ```
+      YOUNG generation : Eden + two Survivor spaces
+           Most objects die young, so MINOR GC runs here often and fast.
+
+      OLD generation (tenured)
+           Objects that survive several minor collections are promoted here.
+           MAJOR / FULL GC runs here rarely and is much slower.
+   ```
+
+   What is NOT a trigger
+   ```
+      An object is NOT collected merely because finalize() exists
+      Setting a reference to null does not COLLECT the object; it only makes
+           it eligible
+      System.gc() does not guarantee collection
+      The JVM shutting down does not guarantee finalizers run
+   ```
+
+   - The precise answer: the garbage collector is invoked when `an allocation fails because the heap (usually Eden space) is full`. The objects it then removes are those that have become `unreachable` from any live thread — most often short-lived local objects created inside loops.
+
+4. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
+
+Answer: The three are separate pieces of the Java platform, and they nest inside one another.
+    ```
+       +---------------------------------------------------+
+       |  JDK  (Java Development Kit)                      |
+       |   compiler (javac), debugger, jar, javadoc ...    |
+       |   +-------------------------------------------+   |
+       |   |  JRE  (Java Runtime Environment)          |   |
+       |   |   class libraries (rt.jar), property files|   |
+       |   |   +-----------------------------------+   |   |
+       |   |   |  JVM  (Java Virtual Machine)      |   |   |
+       |   |   |   class loader, bytecode verifier,|   |   |
+       |   |   |   interpreter, JIT, GC            |   |   |
+       |   |   +-----------------------------------+   |   |
+       |   +-------------------------------------------+   |
+       +---------------------------------------------------+
+
+       JDK = JRE + development tools
+       JRE = JVM + class libraries
+    ```
+
+    JVM — Java Virtual Machine
+    - An `abstract machine` that actually `executes` the bytecode. It is a `specification`, and different vendors provide different implementations (HotSpot, OpenJ9).
+    - It is `platform dependent` — a separate JVM exists for Windows, Linux and macOS — and this is exactly what makes `Java itself platform independent`.
+    ```
+       Main components :
+          Class loader     : loads .class files into memory
+          Bytecode verifier: checks the code is safe and well formed
+          Runtime areas    : method area, heap, stacks, PC register
+          Execution engine : interpreter + JIT compiler
+          Garbage collector: reclaims unreachable objects
+    ```
+    - It cannot compile source code and cannot run a program on its own; it needs the libraries.
+
+    JRE — Java Runtime Environment
+    - The `JVM plus the standard class libraries` and supporting files needed to `run` a Java application.
+    - It is what an `end user` installs to run a Java program. It cannot compile anything.
+    ```
+       JRE = JVM + java.lang, java.util, java.io, java.net ... + property files
+    ```
+
+    JDK — Java Development Kit
+    - The `JRE plus the development tools` needed to `write and build` Java programs.
+    - It is what a `developer` installs.
+    ```
+       Tools included :
+          javac     : the compiler, .java -> .class bytecode
+          java      : launcher, runs a program
+          javadoc   : generates documentation
+          jar       : packages classes into a .jar archive
+          jdb       : debugger
+          javap     : disassembler
+    ```
+
+    Comparison
+
+    | Point | JDK | JRE | JVM |
+    |---|---|---|---|
+    | Full form | Java Development Kit | Java Runtime Environment | Java Virtual Machine |
+    | Contains | JRE + development tools | JVM + class libraries | Class loader, verifier, engine, GC |
+    | Purpose | Develop and run | Run only | Execute bytecode |
+    | Can compile | `Yes` (javac) | No | No |
+    | Can run a program | Yes | Yes | Only with libraries |
+    | Installed by | Developers | End users | Comes inside the JRE |
+    | Platform dependent | Yes | Yes | Yes |
+    | Physical or abstract | Physical (a set of files) | Physical | `Abstract` — a specification |
+
+    How a program flows through them
+    ```
+       Hello.java
+          |  javac   (JDK tool)
+          v
+       Hello.class  (bytecode - platform INDEPENDENT)
+          |  java    (JRE launcher)
+          v
+       JVM : class loader -> verifier -> interpreter / JIT -> machine code
+          |
+          v
+       Output
+    ```
+
+    - The key idea: bytecode is `written once` and runs on `any` JVM. The platform difference is absorbed by the JVM, not by the program — which is what "write once, run anywhere" means.
+    - From Java 11 onward Oracle no longer ships a separate JRE; the JDK is the single distribution, and `jlink` builds a trimmed runtime when one is needed.
+
+5. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+
+Answer: Java is called `platform independent` because a Java program is compiled once into `bytecode`, and that same bytecode runs unchanged on any operating system that has a `JVM`.
+
+    - The slogan is `WORA` — Write Once, Run Anywhere.
+
+    How it works
+    ```
+       Hello.java          (source code)
+            |
+            |  javac  - the Java compiler
+            v
+       Hello.class         (BYTECODE - platform INDEPENDENT)
+            |
+            +--------------+--------------+
+            |              |              |
+         JVM for        JVM for        JVM for
+         Windows         Linux          macOS
+            |              |              |
+            v              v              v
+       Windows        Linux          macOS
+       machine code   machine code   machine code
+    ```
+    - The `same Hello.class` file is copied to any machine and runs there. Nothing is recompiled.
+
+    The two-stage compilation
+    ```
+       Stage 1 : javac converts source to BYTECODE
+                 - an intermediate instruction set for a virtual machine
+                 - not tied to any real processor
+
+       Stage 2 : the JVM converts bytecode to the NATIVE machine code of
+                 whatever processor it is running on, by interpreting it and
+                 by compiling the hot paths with the JIT compiler
+    ```
+
+    The key point that examiners look for
+    ```
+       JAVA is platform independent.
+       The JVM is platform DEPENDENT.
+
+       A different JVM is written for each operating system and processor.
+       That JVM absorbs all the differences, so the program does not have to.
+    ```
+    - This is the opposite of C or C++, where the compiler produces machine code for one specific platform, and the program must be `recompiled` — often with source changes — for every other one.
+    ```
+       C program   : source -> Windows .exe   (runs only on Windows)
+                     source -> Linux binary   (must be recompiled)
+
+       Java program: source -> ONE .class file (runs on all of them)
+    ```
+
+    What else supports the independence
+    - `Fixed data type sizes.` In Java an `int` is always 32 bits and a `char` always 16 bits, on every platform. In C the size of `int` varies with the compiler and machine.
+    - `Standard class libraries.` `java.io`, `java.net` and the rest behave identically everywhere, so file and network code needs no changes.
+    - `No pointers and no direct memory access`, so a program cannot depend on a particular memory layout.
+    - `Unicode` for characters, so text behaves the same in every locale.
+
+    Limits worth stating honestly
+    ```
+       The JVM itself must be installed, and it is platform specific.
+       Native code called through JNI is NOT portable.
+       File paths, line separators and GUI look-and-feel still differ, so
+            File.separator and System.lineSeparator() must be used rather
+            than hard-coded "\\" or "\n".
+       Performance depends on the JVM implementation.
+    ```
+
+    - So the accurate statement is: Java achieves platform independence by `moving the platform-specific work out of the program and into the JVM`. The program is portable; the runtime is not.
+
+6. **Write the full form of following topics:** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
+   i) JAR
+   ii) JRE
+   iii) WAR
+   iv) JDK
+
+    Answer: The four full forms.
+    ```
+       i)   JAR  =  Java ARchive
+       ii)  JRE  =  Java Runtime Environment
+       iii) WAR  =  Web Application aRchive
+       iv)  JDK  =  Java Development Kit
+    ```
+
+    i) JAR — Java Archive
+    - A single compressed file, in ZIP format, that packages `.class` files, images, configuration files and a `MANIFEST.MF` together.
+    - Purpose: distribute a whole library or application as one file, with compression and optional digital signing.
+    ```
+       MyApp.jar
+          +-- META-INF/MANIFEST.MF        (declares the Main-Class)
+          +-- com/example/Main.class
+          +-- com/example/Helper.class
+          +-- resources/logo.png
+    ```
+    ```bash
+       jar cf MyApp.jar *.class          # create
+       java -jar MyApp.jar               # run an executable jar
+    ```
+
+    ii) JRE — Java Runtime Environment
+    - The `JVM plus the standard class libraries` needed to `run` a Java program.
+    - Installed by an `end user`. It cannot compile source code.
+    ```
+       JRE = JVM + java.lang, java.util, java.io, java.net ...
+    ```
+
+    iii) WAR — Web Application Archive
+    - A JAR file with a fixed internal structure, holding a complete `web application`: servlets, JSPs, HTML, CSS, JavaScript and their configuration.
+    - Deployed to a servlet container such as `Tomcat`, `JBoss` or `WebLogic`.
+    ```
+       MyWeb.war
+          +-- index.html , style.css
+          +-- WEB-INF/
+                 +-- web.xml              (deployment descriptor)
+                 +-- classes/             (compiled servlets)
+                 +-- lib/                 (dependency jar files)
+    ```
+    - The related `EAR` (Enterprise Archive) packages several WAR and JAR modules into one enterprise application.
+
+    iv) JDK — Java Development Kit
+    - The `JRE plus the development tools` needed to `write and build` Java programs.
+    - Installed by a `developer`.
+    ```
+       Tools : javac (compiler) , java (launcher) , javadoc , jar , jdb , javap
+    ```
+
+    How they relate
+    ```
+       JDK = JRE + development tools
+       JRE = JVM + class libraries
+
+       JAR = a package of classes and resources
+       WAR = a JAR with the standard web-application layout
+       EAR = a package of WAR and JAR modules
+    ```
+
+    Comparison of the archive types
+
+    | Point | JAR | WAR |
+    |---|---|---|
+    | Full form | Java Archive | Web Application Archive |
+    | Contains | Classes, resources, manifest | Servlets, JSP, HTML, CSS, `WEB-INF` |
+    | Structure | Free | Fixed — `WEB-INF` is required |
+    | Deployed to | Any JVM | A servlet container (Tomcat, JBoss) |
+    | Runs standalone | Yes, with `Main-Class` | No — needs a web server |
+    | Used for | Libraries and desktop applications | Web applications |
+
+7. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
 
 Answer: The `JVM (Java Virtual Machine)` is an abstract machine that loads, verifies and executes Java bytecode. It is a `specification`, implemented by HotSpot, OpenJ9 and others.
 
@@ -8261,6 +8269,8 @@ Answer: `MountBike` extends `Bicycle`, so it inherits `speed`, `gear` and `cost`
 
 ## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (11)
 
+### OOP Concepts (Polymorphism, Inheritance, Friend Function) (5)
+
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
 class myclass \{
 
@@ -8389,29 +8399,7 @@ public:
 
    - Disadvantage: it `breaks encapsulation` deliberately. Every friend is a hole in the class's wall, so friends should be few, named explicitly and used only where a member function genuinely cannot do the job. Java has no equivalent at all.
 
-2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
-
-Answer:
-
-    | Feature | while Loop | do-while Loop |
-    |---|---|---|
-    | Loop Type | Entry-Controlled Loop (Pre-test) | Exit-Controlled Loop (Post-test) |
-    | Condition Check | Condition is evaluated before executing the loop body | Condition is evaluated after executing the loop body |
-    | Minimum Execution | 0 times (If condition is initially false, body never executes) | At least 1 time (Body always executes once before testing condition) |
-    | Semicolon Syntax | No semicolon after condition: `while (condition) { ... }` | Semicolon required at end: `do { ... } while (condition);` |
-    | Primary Use Case | When exact iteration count depends on dynamic preconditions | When user input or menu selection must be prompted at least once |
-
-3. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
-Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
-
-Answer:
-    Education is the systematic process of facilitating learning, acquiring knowledge, and cultivating values. Broadly categorized into formal, informal, and non-formal streams, modern education must transcend rote memorization to fulfill holistic developmental objectives.
-
-    In a rapidly advancing world, vocational and competency-based education are indispensable. Vocational training equips learners with practical technical skills, enhancing employability, self-reliance, and economic productivity. Simultaneously, competency-based learning ensures mastery of demonstrable skills rather than mere theoretical exposure.
-
-    However, material prosperity without ethical foundations breeds societal decline. Moral education, empathy, and civic responsibility must be integrated into curricula. True education balances intellectual capability with moral integrity, harmonizing technological innovation with humanistic values. The ultimate objective of education is the all-round physical, intellectual, moral, and spiritual development of an individual, creating responsible global citizens capable of steering societal progress.
-
-4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+2. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
 
 Answer:
     The four fundamental pillars of Object-Oriented Programming (OOP) are:
@@ -8437,33 +8425,7 @@ Answer:
       class Cat extends Animal { @Override void sound() { System.out.println("Meow"); } }
       ```
 
-5. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
-
-Answer:
-    In this series, the difference between consecutive terms increases by 1 each step ($+1, +2, +3, +4, +5, \dots$).
-
-    ```c
-    #include <stdio.h>
-
-    int main(void) {
-        int n; // Number of terms
-        long long sum = 0;
-        long long current_term = 1;
-
-        printf("Enter the number of terms (n): ");
-        scanf("%d", &n);
-
-        for (int i = 1; i <= n; i++) {
-            sum += current_term;
-            current_term += i; // Increment difference by 1 each step
-        }
-
-        printf("Sum of first %d terms = %lld\n", n, sum);
-        return 0;
-    }
-    ```
-
-6. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
+3. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
 
 Answer:
     Polymorphism (Greek for "many forms") is the OOP capability that allows entities such as functions, operators, or objects to behave differently depending on the context or data types passed.
@@ -8478,62 +8440,7 @@ Answer:
     | Inheritance | Does not require inheritance | Strictly requires class inheritance and virtual methods |
     | Example | `int add(int a, int b)` vs `double add(double a, double b)` | `Animal a = new Dog(); a.sound();` |
 
-7. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-Answer:
-    Step 1: Set up equations:
-    - Let initial number of boys $= 2x$ and initial number of girls $= 3x$.
-    - Total initial people in the classroom $= 2x + 3x = 5x$.
-
-    Step 2: Apply the condition after 3 boys enter:
-    $$\frac{2x + 3}{3x} = \frac{3}{4}$$
-
-    Step 3: Solve for $x$:
-    $$4(2x + 3) = 3(3x)$$
-    $$8x + 12 = 9x$$
-    $$9x - 8x = 12 \implies x = 12$$
-
-    Step 4: Find initial count:
-    - Initial Boys $= 2 \times 12 = 24$
-    - Initial Girls $= 3 \times 12 = 36$
-    - Total Initial People $= 24 + 36 = 60$.
-
-    Final Answer: 60 people were in the room at the start.
-
-8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
-a) What is Series? b) Write a program using C/C++ to find n^{th} Fibonacci.
-
-Answer:
-    a) Series:
-    - A series is the cumulative sum of the terms of an ordered sequence of numbers following a specific mathematical rule or recurrence pattern (e.g., Arithmetic, Geometric, or Fibonacci series).
-
-    b) C Program to find $n^{\text{th}}$ Fibonacci Number:
-    ```c
-    #include <stdio.h>
-
-    long long get_nth_fibonacci(int n) {
-        if (n <= 0) return 0;
-        if (n == 1) return 1;
-
-        long long a = 0, b = 1, c;
-        for (int i = 2; i <= n; i++) {
-            c = a + b;
-            a = b;
-            b = c;
-        }
-        return b;
-    }
-
-    int main(void) {
-        int n;
-        printf("Enter n: ");
-        scanf("%d", &n);
-        printf("%d-th Fibonacci number = %lld\n", n, get_nth_fibonacci(n));
-        return 0;
-    }
-    ```
-
-9. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
+4. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
 
 Answer:
     In OOP, Polymorphism enables a single method or interface to perform different actions based on the specific object that invokes it at runtime.
@@ -8570,7 +8477,7 @@ Answer:
     }
     ```
 
-10. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
+5. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
 
 Answer:
     Inheritance is the OOP mechanism where a new class (Subclass/Derived class) acquires the fields and methods of an existing class (Superclass/Base class). It creates an "IS-A" hierarchical relationship and maximizes code reusability.
@@ -8596,7 +8503,104 @@ Answer:
     }
     ```
 
-11. **In a class of 100 students, 80 passed in Bengali, 88 passed in English, and 70 passed in both subjects. How many students failed in both subjects?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+### Basic Programming (Loops & Series) (3)
+
+1. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
+
+Answer:
+
+    | Feature | while Loop | do-while Loop |
+    |---|---|---|
+    | Loop Type | Entry-Controlled Loop (Pre-test) | Exit-Controlled Loop (Post-test) |
+    | Condition Check | Condition is evaluated before executing the loop body | Condition is evaluated after executing the loop body |
+    | Minimum Execution | 0 times (If condition is initially false, body never executes) | At least 1 time (Body always executes once before testing condition) |
+    | Semicolon Syntax | No semicolon after condition: `while (condition) { ... }` | Semicolon required at end: `do { ... } while (condition);` |
+    | Primary Use Case | When exact iteration count depends on dynamic preconditions | When user input or menu selection must be prompted at least once |
+
+2. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
+
+Answer:
+    In this series, the difference between consecutive terms increases by 1 each step ($+1, +2, +3, +4, +5, \dots$).
+
+    ```c
+    #include <stdio.h>
+
+    int main(void) {
+        int n; // Number of terms
+        long long sum = 0;
+        long long current_term = 1;
+
+        printf("Enter the number of terms (n): ");
+        scanf("%d", &n);
+
+        for (int i = 1; i <= n; i++) {
+            sum += current_term;
+            current_term += i; // Increment difference by 1 each step
+        }
+
+        printf("Sum of first %d terms = %lld\n", n, sum);
+        return 0;
+    }
+    ```
+
+3. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
+a) What is Series? b) Write a program using C/C++ to find n^{th} Fibonacci.
+
+Answer:
+    a) Series:
+    - A series is the cumulative sum of the terms of an ordered sequence of numbers following a specific mathematical rule or recurrence pattern (e.g., Arithmetic, Geometric, or Fibonacci series).
+
+    b) C Program to find $n^{\text{th}}$ Fibonacci Number:
+    ```c
+    #include <stdio.h>
+
+    long long get_nth_fibonacci(int n) {
+        if (n <= 0) return 0;
+        if (n == 1) return 1;
+
+        long long a = 0, b = 1, c;
+        for (int i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+
+    int main(void) {
+        int n;
+        printf("Enter n: ");
+        scanf("%d", &n);
+        printf("%d-th Fibonacci number = %lld\n", n, get_nth_fibonacci(n));
+        return 0;
+    }
+    ```
+
+### Math & Aptitude Problems (2)
+
+1. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+Answer:
+    Step 1: Set up equations:
+    - Let initial number of boys $= 2x$ and initial number of girls $= 3x$.
+    - Total initial people in the classroom $= 2x + 3x = 5x$.
+
+    Step 2: Apply the condition after 3 boys enter:
+    $$\frac{2x + 3}{3x} = \frac{3}{4}$$
+
+    Step 3: Solve for $x$:
+    $$4(2x + 3) = 3(3x)$$
+    $$8x + 12 = 9x$$
+    $$9x - 8x = 12 \implies x = 12$$
+
+    Step 4: Find initial count:
+    - Initial Boys $= 2 \times 12 = 24$
+    - Initial Girls $= 3 \times 12 = 36$
+    - Total Initial People $= 24 + 36 = 60$.
+
+    Final Answer: 60 people were in the room at the start.
+
+2. **In a class of 100 students, 80 passed in Bengali, 88 passed in English, and 70 passed in both subjects. How many students failed in both subjects?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
 Answer:
     Step 1: Define Given Values:
@@ -8613,6 +8617,18 @@ Answer:
     $$\text{Failed in both} = n(U) - n(B \cup E) = 100 - 98 = 2$$
 
     Final Answer: 2 students failed in both subjects.
+
+### General English Essay (1)
+
+1. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
+
+Answer:
+    Education is the systematic process of facilitating learning, acquiring knowledge, and cultivating values. Broadly categorized into formal, informal, and non-formal streams, modern education must transcend rote memorization to fulfill holistic developmental objectives.
+
+    In a rapidly advancing world, vocational and competency-based education are indispensable. Vocational training equips learners with practical technical skills, enhancing employability, self-reliance, and economic productivity. Simultaneously, competency-based learning ensures mastery of demonstrable skills rather than mere theoretical exposure.
+
+    However, material prosperity without ethical foundations breeds societal decline. Moral education, empathy, and civic responsibility must be integrated into curricula. True education balances intellectual capability with moral integrity, harmonizing technological innovation with humanistic values. The ultimate objective of education is the all-round physical, intellectual, moral, and spiritual development of an individual, creating responsible global citizens capable of steering societal progress.
 
 ## Output Tracing & Recursion (10)
 
