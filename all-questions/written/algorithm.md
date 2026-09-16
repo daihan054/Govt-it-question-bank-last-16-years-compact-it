@@ -1,23 +1,26 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 144 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Sorting Algorithms & Complexity](#sorting-algorithms--complexity-40) | 40 |
-| 2 | [Graph Traversal Algorithms (BFS & DFS)](#graph-traversal-algorithms-bfs--dfs-17) | 17 |
-| 3 | [Graph Algorithms (Shortest Path & Minimum Spanning Tree)](#graph-algorithms-shortest-path--minimum-spanning-tree-15) | 15 |
-| 4 | [Searching Algorithms](#searching-algorithms-14) | 14 |
-| 5 | [Algorithm Analysis & Asymptotic Complexity](#algorithm-analysis--asymptotic-complexity-14) | 14 |
-| 6 | [Dynamic Programming & Greedy Algorithms](#dynamic-programming--greedy-algorithms-9) | 9 |
-| 7 | [Graph Theory & Isomorphism](#graph-theory--isomorphism-7) | 7 |
-| 8 | [Greedy Algorithms (Fractional Knapsack)](#greedy-algorithms-fractional-knapsack-6) | 6 |
-| 9 | [Searching & Graph Algorithms](#searching--graph-algorithms-6) | 6 |
-| 10 | [Dynamic Programming](#dynamic-programming-5) | 5 |
-| 11 | [Graph Representation (Adjacency Matrix vs List)](#graph-representation-adjacency-matrix-vs-list-4) | 4 |
-| 12 | [Divide and Conquer & Matrix Multiplication](#divide-and-conquer--matrix-multiplication-3) | 3 |
-| 13 | [Heap & Priority Queue](#heap--priority-queue-2) | 2 |
-| 14 | [Huffman Coding & Data Compression](#huffman-coding--data-compression-1) | 1 |
-| 15 | [NP-Completeness & Complexity Reduction](#np-completeness--complexity-reduction-1) | 1 |
+- [Sorting Algorithms & Complexity (40)](#sorting-algorithms--complexity-40)
+- [Graph Traversal Algorithms (BFS & DFS) (17)](#graph-traversal-algorithms-bfs--dfs-17)
+- [Graph Algorithms (Shortest Path & Minimum Spanning Tree) (15)](#graph-algorithms-shortest-path--minimum-spanning-tree-15)
+- [Searching Algorithms (14)](#searching-algorithms-14)
+- [Algorithm Analysis & Asymptotic Complexity (14)](#algorithm-analysis--asymptotic-complexity-14)
+- [Dynamic Programming & Greedy Algorithms (9)](#dynamic-programming--greedy-algorithms-9)
+- [Graph Theory & Isomorphism (7)](#graph-theory--isomorphism-7)
+- [Greedy Algorithms (Fractional Knapsack) (6)](#greedy-algorithms-fractional-knapsack-6)
+- [Searching & Graph Algorithms (6)](#searching--graph-algorithms-6)
+  - [Graph Algorithms (MST) (1)](#graph-algorithms-mst-1)
+  - [Searching Algorithms (1)](#searching-algorithms-1)
+  - [Number Theory Programs (Prime Numbers) (2)](#number-theory-programs-prime-numbers-2)
+  - [General Knowledge (1)](#general-knowledge-1)
+  - [Binary Search Tree Construction (1)](#binary-search-tree-construction-1)
+- [Dynamic Programming (5)](#dynamic-programming-5)
+- [Graph Representation (Adjacency Matrix vs List) (4)](#graph-representation-adjacency-matrix-vs-list-4)
+- [Divide and Conquer & Matrix Multiplication (3)](#divide-and-conquer--matrix-multiplication-3)
+- [Heap & Priority Queue (2)](#heap--priority-queue-2)
+- [Huffman Coding & Data Compression (1)](#huffman-coding--data-compression-1)
+- [NP-Completeness & Complexity Reduction (1)](#np-completeness--complexity-reduction-1)
 
 <!-- TOC END -->
 
@@ -349,17 +352,28 @@ ii) বস্তুগুলো থলিতে রাখার ক্রম ক
 6. **What is the difference between the cost increased in the greedy algorithm and the optimal cost? Show your calculation. [Full question collect সম্ভব হয় নি]** *[RAKUB Programmer (PO) 12.10.2021 compact it 853 (ET: N/A)]*
 
 ## Searching & Graph Algorithms (6)
+
+### Graph Algorithms (MST) (1)
+
 1. **(a) Apply the Krushkal's algorithm for the following graph to find out the cost of the Minimum Spanning Tree (MST).** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 67]]*
 
-2. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
+### Searching Algorithms (1)
 
-3. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
+1. **You are given a sorted array of integers. Write an algorithm using Binary Search to search for a given key element in the array. If the element is found, return its index; otherwise, return -1.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 319]]*
 
-4. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+### Number Theory Programs (Prime Numbers) (2)
 
-5. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
+1. **Write a program that check a number is prime number.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 320-321]]*
 
-6. **Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 384]]*
+2. **Write a C/C++/ Java Program to Print the prime number from 1 to n^\{th\}** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351]]*, *[National Skills Development Authority – NSDA Post: Assistant Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:100 GK:60, T:40 [bitbox it book 378-379]]*
+
+### General Knowledge (1)
+
+1. **BIMSTEC কী? এর সদস্য রাষ্ট্রসমূহের নাম লিখ।** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+### Binary Search Tree Construction (1)
+
+1. **Construct a Binary Search tree using the following set of data: 45, 9, 5, 19, 23, 19, 46, 2, 12, 10.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5\*8=40 [bitbox it book 384]]*
 
 ## Dynamic Programming (5)
 
