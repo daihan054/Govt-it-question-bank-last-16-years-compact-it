@@ -736,9 +736,6 @@
    c. X = A.\bar{B} + \bar{A}.B  
    d. X = (\bar{A} + B).(A + \bar{B})
 
-   answer: c — X = A.B̄ + Ā.B  
-   explanation: Options a, b and d all simplify to the same expression A.B+Ā.B̄ (expanding d gives AB+ĀB̄), so they cannot be the unique correct choice; c (the XOR form) is the only option that stands apart. <!-- verify -->
-
 4. **According to Boolean algebra the value of: (A + AB) \cdot (B + AB) is-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)], [Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)]*  
    A) A  
    B) B  
