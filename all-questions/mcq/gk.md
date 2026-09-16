@@ -1,20 +1,31 @@
 <!-- TOC START -->
 **Table of Contents** — 6 subtopics · 555 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Everyday Science](#everyday-science-194) | 194 |
-| 2 | [Bangladesh Affairs](#bangladesh-affairs-171) | 171 |
-| 3 | [International Affairs](#international-affairs-119) | 119 |
-| 4 | [Geography & Environment](#geography--environment-26) | 26 |
-| 5 | [Power Sector & Energy (Bangladesh)](#power-sector--energy-bangladesh-25) | 25 |
-| 6 | [Sports](#sports-20) | 20 |
+- [Everyday Science (194)](#everyday-science-194)
+  - [Everyday Science (Physics, Chemistry, Biology & Astronomy) (81)](#everyday-science-physics-chemistry-biology--astronomy-81)
+  - [Off-topic / Misplaced — Computer Science & IT Questions (71)](#off-topic--misplaced--computer-science--it-questions-71)
+  - [Off-topic / Misplaced — Bangla Language & Literature (13)](#off-topic--misplaced--bangla-language--literature-13)
+  - [Off-topic / Misplaced — General Knowledge & Current Affairs (12)](#off-topic--misplaced--general-knowledge--current-affairs-12)
+  - [Off-topic / Misplaced — Mathematics & Aptitude (10)](#off-topic--misplaced--mathematics--aptitude-10)
+  - [Off-topic / Misplaced — English Language & Grammar (7)](#off-topic--misplaced--english-language--grammar-7)
+- [Bangladesh Affairs (171)](#bangladesh-affairs-171)
+  - [Bangladesh Affairs (169)](#bangladesh-affairs-169)
+  - [Off-topic / Misplaced (2)](#off-topic--misplaced-2)
+- [International Affairs (119)](#international-affairs-119)
+  - [International Affairs (112)](#international-affairs-112)
+  - [Off-topic / Misplaced (7)](#off-topic--misplaced-7)
+- [Geography & Environment (26)](#geography--environment-26)
+- [Power Sector & Energy (Bangladesh) (25)](#power-sector--energy-bangladesh-25)
+- [Sports (20)](#sports-20)
 
 <!-- TOC END -->
 
 ---
 
 ## Everyday Science (194)
+
+### Everyday Science (Physics, Chemistry, Biology & Astronomy) (81)
+
 1. **ফটোগ্রাফিক প্লেটে আবরণ থাকে-** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. সিলভার ব্রোমাইড  
    খ. সিলভার ফ্লোরাইড  
@@ -404,97 +415,91 @@
    (গ) হাড়ের সাথে জড়িত  
    (ঘ) হার্টের সাথে সম্পর্কিত
 
-62. **নিচের কোনটি সর্বোচ্চ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
-   (ক) ১ গিগাবাইট  
-   (খ) ১০০ মেগাবাইট  
-   (গ) ১০০০ মেগাবাইট  
-   (ঘ) ১০০০০ মেগাবাইট
-
-63. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
+62. **When a beam of light travels through media of two different densities, if the angle of incidence is greater than the critical angle, ____ occurs.** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) Refraction  
    (b) Reflection  
    (c) Incidence  
    (d) Criticism
 
-64. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
+63. **বায়ুমণ্ডলের যে স্তরে বেতার তরঙ্গ প্রতিফলিত হয়-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 110 (ET: N/A)]*  
    (a) স্ট্র্যাটোস্ফিয়ার  
    (b) ট্রপোস্ফিয়ার  
    (c) আয়নোস্ফিয়ার  
    (d) ওজোনস্তর
 
-65. **What is the brightest planet seen from Earth?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
+64. **What is the brightest planet seen from Earth?** *[Northern Electricity Supply Company Limited (NESCO) Assistant Engineer (ICT) 2021 compact it 138 (ET: BUET)]*  
    a) Venus  
    b) Mars  
    c) Mercury  
    d) Jupiter
 
-66. **What is the noun of the extent Rover sent by NASA to the man?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
+65. **What is the noun of the extent Rover sent by NASA to the man?** *[National Security Intelligence (NSI) Assistant Programmer 08.10.2021 compact it 125 (ET: N/A)]*  
    a. Superior  
    b. Opporunity  
    c. Perseverance  
    d. Sprit
 
-67. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
+66. **3\text{N} ও 4\text{N} মানের দুটি বল লম্বভাবে ক্রিয়া করলে লব্ধির মান কত?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 2\text{N}  
    B. 3\text{N}  
    C. 5\text{N}  
    D. 7\text{N}
 
-68. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
+67. **একটি তেজস্ক্রিয় মৌলের অর্ধায়ু ২০০ বছর। মৌলটির ৭৫% ক্ষয় হতে কত বছর লাগবে?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. 150  
    B. 300  
    C. 400  
    D. 450
 
-69. **If an atom loses an e- it will be turned into?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
+68. **If an atom loses an e- it will be turned into?** *[BREB Assistant General Manager (O&M/E&C) 2021 compact it 136 (ET: N/A)]*  
    a) Neutral  
    b) Anion  
    c) Proton  
    d) Cation
 
-70. **'Dry Ice' is produced from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
+69. **'Dry Ice' is produced from;** *[BREB Assistant Enforcement Coordinator 2021 compact it 140 (ET: N/A)]*  
    ক. Oxygen  
    খ. Sulphur di oxide  
    গ. Nitrogen  
    ঘ. Carbon di oxide
 
-71. **DNA is found in;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
+70. **DNA is found in;** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. Chromosome  
    খ. Lissomes  
    গ. Ribosome  
    ঘ. Galel Complex
 
-72. **কোনটি এন্টিবায়োটিক?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
+71. **কোনটি এন্টিবায়োটিক?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
    ক. ইনসুলিন  
    খ. পেপসিন  
    গ. ইথিলিন  
    ঘ. পেনিসিলিন
 
-73. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
+72. **What is the power required by a pump to draw 10 liters of water to a height of 10 meters, every second?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. 980J  
    B. 100 kw  
    C. 900 w  
    D. 960 kw
 
-74. **What kind of energy is stored in a stressed spring?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
+73. **What kind of energy is stored in a stressed spring?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
    A. Potential energy  
    B. Kinetic energy  
    C. Chemical Energy  
    D. thermal energy
 
-75. **Which time of the following properties of a body cannot be changed with an applied force?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
+74. **Which time of the following properties of a body cannot be changed with an applied force?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. length  
    B. mass  
    C. shape  
    D. volume
 
-76. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
+75. **How much force should be exerted on a steel wire of cross-sectional area 0.1\text{cm}^2 in order to double its length? (Y = 2 \times 10^{11}\text{ N/m}^2)** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. 2 \times 10^6\text{ N}  
    B. 2 \times 10^7\text{ N}  
    C. 2 \times 10^8\text{ N}  
    D. 2 \times 10^9\text{ N}
 
-77. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
+76. **What is the angular momentum of the election in the lowest orbit of hydrogen atom?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 202 (ET: IBA)]*  
    A. h  
    B. h/2  
    C. \text{h}/2\pi  
@@ -572,191 +577,144 @@
    গ. বর্ষাকালে
    ঘ. বসন্তকালে
 
-78. **A communication channel has a signal power of P_s = 50\\text\{ mW\} and a noise power of P_n = 5\\text\{ mW\}** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 85]]*  
+77. **কাঁদুনে গ্যাসের অপর নাম কী?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. মিথেন  
+   খ. ইথেন  
+   গ. নাইট্রোজেন  
+   ঘ. ক্লোরোপিক্রিন
+
+78. **কোন যৌগটি ক্যালসিয়াম দাত গঠনে সাহায্য করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. সোডিয়াম কার্বোনেট  
+   খ. সোডিয়াম বাই কার্বোনেট  
+   গ. ক্যালসিয়াম বাই কার্বোনেট  
+   ঘ. ক্যালসিয়াম হাইড্রোক্সাইড
+
+79. **নিউক্লিয়াসে কি থাকে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. নিউট্রন  
+   খ. ইলেকট্রন  
+   গ. প্রোটন ও নিউট্রন  
+   ঘ. ইলেকট্রন ও প্রোটন
+
+80. **রক্তের টিস্যুতে যাকে রক্তকণিকা বলে তা'র নাম?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. লোহিত রক্তকণিকা  
+   খ. শ্বেত রক্তকণিকা  
+   গ. রক্তরস  
+   ঘ. প্লাজমা
+
+81. **Thalassemia is a hereditary disease affecting— [ থ্যালাসেমিয়া কোন রোগকে প্রভাবিত করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
+   (a) Blood  
+   (b) Heart  
+   (c) Kidney  
+   (d) Liver
+
+### Off-topic / Misplaced — Computer Science & IT Questions (71)
+
+1. **নিচের কোনটি সর্বোচ্চ?** *[BCIC Assistant Programmer 2022 compact it 62 (ET: BUET)]*  
+   (ক) ১ গিগাবাইট  
+   (খ) ১০০ মেগাবাইট  
+   (গ) ১০০০ মেগাবাইট  
+   (ঘ) ১০০০০ মেগাবাইট
+
+2. **A communication channel has a signal power of P_s = 50\\text\{ mW\} and a noise power of P_n = 5\\text\{ mW\}** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 85]]*  
    a) Find the Signal-to-Noise Ratio (SNR) in linear form and decibels  
    (dB) .  
    b) If the bandwidth of the channel is B=3 MHz, calculate the channel capacity using Shannon's formula.
 
-79. **Which of the following is a variable-length, letter-and-number error-detection scheme, where on the sender side, the data is appended with the remainder obtained by dividing the data bits by a predetermined polynomial, and on the receiver side, error detection is performed by checking whether the received sequence is divisible by the same polynomial? [ নিচের কোনটি একটি variable-length, অক্ষর ও সংখ্যাভিত্তিক error-detection পদ্ধতি, যেখানে-প্রেরক (sender) পাশে ডাটা বিটকে একটি পূর্বনির্ধারিত polynomial দ্বারা ভাগ করে যে remainder পাওয়া যায় তা ডাটার সাথে যুক্ত করা হয়। গ্রাহক (receiver) পাশে প্রাপ্ত ডাটা একই polynomial দ্বারা ভাগ করে দেখা হয় ডাটা নিঃশেষে বিভাজ্য কি না]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*  
+3. **Which of the following is a variable-length, letter-and-number error-detection scheme, where on the sender side, the data is appended with the remainder obtained by dividing the data bits by a predetermined polynomial, and on the receiver side, error detection is performed by checking whether the received sequence is divisible by the same polynomial? [ নিচের কোনটি একটি variable-length, অক্ষর ও সংখ্যাভিত্তিক error-detection পদ্ধতি, যেখানে-প্রেরক (sender) পাশে ডাটা বিটকে একটি পূর্বনির্ধারিত polynomial দ্বারা ভাগ করে যে remainder পাওয়া যায় তা ডাটার সাথে যুক্ত করা হয়। গ্রাহক (receiver) পাশে প্রাপ্ত ডাটা একই polynomial দ্বারা ভাগ করে দেখা হয় ডাটা নিঃশেষে বিভাজ্য কি না]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 212]]*  
    (a) CRC  
    (b) Hamming code  
    (c) Horizontal parity check  
    (d) Vertical parity check
 
-80. **Which of the following in the RAID configuration for achieving the highest-speed disk access at the cost of reliability? [ নিচের কোন RAID configuration সবচেয়ে বেশি disk access speed প্রদান করে, তবে Reliability( নির্ভরযোগ্যতা) কম থাকে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
+4. **Which of the following in the RAID configuration for achieving the highest-speed disk access at the cost of reliability? [ নিচের কোন RAID configuration সবচেয়ে বেশি disk access speed প্রদান করে, তবে Reliability( নির্ভরযোগ্যতা) কম থাকে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
    (a) RAID 0  
    (b) RAID 1  
    (c) RAID 5  
    (d) RAID 6
 
-81. **For two 8-bit signed integers A and B in 2's complement format, which of the following will cause an overflow when A and B are added? [ দুই 8-bit signed integer A এবং B (2's complement ফরম্যাটে) যোগ করার সময় নিচের কোন ক্ষেত্রে overflow ঘটবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
+5. **For two 8-bit signed integers A and B in 2's complement format, which of the following will cause an overflow when A and B are added? [ দুই 8-bit signed integer A এবং B (2's complement ফরম্যাটে) যোগ করার সময় নিচের কোন ক্ষেত্রে overflow ঘটবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) 0111 1111 and 1111 1110  
    (b) 0111 1111 and 0111 1110  
    (c) 1000 0000 and 0111 0000  
    (d) 1111 1111 and 1111 1111
 
-82. **The following postfix expression is evaluated where A = 14, B = 3, C = 5, and D = 6. What is its result? [ নিচের postfix expression টি evaluate করো, যেখানে A = 4, B = 3, C = 5, D = 6] A B C \\times + D B - C \\times -** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
+6. **The following postfix expression is evaluated where A = 14, B = 3, C = 5, and D = 6. What is its result? [ নিচের postfix expression টি evaluate করো, যেখানে A = 4, B = 3, C = 5, D = 6] A B C \\times + D B - C \\times -** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) -3  
    (b) 0  
    (c) 14  
    (d) 403
 
-83. **Which of the following RAID levels allows data recovery if one disk fails? [ নিচের কোন RAID level এ এক ডিস্ক ব্যর্থ হলে ডাটা পুনরুদ্ধার সম্ভব?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
+7. **Which of the following RAID levels allows data recovery if one disk fails? [ নিচের কোন RAID level এ এক ডিস্ক ব্যর্থ হলে ডাটা পুনরুদ্ধার সম্ভব?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
    (a) RAID 0  
    (b) RAID 1  
    (c) RAID 6  
    (d) RAID 5
 
-84. **Which of the following is a computer architecture where multiple instructions execute in parallel by slightly offsetting the execution of different instructions? [ নিচের কোন কম্পিউটার আর্কিটেকচারে একাধিক instruction parallelভাবে execute হয়, কিন্তু execution কিছুটা offset (অল্প সময়ের ব্যবধান) দিয়ে হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
+8. **Which of the following is a computer architecture where multiple instructions execute in parallel by slightly offsetting the execution of different instructions? [ নিচের কোন কম্পিউটার আর্কিটেকচারে একাধিক instruction parallelভাবে execute হয়, কিন্তু execution কিছুটা offset (অল্প সময়ের ব্যবধান) দিয়ে হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
    (a) RISC  
    (b) Pipeline  
    (c) VLIW  
    (d) Von Neumann Architecture
 
-85. **For a non-negative integer X, which of the following operations gives the remainder after division of X by 8? [ একটি অঋণাত্মক পূর্ণসংখ্যা X-এর জন্য, নিচের কোন অপারেশনটি X কে 8 দিয়ে ভাগ করার পর অবশিষ্ট (remainder) দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
+9. **For a non-negative integer X, which of the following operations gives the remainder after division of X by 8? [ একটি অঋণাত্মক পূর্ণসংখ্যা X-এর জন্য, নিচের কোন অপারেশনটি X কে 8 দিয়ে ভাগ করার পর অবশিষ্ট (remainder) দেয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 216]]*  
    (a) Bitwise AND with 7  
    (b) Bitwise AND with 8  
    (c) Bitwise OR with 8  
    (d) Right shift X by 3 bits
 
-86. **Which of the following correctly describes RAID 5? [ নিচের কোনটি RAID 5-এর সঠিক বর্ণনা?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
+10. **Which of the following correctly describes RAID 5? [ নিচের কোনটি RAID 5-এর সঠিক বর্ণনা?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
    (a) Disk striping without parity  
    (b) Block-level striping with a dedicated parity disk  
    (c) Block-level striping with distributed parity disks  
    (d) Mirroring without parity
 
-87. **A transaction that leaves the database in an inconsistent state if partially executed violates— [কোন transaction database কে inconsistent state-এ ফেলে, যদি এটি partial execute হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
+11. **A transaction that leaves the database in an inconsistent state if partially executed violates— [কোন transaction database কে inconsistent state-এ ফেলে, যদি এটি partial execute হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Atomicity  
    (b) Consistency  
    (c) Isolation  
    (d) Durability
 
-88. **(123.4)_\{10\} = ()_\{16\}?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
+12. **(123.4)_\{10\} = ()_\{16\}?** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
    (a) (7B.4)_\{16\}  
    (b) (7B.6)_\{16\}  
    (c) (7B.8)_\{16\}  
    (d) (7C.6)_\{16\}
 
-89. **If x = 2 and y = 3, what is the value of 2x^2 + 3y^2? [ যদি x = 2 এবং y = 3, তাহলে 2x^2 + 3y^2 কত হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
-   (a) 25  
-   (b) 30  
-   (c) 35  
-   (d) 40
-
-90. **Explain the concepts of:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222-223]]*  
+13. **Explain the concepts of:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222-223]]*  
    a. Reinforcement Learning (RL)  
    b. Deep Learning (DL)  
    c. Federated Learning (FL) Differentiate them in terms of learning method, data usage, and provide one real-world example for each.
 
-91. **Explain the following addressing modes in the 8086 microprocessors:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 225]]*  
+14. **Explain the following addressing modes in the 8086 microprocessors:** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 225]]*  
    a. Direct Addressing  
    b. Immediate Addressing  
    c. Register Addressing Differentiate among them with examples.
 
-92. **(b) Simplify using K-map. F(A,B,C) = A'BC' + A'BC + AB'C' + AB'C + ABC' + ABC** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
+15. **(b) Simplify using K-map. F(A,B,C) = A'BC' + A'BC + AB'C' + AB'C + ABC' + ABC** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
 
-93. **(a) Create an example of a trigger.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+16. **(a) Create an example of a trigger.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
 
-94. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
+17. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
    (a) You are given the network  
    128. 0.0.0/16. You need to create 492 subnets.  
    (i) Calculate the number of hosts per subnet.  
    (ii) Determine the subnet mask.
 
-95. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
+18. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
    (b) Alice wants to send a message to Bob using asymmetric key cryptography.  
    (i) Which key is used for encryption?  
    (ii) Which key is used for decryption?
 
-96. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
+19. **** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 233]]*  
    (a) Given the following traversals of a binary tree: Preorder: 3, 9, 20, 17,  
    6. In order: 9, 3, 17, 20,  
    6. Determine whether a binary tree can be constructed from the given traversals. If possible, construct the tree.
 
-97. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
+20. **(b) Write a real-life example where Depth-First Search (DFS) performs more efficiently than Breadth-First Search (BFS). Why is DFS better in that situation?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 234]]*
 
-98. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
+21. **(b) What is the advantage of the Agile methodology over the Waterfall methodology?** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 235]]*
 
-99. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
-   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?  
-   (02)  
-   (খ) দুটি মহাদেশের অংশ এমন একটি দেশের নাম লিখুন।  
-   (গ) IRRI এর পূর্ণরূপ লিখুন।  
-   (03)
-
-100. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
-   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?  
-   (02)  
-   (খ) পরিবেশ রক্ষায় কোন ধরনের উৎস হতে বিদ্যুৎ উৎপাদনের মনোযোগ দেয়া আবশ্যক বলে আপনি মনে করেন।  
-   (02)
-
-101. **একাধিক স্বাধীন বাক্যকে একটি বাক্যে লিখলে সেগুলোর মাঝখানে কোন চিহ্ন বসে?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
-   (a) হাইফেন  
-   (b) সেমিকোলন  
-   (c) ড্যাশ  
-   (d) কমা
-
-102. **কোনটি অস্তিবাচক বাক্য?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
-   (a) সে কিছুতেই সন্তুষ্ট নয়  
-   (b) দুবারের বেশী ফোন করিনি  
-   (c) আমি অন্য কোথাও যাব না  
-   (d) আপনি আমায় অবিশ্বাস করেছেন
-
-103. **সাদাটে হলুদ বর্ণকে কী বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
-   (a) হলদেটে  
-   (b) ফিকে  
-   (c) পাণ্ডুর  
-   (d) বাসন্তি
-
-104. **Which one of the following is true? [ নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
-   (a) Bangladesh is a lower middle-income country  
-   (b) Bangladesh is a upper middle-income country  
-   (c) Bangladesh is a low-income country  
-   (d) Bangladesh is a high-income country
-
-105. **The Mona Lisa portrait was painted by Leonardo da Vinci in the— [ লিওনার্দো দা ভিঞ্চি মোনালিসা প্রতিকৃতিটি কোন শতাব্দীতে এঁকেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
-   (a) 15th century  
-   (b) 14th century  
-   (c) 16th century  
-   (d) 17th century
-
-106. **Who wrote the book 'Politics'? [ 'Politics' বইটি কে লিখেছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
-   (a) Aristotle  
-   (b) Socrates  
-   (c) Plato  
-   (d) Pythagoras
-
-107. **Pythagoras was a Greek— [ পিথাগোরাস ছিলেন একজন গ্রিক— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
-   (a) Philosopher  
-   (b) Mathematician  
-   (c) Accountant  
-   (d) a & b
-
-108. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Games Championship held in January 2024? [ ২০২৪ সালের জানুয়ারিতে অনুষ্ঠিত ৪৪তম জাতীয় অ্যাথলেটিক্স প্রতিযোগিতায় ১০০ মিটার স্প্রিন্টে দ্রুততম মানবী কে হয়েছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*  
-   (a) Tahmina Rahman  
-   (b) Sonia Akhtar  
-   (c) Sharifa Khatun  
-   (d) Shirin Akhtar
-
-109. **He said, “Can you sing?” And I said, “No.”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*  
-   (a) He asked me that could I sing and I refused.  
-   (b) He asked me if I could sing and I said that I couldn't.  
-   (c) I denied, when he asked me if I could sing.  
-   (d) He asked me if I could sing and I said no.
-
-110. **He said, “Will you listen to such a man?”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*  
-   (a) He asked them will you listen to such a man.  
-   (b) He asked them are you listening to such a man.  
-   (c) He asked them whether they would listen to such a man.  
-   (d) He asked them whether they will listen to such a man.
-
-111. **The following is not a prime number that is divisible only by itself and 1. Which of the following is a not prime number? [ নিচের কোনটি মৌলিক সংখ্যা (Prime Number)? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
-   (a) 2  
-   (b) 7  
-   (c) 99  
-   (d) 181
-
-112. **What will be the output of this C program? [ নিচের C প্রোগ্রামটির আউটপুট কী হবে? ] \#include <stdio.h>
+22. **What will be the output of this C program? [ নিচের C প্রোগ্রামটির আউটপুট কী হবে? ] \#include <stdio.h>
 
 int main() \{
 
@@ -777,7 +735,7 @@ int main() \{
    57. 000000
    (d) The program has errors and will not run.
 
-113. **What is the output of this Java program? [ নিচের Java প্রোগ্রামটির আউটপুট কী হবে? ] class Test \{
+23. **What is the output of this Java program? [ নিচের Java প্রোগ্রামটির আউটপুট কী হবে? ] class Test \{
 
     int i = 1;
 
@@ -799,31 +757,31 @@ public class main\{
    c) 0
    d) A garbage value
 
-114. **Which one is the first high level programming language? [ প্রথম উচ্চ-স্তরের (High level) প্রোগ্রামিং ভাষা কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+24. **Which one is the first high level programming language? [ প্রথম উচ্চ-স্তরের (High level) প্রোগ্রামিং ভাষা কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) C  
    (b) COBOL  
    (c) FORTRAN  
    (d) C++
 
-115. **The time required to search an element in a linked list of length n is— [ n দৈর্ঘ্যের লিঙ্কড লিস্টে কোনো এলিমেন্ট সার্চ করার সময় কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+25. **The time required to search an element in a linked list of length n is— [ n দৈর্ঘ্যের লিঙ্কড লিস্টে কোনো এলিমেন্ট সার্চ করার সময় কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (A) O(log n)  
    (B) O(n)  
    (C) O(1)  
    (D) O(n^2)
 
-116. **The minimum number of fields with each node of doubly linked list is [ ডাবলি লিঙ্কড লিস্টের প্রতিটি নোডে ন্যূনতম ফিল্ড সংখ্যা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+26. **The minimum number of fields with each node of doubly linked list is [ ডাবলি লিঙ্কড লিস্টের প্রতিটি নোডে ন্যূনতম ফিল্ড সংখ্যা কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) 1  
    (B) 2  
    (C) 3  
    (D) 4
 
-117. **IPv6 does not support which of the following addressing mode? [ IPv6 নিচের কোন অ্যাড্রেসিং মোড সমর্থন করে না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+27. **IPv6 does not support which of the following addressing mode? [ IPv6 নিচের কোন অ্যাড্রেসিং মোড সমর্থন করে না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) unicast addressing  
    (B) multicast addressing  
    (C) broadcast addressing  
    (D) anycast addressing
 
-118. **What is the output of this program? [ নিচের প্রোগ্রামের আউটপুট কী হবে? ] \#include <stdio.h>
+28. **What is the output of this program? [ নিচের প্রোগ্রামের আউটপুট কী হবে? ] \#include <stdio.h>
 
 int main() \{
 
@@ -842,7 +800,7 @@ int main() \{
    (C) 4 4 4 4
    (D) 0 0 0 0
 
-119. **Output: [ আউটপুট কী হবে ] \#include <stdio.h>
+29. **Output: [ আউটপুট কী হবে ] \#include <stdio.h>
 
 int main() \{
 
@@ -862,243 +820,42 @@ int main() \{
    (C) A bog negative Number
    (D) Compiler Error
 
-120. **Below relations are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description)** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*  
+30. **Below relations are given, Employee (employee_id, name, salary, department) Leave (employee_id, date, reason, no_leaves) Holiday (Date, description)** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*  
    i. Retrieve the names and salaries of all employees who work in the 'Sales' department.  
    ii. write query to show all employee's leave count.  
    iii. Write query to show employees who are in 'HR' department and have taken at least 5 leaves.
 
-121. **Query.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
+31. **Query.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381]]*
 
-122. **We have a library and library has number of books. Each book has a title, an ISBN number, and an author. You are asked to design a software system for managing a library. The system should be able to keep track of the total number of books in the library and the number of books that have been borrowed.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
+32. **We have a library and library has number of books. Each book has a title, an ISBN number, and an author. You are asked to design a software system for managing a library. The system should be able to keep track of the total number of books in the library and the number of books that have been borrowed.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
 
-123. **In a group there are 100 students. 72 students can speak English and 43 can speak French. Answer the following question.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395]]*  
-   (i) Find no of students who can speak English only.  
-   (ii) Find no of students who can speak French only.  
-   (iii) Find no of students who can speak both.
+33. **Find the shortest path.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395-396]]*
 
-124. **Find the shortest path.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395-396]]*
-
-125. **কাঁদুনে গ্যাসের অপর নাম কী?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. মিথেন  
-   খ. ইথেন  
-   গ. নাইট্রোজেন  
-   ঘ. ক্লোরোপিক্রিন
-
-126. **৩ ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট ০ হলে আউটপুট কত?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+34. **৩ ইনপুট বিশিষ্ট NAND গেট এর একটি ইনপুট ০ হলে আউটপুট কত?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
    ক. ০  
    খ. ১  
    গ. ৩  
    ঘ. কোনটিই নয়
 
-127. **কোন যৌগটি ক্যালসিয়াম দাত গঠনে সাহায্য করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. সোডিয়াম কার্বোনেট  
-   খ. সোডিয়াম বাই কার্বোনেট  
-   গ. ক্যালসিয়াম বাই কার্বোনেট  
-   ঘ. ক্যালসিয়াম হাইড্রোক্সাইড
-
-128. **নিউক্লিয়াসে কি থাকে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. নিউট্রন  
-   খ. ইলেকট্রন  
-   গ. প্রোটন ও নিউট্রন  
-   ঘ. ইলেকট্রন ও প্রোটন
-
-129. **রক্তের টিস্যুতে যাকে রক্তকণিকা বলে তা'র নাম?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. লোহিত রক্তকণিকা  
-   খ. শ্বেত রক্তকণিকা  
-   গ. রক্তরস  
-   ঘ. প্লাজমা
-
-130. **"ইতর-বিশেষ" বলতে বুঝায়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. দুর্বৃত্ত  
-   খ. অপদার্থ  
-   গ. চালাকি  
-   ঘ. পার্থক্য
-
-131. **বড্ড থেকে বড্ড কোন ধরনের পরিবর্তন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. বিষমীভবন  
-   খ. সমীভবন  
-   গ. ব্যঞ্জন বিকৃতি  
-   ঘ. ব্যঞ্জন দ্বিত্ব
-
-132. **যা সহজে উত্তীর্ণ হওয়া যায় না-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. দুর্জয়  
-   খ. দুর্জন  
-   গ. দুস্তর  
-   ঘ. দুর্লভ
-
-133. **বাংলা একাডেমির 'আঞ্চলিক অভিধান' সম্পাদনা কে করেন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. মুহম্মদ শহীদুল্লাহ  
-   খ. মুহম্মদ এনামুল হক  
-   গ. মুহম্মদ মনসুর উদ্দীন  
-   ঘ. মুহম্মদ আবদুল হাই
-
-134. **'তামার বিষ' বাগধারাটির অর্থ কি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. গভীর আঘাত  
-   খ. ধাতব পদার্থের আঘাত  
-   গ. পুরানা ক্ষত  
-   ঘ. অর্থের কুপ্রভাব
-
-135. **William Shakespeare was born in ....** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
-   a. 1546  
-   b. 1564  
-   c. 1616  
-   d. 1761
-
-136. **In a 3-input logic circuit (inputs A, B, and** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 436]]*  
+35. **In a 3-input logic circuit (inputs A, B, and** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 436]]*  
    C) , the output F is 1 if at least two or all three inputs are  
    1.  
    (a) Construct the truth table.  
    (b) Use the truth table to find the POS (Product of Sums) expression using K-map simplification.
 
-137. **‘কালের কলস’ কাব্যগ্রন্থটির রচয়িতা কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
-   ক) আল মাহমুদ  
-   খ) শামসুর রহমান  
-   গ) শহীদ কাদরী  
-   ঘ) রফিক আজাদ
+36. **a) JS Query তে Ajax কেন ব্যবহার করা হয়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
-138. **বাংলা গদ্যে প্রথম যতিচিহ্ন ব্যবহার করেন কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
-   ক) প্রমথ চৌধুরী  
-   খ) রামমোহন রায়  
-   গ) ঈশ্বরচন্দ্র বিদ্যাসাগর  
-   ঘ) রামায়ণ
+37. **b) ১ গিগাবাইট .................... কিলোবাইট** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
 
-139. **Please stop ------ so many mistake.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
-   a) to make  
-   b) make  
-   c) making  
-   d) makes
+38. **ধরুন একটি প্রজেক্ট ডেভেলপমেন্ট করবেন এতে আনুষাঙ্গিক অনেক কিছুই প্রয়োজন। একটি প্রজেক্ট ডেভেলপ করা পরিপূর্ণ ভাবে করা সম্ভব না সে ক্ষেত্রে এর কস্টিং বা বাজেট সাশ্রয়ী করা দরকার এর জন্যে agile বা waterfall প্রজেক্ট ডেভেলপ করার ক্ষেত্রে আপনি কোনটি নির্বাচন করবেন? কেন করবেন ব্যাখ্যা করুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
 
-140. **The price of gold as well as silver ------ risen.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
-   a) is  
-   b) have  
-   c) has  
-   d) are
+39. **মেইল করার জন্যে কোন প্রটোকল ব্যবহার করা হয়?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
-141. **My doctor knew that I would eventually recover and do kind of work "I would be doing" before.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
-   a) would have been doing  
-   b) would have done  
-   c) had been done  
-   d) had been doing
+40. **Cache মেমোরি কি? Cache মেমোরি কম্পিউটারের কোন অংশে আছে? Cache মেমোরি ছোটো হলে অসুবিধা কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
-142. **Sincere work are indispensable ---- our country.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
-   a) for  
-   b) in  
-   c) to  
-   d) of
+41. **নিম্নে অঙ্কিত 4x1 Multiplexer এর আউটপুট লিখুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 477]]*
 
-143. **বেথেলহাম কোথায় অবস্থিত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) তেহরান  
-   খ) থাইল্যান্ড  
-   গ) ফিলিস্তিন  
-   ঘ) জর্দান
-
-144. **10, 17, 19, 25, 30, 32 এর মধ্যক কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) ১৯  
-   খ) ২০  
-   গ) ২১  
-   ঘ) ২২
-
-145. **a - \\\{a - (a + 1)\\\} = ?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) a  
-   খ) 1  
-   গ) a - 1  
-   ঘ) a + 1
-
-146. **একটি রম্বসের কর্ণ 8 মি ও 6 হলে এর ক্ষেত্রফল কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) ৪৮  
-   খ) ২৪  
-   গ) ৬৪  
-   ঘ) ৩৬
-
-147. **a) JS Query তে Ajax কেন ব্যবহার করা হয়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
-
-148. **b) ১ গিগাবাইট .................... কিলোবাইট** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
-
-149. **ধরুন একটি প্রজেক্ট ডেভেলপমেন্ট করবেন এতে আনুষাঙ্গিক অনেক কিছুই প্রয়োজন। একটি প্রজেক্ট ডেভেলপ করা পরিপূর্ণ ভাবে করা সম্ভব না সে ক্ষেত্রে এর কস্টিং বা বাজেট সাশ্রয়ী করা দরকার এর জন্যে agile বা waterfall প্রজেক্ট ডেভেলপ করার ক্ষেত্রে আপনি কোনটি নির্বাচন করবেন? কেন করবেন ব্যাখ্যা করুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
-
-150. **মেইল করার জন্যে কোন প্রটোকল ব্যবহার করা হয়?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
-
-151. **Cache মেমোরি কি? Cache মেমোরি কম্পিউটারের কোন অংশে আছে? Cache মেমোরি ছোটো হলে অসুবিধা কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
-
-152. **নিম্নে অঙ্কিত 4x1 Multiplexer এর আউটপুট লিখুন।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 477]]*
-
-153. **'কথাটা অপূর্ব ঠিক বিশ্বাস করিতে পারিল না'-এটি কোন বাচ্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
-   (a) ভাববাচ্য  
-   (b) কর্তৃবাচ্য  
-   (c) কর্মবাচ্য  
-   (d) কর্মকর্তৃবাচ্য
-
-154. **কোন কবিকে 'নির্জনতার কবি' বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
-   (a) বুদ্ধদেব বসু  
-   (b) বিভূতিভূষণ  
-   (c) কর্মবাস  
-   (d) জসিমউদ্দীন
-
-155. **নিচের কোনটি শুদ্ধ বাক্য?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
-   (a) ইহার আবশ্যকতা নাই  
-   (b) ইহা প্রমাণ হইয়াছে  
-   (c) আমি সন্তোষ হইলাম  
-   (d) তুমি নির্দোষীন
-
-156. **Which underlined part of the following sentence is incorrect? [ নিচের বাক্যটির কোন আন্ডারলাইন করা অংশটি ভুল? ] “I will always remember you standing by me and offering me encouragement.”** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*  
-   (a) I will  
-   (b) always  
-   (c) remember  
-   (d) standing
-
-157. **If \\frac\{x\}\{y\} = \\frac\{1\}\{3\}, then the value of \\frac\{x^2+y^2\}\{x^2-y^2\} is—?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
-   (a) -10/9  
-   (b) 5/4  
-   (c) -5/4  
-   (d) -5/3
-
-158. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together? [ একজন ছাত্র পদার্থবিদ্যা (Physics), রসায়ন (Chemistry) এবং গণিত (Mathematics)—এই তিন বিষয়ের মোট প্রাপ্ত নম্বর রসায়নের প্রাপ্ত নম্বরের চেয়ে ১২০ বেশি। তাহলে পদার্থবিদ্যা ও গণিত—এই দুই বিষয়ের গড় নম্বর কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
-   (a) 40  
-   (b) 60  
-   (c) 120  
-   (d) Cannot be determined
-
-159. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?[ একজন ব্যক্তি কিছু ডিম কিনেছে, যার মধ্যে ১০% নষ্ট। অবশিষ্ট ডিমের ৮০% তিনি প্রতিবেশীদের দেয়। শেষপর্যন্ত তার কাছে ৩৬ ডিম রয়ে যায়। মোট কত ডিম তিনি কিনেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
-   (a) 40  
-   (b) 100  
-   (c) 200  
-   (d) 72
-
-160. **The average temperature for the first 4 days of a week is 40.2°C and that of the last 4 days is 41.3°C. If the average temperature for the whole week is 40.6°C, then temperature on the fourth day is— [ সপ্তাহের প্রথম ৪ দিনের গড় তাপমাত্রা 40.2°C, শেষ ৪ দিনের গড় 41.3°C। পুরো সপ্তাহের গড় = 40.6°C। চতুর্থ দিনের তাপমাত্রা কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
-   (a)  
-   38. 5°C  
-   (b)  
-   41. 8°C  
-   (c)  
-   41. 3°C  
-   (d)  
-   40. 8°C
-
-161. **In 1997, UNESCO declared the “Sundarban” as the?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
-   (a) 798th World Heritage Site  
-   (b) 997th World Heritage Site  
-   (c) 879th World Heritage Site  
-   (d) 789th World Heritage Site
-
-162. **Thalassemia is a hereditary disease affecting— [ থ্যালাসেমিয়া কোন রোগকে প্রভাবিত করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
-   (a) Blood  
-   (b) Heart  
-   (c) Kidney  
-   (d) Liver
-
-163. **Who is the founder of SpaceX?[ SpaceX-এর প্রতিষ্ঠাতা কে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
-   (a) Elon Musk  
-   (b) Eric Yuan  
-   (c) Ray Tomlinson  
-   (d) Larry Page
-
-164. **What is the name of the data center that EU unveils to probe crimes in Ukraine?[ ইউক্রেনে অপরাধ তদন্তের জন্য কোন ডেটা সেন্টার ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
-   (a) Tulip  
-   (b) Metro  
-   (c) Game Changer  
-   (d) None of these
-
-165. **In which flip-flop will be the next output?[ কোন ফ্লিপ-ফ্লপে পরবর্তী আউটপুট (Next Output) নির্ধারিত হবে? ] __D-input__
+42. **In which flip-flop will be the next output?[ কোন ফ্লিপ-ফ্লপে পরবর্তী আউটপুট (Next Output) নির্ধারিত হবে? ] __D-input__
 
 __Q = next output__
 
@@ -1114,85 +871,85 @@ __Q = next output__
    (c) D
    (d) T
 
-166. **Complement of a regular set is—[ একটি Regular Set-এর Complement কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
+43. **Complement of a regular set is—[ একটি Regular Set-এর Complement কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
    (a) CFG  
    (b) Regular  
    (c) CSG  
    (d) None of these
 
-167. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?[ ৬টি একই ধরনের Resource এবং প্রতিটি Process সর্বোচ্চ ২টি Resource চাইতে পারে—কোন N-এ Deadlock হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
+44. **A system has 6 identical resources and N processes competing for them. Each process can request at most 2 resources. Which one of the following values of N could lead to a deadlock?[ ৬টি একই ধরনের Resource এবং প্রতিটি Process সর্বোচ্চ ২টি Resource চাইতে পারে—কোন N-এ Deadlock হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
    (a) 1  
    (b) 2  
    (c) 3  
    (d) 4
 
-168. **A critical section is a program segment—[ ক্রিটিক্যাল সেকশন (Critical section) হলো একটি প্রোগ্রাম সেগমেন্ট— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
+45. **A critical section is a program segment—[ ক্রিটিক্যাল সেকশন (Critical section) হলো একটি প্রোগ্রাম সেগমেন্ট— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) which should run in a certain specified amount of time  
    (b) which avoids deadlocks  
    (c) where shared resources are accessed  
    (d) where semaphore (wait and signal) operations occur
 
-169. **Which of the following describes investigating moral conduct concerning the digital space?[ ডিজিটাল জগতের নৈতিক আচরণ নিয়ে তদন্ত বা আলোচনা করাকে নিচের কোনটি বর্ণনা করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
+46. **Which of the following describes investigating moral conduct concerning the digital space?[ ডিজিটাল জগতের নৈতিক আচরণ নিয়ে তদন্ত বা আলোচনা করাকে নিচের কোনটি বর্ণনা করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) Cyber law  
    (b) Cyber safety  
    (c) Cyber ethics  
    (d) Cyber security
 
-170. **Which AI application involves teaching a computer to perform a task by example rather than through explicit programming?[ কোন AI অ্যাপ্লিকেশনটি প্রোগ্রামিংয়ের বদলে উদাহরণের মাধ্যমে কম্পিউটারকে কাজ শেখানোর সাথে জড়িত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
+47. **Which AI application involves teaching a computer to perform a task by example rather than through explicit programming?[ কোন AI অ্যাপ্লিকেশনটি প্রোগ্রামিংয়ের বদলে উদাহরণের মাধ্যমে কম্পিউটারকে কাজ শেখানোর সাথে জড়িত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
    (a) Supervised learning  
    (b) Reinforced learning  
    (c) Unsupervised learning  
    (d) Machine vision
 
-171. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?[ যদি একটি কম্পিউটার আর অ্যাক্সেস করা না যায়, তবে কোন নীতিটি লঙ্ঘিত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
+48. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?[ যদি একটি কম্পিউটার আর অ্যাক্সেস করা না যায়, তবে কোন নীতিটি লঙ্ঘিত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
    (a) Availability  
    (b) Access control  
    (c) Confidentiality  
    (d) All of the above
 
-172. **What is the process of reducing the dimensionality of data while maintaining its essential characteristics?[ ডেটার প্রয়োজনীয় বৈশিষ্ট্য বজায় রেখে এর ডাইমেনশন কমানোর প্রক্রিয়া কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
+49. **What is the process of reducing the dimensionality of data while maintaining its essential characteristics?[ ডেটার প্রয়োজনীয় বৈশিষ্ট্য বজায় রেখে এর ডাইমেনশন কমানোর প্রক্রিয়া কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) Gradient Boosting  
    (b) K-means clustering  
    (c) Principal Component Analysis  
    (d) Regression
 
-173. **If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called—[ যদি প্রতিটি রিকয়ারমেন্ট একটি সাশ্রয়ী প্রক্রিয়ার মাধ্যমে পরীক্ষা করা যায়, তবে সেই সফটওয়্যার রিকয়ারমেন্ট স্পেসিফিকেশন (SRS)-কে বলা হয়— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
+50. **If every requirement can be checked by a cost-effective process, then software requirement specification (SRS) is called—[ যদি প্রতিটি রিকয়ারমেন্ট একটি সাশ্রয়ী প্রক্রিয়ার মাধ্যমে পরীক্ষা করা যায়, তবে সেই সফটওয়্যার রিকয়ারমেন্ট স্পেসিফিকেশন (SRS)-কে বলা হয়— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) Complete  
    (b) Traceable  
    (c) Verifiable  
    (d) Modifiable
 
-174. **Cyclomatic complexity is a software metric used in—[ সাইক্লোমেটিক কমপ্লেক্সিটি (Cyclomatic complexity) কোন ধরনের সফটওয়্যার মেট্রিক হিসেবে ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
+51. **Cyclomatic complexity is a software metric used in—[ সাইক্লোমেটিক কমপ্লেক্সিটি (Cyclomatic complexity) কোন ধরনের সফটওয়্যার মেট্রিক হিসেবে ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) White box testing  
    (b) Black box testing  
    (c) Grey box testing  
    (d) None of these
 
-175. **How many select line would be there if the inputs of a MUX are 8?[ একটি MUX (Multiplexer)-এর ইনপুট সংখ্যা ৮ হলে সিলেক্ট লাইন কয়টি হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
+52. **How many select line would be there if the inputs of a MUX are 8?[ একটি MUX (Multiplexer)-এর ইনপুট সংখ্যা ৮ হলে সিলেক্ট লাইন কয়টি হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 2  
    (b) 3  
    (c) 4  
    (d) 5
 
-176. **A decoder has four input lines. How many output lines will be there?[ একটি ডিকোডারের চারটি ইনপুট লাইন আছে। এর আউটপুট লাইন কয়টি হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
+53. **A decoder has four input lines. How many output lines will be there?[ একটি ডিকোডারের চারটি ইনপুট লাইন আছে। এর আউটপুট লাইন কয়টি হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 4  
    (b) 8  
    (c) 16  
    (d) 32
 
-177. **What is the lowest number of NAND gates required to make an inverter?[ একটি ইনভার্টার (NOT Gate) তৈরি করতে সর্বনিম্ন কয়টি NAND গেট প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
+54. **What is the lowest number of NAND gates required to make an inverter?[ একটি ইনভার্টার (NOT Gate) তৈরি করতে সর্বনিম্ন কয়টি NAND গেট প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 505]]*  
    (a) 1  
    (b) 2  
    (c) 3  
    (d) 4
 
-178. **In the worst case, the number of comparisons needed to search a singly linked list of length n for a given element is—[ 'n' দৈর্ঘ্যের একটি সিংগলি লিঙ্কড লিস্টে (Singly Linked List) কোনো নির্দিষ্ট উপাদান খোঁজার জন্য ওর্স্ট কেসে (Worst case) কতটি তুলনার প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
+55. **In the worst case, the number of comparisons needed to search a singly linked list of length n for a given element is—[ 'n' দৈর্ঘ্যের একটি সিংগলি লিঙ্কড লিস্টে (Singly Linked List) কোনো নির্দিষ্ট উপাদান খোঁজার জন্য ওর্স্ট কেসে (Worst case) কতটি তুলনার প্রয়োজন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) \\log_2 n  
    (b) n/2  
    (c) n  
    (d) \\log(2^\{\*n\}) - 1
 
-179. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is—[ একটি হ্যাশ টেবিলে ২৫টি স্লট আছে এবং এতে ২০০০টি এলিমেন্ট জমা রাখা হয়। ওই হ্যাশ টেবিলের লোড ফ্যাক্টর (Load factor) কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
+56. **Given a hash table with 25 slots that stores 2000 elements, the load factor for the hash table is—[ একটি হ্যাশ টেবিলে ২৫টি স্লট আছে এবং এতে ২০০০টি এলিমেন্ট জমা রাখা হয়। ওই হ্যাশ টেবিলের লোড ফ্যাক্টর (Load factor) কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a)  
    0. 012506  
    (b)  
@@ -1200,44 +957,44 @@ __Q = next output__
    (c) 80  
    (d) 8000
 
-180. **Which of the following symbol table implementation is best suited if access time is to be minimum?[ যদি অ্যাক্সেস টাইম সর্বনিম্ন করতে হয়, তবে সিম্বল টেবিল (Symbol table) ইমপ্লিমেন্টেশনের জন্য কোনটি সবচেয়ে উপযুক্ত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
+57. **Which of the following symbol table implementation is best suited if access time is to be minimum?[ যদি অ্যাক্সেস টাইম সর্বনিম্ন করতে হয়, তবে সিম্বল টেবিল (Symbol table) ইমপ্লিমেন্টেশনের জন্য কোনটি সবচেয়ে উপযুক্ত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) Linear list  
    (b) Linked list  
    (c) Hash table  
    (d) Self-organizing list
 
-181. **If attribute A determines both attributes B and C then, it is also true that—[ যদি অ্যাট্রিবিউট A, B এবং C উভয়কেই নির্ধারণ (Determine) করে, তবে নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+58. **If attribute A determines both attributes B and C then, it is also true that—[ যদি অ্যাট্রিবিউট A, B এবং C উভয়কেই নির্ধারণ (Determine) করে, তবে নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) A \\to B  
    (b) B \\to A  
    (c) C \\to A  
    (d)  
    (BC) \\to A
 
-182. **If a table is normalized so that all its determinants are candidate keys then, the table is in—[ যদি একটি টেবিল এমনভাবে নরম্যালাইজ করা হয় যাতে তার সমস্ত ডিটারমিন্যান্ট (Determinant) ক্যান্ডিডেট কী (Candidate key) হয়, তবে টেবিলটি কোন ফর্মে আছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+59. **If a table is normalized so that all its determinants are candidate keys then, the table is in—[ যদি একটি টেবিল এমনভাবে নরম্যালাইজ করা হয় যাতে তার সমস্ত ডিটারমিন্যান্ট (Determinant) ক্যান্ডিডেট কী (Candidate key) হয়, তবে টেবিলটি কোন ফর্মে আছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) 1NF  
    (b) 2NF  
    (c) 3NF  
    (d) BCNF
 
-183. **Which statements are used to create the database structure?[ ডাটাবেজের গঠন বা কাঠামো (Structure) তৈরি করতে কোন স্টেটমেন্টগুলো ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+60. **Which statements are used to create the database structure?[ ডাটাবেজের গঠন বা কাঠামো (Structure) তৈরি করতে কোন স্টেটমেন্টগুলো ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) DML  
    (b) DDL  
    (c) BNF  
    (d) None of these
 
-184. **Which of the following is not a DDL statement?[ নিচের কোনটি একটি DDL স্টেটমেন্ট নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+61. **Which of the following is not a DDL statement?[ নিচের কোনটি একটি DDL স্টেটমেন্ট নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) Create  
    (b) Alter  
    (c) Drop  
    (d) Select
 
-185. **Which one of these is not included in ACID property of database?[ নিচের কোনটি ডাটাবেজের ACID প্রোপার্টির অন্তর্ভুক্ত নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
+62. **Which one of these is not included in ACID property of database?[ নিচের কোনটি ডাটাবেজের ACID প্রোপার্টির অন্তর্ভুক্ত নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Atomicity  
    (b) Consistency  
    (c) Display  
    (d) Durability
 
-186. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int x = 20, y = 10, z = 5;
+63. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int x = 20, y = 10, z = 5;
 
 printf("%d", x > y > z);
 
@@ -1247,7 +1004,7 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 10
    (d) 20
 
-187. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
+64. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
 
     int k = 0;
 
@@ -1265,7 +1022,7 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) multi is printed twice
    (d) multi is printed thrice
 
-188. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int i, j, count;
+65. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int i, j, count;
 
 count = 0;
 
@@ -1285,13 +1042,13 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 10
    (d) 25
 
-189. **Which of the operation is illegible in Push Down Automate?[ পুশ ডাউন অটোমেটা (Push Down Automata) এর ক্ষেত্রে কোন অপারেশনটি বৈধ (Legible)? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 510]]*  
+66. **Which of the operation is illegible in Push Down Automate?[ পুশ ডাউন অটোমেটা (Push Down Automata) এর ক্ষেত্রে কোন অপারেশনটি বৈধ (Legible)? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 510]]*  
    (a) Delete  
    (b) Push  
    (c) Insert  
    (d) None of these
 
-190. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
+67. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
 
     int x = 107;
 
@@ -1307,7 +1064,7 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) k, Q
    (d) Q, k
 
-191. **What will be the output of the following C code?[ নিচের ৩ডি অ্যারে কোডটির আউটপুট কী হবে? ] int data[2][3][2] = \{0,1,2,3,4,5,6,7,8,9,10,11\};
+68. **What will be the output of the following C code?[ নিচের ৩ডি অ্যারে কোডটির আউটপুট কী হবে? ] int data[2][3][2] = \{0,1,2,3,4,5,6,7,8,9,10,11\};
 
 int i=0, j=2, k=1;
 
@@ -1319,7 +1076,7 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 6
    (d) 11
 
-192. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
+69. **What will be the output of the following C code?[ নিচের C কোডটির আউটপুট কী হবে? ] int main() \{
 
     int i = 11, j = 3;
 
@@ -1333,19 +1090,285 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (c) 6
    (d) 11
 
-193. **An unsolicited e-mail message sent to many recipients at once is a—[ একসাথে অনেক প্রাপককে পাঠানো অনাকাঙ্ক্ষিত ইমেইল বার্তাকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
+70. **An unsolicited e-mail message sent to many recipients at once is a—[ একসাথে অনেক প্রাপককে পাঠানো অনাকাঙ্ক্ষিত ইমেইল বার্তাকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) worm  
    (b) virus  
    (c) spam  
    (d) dump
 
-194. **Read the following statement in a Java program that compiles and executes: submarine.dive(depth); What can you say for sure?[ জাভা প্রোগ্রামের submarine.dive(depth); স্টেটমেন্টটি থেকে আপনি নিশ্চিতভাবে কী বলতে পারেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
+71. **Read the following statement in a Java program that compiles and executes: submarine.dive(depth); What can you say for sure?[ জাভা প্রোগ্রামের submarine.dive(depth); স্টেটমেন্টটি থেকে আপনি নিশ্চিতভাবে কী বলতে পারেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) depth must be an int  
    (b) dive must be the name of an instance field  
    (c) dive must be a method  
    (d) submarine must be the name of a class
 
+### Off-topic / Misplaced — Bangla Language & Literature (13)
+
+1. **একাধিক স্বাধীন বাক্যকে একটি বাক্যে লিখলে সেগুলোর মাঝখানে কোন চিহ্ন বসে?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
+   (a) হাইফেন  
+   (b) সেমিকোলন  
+   (c) ড্যাশ  
+   (d) কমা
+
+2. **কোনটি অস্তিবাচক বাক্য?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
+   (a) সে কিছুতেই সন্তুষ্ট নয়  
+   (b) দুবারের বেশী ফোন করিনি  
+   (c) আমি অন্য কোথাও যাব না  
+   (d) আপনি আমায় অবিশ্বাস করেছেন
+
+3. **সাদাটে হলুদ বর্ণকে কী বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
+   (a) হলদেটে  
+   (b) ফিকে  
+   (c) পাণ্ডুর  
+   (d) বাসন্তি
+
+4. **"ইতর-বিশেষ" বলতে বুঝায়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. দুর্বৃত্ত  
+   খ. অপদার্থ  
+   গ. চালাকি  
+   ঘ. পার্থক্য
+
+5. **বড্ড থেকে বড্ড কোন ধরনের পরিবর্তন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. বিষমীভবন  
+   খ. সমীভবন  
+   গ. ব্যঞ্জন বিকৃতি  
+   ঘ. ব্যঞ্জন দ্বিত্ব
+
+6. **যা সহজে উত্তীর্ণ হওয়া যায় না-** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. দুর্জয়  
+   খ. দুর্জন  
+   গ. দুস্তর  
+   ঘ. দুর্লভ
+
+7. **বাংলা একাডেমির 'আঞ্চলিক অভিধান' সম্পাদনা কে করেন?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. মুহম্মদ শহীদুল্লাহ  
+   খ. মুহম্মদ এনামুল হক  
+   গ. মুহম্মদ মনসুর উদ্দীন  
+   ঘ. মুহম্মদ আবদুল হাই
+
+8. **'তামার বিষ' বাগধারাটির অর্থ কি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. গভীর আঘাত  
+   খ. ধাতব পদার্থের আঘাত  
+   গ. পুরানা ক্ষত  
+   ঘ. অর্থের কুপ্রভাব
+
+9. **‘কালের কলস’ কাব্যগ্রন্থটির রচয়িতা কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   ক) আল মাহমুদ  
+   খ) শামসুর রহমান  
+   গ) শহীদ কাদরী  
+   ঘ) রফিক আজাদ
+
+10. **বাংলা গদ্যে প্রথম যতিচিহ্ন ব্যবহার করেন কে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   ক) প্রমথ চৌধুরী  
+   খ) রামমোহন রায়  
+   গ) ঈশ্বরচন্দ্র বিদ্যাসাগর  
+   ঘ) রামায়ণ
+
+11. **'কথাটা অপূর্ব ঠিক বিশ্বাস করিতে পারিল না'-এটি কোন বাচ্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
+   (a) ভাববাচ্য  
+   (b) কর্তৃবাচ্য  
+   (c) কর্মবাচ্য  
+   (d) কর্মকর্তৃবাচ্য
+
+12. **কোন কবিকে 'নির্জনতার কবি' বলা হয়?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
+   (a) বুদ্ধদেব বসু  
+   (b) বিভূতিভূষণ  
+   (c) কর্মবাস  
+   (d) জসিমউদ্দীন
+
+13. **নিচের কোনটি শুদ্ধ বাক্য?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
+   (a) ইহার আবশ্যকতা নাই  
+   (b) ইহা প্রমাণ হইয়াছে  
+   (c) আমি সন্তোষ হইলাম  
+   (d) তুমি নির্দোষীন
+
+### Off-topic / Misplaced — General Knowledge & Current Affairs (12)
+
+1. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
+   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?  
+   (02)  
+   (খ) দুটি মহাদেশের অংশ এমন একটি দেশের নাম লিখুন।  
+   (গ) IRRI এর পূর্ণরূপ লিখুন।  
+   (03)
+
+2. **** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*  
+   (ক) হাওয়াই দ্বীপপুঞ্জ কোন রাষ্ট্রের অংশ?  
+   (02)  
+   (খ) পরিবেশ রক্ষায় কোন ধরনের উৎস হতে বিদ্যুৎ উৎপাদনের মনোযোগ দেয়া আবশ্যক বলে আপনি মনে করেন।  
+   (02)
+
+3. **Which one of the following is true? [ নিচের কোনটি সত্য? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
+   (a) Bangladesh is a lower middle-income country  
+   (b) Bangladesh is a upper middle-income country  
+   (c) Bangladesh is a low-income country  
+   (d) Bangladesh is a high-income country
+
+4. **The Mona Lisa portrait was painted by Leonardo da Vinci in the— [ লিওনার্দো দা ভিঞ্চি মোনালিসা প্রতিকৃতিটি কোন শতাব্দীতে এঁকেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
+   (a) 15th century  
+   (b) 14th century  
+   (c) 16th century  
+   (d) 17th century
+
+5. **Who wrote the book 'Politics'? [ 'Politics' বইটি কে লিখেছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
+   (a) Aristotle  
+   (b) Socrates  
+   (c) Plato  
+   (d) Pythagoras
+
+6. **Pythagoras was a Greek— [ পিথাগোরাস ছিলেন একজন গ্রিক— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 342]]*  
+   (a) Philosopher  
+   (b) Mathematician  
+   (c) Accountant  
+   (d) a & b
+
+7. **Who is the fastest woman after winning 100 metre sprint titles of the 44th National Games Championship held in January 2024? [ ২০২৪ সালের জানুয়ারিতে অনুষ্ঠিত ৪৪তম জাতীয় অ্যাথলেটিক্স প্রতিযোগিতায় ১০০ মিটার স্প্রিন্টে দ্রুততম মানবী কে হয়েছেন? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*  
+   (a) Tahmina Rahman  
+   (b) Sonia Akhtar  
+   (c) Sharifa Khatun  
+   (d) Shirin Akhtar
+
+8. **William Shakespeare was born in ....** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
+   a. 1546  
+   b. 1564  
+   c. 1616  
+   d. 1761
+
+9. **বেথেলহাম কোথায় অবস্থিত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) তেহরান  
+   খ) থাইল্যান্ড  
+   গ) ফিলিস্তিন  
+   ঘ) জর্দান
+
+10. **In 1997, UNESCO declared the “Sundarban” as the?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
+   (a) 798th World Heritage Site  
+   (b) 997th World Heritage Site  
+   (c) 879th World Heritage Site  
+   (d) 789th World Heritage Site
+
+11. **Who is the founder of SpaceX?[ SpaceX-এর প্রতিষ্ঠাতা কে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
+   (a) Elon Musk  
+   (b) Eric Yuan  
+   (c) Ray Tomlinson  
+   (d) Larry Page
+
+12. **What is the name of the data center that EU unveils to probe crimes in Ukraine?[ ইউক্রেনে অপরাধ তদন্তের জন্য কোন ডেটা সেন্টার ব্যবহৃত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
+   (a) Tulip  
+   (b) Metro  
+   (c) Game Changer  
+   (d) None of these
+
+### Off-topic / Misplaced — Mathematics & Aptitude (10)
+
+1. **If x = 2 and y = 3, what is the value of 2x^2 + 3y^2? [ যদি x = 2 এবং y = 3, তাহলে 2x^2 + 3y^2 কত হবে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 219]]*  
+   (a) 25  
+   (b) 30  
+   (c) 35  
+   (d) 40
+
+2. **The following is not a prime number that is divisible only by itself and 1. Which of the following is a not prime number? [ নিচের কোনটি মৌলিক সংখ্যা (Prime Number)? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
+   (a) 2  
+   (b) 7  
+   (c) 99  
+   (d) 181
+
+3. **In a group there are 100 students. 72 students can speak English and 43 can speak French. Answer the following question.** *[Bangladesh Power Development Board Post: Assistant Engineer (ICT); Date: 10 May, 2024; Exam Taker: BUET MCQ:60, Dept:40 [bitbox it book 395]]*  
+   (i) Find no of students who can speak English only.  
+   (ii) Find no of students who can speak French only.  
+   (iii) Find no of students who can speak both.
+
+4. **10, 17, 19, 25, 30, 32 এর মধ্যক কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) ১৯  
+   খ) ২০  
+   গ) ২১  
+   ঘ) ২২
+
+5. **a - \\\{a - (a + 1)\\\} = ?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) a  
+   খ) 1  
+   গ) a - 1  
+   ঘ) a + 1
+
+6. **একটি রম্বসের কর্ণ 8 মি ও 6 হলে এর ক্ষেত্রফল কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) ৪৮  
+   খ) ২৪  
+   গ) ৬৪  
+   ঘ) ৩৬
+
+7. **If \\frac\{x\}\{y\} = \\frac\{1\}\{3\}, then the value of \\frac\{x^2+y^2\}\{x^2-y^2\} is—?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
+   (a) -10/9  
+   (b) 5/4  
+   (c) -5/4  
+   (d) -5/3
+
+8. **The total number obtained by a student in Physics, Chemistry and Mathematics together is 120 more than the marks obtained by him in Chemistry. What is the average mark obtained by him in Physics and Mathematics together? [ একজন ছাত্র পদার্থবিদ্যা (Physics), রসায়ন (Chemistry) এবং গণিত (Mathematics)—এই তিন বিষয়ের মোট প্রাপ্ত নম্বর রসায়নের প্রাপ্ত নম্বরের চেয়ে ১২০ বেশি। তাহলে পদার্থবিদ্যা ও গণিত—এই দুই বিষয়ের গড় নম্বর কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
+   (a) 40  
+   (b) 60  
+   (c) 120  
+   (d) Cannot be determined
+
+9. **A man bought some eggs of which 10% are rotten. He gives 80% of the remainder to his neighbors. Now he is left with 36 eggs. How many eggs he bought?[ একজন ব্যক্তি কিছু ডিম কিনেছে, যার মধ্যে ১০% নষ্ট। অবশিষ্ট ডিমের ৮০% তিনি প্রতিবেশীদের দেয়। শেষপর্যন্ত তার কাছে ৩৬ ডিম রয়ে যায়। মোট কত ডিম তিনি কিনেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
+   (a) 40  
+   (b) 100  
+   (c) 200  
+   (d) 72
+
+10. **The average temperature for the first 4 days of a week is 40.2°C and that of the last 4 days is 41.3°C. If the average temperature for the whole week is 40.6°C, then temperature on the fourth day is— [ সপ্তাহের প্রথম ৪ দিনের গড় তাপমাত্রা 40.2°C, শেষ ৪ দিনের গড় 41.3°C। পুরো সপ্তাহের গড় = 40.6°C। চতুর্থ দিনের তাপমাত্রা কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
+   (a)  
+   38. 5°C  
+   (b)  
+   41. 8°C  
+   (c)  
+   41. 3°C  
+   (d)  
+   40. 8°C
+
+### Off-topic / Misplaced — English Language & Grammar (7)
+
+1. **He said, “Can you sing?” And I said, “No.”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*  
+   (a) He asked me that could I sing and I refused.  
+   (b) He asked me if I could sing and I said that I couldn't.  
+   (c) I denied, when he asked me if I could sing.  
+   (d) He asked me if I could sing and I said no.
+
+2. **He said, “Will you listen to such a man?”** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 344]]*  
+   (a) He asked them will you listen to such a man.  
+   (b) He asked them are you listening to such a man.  
+   (c) He asked them whether they would listen to such a man.  
+   (d) He asked them whether they will listen to such a man.
+
+3. **Please stop ------ so many mistake.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   a) to make  
+   b) make  
+   c) making  
+   d) makes
+
+4. **The price of gold as well as silver ------ risen.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   a) is  
+   b) have  
+   c) has  
+   d) are
+
+5. **My doctor knew that I would eventually recover and do kind of work "I would be doing" before.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   a) would have been doing  
+   b) would have done  
+   c) had been done  
+   d) had been doing
+
+6. **Sincere work are indispensable ---- our country.** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+   a) for  
+   b) in  
+   c) to  
+   d) of
+
+7. **Which underlined part of the following sentence is incorrect? [ নিচের বাক্যটির কোন আন্ডারলাইন করা অংশটি ভুল? ] “I will always remember you standing by me and offering me encouragement.”** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 494]]*  
+   (a) I will  
+   (b) always  
+   (c) remember  
+   (d) standing
+
 ## Bangladesh Affairs (171)
+
+### Bangladesh Affairs (169)
 
 1. **বাংলাদেশের মোট উপজেলা কতটি?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*  
    a) 492  
@@ -2156,169 +2179,174 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. Speaker  
    ঘ. None
 
-145. **Which one is not correct?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
-   ক. A+0=A  
-   খ. A.1=A  
-   গ. A+A'=1  
-   ঘ. A.A'=1
-
-146. **বাংলাদেশ কোন সালে আনুষ্ঠানিকভাবে উন্নয়নশীল দেশ হিসাবে স্বীকৃতি লাভ করবে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
+145. **বাংলাদেশ কোন সালে আনুষ্ঠানিকভাবে উন্নয়নশীল দেশ হিসাবে স্বীকৃতি লাভ করবে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ২০২৪  
    (খ) ২০২৮  
    (গ) ২০২৬  
    (ঘ) ২০৩০
 
-147. **রাতারগুল কোন জেলায় অবস্থিত?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
+146. **রাতারগুল কোন জেলায় অবস্থিত?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) রাঙ্গামাটি  
    (খ) সাতক্ষীরা  
    (গ) সিলেট  
    (ঘ) কক্সবাজার
 
-148. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ আছে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
+147. **গণপ্রজাতন্ত্রী বাংলাদেশের সংবিধানে কয়টি অনুচ্ছেদ আছে?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ১৩৩টি  
    (খ) ১৪৩টি  
    (গ) ১৫৩টি  
    (ঘ) ১৭৩টি
 
-149. **নির্মাণাধীন পদ্মা সেতুর স্প্যান সংখ্যা কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
+148. **নির্মাণাধীন পদ্মা সেতুর স্প্যান সংখ্যা কতটি?** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) ৩৯ টি  
    (খ) ৪০টি  
    (গ) ৪১টি  
    (ঘ) ৪২টি
 
-150. **দুই টাকার নোটে কার স্বাক্ষর থাকে?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
+149. **দুই টাকার নোটে কার স্বাক্ষর থাকে?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) অর্থ সচিব  
    (খ) বাংলাদেশ ব্যাংকের গভর্নর  
    (গ) অর্থমন্ত্রী  
    (ঘ) প্রধানমন্ত্রী
 
-151. **বাংলাদেশে কোভিড ১৯ এর ভ্যাকসিন প্রথম ব্যবহৃত হয়েছে–** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
+150. **বাংলাদেশে কোভিড ১৯ এর ভ্যাকসিন প্রথম ব্যবহৃত হয়েছে–** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) অক্সফোর্ড অ্যাস্ট্রাজেনেকা-কোভিশিল্ড  
    (খ) সিনোভ্যাক্স এর করোনাভ্যাক  
    (গ) ফাইজারের বায়োএনটেক  
    (ঘ) জনসন এন্ড জনসন-জনসেন
 
-152. **নাচোল বিদ্রোহের নেত্রির নাম কি?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
+151. **নাচোল বিদ্রোহের নেত্রির নাম কি?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) প্রীতিলতা  
    (খ) লক্ষ্মীরাণী  
    (গ) কাদম্বিনী  
    (ঘ) ইলা মিত্র
 
-153. **বাংলাদেশের মহান মুক্তিযুদ্ধে বীর প্রতীক খেতাব প্রাপ্ত একমাত্র বিদেশি উইলিয়াম এ এস ওডারল্যান্ড কোন দেশের নাগরিক?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
+152. **বাংলাদেশের মহান মুক্তিযুদ্ধে বীর প্রতীক খেতাব প্রাপ্ত একমাত্র বিদেশি উইলিয়াম এ এস ওডারল্যান্ড কোন দেশের নাগরিক?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ভারত  
    (খ) যুক্তরাজ্য  
    (গ) অস্ট্রেলিয়া  
    (ঘ) জাপান
 
-154. **বাংলাদেশের সর্বপ্রথম জাদুঘর কোথায় প্রতিষ্ঠিত হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
+153. **বাংলাদেশের সর্বপ্রথম জাদুঘর কোথায় প্রতিষ্ঠিত হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) ঢাকা  
    (খ) বরেন্দ্র  
    (গ) সিলেট  
    (ঘ) চট্টগ্রাম
 
-155. **ভাসানচর কোন জেলায় অবস্থিত?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
+154. **ভাসানচর কোন জেলায় অবস্থিত?** *[BPSC Senior Instructor (MEW) 2021 compact it 143 (ET: N/A)]*  
    (ক) চট্টগ্রাম  
    (খ) ভোলা  
    (গ) নোয়াখালী  
    (ঘ) কক্সবাজার
 
-156. **Exclusive Economic Zone (EEZ)- এর দৈর্ঘ্য কত?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
+155. **Exclusive Economic Zone (EEZ)- এর দৈর্ঘ্য কত?** *[BPSC Senior Instructor (MEW) 2021 compact it 145 (ET: N/A)]*  
    (ক) ১০০ নটিকেল মাইল  
    (খ) ২০০ নটিকেল মাইল  
    (গ) ৪০০ নটিকেল মাইল  
    (ঘ) ৩০০ নটিকেল মাইল
 
-157. **বঙ্গবন্ধু ঐতিহাসিক ছয়দফা কর্মসূচি কোথায় ঘোষণা করেছিলেন?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
+156. **বঙ্গবন্ধু ঐতিহাসিক ছয়দফা কর্মসূচি কোথায় ঘোষণা করেছিলেন?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) ইসলামাবাদ  
    (খ) ঢাকা  
    (গ) লাহোর  
    (ঘ) করাচী
 
-158. **হালদা নদী কিসের জন্য বিখ্যাত?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
+157. **হালদা নদী কিসের জন্য বিখ্যাত?** *[BPSC Senior Instructor (MEW) 2021 compact it 146 (ET: N/A)]*  
    (ক) মাত্র মৎস্য ভান্ডার  
    (খ) পর্যটক  
    (গ) রামসা সাইট  
    (ঘ) নদী বন্দর
 
-159. **মুক্তিযুদ্ধে “ক্র্যাক প্লাটুন” কোন শহরে সক্রিয় ছিল?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
+158. **মুক্তিযুদ্ধে “ক্র্যাক প্লাটুন” কোন শহরে সক্রিয় ছিল?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (ক) চট্টগ্রাম  
    (খ) খুলনা  
    (গ) ঢাকা  
    (ঘ) বরিশাল
 
-160. **কোভিড ১৯ ভাইরাস বাংলাদেশে প্রথম কবে সনাক্ত হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
+159. **কোভিড ১৯ ভাইরাস বাংলাদেশে প্রথম কবে সনাক্ত হয়?** *[BPSC Senior Instructor (MEW) 2021 compact it 147 (ET: N/A)]*  
    (ক) ২০ ডিসেম্বর, ২০১৯  
    (খ) ১৮ ফেব্রুয়ারি, ২০২০  
    (গ) ৮ মার্চ, ২০২০  
    (ঘ) ০১ এপ্রিল, ২০২০
 
-161. **Which article of the constitution of Bangladesh establishes the fundamental right of education for all?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
+160. **Which article of the constitution of Bangladesh establishes the fundamental right of education for all?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) 13  
    (b) 17  
    (c) 21  
    (d) 27
 
-162. **The total border district of Bangladesh is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
+161. **The total border district of Bangladesh is-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 29  
    (b) 32  
    (c) 45  
    (d) 53
 
-163. **Who has designed the logo of Mujib Year?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
+162. **Who has designed the logo of Mujib Year?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Qamrul Hasan  
    (b) Hashem Khan  
    (c) Sabyasachi Hazra  
    (d) Nithun Kundu
 
-164. **Name of the bank established under Bangladesh Police Welfare Trust-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
+163. **Name of the bank established under Bangladesh Police Welfare Trust-** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 93 (ET: N/A)]*  
    (a) Mitual Trust Bank  
    (b) Community Bangladesh Bank Limited  
    (c) IFIC Bank  
    (d) Trust Bank Bangladesh Limited
 
-165. **What is the position of Bangladesh in the financial Privacy Index 2020?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
+164. **What is the position of Bangladesh in the financial Privacy Index 2020?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 29^{\text{th}}  
    (b) 37^{\text{th}}  
    (c) 43^{\text{th}}  
    (d) 54^{\text{th}}
 
-166. **The river Padma enters into Bangladesh through-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
+165. **The river Padma enters into Bangladesh through-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) Sylhet  
    (b) Rajshahi  
    (c) Mymensingh  
    (d) Pabna
 
-167. **The Constitution Drafting Committee of Bangladesh formed in 1972 had-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
+166. **The Constitution Drafting Committee of Bangladesh formed in 1972 had-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 21 members  
    (b) 24 members  
    (c) 31 members  
    (d) 34 members
 
-168. **Which bank was the first to Introduce dual-currency debit card system in Bangladesh?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
+167. **Which bank was the first to Introduce dual-currency debit card system in Bangladesh?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) Mutual Trust Bank  
    (b) City Bank  
    (c) Dutch Bangla Bank  
    (d) AB Bank
 
-169. **The number of tribes lives in the Chattogram Hill Tracts is-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
+168. **The number of tribes lives in the Chattogram Hill Tracts is-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 169 (ET: N/A)]*  
    (a) 7  
    (b) 9  
    (c) 11  
    (d) 15
 
-170. **কোন সালে Bangladesh এ স্বয়ংক্রিয় Digital IT-Ex service শুরু করে?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
+169. **কোন সালে Bangladesh এ স্বয়ংক্রিয় Digital IT-Ex service শুরু করে?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
    A. 1972  
    B. 1975  
    C. 1981  
    D. 1983
 
-171. **DNA ম্যাপিং করার জন্য কোন প্রযুক্তি ব্যবহার করা হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
+### Off-topic / Misplaced (2)
+
+1. **Which one is not correct?** *[BREB Assistant Enforcement Coordinator 2021 compact it 141 (ET: N/A)]*  
+   ক. A+0=A  
+   খ. A.1=A  
+   গ. A+A'=1  
+   ঘ. A.A'=1
+
+2. **DNA ম্যাপিং করার জন্য কোন প্রযুক্তি ব্যবহার করা হয়?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 200 (ET: IBA)]*  
    A. বায়োমেট্রি  
    B. বায়োইনফরমেটিক্স  
    C. রোবটি  
    D. জেনেটিক্স
 
 ## International Affairs (119)
+
+### International Affairs (112)
+
 1. **Who won Nobel Peace prize in 2024?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) David Baker  
    (b) John Jumper  
@@ -2973,7 +3001,64 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    গ. ২৩০ কেভি
    ঘ. ১৩২ কেভি
 
-104. **গ) কোনো বিক্রেতাকে ৩.২৫ টাকা, ৪.৭৫ টাকা এবং ১১.৫০ টাকা একই ধরনের মুদ্রা দ্বারা পরিশোধ করতে গেলে সবচেয়ে বড় কত পয়সার মুদ্রার প্রয়োজন?** *[BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40 [bitbox it book 162]]*  
+104. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছেন -** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. লাইবেরিয়া  
+   খ. নামিবিয়া  
+   গ. ভুটান  
+   ঘ. সিয়েরা লিওন
+
+105. **জাতিসংঘ এর নিরাপত্তা পরিষদের স্থায়ী সদস্য কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) ৫  
+   খ) ৭  
+   গ) ৯  
+   ঘ) ৬
+
+106. **উপমহাদেশের কোন বাঙালি প্রথম অস্কার লাভ করে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) সত্যজিত রায়  
+   খ) জহির রায়হান  
+   গ) সুকুমার সেন  
+   ঘ) রবীন্দ্রনাথ
+
+107. **মুক্তিযুদ্ধ কত জন নারী মুক্তিযোদ্ধা বীর প্রতীক খেতাব পায়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) ১  
+   খ) ২  
+   গ) ৩  
+   ঘ) ৫
+
+108. **সাধারণ জ্ঞানঃ** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
+   i. ওজোন দিবস কত তারিখ?  
+   ii. বিশ্ব সাক্ষরতা দিবস কত তারিখ?  
+   iii. জার্মানির বর্তমান চ্যান্সেলর এর নাম কি?  
+   iv. বাংলাদেশকে স্বীকৃতিদানকারী প্রথম আফ্রিকান দেশ কোনটি?  
+   v. সর্বশেষ জনশুমারী অনুযায়ী বাংলাদেশের সাক্ষরতার হার কত?
+
+109. **When will Bangladesh exit from the LDC category?[ বাংলাদেশ কখন LDC ক্যাটাগরি থেকে বের হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
+   (a) 2024  
+   (b) 2025  
+   (c) 2026  
+   (d) 2027
+
+110. **The documentary film based on the liberation war, ‘Rupali Shoikot’ was directed by— [ মুক্তিযুদ্ধভিত্তিক ডকুমেন্টারি ‘রুপালি সৈকত’ পরিচালনা করেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
+   (a) Alamgir Kabir  
+   (b) Tanvir Mokammel  
+   (c) Zahir Raihan  
+   (d) Tareq Masood
+
+111. **The highest densely populated country of the world is— [ বিশ্বের সবচেয়ে ঘনবসতি দেশ কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
+   (a) Bangladesh  
+   (b) China  
+   (c) Monaco  
+   (d) Indonesia
+
+112. **In 2024 Summer Olympics will be hosted in— [ 2024 সালের গ্রীষ্মকালীন অলিম্পিক কোথায় অনুষ্ঠিত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
+   (a) Japan  
+   (b) France  
+   (c) United Kingdom  
+   (d) United States
+
+### Off-topic / Misplaced (7)
+
+1. **গ) কোনো বিক্রেতাকে ৩.২৫ টাকা, ৪.৭৫ টাকা এবং ১১.৫০ টাকা একই ধরনের মুদ্রা দ্বারা পরিশোধ করতে গেলে সবচেয়ে বড় কত পয়সার মুদ্রার প্রয়োজন?** *[BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40 [bitbox it book 162]]*  
    ঘ) নদী ও স্রোতের ম্যাথ। __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:  
    40) [bitbox it book 162]__  
    ক) কম্পিউটার নেটওয়ার্কিং এ OSI Layer এর ধাপ কয়টি? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:  
@@ -3021,92 +3106,37 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
 ১০। War & Peace কার লেখা? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks:
    40) [bitbox it book 163]__
 
-105. **কোনটি বাংলা একাডেমি থেকে প্রকাশিত মাসিক পত্রিকা?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
+2. **কোনটি বাংলা একাডেমি থেকে প্রকাশিত মাসিক পত্রিকা?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 341]]*  
    (a) ধান শালিকের দেশ  
    (b) লাঙল  
    (c) বার্তা  
    (d) উত্তরাধিকার
 
-106. **Interfaces in Java are meant to be— [ জাভাতে ইন্টারফেস (Interfaces) ব্যবহারের উদ্দেশ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 346]]*  
+3. **Interfaces in Java are meant to be— [ জাভাতে ইন্টারফেস (Interfaces) ব্যবহারের উদ্দেশ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 346]]*  
    (a) Extended  
    (b) Implemented  
    (c) Overridden  
    (d) Used by creating object
 
-107. **বাংলা ভাষাকে অন্যতম রাষ্ট্রভাষা হিসেবে স্বীকৃতি দিয়েছেন -** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. লাইবেরিয়া  
-   খ. নামিবিয়া  
-   গ. ভুটান  
-   ঘ. সিয়েরা লিওন
-
-108. **জাতিসংঘ এর নিরাপত্তা পরিষদের স্থায়ী সদস্য কত?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) ৫  
-   খ) ৭  
-   গ) ৯  
-   ঘ) ৬
-
-109. **উপমহাদেশের কোন বাঙালি প্রথম অস্কার লাভ করে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) সত্যজিত রায়  
-   খ) জহির রায়হান  
-   গ) সুকুমার সেন  
-   ঘ) রবীন্দ্রনাথ
-
-110. **মুক্তিযুদ্ধ কত জন নারী মুক্তিযোদ্ধা বীর প্রতীক খেতাব পায়?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) ১  
-   খ) ২  
-   গ) ৩  
-   ঘ) ৫
-
-111. **সাধারণ জ্ঞানঃ** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
-   i. ওজোন দিবস কত তারিখ?  
-   ii. বিশ্ব সাক্ষরতা দিবস কত তারিখ?  
-   iii. জার্মানির বর্তমান চ্যান্সেলর এর নাম কি?  
-   iv. বাংলাদেশকে স্বীকৃতিদানকারী প্রথম আফ্রিকান দেশ কোনটি?  
-   v. সর্বশেষ জনশুমারী অনুযায়ী বাংলাদেশের সাক্ষরতার হার কত?
-
-112. **'আবাদ' শব্দটি কোন ধরনের শব্দ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
+4. **'আবাদ' শব্দটি কোন ধরনের শব্দ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 492]]*  
    (a) দেশী  
    (b) বিদেশী  
    (c) তৎসম  
    (d) তদ্ভব
 
-113. **"বিবাহ করিতে আসিয়াছি বিবাহ করিয়া যাইব" কোন বাক্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
+5. **"বিবাহ করিতে আসিয়াছি বিবাহ করিয়া যাইব" কোন বাক্যের উদাহরণ?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) যৌগিক  
    (b) সরল  
    (c) জটিল  
    (d) নির্দেশক
 
-114. **When will Bangladesh exit from the LDC category?[ বাংলাদেশ কখন LDC ক্যাটাগরি থেকে বের হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
-   (a) 2024  
-   (b) 2025  
-   (c) 2026  
-   (d) 2027
-
-115. **The documentary film based on the liberation war, ‘Rupali Shoikot’ was directed by— [ মুক্তিযুদ্ধভিত্তিক ডকুমেন্টারি ‘রুপালি সৈকত’ পরিচালনা করেছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
-   (a) Alamgir Kabir  
-   (b) Tanvir Mokammel  
-   (c) Zahir Raihan  
-   (d) Tareq Masood
-
-116. **The highest densely populated country of the world is— [ বিশ্বের সবচেয়ে ঘনবসতি দেশ কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
-   (a) Bangladesh  
-   (b) China  
-   (c) Monaco  
-   (d) Indonesia
-
-117. **In 2024 Summer Olympics will be hosted in— [ 2024 সালের গ্রীষ্মকালীন অলিম্পিক কোথায় অনুষ্ঠিত হবে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 498]]*  
-   (a) Japan  
-   (b) France  
-   (c) United Kingdom  
-   (d) United States
-
-118. **What does the term ‘hyperparameter’ refer in AI?[ AI-তে ‘hyperparameter’ শব্দটি কী নির্দেশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
+6. **What does the term ‘hyperparameter’ refer in AI?[ AI-তে ‘hyperparameter’ শব্দটি কী নির্দেশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) Parameter learned by the model during training  
    (b) Parameter that defines the structure of the model  
    (c) Parameter related to the loss function  
    (d) Parameter related to make prediction
 
-119. **Objective of integration testing is to find—[ ইন্টিগ্রেশন টেস্টিং (Integration testing)-এর উদ্দেশ্য কী খুঁজে বের করা? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
+7. **Objective of integration testing is to find—[ ইন্টিগ্রেশন টেস্টিং (Integration testing)-এর উদ্দেশ্য কী খুঁজে বের করা? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) design error  
    (b) functional error  
    (c) interface error  
@@ -3272,6 +3302,7 @@ return 0;** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT);
    (d) Dead Sea
 
 ## Power Sector & Energy (Bangladesh) (25)
+
 1. **ইজিসিবি'র মোট বিদ্যুৎ ক্ষমতা প্রায় কত মেগাওয়াট (প্রায়)?** *[EGCB Sub-Assistant Engineer (ICT) 2022 compact it 63 (ET: BUET)]*  
    (ক) ৮৫০ মে: ও:  
    (খ) ৯০০ মে: ও:  
