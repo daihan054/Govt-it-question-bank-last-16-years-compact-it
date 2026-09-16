@@ -1,26 +1,119 @@
 <!-- TOC START -->
 **Table of Contents** — 12 subtopics · 66 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-23) | 23 |
-| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
-| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
-| 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
-| 5 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
-| 6 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
-| 7 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
-| 8 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
-| 9 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
-| 10 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
-| 11 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis-1) | 1 |
-| 12 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical-1) | 1 |
+- [Artificial Intelligence & Machine Learning (23)](#artificial-intelligence--machine-learning-23)
+  - [Cybersecurity & Information Security (6)](#cybersecurity--information-security-6)
+  - [Machine Learning Concepts (4)](#machine-learning-concepts-4)
+  - [Mathematics & Aptitude (3)](#mathematics--aptitude-3)
+  - [Writing & Composition (3)](#writing--composition-3)
+  - [Software Engineering & Programming Concepts (2)](#software-engineering--programming-concepts-2)
+  - [Algorithms & Problem Solving (2)](#algorithms--problem-solving-2)
+  - [Database Concepts (1)](#database-concepts-1)
+  - [General Knowledge & Trivia (1)](#general-knowledge--trivia-1)
+  - [Digital Communication & Modulation (1)](#digital-communication--modulation-1)
+- [Artificial Intelligence & Expert Systems (8)](#artificial-intelligence--expert-systems-8)
+- [Deep Learning & Neural Networks (ANN, CNN, RNN) (8)](#deep-learning--neural-networks-ann-cnn-rnn-8)
+- [Machine Learning Paradigms (Supervised vs Unsupervised) (6)](#machine-learning-paradigms-supervised-vs-unsupervised-6)
+- [Model Evaluation & Datasets (5)](#model-evaluation--datasets-5)
+- [Supervised Learning (Decision Trees) (4)](#supervised-learning-decision-trees-4)
+- [Generative AI & Explainable AI (XAI) (4)](#generative-ai--explainable-ai-xai-4)
+- [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3)
+- [Search Algorithms (Informed vs Uninformed Search) (2)](#search-algorithms-informed-vs-uninformed-search-2)
+- [Overfitting, Underfitting & Model Generalization (1)](#overfitting-underfitting--model-generalization-1)
+- [Association Rule Learning (Market Basket Analysis) (1)](#association-rule-learning-market-basket-analysis-1)
+- [Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)](#clustering--unsupervised-learning-k-means-hierarchical-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Artificial Intelligence & Machine Learning (23)
+
+### Cybersecurity & Information Security (6)
+
+1. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+
+   Answer: A cyber attack is an intentional malicious attempt to breach, compromise, or disrupt computer systems, networks, or digital data.
+
+   Major Types of Cyber Attacks:
+   - Malware Attacks: Malicious software—including Viruses, Worms, Trojan Horses, Spyware, and Ransomware—designed to damage, steal, or lock sensitive digital assets.
+   - Phishing Attacks: Social engineering where attackers masquerade as trusted entities via email or websites to steal credentials, credit card details, or sensitive records.
+   - Denial of Service (DoS / DDoS): Flooding target servers, services, or network links with overwhelming traffic from multiple compromised zombie systems (botnets), exhausting resources and denying service to legitimate users.
+   - Man-in-the-Middle (MitM) Attacks: An attacker secretly intercepts, relays, and alters communication between two parties on an insecure network (e.g., via ARP spoofing or rogue Wi-Fi).
+   - SQL Injection (SQLi): Injecting malicious SQL statements into web input fields to manipulate backend relational databases and bypass authentication or dump data.
+   - Cross-Site Scripting (XSS): Injecting malicious client-side JavaScript scripts into trusted web applications viewed by other users to hijack sessions.
+
+2. **What is the CIA Triad? Explain its three components with examples.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222]]*
+
+   Answer: The CIA Triad is a foundational information security benchmark model designed to guide organizations in securing their data and computing assets.
+
+   Three Components:
+   - 1. Confidentiality:
+     - Ensures that sensitive data is accessible only to authorized personnel and protected from unauthorized disclosure.
+     - Mechanisms: Strong symmetric/asymmetric encryption (AES-256), multi-factor authentication (MFA), role-based access control (RBAC).
+     - Example: Encrypting customer banking transaction records so unauthorized third parties cannot read them.
+   - 2. Integrity:
+     - Guarantees that data remains accurate, complete, and uncorrupted throughout its lifecycle, protected from unauthorized modification or tampering.
+     - Mechanisms: Cryptographic hashing (SHA-256), digital signatures, message authentication codes (MAC), checksums.
+     - Example: Ensuring a financial wire transfer amount of $1,000 cannot be tampered with or altered to $10,000 in transit.
+   - 3. Availability:
+     - Ensures that systems, networks, and applications are reliably accessible to authorized users whenever needed.
+     - Mechanisms: Redundant hardware components, load balancers, regular data backups, disaster recovery sites, DDoS mitigation.
+     - Example: A commercial banking website remaining operational 24/7 with 99.99% uptime during peak business hours.
+
+3. **Write various types of information security against cyber threats.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 321]]*
+
+    Answer:
+    - Network Security: Deploying firewalls, Next-Gen IPS/IDS, and VPNs to secure network boundaries from unauthorized intrusions.
+    - Application Security: Adopting secure SDLC, input sanitization, vulnerability scanning, and Web Application Firewalls (WAF) to prevent SQLi and XSS.
+    - Endpoint Security: Protecting client workstations and mobile devices using Antivirus/EDR, patch management, and full-disk encryption.
+    - Cloud Security: Enforcing Zero Trust architecture, Identity and Access Management (IAM), and data isolation in cloud environments.
+    - Cryptographic Security: Using strong encryption algorithms (AES, RSA) and TLS protocols to secure data-at-rest and data-in-transit.
+    - Operational & Backup Security: Maintaining air-gapped immutable offline backups and regular disaster recovery audits.
+
+4. **(b) An organization is planning to deploy a wireless network. Explain the security considerations for setting up a secure Wi-Fi network including the authentication methods, encryption protocols and best practices to prevent unauthorized access. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331-332]]*
+
+    Answer:
+
+    Security Considerations for Enterprise Wi-Fi:
+    - 1. Authentication Methods:
+      - WPA3-Enterprise / 802.1X: Uses centralized RADIUS/EAP authentication with individual user credentials and digital certificates rather than shared passwords.
+      - Captive Portals with MFA: Enforcing multi-factor authentication for guest and corporate users.
+    - 2. Encryption Protocols:
+      - WPA3 with 192-bit cryptographic suite (or WPA2-Enterprise with AES-CCMP) to ensure confidentiality and protect against dictionary and KRACK attacks.
+    - 3. Best Practices to Prevent Unauthorized Access:
+      - Network Segmentation: Separating corporate data, IoT hardware, and guest users into distinct isolated VLANs.
+      - Rogue AP Detection: Enabling Wireless Intrusion Prevention Systems (WIPS) to detect unauthorized access points.
+      - Disabling WPS and Legacy Protocols: Turning off WPS, WEP, and TKIP.
+      - Changing Default Credentials & Firmware Patching: Enforcing complex administrative passwords and keeping AP firmware updated.
+
+5. **(b) What are the main security vulnerabilities commonly found in web applications? How would you address them? [3 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+
+    Answer:
+
+    Main Vulnerabilities (OWASP Top 10) & Remedies:
+    - 1. SQL Injection (SQLi): Attackers insert malicious SQL queries via user inputs.
+      - Remedy: Use Parameterized Queries (Prepared Statements) and Object-Relational Mapping (ORM).
+    - 2. Cross-Site Scripting (XSS): Injecting malicious scripts into web pages viewed by other users.
+      - Remedy: Context-aware output encoding, strict input sanitization, and Content Security Policy (CSP).
+    - 3. Broken Authentication & Session Hijacking: Weak password policies and exposed session tokens.
+      - Remedy: Enforce Multi-Factor Authentication (MFA), `HttpOnly` and `Secure` cookie flags, and short session timeouts.
+    - 4. Cross-Site Request Forgery (CSRF): Forcing authenticated users to execute unintended actions.
+      - Remedy: Use unique, cryptographically secure anti-CSRF tokens and `SameSite` cookies.
+
+6. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
+
+    Answer: Social engineering is the psychological manipulation of people into performing actions or divulging confidential information (such as passwords and banking credentials) rather than hacking technical software vulnerabilities.
+
+    Common Techniques:
+    - Phishing: Sending deceptive emails mimicking legitimate organizations to lure victims into clicking malicious links or entering credentials.
+    - Spear Phishing: Highly personalized phishing targeted at a specific individual or organization.
+    - Pretexting: Fabricating an invented scenario (e.g., impersonating an IT technician) to manipulate the victim into disclosing sensitive access.
+    - Baiting: Offering a false promise (e.g., leaving an infected USB drive labeled "Salary Bonuses" in a public hallway) to entice the victim into executing malware.
+    - Vishing / Smishing: Voice phishing via phone calls or SMS phishing to extract sensitive data.
+    - Shoulder Surfing: Directly observing a person entering passwords or PINs in public.
+
+### Machine Learning Concepts (4)
 
 1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 (i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
@@ -82,39 +175,88 @@
    | Algorithm Examples | Linear Regression, SVM, Decision Trees, Naive Bayes | K-Means, Hierarchical Clustering, PCA, Isolation Forest |
    | Real-World Use | Email spam detection, medical disease diagnosis | Customer market segmentation, anomaly detection |
 
-4. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+4. **AI related Question [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-   Answer: A cyber attack is an intentional malicious attempt to breach, compromise, or disrupt computer systems, networks, or digital data.
+### Mathematics & Aptitude (3)
 
-   Major Types of Cyber Attacks:
-   - Malware Attacks: Malicious software—including Viruses, Worms, Trojan Horses, Spyware, and Ransomware—designed to damage, steal, or lock sensitive digital assets.
-   - Phishing Attacks: Social engineering where attackers masquerade as trusted entities via email or websites to steal credentials, credit card details, or sensitive records.
-   - Denial of Service (DoS / DDoS): Flooding target servers, services, or network links with overwhelming traffic from multiple compromised zombie systems (botnets), exhausting resources and denying service to legitimate users.
-   - Man-in-the-Middle (MitM) Attacks: An attacker secretly intercepts, relays, and alters communication between two parties on an insecure network (e.g., via ARP spoofing or rogue Wi-Fi).
-   - SQL Injection (SQLi): Injecting malicious SQL statements into web input fields to manipulate backend relational databases and bypass authentication or dump data.
-   - Cross-Site Scripting (XSS): Injecting malicious client-side JavaScript scripts into trusted web applications viewed by other users to hijack sessions.
+1. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-5. **What is the CIA Triad? Explain its three components with examples.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222]]*
+   Answer: Two graphs G1 = (V1, E1) and G2 = (V2, E2) are isomorphic if there exists a bijective mapping f: V1 -> V2 such that any two vertices u, v in V1 are adjacent in G1 if and only if f(u), f(v) are adjacent in G2.
 
-   Answer: The CIA Triad is a foundational information security benchmark model designed to guide organizations in securing their data and computing assets.
+   Necessary Invariant Conditions for Graph Isomorphism:
+   - Equal Number of Vertices: |V1| = |V2|
+   - Equal Number of Edges: |E1| = |E2|
+   - Identical Degree Sequence: The sorted list of vertex degrees must match exactly in both graphs.
+   - Cycle Structure Preservation: If G1 contains a cycle of length k, G2 must contain a corresponding cycle of length k.
+   - Subgraph Isomorphism: Complement graphs must also be isomorphic.
 
-   Three Components:
-   - 1. Confidentiality:
-     - Ensures that sensitive data is accessible only to authorized personnel and protected from unauthorized disclosure.
-     - Mechanisms: Strong symmetric/asymmetric encryption (AES-256), multi-factor authentication (MFA), role-based access control (RBAC).
-     - Example: Encrypting customer banking transaction records so unauthorized third parties cannot read them.
-   - 2. Integrity:
-     - Guarantees that data remains accurate, complete, and uncorrupted throughout its lifecycle, protected from unauthorized modification or tampering.
-     - Mechanisms: Cryptographic hashing (SHA-256), digital signatures, message authentication codes (MAC), checksums.
-     - Example: Ensuring a financial wire transfer amount of $1,000 cannot be tampered with or altered to $10,000 in transit.
-   - 3. Availability:
-     - Ensures that systems, networks, and applications are reliably accessible to authorized users whenever needed.
-     - Mechanisms: Redundant hardware components, load balancers, regular data backups, disaster recovery sites, DDoS mitigation.
-     - Example: A commercial banking website remaining operational 24/7 with 99.99% uptime during peak business hours.
+2. **Three friends A, B, and C invest money in a business in the ratio 3:4:5. After 1 year, the profit is Tk36,000. How much profit gain by B?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
 
-6. **AI related Question [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+    Answer:
+    - Given investment ratio of A : B : C = 3 : 4 : 5.
+    - Sum of the ratio terms = 3 + 4 + 5 = 12.
+    - Total annual profit = Tk 36,000.
 
-7. **A banking application requires a 4-digit PIN fo. login. If a wrong PIN is entered, an error message should be displayed. Design a test case for this scenario and explain with examples. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+    - Share of profit for B:
+      Profit of B = (4 / 12) * 36,000 = (1 / 3) * 36,000 = Tk 12,000.
+
+    - Result: B gains Tk 12,000.
+
+3. **A box contains 10 red and 10 black marbles. If you close your eyes and pick 3 marbles, what is the probability that all 3 marbles will be black?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+    Answer:
+    - Total marbles in box = 10 Red + 10 Black = 20 marbles.
+    - Number of ways to choose any 3 marbles from 20:
+      C(20, 3) = (20 * 19 * 18) / (3 * 2 * 1) = 1140
+    - Number of favorable ways to choose 3 black marbles from 10:
+      C(10, 3) = (10 * 9 * 8) / (3 * 2 * 1) = 120
+
+    - Probability:
+      P(3 Black) = C(10, 3) / C(20, 3) = 120 / 1140 = 12 / 114 = 2 / 19 = 0.1053 (or 10.53%)
+
+### Writing & Composition (3)
+
+1. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+   Answer:
+   কৃত্রিম বুদ্ধিমত্তা (AI) একবিংশ শতাব্দীর চতুর্থ শিল্পবিপ্লবের চালিকাশক্তি। এটি ডেটা প্রক্রিয়াকরণ, অটোমেশন এবং প্যাটার্ন বিশ্লেষণের মাধ্যমে উৎপাদনশীলতা ও কর্মদক্ষতা অভাবনীয় হারে বৃদ্ধি করেছে। তবে AI এর সুবিধার পাশাপাশি ডেটা গোপনীয়তা, অ্যালগরিদমিক পক্ষপাত (bias) এবং কর্মসংস্থান হারানোর মতো নৈতিক চ্যালেঞ্জ তৈরি হয়েছে। দায়িত্বশীল AI ব্যবহারের জন্য আন্তর্জাতিক মানদণ্ড, ডেটা সুরক্ষা আইন এবং কঠোর নৈতিক নীতিমালা প্রণয়ন অপরিহার্য। দক্ষ মানবসম্পদ ও নীতিগত কাঠামোর সুষম সমন্বয়ই প্রযুক্তির নিরাপদ ও টেকসই বিকাশ নিশ্চিত করতে পারে।
+
+2. **Children's addiction to smart mobile phones has become a concern in recent years. So write a letter to the editor of an English daily expressing your views on the responsible use of smart phones. (5 \times 1 = 5)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+
+    Answer:
+    To
+    The Editor,
+    The Daily Star, Dhaka.
+
+    Subject: Growing concern over children's addiction to smartphones.
+
+    Sir,
+    Through your esteemed newspaper, I wish to voice concern over the alarming surge in smartphone addiction among children. Excessive screen time impairs cognitive growth, disrupts sleep cycles, causes eye strain, and restricts physical outdoor activities. While digital literacy is valuable, uncontrolled exposure to video games and social media hampers real-world social development.
+
+    Parents must enforce strict screen-time limits, cultivate reading habits, and encourage outdoor sports. Simultaneously, academic institutions and media should promote responsible digital habits.
+
+    Yours sincerely,
+    A Concerned Citizen
+
+3. **Letter your younger brother about the importance of vocational training.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
+
+    Answer:
+    Dhaka, Bangladesh
+    Date: 15 February 2024
+
+    Dear Brother,
+    I hope you are doing well with your studies. Today I am writing to highlight the immense value of vocational and technical training in building a prosperous career.
+
+    While traditional academic degrees provide theoretical knowledge, vocational training equips you with practical, industry-ready skills such as software development, electrical engineering, network administration, and graphic design. These specialized technical competencies lead to faster employment, self-reliance, and lucrative freelancing opportunities in the competitive modern job market.
+
+    I encourage you to enroll in a practical vocational course alongside your regular education.
+
+    With love and best wishes,
+    Your elder brother
+
+### Software Engineering & Programming Concepts (2)
+
+1. **A banking application requires a 4-digit PIN fo. login. If a wrong PIN is entered, an error message should be displayed. Design a test case for this scenario and explain with examples. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
    Answer:
 
@@ -130,54 +272,21 @@
    | TC_PIN_06 | Blank / Null Input | ` ` (Empty field) | Error message: "PIN is required." | Pass |
    | TC_PIN_07 | Account Lockout | 3 consecutive wrong attempts | Account locked: "Too many attempts. Account locked for 15 mins." | Pass |
 
-8. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+2. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
 
-   Answer: Two graphs G1 = (V1, E1) and G2 = (V2, E2) are isomorphic if there exists a bijective mapping f: V1 -> V2 such that any two vertices u, v in V1 are adjacent in G1 if and only if f(u), f(v) are adjacent in G2.
+    Answer: A flowchart is a graphical representation of an algorithm or stepwise process using standardized geometric symbols.
 
-   Necessary Invariant Conditions for Graph Isomorphism:
-   - Equal Number of Vertices: |V1| = |V2|
-   - Equal Number of Edges: |E1| = |E2|
-   - Identical Degree Sequence: The sorted list of vertex degrees must match exactly in both graphs.
-   - Cycle Structure Preservation: If G1 contains a cycle of length k, G2 must contain a corresponding cycle of length k.
-   - Subgraph Isomorphism: Complement graphs must also be isomorphic.
+    Main Symbols and Components:
+    - 1. Oval (Terminal): Represents the `Start` or `Stop` (End) of the program execution.
+    - 2. Parallelogram (Input/Output): Represents data `Read` (input) or `Print`/Display (output) operations.
+    - 3. Rectangle (Process): Represents computational calculations, arithmetic assignments, or data processing.
+    - 4. Diamond (Decision): Represents a conditional branching statement (`True`/`False` or `Yes`/`No`).
+    - 5. Flowlines (Arrows): Indicate the exact direction of the logical program flow.
+    - 6. Circle (Connector): Connects overlapping or distant flow paths on the same page.
 
-9. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+### Algorithms & Problem Solving (2)
 
-   Answer:
-   কৃত্রিম বুদ্ধিমত্তা (AI) একবিংশ শতাব্দীর চতুর্থ শিল্পবিপ্লবের চালিকাশক্তি। এটি ডেটা প্রক্রিয়াকরণ, অটোমেশন এবং প্যাটার্ন বিশ্লেষণের মাধ্যমে উৎপাদনশীলতা ও কর্মদক্ষতা অভাবনীয় হারে বৃদ্ধি করেছে। তবে AI এর সুবিধার পাশাপাশি ডেটা গোপনীয়তা, অ্যালগরিদমিক পক্ষপাত (bias) এবং কর্মসংস্থান হারানোর মতো নৈতিক চ্যালেঞ্জ তৈরি হয়েছে। দায়িত্বশীল AI ব্যবহারের জন্য আন্তর্জাতিক মানদণ্ড, ডেটা সুরক্ষা আইন এবং কঠোর নৈতিক নীতিমালা প্রণয়ন অপরিহার্য। দক্ষ মানবসম্পদ ও নীতিগত কাঠামোর সুষম সমন্বয়ই প্রযুক্তির নিরাপদ ও টেকসই বিকাশ নিশ্চিত করতে পারে।
-
-10. **Write various types of information security against cyber threats.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 321]]*
-
-    Answer:
-    - Network Security: Deploying firewalls, Next-Gen IPS/IDS, and VPNs to secure network boundaries from unauthorized intrusions.
-    - Application Security: Adopting secure SDLC, input sanitization, vulnerability scanning, and Web Application Firewalls (WAF) to prevent SQLi and XSS.
-    - Endpoint Security: Protecting client workstations and mobile devices using Antivirus/EDR, patch management, and full-disk encryption.
-    - Cloud Security: Enforcing Zero Trust architecture, Identity and Access Management (IAM), and data isolation in cloud environments.
-    - Cryptographic Security: Using strong encryption algorithms (AES, RSA) and TLS protocols to secure data-at-rest and data-in-transit.
-    - Operational & Backup Security: Maintaining air-gapped immutable offline backups and regular disaster recovery audits.
-
-11. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
-
-    Answer: A Database Trigger is a stored procedural code block in DBMS that automatically executes (fires) in response to specific events (such as `INSERT`, `UPDATE`, or `DELETE`) on a designated table or view.
-
-    Why Triggers are Needed:
-    - Enforcing Complex Business Rules: Validating conditions beyond simple SQL constraints.
-    - Automated Audit Logging: Tracking historical changes and tracking who modified records.
-    - Data Synchronization: Automatically updating related tables (e.g., maintaining denormalized total columns).
-    - Preventing Invalid Transactions: Aborting operations when business thresholds are violated.
-
-    Example (Audit Log Trigger):
-    ```sql
-    CREATE TRIGGER trg_employee_audit
-    AFTER UPDATE ON Employee
-    FOR EACH ROW
-    BEGIN
-        INSERT INTO Employee_Audit (emp_id, old_salary, new_salary, change_date)
-        VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
-    END;
-    ```
-
-12. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
+1. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
 
     Answer:
 
@@ -209,137 +318,7 @@
     ```
     - Time Complexity: O(n), Space Complexity: O(1).
 
-13. **Children's addiction to smart mobile phones has become a concern in recent years. So write a letter to the editor of an English daily expressing your views on the responsible use of smart phones. (5 \times 1 = 5)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
-
-    Answer:
-    To
-    The Editor,
-    The Daily Star, Dhaka.
-
-    Subject: Growing concern over children's addiction to smartphones.
-
-    Sir,
-    Through your esteemed newspaper, I wish to voice concern over the alarming surge in smartphone addiction among children. Excessive screen time impairs cognitive growth, disrupts sleep cycles, causes eye strain, and restricts physical outdoor activities. While digital literacy is valuable, uncontrolled exposure to video games and social media hampers real-world social development.
-
-    Parents must enforce strict screen-time limits, cultivate reading habits, and encourage outdoor sports. Simultaneously, academic institutions and media should promote responsible digital habits.
-
-    Yours sincerely,
-    A Concerned Citizen
-
-14. **ক) Deep Blue কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
-খ) Android কী? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
-
-গ) Vitamin D এর ঘাটতি মানবদেহে কী ধরনের প্রভাব ফেলে? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
-
-    Answer:
-    - (a) Deep Blue: Deep Blue was an advanced chess-playing supercomputer developed by IBM. In May 1997, it made history by becoming the first computer system to defeat a reigning world chess champion, Garry Kasparov, in a six-game match under tournament conditions.
-    - (b) Android: Android is a Linux kernel-based, open-source operating system primarily designed for touchscreen mobile devices such as smartphones and tablets, developed by the Open Handset Alliance and commercially sponsored by Google.
-    - (c) Effects of Vitamin D Deficiency: Vitamin D deficiency impairs calcium absorption, leading to Rickets in children (soft, weak, and deformed bones) and Osteomalacia / Osteoporosis in adults (bone pain, reduced bone density, and higher fracture risk), alongside weakened immune defense.
-
-15. **(b) An organization is planning to deploy a wireless network. Explain the security considerations for setting up a secure Wi-Fi network including the authentication methods, encryption protocols and best practices to prevent unauthorized access. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331-332]]*
-
-    Answer:
-
-    Security Considerations for Enterprise Wi-Fi:
-    - 1. Authentication Methods:
-      - WPA3-Enterprise / 802.1X: Uses centralized RADIUS/EAP authentication with individual user credentials and digital certificates rather than shared passwords.
-      - Captive Portals with MFA: Enforcing multi-factor authentication for guest and corporate users.
-    - 2. Encryption Protocols:
-      - WPA3 with 192-bit cryptographic suite (or WPA2-Enterprise with AES-CCMP) to ensure confidentiality and protect against dictionary and KRACK attacks.
-    - 3. Best Practices to Prevent Unauthorized Access:
-      - Network Segmentation: Separating corporate data, IoT hardware, and guest users into distinct isolated VLANs.
-      - Rogue AP Detection: Enabling Wireless Intrusion Prevention Systems (WIPS) to detect unauthorized access points.
-      - Disabling WPS and Legacy Protocols: Turning off WPS, WEP, and TKIP.
-      - Changing Default Credentials & Firmware Patching: Enforcing complex administrative passwords and keeping AP firmware updated.
-
-16. **(b) What are the main security vulnerabilities commonly found in web applications? How would you address them? [3 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
-
-    Answer:
-
-    Main Vulnerabilities (OWASP Top 10) & Remedies:
-    - 1. SQL Injection (SQLi): Attackers insert malicious SQL queries via user inputs.
-      - Remedy: Use Parameterized Queries (Prepared Statements) and Object-Relational Mapping (ORM).
-    - 2. Cross-Site Scripting (XSS): Injecting malicious scripts into web pages viewed by other users.
-      - Remedy: Context-aware output encoding, strict input sanitization, and Content Security Policy (CSP).
-    - 3. Broken Authentication & Session Hijacking: Weak password policies and exposed session tokens.
-      - Remedy: Enforce Multi-Factor Authentication (MFA), `HttpOnly` and `Secure` cookie flags, and short session timeouts.
-    - 4. Cross-Site Request Forgery (CSRF): Forcing authenticated users to execute unintended actions.
-      - Remedy: Use unique, cryptographically secure anti-CSRF tokens and `SameSite` cookies.
-
-17. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
-
-    Answer: Social engineering is the psychological manipulation of people into performing actions or divulging confidential information (such as passwords and banking credentials) rather than hacking technical software vulnerabilities.
-
-    Common Techniques:
-    - Phishing: Sending deceptive emails mimicking legitimate organizations to lure victims into clicking malicious links or entering credentials.
-    - Spear Phishing: Highly personalized phishing targeted at a specific individual or organization.
-    - Pretexting: Fabricating an invented scenario (e.g., impersonating an IT technician) to manipulate the victim into disclosing sensitive access.
-    - Baiting: Offering a false promise (e.g., leaving an infected USB drive labeled "Salary Bonuses" in a public hallway) to entice the victim into executing malware.
-    - Vishing / Smishing: Voice phishing via phone calls or SMS phishing to extract sensitive data.
-    - Shoulder Surfing: Directly observing a person entering passwords or PINs in public.
-
-18. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
-
-    Answer: A flowchart is a graphical representation of an algorithm or stepwise process using standardized geometric symbols.
-
-    Main Symbols and Components:
-    - 1. Oval (Terminal): Represents the `Start` or `Stop` (End) of the program execution.
-    - 2. Parallelogram (Input/Output): Represents data `Read` (input) or `Print`/Display (output) operations.
-    - 3. Rectangle (Process): Represents computational calculations, arithmetic assignments, or data processing.
-    - 4. Diamond (Decision): Represents a conditional branching statement (`True`/`False` or `Yes`/`No`).
-    - 5. Flowlines (Arrows): Indicate the exact direction of the logical program flow.
-    - 6. Circle (Connector): Connects overlapping or distant flow paths on the same page.
-
-19. **Three friends A, B, and C invest money in a business in the ratio 3:4:5. After 1 year, the profit is Tk36,000. How much profit gain by B?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-    Answer:
-    - Given investment ratio of A : B : C = 3 : 4 : 5.
-    - Sum of the ratio terms = 3 + 4 + 5 = 12.
-    - Total annual profit = Tk 36,000.
-
-    - Share of profit for B:
-      Profit of B = (4 / 12) * 36,000 = (1 / 3) * 36,000 = Tk 12,000.
-
-    - Result: B gains Tk 12,000.
-
-20. **Letter your younger brother about the importance of vocational training.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
-
-    Answer:
-    Dhaka, Bangladesh
-    Date: 15 February 2024
-
-    Dear Brother,
-    I hope you are doing well with your studies. Today I am writing to highlight the immense value of vocational and technical training in building a prosperous career.
-
-    While traditional academic degrees provide theoretical knowledge, vocational training equips you with practical, industry-ready skills such as software development, electrical engineering, network administration, and graphic design. These specialized technical competencies lead to faster employment, self-reliance, and lucrative freelancing opportunities in the competitive modern job market.
-
-    I encourage you to enroll in a practical vocational course alongside your regular education.
-
-    With love and best wishes,
-    Your elder brother
-
-21. **Draw bit error rate curve and comparison between BER and SNR and QPSK with explained.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 373-374]]*
-
-    Answer: Bit Error Rate (BER) represents the ratio of errored bits received to total bits transmitted: BER = (Number of Error Bits) / (Total Bits).
-
-    BER vs SNR (Signal-to-Noise Ratio, Eb/N0):
-    - As SNR increases, signal clarity improves over background noise, causing the Bit Error Rate (BER) to decrease exponentially (waterfall curve).
-
-    ```
-    BER (log scale)
-    10^0  |\
-    10^-2 | \
-    10^-4 |  \    QPSK Waterfall Curve
-    10^-6 |   \
-          +------------------------- SNR (Eb/N0 in dB)
-    ```
-
-    QPSK (Quadrature Phase Shift Keying) Characteristics:
-    - Transmits 2 bits per symbol across 4 distinct carrier phases (45 deg, 135 deg, 225 deg, 315 deg).
-    - Theoretical BER formula: `Pb = Q(sqrt(2*Eb/N0))`.
-    - Offers double the bandwidth efficiency of BPSK while maintaining the exact same bit error rate performance for a given Eb/N0.
-
-22. **You have 1Gb data, but your computer can handle 64 kb data at a time. No how can you sort them. Explain your answer and write the pseudocode of the sorting code.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+2. **You have 1Gb data, but your computer can handle 64 kb data at a time. No how can you sort them. Explain your answer and write the pseudocode of the sorting code.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
 
     Answer: When dataset size (1 GB) exceeds available RAM (64 KB), **External Merge Sort** is used. It operates in two phases:
 
@@ -372,17 +351,63 @@
                 minHeap.insert(readNext(runFile), runFile)
     ```
 
-23. **A box contains 10 red and 10 black marbles. If you close your eyes and pick 3 marbles, what is the probability that all 3 marbles will be black?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+### Database Concepts (1)
+
+1. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
+
+    Answer: A Database Trigger is a stored procedural code block in DBMS that automatically executes (fires) in response to specific events (such as `INSERT`, `UPDATE`, or `DELETE`) on a designated table or view.
+
+    Why Triggers are Needed:
+    - Enforcing Complex Business Rules: Validating conditions beyond simple SQL constraints.
+    - Automated Audit Logging: Tracking historical changes and tracking who modified records.
+    - Data Synchronization: Automatically updating related tables (e.g., maintaining denormalized total columns).
+    - Preventing Invalid Transactions: Aborting operations when business thresholds are violated.
+
+    Example (Audit Log Trigger):
+    ```sql
+    CREATE TRIGGER trg_employee_audit
+    AFTER UPDATE ON Employee
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO Employee_Audit (emp_id, old_salary, new_salary, change_date)
+        VALUES (OLD.emp_id, OLD.salary, NEW.salary, NOW());
+    END;
+    ```
+
+### General Knowledge & Trivia (1)
+
+1. **ক) Deep Blue কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+খ) Android কী? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
+
+গ) Vitamin D এর ঘাটতি মানবদেহে কী ধরনের প্রভাব ফেলে? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
 
     Answer:
-    - Total marbles in box = 10 Red + 10 Black = 20 marbles.
-    - Number of ways to choose any 3 marbles from 20:
-      C(20, 3) = (20 * 19 * 18) / (3 * 2 * 1) = 1140
-    - Number of favorable ways to choose 3 black marbles from 10:
-      C(10, 3) = (10 * 9 * 8) / (3 * 2 * 1) = 120
+    - (a) Deep Blue: Deep Blue was an advanced chess-playing supercomputer developed by IBM. In May 1997, it made history by becoming the first computer system to defeat a reigning world chess champion, Garry Kasparov, in a six-game match under tournament conditions.
+    - (b) Android: Android is a Linux kernel-based, open-source operating system primarily designed for touchscreen mobile devices such as smartphones and tablets, developed by the Open Handset Alliance and commercially sponsored by Google.
+    - (c) Effects of Vitamin D Deficiency: Vitamin D deficiency impairs calcium absorption, leading to Rickets in children (soft, weak, and deformed bones) and Osteomalacia / Osteoporosis in adults (bone pain, reduced bone density, and higher fracture risk), alongside weakened immune defense.
 
-    - Probability:
-      P(3 Black) = C(10, 3) / C(20, 3) = 120 / 1140 = 12 / 114 = 2 / 19 = 0.1053 (or 10.53%)
+### Digital Communication & Modulation (1)
+
+1. **Draw bit error rate curve and comparison between BER and SNR and QPSK with explained.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 373-374]]*
+
+    Answer: Bit Error Rate (BER) represents the ratio of errored bits received to total bits transmitted: BER = (Number of Error Bits) / (Total Bits).
+
+    BER vs SNR (Signal-to-Noise Ratio, Eb/N0):
+    - As SNR increases, signal clarity improves over background noise, causing the Bit Error Rate (BER) to decrease exponentially (waterfall curve).
+
+    ```
+    BER (log scale)
+    10^0  |\
+    10^-2 | \
+    10^-4 |  \    QPSK Waterfall Curve
+    10^-6 |   \
+          +------------------------- SNR (Eb/N0 in dB)
+    ```
+
+    QPSK (Quadrature Phase Shift Keying) Characteristics:
+    - Transmits 2 bits per symbol across 4 distinct carrier phases (45 deg, 135 deg, 225 deg, 315 deg).
+    - Theoretical BER formula: `Pb = Q(sqrt(2*Eb/N0))`.
+    - Offers double the bandwidth efficiency of BPSK while maintaining the exact same bit error rate performance for a given Eb/N0.
 
 ## Artificial Intelligence & Expert Systems (8)
 
