@@ -1,24 +1,29 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 208 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Computer Fundamentals & Acronyms](#computer-fundamentals--acronyms-114) | 114 |
-| 2 | [ICT in Society & Governance](#ict-in-society--governance-24) | 24 |
-| 3 | [Hardware Components & BIOS (CMOS Battery)](#hardware-components--bios-cmos-battery-24) | 24 |
-| 4 | [Software Types & Classification](#software-types--classification-17) | 17 |
-| 5 | [Data Center Infrastructure & Power Management](#data-center-infrastructure--power-management-10) | 10 |
-| 6 | [Blockchain & Emerging Technologies](#blockchain--emerging-technologies-8) | 8 |
-| 7 | [Server Hardware & Enterprise Systems](#server-hardware--enterprise-systems-5) | 5 |
-| 8 | [Quantum Computing & Emerging Technologies](#quantum-computing--emerging-technologies-3) | 3 |
-| 9 | [Digital Banking & Financial Inclusion](#digital-banking--financial-inclusion-2) | 2 |
-| 10 | [User Interfaces (CLI vs GUI)](#user-interfaces-cli-vs-gui-1) | 1 |
+- [Computer Fundamentals & Acronyms (114)](#computer-fundamentals--acronyms-114)
+  - [Computer Fundamentals & Acronyms (80)](#computer-fundamentals--acronyms-80)
+  - [Bangla Language (Grammar & Vocabulary) (8)](#bangla-language-grammar--vocabulary-8)
+  - [English Language (Grammar & Usage) (11)](#english-language-grammar--usage-11)
+  - [Mathematics & Aptitude (7)](#mathematics--aptitude-7)
+  - [General Knowledge (Bangladesh & World) (8)](#general-knowledge-bangladesh--world-8)
+- [ICT in Society & Governance (24)](#ict-in-society--governance-24)
+- [Hardware Components & BIOS (CMOS Battery) (24)](#hardware-components--bios-cmos-battery-24)
+- [Software Types & Classification (17)](#software-types--classification-17)
+- [Data Center Infrastructure & Power Management (10)](#data-center-infrastructure--power-management-10)
+- [Blockchain & Emerging Technologies (8)](#blockchain--emerging-technologies-8)
+- [Server Hardware & Enterprise Systems (5)](#server-hardware--enterprise-systems-5)
+- [Quantum Computing & Emerging Technologies (3)](#quantum-computing--emerging-technologies-3)
+- [Digital Banking & Financial Inclusion (2)](#digital-banking--financial-inclusion-2)
+- [User Interfaces (CLI vs GUI) (1)](#user-interfaces-cli-vs-gui-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Computer Fundamentals & Acronyms (114)
+
+### Computer Fundamentals & Acronyms (80)
 
 1. **সব প্রশ্নের উত্তর দিতে হবে। ব্র্যাকেটে সংক্ষেপান এবং বিস্তারিত সূচক সংক্ষেপের সংক্ষেপের রূপ বিশ্লেষণ কি?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
@@ -1051,43 +1056,7 @@ Answer:
     | (iii) Power Consumption | High static and dynamic power consumption (approx. 10 mW/gate) | Extremely low static power consumption (nanowatts/gate; draws current only during state transitions) |
     | Fan-Out | Typically 10 loads | High (typically > 50 loads at low frequency) |
 
-61. **শুদ্ধ বানান লিখ: স্বায়ত্বশাসন, ব্যাকুল, নীশিথিনী, কুসংস্কার,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
-
-    Answer:
-    - অশুদ্ধ: স্বায়ত্বশাসন -> শুদ্ধ: স্বায়ত্তশাসন
-    - অশুদ্ধ: ব্যাকুল -> শুদ্ধ: ব্যাকুল (সঠিক)
-    - অশুদ্ধ: নীশিথিনী -> শুদ্ধ: নিশীথিনী
-    - অশুদ্ধ: কুসংস্কার -> শুদ্ধ: কুসংস্কার (সঠিক)
-
-62. **বাগধারা: বিড়াল তপস্বী,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
-
-    Answer:
-    - বিড়াল তপস্বী: ভণ্ড সাধু / কপট ব্যক্তি (A hypocrite).
-    - বাক্য রচনা: লোকটির কথা বিশ্বাস করো না, সে আসলে একজন বিড়াল তপস্বী।
-
-63. **ইংরেজি -১৫** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-
-    Answer: English language skills cover grammar precision, correct preposition usage, vocabulary strength, sentence transformation, and comprehension.
-
-64. **Verb correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-
-    Answer:
-    - 1. He (go) to school yesterday. -> He went to school yesterday.
-    - 2. The train (leave) before we reached the station. -> The train had left before we reached the station.
-    - 3. If it rains, we (not go) out. -> If it rains, we will not go out.
-    - 4. It (rain) since morning. -> It has been raining since morning.
-    - 5. The boy (read) a book now. -> The boy is reading a book now.
-
-65. **Phrase -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
-
-    Answer:
-    - 1. In a nutshell (সংক্ষেপে): Explain the problem in a nutshell.
-    - 2. By leaps and bounds (দ্রুত গতিতে): Technology is advancing by leaps and bounds.
-    - 3. Bread and butter (জীবিকা): Teaching is his main source of bread and butter.
-    - 4. At the eleventh hour (শেষ মুহূর্তে): He submitted his assignment at the eleventh hour.
-    - 5. Pros and cons (সুবিধা ও অসুবিধা): Consider the pros and cons before making a decision.
-
-66. **A CPU has 512 pages of each size 2 KB, and total frames = 128. Determine the length of logical address and physical address.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+61. **A CPU has 512 pages of each size 2 KB, and total frames = 128. Determine the length of logical address and physical address.** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 
     Answer:
 
@@ -1106,124 +1075,14 @@ Answer:
     - Offset bits ($d$) = $11	ext{ bits}$ (same as page offset)
     - Total Physical Address Length = $f + d = 7 + 11 = 18	ext{ bits}$
 
-67. **Solve a memory address calculation problem given the number of pages, frames, and page size. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+62. **Solve a memory address calculation problem given the number of pages, frames, and page size. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-68. **GK: Write short notes on the Rohingya issue — causes and current situation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
-
-    Answer:
-    - Background & Causes: The Rohingya are an ethnic Muslim minority from Rakhine State, Myanmar, stripped of citizenship under Myanmar's 1982 Citizenship Law. Decades of institutional disenfranchisement and military crackdowns in August 2017 caused over 750,000 Rohingya to flee to Bangladesh for humanitarian shelter.
-    - Current Situation: Bangladesh hosts over 1.2 million displaced Rohingya in Cox's Bazar and Bhasan Char. The global community, through ICJ and UN bodies, urges safe, dignified, and sustainable repatriation to Myanmar with citizenship rights restored.
-
-69. **উপসর্গ কী? কত প্রকার ও কী কী?-** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
-
-    Answer:
-    - উপসর্গ: যেসব অর্থহীন অব্যয়সূচক শব্দাংশ মূল ধাতু বা শব্দের পূর্বে বসে নতুন অর্থবোধক শব্দ তৈরি করে, অর্থের পরিবর্তন, পরিবর্ধন বা সংকোচন ঘটায়, তাদের উপসর্গ বলে।
-    - প্রকারভেদ: বাংলা ভাষায় উপসর্গ ৩ প্রকার:
-      1. খাঁটি বাংলা উপসর্গ (২১টি: অ, অঘা, অজ, অনা, আ, আড়, আন, আব, ইতি, উন, কদ, কু, নি, পাতি, বি, ভর, রাম, স, সা, সু, হা)।
-      2. তৎসম বা সংস্কৃত উপসর্গ (২০টি: প্র, পরা, অপ, সম, নি, অনু, অব, নির্, দুর্, বি, অধি, সু, উৎ, পরি, প্রতি, অতি, অপি, অভি, উপ, আ)।
-      3. বিদেশী উপসর্গ (ফারসি, আরবি, ইংরেজি, উর্দু-হিন্দি উপসর্গ: যেমন- হেড, সাব, ফুল, হাফ, বে, গর, দর ইত্যাদি)।
-
-70. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
-
-    Answer:
-    - ১. অশুদ্ধ: সব পাখিরা উড়ে গেল। -> শুদ্ধ: সব পাখি উড়ে গেল (অথবা পাখিরা উড়ে গেল)।
-    - ২. অশুদ্ধ: তার সৌজন্যতায় মুগ্ধ হলাম। -> শুদ্ধ: তার সৌজন্যে মুগ্ধ হলাম।
-    - ৩. অশুদ্ধ: দৈনতা সর্বদা প্রশংসনীয় নয়। -> শুদ্ধ: দীনতা (বা দৈন্য) সর্বদা প্রশংসনীয় নয়।
-    - ৪. অশুদ্ধ: তিনি সস্ত্রীকসহ উপস্থিত ছিলেন। -> শুদ্ধ: তিনি সস্ত্রীক উপস্থিত ছিলেন।
-    - ৫. অশুদ্ধ: শুধুমাত্র আপনি আসবেন। -> শুদ্ধ: মাত্র আপনি আসবেন (অথবা শুধু আপনি আসবেন)।
-
-71. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - Incorrect: neumonia
-    - Correct: Pneumonia
-
-72. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - Active: Do not close the door.
-    - Passive: Let not the door be closed.
-
-73. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - Sentence Type: Complex Sentence (It has one principal clause "he is honest" and one subordinate adverbial clause "Though he is poor" connected by the subordinating conjunction "Though").
-
-74. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - Affirmative: Everybody hates a liar.
-    - Negative: There is nobody but hates a liar. (or Nobody likes a liar.)
-
-75. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - Affirmative: Man is mortal.
-    - Negative: No man is immortal.
-
-76. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - Bangladesh Computer Council (BCC) was established in 1990 (under Act No. IX of 1990).
-
-77. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - বিশ্বের দীর্ঘতম নদী: নীলনদ (Nile River, length ~6,650 km).
-    - বাংলাদেশের দীর্ঘতম নদী: সুরমা-মেঘনা (Surma-Meghna system).
-
-78. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - তথ্য ও যোগাযোগ প্রযুক্তি (ICT) বিভাগ কার্যক্রম শুরু করে ৪ ডিসেম্বর ২০১১ তারিখে (পরবর্তীতে ২০১৪ সালে ডাক, টেলিযোগাযোগ ও তথ্যপ্রযুক্তি মন্ত্রণালয়ের অধীনে ন্যস্ত হয়)।
-
-79. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - বাংলাদেশে এ পর্যন্ত মোট ৮টি পঞ্চবার্ষিক পরিকল্পনা (Five-Year Plans) এবং ১টি দ্বিবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে (সর্বশেষ: ৮ম পঞ্চবার্ষিক পরিকল্পনা ২০২০-২০২৫)।
-
-80. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
-
-    Answer:
-    - সার্কভুক্ত (SAARC) সদস্য দেশ ৮টি (বাংলাদেশ, ভারত, পাকিস্তান, শ্রীলঙ্কা, নেপাল, ভুটান, মালদ্বীপ ও আফগানিস্তান)।
-
-81. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+63. **Web 3.0 কোন প্রযুক্তির সঙ্গে সম্পর্কিত?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
 
     Answer:
     - Web 3.0 মূলত ব্লকচেইন প্রযুক্তি (Blockchain Technology), বিকেন্দ্রীকরণ (Decentralization), স্মার্ট কন্ট্রাক্ট (Smart Contracts), কৃত্রিম বুদ্ধিমত্তা (AI) এবং ক্রিপ্টোকারেন্সির সঙ্গে সম্পর্কিত।
 
-82. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 0.25 নম্বর কাটা হয়। একজন পরীক্ষার্থী সবকটি প্রশ্নের উত্তর দিয়ে 75 নম্বর পেল। সে কতটি প্রশ্নের সঠিক উত্তর দিয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
-
-    Answer:
-    - ধরি, পরীক্ষার্থী সঠিক উত্তর দিয়েছে $x$ টি।
-    - তাহলে ভুল উত্তর দিয়েছে $(120 - x)$ টি।
-
-    প্রশ্নমতে:
-    $$1 	imes x - 0.25 	imes (120 - x) = 75$$
-    $$x - 30 + 0.25x = 75$$
-    $$1.25x = 105$$
-    $$x = rac{105}{1.25} = 84$$
-
-    - সে ৮৪টি প্রশ্নের সঠিক উত্তর দিয়েছে (এবং ৩৬টি ভুল উত্তর দিয়েছে)।
-
-83. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
-
-    Answer:
-    Given:
-    - Equation 1: $2x + 3y = 12$
-    - Equation 2: $x - y = 2 \implies x = y + 2$
-
-    Substitute $x = y + 2$ into Equation 1:
-    $$2(y + 2) + 3y = 12$$
-    $$2y + 4 + 3y = 12$$
-    $$5y = 8 \implies y = rac{8}{5} = 1.6$$
-
-    Now find $x$:
-    $$x = 1.6 + 2 = 3.6 = rac{18}{5}$$
-
-    Result: $x = 3.6$ (or $rac{18}{5}$) and $y = 1.6$ (or $rac{8}{5}$).
-
-84. **Draw a flowchart to print odd numbers from 1 to n.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
+64. **Draw a flowchart to print odd numbers from 1 to n.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 240]]*
 
     Answer:
 
@@ -1238,7 +1097,7 @@ Answer:
         Check -- No --> End([Stop])
     ```
 
-85. **Draw State Diagram for an Online Shopping Website. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+65. **Draw State Diagram for an Online Shopping Website. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
 
     Answer:
 
@@ -1256,55 +1115,7 @@ Answer:
         Delivered --> [*]
     ```
 
-86. **এক কথায় প্রকাশ করো: (০২)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
-(ক) যা পূর্বে দেখা যায়নি- (খ) অক্ষির সমীপে-
-
-    Answer:
-    - (ক) যা পূর্বে দেখা যায়নি -> অদৃষ্টপূর্ব
-    - (খ) অক্ষির সমীপে -> সমক্ষ
-
-87. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ২০ শতাংশ বৃদ্ধি পায় তবে তিনি প্রতি মাসে মোট কত টাকা পাবেন? (০৪)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
-
-    Answer:
-    - ১৬% বেতন বৃদ্ধি = ৮১২ টাকা।
-    - অতএব, মূল বেতন = $rac{812}{16} 	imes 100 = 50.75 	imes 100 = 5,075$ টাকা।
-    - ২০% বেতন বৃদ্ধি পেলে মোট বেতন হবে মূল বেতনের ১২০%।
-    - মোট নতুন মাসিক বেতন = $5075 	imes 1.20 = 6,090$ টাকা।
-
-
-88. **(a+b)^2 = 36 এবং (a-b)^2 = 16 হলে ab এবং (a^2+b^2)-এর মান নির্ণয় কর। (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
-
-    Answer:
-
-    দেওয়া আছে: $(a+b)^2 = 36$ এবং $(a-b)^2 = 16$
-
-    ab নির্ণয়:
-    - $(a+b)^2 = a^2 + 2ab + b^2 = 36$ ... (i)
-    - $(a-b)^2 = a^2 - 2ab + b^2 = 16$ ... (ii)
-    - (i) - (ii): $4ab = 20$
-    - $\therefore ab = 5$
-
-    $(a^2+b^2)$ নির্ণয়:
-    - (i) + (ii): $2(a^2 + b^2) = 52$
-    - $\therefore a^2 + b^2 = 26$
-
-    উত্তর: $ab = 5$ এবং $a^2 + b^2 = 26$
-
-89. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
-
-
-    Answer:
-    - E-7 (Emerging 7): বিশ্বের দ্রুত বিকাশমান ও উদীয়মান সাতটি প্রধান অর্থনীতির দেশকে নিয়ে গঠিত জোট। প্রাইসওয়াটারহাউসকুপার্স (PwC) ২০০৬ সালে এই ধারণাটি প্রবর্তন করে।
-    - সদস্য দেশ ৭টি:
-      1. চীন
-      2. ভারত
-      3. ব্রাজিল
-      4. রাশিয়া
-      5. মেক্সিকো
-      6. ইন্দোনেশিয়া
-      7. তুরস্ক
-
-89. **(a) Write a short comparative note on “Static web page” and “Dynamic web page”. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+66. **(a) Write a short comparative note on “Static web page” and “Dynamic web page”. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
 
     Answer:
 
@@ -1317,7 +1128,7 @@ Answer:
     | Interactivity | Low; content is fixed for all users | High; personalized user dashboards and interactive applications |
     | Maintenance | Difficult to update large sites manually | Easy to maintain through Content Management Systems (CMS) |
 
-90. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+67. **(b) What is malware? State in short with some examples? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
 
     Answer: Malware (short for Malicious Software) is any intrusive software specifically programmed to infiltrate, damage, exploit, or gain unauthorized access to computer systems, networks, and mobile devices without user consent.
 
@@ -1328,7 +1139,7 @@ Answer:
     - Ransomware: Encrypts files and demands ransom payment for decryption keys (e.g., WannaCry, Locky).
     - Spyware: Secretly monitors and captures keystrokes, passwords, and sensitive browsing history (e.g., Pegasus).
 
-91. **(c) You have been given the responsibility of identifying software requirements from a customer. Which methods would you follow to gather those requirements? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
+68. **(c) You have been given the responsibility of identifying software requirements from a customer. Which methods would you follow to gather those requirements? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
 
     Answer: To effectively gather and elicit comprehensive software requirements from a client, the following structured techniques are applied:
     - 1. Interviews: Conducting one-on-one structured and unstructured interviews with key stakeholders and domain experts.
@@ -1338,7 +1149,7 @@ Answer:
     - 5. Document Analysis: Reviewing existing business forms, standard operating procedures (SOP), and legacy software manuals.
     - 6. Observation (Job Shadowing): Directly observing end-users in their active work environment to understand operational workflows.
 
-92. **What are the various types of relationships in Database? Define them.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*
+69. **What are the various types of relationships in Database? Define them.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 355]]*
 
     Answer: In Relational Database Management Systems (RDBMS), table relationships define how data in one table is logically connected to data in another.
 
@@ -1353,20 +1164,7 @@ Answer:
       - Multiple records in Table A are linked to multiple records in Table B. Implemented via a junction/bridge table.
       - Example: `Student` and `Course` (A student can enroll in multiple courses, and a course can have many students).
 
-93. **An instrument store gives a 10% discount to all students off the original cost of an instrument. During a back to school sale an additional 15% is taken off the discounted price. Julie, a student at the local high school, purchases a flute for $306. How much did it originally cost?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-    Answer:
-    - Let the original price of the flute be $P$.
-    - Price after 10% student discount = $P 	imes (1 - 0.10) = 0.90P$.
-    - Price after additional 15% sale discount = $0.90P 	imes (1 - 0.15) = 0.90P 	imes 0.85 = 0.765P$.
-
-    Given that Julie paid $306:
-    $$0.765 P = 306$$
-    $$P = rac{306}{0.765} = 400$$
-
-    - Final Answer: The original cost was $400.
-
-94. **Given a table for person income:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 371]]*
+70. **Given a table for person income:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 371]]*
 Write a Python program to calculate the tax based on the given income slabs.
 
     Answer:
@@ -1393,28 +1191,28 @@ Write a Python program to calculate the tax based on the given income slabs.
     print(f"Total Income Tax Payable = BDT {calculate_tax(income):.2f}")
     ```
 
-95. **168.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+71. **168.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
     - Address Class: Class B IPv4 Address (First octet 168 falls in the Class B range 128–191).
     - Default Subnet Mask: `255.255.0.0` (`/16`).
 
-96. **0.0.5** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+72. **0.0.5** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
     - Address Scope: Reserved / Current Network address in IPv4 (`0.0.0.0/8` block reserved for local identification per RFC 1122).
 
-97. **0.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+73. **0.0.1** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
     - Address Scope: Reserved address within the `0.0.0.0/8` host identification block.
 
-98. **16.0.10** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+74. **16.0.10** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 
     Answer:
     - Address Class: Class A IPv4 Public Address (First octet 16 falls in Class A range 1–126). Default subnet mask: `255.0.0.0` (`/8`).
 
-99. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+75. **Question: Matching with Definition** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
     Answer:
     - RAM: Random Access Memory (Volatile main memory for active program execution).
@@ -1422,7 +1220,7 @@ Write a Python program to calculate the tax based on the given income slabs.
     - Cache Memory: High-speed SRAM situated near CPU to reduce memory access latency.
     - CPU: Central Processing Unit (The core processor executing program instructions).
 
-100. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+76. **Find roots of Quadratic equality equation ax^2+bx+c=0 in C or Any other language.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
     Answer:
 
@@ -1463,7 +1261,7 @@ Write a Python program to calculate the tax based on the given income slabs.
     }
     ```
 
-101. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+77. **What are the data units of the Physical layer, Data Link layer, Network layer, and Transport layer?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
     Answer: Protocol Data Units (PDUs) across OSI Layers:
     - 1. Physical Layer: Bits (Binary 0s and 1s transmitted as electrical/optical signals).
@@ -1471,7 +1269,7 @@ Write a Python program to calculate the tax based on the given income slabs.
     - 3. Network Layer: Packets / Datagrams (Data encapsulated with logical IP headers).
     - 4. Transport Layer: Segments (in TCP) or Datagrams (in UDP).
 
-102. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
+78. **Draw diagrams of Bus, Star, and Mesh network topologies.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 438]]*
 
     Answer:
 
@@ -1501,7 +1299,7 @@ Write a Python program to calculate the tax based on the given income slabs.
           (D)-------(C)
     ```
 
-103. **Write the names of three linear and three non-linear data structures. Also, mention which type of data structure a Binary Search Tree (BST) is.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+79. **Write the names of three linear and three non-linear data structures. Also, mention which type of data structure a Binary Search Tree (BST) is.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
     Answer:
     - Three Linear Data Structures:
@@ -1514,64 +1312,7 @@ Write a Python program to calculate the tax based on the given income slabs.
       3. Heap
     - Binary Search Tree (BST) Classification: A Binary Search Tree is a Non-Linear (Hierarchical) data structure.
 
-104. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
-
-    Answer:
-    - জাতীয় গ্রিডে যুক্ত হওয়া বাংলাদেশের প্রথম সৌর বিদ্যুৎ কেন্দ্র (২৮ মেগাওয়াট) স্থাপিত হয় কক্সবাজারের টেকনাফে (২০১৮ সালে)।
-
-105. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
-
-    Answer:
-    - "ভূষণ্ডির কাক" বাগধারাটির অর্থ: দীর্ঘজীবী ব্যক্তি (বা অত্যন্ত অভিজ্ঞ ও প্রবীণ ব্যক্তি)।
-
-106. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
-
-    Answer:
-    - "কোথায় যাওয়া হচ্ছে?" বাক্যটি ভাববাচ্যের (Impersonal Voice) উদাহরণ (যে বাচ্যে ক্রিয়ার অর্থই প্রধানরূপে প্রতীয়মান হয়)।
-
-107. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
-
-    Answer:
-    - I wish I were a king. (In unreal/hypothetical wishes, the subjunctive form "were" is used for all persons).
-
-108. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
-
-    Answer:
-    - Where are you going? (or Where are you from?)
-
-109. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
-
-    Answer:
-    - Adjective form of "misery" is Miserable.
-
-110. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
-
-    Answer:
-    - Algebraic Formula:
-      $$(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$$
-      $$a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca)$$
-
-    - Substitute given values ($a + b + c = 15$, $ab + bc + ca = 83$):
-      $$a^2 + b^2 + c^2 = (15)^2 - 2(83) = 225 - 166 = 59$$
-
-    - Final Answer: 59.
-
-111. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than it will be profit of 12%. Find the cost of the product.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
-
-    Answer:
-    - Let the Cost Price (CP) of the product be $x$ Taka.
-    - Selling price at 8% loss: $SP_1 = x - 0.08x = 0.92x$
-    - Selling price at 12% profit: $SP_2 = x + 0.12x = 1.12x$
-
-    Given that the difference between the two selling prices is 800 Taka:
-    $$SP_2 - SP_1 = 800$$
-    $$1.12x - 0.92x = 800$$
-    $$0.20x = 800$$
-    $$x = rac{800}{0.20} = 4000$$
-
-    - Final Answer: The cost of the product is 4,000 Taka.
-
-112. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514]]*
+80. **Differentiate among TDM, FDM, and WDM. How does synchronous TDM work?** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 514]]*
 
     Answer:
 
@@ -1587,10 +1328,281 @@ Write a Python program to calculate the tax based on the given income slabs.
     - Each connected input line is pre-allocated a dedicated time slot in each output frame, regardless of whether that line has active data to transmit.
     - If a source has no data, its allocated time slot is transmitted empty, ensuring predictable low latency.
 
-113. **Focus Writing in Bangla “কৃষি, ভূমি ও তথ্যানুযায়ী বাজারজাত”** *[compact it 523]*
+### Bangla Language (Grammar & Vocabulary) (8)
+
+1. **শুদ্ধ বানান লিখ: স্বায়ত্বশাসন, ব্যাকুল, নীশিথিনী, কুসংস্কার,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
+    Answer:
+    - অশুদ্ধ: স্বায়ত্বশাসন -> শুদ্ধ: স্বায়ত্তশাসন
+    - অশুদ্ধ: ব্যাকুল -> শুদ্ধ: ব্যাকুল (সঠিক)
+    - অশুদ্ধ: নীশিথিনী -> শুদ্ধ: নিশীথিনী
+    - অশুদ্ধ: কুসংস্কার -> শুদ্ধ: কুসংস্কার (সঠিক)
+
+2. **বাগধারা: বিড়াল তপস্বী,** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 91]]*
+
+    Answer:
+    - বিড়াল তপস্বী: ভণ্ড সাধু / কপট ব্যক্তি (A hypocrite).
+    - বাক্য রচনা: লোকটির কথা বিশ্বাস করো না, সে আসলে একজন বিড়াল তপস্বী।
+
+3. **উপসর্গ কী? কত প্রকার ও কী কী?-** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
+
+    Answer:
+    - উপসর্গ: যেসব অর্থহীন অব্যয়সূচক শব্দাংশ মূল ধাতু বা শব্দের পূর্বে বসে নতুন অর্থবোধক শব্দ তৈরি করে, অর্থের পরিবর্তন, পরিবর্ধন বা সংকোচন ঘটায়, তাদের উপসর্গ বলে।
+    - প্রকারভেদ: বাংলা ভাষায় উপসর্গ ৩ প্রকার:
+      1. খাঁটি বাংলা উপসর্গ (২১টি: অ, অঘা, অজ, অনা, আ, আড়, আন, আব, ইতি, উন, কদ, কু, নি, পাতি, বি, ভর, রাম, স, সা, সু, হা)।
+      2. তৎসম বা সংস্কৃত উপসর্গ (২০টি: প্র, পরা, অপ, সম, নি, অনু, অব, নির্, দুর্, বি, অধি, সু, উৎ, পরি, প্রতি, অতি, অপি, অভি, উপ, আ)।
+      3. বিদেশী উপসর্গ (ফারসি, আরবি, ইংরেজি, উর্দু-হিন্দি উপসর্গ: যেমন- হেড, সাব, ফুল, হাফ, বে, গর, দর ইত্যাদি)।
+
+4. **বাক্য শুদ্ধ করো (৫টি)** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 237]]*
+
+    Answer:
+    - ১. অশুদ্ধ: সব পাখিরা উড়ে গেল। -> শুদ্ধ: সব পাখি উড়ে গেল (অথবা পাখিরা উড়ে গেল)।
+    - ২. অশুদ্ধ: তার সৌজন্যতায় মুগ্ধ হলাম। -> শুদ্ধ: তার সৌজন্যে মুগ্ধ হলাম।
+    - ৩. অশুদ্ধ: দৈনতা সর্বদা প্রশংসনীয় নয়। -> শুদ্ধ: দীনতা (বা দৈন্য) সর্বদা প্রশংসনীয় নয়।
+    - ৪. অশুদ্ধ: তিনি সস্ত্রীকসহ উপস্থিত ছিলেন। -> শুদ্ধ: তিনি সস্ত্রীক উপস্থিত ছিলেন।
+    - ৫. অশুদ্ধ: শুধুমাত্র আপনি আসবেন। -> শুদ্ধ: মাত্র আপনি আসবেন (অথবা শুধু আপনি আসবেন)।
+
+5. **এক কথায় প্রকাশ করো: (০২)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
+(ক) যা পূর্বে দেখা যায়নি- (খ) অক্ষির সমীপে-
+
+    Answer:
+    - (ক) যা পূর্বে দেখা যায়নি -> অদৃষ্টপূর্ব
+    - (খ) অক্ষির সমীপে -> সমক্ষ
+
+6. **"ভূষণ্ডির কাক" বাগধারাটির অর্থ কী?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - "ভূষণ্ডির কাক" বাগধারাটির অর্থ: দীর্ঘজীবী ব্যক্তি (বা অত্যন্ত অভিজ্ঞ ও প্রবীণ ব্যক্তি)।
+
+7. **বাক্যটি কোন বাচ্যের উদাহরণ: "কোথায় যাওয়া হচ্ছে"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - "কোথায় যাওয়া হচ্ছে?" বাক্যটি ভাববাচ্যের (Impersonal Voice) উদাহরণ (যে বাচ্যে ক্রিয়ার অর্থই প্রধানরূপে প্রতীয়মান হয়)।
+
+8. **Focus Writing in Bangla “কৃষি, ভূমি ও তথ্যানুযায়ী বাজারজাত”** *[compact it 523]*
 
     Answer:
     বাংলাদেশের অর্থনীতি ও খাদ্য নিরাপত্তার মূল ভিত্তি কৃষি ও ভূমি ব্যবস্থাপনা। আধুনিক তথ্যপ্রযুক্তির যুগে কৃষিজমি সুরক্ষা, ভূমির উর্বরতা সংরক্ষণ এবং তথ্যানুযায়ী বাজারজাতকরণ (Data-driven Agri-Marketing) টেকসই কৃষির প্রধান নিয়ামক। তথ্যের অভাব ও মধ্যস্বত্বভোগীদের দৌরাত্ম্যে প্রান্তিক কৃষকরা প্রায়শই ফসলের ন্যায্যমূল্য থেকে বঞ্চিত হন। ডিজিটাল প্ল্যাটফর্ম, স্যাটেলাইট রিমোট সেন্সিং ও মোবাইল অ্যাপের মাধ্যমে ফসলের উৎপাদন পূর্বাভাস, আধুনিক কোল্ড-স্টোরেজ ট্র্যাকিং এবং বাজারদরের রিয়েল-টাইম তথ্য কৃষকের কাছে পৌঁছালে সিন্ডিকেট দূর হবে। স্মার্ট ল্যান্ড রেকর্ড এবং তথ্যভিত্তিক আধুনিক সাপ্লাই চেইনের সমন্বয়ই কৃষকের সমৃদ্ধি ও জাতীয় খাদ্য নিরাপত্তা সুদৃঢ় করতে পারে।
+
+### English Language (Grammar & Usage) (11)
+
+1. **ইংরেজি -১৫** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer: English language skills cover grammar precision, correct preposition usage, vocabulary strength, sentence transformation, and comprehension.
+
+2. **Verb correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer:
+    - 1. He (go) to school yesterday. -> He went to school yesterday.
+    - 2. The train (leave) before we reached the station. -> The train had left before we reached the station.
+    - 3. If it rains, we (not go) out. -> If it rains, we will not go out.
+    - 4. It (rain) since morning. -> It has been raining since morning.
+    - 5. The boy (read) a book now. -> The boy is reading a book now.
+
+3. **Phrase -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+
+    Answer:
+    - 1. In a nutshell (সংক্ষেপে): Explain the problem in a nutshell.
+    - 2. By leaps and bounds (দ্রুত গতিতে): Technology is advancing by leaps and bounds.
+    - 3. Bread and butter (জীবিকা): Teaching is his main source of bread and butter.
+    - 4. At the eleventh hour (শেষ মুহূর্তে): He submitted his assignment at the eleventh hour.
+    - 5. Pros and cons (সুবিধা ও অসুবিধা): Consider the pros and cons before making a decision.
+
+4. **Correct the spelling: neumonia** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Incorrect: neumonia
+    - Correct: Pneumonia
+
+5. **Make it passive: Do not close the door.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Active: Do not close the door.
+    - Passive: Let not the door be closed.
+
+6. **Identify the sentence type: "Though he is poor, he is honest."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Sentence Type: Complex Sentence (It has one principal clause "he is honest" and one subordinate adverbial clause "Though he is poor" connected by the subordinating conjunction "Though").
+
+7. **Make negative: "Everybody hates a liar."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Affirmative: Everybody hates a liar.
+    - Negative: There is nobody but hates a liar. (or Nobody likes a liar.)
+
+8. **Make negative without changing the meaning: "Man is mortal."** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Affirmative: Man is mortal.
+    - Negative: No man is immortal.
+
+9. **Fill in the blank using correct subjunctive mood: I wish I ___ a king.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - I wish I were a king. (In unreal/hypothetical wishes, the subjunctive form "were" is used for all persons).
+
+10. **Complete the sentence correctly: Where are you ___ ?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Where are you going? (or Where are you from?)
+
+11. **What is the adjective form of the noun "misery"?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Adjective form of "misery" is Miserable.
+
+### Mathematics & Aptitude (7)
+
+1. **পরীক্ষায় 120 টি MCQ প্রশ্নের প্রত্যেকটি সঠিক উত্তরের জন্য 1 নম্বর প্রদান করা হয় এবং প্রত্যেকটি ভুল উত্তরের জন্য 0.25 নম্বর কাটা হয়। একজন পরীক্ষার্থী সবকটি প্রশ্নের উত্তর দিয়ে 75 নম্বর পেল। সে কতটি প্রশ্নের সঠিক উত্তর দিয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+    Answer:
+    - ধরি, পরীক্ষার্থী সঠিক উত্তর দিয়েছে $x$ টি।
+    - তাহলে ভুল উত্তর দিয়েছে $(120 - x)$ টি।
+
+    প্রশ্নমতে:
+    $$1 	imes x - 0.25 	imes (120 - x) = 75$$
+    $$x - 30 + 0.25x = 75$$
+    $$1.25x = 105$$
+    $$x = rac{105}{1.25} = 84$$
+
+    - সে ৮৪টি প্রশ্নের সঠিক উত্তর দিয়েছে (এবং ৩৬টি ভুল উত্তর দিয়েছে)।
+
+2. **Algebra Question: If 2x + 3y = 12 and x - y = 2, find the values of x and y.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 239]]*
+
+    Answer:
+    Given:
+    - Equation 1: $2x + 3y = 12$
+    - Equation 2: $x - y = 2 \implies x = y + 2$
+
+    Substitute $x = y + 2$ into Equation 1:
+    $$2(y + 2) + 3y = 12$$
+    $$2y + 4 + 3y = 12$$
+    $$5y = 8 \implies y = rac{8}{5} = 1.6$$
+
+    Now find $x$:
+    $$x = 1.6 + 2 = 3.6 = rac{18}{5}$$
+
+    Result: $x = 3.6$ (or $rac{18}{5}$) and $y = 1.6$ (or $rac{8}{5}$).
+
+3. **রহিমের মাসিক বেতন ১৬ শতাংশ বৃদ্ধি পেলে তিনি প্রতি মাসে ৮১২ টাকা অতিরিক্ত পেতে পারেন। যদি তার মাসিক বেতন ২০ শতাংশ বৃদ্ধি পায় তবে তিনি প্রতি মাসে মোট কত টাকা পাবেন? (০৪)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 314]]*
+
+    Answer:
+    - ১৬% বেতন বৃদ্ধি = ৮১২ টাকা।
+    - অতএব, মূল বেতন = $rac{812}{16} 	imes 100 = 50.75 	imes 100 = 5,075$ টাকা।
+    - ২০% বেতন বৃদ্ধি পেলে মোট বেতন হবে মূল বেতনের ১২০%।
+    - মোট নতুন মাসিক বেতন = $5075 	imes 1.20 = 6,090$ টাকা।
+
+4. **(a+b)^2 = 36 এবং (a-b)^2 = 16 হলে ab এবং (a^2+b^2)-এর মান নির্ণয় কর। (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+    Answer:
+
+    দেওয়া আছে: $(a+b)^2 = 36$ এবং $(a-b)^2 = 16$
+
+    ab নির্ণয়:
+    - $(a+b)^2 = a^2 + 2ab + b^2 = 36$ ... (i)
+    - $(a-b)^2 = a^2 - 2ab + b^2 = 16$ ... (ii)
+    - (i) - (ii): $4ab = 20$
+    - $\therefore ab = 5$
+
+    $(a^2+b^2)$ নির্ণয়:
+    - (i) + (ii): $2(a^2 + b^2) = 52$
+    - $\therefore a^2 + b^2 = 26$
+
+    উত্তর: $ab = 5$ এবং $a^2 + b^2 = 26$
+
+5. **An instrument store gives a 10% discount to all students off the original cost of an instrument. During a back to school sale an additional 15% is taken off the discounted price. Julie, a student at the local high school, purchases a flute for $306. How much did it originally cost?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+    Answer:
+    - Let the original price of the flute be $P$.
+    - Price after 10% student discount = $P 	imes (1 - 0.10) = 0.90P$.
+    - Price after additional 15% sale discount = $0.90P 	imes (1 - 0.15) = 0.90P 	imes 0.85 = 0.765P$.
+
+    Given that Julie paid $306:
+    $$0.765 P = 306$$
+    $$P = rac{306}{0.765} = 400$$
+
+    - Final Answer: The original cost was $400.
+
+6. **If a + b + c = 15 and ab + bc + ca = 83 then what is the value of a^2 + b^2 + c^2?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Algebraic Formula:
+      $$(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$$
+      $$a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca)$$
+
+    - Substitute given values ($a + b + c = 15$, $ab + bc + ca = 83$):
+      $$a^2 + b^2 + c^2 = (15)^2 - 2(83) = 225 - 166 = 59$$
+
+    - Final Answer: 59.
+
+7. **A product is sold at a loss of 8%. If the product is sold at a price of 800 Taka more than it will be profit of 12%. Find the cost of the product.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 440]]*
+
+    Answer:
+    - Let the Cost Price (CP) of the product be $x$ Taka.
+    - Selling price at 8% loss: $SP_1 = x - 0.08x = 0.92x$
+    - Selling price at 12% profit: $SP_2 = x + 0.12x = 1.12x$
+
+    Given that the difference between the two selling prices is 800 Taka:
+    $$SP_2 - SP_1 = 800$$
+    $$1.12x - 0.92x = 800$$
+    $$0.20x = 800$$
+    $$x = rac{800}{0.20} = 4000$$
+
+    - Final Answer: The cost of the product is 4,000 Taka.
+
+### General Knowledge (Bangladesh & World) (8)
+
+1. **GK: Write short notes on the Rohingya issue — causes and current situation.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+    Answer:
+    - Background & Causes: The Rohingya are an ethnic Muslim minority from Rakhine State, Myanmar, stripped of citizenship under Myanmar's 1982 Citizenship Law. Decades of institutional disenfranchisement and military crackdowns in August 2017 caused over 750,000 Rohingya to flee to Bangladesh for humanitarian shelter.
+    - Current Situation: Bangladesh hosts over 1.2 million displaced Rohingya in Cox's Bazar and Bhasan Char. The global community, through ICJ and UN bodies, urges safe, dignified, and sustainable repatriation to Myanmar with citizenship rights restored.
+
+2. **BCC establishment year.** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - Bangladesh Computer Council (BCC) was established in 1990 (under Act No. IX of 1990).
+
+3. **দীর্ঘতম নদী?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - বিশ্বের দীর্ঘতম নদী: নীলনদ (Nile River, length ~6,650 km).
+    - বাংলাদেশের দীর্ঘতম নদী: সুরমা-মেঘনা (Surma-Meghna system).
+
+4. **ICT কার্যালয় কবে শুরু?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - তথ্য ও যোগাযোগ প্রযুক্তি (ICT) বিভাগ কার্যক্রম শুরু করে ৪ ডিসেম্বর ২০১১ তারিখে (পরবর্তীতে ২০১৪ সালে ডাক, টেলিযোগাযোগ ও তথ্যপ্রযুক্তি মন্ত্রণালয়ের অধীনে ন্যস্ত হয়)।
+
+5. **কয়টি পঞ্চবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - বাংলাদেশে এ পর্যন্ত মোট ৮টি পঞ্চবার্ষিক পরিকল্পনা (Five-Year Plans) এবং ১টি দ্বিবার্ষিক পরিকল্পনা গ্রহণ করা হয়েছে (সর্বশেষ: ৮ম পঞ্চবার্ষিক পরিকল্পনা ২০২০-২০২৫)।
+
+6. **সার্ক দেশ কয়টি?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+
+    Answer:
+    - সার্কভুক্ত (SAARC) সদস্য দেশ ৮টি (বাংলাদেশ, ভারত, পাকিস্তান, শ্রীলঙ্কা, নেপাল, ভুটান, মালদ্বীপ ও আফগানিস্তান)।
+
+7. **E-7 কী? এর সদস্য দেশ কয়টি?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+
+    Answer:
+    - E-7 (Emerging 7): বিশ্বের দ্রুত বিকাশমান ও উদীয়মান সাতটি প্রধান অর্থনীতির দেশকে নিয়ে গঠিত জোট। প্রাইসওয়াটারহাউসকুপার্স (PwC) ২০০৬ সালে এই ধারণাটি প্রবর্তন করে।
+    - সদস্য দেশ ৭টি:
+      1. চীন
+      2. ভারত
+      3. ব্রাজিল
+      4. রাশিয়া
+      5. মেক্সিকো
+      6. ইন্দোনেশিয়া
+      7. তুরস্ক
+
+8. **জাতীয় গ্রিডে সংযুক্ত প্রথম সৌর বিদ্যুৎ প্রকল্প কোথায় স্থাপিত হয়?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+
+    Answer:
+    - জাতীয় গ্রিডে যুক্ত হওয়া বাংলাদেশের প্রথম সৌর বিদ্যুৎ কেন্দ্র (২৮ মেগাওয়াট) স্থাপিত হয় কক্সবাজারের টেকনাফে (২০১৮ সালে)।
 
 ## ICT in Society & Governance (24)
 
