@@ -1,29 +1,43 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 225 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [SQL Commands & Queries](#sql-commands--queries-52) | 52 |
-| 2 | [DBMS Concepts & Architecture](#dbms-concepts--architecture-34) | 34 |
-| 3 | [Normalization](#normalization-16) | 16 |
-| 4 | [Transaction Management & ACID](#transaction-management--acid-14) | 14 |
-| 5 | [Keys in DBMS](#keys-in-dbms-11) | 11 |
-| 6 | [Data Warehousing & Data Mining](#data-warehousing--data-mining-9) | 9 |
-| 7 | [ER Diagram & Data Modeling](#er-diagram--data-modeling-9) | 9 |
-| 8 | [Relational Model & Terminology](#relational-model--terminology-8) | 8 |
-| 9 | [PL/SQL & Triggers](#plsql--triggers-7) | 7 |
-| 10 | [Database Fundamentals & SQL](#database-fundamentals--sql-7) | 7 |
-| 11 | [Indexing & Query Optimization](#indexing--query-optimization-6) | 6 |
-| 12 | [Database Connectivity (JDBC/ODBC)](#database-connectivity-jdbcodbc-5) | 5 |
-| 13 | [Concurrency Control & Locking](#concurrency-control--locking-5) | 5 |
-| 14 | [SQL Joins](#sql-joins-2) | 2 |
-| 15 | [Model Test: BB AD (ICT) Exam Two — Database Management](#model-test-bb-ad-ict-exam-two--database-management-40) | 40 |
+- [SQL Commands & Queries (52)](#sql-commands--queries-52)
+  - [SQL Commands & Query Writing (35)](#sql-commands--query-writing-35)
+  - [SQL Query Output Analysis & Tracing (9)](#sql-query-output-analysis--tracing-9)
+  - [Off-topic / Misplaced (DBMS & Relational Concepts) (8)](#off-topic--misplaced-dbms--relational-concepts-8)
+- [Model Test: BB AD (ICT) Exam Two — Database Management (40)](#model-test-bb-ad-ict-exam-two--database-management-40)
+- [DBMS Concepts & Architecture (34)](#dbms-concepts--architecture-34)
+  - [DBMS Concepts, Architecture & Administration (25)](#dbms-concepts-architecture--administration-25)
+  - [File Processing & Data Organization (6)](#file-processing--data-organization-6)
+  - [Off-topic / Misplaced (3)](#off-topic--misplaced-3)
+- [Normalization (16)](#normalization-16)
+- [Transaction Management & ACID (14)](#transaction-management--acid-14)
+  - [ACID Properties & Transaction Control (13)](#acid-properties--transaction-control-13)
+  - [Off-topic / Misplaced (SQL Clause) (1)](#off-topic--misplaced-sql-clause-1)
+- [Keys in DBMS (11)](#keys-in-dbms-11)
+  - [Keys, Constraints & Uniqueness (9)](#keys-constraints--uniqueness-9)
+  - [Off-topic / Misplaced (2)](#off-topic--misplaced-2)
+- [Data Warehousing & Data Mining (9)](#data-warehousing--data-mining-9)
+- [ER Diagram & Data Modeling (9)](#er-diagram--data-modeling-9)
+- [Relational Model & Terminology (8)](#relational-model--terminology-8)
+  - [Relational Model Fundamentals (7)](#relational-model-fundamentals-7)
+  - [Off-topic / Misplaced (Networking/Hardware) (1)](#off-topic--misplaced-networkinghardware-1)
+- [PL/SQL & Triggers (7)](#plsql--triggers-7)
+- [Database Fundamentals & SQL (7)](#database-fundamentals--sql-7)
+  - [SQL Query Writing Tasks (5)](#sql-query-writing-tasks-5)
+  - [Off-topic / Misplaced (Keys & Normalization Concepts) (2)](#off-topic--misplaced-keys--normalization-concepts-2)
+- [Indexing & Query Optimization (6)](#indexing--query-optimization-6)
+- [Database Connectivity (JDBC/ODBC) (5)](#database-connectivity-jdbcodbc-5)
+- [Concurrency Control & Locking (5)](#concurrency-control--locking-5)
+- [SQL Joins (2)](#sql-joins-2)
 
 <!-- TOC END -->
 
 ---
 
 ## SQL Commands & Queries (52)
+
+### SQL Commands & Query Writing (35)
 
 1. **Which clause is executed first in an SQL query?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*  
    (a) WHERE  
@@ -97,21 +111,7 @@
    answer: c — ORDER BY  
    explanation: ORDER BY sorts the result rows; GROUP BY aggregates them instead.
 
-9. **Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
-   ```sql
-   SELECT COUNT (*) FROM employee
-   WHERE SALARY > ALL(SELECT SALARY FROM EMPLOYEE);
-   ```
-   Prints:  
-   (a) 10  
-   (b) 9  
-   (c) 5  
-   (d) 0
-
-   answer: d — 0  
-   explanation: The subquery returns every salary including the row's own, and no value can be greater than itself, so no row qualifies.
-
-10. **Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*  
+9. **Which of the following provides the ability to query information from the database and insert tuples into, delete tuples from, and modify tuples in the database?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 24 (ET: BIBM)]*  
    (a) DML (Data Manipulation Language)  
    (b) DDL (Data Definition Language)  
    (c) Query  
@@ -120,7 +120,7 @@
    answer: a — DML (Data Manipulation Language)  
    explanation: DML covers SELECT, INSERT, DELETE and UPDATE — all the operations on the rows themselves.
 
-11. **To remove a relational table from SQL database, we use ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
+10. **To remove a relational table from SQL database, we use ______.** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 55 (ET: N/A)]*  
    (ক) Delete  
    (খ) Purge  
    (গ) Remove  
@@ -129,7 +129,7 @@
    answer: ঘ — Drop  
    explanation: DROP TABLE removes the whole table and its structure; DELETE only removes rows.
 
-12. **Which of the following command is a type of Data Definition language command?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
+11. **Which of the following command is a type of Data Definition language command?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
    a) Create  
    b) Update  
    c) Deleted  
@@ -146,7 +146,7 @@
    answer: a — Create  
    explanation: CREATE defines a new object, which is DDL. The stray item pasted here answers (a) Only I: a shared lock allows reading but not writing, while an exclusive lock allows both reading and writing.
 
-13. **Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
+12. **Which one is the correct SQL statement to find the second highest mark from STUDENT database contains the marks of all students?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) Select MAX(marks) from *STUDENT* WHERE marks NOT IN (select MAX(marks) from *STUDENT*  
    b) Select MAX(marks) from *STUDENT* WHERE marks IN (select MAX(marks) from *STUDENT*  
    c) select MAX(marks) from *STUDENT*  
@@ -155,7 +155,7 @@
    answer: a — Select MAX(marks) from STUDENT WHERE marks NOT IN (select MAX(marks) from STUDENT)  
    explanation: Excluding the highest mark and then taking the maximum of what is left gives the second highest.
 
-14. **Which of the following is not a DDL command?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+13. **Which of the following is not a DDL command?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
    a) Create  
    b) Drop  
    c) Alter  
@@ -164,7 +164,226 @@
    answer: d — Update  
    explanation: UPDATE modifies row data, so it is DML; CREATE, DROP and ALTER are DDL.
 
-15. **The SQL statement** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
+14. **When three or more AND & OR conditions are combined, it is easier to use the SQL keyword(s):** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
+   a) LIKE only  
+   b) IN only  
+   c) NOT IN only  
+   d) Both IN and NOT IN
+
+   answer: d — Both IN and NOT IN  
+   explanation: IN and NOT IN collapse a long chain of OR or AND comparisons into one readable list.
+
+15. **How to select all data from student table starting the name from letter 'r'?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
+   a) SELECT * FROM student WHERE name LIKE 'r%';  
+   b) SELECT * FROM student WHERE name LIKE '%r%';  
+   c) SELECT * FROM student WHERE name LIKE '%r';  
+   d) SELECT * FROM student WHERE name LIKE '_r%';
+
+   answer: a — SELECT * FROM student WHERE name LIKE 'r%';  
+   explanation: The % wildcard after r matches any characters following it, so the pattern finds names starting with r.
+
+16. **Which of the following are the five built-in functions provided by SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
+   a) COUNT, SUM, AVG, MAX, MIN  
+   b) SUM, AVG, MIN, MAX, MULT  
+   c) SUM, AVG, MULT, DIV, MIN  
+   d) SUM, AVG, MIN, MAX, NAME
+
+   answer: a — COUNT, SUM, AVG, MAX, MIN  
+   explanation: These five are SQL's standard aggregate functions.
+
+17. **Which is not the steps of SQL Query processing?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 163 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
+   a) Parsing  
+   b) Translation  
+   c) Optimization  
+   d) None
+
+   answer: d — None  
+   explanation: Parsing, translation and optimization are all genuine stages of query processing, followed by evaluation.
+
+18. **Which one is the Data Control Language (DCL) in SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
+   a) Insert  
+   b) Create  
+   c) Drop  
+   d) Grant
+
+   answer: d — Grant  
+   explanation: GRANT and REVOKE control privileges, which is what Data Control Language means.
+
+19. **We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
+   a) View is not visible to user  
+   b) It is not a virtual table  
+   c) It is not a part of the logical model  
+   d) View cannot be updated
+
+   answer: c — It is not a part of the logical model  
+   explanation: A view is a virtual table defined on top of the logical schema; it is visible to users and many views are updatable.
+
+20. **Consider the following “staff” table** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
+   | staff_name | staff_dep | city |  
+   |---|---|---|  
+   | Riaz | CSE | Dhaka |  
+   | Toha | EEE | Rajshahi |  
+   What should be the query to find the output like “Riaz(CSE)” from the staff table?  
+   a) select staff_name || ‘(‘|| staff_dep ||’)’ FROM staff where city= ‘Dhaka’  
+   b) select staff_name ‘(‘|| staff_dep ||’)’ FROM staff where city== ‘Dhaka’  
+   c) select staff_name || ‘(‘|| staff_dep ’)’|| FROM staff where city= ‘Dhaka’  
+   d) select staff_name || ‘(‘ staff_dep ||’)’ FROM staff where city= ‘Rajshahi’
+
+   answer: a — select staff_name || '(' || staff_dep ||')' FROM staff where city= 'Dhaka'  
+   explanation: || concatenates strings in SQL, and each literal needs its own || on both sides, with a single = for comparison.
+
+21. **What is the maximum length of the “varchar” in the database?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
+   a) 35000  
+   b) 100  
+   c) 65535  
+   d) 255
+
+   answer: c — 65535  
+   explanation: A MySQL row is limited to 65,535 bytes, which caps the length of a VARCHAR column.
+
+22. **What is wrong statements for SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
+   a) Non-procedural language  
+   b) Input can be several tables  
+   c) Output is always a single table  
+   d) Output can be multiple table
+
+   answer: d — Output can be multiple table  
+   explanation: A SQL query may read many tables but always returns exactly one result table, so this statement is wrong.
+
+23. **What is the advantage of using ‘case’ while doing the update operation?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
+   a) No proper sequence is required to maintain.  
+   b) It is much easier to write code with ‘case’ keyword.  
+   c) Update with ‘case’ provides significant time improvement.  
+   d) None of these above.
+
+   answer: c — Update with 'case' provides significant time improvement  
+   explanation: One UPDATE with a CASE expression replaces several separate UPDATE statements, so the table is scanned once instead of many times.
+
+24. **উল্লেখিত কোনটি Database aggregate এর function?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
+   A) where  
+   B) sum  
+   C) select  
+   D) from
+
+   answer: B — sum  
+   explanation: SUM aggregates many rows into one value; WHERE, SELECT and FROM are clauses, not functions.
+
+25. **নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
+   A) BETWEEN  
+   B) ANY  
+   C) IN  
+   D) COMPARE
+
+   answer: B — ANY  
+   explanation: ANY compares a value against every value a subquery returns and is true if the comparison holds for at least one of them. <!-- verify -->
+
+26. **In SQL, the ________ command is used to recompile a view.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*  
+   A) COMPILE VIEW  
+   B) DEFINE VIEW  
+   C) ALTER VIEW  
+   D) CREATE VIEW
+
+   answer: C — ALTER VIEW  
+   explanation: ALTER VIEW ... COMPILE recompiles an invalidated view definition.
+
+27. **Which one is database language?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
+   A) DDL  
+   B) DML  
+   C) Both A & B  
+   D) None
+
+   answer: C — Both A & B  
+   explanation: DDL defines the structure and DML manipulates the data — both are parts of the database language.
+
+28. **The SQL statement that requires or reads data from the table is-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
+   A) Select  
+   B) Read  
+   C) Query  
+   D) None of the above
+
+   answer: A — Select  
+   explanation: SELECT is the statement that reads rows out of a table.
+
+29. **Which of the following logical connectives is not included in SQL?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
+   A) AND  
+   B) OR  
+   C) NOR  
+   D) NOT
+
+   answer: C — NOR  
+   explanation: SQL provides AND, OR and NOT; there is no NOR connective.
+
+30. **The result of a SQL SELECT statement is a ----** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
+   A) Report  
+   B) form  
+   C) file  
+   D) table
+
+   answer: D — table  
+   explanation: A SELECT returns a result set arranged in rows and columns, which is itself a table.
+
+31. **To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
+   A) only  
+   B) distinct  
+   C) unique  
+   D) single
+
+   answer: B — distinct  
+   explanation: SELECT DISTINCT removes repeated rows from the result.
+
+32. **The ________ clause is used to list the attributes desired in the result of a query.** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
+   A) Where  
+   B) Select  
+   C) From  
+   D) Distinct
+
+   answer: B — Select  
+   explanation: The SELECT clause lists the columns or expressions that appear in the result.
+
+33. **In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
+   A) Where, having  
+   B) Having, where  
+   C) Group by, Having  
+   D) Group by, Where
+
+   answer: B — Having, where  
+   explanation: Aggregates are computed after grouping, so they can appear in SELECT and HAVING but not in WHERE, which filters rows before grouping.
+
+34. **In SQL, the ________ command is used to recompile a view.** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
+   A) COMPLTE VIEW  
+   B) DEFINE VIEW  
+   C) ALTER VIEW  
+   D) CREATE VIEW
+
+   answer: C — ALTER VIEW  
+   explanation: ALTER VIEW is the command that recompiles an existing view.
+
+35. **You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+   a. DUPLICATE  
+   b. SEPARATE  
+   c. DISTINCT  
+   d. INDEX
+
+   answer: c — DISTINCT  
+   explanation: DISTINCT keeps only one copy of each repeated row in the result.
+
+### SQL Query Output Analysis & Tracing (9)
+
+1. **Table employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 27 (ET: BIBM)]*
+   ```sql
+   SELECT COUNT (*) FROM employee
+   WHERE SALARY > ALL(SELECT SALARY FROM EMPLOYEE);
+   ```
+   Prints:  
+   (a) 10  
+   (b) 9  
+   (c) 5  
+   (d) 0
+
+   answer: d — 0  
+   explanation: The subquery returns every salary including the row's own, and no value can be greater than itself, so no row qualifies.
+
+2. **The SQL statement** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*
    ```sql
    SELECT ROUND (45.926, -1) FROM DUAL;
    ```
@@ -176,34 +395,7 @@
    answer: d — prints 50  
    explanation: A negative second argument rounds to the left of the decimal point, so -1 rounds 45.926 to the nearest ten, giving 50.
 
-16. **When three or more AND & OR conditions are combined, it is easier to use the SQL keyword(s):** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
-   a) LIKE only  
-   b) IN only  
-   c) NOT IN only  
-   d) Both IN and NOT IN
-
-   answer: d — Both IN and NOT IN  
-   explanation: IN and NOT IN collapse a long chain of OR or AND comparisons into one readable list.
-
-17. **How to select all data from student table starting the name from letter 'r'?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
-   a) SELECT * FROM student WHERE name LIKE 'r%';  
-   b) SELECT * FROM student WHERE name LIKE '%r%';  
-   c) SELECT * FROM student WHERE name LIKE '%r';  
-   d) SELECT * FROM student WHERE name LIKE '_r%';
-
-   answer: a — SELECT * FROM student WHERE name LIKE 'r%';  
-   explanation: The % wildcard after r matches any characters following it, so the pattern finds names starting with r.
-
-18. **Which of the following are the five built-in functions provided by SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
-   a) COUNT, SUM, AVG, MAX, MIN  
-   b) SUM, AVG, MIN, MAX, MULT  
-   c) SUM, AVG, MULT, DIV, MIN  
-   d) SUM, AVG, MIN, MAX, NAME
-
-   answer: a — COUNT, SUM, AVG, MAX, MIN  
-   explanation: These five are SQL's standard aggregate functions.
-
-19. **What does this query do?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
+3. **What does this query do?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*
    ```sql
    SELECT employee_number, name FROM
    employees AS Parent WHERE salary> (SELECT AVG (salary)
@@ -217,7 +409,7 @@
    answer: c — Finds the name and ID of employees who get more than average salaries of his own department  
    explanation: The correlated subquery re-computes the average for each row's own department, so the comparison is department by department.
 
-20. **What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
+4. **What will be the output of the following SQL "Select Round (232.420, -2) AS Round Value"?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
    (a) 240  
    (b) 200  
    (c) 233  
@@ -226,7 +418,7 @@
    answer: b — 200  
    explanation: -2 rounds to the nearest hundred, and 232.420 is closer to 200 than to 300.
 
-21. **Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
+5. **Consider the following relational data table, Employee. Now, find the output for the following SQL Statement?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 81 (ET: N/A)]*
    ```sql
    SELECT COUNT (*) FROM Employee, Employee, Employee
    ```
@@ -238,7 +430,7 @@
    answer: d — 64  
    explanation: Listing the table three times makes a Cartesian product, so the count is n³; with 4 rows in Employee that is 64. <!-- verify -->
 
-22. **Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
+6. **Table Employee has 10 records. It has a non-NULL SALARY column which is also UNIQUE. The SQL statement** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 88 (ET: N/A)]*
    ```sql
    SELECT COUNT(*) FROM Employee WHERE SALARY > ANY (SELECT SALARY FROM EMPLOYEE);
    ```
@@ -251,7 +443,7 @@
    answer: c — 9  
    explanation: "> ANY" means greater than at least one salary, which every row satisfies except the smallest, leaving 9 of the 10.
 
-23. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
+7. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 91 (ET: N/A)]*  
    | Product ID | Delivery Data | Quantity |  
    |---|---|---|  
    | F101 | 2021-03-17 | 3 |  
@@ -266,84 +458,7 @@
    answer: b — SELECT COUNT (*) FROM Delivery Record  
    explanation: COUNT(*) gives 4, while AVG for F101 is 2, SUM for 2021-03-16 is 3 and MAX quantity is 3.
 
-24. **Which is not the steps of SQL Query processing?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 163 (ET: N/A)], [Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
-   a) Parsing  
-   b) Translation  
-   c) Optimization  
-   d) None
-
-   answer: d — None  
-   explanation: Parsing, translation and optimization are all genuine stages of query processing, followed by evaluation.
-
-25. **Which one is the Data Control Language (DCL) in SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
-   a) Insert  
-   b) Create  
-   c) Drop  
-   d) Grant
-
-   answer: d — Grant  
-   explanation: GRANT and REVOKE control privileges, which is what Data Control Language means.
-
-26. **We can create a “View” of a relation using the “create view_name” command in SQL analyze the following information about view and find which option is correct-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
-   a) View is not visible to user  
-   b) It is not a virtual table  
-   c) It is not a part of the logical model  
-   d) View cannot be updated
-
-   answer: c — It is not a part of the logical model  
-   explanation: A view is a virtual table defined on top of the logical schema; it is visible to users and many views are updatable.
-
-27. **Consider the following “staff” table** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 166 (ET: N/A)]*  
-   | staff_name | staff_dep | city |  
-   |---|---|---|  
-   | Riaz | CSE | Dhaka |  
-   | Toha | EEE | Rajshahi |  
-   What should be the query to find the output like “Riaz(CSE)” from the staff table?  
-   a) select staff_name || ‘(‘|| staff_dep ||’)’ FROM staff where city= ‘Dhaka’  
-   b) select staff_name ‘(‘|| staff_dep ||’)’ FROM staff where city== ‘Dhaka’  
-   c) select staff_name || ‘(‘|| staff_dep ’)’|| FROM staff where city= ‘Dhaka’  
-   d) select staff_name || ‘(‘ staff_dep ||’)’ FROM staff where city= ‘Rajshahi’
-
-   answer: a — select staff_name || '(' || staff_dep ||')' FROM staff where city= 'Dhaka'  
-   explanation: || concatenates strings in SQL, and each literal needs its own || on both sides, with a single = for comparison.
-
-28. **What is the maximum length of the “varchar” in the database?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
-   a) 35000  
-   b) 100  
-   c) 65535  
-   d) 255
-
-   answer: c — 65535  
-   explanation: A MySQL row is limited to 65,535 bytes, which caps the length of a VARCHAR column.
-
-29. **Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
-   a) Multivalued  
-   b) Derived  
-   c) Simple  
-   d) Composite
-
-   answer: b — Derived  
-   explanation: CGPA is computed from the individual course GPAs rather than stored independently, so it is a derived attribute.
-
-30. **What is wrong statements for SQL?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
-   a) Non-procedural language  
-   b) Input can be several tables  
-   c) Output is always a single table  
-   d) Output can be multiple table
-
-   answer: d — Output can be multiple table  
-   explanation: A SQL query may read many tables but always returns exactly one result table, so this statement is wrong.
-
-31. **The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
-   a) Union  
-   b) Set-difference  
-   c) Difference  
-   d) Intersection
-
-   answer: b — Set-difference  
-   explanation: The set-difference operator (-) returns the tuples present in the first relation and absent from the second.
-
-32. **Consider the following Employee Table and the SQL query given:** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
+8. **Consider the following Employee Table and the SQL query given:** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    | id | Date | Work_hour |  
    |---|---|---|  
    | 1 | 2020-10-18 | 8 |  
@@ -362,7 +477,7 @@
    answer: c — 2  
    explanation: Only the rows with work_hour above 6 survive the WHERE, leaving ids 1 and 2 (id 3 has exactly 6), so grouping gives 2 rows.
 
-33. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
+9. **Following table shows the delivery record of an online shop. Which of the SQL statements results in the largest value?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 185 (ET: N/A)]*  
    | Product Id | Date | Quantity |  
    |---|---|---|  
    | F101 | 2020-10-17 | 3 |  
@@ -377,34 +492,27 @@
    answer: b — SELECT COUNT (*) FROM Delivery Record  
    explanation: COUNT(*) returns 4, beating AVG for F101 (2), SUM on 2020-10-16 (3) and MAX quantity (3).
 
-34. **What is the advantage of using ‘case’ while doing the update operation?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
-   a) No proper sequence is required to maintain.  
-   b) It is much easier to write code with ‘case’ keyword.  
-   c) Update with ‘case’ provides significant time improvement.  
-   d) None of these above.
+### Off-topic / Misplaced (DBMS & Relational Concepts) (8)
 
-   answer: c — Update with 'case' provides significant time improvement  
-   explanation: One UPDATE with a CASE expression replaces several separate UPDATE statements, so the table is scanned once instead of many times.
+1. **Assume that in a table named “student” the cgpa is calculated using the all course’s gpa. What kind of attribute cgpa is?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
+   a) Multivalued  
+   b) Derived  
+   c) Simple  
+   d) Composite
 
-35. **উল্লেখিত কোনটি Database aggregate এর function?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
-   A) where  
-   B) sum  
-   C) select  
-   D) from
+   answer: b — Derived  
+   explanation: CGPA is computed from the individual course GPAs rather than stored independently, so it is a derived attribute.
 
-   answer: B — sum  
-   explanation: SUM aggregates many rows into one value; WHERE, SELECT and FROM are clauses, not functions.
+2. **The ________ operation, denoted by -, allows us to find tuples that are in one relation but are not in another.** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
+   a) Union  
+   b) Set-difference  
+   c) Difference  
+   d) Intersection
 
-36. **নিচের কোনটি Database তুলনা করার কাজে ব্যবহার হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
-   A) BETWEEN  
-   B) ANY  
-   C) IN  
-   D) COMPARE
+   answer: b — Set-difference  
+   explanation: The set-difference operator (-) returns the tuples present in the first relation and absent from the second.
 
-   answer: B — ANY  
-   explanation: ANY compares a value against every value a subquery returns and is true if the comparison holds for at least one of them. <!-- verify -->
-
-37. **কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
+3. **কোনটি দিয়ে Database Table এ uniqueness নিশ্চিত করা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) Primary Key  
    B) Foreign Key  
    C) Entity  
@@ -413,88 +521,7 @@
    answer: A — Primary Key  
    explanation: A primary key must be unique and not null, so it identifies each row exactly once.
 
-38. **In SQL, the ________ command is used to recompile a view.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 206 (ET: AUST)], [Probashi Kallyan Bank Assistant Programmer: 2019 compact it 216 (ET: AUST)]*  
-   A) COMPILE VIEW  
-   B) DEFINE VIEW  
-   C) ALTER VIEW  
-   D) CREATE VIEW
-
-   answer: C — ALTER VIEW  
-   explanation: ALTER VIEW ... COMPILE recompiles an invalidated view definition.
-
-39. **Which one is database language?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 219 (ET: N/A)]*  
-   A) DDL  
-   B) DML  
-   C) Both A & B  
-   D) None
-
-   answer: C — Both A & B  
-   explanation: DDL defines the structure and DML manipulates the data — both are parts of the database language.
-
-40. **The SQL statement that requires or reads data from the table is-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
-   A) Select  
-   B) Read  
-   C) Query  
-   D) None of the above
-
-   answer: A — Select  
-   explanation: SELECT is the statement that reads rows out of a table.
-
-41. **Which of the following logical connectives is not included in SQL?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
-   A) AND  
-   B) OR  
-   C) NOR  
-   D) NOT
-
-   answer: C — NOR  
-   explanation: SQL provides AND, OR and NOT; there is no NOR connective.
-
-42. **The result of a SQL SELECT statement is a ----** *[Combined Bank Maintenance Engineer 2018 compact it 225 (ET: N/A)]*  
-   A) Report  
-   B) form  
-   C) file  
-   D) table
-
-   answer: D — table  
-   explanation: A SELECT returns a result set arranged in rows and columns, which is itself a table.
-
-43. **To remove the duplicate rows from the result of an SQL Select statement, the---- qualifier specified include.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
-   A) only  
-   B) distinct  
-   C) unique  
-   D) single
-
-   answer: B — distinct  
-   explanation: SELECT DISTINCT removes repeated rows from the result.
-
-44. **The ________ clause is used to list the attributes desired in the result of a query.** *[Combined 3 Bank Assistant Programmer 2018 compact it 230 (ET: N/A)]*  
-   A) Where  
-   B) Select  
-   C) From  
-   D) Distinct
-
-   answer: B — Select  
-   explanation: The SELECT clause lists the columns or expressions that appear in the result.
-
-45. **In SQL, aggregate functions can be used in the select list or the ________ clause of a select statement or subquery. They cannot be used in a ________ clause.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
-   A) Where, having  
-   B) Having, where  
-   C) Group by, Having  
-   D) Group by, Where
-
-   answer: B — Having, where  
-   explanation: Aggregates are computed after grouping, so they can appear in SELECT and HAVING but not in WHERE, which filters rows before grouping.
-
-46. **In SQL, the ________ command is used to recompile a view.** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
-   A) COMPLTE VIEW  
-   B) DEFINE VIEW  
-   C) ALTER VIEW  
-   D) CREATE VIEW
-
-   answer: C — ALTER VIEW  
-   explanation: ALTER VIEW is the command that recompiles an existing view.
-
-47. **What is a tuple?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+4. **What is a tuple?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Another name for a table in an RDBMS  
    b. A row or record in a database table  
    c. An attribute attached to a record  
@@ -503,7 +530,7 @@
    answer: b — A row or record in a database table  
    explanation: In relational terms a tuple is one row of a relation.
 
-48. **The primary key is selected from the ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+5. **The primary key is selected from the ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Candidate keys  
    b. Composite keys  
    c. Determinants  
@@ -512,7 +539,7 @@
    answer: a — Candidate keys  
    explanation: All the attributes that could uniquely identify a row are candidate keys, and the designer picks one of them as the primary key.
 
-49. **A transaction for which all committed changes are permanent is called ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+6. **A transaction for which all committed changes are permanent is called ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Atomic  
    b. Consistent  
    c. Isolated  
@@ -521,7 +548,7 @@
    answer: d — Durable  
    explanation: Durability guarantees committed changes survive crashes and power loss.
 
-50. **Which of the following locks the item from access of any type?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+7. **Which of the following locks the item from access of any type?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. Implicit lock  
    b. Explicit lock  
    c. Exclusive lock  
@@ -530,16 +557,7 @@
    answer: c — Exclusive lock  
    explanation: An exclusive (write) lock blocks every other transaction from reading or writing the item.
 
-51. **You run a SELECT statement and multiple duplicate values are retrieved. What keyword can you use to retrieve only the non-duplicate data?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
-   a. DUPLICATE  
-   b. SEPARATE  
-   c. DISTINCT  
-   d. INDEX
-
-   answer: c — DISTINCT  
-   explanation: DISTINCT keeps only one copy of each repeated row in the result.
-
-52. **Microsoft Access is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+8. **Microsoft Access is a ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
    a. RDBMS  
    b. OODBMS  
    c. ORDBMS  
@@ -547,1228 +565,6 @@
 
    answer: a — RDBMS  
    explanation: Microsoft Access stores data in related tables with keys, which makes it a relational database management system.
-
-## DBMS Concepts & Architecture (34)
-
-1. **Data about data is called-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
-   (a) Data dictionary  
-   (b) Data bank  
-   (c) Meta Data  
-   (d) Warehouse
-
-   answer: c — Meta Data  
-   explanation: Metadata describes other data — column names, types, sizes and constraints — rather than the values themselves.
-
-2. **Which level of abstraction specifies the data and relationships between data?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
-   **Ans:** Conceptual Level (Logical Level)
-
-   answer: Conceptual Level (Logical Level)  
-   explanation: The conceptual level describes what data is stored and how the items relate, hiding the physical storage details from the user.
-
-3. **Which of the following is not a function of a database administrator?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*  
-   a) Database the design  
-   b) Backing up the database  
-   c) Query processing  
-   d) User coordination
-
-   answer: c — Query processing  
-   explanation: Query processing is done automatically by the DBMS engine; the DBA designs the schema, takes backups and manages users.
-
-4. **Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
-   a) Lsps -a  
-   b) Swapinfo -m  
-   c) Swapon -s  
-   d) Swap -l and Swap -s
-
-   answer: c — Swapon -s  
-   explanation: swapon -s lists each swap area with its size and usage on Linux.
-
-5. **In oracle to change the DB_Block_size parameter, you need to-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
-   a) Re-create the database  
-   b) Alter the database  
-   c) Move database to temporary  
-   d) Update the table types of the database
-
-   answer: a — Re-create the database  
-   explanation: DB_BLOCK_SIZE is fixed when the database is created and cannot be altered afterwards, so the database must be rebuilt.
-
-6. **Which of the following controls the execution of application program and UI in two tier client/server architecture?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
-   a) Modulation side  
-   b) Server side  
-   c) Host side  
-   d) None of the above
-
-   answer: c — Host side  
-   explanation: In a two-tier design the client host runs the user interface and application logic while the server only manages the data. <!-- verify -->
-
-7. **LGWR process writes information into-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
-   a) Database files  
-   b) Control Files  
-   c) Redo log Files  
-   d) All of the above
-
-   answer: c — Redo log Files  
-   explanation: The Log Writer flushes the redo log buffer to the online redo log files so committed changes can be recovered.
-
-8. **Data integrity problems in a DBMS is caused due to-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
-   a) Missing Data  
-   b) Data inconsistency  
-   c) Data Redundancy  
-   d) Security constraints
-
-   answer: c — Data Redundancy  
-   explanation: When the same fact is stored in several places, updating one copy and not the others leaves the database inconsistent.
-
-9. **A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
-   a) Data organization  
-   b) Data Binding  
-   c) Data schemas  
-   d) Data models
-
-   answer: d — Data models  
-   explanation: A data model is the set of concepts used to describe data, relationships, semantics and constraints.
-
-10. **Which is the oracle component that contains the memory structures and background process?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Instance  
-   b) Server  
-   c) SGA  
-   d) Database files
-
-   answer: a — Instance  
-   explanation: An Oracle instance is the SGA memory structures plus the background processes; the database is the files on disk.
-
-11. **The three different application logic components are which of the following?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Presentation, Client, and Storage  
-   b) Presentation, Client, and Processing  
-   c) Presentation, Processing, and Storage  
-   d) Presentation, Processing, and Network
-
-   answer: c — Presentation, Processing, and Storage  
-   explanation: Application logic splits into the presentation layer, the processing (business logic) layer and the data storage layer.
-
-12. **Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Checking referential constraints when the data is updated  
-   b) Managing a transaction that combines a series of processes as a logical Unit.  
-   c) Managing the data access rights of users.  
-   d) Placing an exclusive lock on the data before it is updated
-
-   answer: c — Managing the data access rights of users  
-   explanation: Confidentiality is protected by granting each user only the privileges they need; the other options address integrity or concurrency.
-
-13. **Oracle materialized views or SNAPSHOTS is used-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) Hiding data from users  
-   b) Dynamic data replication  
-   c) Table Space Reduction  
-   d) Data Abstraction
-
-   answer: b — Dynamic data replication  
-   explanation: A materialized view stores a physical copy of a query result and refreshes it, which is how snapshots replicate data between sites.
-
-14. **A distributed database has which of the following advantages over a centralized database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) Software cost  
-   b) Software complexity  
-   c) Slow Response  
-   d) Modular growth
-
-   answer: d — Modular growth  
-   explanation: A distributed database lets new sites and servers be added incrementally without redesigning the whole system.
-
-15. **In Oracle DBMS, LGWR process is a-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
-   (a) Foreground Process  
-   (b) Background Process  
-   (c) High Priority Process  
-   (d) Batch Process
-
-   answer: b — Background Process  
-   explanation: LGWR is one of Oracle's mandatory background processes, started with the instance.
-
-16. **Which one of the following is a No-SQL Database?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
-   (a) MongoDB  
-   (b) CasperDB  
-   (c) ZBase  
-   (d) All of the above
-
-   answer: a — MongoDB  
-   explanation: MongoDB is a document-oriented NoSQL database; CasperDB and ZBase are not standard products.
-
-17. **Which one of the following statements is true with respect to a Database Management System?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
-   (a) Super key and candidate keys are similar  
-   (b) Candidate keys and Unique Keys are similar  
-   (c) Unique Keys and Primary Keys are similar  
-   (d) Candidate keys and Primary keys are similar
-
-   answer: b — Candidate keys and Unique Keys are similar  
-   explanation: Every candidate key uniquely identifies a row and is enforced by a UNIQUE constraint; a super key need not be minimal and a primary key is just the one candidate key chosen. <!-- verify -->
-
-18. **The collection of information stored in the database at a particular moment is called-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
-   a) Schema  
-   b) Instance  
-   c) Relation  
-   d) Record
-
-   answer: b — Instance  
-   explanation: A schema is the design, while the instance is the actual data held at a given moment.
-
-19. **Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 174 (ET: N/A)]*  
-   a) scale up  
-   b) roll up  
-   c) speedup  
-   d) Data Warehouse
-
-   answer: c — speedup  
-   explanation: Speedup means finishing the same task faster by adding parallel resources; scale-up means handling a larger task in the same time.
-
-20. **In user facilities, copying of all records onto a main store from permanent store is considered as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
-   A) delete file  
-   B) rename file  
-   C) save file  
-   D) load file
-
-   answer: D — load file  
-   explanation: Loading copies the records from permanent storage into main memory ready for processing.
-
-21. **If master and transaction file have keys in same order, then it takes____** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
-   A) less time  
-   B) more time  
-   C) many hours  
-   D) many days
-
-   answer: A — less time  
-   explanation: When both files are sorted on the same key they can be merged in a single pass, with no searching or re-sorting.
-
-22. **File used to update information in computer's master file is classified as** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
-   A) transaction file  
-   B) direct file  
-   C) order file  
-   D) sequence file
-
-   answer: A — transaction file  
-   explanation: A transaction file holds the day's changes that are applied to the master file during the update run.
-
-23. **Interleaving of records to form one file containing all records is classified as ____.** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
-   A) merging  
-   B) finding  
-   C) file learning  
-   D) searching
-
-   answer: A — merging  
-   explanation: Merging interleaves records from two or more sorted files into one file that keeps the ordering.
-
-24. **Set of numbers used to check all groups record within limits of data is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
-   A) variable check  
-   B) decimal check  
-   C) type check  
-   D) range check
-
-   answer: D — range check  
-   explanation: A range check verifies that each value falls between a defined lower and upper limit.
-
-25. **Process of converting data or information in the form of which is readily available for processing is called-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
-   A) encoding  
-   B) decoding  
-   C) translating  
-   D) data organization
-
-   answer: A — encoding  
-   explanation: Encoding converts data into the form the system can process.
-
-26. **Which of the following term refers to the degree to which data in a database system are accurate and correct?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*  
-   A) Data integrity  
-   B) Data security  
-   C) Data Validity  
-   D) None of these
-
-   answer: A — Data integrity  
-   explanation: Data integrity means the stored data is accurate, consistent and valid throughout its life.
-
-27. **Which one is an example of DBMS?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
-   A. MS word  
-   B. MS Excel  
-   C. C++  
-   D. MS Access
-
-   answer: D — MS Access  
-   explanation: MS Access is a relational database management system; Word and Excel are office applications and C++ is a language.
-
-28. **In the hypermedia database, information bits are stored in the form of:** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
-   (a) Cubes  
-   (b) Nodes  
-   (c) Signals  
-   (d) Symbols
-
-   answer: b — Nodes  
-   explanation: Hypermedia stores information in nodes that are joined by links the user can follow.
-
-29. **Data directory contains detail of-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
-   A) Data structure  
-   B) Data flows  
-   C) Data store  
-   D) None
-
-   answer: A — Data structure  
-   explanation: The data dictionary or directory records the definitions of the data — names, types, lengths and structure.
-
-30. **Which of the following terms refers to the degree to which data in a database system are accurate and correct?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
-   A) Data integrity  
-   B) Data security  
-   C) Data validity  
-   D) None of the above
-
-   answer: A — Data integrity  
-   explanation: Integrity is the measure of how accurate and correct the data in the database is.
-
-31. **The following are functions of a DBMS except ________** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
-   A) creating and processing forms  
-   B) creating databases  
-   C) processing data  
-   D) administrating databases
-
-   answer: A — creating and processing forms  
-   explanation: Forms belong to the application front end; the DBMS creates databases, processes data and supports administration.
-
-32. **The ________ format is usually used to store data.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
-   A) BCD  
-   B) Decimal  
-   C) Hexadecimal  
-   D) Octal
-
-   answer: A — BCD  
-   explanation: Binary Coded Decimal stores each decimal digit in its own four-bit group, which suits business and financial data.
-
-33. **From where the data is captured in the SQL Server Database?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
-   a. Automatic call decider  
-   b. Automation call distributor  
-   c. Automatic call distributor  
-   d. Automatic historical data
-
-   answer: c — Automatic call distributor  
-   explanation: The ACD records each call's routing and handling events, and those records are captured into the SQL Server database.
-
-34. **What is the purpose of data logger?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
-   a. keeps historical data  
-   b. keeps all the data for delivery purpose  
-   c. keeps the code for the tracking  
-   d. keeps automatic call distribution
-
-   answer: a — keeps historical data  
-   explanation: The Logger writes call and configuration records to the database so historical reports can be produced.
-
-## Normalization (16)
-
-1. **Which normal form is considered adequate for normal relational database design?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
-   a) 2NF  
-   b) 5NF  
-   c) 4NF  
-   d) 3NF
-
-   answer: d — 3NF  
-   explanation: 3NF removes partial and transitive dependencies and is normally enough for practical designs; higher forms are rarely needed.
-
-2. **Which one is correct in case of normalization-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
-   (a) Normalization maximizes duplicates  
-   (b) Normalization reduces duplicates  
-   (c) Normalization eliminates duplicates  
-   (d) Normalization increases
-
-   answer: b — Normalization reduces duplicates  
-   explanation: Splitting data into related tables removes repeated storage of the same fact, cutting redundancy and update anomalies.
-
-3. **If attribute A determines both attributes B and C then, it is also true that—** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
-   (a) A \rightarrow B  
-   (b) B \rightarrow A  
-   (c) C \rightarrow A  
-   (d) (BC) \rightarrow A
-
-   answer: a — A → B  
-   explanation: Saying A determines B and C means both A→B and A→C hold; the reverse directions do not follow.
-
-4. **If a table is normalized so that all its determinants are candidate keys then, the tableis in-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
-   (a) 1NF  
-   (b) 2NF  
-   (c) 3NF  
-   (d) BCNF
-
-   answer: d — BCNF  
-   explanation: Boyce-Codd Normal Form is exactly the condition that every determinant is a candidate key.
-
-5. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
-   **Ans:** Second Normal Form (2NF)
-
-   answer: Second Normal Form (2NF)  
-   explanation: 2NF removes partial functional dependency, where a non-key attribute depends on only part of a composite primary key.
-
-6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*  
-   (ক) 1NF  
-   (খ) 2NF  
-   (গ) 3NF  
-   (ঘ) BCNF
-
-   answer: খ — 2NF  
-   explanation: A relation is in 2NF when it is in 1NF and no non-key attribute depends on part of a composite key.
-
-7. **To remove partial dependency from a database, which technique you will use?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
-   a) 1NF  
-   b) 2NF  
-   c) 3NF  
-   d) BCN
-
-   answer: b — 2NF  
-   explanation: Partial dependency is exactly what the second normal form eliminates.
-
-8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
-   a) CD=>AC  
-   b) BD=>CD  
-   c) BC=>CD  
-   d) AC=>BC
-
-   answer: b — BD=>CD  
-   explanation: The closure of BD is only {B, D} since B→D adds nothing new and nothing gives C, so BD cannot determine C.
-
-9. **Third normal form is based on the concept of ______.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
-   a) Normal Dependency  
-   b) Closure Dependency  
-   c) Functional Dependency  
-   d) Transitive Dependency
-
-   answer: d — Transitive Dependency  
-   explanation: 3NF requires that no non-key attribute depends on another non-key attribute, which removes transitive dependency.
-
-10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
-   a) 1NF  
-   b) 2NF  
-   c) 3NF  
-   d) BCNF
-
-   answer: c — 3NF  
-   explanation: Update inconsistency comes from transitive dependency among non-key attributes, which 3NF removes.
-
-11. **If you are assigned to remove partial dependency from a database, which technique you will use?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*  
-   a) 1NF  
-   b) 2NF  
-   c) 3NF  
-   d) BCNF
-
-   answer: b — 2NF  
-   explanation: Second normal form is defined by the absence of partial dependency on a composite key.
-
-12. **The table in below violates the Normal Form(s). Which normal form it violates?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
-   a) All of normal forms listed here  
-   b) 3NF  
-   c) 2NF  
-   d) 1NF
-
-13. **Why do we need to normalize a database?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
-   A) To remove redundancy  
-   B) To make data meaningful  
-   C) To make database secure  
-   D) To make database consistency
-
-   answer: A — To remove redundancy  
-   explanation: Normalization splits data so each fact is stored once, which removes redundancy and the insert, update and delete anomalies it causes.
-
-14. **In the ________ normal form, a composite attribute is converted to individual attributes.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
-   A) First  
-   B) Second  
-   C) Third  
-   D) Fourth
-
-   answer: A — First  
-   explanation: 1NF requires atomic values, so a composite attribute such as "address" is broken into street, city and postcode.
-
-15. **Repeated data exist at—** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
-   A) unnormalized  
-   B) 1NF  
-   C) 2NF  
-   D) 3NF
-
-   answer: A — unnormalized  
-   explanation: An unnormalized relation still holds repeating groups and duplicated data; normalization progressively removes them.
-
-16. **What is normalization?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
-   A) To Remove Redundancy  
-   B) To make Database  
-   C) To make data meaningful  
-   D) To make database Consistency
-
-   answer: A — To Remove Redundancy  
-   explanation: Normalization organises tables so each piece of data is stored in exactly one place.
-
-## Transaction Management & ACID (14)
-
-1. **A to B transfer balance but not sent to B? Which property in ACID is responsible?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xviii (ET: DU)]*  
-   (a) Atomicity  
-   (b) Consistency  
-   (c) Isolation  
-   (d) Durability
-
-   answer: a — Atomicity  
-   explanation: The transfer must happen completely or not at all; money leaving A without reaching B means the transaction was not atomic.
-
-2. **Which one of these is not included in acid property of database?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
-   (a) Atomicity  
-   (b) Consistency  
-   (c) Durability  
-   (d) Display
-
-   answer: d — Display  
-   explanation: ACID stands for Atomicity, Consistency, Isolation and Durability — display is not one of them.
-
-3. **A transaction completes its execution is said to be-** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*  
-   a) Committed  
-   b) Aborted  
-   c) Rolled back  
-   d) Successful
-
-   answer: a — Committed  
-   explanation: A transaction that finishes all its operations successfully enters the committed state and its changes become permanent.
-
-4. **What is the D in ACID property in database?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
-   **Ans:** Durability
-
-   answer: Durability  
-   explanation: Durability guarantees that once a transaction commits, its changes survive crashes and power loss.
-
-5. **Which one of the following commands is used to restore the database to the last committed state?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
-   a) Save point  
-   b) Rollback  
-   c) Commit  
-   d) None of the
-
-   answer: b — Rollback  
-   explanation: ROLLBACK undoes everything done since the last COMMIT, returning the database to that committed state.
-
-6. **Which one is not Database Transaction property?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
-   a) Atomicity  
-   b) Consistency  
-   c) Durability  
-   d) Quality
-
-   answer: d — Quality  
-   explanation: The transaction properties are Atomicity, Consistency, Isolation and Durability; quality is not among them.
-
-7. **Which one of the following is a failure to a system?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
-   a) Boot crash  
-   b) Read failure  
-   c) Transaction failure  
-   d) All of the mentioned
-
-   answer: d — All of the mentioned  
-   explanation: A boot crash, a read failure and a transaction failure are all system failures the recovery manager must handle.
-
-8. **How can your rollback a committed transaction in any DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
-   a) Using SQL rollback commands  
-   b) Restoring the data from backups  
-   c) Run the transaction again in Reverse order  
-   d) All of the Above
-
-   answer: b — Restoring the data from backups  
-   explanation: A commit is final and cannot be rolled back, so the only way back is to restore from a backup and replay the logs.
-
-9. **The packaged procedure that makes data in form permanent in the Database is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
-   a) Post  
-   b) Post form  
-   c) Commit form  
-   d) None of the above
-
-   answer: c — Commit form  
-   explanation: COMMIT_FORM writes the changes held in the form's buffer permanently into the database.
-
-10. **ROLLBACK command is used to undo the changes made by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
-   a) DDL commands  
-   b) TCL commands  
-   c) DML Commands  
-   d) Commit command
-
-   answer: c — DML Commands  
-   explanation: ROLLBACK undoes uncommitted INSERT, UPDATE and DELETE work; DDL statements auto-commit and cannot be rolled back.
-
-11. **Why is set transaction used in an oracle DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) For placing a name on a transaction  
-   b) For committing a transaction  
-   c) For locking a transaction  
-   d) To setup transaction user parameters.
-
-   answer: d — To setup transaction user parameters  
-   explanation: SET TRANSACTION configures the transaction before it begins — its isolation level, read-only or read-write mode and rollback segment.
-
-12. **After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is known as-** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
-   a) Atomicity  
-   b) Consistency  
-   c) Isolation  
-   d) Durability
-
-   answer: d — Durability  
-   explanation: Durability is the guarantee that committed changes survive any later system failure.
-
-13. **It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be visible except during the execution of the transaction. Such a property of transaction is known as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 154 (ET: DU)]*  
-   a) Atomicity  
-   b) Consistency  
-   c) Isolation  
-   d) Durability
-
-   answer: a — Atomicity  
-   explanation: Atomicity makes a transaction all-or-nothing, so no partial, inconsistent state is ever left behind.
-
-14. **Which SQL keyword is used to short the result set?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
-   a. ORDER  
-   b. SORT  
-   c. ORDER BY  
-   d. SORT BY
-
-   answer: c — ORDER BY  
-   explanation: ORDER BY sorts the rows of the result set, ascending by default.
-
-## Keys in DBMS (11)
-
-1. **The key selected from the sets of candidate keys by database design is called ______ key:** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
-   (ক) Candidate  
-   (খ) Primary  
-   (গ) Super  
-   (ঘ) Foreign
-
-   answer: খ — Primary  
-   explanation: The designer picks one candidate key to identify rows, and that chosen key becomes the primary key.
-
-2. **Which of the following types of table constraints prevents the entry of duplicate rows?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*  
-   (ক) Foreign keys  
-   (খ) Primary keys  
-   (গ) Unique keys  
-   (ঘ) Candidate keys
-
-   answer: গ — Unique keys  
-   explanation: A UNIQUE constraint rejects any row whose value repeats one already stored, which is what stops duplicates.
-
-3. **Referential integrity in a DBMS is a form of-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
-   a) Foreign key  
-   b) Primary key  
-   c) Assertion  
-   d) Referential constraint
-
-   answer: d — Referential constraint  
-   explanation: Referential integrity is the constraint that a foreign key value must match an existing primary key value or be null, and it is enforced through foreign keys. <!-- verify -->
-
-4. **Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
-   a) advantage  
-   b) disadvantage  
-   c) either an advantage or disadvantage  
-   d) neither an advantage nor disadvantage
-
-   answer: b — disadvantage  
-   explanation: Splitting tables creates more foreign keys, and every one of them has to be checked on each insert, update and delete, which costs work.
-
-5. **The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) 5  
-   b) 6  
-   c) 7  
-   d) 8
-
-   answer: d — 8  
-   explanation: Any attribute set containing E is a super key, and the other three attributes give 2³ = 8 possible combinations.
-
-6. **Which of the following is a group of one or more attributes that uniquely identifies a row?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
-   A) Key  
-   B) Determinant  
-   C) Tuple  
-   D) Relation
-
-   answer: A — Key  
-   explanation: A key is one or more attributes whose values uniquely identify a row.
-
-7. **For every relationship, how many possible sets of minimum cardinalities are there?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
-   A) Two  
-   B) Three  
-   C) Four  
-   D) Six
-
-   answer: C — Four  
-   explanation: Each side's minimum cardinality is either 0 or 1, so the two sides give 2 × 2 = 4 combinations.
-
-8. **A primary key must also be-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
-   A) Foreign key  
-   B) Unique  
-   C) Identical  
-   D) Case sensitive
-
-   answer: B — Unique  
-   explanation: A primary key must uniquely identify each row and cannot be null.
-
-9. **What represents a row in a relational database?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
-   A) variable  
-   B) tuple  
-   C) entity  
-   D) field
-
-   answer: B — tuple  
-   explanation: In relational terminology a row is a tuple and a column is an attribute.
-
-10. **The subset of super key is a candidate key under what condition?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
-   A) No proper subset is a super key  
-   B) All subsets are super keys  
-   C) Subset is a super key  
-   D) Each subset is a super key
-
-   answer: A — No proper subset is a super key  
-   explanation: A candidate key is a minimal super key — remove any attribute and it stops identifying rows uniquely.
-
-11. **With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
-   a. INSERT INTO Persons(LastName) VALUES('Olsen')  
-   b. INSERT INTO Persons (Olsen) VALUES('LastName')  
-   c. INSERT INTO Person ('Olsen') INTO LastName  
-   d. INSERT INTO Persons (LastName= 'Olsen')
-
-   answer: a — INSERT INTO Persons(LastName) VALUES('Olsen')  
-   explanation: INSERT names the columns in parentheses and supplies the matching values after VALUES.
-
-## Data Warehousing & Data Mining (9)
-
-1. **Where is data warehousing used?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*  
-   (a) Transaction System  
-   (b) Logical system  
-   (c) Decision support system  
-   (d) None
-
-   answer: c — Decision support system  
-   explanation: A data warehouse holds cleaned historical data for analysis and reporting that supports management decisions, not day-to-day transactions.
-
-2. **What is the use of data cleaning?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
-   (a) To remove the noisy data  
-   (b) Transformations to correct the wrong data  
-   (c) Correct the inconsistencies in data  
-   (d) All of the above
-
-   answer: d — All of the above  
-   explanation: Data cleaning removes noise, corrects wrong values and resolves inconsistencies before the data enters the warehouse.
-
-3. **Small logical units where data warehouse hold large amounts of data is known as ______.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
-   (a) Access layers  
-   (b) Data marts  
-   (c) Data storage  
-   (d) Data miners
-
-   answer: b — Data marts  
-   explanation: A data mart is a subject-specific subset of the warehouse serving one department such as sales or finance.
-
-4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
-   (a) Warehousing  
-   (b) Data Mining  
-   (c) Text Mining  
-   (d) Data Selection
-
-   answer: b — Data Mining  
-   explanation: Data mining applies statistical and machine learning methods to discover patterns hidden in large data sets.
-
-5. **Hadoop written in which language?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
-   (a) Java  
-   (b) C++  
-   (c) Pascal  
-   (d) Kotlin
-
-   answer: a — Java  
-   explanation: Apache Hadoop is written in Java.
-
-6. **Business Intelligence (BI) reporting analyses can be performed using** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
-   a) standard SQL only  
-   b) extensions to SQL only  
-   c) OLAP only  
-   d) Both standard SQL and extensions to SQL
-
-   answer: d — Both standard SQL and extensions to SQL  
-   explanation: BI reports use ordinary SQL plus OLAP extensions such as CUBE, ROLLUP and window functions.
-
-7. **A star schema has what type of relationship between a dimension and fact table?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
-   a) Many-to-many  
-   b) One-to-one  
-   c) One-to-many  
-   d) All of the above
-
-   answer: c — One-to-many  
-   explanation: In a star schema each dimension row relates to many fact rows, with the fact table holding the foreign keys.
-
-8. **Finding useful pattern from the data in a database is known as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*  
-   (a) Data Visualization  
-   (b) Data Mining  
-   (c) Data Analytics  
-   (d) All of the above
-
-   answer: b — Data Mining  
-   explanation: Data mining is the discovery of useful, previously unknown patterns in stored data.
-
-9. **Dark data represents ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
-   A) Unused data  
-   B) Harmful data  
-   C) Highlighted data  
-   D) Important data
-
-   answer: A — Unused data  
-   explanation: Dark data is information an organisation collects and stores but never analyses or uses.
-
-## ER Diagram & Data Modeling (9)
-
-1. **Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
-   a) 2  
-   b) 3  
-   c) 4  
-   d) 5
-
-   answer: b — 3  
-   explanation: E1 and E2 each need a table, the one-to-many R1 folds into the "many" side as a foreign key, but the many-to-many R2 needs its own table.
-
-2. **Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
-   a) A domain is mapped to a character type or a character string type.  
-   b) A relation is mapped to a table  
-   c) Attributes and columns are ordered from left to right  
-   d) Neither tuples nor rows have duplicates
-
-   answer: b — A relation is mapped to a table  
-   explanation: In the relational model a relation becomes a table, a tuple becomes a row and an attribute becomes a column.
-
-3. **What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraints of both entities?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
-   (a) Min 1 and max 2  
-   (b) Min 1 and max 3  
-   (c) Min 2 and max 3  
-   (d) Min 2 and max 2
-
-   answer: c — Min 2 and max 3  
-   explanation: The two entities always need their own tables, and with partial participation on both sides the relationship needs a third table, though it can sometimes be merged.
-
-4. **Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality of E2. Which of the following is true about R?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*  
-   a. Every entity in E1 is associated with exactly one entity in E2  
-   b. Some entity in E1 is associated with more than one entity in E2  
-   c. Every entity in E2 is associated with exactly one entity in E1  
-   d. Every entity in E2 is associated with at most one entity in E1
-
-   answer: a — Every entity in E1 is associated with exactly one entity in E2  
-   explanation: R is many-to-one from E1 to E2 and E1 participates totally, so each E1 entity maps to exactly one E2 entity.
-
-5. **A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
-   ```
-   +------------+               +-----------+
-   | instructor |               |  student  |
-   +------------+               +-----------+
-   | ID         |  /---------\  | ID        |
-   | name       |--< advisor >--| name      |
-   | salary     |  \---------/  | tot_cred  |
-   +------------+               +-----------+
-   ```
-   a) No definite numbers  
-   b) Two  
-   c) Three  
-   d) Two or Three
-
-   answer: b — Two  
-   explanation: For a many-to-one advisor relationship the link folds into the student table as a foreign key, so only instructor and student tables are needed.
-
-6. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
-   ```
-   +------------+               +------------+
-   | instructor |               |   student  |
-   +------------+   +---------+ +------------+
-   | ID         |<--| advisor | | ID         |
-   | name       |   +---------+ | name       |
-   | salary     |               | tot_cred   |
-   +------------+               +------------+
-   ```
-   a) One  
-   b) Two  
-   c) Three  
-   d) No definite numbers
-
-   answer: b — Two  
-   explanation: The arrow marks a many-to-one relationship, which is stored as a foreign key in the student table rather than a separate table.
-
-7. **Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater than the cardinality of E2, which of the following is true about R?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
-   a) Every entity in E1 is associated with exactly one entity in E2  
-   b) Some entity in E1 is associated with more than one entity in E2  
-   c) Every entity in E2 is associated with exactly one entity in E1  
-   d) Every entity in E2 is associated with at most one entity on E1
-
-   answer: a — Every entity in E1 is associated with exactly one entity in E2  
-   explanation: Many-to-one from E1 to E2 with total participation means every E1 entity maps to exactly one E2 entity.
-
-8. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
-   a) Two  
-   b) Three  
-   c) Two or Three  
-   d) No definite numbers
-
-   answer: a — Two  
-   explanation: A many-to-one relationship is represented by adding a foreign key to the "many" side, so two tables suffice.
-
-9. **In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
-   A) Table  
-   B) field  
-   C) row  
-   D) primary key
-
-   answer: A — Table  
-   explanation: A many-to-many relationship cannot be held by a foreign key, so it becomes its own junction table holding both keys.
-
-## Relational Model & Terminology (8)
-
-1. **What is the degree of relation?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
-   **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
-
-   answer: The degree of a relationship is the number of entity types taking part in it  
-   explanation: A unary relationship involves one entity type, binary two and ternary three; for a relation (table) the degree instead means its number of attributes.
-
-2. **Which one of the following is true for a tuple in a database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
-   a) A tuple in a database represents a column  
-   b) A tuple in a database represents database schema.  
-   c) A tuple in a database represents a Record  
-   d) A tuple in a database represents a Database topology
-
-   answer: c — A tuple in a database represents a Record  
-   explanation: A tuple is one row of a table, which holds all the field values of a single record.
-
-3. **In a table an attribute named interest is defined as follows,** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
-   When which one is the correct format for the interest columns?  
-   a) 65.2  
-   b) 7.2  
-   c) 19.02  
-   d) 1.03
-
-4. **Which one is not unary operator in relational algebra?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*  
-   A) Select  
-   B) Project  
-   C) Union  
-   D) Renames
-
-   answer: C — Union  
-   explanation: Union combines two relations, so it is a binary operator; select, project and rename each work on a single relation.
-
-5. **Which one is an entity?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*  
-   A) Roll No.  
-   B) Student  
-   C) Passport No.  
-   D) Department ID
-
-   answer: B — Student  
-   explanation: Student is a real-world object with its own attributes, while roll no, passport no and department ID are attributes of an entity.
-
-6. **Which one is TRUE for FIRD?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*  
-   A) Uses electromagnetic signal  
-   B) Uses laser beam  
-   C) Uses optical signal  
-   D) Uses infrared
-
-   answer: A — Uses electromagnetic signal  
-   explanation: RFID tags and readers communicate over radio frequency electromagnetic waves, not light.
-
-7. **Flat file database is most useful for ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
-   A) Large scale users  
-   B) Banking  
-   C) Small-group situation.  
-   D) Chain stores
-
-   answer: C — Small-group situation  
-   explanation: A flat file stores everything in one table with no relationships, which suits a small, simple dataset but not large multi-user systems.
-
-8. **In database, a field is ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
-   A) Label  
-   B) Category of Information  
-   C) Group of related records  
-   D) Table of information
-
-   answer: B — Category of Information  
-   explanation: A field is a single column holding one category of data, such as name or date of birth, for every record.
-
-## PL/SQL & Triggers (7)
-
-1. **What are the different events in Triggers?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
-   a) Define, Create  
-   b) Drop, Comment  
-   c) Insert, Update, Delete  
-   d) Select, Commit
-
-   answer: c — Insert, Update, Delete  
-   explanation: A DML trigger fires on INSERT, UPDATE or DELETE, either before or after the statement or row.
-
-2. **How can you generate debugging output from PL/SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
-   a) DBMS_SQL  
-   b) DBMS_OUTPUT  
-   c) DBMS_PIPE  
-   d) DBMS_LOB
-
-   answer: b — DBMS_OUTPUT  
-   explanation: DBMS_OUTPUT.PUT_LINE writes text to the output buffer, which the client displays for debugging.
-
-3. **What is GET_BLOCK property?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
-   a) Restricted procedure  
-   b) Unrestricted procedure  
-   c) Library function  
-   d) None of the above
-
-   answer: b — Unrestricted procedure  
-   explanation: GET_BLOCK_PROPERTY only reads a property value, so it can be called from any trigger, including navigation triggers.
-
-4. **Which is not the UTL_FILE function-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) FOPEN()  
-   b) File_Close()  
-   c) FCOPY  
-   d) FFLUSH()
-
-   answer: b — File_Close()  
-   explanation: The package's procedures are FOPEN, FCLOSE, FCOPY and FFLUSH — there is no File_Close().
-
-5. **Which of the following protocol is an SQL trigger support by oracle?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
-   A) Before  
-   B) Instead of  
-   C) After  
-   D) All of the above
-
-   answer: D — All of the above  
-   explanation: Oracle supports BEFORE and AFTER triggers on tables and INSTEAD OF triggers on views.
-
-6. **________ is a statement that is executed automatically by the system.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
-   A) Trigger constraint  
-   B) Assertion  
-   C) Durability  
-   D) Integrity
-
-   answer: A — Trigger constraint  
-   explanation: A trigger is a statement the database executes automatically when a specified event occurs on a table.
-
-7. **What does a COMMIT statement do to a CURSOR?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
-   A) Open the cursor  
-   B) Fetch the cursor  
-   C) Close the cursor  
-   D) None of this
-
-   answer: C — Close the cursor  
-   explanation: COMMIT releases the locks and closes any open cursor that was not declared WITH HOLD.
-
-## Database Fundamentals & SQL (7)
-1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
-
-   answer: SELECT c.customerID, c.name, SUM(o.orderAmount) AS total FROM Customer c JOIN Accounts a ON c.customerID = a.customerID JOIN Orders o ON a.accountID = o.accountID GROUP BY c.customerID, c.name HAVING SUM(o.orderAmount) > 5000;  
-   explanation: The two joins link a customer to their accounts and those accounts to their orders, GROUP BY collapses each customer to one row, and HAVING filters on the aggregate because WHERE cannot.
-
-2. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
-   (a) Can have duplicate values  
-   (b) Can be NULL  
-   (c) Must be unique  
-   (d) Can store multiple values
-
-   answer: c — Must be unique  
-   explanation: A primary key uniquely identifies each row, so it can never repeat and can never be NULL.
-
-3. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*  
-   a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.  
-   b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.  
-   c) Write SQL query to select the OSName for which Servers are running more than 365 days.
-
-   answer: a) CREATE TABLE Servers (ID INT PRIMARY KEY, DaysRunning INT, OsName VARCHAR(50), RamCapacity INT); b) UPDATE Servers SET OsName = 'Unix' WHERE RamCapacity > 16; c) SELECT OsName FROM Servers WHERE DaysRunning > 365;  
-   explanation: CREATE defines the structure, UPDATE ... WHERE changes only the matching rows, and SELECT ... WHERE returns the OS names of long-running servers.
-
-4. **Write the following queries** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*  
-   (a) Write an SQL query to show the top 10 highest marks from the Result table.  
-   (b) Write an SQL query to show the number of male and female students who passed, individually.  
-   (c) Write an SQL query to show the absent students in the Result table.
-
-   answer: (a) SELECT * FROM Result ORDER BY marks DESC LIMIT 10; (b) SELECT gender, COUNT(*) FROM Result WHERE status='Pass' GROUP BY gender; (c) SELECT * FROM Result WHERE status='Absent';  
-   explanation: ORDER BY ... DESC with LIMIT takes the top rows, GROUP BY gender counts each group separately, and a simple WHERE filter lists the absentees.
-
-5. **b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
-
-   answer: $conn = new mysqli("localhost", "user", "password", "dbname"); if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }  
-   explanation: The mysqli object opens the connection and connect_error reports failure; PDO is the alternative — new PDO("mysql:host=localhost;dbname=db", $user, $pass).
-
-6. **একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
-
-   answer: SELECT * FROM Employee WHERE name LIKE 'A%Y';  
-   explanation: The pattern anchors A at the start, allows any characters in between with %, and requires Y at the end.
-
-7. **Which one is in case of normalization—[ নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
-   (a) Normalization maximizes duplicates  
-   (b) Normalization reduces duplicates  
-   (c) Normalization eliminates duplicates  
-   (d) Normalization increases duplicates
-
-   answer: b — Normalization reduces duplicates  
-   explanation: Splitting data into related tables stores each fact once, cutting redundancy and the anomalies it causes.
-
-## Indexing & Query Optimization (6)
-
-1. **Which one make data access from a database faster?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
-   (a) Indexing  
-   (b) Normalization  
-   (c) Denormalization  
-   (d) All of the above  
-   25. Priority Scheduling (Non-Preemptive) with No Arrival Time Consider the following set of processes with their burst times and priorities:  
-   | Process | Burst Time (BT) | Priority |  
-   |---|---|---|  
-   | P1 | 10 | 3 |  
-   | P2 | 1 | 1 |  
-   | P3 | 2 | 4 |  
-   | P4 | 1 | 5 |  
-   | P5 | 5 | 2 |  
-   Using Non-Preemptive Priority Scheduling (lower number = higher priority), what is the Average Turnaround Time (TAT)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
-   (a) 10  
-   (b) 8.6  
-   (c) 12  
-   (d) 9.2
-
-   answer: a — Indexing  
-   explanation: An index gives a direct path to matching rows instead of scanning the table. The stray scheduling item pasted here answers (c) 12: running P2, P5, P1, P3, P4 by priority gives completion times 1, 6, 16, 18, 19 and an average TAT of 60/5 = 12.
-
-2. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
-   a) Heap file organization  
-   b) Sequential file organization  
-   c) Hashing file organization  
-   d) Multi-table Clustering file organization
-
-   answer: d — Multi-table Clustering file organization  
-   explanation: Multi-table clustering stores related rows of different relations in the same block so a join reads far fewer blocks.
-
-3. **Which of the following is correct for the Create index command?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
-   a) Insert index index_name on table_name  
-   b) Insert index index_name on database_name;  
-   c) Create index index_name on database_name;  
-   d) Create index index_name on table_name;
-
-   answer: d — Create index index_name on table_name;  
-   explanation: An index is built on a table, and the syntax is CREATE INDEX name ON table(column).
-
-4. **Database index speeds up-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) Select queries  
-   b) Where clauses  
-   c) Update query  
-   d) Both a and b
-
-   answer: d — Both a and b  
-   explanation: An index speeds up retrieval, so it helps SELECT statements and the WHERE conditions that filter them; it actually slows down inserts and updates.
-
-5. **Which of the following index is automatically created by the database server when an object is created?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) Implicit  
-   b) Single column  
-   c) Unique  
-   d) composite
-
-   answer: a — Implicit  
-   explanation: The server creates an implicit index automatically to enforce a primary key or unique constraint.
-
-6. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
-   a) Heap file organization  
-   b) Sequential file organization  
-   c) Hashing file organization  
-   d) Clustering file organization
-
-   answer: d — Clustering file organization  
-   explanation: Clustering places related records from different relations in the same block, cutting the disk reads a join needs.
-
-## Database Connectivity (JDBC/ODBC) (5)
-
-1. **Embedded SQL is which of the following?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
-   a) Hard-coded SQL statements in a program language such as Java.  
-   b) The process of making an application capable of generating specific SQL code on the fly  
-   c) Hard-coded SQL statements in a procedure.  
-   d) Hard-coded SQL statements in a trigger.
-
-   answer: a — Hard-coded SQL statements in a program language such as Java  
-   explanation: Embedded SQL puts fixed SQL text directly inside host-language source, which a precompiler then translates.
-
-2. **The Application program interface in a two-tier architecture DBMS is provided by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Close module connectivity  
-   b) Open module connectivity  
-   c) Open database connectivity  
-   d) Close database connectivity
-
-   answer: c — Open database connectivity  
-   explanation: ODBC is the standard API that lets an application talk to any database through the matching driver.
-
-3. **A major challenge in mixing SQL with a general-purpose language is mismatching in the** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
-   A) Definition of data  
-   B) Manipulation of data  
-   C) Execution of data  
-   D) Output of data
-
-   answer: A — Definition of data  
-   explanation: SQL works on sets of rows while a host language works on single variables and objects, and their type systems differ — the classic impedance mismatch.
-
-4. **Once connection is set up, program can send SQL commands to database by using** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
-   A) SQLExcelConn  
-   B) SQLDirect  
-   C) SQLExcelDirect  
-   D) SQLConnect
-
-   answer: D — SQLConnect  
-   explanation: SQLConnect establishes the session with the data source, after which SQL statements can be sent.
-
-5. **In your program you want to use the JDBC-ODBC bridge drive. What code do you use?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
-   a. Class.callName("sun.jdbc.odbc.jdbcOdbcDriver")  
-   b. Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")  
-   c. Class.callFunc("JdbcOdbcDriver")  
-   d. Class.Name.init("sun.jdbc.odbc.JdbcOdbcDriver")
-
-   answer: b — Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")  
-   explanation: Class.forName loads and registers the JDBC driver class at runtime before DriverManager.getConnection is called.
-
-## Concurrency Control & Locking (5)
-
-1. **Which of the following is not a factor in determining the concurrency control behavior of SQL Server?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Lock level  
-   b) Transaction isolation level  
-   c) Cursor concurrency setting  
-   d) Locking hints
-
-   answer: a — Lock level  
-   explanation: SQL Server decides concurrency from the transaction isolation level, the cursor concurrency setting and any locking hints; "lock level" is not one of those settings.
-
-2. **In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical contradictions?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Exclusive Control  
-   b) Integrity constraint  
-   c) Normalization  
-   d) Reorganization
-
-   answer: a — Exclusive Control  
-   explanation: An exclusive lock stops any other transaction touching the item while it is being updated, so the two updates cannot contradict each other.
-
-3. **Which of the below is responsible for controlling the interaction among simultaneous transaction?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
-   a) Serializable controller  
-   b) Concurrency Control Manager  
-   c) Transportation management system  
-   d) Multiple Access Protocol
-
-   answer: b — Concurrency Control Manager  
-   explanation: The concurrency control manager grants and releases locks and enforces a serializable schedule among running transactions.
-
-4. **In strict two phase locking protocol-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
-   a) All exclusive mode locks taken by transaction be held until transaction commit  
-   b) All exclusive mode locks taken by transaction can be released before transaction commits  
-   c) All locks can be released before transaction commits  
-   d) None of these
-
-   answer: a — All exclusive mode locks taken by transaction be held until transaction commit  
-   explanation: Holding write locks to the end prevents other transactions reading uncommitted data, so cascading rollbacks cannot happen.
-
-5. **A shared lock allows which of the following type of transaction to occur?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*  
-   A) Delete  
-   B) Insert  
-   C) Read  
-   D) Update
-
-   answer: C — Read  
-   explanation: A shared lock lets many transactions read the item at once but blocks any write.
-
-## SQL Joins (2)
-
-1. **What type of join in needed when you wish to include rows that do not have matching values?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
-   a) Equal join  
-   b) Natural join  
-   c) Outer join  
-   d) Inner join
-
-   answer: c — Outer join  
-   explanation: An outer join keeps unmatched rows from one or both tables and fills the missing side with NULLs; an inner join drops them.
-
-2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
-   a) Natural Join  
-   b) EQUI Join  
-   c) Outer Join  
-   d) All of the above
-
-   answer: c — Outer Join  
-   explanation: LEFT, RIGHT and FULL OUTER JOIN all return rows that have no match on the other side, padded with NULLs.
 
 ## Model Test: BB AD (ICT) Exam Two — Database Management (40)
 
@@ -2132,3 +928,1247 @@
    answer: a — RAW  
    explanation: RAW data type can store unstructured data.
 
+## DBMS Concepts & Architecture (34)
+
+### DBMS Concepts, Architecture & Administration (25)
+
+1. **Data about data is called-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
+   (a) Data dictionary  
+   (b) Data bank  
+   (c) Meta Data  
+   (d) Warehouse
+
+   answer: c — Meta Data  
+   explanation: Metadata describes other data — column names, types, sizes and constraints — rather than the values themselves.
+
+2. **Which level of abstraction specifies the data and relationships between data?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
+   **Ans:** Conceptual Level (Logical Level)
+
+   answer: Conceptual Level (Logical Level)  
+   explanation: The conceptual level describes what data is stored and how the items relate, hiding the physical storage details from the user.
+
+3. **Which of the following is not a function of a database administrator?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 131 (ET: N/A)]*  
+   a) Database the design  
+   b) Backing up the database  
+   c) Query processing  
+   d) User coordination
+
+   answer: c — Query processing  
+   explanation: Query processing is done automatically by the DBMS engine; the DBA designs the schema, takes backups and manages users.
+
+4. **Assume that you want to improve database performance and willing to see the amount of swap space. Which command you can use in LINUX OS environment?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+   a) Lsps -a  
+   b) Swapinfo -m  
+   c) Swapon -s  
+   d) Swap -l and Swap -s
+
+   answer: c — Swapon -s  
+   explanation: swapon -s lists each swap area with its size and usage on Linux.
+
+5. **In oracle to change the DB_Block_size parameter, you need to-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+   a) Re-create the database  
+   b) Alter the database  
+   c) Move database to temporary  
+   d) Update the table types of the database
+
+   answer: a — Re-create the database  
+   explanation: DB_BLOCK_SIZE is fixed when the database is created and cannot be altered afterwards, so the database must be rebuilt.
+
+6. **Which of the following controls the execution of application program and UI in two tier client/server architecture?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+   a) Modulation side  
+   b) Server side  
+   c) Host side  
+   d) None of the above
+
+   answer: c — Host side  
+   explanation: In a two-tier design the client host runs the user interface and application logic while the server only manages the data. <!-- verify -->
+
+7. **LGWR process writes information into-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
+   a) Database files  
+   b) Control Files  
+   c) Redo log Files  
+   d) All of the above
+
+   answer: c — Redo log Files  
+   explanation: The Log Writer flushes the redo log buffer to the online redo log files so committed changes can be recovered.
+
+8. **Data integrity problems in a DBMS is caused due to-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
+   a) Missing Data  
+   b) Data inconsistency  
+   c) Data Redundancy  
+   d) Security constraints
+
+   answer: c — Data Redundancy  
+   explanation: When the same fact is stored in several places, updating one copy and not the others leaves the database inconsistent.
+
+9. **A collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints, is known as-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
+   a) Data organization  
+   b) Data Binding  
+   c) Data schemas  
+   d) Data models
+
+   answer: d — Data models  
+   explanation: A data model is the set of concepts used to describe data, relationships, semantics and constraints.
+
+10. **Which is the oracle component that contains the memory structures and background process?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Instance  
+   b) Server  
+   c) SGA  
+   d) Database files
+
+   answer: a — Instance  
+   explanation: An Oracle instance is the SGA memory structures plus the background processes; the database is the files on disk.
+
+11. **The three different application logic components are which of the following?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Presentation, Client, and Storage  
+   b) Presentation, Client, and Processing  
+   c) Presentation, Processing, and Storage  
+   d) Presentation, Processing, and Network
+
+   answer: c — Presentation, Processing, and Storage  
+   explanation: Application logic splits into the presentation layer, the processing (business logic) layer and the data storage layer.
+
+12. **Of the functions provided by a DBMS. Which of the following is a means for achieving protection for data confidentiality?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Checking referential constraints when the data is updated  
+   b) Managing a transaction that combines a series of processes as a logical Unit.  
+   c) Managing the data access rights of users.  
+   d) Placing an exclusive lock on the data before it is updated
+
+   answer: c — Managing the data access rights of users  
+   explanation: Confidentiality is protected by granting each user only the privileges they need; the other options address integrity or concurrency.
+
+13. **Oracle materialized views or SNAPSHOTS is used-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) Hiding data from users  
+   b) Dynamic data replication  
+   c) Table Space Reduction  
+   d) Data Abstraction
+
+   answer: b — Dynamic data replication  
+   explanation: A materialized view stores a physical copy of a query result and refreshes it, which is how snapshots replicate data between sites.
+
+14. **A distributed database has which of the following advantages over a centralized database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) Software cost  
+   b) Software complexity  
+   c) Slow Response  
+   d) Modular growth
+
+   answer: d — Modular growth  
+   explanation: A distributed database lets new sites and servers be added incrementally without redesigning the whole system.
+
+15. **In Oracle DBMS, LGWR process is a-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
+   (a) Foreground Process  
+   (b) Background Process  
+   (c) High Priority Process  
+   (d) Batch Process
+
+   answer: b — Background Process  
+   explanation: LGWR is one of Oracle's mandatory background processes, started with the instance.
+
+16. **Which one of the following is a No-SQL Database?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 103 (ET: N/A)]*  
+   (a) MongoDB  
+   (b) CasperDB  
+   (c) ZBase  
+   (d) All of the above
+
+   answer: a — MongoDB  
+   explanation: MongoDB is a document-oriented NoSQL database; CasperDB and ZBase are not standard products.
+
+17. **Which one of the following statements is true with respect to a Database Management System?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 104 (ET: N/A)]*  
+   (a) Super key and candidate keys are similar  
+   (b) Candidate keys and Unique Keys are similar  
+   (c) Unique Keys and Primary Keys are similar  
+   (d) Candidate keys and Primary keys are similar
+
+   answer: b — Candidate keys and Unique Keys are similar  
+   explanation: Every candidate key uniquely identifies a row and is enforced by a UNIQUE constraint; a super key need not be minimal and a primary key is just the one candidate key chosen. <!-- verify -->
+
+18. **The collection of information stored in the database at a particular moment is called-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
+   a) Schema  
+   b) Instance  
+   c) Relation  
+   d) Record
+
+   answer: b — Instance  
+   explanation: A schema is the design, while the instance is the actual data held at a given moment.
+
+19. **Running the given task in less time by increasing the degree of parallelism in DBMS is called ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 174 (ET: N/A)]*  
+   a) scale up  
+   b) roll up  
+   c) speedup  
+   d) Data Warehouse
+
+   answer: c — speedup  
+   explanation: Speedup means finishing the same task faster by adding parallel resources; scale-up means handling a larger task in the same time.
+
+20. **Which of the following term refers to the degree to which data in a database system are accurate and correct?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 217 (ET: AUST)]*  
+   A) Data integrity  
+   B) Data security  
+   C) Data Validity  
+   D) None of these
+
+   answer: A — Data integrity  
+   explanation: Data integrity means the stored data is accurate, consistent and valid throughout its life.
+
+21. **Which one is an example of DBMS?** *[BTRC Sub-Assistant Director (Technical) 2019 compact it 201 (ET: IBA)]*  
+   A. MS word  
+   B. MS Excel  
+   C. C++  
+   D. MS Access
+
+   answer: D — MS Access  
+   explanation: MS Access is a relational database management system; Word and Excel are office applications and C++ is a language.
+
+22. **In the hypermedia database, information bits are stored in the form of:** *[BPSC Assistant Maintenance Engineer 2019 compact it 193 (ET: N/A)]*  
+   (a) Cubes  
+   (b) Nodes  
+   (c) Signals  
+   (d) Symbols
+
+   answer: b — Nodes  
+   explanation: Hypermedia stores information in nodes that are joined by links the user can follow.
+
+23. **Data directory contains detail of-** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
+   A) Data structure  
+   B) Data flows  
+   C) Data store  
+   D) None
+
+   answer: A — Data structure  
+   explanation: The data dictionary or directory records the definitions of the data — names, types, lengths and structure.
+
+24. **Which of the following terms refers to the degree to which data in a database system are accurate and correct?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 250 (ET: N/A)]*  
+   A) Data integrity  
+   B) Data security  
+   C) Data validity  
+   D) None of the above
+
+   answer: A — Data integrity  
+   explanation: Integrity is the measure of how accurate and correct the data in the database is.
+
+25. **The following are functions of a DBMS except ________** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 251 (ET: N/A)]*  
+   A) creating and processing forms  
+   B) creating databases  
+   C) processing data  
+   D) administrating databases
+
+   answer: A — creating and processing forms  
+   explanation: Forms belong to the application front end; the DBMS creates databases, processes data and supports administration.
+
+### File Processing & Data Organization (6)
+
+1. **In user facilities, copying of all records onto a main store from permanent store is considered as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
+   A) delete file  
+   B) rename file  
+   C) save file  
+   D) load file
+
+   answer: D — load file  
+   explanation: Loading copies the records from permanent storage into main memory ready for processing.
+
+2. **If master and transaction file have keys in same order, then it takes____** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
+   A) less time  
+   B) more time  
+   C) many hours  
+   D) many days
+
+   answer: A — less time  
+   explanation: When both files are sorted on the same key they can be merged in a single pass, with no searching or re-sorting.
+
+3. **File used to update information in computer's master file is classified as** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
+   A) transaction file  
+   B) direct file  
+   C) order file  
+   D) sequence file
+
+   answer: A — transaction file  
+   explanation: A transaction file holds the day's changes that are applied to the master file during the update run.
+
+4. **Interleaving of records to form one file containing all records is classified as ____.** *[Probashi Kallyan Bank Programmer: 2019 compact it 212 (ET: AUST)]*  
+   A) merging  
+   B) finding  
+   C) file learning  
+   D) searching
+
+   answer: A — merging  
+   explanation: Merging interleaves records from two or more sorted files into one file that keeps the ordering.
+
+5. **Set of numbers used to check all groups record within limits of data is classified as-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
+   A) variable check  
+   B) decimal check  
+   C) type check  
+   D) range check
+
+   answer: D — range check  
+   explanation: A range check verifies that each value falls between a defined lower and upper limit.
+
+6. **Process of converting data or information in the form of which is readily available for processing is called-** *[Probashi Kallyan Bank Programmer: 2019 compact it 214 (ET: AUST)]*  
+   A) encoding  
+   B) decoding  
+   C) translating  
+   D) data organization
+
+   answer: A — encoding  
+   explanation: Encoding converts data into the form the system can process.
+
+### Off-topic / Misplaced (3)
+
+1. **The ________ format is usually used to store data.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 260 (ET: N/A)]*  
+   A) BCD  
+   B) Decimal  
+   C) Hexadecimal  
+   D) Octal
+
+   answer: A — BCD  
+   explanation: Binary Coded Decimal stores each decimal digit in its own four-bit group, which suits business and financial data.
+
+2. **From where the data is captured in the SQL Server Database?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
+   a. Automatic call decider  
+   b. Automation call distributor  
+   c. Automatic call distributor  
+   d. Automatic historical data
+
+   answer: c — Automatic call distributor  
+   explanation: The ACD records each call's routing and handling events, and those records are captured into the SQL Server database.
+
+3. **What is the purpose of data logger?** *[Pubali Bank Limited Officer (IT) 2012 compact it 268 (ET: N/A)]*  
+   a. keeps historical data  
+   b. keeps all the data for delivery purpose  
+   c. keeps the code for the tracking  
+   d. keeps automatic call distribution
+
+   answer: a — keeps historical data  
+   explanation: The Logger writes call and configuration records to the database so historical reports can be produced.
+
+## Normalization (16)
+
+1. **Which normal form is considered adequate for normal relational database design?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 8 (ET: BIBM)]*  
+   a) 2NF  
+   b) 5NF  
+   c) 4NF  
+   d) 3NF
+
+   answer: d — 3NF  
+   explanation: 3NF removes partial and transitive dependencies and is normally enough for practical designs; higher forms are rarely needed.
+
+2. **Which one is correct in case of normalization-** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
+   (a) Normalization maximizes duplicates  
+   (b) Normalization reduces duplicates  
+   (c) Normalization eliminates duplicates  
+   (d) Normalization increases
+
+   answer: b — Normalization reduces duplicates  
+   explanation: Splitting data into related tables removes repeated storage of the same fact, cutting redundancy and update anomalies.
+
+3. **If attribute A determines both attributes B and C then, it is also true that—** *[Combined Bank Officer (IT) 04.10.2024 compact it 15 (ET: BIBM)]*  
+   (a) A \rightarrow B  
+   (b) B \rightarrow A  
+   (c) C \rightarrow A  
+   (d) (BC) \rightarrow A
+
+   answer: a — A → B  
+   explanation: Saying A determines B and C means both A→B and A→C hold; the reverse directions do not follow.
+
+4. **If a table is normalized so that all its determinants are candidate keys then, the tableis in-** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
+   (a) 1NF  
+   (b) 2NF  
+   (c) 3NF  
+   (d) BCNF
+
+   answer: d — BCNF  
+   explanation: Boyce-Codd Normal Form is exactly the condition that every determinant is a candidate key.
+
+5. **Functional dependency use in which normalizations?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
+   **Ans:** Second Normal Form (2NF)
+
+   answer: Second Normal Form (2NF)  
+   explanation: 2NF removes partial functional dependency, where a non-key attribute depends on only part of a composite primary key.
+
+6. **"There must not be any partial dependency "Which of the following Normal Forms holds this condition?** *[BPSC (Ministry) Assistant Maintenance Engineer 2022 compact it 43 (ET: N/A)]*  
+   (ক) 1NF  
+   (খ) 2NF  
+   (গ) 3NF  
+   (ঘ) BCNF
+
+   answer: খ — 2NF  
+   explanation: A relation is in 2NF when it is in 1NF and no non-key attribute depends on part of a composite key.
+
+7. **To remove partial dependency from a database, which technique you will use?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
+   a) 1NF  
+   b) 2NF  
+   c) 3NF  
+   d) BCN
+
+   answer: b — 2NF  
+   explanation: Partial dependency is exactly what the second normal form eliminates.
+
+8. **In a schema with attributes A, B, C, D and F following set of functional dependencies are given A => B, A=>C, CD=> E, B=>D, E=>A. Which of the following functional dependencies is not implied by the above set?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
+   a) CD=>AC  
+   b) BD=>CD  
+   c) BC=>CD  
+   d) AC=>BC
+
+   answer: b — BD=>CD  
+   explanation: The closure of BD is only {B, D} since B→D adds nothing new and nothing gives C, so BD cannot determine C.
+
+9. **Third normal form is based on the concept of ______.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
+   a) Normal Dependency  
+   b) Closure Dependency  
+   c) Functional Dependency  
+   d) Transitive Dependency
+
+   answer: d — Transitive Dependency  
+   explanation: 3NF requires that no non-key attribute depends on another non-key attribute, which removes transitive dependency.
+
+10. **If you are told to remove the inconsistency from the course table which normalization technique you will use-** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 167 (ET: N/A)]*  
+   a) 1NF  
+   b) 2NF  
+   c) 3NF  
+   d) BCNF
+
+   answer: c — 3NF  
+   explanation: Update inconsistency comes from transitive dependency among non-key attributes, which 3NF removes.
+
+11. **If you are assigned to remove partial dependency from a database, which technique you will use?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 180 (ET: N/A)]*  
+   a) 1NF  
+   b) 2NF  
+   c) 3NF  
+   d) BCNF
+
+   answer: b — 2NF  
+   explanation: Second normal form is defined by the absence of partial dependency on a composite key.
+
+12. **The table in below violates the Normal Form(s). Which normal form it violates?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 150 (ET: DU)]*  
+   a) All of normal forms listed here  
+   b) 3NF  
+   c) 2NF  
+   d) 1NF
+
+13. **Why do we need to normalize a database?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
+   A) To remove redundancy  
+   B) To make data meaningful  
+   C) To make database secure  
+   D) To make database consistency
+
+   answer: A — To remove redundancy  
+   explanation: Normalization splits data so each fact is stored once, which removes redundancy and the insert, update and delete anomalies it causes.
+
+14. **In the ________ normal form, a composite attribute is converted to individual attributes.** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
+   A) First  
+   B) Second  
+   C) Third  
+   D) Fourth
+
+   answer: A — First  
+   explanation: 1NF requires atomic values, so a composite attribute such as "address" is broken into street, city and postcode.
+
+15. **Repeated data exist at—** *[Bangladesh Bank Assistant Programmer 2016 compact it 246 (ET: N/A)]*  
+   A) unnormalized  
+   B) 1NF  
+   C) 2NF  
+   D) 3NF
+
+   answer: A — unnormalized  
+   explanation: An unnormalized relation still holds repeating groups and duplicated data; normalization progressively removes them.
+
+16. **What is normalization?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
+   A) To Remove Redundancy  
+   B) To make Database  
+   C) To make data meaningful  
+   D) To make database Consistency
+
+   answer: A — To Remove Redundancy  
+   explanation: Normalization organises tables so each piece of data is stored in exactly one place.
+
+## Transaction Management & ACID (14)
+
+### ACID Properties & Transaction Control (13)
+
+1. **A to B transfer balance but not sent to B? Which property in ACID is responsible?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xviii (ET: DU)]*  
+   (a) Atomicity  
+   (b) Consistency  
+   (c) Isolation  
+   (d) Durability
+
+   answer: a — Atomicity  
+   explanation: The transfer must happen completely or not at all; money leaving A without reaching B means the transaction was not atomic.
+
+2. **Which one of these is not included in acid property of database?** *[Combined Bank Officer (IT) 04.10.2024 compact it 16 (ET: BIBM)]*  
+   (a) Atomicity  
+   (b) Consistency  
+   (c) Durability  
+   (d) Display
+
+   answer: d — Display  
+   explanation: ACID stands for Atomicity, Consistency, Isolation and Durability — display is not one of them.
+
+3. **A transaction completes its execution is said to be-** *[NPCBL Executive Trainee (Software) 2023 compact it 41 (ET: N/A)]*  
+   a) Committed  
+   b) Aborted  
+   c) Rolled back  
+   d) Successful
+
+   answer: a — Committed  
+   explanation: A transaction that finishes all its operations successfully enters the committed state and its changes become permanent.
+
+4. **What is the D in ACID property in database?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
+   **Ans:** Durability
+
+   answer: Durability  
+   explanation: Durability guarantees that once a transaction commits, its changes survive crashes and power loss.
+
+5. **Which one of the following commands is used to restore the database to the last committed state?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
+   a) Save point  
+   b) Rollback  
+   c) Commit  
+   d) None of the
+
+   answer: b — Rollback  
+   explanation: ROLLBACK undoes everything done since the last COMMIT, returning the database to that committed state.
+
+6. **Which one is not Database Transaction property?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)], [Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
+   a) Atomicity  
+   b) Consistency  
+   c) Durability  
+   d) Quality
+
+   answer: d — Quality  
+   explanation: The transaction properties are Atomicity, Consistency, Isolation and Durability; quality is not among them.
+
+7. **Which one of the following is a failure to a system?** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+   a) Boot crash  
+   b) Read failure  
+   c) Transaction failure  
+   d) All of the mentioned
+
+   answer: d — All of the mentioned  
+   explanation: A boot crash, a read failure and a transaction failure are all system failures the recovery manager must handle.
+
+8. **How can your rollback a committed transaction in any DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
+   a) Using SQL rollback commands  
+   b) Restoring the data from backups  
+   c) Run the transaction again in Reverse order  
+   d) All of the Above
+
+   answer: b — Restoring the data from backups  
+   explanation: A commit is final and cannot be rolled back, so the only way back is to restore from a backup and replay the logs.
+
+9. **The packaged procedure that makes data in form permanent in the Database is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
+   a) Post  
+   b) Post form  
+   c) Commit form  
+   d) None of the above
+
+   answer: c — Commit form  
+   explanation: COMMIT_FORM writes the changes held in the form's buffer permanently into the database.
+
+10. **ROLLBACK command is used to undo the changes made by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
+   a) DDL commands  
+   b) TCL commands  
+   c) DML Commands  
+   d) Commit command
+
+   answer: c — DML Commands  
+   explanation: ROLLBACK undoes uncommitted INSERT, UPDATE and DELETE work; DDL statements auto-commit and cannot be rolled back.
+
+11. **Why is set transaction used in an oracle DBMS?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) For placing a name on a transaction  
+   b) For committing a transaction  
+   c) For locking a transaction  
+   d) To setup transaction user parameters.
+
+   answer: d — To setup transaction user parameters  
+   explanation: SET TRANSACTION configures the transaction before it begins — its isolation level, read-only or read-write mode and rollback segment.
+
+12. **After a transaction completes successfully, the changes it has made to the database persist, even if there are system failures. This property of transaction is known as-** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
+   a) Atomicity  
+   b) Consistency  
+   c) Isolation  
+   d) Durability
+
+   answer: d — Durability  
+   explanation: Durability is the guarantee that committed changes survive any later system failure.
+
+13. **It is a necessary requirement that the transaction is guaranteed to complete or the transaction is never started, so that an inconsistent state would not be visible except during the execution of the transaction. Such a property of transaction is known as-** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 154 (ET: DU)]*  
+   a) Atomicity  
+   b) Consistency  
+   c) Isolation  
+   d) Durability
+
+   answer: a — Atomicity  
+   explanation: Atomicity makes a transaction all-or-nothing, so no partial, inconsistent state is ever left behind.
+
+### Off-topic / Misplaced (SQL Clause) (1)
+
+1. **Which SQL keyword is used to short the result set?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+   a. ORDER  
+   b. SORT  
+   c. ORDER BY  
+   d. SORT BY
+
+   answer: c — ORDER BY  
+   explanation: ORDER BY sorts the rows of the result set, ascending by default.
+
+## Keys in DBMS (11)
+
+### Keys, Constraints & Uniqueness (9)
+
+1. **The key selected from the sets of candidate keys by database design is called ______ key:** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 52 (ET: N/A)]*  
+   (ক) Candidate  
+   (খ) Primary  
+   (গ) Super  
+   (ঘ) Foreign
+
+   answer: খ — Primary  
+   explanation: The designer picks one candidate key to identify rows, and that chosen key becomes the primary key.
+
+2. **Which of the following types of table constraints prevents the entry of duplicate rows?** *[BPSC (Ministry) Assistant Programmer 21.09.2022 compact it 58 (ET: N/A)]*  
+   (ক) Foreign keys  
+   (খ) Primary keys  
+   (গ) Unique keys  
+   (ঘ) Candidate keys
+
+   answer: গ — Unique keys  
+   explanation: A UNIQUE constraint rejects any row whose value repeats one already stored, which is what stops duplicates.
+
+3. **Referential integrity in a DBMS is a form of-** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+   a) Foreign key  
+   b) Primary key  
+   c) Assertion  
+   d) Referential constraint
+
+   answer: d — Referential constraint  
+   explanation: Referential integrity is the constraint that a foreign key value must match an existing primary key value or be null, and it is enforced through foreign keys. <!-- verify -->
+
+4. **Needing to assess the validity of assumed referential integrity constraints on foreign keys is a(n) _________ of normalization.** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
+   a) advantage  
+   b) disadvantage  
+   c) either an advantage or disadvantage  
+   d) neither an advantage nor disadvantage
+
+   answer: b — disadvantage  
+   explanation: Splitting tables creates more foreign keys, and every one of them has to be checked on each insert, update and delete, which costs work.
+
+5. **The maximum number of super keys for the relation schema R (E, F, G, H) with E as the key is-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) 5  
+   b) 6  
+   c) 7  
+   d) 8
+
+   answer: d — 8  
+   explanation: Any attribute set containing E is a super key, and the other three attributes give 2³ = 8 possible combinations.
+
+6. **Which of the following is a group of one or more attributes that uniquely identifies a row?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
+   A) Key  
+   B) Determinant  
+   C) Tuple  
+   D) Relation
+
+   answer: A — Key  
+   explanation: A key is one or more attributes whose values uniquely identify a row.
+
+7. **For every relationship, how many possible sets of minimum cardinalities are there?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
+   A) Two  
+   B) Three  
+   C) Four  
+   D) Six
+
+   answer: C — Four  
+   explanation: Each side's minimum cardinality is either 0 or 1, so the two sides give 2 × 2 = 4 combinations.
+
+8. **A primary key must also be-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
+   A) Foreign key  
+   B) Unique  
+   C) Identical  
+   D) Case sensitive
+
+   answer: B — Unique  
+   explanation: A primary key must uniquely identify each row and cannot be null.
+
+9. **The subset of super key is a candidate key under what condition?** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
+   A) No proper subset is a super key  
+   B) All subsets are super keys  
+   C) Subset is a super key  
+   D) Each subset is a super key
+
+   answer: A — No proper subset is a super key  
+   explanation: A candidate key is a minimal super key — remove any attribute and it stops identifying rows uniquely.
+
+### Off-topic / Misplaced (2)
+
+1. **What represents a row in a relational database?** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
+   A) variable  
+   B) tuple  
+   C) entity  
+   D) field
+
+   answer: B — tuple  
+   explanation: In relational terminology a row is a tuple and a column is an attribute.
+
+2. **With SQL how can you insert "Olsen" as the "LastName" in the "Persons" table?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+   a. INSERT INTO Persons(LastName) VALUES('Olsen')  
+   b. INSERT INTO Persons (Olsen) VALUES('LastName')  
+   c. INSERT INTO Person ('Olsen') INTO LastName  
+   d. INSERT INTO Persons (LastName= 'Olsen')
+
+   answer: a — INSERT INTO Persons(LastName) VALUES('Olsen')  
+   explanation: INSERT names the columns in parentheses and supplies the matching values after VALUES.
+
+## Data Warehousing & Data Mining (9)
+
+1. **Where is data warehousing used?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 22 (ET: BIBM)]*  
+   (a) Transaction System  
+   (b) Logical system  
+   (c) Decision support system  
+   (d) None
+
+   answer: c — Decision support system  
+   explanation: A data warehouse holds cleaned historical data for analysis and reporting that supports management decisions, not day-to-day transactions.
+
+2. **What is the use of data cleaning?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
+   (a) To remove the noisy data  
+   (b) Transformations to correct the wrong data  
+   (c) Correct the inconsistencies in data  
+   (d) All of the above
+
+   answer: d — All of the above  
+   explanation: Data cleaning removes noise, corrects wrong values and resolves inconsistencies before the data enters the warehouse.
+
+3. **Small logical units where data warehouse hold large amounts of data is known as ______.** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
+   (a) Access layers  
+   (b) Data marts  
+   (c) Data storage  
+   (d) Data miners
+
+   answer: b — Data marts  
+   explanation: A data mart is a subject-specific subset of the warehouse serving one department such as sales or finance.
+
+4. **Which of the following is an essential process in which the intelligent methods are applied to extract data patterns?** *[Bangladesh Bank Assistant Maintenance Engineer 04.02.2023 compact it 23 (ET: BIBM)]*  
+   (a) Warehousing  
+   (b) Data Mining  
+   (c) Text Mining  
+   (d) Data Selection
+
+   answer: b — Data Mining  
+   explanation: Data mining applies statistical and machine learning methods to discover patterns hidden in large data sets.
+
+5. **Hadoop written in which language?** *[BREB Assistant Programmer 2023 compact it 32 (ET: N/A)]*  
+   (a) Java  
+   (b) C++  
+   (c) Pascal  
+   (d) Kotlin
+
+   answer: a — Java  
+   explanation: Apache Hadoop is written in Java.
+
+6. **Business Intelligence (BI) reporting analyses can be performed using** *[Sonali and Janata Bank Assistant Database Administrator 25.09.2021 compact it 111 (ET: N/A)]*  
+   a) standard SQL only  
+   b) extensions to SQL only  
+   c) OLAP only  
+   d) Both standard SQL and extensions to SQL
+
+   answer: d — Both standard SQL and extensions to SQL  
+   explanation: BI reports use ordinary SQL plus OLAP extensions such as CUBE, ROLLUP and window functions.
+
+7. **A star schema has what type of relationship between a dimension and fact table?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
+   a) Many-to-many  
+   b) One-to-one  
+   c) One-to-many  
+   d) All of the above
+
+   answer: c — One-to-many  
+   explanation: In a star schema each dimension row relates to many fact rows, with the fact table holding the foreign keys.
+
+8. **Finding useful pattern from the data in a database is known as-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 101 (ET: N/A)]*  
+   (a) Data Visualization  
+   (b) Data Mining  
+   (c) Data Analytics  
+   (d) All of the above
+
+   answer: b — Data Mining  
+   explanation: Data mining is the discovery of useful, previously unknown patterns in stored data.
+
+9. **Dark data represents ________.** *[Combined Bank Senior Officer (IT) 2018 compact it 222 (ET: DU)]*  
+   A) Unused data  
+   B) Harmful data  
+   C) Highlighted data  
+   D) Important data
+
+   answer: A — Unused data  
+   explanation: Dark data is information an organisation collects and stores but never analyses or uses.
+
+## ER Diagram & Data Modeling (9)
+
+1. **Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 112 (ET: N/A)]*  
+   a) 2  
+   b) 3  
+   c) 4  
+   d) 5
+
+   answer: b — 3  
+   explanation: E1 and E2 each need a table, the one-to-many R1 folds into the "many" side as a foreign key, but the many-to-many R2 needs its own table.
+
+2. **Which of the following is an appropriate description of the mapping between the relational model and relational database as its implementations?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
+   a) A domain is mapped to a character type or a character string type.  
+   b) A relation is mapped to a table  
+   c) Attributes and columns are ordered from left to right  
+   d) Neither tuples nor rows have duplicates
+
+   answer: b — A relation is mapped to a table  
+   explanation: In the relational model a relation becomes a table, a tuple becomes a row and an attribute becomes a column.
+
+3. **What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraints of both entities?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
+   (a) Min 1 and max 2  
+   (b) Min 1 and max 3  
+   (c) Min 2 and max 3  
+   (d) Min 2 and max 2
+
+   answer: c — Min 2 and max 3  
+   explanation: The two entities always need their own tables, and with partial participation on both sides the relationship needs a third table, though it can sometimes be merged.
+
+4. **Consider an Entity-relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater that the cardinality of E2. Which of the following is true about R?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 90 (ET: N/A)]*  
+   a. Every entity in E1 is associated with exactly one entity in E2  
+   b. Some entity in E1 is associated with more than one entity in E2  
+   c. Every entity in E2 is associated with exactly one entity in E1  
+   d. Every entity in E2 is associated with at most one entity in E1
+
+   answer: a — Every entity in E1 is associated with exactly one entity in E2  
+   explanation: R is many-to-one from E1 to E2 and E1 participates totally, so each E1 entity maps to exactly one E2 entity.
+
+5. **A relationship is given below in an ER diagram How many tables can be created (preferred) from below diagram?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*
+   ```
+   +------------+               +-----------+
+   | instructor |               |  student  |
+   +------------+               +-----------+
+   | ID         |  /---------\  | ID        |
+   | name       |--< advisor >--| name      |
+   | salary     |  \---------/  | tot_cred  |
+   +------------+               +-----------+
+   ```
+   a) No definite numbers  
+   b) Two  
+   c) Three  
+   d) Two or Three
+
+   answer: b — Two  
+   explanation: For a many-to-one advisor relationship the link folds into the student table as a foreign key, so only instructor and student tables are needed.
+
+6. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*
+   ```
+   +------------+               +------------+
+   | instructor |               |   student  |
+   +------------+   +---------+ +------------+
+   | ID         |<--| advisor | | ID         |
+   | name       |   +---------+ | name       |
+   | salary     |               | tot_cred   |
+   +------------+               +------------+
+   ```
+   a) One  
+   b) Two  
+   c) Three  
+   d) No definite numbers
+
+   answer: b — Two  
+   explanation: The arrow marks a many-to-one relationship, which is stored as a foreign key in the student table rather than a separate table.
+
+7. **Consider an Entity-relationship (ER) model where R is defined as a many-to-one relationship from entity set E1 to entity set E2. If E1 and E2 participate totally in R and cardinality of E1 is greater than the cardinality of E2, which of the following is true about R?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 184 (ET: N/A)]*  
+   a) Every entity in E1 is associated with exactly one entity in E2  
+   b) Some entity in E1 is associated with more than one entity in E2  
+   c) Every entity in E2 is associated with exactly one entity in E1  
+   d) Every entity in E2 is associated with at most one entity on E1
+
+   answer: a — Every entity in E1 is associated with exactly one entity in E2  
+   explanation: Many-to-one from E1 to E2 with total participation means every E1 entity maps to exactly one E2 entity.
+
+8. **A relationship is given below in an ER diagram. How many tables can be created (preferred) from below diagram?** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 149 (ET: DU)]*  
+   a) Two  
+   b) Three  
+   c) Two or Three  
+   d) No definite numbers
+
+   answer: a — Two  
+   explanation: A many-to-one relationship is represented by adding a foreign key to the "many" side, so two tables suffice.
+
+9. **In an Entity-Relationship diagram many-to-many relationship corresponds to a -- in actual database.** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 258 (ET: N/A)]*  
+   A) Table  
+   B) field  
+   C) row  
+   D) primary key
+
+   answer: A — Table  
+   explanation: A many-to-many relationship cannot be held by a foreign key, so it becomes its own junction table holding both keys.
+
+## Relational Model & Terminology (8)
+
+### Relational Model Fundamentals (7)
+
+1. **What is the degree of relation?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
+   **Ans:** a degree of relationship represents the number of entity types that are associated with a relationship.
+
+   answer: The degree of a relationship is the number of entity types taking part in it  
+   explanation: A unary relationship involves one entity type, binary two and ternary three; for a relation (table) the degree instead means its number of attributes.
+
+2. **Which one of the following is true for a tuple in a database?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
+   a) A tuple in a database represents a column  
+   b) A tuple in a database represents database schema.  
+   c) A tuple in a database represents a Record  
+   d) A tuple in a database represents a Database topology
+
+   answer: c — A tuple in a database represents a Record  
+   explanation: A tuple is one row of a table, which holds all the field values of a single record.
+
+3. **In a table an attribute named interest is defined as follows,** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 165 (ET: N/A)]*  
+   When which one is the correct format for the interest columns?  
+   a) 65.2  
+   b) 7.2  
+   c) 19.02  
+   d) 1.03
+
+4. **Which one is not unary operator in relational algebra?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*  
+   A) Select  
+   B) Project  
+   C) Union  
+   D) Renames
+
+   answer: C — Union  
+   explanation: Union combines two relations, so it is a binary operator; select, project and rename each work on a single relation.
+
+5. **Which one is an entity?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 157 (ET: N/A)]*  
+   A) Roll No.  
+   B) Student  
+   C) Passport No.  
+   D) Department ID
+
+   answer: B — Student  
+   explanation: Student is a real-world object with its own attributes, while roll no, passport no and department ID are attributes of an entity.
+
+6. **Flat file database is most useful for ________.** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 163 (ET: N/A)]*  
+   A) Large scale users  
+   B) Banking  
+   C) Small-group situation.  
+   D) Chain stores
+
+   answer: C — Small-group situation  
+   explanation: A flat file stores everything in one table with no relationships, which suits a small, simple dataset but not large multi-user systems.
+
+7. **In database, a field is ________** *[BREB Assistant General Manager (IT) 2016 compact it 256 (ET: N/A)]*  
+   A) Label  
+   B) Category of Information  
+   C) Group of related records  
+   D) Table of information
+
+   answer: B — Category of Information  
+   explanation: A field is a single column holding one category of data, such as name or date of birth, for every record.
+
+### Off-topic / Misplaced (Networking/Hardware) (1)
+
+1. **Which one is TRUE for FIRD?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*  
+   A) Uses electromagnetic signal  
+   B) Uses laser beam  
+   C) Uses optical signal  
+   D) Uses infrared
+
+   answer: A — Uses electromagnetic signal  
+   explanation: RFID tags and readers communicate over radio frequency electromagnetic waves, not light.
+
+## PL/SQL & Triggers (7)
+
+1. **What are the different events in Triggers?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 113 (ET: N/A)]*  
+   a) Define, Create  
+   b) Drop, Comment  
+   c) Insert, Update, Delete  
+   d) Select, Commit
+
+   answer: c — Insert, Update, Delete  
+   explanation: A DML trigger fires on INSERT, UPDATE or DELETE, either before or after the statement or row.
+
+2. **How can you generate debugging output from PL/SQL?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
+   a) DBMS_SQL  
+   b) DBMS_OUTPUT  
+   c) DBMS_PIPE  
+   d) DBMS_LOB
+
+   answer: b — DBMS_OUTPUT  
+   explanation: DBMS_OUTPUT.PUT_LINE writes text to the output buffer, which the client displays for debugging.
+
+3. **What is GET_BLOCK property?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 114 (ET: N/A)]*  
+   a) Restricted procedure  
+   b) Unrestricted procedure  
+   c) Library function  
+   d) None of the above
+
+   answer: b — Unrestricted procedure  
+   explanation: GET_BLOCK_PROPERTY only reads a property value, so it can be called from any trigger, including navigation triggers.
+
+4. **Which is not the UTL_FILE function-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) FOPEN()  
+   b) File_Close()  
+   c) FCOPY  
+   d) FFLUSH()
+
+   answer: b — File_Close()  
+   explanation: The package's procedures are FOPEN, FCLOSE, FCOPY and FFLUSH — there is no File_Close().
+
+5. **Which of the following protocol is an SQL trigger support by oracle?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
+   A) Before  
+   B) Instead of  
+   C) After  
+   D) All of the above
+
+   answer: D — All of the above  
+   explanation: Oracle supports BEFORE and AFTER triggers on tables and INSTEAD OF triggers on views.
+
+6. **________ is a statement that is executed automatically by the system.** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
+   A) Trigger constraint  
+   B) Assertion  
+   C) Durability  
+   D) Integrity
+
+   answer: A — Trigger constraint  
+   explanation: A trigger is a statement the database executes automatically when a specified event occurs on a table.
+
+7. **What does a COMMIT statement do to a CURSOR?** *[Combined Bank Maintenance Engineer 2018 compact it 226 (ET: N/A)]*  
+   A) Open the cursor  
+   B) Fetch the cursor  
+   C) Close the cursor  
+   D) None of this
+
+   answer: C — Close the cursor  
+   explanation: COMMIT releases the locks and closes any open cursor that was not declared WITH HOLD.
+
+## Database Fundamentals & SQL (7)
+
+### SQL Query Writing Tasks (5)
+
+1. **(b) Consider the following tables: Customer(customerID, name), Accounts(accountID, customerID), Orders (orderID, accountID, orderAmount). Write an SQL query to display customerID, name, and total order amount of all customers whose total order amount is greater than 5000.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 232]]*
+
+   answer: SELECT c.customerID, c.name, SUM(o.orderAmount) AS total FROM Customer c JOIN Accounts a ON c.customerID = a.customerID JOIN Orders o ON a.accountID = o.accountID GROUP BY c.customerID, c.name HAVING SUM(o.orderAmount) > 5000;  
+   explanation: The two joins link a customer to their accounts and those accounts to their orders, GROUP BY collapses each customer to one row, and HAVING filters on the aggregate because WHERE cannot.
+
+2. **See the following relation and answer the following question. Servers (ID, DaysRunning, OsName, RamCapacity);** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400-401]]*  
+   a) Create table name Servers with attributes ID, DaysRunning, OsName, RamCapacity.  
+   b) Write SQL query to update the server to Unix where the RamCapacity than 16GB.  
+   c) Write SQL query to select the OSName for which Servers are running more than 365 days.
+
+   answer: a) CREATE TABLE Servers (ID INT PRIMARY KEY, DaysRunning INT, OsName VARCHAR(50), RamCapacity INT); b) UPDATE Servers SET OsName = 'Unix' WHERE RamCapacity > 16; c) SELECT OsName FROM Servers WHERE DaysRunning > 365;  
+   explanation: CREATE defines the structure, UPDATE ... WHERE changes only the matching rows, and SELECT ... WHERE returns the OS names of long-running servers.
+
+3. **Write the following queries** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*  
+   (a) Write an SQL query to show the top 10 highest marks from the Result table.  
+   (b) Write an SQL query to show the number of male and female students who passed, individually.  
+   (c) Write an SQL query to show the absent students in the Result table.
+
+   answer: (a) SELECT * FROM Result ORDER BY marks DESC LIMIT 10; (b) SELECT gender, COUNT(*) FROM Result WHERE status='Pass' GROUP BY gender; (c) SELECT * FROM Result WHERE status='Absent';  
+   explanation: ORDER BY ... DESC with LIMIT takes the top rows, GROUP BY gender counts each group separately, and a simple WHERE filter lists the absentees.
+
+4. **b) MySql এর সাথে Database Connection করার জন্য PHP তে কোড লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+   answer: $conn = new mysqli("localhost", "user", "password", "dbname"); if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }  
+   explanation: The mysqli object opens the connection and connect_error reports failure; PDO is the alternative — new PDO("mysql:host=localhost;dbname=db", $user, $pass).
+
+5. **একটি ডাটাবেসে Employee টেবিল থেকে ঐ সমস্ত Employee খুঁজে বের করার SQL Command লিখুন যাদের নামের শুরুতে A এবং শেষে Y রয়েছে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+
+   answer: SELECT * FROM Employee WHERE name LIKE 'A%Y';  
+   explanation: The pattern anchors A at the start, allows any characters in between with %, and requires Y at the end.
+
+### Off-topic / Misplaced (Keys & Normalization Concepts) (2)
+
+1. **Which of the following is a primary key property in DBMS? [ DBMS-এ প্রাইমারি কী (Primary Key)-এর বৈশিষ্ট্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
+   (a) Can have duplicate values  
+   (b) Can be NULL  
+   (c) Must be unique  
+   (d) Can store multiple values
+
+   answer: c — Must be unique  
+   explanation: A primary key uniquely identifies each row, so it can never repeat and can never be NULL.
+
+2. **Which one is in case of normalization—[ নরম্যালাইজেশন (Normalization)-এর ক্ষেত্রে কোনটি সঠিক— ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+   (a) Normalization maximizes duplicates  
+   (b) Normalization reduces duplicates  
+   (c) Normalization eliminates duplicates  
+   (d) Normalization increases duplicates
+
+   answer: b — Normalization reduces duplicates  
+   explanation: Splitting data into related tables stores each fact once, cutting redundancy and the anomalies it causes.
+
+## Indexing & Query Optimization (6)
+
+1. **Which one make data access from a database faster?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
+   (a) Indexing  
+   (b) Normalization  
+   (c) Denormalization  
+   (d) All of the above  
+   25. Priority Scheduling (Non-Preemptive) with No Arrival Time Consider the following set of processes with their burst times and priorities:  
+   | Process | Burst Time (BT) | Priority |  
+   |---|---|---|  
+   | P1 | 10 | 3 |  
+   | P2 | 1 | 1 |  
+   | P3 | 2 | 4 |  
+   | P4 | 1 | 5 |  
+   | P5 | 5 | 2 |  
+   Using Non-Preemptive Priority Scheduling (lower number = higher priority), what is the Average Turnaround Time (TAT)? *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xx (ET: DU)]*  
+   (a) 10  
+   (b) 8.6  
+   (c) 12  
+   (d) 9.2
+
+   answer: a — Indexing  
+   explanation: An index gives a direct path to matching rows instead of scanning the table. The stray scheduling item pasted here answers (c) 12: running P2, P5, P1, P3, P4 by priority gives completion times 1, 6, 16, 18, 19 and an average TAT of 60/5 = 12.
+
+2. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 130 (ET: N/A)]*  
+   a) Heap file organization  
+   b) Sequential file organization  
+   c) Hashing file organization  
+   d) Multi-table Clustering file organization
+
+   answer: d — Multi-table Clustering file organization  
+   explanation: Multi-table clustering stores related rows of different relations in the same block so a join reads far fewer blocks.
+
+3. **Which of the following is correct for the Create index command?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 116 (ET: N/A)]*  
+   a) Insert index index_name on table_name  
+   b) Insert index index_name on database_name;  
+   c) Create index index_name on database_name;  
+   d) Create index index_name on table_name;
+
+   answer: d — Create index index_name on table_name;  
+   explanation: An index is built on a table, and the syntax is CREATE INDEX name ON table(column).
+
+4. **Database index speeds up-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) Select queries  
+   b) Where clauses  
+   c) Update query  
+   d) Both a and b
+
+   answer: d — Both a and b  
+   explanation: An index speeds up retrieval, so it helps SELECT statements and the WHERE conditions that filter them; it actually slows down inserts and updates.
+
+5. **Which of the following index is automatically created by the database server when an object is created?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) Implicit  
+   b) Single column  
+   c) Unique  
+   d) composite
+
+   answer: a — Implicit  
+   explanation: The server creates an implicit index automatically to enforce a primary key or unique constraint.
+
+6. **Related records of the different relations can be stored on the same block using which file organization technique?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 177 (ET: N/A)]*  
+   a) Heap file organization  
+   b) Sequential file organization  
+   c) Hashing file organization  
+   d) Clustering file organization
+
+   answer: d — Clustering file organization  
+   explanation: Clustering places related records from different relations in the same block, cutting the disk reads a join needs.
+
+## Database Connectivity (JDBC/ODBC) (5)
+
+1. **Embedded SQL is which of the following?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 115 (ET: N/A)]*  
+   a) Hard-coded SQL statements in a program language such as Java.  
+   b) The process of making an application capable of generating specific SQL code on the fly  
+   c) Hard-coded SQL statements in a procedure.  
+   d) Hard-coded SQL statements in a trigger.
+
+   answer: a — Hard-coded SQL statements in a program language such as Java  
+   explanation: Embedded SQL puts fixed SQL text directly inside host-language source, which a precompiler then translates.
+
+2. **The Application program interface in a two-tier architecture DBMS is provided by-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Close module connectivity  
+   b) Open module connectivity  
+   c) Open database connectivity  
+   d) Close database connectivity
+
+   answer: c — Open database connectivity  
+   explanation: ODBC is the standard API that lets an application talk to any database through the matching driver.
+
+3. **A major challenge in mixing SQL with a general-purpose language is mismatching in the** *[Probashi Kallyan Bank Programmer: 2019 compact it 209 (ET: AUST)]*  
+   A) Definition of data  
+   B) Manipulation of data  
+   C) Execution of data  
+   D) Output of data
+
+   answer: A — Definition of data  
+   explanation: SQL works on sets of rows while a host language works on single variables and objects, and their type systems differ — the classic impedance mismatch.
+
+4. **Once connection is set up, program can send SQL commands to database by using** *[Probashi Kallyan Bank Programmer: 2019 compact it 210 (ET: AUST)]*  
+   A) SQLExcelConn  
+   B) SQLDirect  
+   C) SQLExcelDirect  
+   D) SQLConnect
+
+   answer: D — SQLConnect  
+   explanation: SQLConnect establishes the session with the data source, after which SQL statements can be sent.
+
+5. **In your program you want to use the JDBC-ODBC bridge drive. What code do you use?** *[Bangladesh Bank Assistant Programmer 2011 compact it 273 (ET: N/A)]*  
+   a. Class.callName("sun.jdbc.odbc.jdbcOdbcDriver")  
+   b. Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")  
+   c. Class.callFunc("JdbcOdbcDriver")  
+   d. Class.Name.init("sun.jdbc.odbc.JdbcOdbcDriver")
+
+   answer: b — Class.forName("sun.jdbc.odbc.jdbcOdbcDriver")  
+   explanation: Class.forName loads and registers the JDBC driver class at runtime before DriverManager.getConnection is called.
+
+## Concurrency Control & Locking (5)
+
+1. **Which of the following is not a factor in determining the concurrency control behavior of SQL Server?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Lock level  
+   b) Transaction isolation level  
+   c) Cursor concurrency setting  
+   d) Locking hints
+
+   answer: a — Lock level  
+   explanation: SQL Server decides concurrency from the transaction isolation level, the cursor concurrency setting and any locking hints; "lock level" is not one of those settings.
+
+2. **In a DBMS, when multiple transaction programs update the same database simultaneously, which of the following is a technology that is used to prevent logical contradictions?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Exclusive Control  
+   b) Integrity constraint  
+   c) Normalization  
+   d) Reorganization
+
+   answer: a — Exclusive Control  
+   explanation: An exclusive lock stops any other transaction touching the item while it is being updated, so the two updates cannot contradict each other.
+
+3. **Which of the below is responsible for controlling the interaction among simultaneous transaction?** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 117 (ET: N/A)]*  
+   a) Serializable controller  
+   b) Concurrency Control Manager  
+   c) Transportation management system  
+   d) Multiple Access Protocol
+
+   answer: b — Concurrency Control Manager  
+   explanation: The concurrency control manager grants and releases locks and enforces a serializable schedule among running transactions.
+
+4. **In strict two phase locking protocol-** *[Sonali and Janata Bank Assistant Database Administrator 25-09-2021 compact it 118 (ET: N/A)]*  
+   a) All exclusive mode locks taken by transaction be held until transaction commit  
+   b) All exclusive mode locks taken by transaction can be released before transaction commits  
+   c) All locks can be released before transaction commits  
+   d) None of these
+
+   answer: a — All exclusive mode locks taken by transaction be held until transaction commit  
+   explanation: Holding write locks to the end prevents other transactions reading uncommitted data, so cascading rollbacks cannot happen.
+
+5. **A shared lock allows which of the following type of transaction to occur?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*  
+   A) Delete  
+   B) Insert  
+   C) Read  
+   D) Update
+
+   answer: C — Read  
+   explanation: A shared lock lets many transactions read the item at once but blocks any write.
+
+## SQL Joins (2)
+
+1. **What type of join in needed when you wish to include rows that do not have matching values?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
+   a) Equal join  
+   b) Natural join  
+   c) Outer join  
+   d) Inner join
+
+   answer: c — Outer join  
+   explanation: An outer join keeps unmatched rows from one or both tables and fills the missing side with NULLs; an inner join drops them.
+
+2. **Which type of JOIN operation in SQL command is used to returns that do not have matching values?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 126 (ET: N/A)]*  
+   a) Natural Join  
+   b) EQUI Join  
+   c) Outer Join  
+   d) All of the above
+
+   answer: c — Outer Join  
+   explanation: LEFT, RIGHT and FULL OUTER JOIN all return rows that have no match on the other side, padded with NULLs.
