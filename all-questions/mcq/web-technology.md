@@ -1,15 +1,17 @@
 <!-- TOC START -->
 **Table of Contents** — 7 subtopics · 49 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [HTML, XML & Web Fundamentals](#html-xml--web-fundamentals-15) | 15 |
-| 2 | [PHP & Server-Side](#php--server-side-9) | 9 |
-| 3 | [Scripting & JavaScript](#scripting--javascript-8) | 8 |
-| 4 | [Web Services & APIs](#web-services--apis-6) | 6 |
-| 5 | [Full Stack & Web Servers](#full-stack--web-servers-5) | 5 |
-| 6 | [HTTP & Status Codes](#http--status-codes-5) | 5 |
-| 7 | [CSS & Styling](#css--styling-1) | 1 |
+- [HTML, XML & Web Fundamentals (15)](#html-xml--web-fundamentals-15)
+- [PHP & Server-Side (9)](#php--server-side-9)
+- [Scripting & JavaScript (8)](#scripting--javascript-8)
+- [Web Services & APIs (6)](#web-services--apis-6)
+  - [REST APIs & Message Formats (5)](#rest-apis--message-formats-5)
+  - [Web Application Security (1)](#web-application-security-1)
+- [Full Stack & Web Servers (5)](#full-stack--web-servers-5)
+  - [Web Servers & CMS (3)](#web-servers--cms-3)
+  - [Cisco Telephony/Server Platforms (2)](#cisco-telephonyserver-platforms-2)
+- [HTTP & Status Codes (5)](#http--status-codes-5)
+- [CSS & Styling (1)](#css--styling-1)
 
 <!-- TOC END -->
 
@@ -223,43 +225,49 @@
 
 ## Web Services & APIs (6)
 
+### REST APIs & Message Formats (5)
+
+1. **Which one of the following statements with respect to REST API is false?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
+   (a) A REST API would use a GET request to retrieve a record  
+   (b) A REST API would use a DELETE request to delete a record  
+   (c) The operations in a REST API can be called from any HTTP client  
+   (d) None of the above statements is false
+
+2. **Which is the lightweight message format?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
+   a) XML  
+   b) JSON  
+   c) SQL  
+   d) HTML
+
+3. **Which one is modern light weight message exchange format?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
+   A) JSON  
+   B) XML  
+   C) MX  
+   D) HTML
+
+4. **Which one is modern lightweight message exchange format?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*  
+   A) JSON  
+   B) MX  
+   C) HTML  
+   D) XML
+
+5. **Which one is modern lightweight message exchange format?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
+   A) XM  
+   B) MX  
+   C) HTML  
+   D) JSON (JavaScript Object Notation)
+
+### Web Application Security (1)
+
 1. **Between a client and a web server, which of the following used for inspecting the data that is sent from the client to the web server and blocking attacks such as SQL injection?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 100 (ET: N/A)]*  
    (a) Cluster configuration  
    (b) Load balancing function  
    (c) SSL-VPN function  
    (d) WAF
 
-2. **Which one of the following statements with respect to REST API is false?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
-   (a) A REST API would use a GET request to retrieve a record  
-   (b) A REST API would use a DELETE request to delete a record  
-   (c) The operations in a REST API can be called from any HTTP client  
-   (d) None of the above statements is false
-
-3. **Which is the lightweight message format?** *[Sonali Bank Ltd. Assistant Database Administrator 2020 compact it 168 (ET: N/A)]*  
-   a) XML  
-   b) JSON  
-   c) SQL  
-   d) HTML
-
-4. **Which one is modern light weight message exchange format?** *[Probashi Kallyan Bank Assistant Programmer: 2019 compact it 215 (ET: AUST)]*  
-   A) JSON  
-   B) XML  
-   C) MX  
-   D) HTML
-
-5. **Which one is modern lightweight message exchange format?** *[Combined Bank Maintenance Engineer 2018 compact it 224 (ET: N/A)]*  
-   A) JSON  
-   B) MX  
-   C) HTML  
-   D) XML
-
-6. **Which one is modern lightweight message exchange format?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
-   A) XM  
-   B) MX  
-   C) HTML  
-   D) JSON (JavaScript Object Notation)
-
 ## Full Stack & Web Servers (5)
+
+### Web Servers & CMS (3)
 
 1. **Which of the following is not a web server?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xix (ET: DU)]*  
    (a) Apache tomcat  
@@ -279,13 +287,15 @@
    C) Content Managed website  
    D) E-Commerce website
 
-4. **What type of system is Cisco mail platform?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
+### Cisco Telephony/Server Platforms (2)
+
+1. **What type of system is Cisco mail platform?** *[Pubali Bank Limited Officer (IT) 2012 compact it 267 (ET: N/A)]*  
    a. Linux  
    b. MAC  
    c. Windows  
    d. Atari
 
-5. **Where the application server is installed for the web server?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*  
+2. **Where the application server is installed for the web server?** *[Pubali Bank Limited Officer (IT) 2012 compact it 269 (ET: N/A)]*  
    a. Cisco MCS with cisco-based Windows operating system  
    b. Cisco MCS with cisco-based Unix operating system  
    c. Cisco MCS with cisco-based Linux operating system  
