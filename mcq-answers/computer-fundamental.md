@@ -1,20 +1,23 @@
 <!-- TOC START -->
 **Table of Contents** — 6 subtopics · 171 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Hardware Components & Peripherals](#hardware-components--peripherals-69) | 69 |
-| 2 | [Software Types & Classification](#software-types--classification-40) | 40 |
-| 3 | [Computer Fundamentals & Generations](#computer-fundamentals--generations-29) | 29 |
-| 4 | [ICT & Emerging Technology](#ict--emerging-technology-16) | 16 |
-| 5 | [Acronyms & Abbreviations](#acronyms--abbreviations-13) | 13 |
-| 6 | [Keyboard Shortcuts](#keyboard-shortcuts-4) | 4 |
+- [Hardware Components & Peripherals (69)](#hardware-components--peripherals-69)
+  - [Hardware Components & Peripherals (47)](#hardware-components--peripherals-47)
+  - [Off-topic / Misplaced Questions (22)](#off-topic--misplaced-questions-22)
+- [Software Types & Classification (40)](#software-types--classification-40)
+- [Computer Fundamentals & Generations (29)](#computer-fundamentals--generations-29)
+- [ICT & Emerging Technology (16)](#ict--emerging-technology-16)
+- [Acronyms & Abbreviations (13)](#acronyms--abbreviations-13)
+- [Keyboard Shortcuts (4)](#keyboard-shortcuts-4)
 
 <!-- TOC END -->
 
 ---
 
 ## Hardware Components & Peripherals (69)
+
+### Hardware Components & Peripherals (47)
+
 1. **The Expansion cards are inserted into ______ in a computer.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*  
    (a) Slots of CPU  
    (b) Hard Disk of CPU  
@@ -400,7 +403,46 @@
    answer: b — Program Counter  
    explanation: The Program Counter holds the address of the next instruction to fetch and is incremented after each fetch.
 
-43. **The main drawback of hill climbing is— [Hill climbing-এর প্রধান দুর্বলতা কী?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
+43. **Which of the following is a non-volatile memory? [ নিচের কোনটি নন-ভোলাটাইল (Non-volatile) মেমোরি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
+   (a) RAM  
+   (b) Cache  
+   (c) ROM  
+   (d) Register
+
+   answer: c — ROM  
+   explanation: ROM keeps its contents when power is removed; RAM, cache and registers all lose their contents.
+
+44. **Write the name of the 8086 block diagram in following table.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 382]]*
+
+   answer: The 8086 has two units — the Bus Interface Unit (BIU) and the Execution Unit (EU)  
+   explanation: The BIU holds the segment registers (CS, DS, SS, ES), the instruction pointer, the address-generation adder and the 6-byte instruction queue; the EU holds the ALU, the general registers (AX, BX, CX, DX), the pointer/index registers (SP, BP, SI, DI), the flag register and the control unit.
+
+45. **মাদার বোর্ডে কোনটি 'বিদ্যুৎ নিয়ন্ত্রণ' করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. BIOS  
+   খ. UPS  
+   গ. CPU  
+   ঘ. MPSU
+
+   answer: ঘ — MPSU  
+   explanation: The power supply unit feeding the motherboard regulates and distributes the voltages the board needs; BIOS is firmware, a UPS is external backup power and the CPU is the processor. <!-- verify -->
+
+46. **c) তিনটি Optical Storage এর নাম লিখুন** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+
+   answer: CD (Compact Disc), DVD (Digital Versatile Disc) and Blu-ray Disc  
+   explanation: All three store data as pits and lands read by a laser, with Blu-ray's shorter wavelength giving the highest capacity.
+
+47. **Out of all the following, which one isn’t a form of memory?[ নিচের কোনটি মেমোরির একটি রূপ নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
+   (a) Translation lookaside buffer  
+   (b) instruction opcode  
+   (c) Instruction cache  
+   (d) Instruction Register
+
+   answer: b — instruction opcode  
+   explanation: The opcode is a field inside an instruction that names the operation; the TLB, instruction cache and instruction register are all storage.
+
+### Off-topic / Misplaced Questions (22)
+
+1. **The main drawback of hill climbing is— [Hill climbing-এর প্রধান দুর্বলতা কী?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Expands all nodes  
    (b) Requires heuristic functions  
    (c) Can get stuck in local optima  
@@ -409,24 +451,24 @@
    answer: c — Can get stuck in local optima  
    explanation: Hill climbing accepts only uphill moves, so it halts at a local maximum, plateau or ridge without finding the global best.
 
-44. **(a) Find the output of this program.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
+2. **(a) Find the output of this program.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
 
-45. **(b) Class C has some features. Class D uses all features of Class C and has some extra features of its own. Identify the concept used here in Object-Oriented Programming (OOP) and explain with an example.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
+3. **(b) Class C has some features. Class D uses all features of Class C and has some extra features of its own. Identify the concept used here in Object-Oriented Programming (OOP) and explain with an example.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 230]]*
 
    answer: Inheritance  
    explanation: Class D derives from Class C, so it reuses every member of C and adds its own — for example class Dog : public Animal adds bark() to Animal's eat() and sleep().
 
-46. **(a) Let A= \{1,2,3,4,5,6,7,8\}. If five integers are selected from A, prove that at least one pair of the selected integers has a sum of 9. Use the Pigeonhole Principle.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
+4. **(a) Let A= \{1,2,3,4,5,6,7,8\}. If five integers are selected from A, prove that at least one pair of the selected integers has a sum of 9. Use the Pigeonhole Principle.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 231]]*
 
    answer: Split A into the four pairs that sum to 9 — {1,8}, {2,7}, {3,6}, {4,5}  
    explanation: These four pairs are the pigeonholes and the five chosen integers are the pigeons, so by the Pigeonhole Principle two of them fall in the same pair and that pair sums to 9.
 
-47. **A signal has a frequency range of 300 Hz to 3400 Hz. A Pulse Code Modulation (PCM) system is used to digitize the signal. The maximum quantization error is \\pm\\Delta/2 = \\pm 1\\% full scale, and the signal voltage ranges from -1 V to +1 V. Determine the number of bits per sample (n) and the bit rate of the PCM system.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 237]]*
+5. **A signal has a frequency range of 300 Hz to 3400 Hz. A Pulse Code Modulation (PCM) system is used to digitize the signal. The maximum quantization error is \\pm\\Delta/2 = \\pm 1\\% full scale, and the signal voltage ranges from -1 V to +1 V. Determine the number of bits per sample (n) and the bit rate of the PCM system.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 237]]*
 
    answer: n = 6 bits per sample, bit rate = 40,800 bps (40.8 kbps)  
    explanation: Full scale is 2 V, so Δ/2 = 1% × 2 = 0.02 V and Δ = 0.04 V, giving L = 2/0.04 = 50 levels, so n = ceil(log₂50) = 6; Nyquist needs fs = 2 × 3400 = 6800 samples/s, so 6800 × 6 = 40,800 bps.
 
-48. **What is the value printed by the following program? (05) \#include <stdio.h>
+6. **What is the value printed by the following program? (05) \#include <stdio.h>
 
 int f(int \*a, int n)\{
 
@@ -456,7 +498,7 @@ int main ()\{
    answer: 15  
    explanation: Working from the end, f=6, then 11-6=5, 4+5=9, 13-9=4, 7-4=3, and finally 12+3 = 15.
 
-49. **GPT stands for— [ GPT এর পূর্ণরূপ হলো— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*  
+7. **GPT stands for— [ GPT এর পূর্ণরূপ হলো— ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 343]]*  
    (a) Generative Pre-trained Transformer  
    (b) Generative Program Technology  
    (c) Generative Process Technology  
@@ -465,7 +507,7 @@ int main ()\{
    answer: a — Generative Pre-trained Transformer  
    explanation: GPT is a generative model, pre-trained on large text corpora, built on the Transformer architecture.
 
-50. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node x from the list? [ সিংগলি লিঙ্কড লিস্ট থেকে একটি নোড (x) ডিলিট করার ওর্স্ট-কেস টাইম কমপ্লেক্সিটি কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+8. **Let P be a singly linked list. Let Q be the pointer to an intermediate node x in the list. What is the worst-case time complexity of the best known algorithm to delete the node x from the list? [ সিংগলি লিঙ্কড লিস্ট থেকে একটি নোড (x) ডিলিট করার ওর্স্ট-কেস টাইম কমপ্লেক্সিটি কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (A) O(n)  
    (B) O(log2 n)  
    (C) O(log n)  
@@ -474,7 +516,7 @@ int main ()\{
    answer: D — O(1)  
    explanation: Copy the next node's data into x and unlink that next node, which takes constant time (the trick fails only if x is the last node).
 
-51. **Which of the following is not a storage class specifier in C? [ নিচের কোনটি C ল্যাঙ্গুয়েজে স্টোরেজ ক্লাস নয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+9. **Which of the following is not a storage class specifier in C? [ নিচের কোনটি C ল্যাঙ্গুয়েজে স্টোরেজ ক্লাস নয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
    (A) auto  
    (B) register  
    (C) static  
@@ -483,7 +525,7 @@ int main ()\{
    answer: E — volatile  
    explanation: C's storage classes are auto, register, static and extern; volatile is a type qualifier, not a storage class.
 
-52. **In C, static storage class cannot be used with: [ C-তে static কীওয়ার্ডটি নিচের কোনটির সাথে ব্যবহার করা যায় না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
+10. **In C, static storage class cannot be used with: [ C-তে static কীওয়ার্ডটি নিচের কোনটির সাথে ব্যবহার করা যায় না? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
    (A) Global variable  
    (B) Function parameter  
    (C) Function name  
@@ -492,7 +534,7 @@ int main ()\{
    answer: B — Function parameter  
    explanation: A parameter lives only for the duration of the call, so it may only be auto or register — static is not allowed.
 
-53. **Which of the following storage classes have global visibility in C/C++? [ কোন স্টোরেজ ক্লাসের গ্লোবাল ভিজিবিলিটি (দৃশ্যমানতা) আছে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
+11. **Which of the following storage classes have global visibility in C/C++? [ কোন স্টোরেজ ক্লাসের গ্লোবাল ভিজিবিলিটি (দৃশ্যমানতা) আছে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 349]]*  
    (A) Auto  
    (B) Extern  
    (C) Static  
@@ -501,40 +543,17 @@ int main ()\{
    answer: B — Extern  
    explanation: extern gives a name external linkage so it is visible across all files of the program.
 
-54. **Which of the following is a non-volatile memory? [ নিচের কোনটি নন-ভোলাটাইল (Non-volatile) মেমোরি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
-   (a) RAM  
-   (b) Cache  
-   (c) ROM  
-   (d) Register
-
-   answer: c — ROM  
-   explanation: ROM keeps its contents when power is removed; RAM, cache and registers all lose their contents.
-
-55. **Write a C program to check whether a given integer is a palindrome number or not.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381-382]]*
+12. **Write a C program to check whether a given integer is a palindrome number or not.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 381-382]]*
 
    answer: Reverse the digits and compare with the original  
    explanation: int r=0,t=n; while(t>0){ r=r*10+t%10; t/=10; } then n==r means palindrome — for example 121 reverses to 121.
 
-56. **Write the name of the 8086 block diagram in following table.** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 382]]*
-
-   answer: The 8086 has two units — the Bus Interface Unit (BIU) and the Execution Unit (EU)  
-   explanation: The BIU holds the segment registers (CS, DS, SS, ES), the instruction pointer, the address-generation adder and the 6-byte instruction queue; the EU holds the ALU, the general registers (AX, BX, CX, DX), the pointer/index registers (SP, BP, SI, DI), the flag register and the control unit.
-
-57. **Multi Programming (Or Multi-tasking) enables more than a single process to apparently execute simultaneously. How is this achieved on a uniprocessor?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
+13. **Multi Programming (Or Multi-tasking) enables more than a single process to apparently execute simultaneously. How is this achieved on a uniprocessor?** *[Bakhrabad Gas Distribution Company limited (BGDCL) Post: Assistant Engineer Date: 15 March, 2024 Exam Taker: BUET Marks: 20 MCQ; Written: 5\*8=40 [bitbox it book 383]]*
 
    answer: By time-sharing the single CPU through rapid context switching  
    explanation: The scheduler gives each process a short time slice and switches on a timer interrupt or when a process blocks for I/O, saving and restoring register state so the processes only appear to run at once.
 
-58. **মাদার বোর্ডে কোনটি 'বিদ্যুৎ নিয়ন্ত্রণ' করে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. BIOS  
-   খ. UPS  
-   গ. CPU  
-   ঘ. MPSU
-
-   answer: ঘ — MPSU  
-   explanation: The power supply unit feeding the motherboard regulates and distributes the voltages the board needs; BIOS is firmware, a UPS is external backup power and the CPU is the processor. <!-- verify -->
-
-59. **Who is the author of the drama 'You never can tell'?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
+14. **Who is the author of the drama 'You never can tell'?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 406]]*  
    a. William Shakespeare  
    b. George Bernard Shaw  
    c. Ben Jonson  
@@ -543,19 +562,14 @@ int main ()\{
    answer: b — George Bernard Shaw  
    explanation: "You Never Can Tell" is an 1897 comedy by George Bernard Shaw.
 
-60. **c) CPU Scheduling কি? ২টি CPU Scheduling algorithm এর নাম লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
+15. **c) CPU Scheduling কি? ২টি CPU Scheduling algorithm এর নাম লিখুন।** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 449]]*
 
    answer: CPU scheduling decides which ready process gets the CPU next; two algorithms are First Come First Served (FCFS) and Round Robin (RR)  
    explanation: The scheduler picks a process from the ready queue to maximise CPU use and minimise waiting time; other common algorithms are SJF and Priority scheduling.
 
-61. **c) তিনটি Optical Storage এর নাম লিখুন** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 450]]*
+16. **Read the passage and answer the following questions.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 482]]*
 
-   answer: CD (Compact Disc), DVD (Digital Versatile Disc) and Blu-ray Disc  
-   explanation: All three store data as pits and lands read by a laser, with Blu-ray's shorter wavelength giving the highest capacity.
-
-62. **Read the passage and answer the following questions.** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 482]]*
-
-63. **Select the correct sentence from the following options. [ নিচের কোন বাক্যটি ব্যাকরণগতভাবে সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
+17. **Select the correct sentence from the following options. [ নিচের কোন বাক্যটি ব্যাকরণগতভাবে সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 495]]*  
    (a) The man was tall who stole my bag  
    (b) The man stole my bag who was tall  
    (c) The man who stole my bag was tall  
@@ -564,7 +578,7 @@ int main ()\{
    answer: c — The man who stole my bag was tall  
    explanation: The relative clause "who stole my bag" must sit directly after the noun it describes, "the man".
 
-64. **Number of steps required to reach ‘aab’ from A \\to aA \\mid a \\mid b—[ A \\to aA \\mid a \\mid b থেকে ‘aab’ পেতে কয়টি ধাপ লাগে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
+18. **Number of steps required to reach ‘aab’ from A \\to aA \\mid a \\mid b—[ A \\to aA \\mid a \\mid b থেকে ‘aab’ পেতে কয়টি ধাপ লাগে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
    (a) 4  
    (b) 3  
    (c) 2  
@@ -573,7 +587,7 @@ int main ()\{
    answer: b — 3  
    explanation: A ⇒ aA ⇒ aaA ⇒ aab takes three derivation steps.
 
-65. **To keep track of how many frames have been allocated, how many are there, and how many are available, the operating system maintains a—[ কতগুলো ফ্রেম বরাদ্দ হয়েছে, কতগুলো আছে এবং কতগুলো খালি—এগুলো ট্র্যাক করার জন্য OS কী রাখে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
+19. **To keep track of how many frames have been allocated, how many are there, and how many are available, the operating system maintains a—[ কতগুলো ফ্রেম বরাদ্দ হয়েছে, কতগুলো আছে এবং কতগুলো খালি—এগুলো ট্র্যাক করার জন্য OS কী রাখে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 500]]*  
    (a) Memory table  
    (b) Page table  
    (c) Mapping table  
@@ -582,7 +596,7 @@ int main ()\{
    answer: d — Frame table  
    explanation: The OS keeps a frame table with one entry per physical frame, recording whether it is free or allocated and to which page.
 
-66. **An increase in a computer’s RAM leads to a typical improvement in performance because—[ RAM বাড়ালে সাধারণত পারফরম্যান্স কেন বাড়ে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
+20. **An increase in a computer’s RAM leads to a typical improvement in performance because—[ RAM বাড়ালে সাধারণত পারফরম্যান্স কেন বাড়ে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) Virtual memory increases  
    (b) Fewer segmentation faults occur  
    (c) A larger RAM is faster  
@@ -591,16 +605,7 @@ int main ()\{
    answer: d — Fewer page faults occur  
    explanation: More RAM holds more pages resident, so the system goes to disk less often and the costly page-fault handling drops.
 
-67. **Out of all the following, which one isn’t a form of memory?[ নিচের কোনটি মেমোরির একটি রূপ নয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
-   (a) Translation lookaside buffer  
-   (b) instruction opcode  
-   (c) Instruction cache  
-   (d) Instruction Register
-
-   answer: b — instruction opcode  
-   explanation: The opcode is a field inside an instruction that names the operation; the TLB, instruction cache and instruction register are all storage.
-
-68. **What type of variable should be used to store data that is important throughout an object’s life span?[ একটি অবজেক্টের জীবনকাল জুড়ে গুরুত্বপূর্ণ ডেটা সংরক্ষণ করতে কোন ধরনের ভেরিয়েবল ব্যবহার করা উচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
+21. **What type of variable should be used to store data that is important throughout an object’s life span?[ একটি অবজেক্টের জীবনকাল জুড়ে গুরুত্বপূর্ণ ডেটা সংরক্ষণ করতে কোন ধরনের ভেরিয়েবল ব্যবহার করা উচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) A reference variable  
    (b) A method variable  
    (c) An instance variable  
@@ -609,7 +614,7 @@ int main ()\{
    answer: c — An instance variable  
    explanation: An instance variable is created with the object and lives as long as the object does, so it holds per-object state.
 
-69. **Level order traversal of a rooted tree can be done by starting from root and performing—[ একটি রুটেড ট্রির লেভেল অর্ডার ট্রাভার্সাল (Level order traversal) নিচের কোনটি সম্পাদন করে করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
+22. **Level order traversal of a rooted tree can be done by starting from root and performing—[ একটি রুটেড ট্রির লেভেল অর্ডার ট্রাভার্সাল (Level order traversal) নিচের কোনটি সম্পাদন করে করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 507]]*  
    (a) Deep search  
    (b) Root search  
    (c) Depth first search  
