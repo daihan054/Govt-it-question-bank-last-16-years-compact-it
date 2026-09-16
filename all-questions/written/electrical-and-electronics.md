@@ -1,48 +1,62 @@
 <!-- TOC START -->
 **Table of Contents** — 9 subtopics · 39 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices-13) | 13 |
-| 2 | [Transistors (BJT & FET)](#transistors-bjt--fet-9) | 9 |
-| 3 | [Semiconductor Devices & Diodes](#semiconductor-devices--diodes-4) | 4 |
-| 4 | [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc-4) | 4 |
-| 5 | [AC Circuits & Power Analysis](#ac-circuits--power-analysis-2) | 2 |
-| 6 | [Operational Amplifiers (Op-Amp)](#operational-amplifiers-op-amp-2) | 2 |
-| 7 | [Sensor Circuits & Automated Control Systems](#sensor-circuits--automated-control-systems-2) | 2 |
-| 8 | [Circuit Theorems (Thevenin, Norton, Superposition)](#circuit-theorems-thevenin-norton-superposition-2) | 2 |
-| 9 | [Electrical Machines (Motors & Alternators)](#electrical-machines-motors--alternators-1) | 1 |
+- [Electrical Circuits & Protection Devices (13)](#electrical-circuits--protection-devices-13)
+  - [Circuit Analysis & Theorems (R, I, Norton calculations) (4)](#circuit-analysis--theorems-r-i-norton-calculations-4)
+  - [Protection Devices (Fuse, MCB, Relay, Breaker) (2)](#protection-devices-fuse-mcb-relay-breaker-2)
+  - [AC-DC Conversion & Transformers (3)](#ac-dc-conversion--transformers-3)
+  - [Power Systems & Frequency (3)](#power-systems--frequency-3)
+  - [Component Comparison (Battery vs Capacitor) (1)](#component-comparison-battery-vs-capacitor-1)
+- [Transistors (BJT & FET) (9)](#transistors-bjt--fet-9)
+- [Semiconductor Devices & Diodes (4)](#semiconductor-devices--diodes-4)
+- [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)](#digital-to-analog--analog-to-digital-converters-dacadc-4)
+- [AC Circuits & Power Analysis (2)](#ac-circuits--power-analysis-2)
+- [Operational Amplifiers (Op-Amp) (2)](#operational-amplifiers-op-amp-2)
+- [Sensor Circuits & Automated Control Systems (2)](#sensor-circuits--automated-control-systems-2)
+- [Circuit Theorems (Thevenin, Norton, Superposition) (2)](#circuit-theorems-thevenin-norton-superposition-2)
+- [Electrical Machines (Motors & Alternators) (1)](#electrical-machines-motors--alternators-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Electrical Circuits & Protection Devices (13)
+
+### Circuit Analysis & Theorems (R, I, Norton calculations) (4)
+
+1. **Find the Norton equivalent circuit for a DC power supply that has a 30 V terminal voltage when delivering 400mA and a 28V terminal voltage. When delivering 600mA.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1436 (ET: BUET)]*
+
+2. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
+
+3. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
+
+4. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+
+### Protection Devices (Fuse, MCB, Relay, Breaker) (2)
+
 1. Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why? *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-2. **Find the Norton equivalent circuit for a DC power supply that has a 30 V terminal voltage when delivering 400mA and a 28V terminal voltage. When delivering 600mA.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1436 (ET: BUET)]*
+2. **Write down the function of Relay, Fuse and Circuit Breaker.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-3. **Which Transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
+### AC-DC Conversion & Transformers (3)
 
-4. **What is the name of AC current to DC current?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
+1. **Which Transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
-5. **How to AC converted into DC?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
+2. **What is the name of AC current to DC current?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
 
-6. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
+3. **How to AC converted into DC?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
 
-7. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
+### Power Systems & Frequency (3)
 
-8. **Write down the function of Relay, Fuse and Circuit Breaker.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+1. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
 
-9. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
+2. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
-10. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+3. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
-11. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+### Component Comparison (Battery vs Capacitor) (1)
 
-12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
-
-13. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
+1. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
 **Which types of transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 41]]*
 
