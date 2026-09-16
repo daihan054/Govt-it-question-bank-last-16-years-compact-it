@@ -1,18 +1,22 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 128 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [OOP Concepts (Inheritance & Polymorphism)](#oop-concepts-inheritance--polymorphism-54) | 54 |
-| 2 | [Java Programming & Methods](#java-programming--methods-18) | 18 |
-| 3 | [Class Design & Object-Oriented Modeling](#class-design--object-oriented-modeling-11) | 11 |
-| 4 | [OOP Concepts (Inheritance, Polymorphism, Encapsulation)](#oop-concepts-inheritance-polymorphism-encapsulation-11) | 11 |
-| 5 | [Output Tracing & Recursion](#output-tracing--recursion-10) | 10 |
-| 6 | [Constructors & Destructors](#constructors--destructors-8) | 8 |
-| 7 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 8 | [Exception Handling](#exception-handling-4) | 4 |
-| 9 | [C++ OOP Concepts & Friend Functions](#c-oop-concepts--friend-functions-3) | 3 |
-| 10 | [Interfaces & Abstract Classes](#interfaces--abstract-classes-2) | 2 |
+- [OOP Concepts (Inheritance & Polymorphism) (54)](#oop-concepts-inheritance--polymorphism-54)
+- [Java Programming & Methods (18)](#java-programming--methods-18)
+  - [Java/C# Coding Exercises (11)](#javac-coding-exercises-11)
+  - [Java Platform Concepts (JVM/JDK/JRE/GC) (7)](#java-platform-concepts-jvmjdkjregc-7)
+- [Class Design & Object-Oriented Modeling (11)](#class-design--object-oriented-modeling-11)
+- [OOP Concepts (Inheritance, Polymorphism, Encapsulation) (11)](#oop-concepts-inheritance-polymorphism-encapsulation-11)
+  - [OOP Concepts (Polymorphism, Inheritance, Friend Function) (5)](#oop-concepts-polymorphism-inheritance-friend-function-5)
+  - [Basic Programming (Loops & Series) (3)](#basic-programming-loops--series-3)
+  - [Math & Aptitude Problems (2)](#math--aptitude-problems-2)
+  - [General English Essay (1)](#general-english-essay-1)
+- [Output Tracing & Recursion (10)](#output-tracing--recursion-10)
+- [Constructors & Destructors (8)](#constructors--destructors-8)
+- [Encapsulation & Access Modifiers (7)](#encapsulation--access-modifiers-7)
+- [Exception Handling (4)](#exception-handling-4)
+- [C++ OOP Concepts & Friend Functions (3)](#c-oop-concepts--friend-functions-3)
+- [Interfaces & Abstract Classes (2)](#interfaces--abstract-classes-2)
 
 <!-- TOC END -->
 
@@ -164,15 +168,13 @@ public class main{
 
 ## Java Programming & Methods (18)
 
+### Java/C# Coding Exercises (11)
+
 1. **Write a Java Code which return a value.** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
 2. **Write a Java Code....** *[Islami Bank PLC Quality Assurance (QA) Engineer 14.03.2025 compact it 1334 (ET: BUET)]*
 
-3. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
-
-4. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
-
-5. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
+3. **Consider the following code:** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 436 (ET: BIBM)]*
 ```java
 Public class Class A {
     Public void m1() {}
@@ -189,31 +191,19 @@ Public class class B extends class A {
 ```
 **Mention which of the methods overload, override and hied supper class methods. What about the remaining method?** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 437 (ET: BIBM)]*
 
-6. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
+4. **অথবা, (ক) ‘Static’ কীওয়ার্ডটি ব্যাখ্যা করার জন্যে Static Variable এবং Static Method ব্যবহার করে একটি প্রোগ্রাম লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 620 (ET: N/A)]*
 
-7. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
+5. **Write a java program to counting the vowel and consonant into a given strings.** *[BOF Assistant Programmer 2022 compact it 735 (ET: MIST)]*
 
-8. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
+6. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
 
-9. **In Java program. Write the method in given box for the Electric bill calculation if unit is less then 100 then unit rate 4.0 take and after 100-unit rate is 5.50 and reaming unit rate is 6.00. [Bill rate 4.0 if unit<=100, Bill rate 5.50 if (unit>100 && unit<=200), Bill rate 6.00 for remaining units.]** *[BPDB Assistant Engineer (CSE) 2021 compact it 816-817 (ET: BUET)]*
+7. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
 
-10. **C# language এর একটি প্রোগ্রাম লিখুন?** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1046 (ET: BUET)]*
+8. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
 
-11. **Write java program for calculate electricity bill using class and object.** *[Sundharban Gas Assistant Programmer 2020 compact it 1047-1048 (ET: N/A)]*
+9. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
 
-12. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
-
-13. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
-
-14. **Suppose you've a method name “totalAmount” and there three properties (transactionName, transactionType, amount). Write down the full code using JAVA where totalAmount method return total balance after debit or credited.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1174 (ET: N/A)]*
-
-15. **Write the full form of following topics:** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
-   i) JAR
-   ii) JRE
-   iii) WAR
-   iv) JDK
-
-16. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
+10. **Write a java program using 2D array and array output will be-** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191 (ET: N/A)]*
 ```text
 1
 1 2
@@ -222,9 +212,27 @@ Public class class B extends class A {
 1 2 3 4 5
 ```
 
-17. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
+11. **Write simple Java program to convert string into camel case and display camel case string.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1191-1192 (ET: N/A)]*
 
-18. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
+### Java Platform Concepts (JVM/JDK/JRE/GC) (7)
+
+1. **What does run Finalization do?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
+
+2. **What syntax is used for calling static methods in class?** *[BCC Assistant Programmer 11.11.2023 compact it 548 (ET: N/A)]*
+
+3. **Where will be the most chance of the grabage collector being invoked?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
+
+4. **What are the difference among JDK, JRE and JVM?** *[Islami Bank Bangladesh Limited Officer (Software Engineer) 2019 compact it 1098 (ET: N/A)]*
+
+5. **(c) Why Java is called platform independent language?** *[BPSC Assistant Programmer (ICT) 2019 compact it 1139 (ET: N/A)]*
+
+6. **Write the full form of following topics:** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
+   i) JAR
+   ii) JRE
+   iii) WAR
+   iv) JDK
+
+7. **Discus architecture of Java virtual machine.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1218-1219 (ET: N/A)]*
 
 ## Class Design & Object-Oriented Modeling (11)
 
@@ -251,6 +259,9 @@ Public class class B extends class A {
 11. **In java language: write a class named Bicycle having 3 integer variables (speed, gear, cost) and a constructor to initialize the variables. Also write a class named MountBike that inherits Bicycle class, having an extra variable speedcost and a constructor to initialize the variable.** *[DESCO Assistant Engineer (CSE) 2016 compact it 1269 (ET: N/A)]*
 
 ## OOP Concepts (Inheritance, Polymorphism, Encapsulation) (11)
+
+### OOP Concepts (Polymorphism, Inheritance, Friend Function) (5)
+
 1. **(b) What is friend function? Given the following class, show how to add a friend function, named isneg() that takes one parameter of type myclass and return true if num is negative and false otherwise.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 68-69]]*
 class myclass \{
 
@@ -262,27 +273,33 @@ public:
 
 \};
 
-2. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
+2. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
 
-3. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \\times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
-Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
+3. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
 
-4. **(a) What are the basic features of object-oriented concepts? Give example code for each of them. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 337]]*
+4. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
 
-5. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
+5. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
 
-6. **What is polymorphism? Differences in types of polymorphism. Define.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 353-354]]*
+### Basic Programming (Loops & Series) (3)
 
-7. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+1. **Difference between while and do while loop.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318]]*
 
-8. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
+2. **Write a C/C++/ Java program to find sum of the series 1+2+4+7+11+16+.....+n** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 351-352]]*
+
+3. **Answer the following Questions** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 375]]*
 a) What is Series? b) Write a program using C/C++ to find n^\{th\} Fibonacci.
 
-9. **What is polymorphism in the context of OOP? Explain with example.** *[Financial Reporting Council Bangladesh Assistant Programmer; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 400]]*
+### Math & Aptitude Problems (2)
 
-10. **Write down the concept about inheritance with example.** *[Financial Reporting Council Bangladesh Post: Junior IT Manager; Date: 10 May, 2024 Exam taker: FRCB; Marks: Non:60 Tech:40 [compact it 403]]*
+1. **The ratio of boys to girls in a classroom is 2:3. After 3 more boys enter the classroom, the ratio is 3:4. How many people were there in the room at the start?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
 
-11. **In a class of 100 students, 80 passed in Bengali, 88 passed in English, and 70 passed in both subjects. How many students failed in both subjects?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+2. **In a class of 100 students, 80 passed in Bengali, 88 passed in English, and 70 passed in both subjects. How many students failed in both subjects?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+
+### General English Essay (1)
+
+1. **Write an essay on the following topic using the hints given below: Objectives of Education (15 \\times 1 = 15)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+Hints: Introduction — kinds of education — importance of vocational education — competency-based education and its importance — importance of morals and values in education — material progress and moral progress must have equal emphasis — objectives of education — conclusion.
 
 ## Output Tracing & Recursion (10)
 
