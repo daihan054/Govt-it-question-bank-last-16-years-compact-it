@@ -1,23 +1,24 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 209 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-47) | 47 |
-| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-26) | 26 |
-| 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
-| 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 5 | [Memory Management & Paging](#memory-management--paging-18) | 18 |
-| 6 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
-| 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
-| 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
-| 9 | [File Systems & Disk Management](#file-systems--disk-management-7) | 7 |
-| 10 | [OS Concepts & Process Management](#os-concepts--process-management-7) | 7 |
-| 11 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 12 | [Windows & System Administration](#windows--system-administration-5) | 5 |
-| 13 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
-| 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-2) | 2 |
-| 15 | [Linux, Shell & System Commands](#linux-shell--system-commands-1) | 1 |
+- [Linux / Unix Commands & Administration (47)](#linux--unix-commands--administration-47)
+- [CPU Scheduling Algorithms (26)](#cpu-scheduling-algorithms-26)
+- [OS Concepts & System Software (24)](#os-concepts--system-software-24)
+- [Deadlock & Resource Allocation (23)](#deadlock--resource-allocation-23)
+- [Memory Management & Paging (18)](#memory-management--paging-18)
+- [Virtual Memory & Page Replacement (Thrashing) (16)](#virtual-memory--page-replacement-thrashing-16)
+- [Process Management & Process States (12)](#process-management--process-states-12)
+- [Concurrency, Threads & Synchronization (11)](#concurrency-threads--synchronization-11)
+- [File Systems & Disk Management (7)](#file-systems--disk-management-7)
+- [OS Concepts & Process Management (7)](#os-concepts--process-management-7)
+  - [Process States & Multithreading (3)](#process-states--multithreading-3)
+  - [Hardware & Microprocessor Comparisons (3)](#hardware--microprocessor-comparisons-3)
+  - [Software Engineering Challenges (1)](#software-engineering-challenges-1)
+- [CPU Scheduling (6)](#cpu-scheduling-6)
+- [Windows & System Administration (5)](#windows--system-administration-5)
+- [Process Synchronization & Concurrency (4)](#process-synchronization--concurrency-4)
+- [Deadlock & Concurrency Control (2)](#deadlock--concurrency-control-2)
+- [Linux, Shell & System Commands (1)](#linux-shell--system-commands-1)
 
 <!-- TOC END -->
 
@@ -7746,6 +7747,8 @@ Answer:
 
 ## OS Concepts & Process Management (7)
 
+### Process States & Multithreading (3)
+
 1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
 
 Answer: What a process is
@@ -7809,19 +7812,7 @@ Answer: What a process is
 
    - Two more states appear in systems that swap: `Suspended-Ready` and `Suspended-Blocked`, entered when the `medium-term scheduler` swaps a process out to disk to free memory.
 
-2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
-
-Answer:
-    A Microcontroller integrates the CPU, RAM, ROM, timers, and I/O ports onto a single integrated circuit, whereas a Microprocessor contains only the CPU core and requires external chips.
-
-    Advantages of Microcontroller over Microprocessor:
-    - 1. Compact Footprint & Low Cost: Single-chip integration eliminates external memory and bus routing, drastically reducing manufacturing cost and PCB board size.
-    - 2. Low Power Consumption: Operates on milliwatts, making it ideal for battery-powered embedded devices and IoT sensors.
-    - 3. Dedicated Real-Time Control: Optimized for specific control tasks with built-in ADC, PWM, and hardware interrupt pins.
-    - 4. High Reliability: Fewer external components mean lower vulnerability to electrical noise, loose connections, and hardware faults.
-    - 5. Simplified Circuit Design: Minimal external support components required.
-
-3. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
+2. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
 
 Answer:
     Multithreading is an execution model allowing multiple lightweight execution paths (threads) within a single process to run concurrently, sharing code, data, and OS resources.
@@ -7833,41 +7824,7 @@ Answer:
     - Low Context Switching Overhead: Thread context switching is significantly faster than process context switching since memory translation maps do not need swapping.
     - Higher Throughput: Enables web servers (e.g., Netty, Nginx, Tomcat) to handle thousands of concurrent client requests efficiently.
 
-4. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-Answer:
-    Major Software Engineering Challenges:
-
-    - 1. Scope Creep & Volatile Requirements:
-      - Impact: Continuous unplanned feature additions cause deadline breaches and budget overruns.
-      - Mitigation: Adopt Agile/Scrum methodologies with iterative sprint planning and clear change-control boards (CCB).
-    - 2. Technical Debt & Legacy Code Integration:
-      - Impact: Quick, poorly documented code patches increase maintenance cost and cause regression bugs.
-      - Mitigation: Enforce automated CI/CD unit testing, strict peer code reviews, and regular refactoring cycles.
-    - 3. Security Vulnerabilities:
-      - Impact: Security flaws (SQLi, XSS, broken access) lead to data breaches and regulatory penalties.
-      - Mitigation: Implement DevSecOps practices, static/dynamic code analysis (SAST/DAST), and automated dependency vulnerability scanners.
-    - 4. System Scalability & Concurrency Bottlenecks:
-      - Impact: Application crashes under sudden peak user traffic.
-      - Mitigation: Utilize microservices architecture, horizontal container autoscaling, database connection pooling, and Redis distributed caching.
-
-5. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
-
-Answer:
-    Execution speed is strictly determined by the actual execution time per instruction, not raw clock frequency alone:
-
-    - Computer A:
-      - Execution Time per Instruction ($T_A$) = $250\text{ picoseconds} = 250 \times 10^{-12}\text{ seconds}$.
-    - Computer B:
-      - Execution Time per Instruction ($T_B$) = $500\text{ picoseconds} = 500 \times 10^{-12}\text{ seconds}$.
-
-    Comparison:
-    $$\text{Speedup Ratio} = \frac{T_B}{T_A} = \frac{500\text{ ps}}{250\text{ ps}} = 2.0$$
-
-    Conclusion:
-    - Computer A is 2 times faster than Computer B because it requires only half the time ($250\text{ ps}$ vs $500\text{ ps}$) to execute each instruction.
-
-6. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+3. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
 Answer:
     The five lifecycle states of a process in an Operating System are:
@@ -7885,7 +7842,37 @@ Answer:
     - 4. Waiting (Blocked): The process cannot execute until an external event (such as I/O completion or signal receipt) occurs.
     - 5. Terminated: The process has finished execution, and the OS reclaims its allocated memory and resources.
 
-7. **Differentiate between 32-bit and 64-bit microprocessors. Difference between core i3, i5, i7. Please write down the configuration of the latest laptop.** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 513-514]]*
+### Hardware & Microprocessor Comparisons (3)
+
+1. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+
+Answer:
+    A Microcontroller integrates the CPU, RAM, ROM, timers, and I/O ports onto a single integrated circuit, whereas a Microprocessor contains only the CPU core and requires external chips.
+
+    Advantages of Microcontroller over Microprocessor:
+    - 1. Compact Footprint & Low Cost: Single-chip integration eliminates external memory and bus routing, drastically reducing manufacturing cost and PCB board size.
+    - 2. Low Power Consumption: Operates on milliwatts, making it ideal for battery-powered embedded devices and IoT sensors.
+    - 3. Dedicated Real-Time Control: Optimized for specific control tasks with built-in ADC, PWM, and hardware interrupt pins.
+    - 4. High Reliability: Fewer external components mean lower vulnerability to electrical noise, loose connections, and hardware faults.
+    - 5. Simplified Circuit Design: Minimal external support components required.
+
+2. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+
+Answer:
+    Execution speed is strictly determined by the actual execution time per instruction, not raw clock frequency alone:
+
+    - Computer A:
+      - Execution Time per Instruction ($T_A$) = $250\text{ picoseconds} = 250 \times 10^{-12}\text{ seconds}$.
+    - Computer B:
+      - Execution Time per Instruction ($T_B$) = $500\text{ picoseconds} = 500 \times 10^{-12}\text{ seconds}$.
+
+    Comparison:
+    $$\text{Speedup Ratio} = \frac{T_B}{T_A} = \frac{500\text{ ps}}{250\text{ ps}} = 2.0$$
+
+    Conclusion:
+    - Computer A is 2 times faster than Computer B because it requires only half the time ($250\text{ ps}$ vs $500\text{ ps}$) to execute each instruction.
+
+3. **Differentiate between 32-bit and 64-bit microprocessors. Difference between core i3, i5, i7. Please write down the configuration of the latest laptop.** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 513-514]]*
 
 Answer:
 
@@ -7912,6 +7899,26 @@ Answer:
     - Graphics: NVIDIA GeForce RTX 4060 (8GB GDDR6) / Integrated Iris Xe
     - Connectivity: Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3, Thunderbolt 4 / USB-C 4.0
     - Battery & OS: 4-Cell 80Wh Li-ion battery, Windows 11 Pro (64-bit).
+
+### Software Engineering Challenges (1)
+
+1. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+
+Answer:
+    Major Software Engineering Challenges:
+
+    - 1. Scope Creep & Volatile Requirements:
+      - Impact: Continuous unplanned feature additions cause deadline breaches and budget overruns.
+      - Mitigation: Adopt Agile/Scrum methodologies with iterative sprint planning and clear change-control boards (CCB).
+    - 2. Technical Debt & Legacy Code Integration:
+      - Impact: Quick, poorly documented code patches increase maintenance cost and cause regression bugs.
+      - Mitigation: Enforce automated CI/CD unit testing, strict peer code reviews, and regular refactoring cycles.
+    - 3. Security Vulnerabilities:
+      - Impact: Security flaws (SQLi, XSS, broken access) lead to data breaches and regulatory penalties.
+      - Mitigation: Implement DevSecOps practices, static/dynamic code analysis (SAST/DAST), and automated dependency vulnerability scanners.
+    - 4. System Scalability & Concurrency Bottlenecks:
+      - Impact: Application crashes under sudden peak user traffic.
+      - Mitigation: Utilize microservices architecture, horizontal container autoscaling, database connection pooling, and Redis distributed caching.
 
 ## CPU Scheduling (6)
 
