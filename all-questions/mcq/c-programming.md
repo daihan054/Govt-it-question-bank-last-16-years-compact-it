@@ -1,18 +1,20 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 113 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Output Tracing](#output-tracing-36) | 36 |
-| 2 | [Control Statements & Loops](#control-statements--loops-16) | 16 |
-| 3 | [Arrays & Functions](#arrays--functions-15) | 15 |
-| 4 | [Data Types & Variables](#data-types--variables-14) | 14 |
-| 5 | [Operators & Expressions](#operators--expressions-11) | 11 |
-| 6 | [Programming Concepts](#programming-concepts-8) | 8 |
-| 7 | [Pointers & Memory Allocation](#pointers--memory-allocation-5) | 5 |
-| 8 | [Recursion](#recursion-4) | 4 |
-| 9 | [Storage Classes & Scope](#storage-classes--scope-3) | 3 |
-| 10 | [Flowcharts & Algorithms](#flowcharts--algorithms-1) | 1 |
+- [Output Tracing (36)](#output-tracing-36)
+- [Control Statements & Loops (16)](#control-statements--loops-16)
+- [Arrays & Functions (15)](#arrays--functions-15)
+  - [Arrays & Functions (14)](#arrays--functions-14)
+  - [Off-topic / Misplaced Questions (1)](#off-topic--misplaced-questions-1)
+- [Data Types & Variables (14)](#data-types--variables-14)
+- [Operators & Expressions (11)](#operators--expressions-11)
+- [Programming Concepts (8)](#programming-concepts-8)
+  - [Programming & OOP Concepts (4)](#programming--oop-concepts-4)
+  - [Off-topic / Misplaced Questions (4)](#off-topic--misplaced-questions-4)
+- [Pointers & Memory Allocation (5)](#pointers--memory-allocation-5)
+- [Recursion (4)](#recursion-4)
+- [Storage Classes & Scope (3)](#storage-classes--scope-3)
+- [Flowcharts & Algorithms (1)](#flowcharts--algorithms-1)
 
 <!-- TOC END -->
 
@@ -582,6 +584,8 @@
 
 ## Arrays & Functions (15)
 
+### Arrays & Functions (14)
+
 1. **The number of values a function can return at a time?** *[NPCBL Executive Trainee (Software) 2023 compact it 40 (ET: N/A)]*  
    a) 1  
    b) 2  
@@ -624,53 +628,55 @@
    c. Rational  
    d. Stochastic
 
-8. **Which of the following is correct?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
-   a. “X extends Y” is correct if and only if X is a class and Y is an interface  
-   b. “X extends Y” is correct if and only if X is an interface and Y is a class  
-   c. “X extends Y” is correct if X and Y are either both classes or both interfaces  
-   d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
-
-9. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
+8. **An n*n array v is defined as follows: v[i, j]=i-j for all i, j; 1<=i<=n, 1<=j<=n, the sum of the element of array v is** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) 0  
    B) n-1  
    C) n^2-3n+2  
    D) n^2(n+1)/2
 
-10. **When you pass array as an argument to a function, which actually gets passed?** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
+9. **When you pass array as an argument to a function, which actually gets passed?** *[BPSC Assistant Maintenance Engineer 2019 compact it 191 (ET: N/A)]*  
    (a) Base address of the array  
    (b) The first element of the array  
    (c) Address of the first element of the array  
    (d) Address of the last element of the array
 
-11. **int number [] = {10,20,30,40,50}; number[3] =?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
+10. **int number [] = {10,20,30,40,50}; number[3] =?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
    A) 10  
    B) 20  
    C) 30  
    D) 40
 
-12. **Two dimensional arrays are also called?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
+11. **Two dimensional arrays are also called?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 234 (ET: N/A)]*  
    A) table array  
    B) matrix array  
    C) both A and B  
    D) none of the above
 
-13. **The smallest element of array index is called it-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
+12. **The smallest element of array index is called it-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 235 (ET: N/A)]*  
    A) Lower Bound  
    B) Upper Bound  
    C) Range  
    D) Extraction
 
-14. **What type of reference should be used in vector arithmetic in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
+13. **What type of reference should be used in vector arithmetic in C++?** *[Combined Bank Senior Officer (IT) 2018 compact it 220 (ET: DU)]*  
    A) Dynamic  
    B) const  
    C) a and b  
    D) none of the mentioned
 
-15. **In C, if you pass an array as an argument to a function, what actually gets passed?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
+14. **In C, if you pass an array as an argument to a function, what actually gets passed?** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. Value of elements in array  
    b. First element of the array  
    c. Base address of the array  
    d. Address of the last element of the array
+
+### Off-topic / Misplaced Questions (1)
+
+1. **Which of the following is correct?** *[6 Banks & Financial Institutions Assistant Programmer 18.03.2021 compact it 84 (ET: N/A)]*  
+   a. “X extends Y” is correct if and only if X is a class and Y is an interface  
+   b. “X extends Y” is correct if and only if X is an interface and Y is a class  
+   c. “X extends Y” is correct if X and Y are either both classes or both interfaces  
+   d. “X extends Y” is correct for all combinations of X and Y being classes and/or interfaces
 
 ## Data Types & Variables (14)
 
@@ -854,49 +860,54 @@
    d. |
 
 ## Programming Concepts (8)
+
+### Programming & OOP Concepts (4)
+
 1. **Which of the following is used to restrict access to certain details of an object in OOP? [ OOP-এ কোনটি object-এর কিছু বিস্তারিত তথ্য অ্যাক্সেস সীমিত করতে ব্যবহৃত হয়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
    (a) Polymorphism  
    (b) Inheritance  
    (c) Abstraction  
    (d) Encapsulation
 
-2. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
-
-3. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+2. **In a doubly linked list, the number of pointers affected in insertion operation will be— [ ডাবলি লিঙ্কড লিস্টে ইনসারশন অপারেশনে কতটি পয়েন্টার প্রভাবিত হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (A) 5  
    (B) 0  
    (C) 1  
    (D) None of these
 
-4. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
-   (A) Class A, 8  
-   (B) Class A, 3  
-   (C) Class B, 3  
-   (D) Class B, 32
-
-5. **Martin Cooper is known for his invention of— [ Martin Cooper কোন উদ্ভাবনের জন্য পরিচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
-   (a) Digital Camera  
-   (b) X-ray  
-   (c) Mobile Phone  
-   (d) Telephone
-
-6. **What is the main goal of reinforcement learning?[ রিইনফোর্সমেন্ট লার্নিং (Reinforcement learning) এর প্রধান লক্ষ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
-   (a) To classify data into categories  
-   (b) To optimize a system for maximum efficiency  
-   (c) To make predinction based on historical data  
-   (d) To learn optima actions through trail and error
-
-7. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
+3. **Which for loop has range of similar indexes of ‘i’ used in for(i=0; i<n; i++)?[ for(i=0; i<n; i++) লুপের সমান ইনডেক্স রেঞ্জ নিচের কোন লুপটিতে ব্যবহৃত হয়েছে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 508]]*  
    (a) for (i=n; i>0; i--)  
    (b) for (i=n-1; i>0; i--)  
    (c) for (i=0; i=0; i--)  
    (d) for (i=n-1; i>=0; i--)
 
-8. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
+4. **A collection of objects that use common structure and a common behavior is known as—[ একই কাঠামো এবং একই আচরণ ব্যবহার করে এমন অবজেক্টের সংগ্রহকে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Object  
    (b) Entity  
    (c) Instance  
    (d) Class
+
+### Off-topic / Misplaced Questions (4)
+
+1. **(a) Write a JavaScript function to validate an email.** *[Dhaka Power Distribution Company Limited Assistant Engineer (ICT) Exam Date: 17.10.2025 Time: 1 Hour, Total Marks: 100 (MCQ: 20, Written: 8×10 = 80) [bitbox it book 236]]*
+
+2. **What is the class and subnet mask if the subnet mask is 255.224.0.0? [ সাবনেট মাস্ক 255.224.0.0 হলে এর ক্লাস এবং মাস্ক বিট কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+   (A) Class A, 8  
+   (B) Class A, 3  
+   (C) Class B, 3  
+   (D) Class B, 32
+
+3. **Martin Cooper is known for his invention of— [ Martin Cooper কোন উদ্ভাবনের জন্য পরিচিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 499]]*  
+   (a) Digital Camera  
+   (b) X-ray  
+   (c) Mobile Phone  
+   (d) Telephone
+
+4. **What is the main goal of reinforcement learning?[ রিইনফোর্সমেন্ট লার্নিং (Reinforcement learning) এর প্রধান লক্ষ্য কী? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 502]]*  
+   (a) To classify data into categories  
+   (b) To optimize a system for maximum efficiency  
+   (c) To make predinction based on historical data  
+   (d) To learn optima actions through trail and error
 
 ## Pointers & Memory Allocation (5)
 

@@ -1,22 +1,28 @@
 <!-- TOC START -->
 **Table of Contents** — 8 subtopics · 70 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Cyber Attacks & Threats](#cyber-attacks--threats-20) | 20 |
-| 2 | [Cryptography](#cryptography-17) | 17 |
-| 3 | [Security Protocols](#security-protocols-9) | 9 |
-| 4 | [Malware & Security Threats](#malware--security-threats-7) | 7 |
-| 5 | [Cyber Ethics & Cyber Law](#cyber-ethics--cyber-law-6) | 6 |
-| 6 | [Security Principles (CIA Triad)](#security-principles-cia-triad-5) | 5 |
-| 7 | [Web Security Vulnerabilities](#web-security-vulnerabilities-4) | 4 |
-| 8 | [Email Security & Spam](#email-security--spam-2) | 2 |
+- [Cyber Attacks & Threats (20)](#cyber-attacks--threats-20)
+  - [Cyber Attacks & Threats (16)](#cyber-attacks--threats-16)
+  - [Security Devices & Firewalls (4)](#security-devices--firewalls-4)
+- [Cryptography (17)](#cryptography-17)
+- [Security Protocols (9)](#security-protocols-9)
+- [Malware & Security Threats (7)](#malware--security-threats-7)
+- [Cyber Ethics & Cyber Law (6)](#cyber-ethics--cyber-law-6)
+  - [Cyber Ethics & Cyber Law (4)](#cyber-ethics--cyber-law-4)
+  - [Off-topic / Misplaced (2)](#off-topic--misplaced-2)
+- [Security Principles (CIA Triad) (5)](#security-principles-cia-triad-5)
+  - [Security Principles (CIA Triad) (4)](#security-principles-cia-triad-4)
+  - [Off-topic / Misplaced (1)](#off-topic--misplaced-1)
+- [Web Security Vulnerabilities (4)](#web-security-vulnerabilities-4)
+- [Email Security & Spam (2)](#email-security--spam-2)
 
 <!-- TOC END -->
 
 ---
 
 ## Cyber Attacks & Threats (20)
+
+### Cyber Attacks & Threats (16)
 
 1. **An attacker sits between the sender and receiver and captures the information and retransmits to the receiver after some time without altering the information. This attack is called as ____** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 83 (ET: N/A)]*  
    a. Denial of service attack  
@@ -60,83 +66,85 @@
    C) Radiation of Transmission line  
    D) Passing internal information by employees
 
-8. **In computers, why is Firewall used for?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
-   A) Securing the computer  
-   B) Data Transmission  
-   C) Authentication  
-   D) Monitoring
-
-9. **In computer systems, what is ‘Trojan Horse’?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
+8. **In computer systems, what is ‘Trojan Horse’?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
    A) Virus  
    B) Malware  
    C) Worm  
    D) Spyware
 
-10. **Viruses that take up residence in the computer’s memory and making hard to detect is called:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*  
+9. **Viruses that take up residence in the computer’s memory and making hard to detect is called:** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 162 (ET: N/A)]*  
    A) Cluster Virus  
    B) Self-encrypting Virus  
    C) Stealth Virus  
    D) Macro Virus
 
-11. **How can we prevent SQL Injection Attack?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
+10. **How can we prevent SQL Injection Attack?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 181 (ET: N/A)]*  
    a) Show the database error to the users  
    b) Do not remove potential malicious code  
    c) Use the user input directly  
    d) Use input validation
 
-12. **________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or operates at a significantly reduced rate.** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
+11. **________ is an assault on a service from a single source that floods it with so many requests that is becomes overwhelmed and is either stopped completely or operates at a significantly reduced rate.** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
    a) Denial-of service(DoS) attack  
    b) Spoofing attack  
    c) Cross-site scripting (XSS) attack  
    d) Buffer overflow attack
 
-13. **________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defined conditions.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*  
+12. **________ a means of regaining access to a compromised system by installing software or configuring existing software to enable remote access under attacker-defined conditions.** *[Combined 4 Bank Assistant Programmer (AP) 2020 compact it 151 (ET: DU)]*  
    a) Spyware  
    b) Ransomware  
    c) Cross-site scripting  
    d) Backdoor
 
-14. **Which of the following is not a web server attack type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
+13. **Which of the following is not a web server attack type?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 170 (ET: N/A)]*  
    a) DOS attack  
    b) Website Defacement using SQLi  
    c) Directory Traversal  
    d) Password guessing
 
-15. **A proxy firewall filters at ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
-   a) Physical layer  
-   b) Data link layer  
-   c) Network layer  
-   d) Application layer
-
-16. **To prevent we use firewall-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
-   (a) Data-driven attack  
-   (b) Virus attack  
-   (c) Unauthorized attack  
-   (d) All
-
-17. **Which of the following sends data packets over unprotected system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
+14. **Which of the following sends data packets over unprotected system?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) OSL  
    B) NAT  
    C) TCP  
    D) UDP
 
-18. **Which of the following is the security equipment?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
-   A) Router  
-   B) IPS  
-   C) Switch  
-   D) Hub
-
-19. **Which of the following describes an email that is sent to users with web links that direct them to malicious websites?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
+15. **Which of the following describes an email that is sent to users with web links that direct them to malicious websites?** *[Pubali Bank Limited Officer (IT) 2012 compact it 263 (ET: N/A)]*  
    a. Viruses  
    b. Phishing  
    c. Rogue access points  
    d. Man-in-the-middle
 
-20. **Which of the following mitigation techniques is MOST effective against a Man in the middle attack?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
+16. **Which of the following mitigation techniques is MOST effective against a Man in the middle attack?** *[Pubali Bank Limited Officer (IT) 2012 compact it 266 (ET: N/A)]*  
    a. Authentication  
    b. Encryption  
    c. Popup blocker  
    d. ACL
+
+### Security Devices & Firewalls (4)
+
+1. **In computers, why is Firewall used for?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 161 (ET: N/A)]*  
+   A) Securing the computer  
+   B) Data Transmission  
+   C) Authentication  
+   D) Monitoring
+
+2. **A proxy firewall filters at ________.** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 171 (ET: N/A)]*  
+   a) Physical layer  
+   b) Data link layer  
+   c) Network layer  
+   d) Application layer
+
+3. **To prevent we use firewall-** *[BPSC Assistant Maintenance Engineer 2019 compact it 190 (ET: N/A)]*  
+   (a) Data-driven attack  
+   (b) Virus attack  
+   (c) Unauthorized attack  
+   (d) All
+
+4. **Which of the following is the security equipment?** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 248 (ET: N/A)]*  
+   A) Router  
+   B) IPS  
+   C) Switch  
+   D) Hub
 
 ## Cryptography (17)
 
@@ -339,6 +347,8 @@
 
 ## Cyber Ethics & Cyber Law (6)
 
+### Cyber Ethics & Cyber Law (4)
+
 1. **Which of the following describes investigating moral conduct concerning the digital media landscape?** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*  
    (a) Cyber law  
    (b) Cyber safety  
@@ -360,19 +370,23 @@
 4. **What are hackers who find bugs and vulnerabilities called?** *[BCC Assistant Programmer 11.11.2023 compact it 36 (ET: N/A)]*  
    **Ans:** White hat hacker.
 
-5. **A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
+### Off-topic / Misplaced (2)
+
+1. **A student breaks the door of a professor's office to obtain a copy of the next day's examination. Define the type of security attack in this case.** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
    a) Snooping  
    b) Repudiation  
    c) Masquerading  
    d) Replaying
 
-6. **Which one of the following is the reason for “Cyberchondria”?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
+2. **Which one of the following is the reason for “Cyberchondria”?** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 238 (ET: N/A)]*  
    A) excessive typing  
    B) watching for long hour  
    C) excessive anxiety due to online search  
    D) radiation
 
 ## Security Principles (CIA Triad) (5)
+
+### Security Principles (CIA Triad) (4)
 
 1. **Which of the following statements best describes how the principle would be broken if a computer was no longer accessible?** *[Combined Bank Officer (IT) 04.10.2024 compact it 13 (ET: BIBM)]*  
    (a) Availability  
@@ -398,7 +412,9 @@
    C) inquiry code  
    D) dump code
 
-5. **Issuance of cash through terminal outside bank is an example of-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
+### Off-topic / Misplaced (1)
+
+1. **Issuance of cash through terminal outside bank is an example of-** *[Probashi Kallyan Bank Programmer: 2019 compact it 213 (ET: AUST)]*  
    A) terminals  
    B) interfaces  
    C) hardware devices  
