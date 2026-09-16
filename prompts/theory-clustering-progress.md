@@ -20,24 +20,25 @@ Status legend: DONE = subtopic reorganized + TOC rebuilt + verified + committed 
 all-questions/written/ so far). NO SPLIT = subtopic is already single-theme, left flat.
 PENDING = split decided (by analysis agent) but not yet applied to any file.
 
-## Folder 1: all-questions/written/ — IN PROGRESS
+## Folder 1: all-questions/written/ — ALL 24 FILES DONE ✓
 
-### Files fully done (all subtopics resolved, committed) in written/:
-- ai-and-ml.md — DONE (1 split: see below)
-- oop.md — DONE (2 splits: see below)
-- operating-system.md — DONE (1 split: see below)
-- programming-languages.md — DONE (1 split: see below)
-- software-engineering.md — DONE (2 splits: see below)
-- web-technology.md — DONE (1 split: see below)
-- algorithm.md — DONE (1 split: see below)
+Every file in `all-questions/written/` has been reorganized (or confirmed to need no change),
+TOC rebuilt to nested bullet format, content-multiset verified against git HEAD before each
+change, anchors verified, and committed+pushed individually:
+ai-and-ml.md, algorithm.md, bangla.md, c-programming.md (no split needed), cloud-computing.md
+(no split needed), compiler-and-toc.md (no split needed), computer-fundamental.md,
+computer-network-security.md, computer-networks.md, data-structure.md, database.md, dld.md,
+electrical-and-electronics.md, english.md (no split needed), gk.md, image-processing.md (no
+split needed), math.md, microprocessor-and-computer-architecture.md, ms-office.md (no split
+needed), oop.md, operating-system.md, programming-languages.md, software-engineering.md,
+web-technology.md.
 
-### Files with a plan ready but NOT YET applied to written/:
-bangla.md, computer-fundamental.md (group A); computer-network-security.md, computer-networks.md,
-data-structure.md, database.md, dld.md, electrical-and-electronics.md (group B); gk.md, math.md,
-microprocessor-and-computer-architecture.md (group C, partial — english.md/image-processing.md/
-ms-office.md need NO changes at all, already all NO SPLIT)
-
-### Files not yet analyzed at all: (none remaining — all 24 written/ files now have a plan)
+NEXT STEP: Folder 2 (written-answers/) — replay the IDENTICAL groupings below (same theme
+names, same original question numbers) onto each written-answers/*.md file, this time moving
+both question AND answer text together per block. The `extract_blocks`/`build_section` approach
+still applies but blocks now include the "Answer:" content — verify block count per subtopic
+still matches before regrouping, since written-answers files may have slightly different
+formatting (indentation) around each question/answer pair.
 
 ---
 
