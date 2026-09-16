@@ -1,26 +1,50 @@
 <!-- TOC START -->
 **Table of Contents** — 12 subtopics · 66 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Artificial Intelligence & Machine Learning](#artificial-intelligence--machine-learning-23) | 23 |
-| 2 | [Artificial Intelligence & Expert Systems](#artificial-intelligence--expert-systems-8) | 8 |
-| 3 | [Deep Learning & Neural Networks (ANN, CNN, RNN)](#deep-learning--neural-networks-ann-cnn-rnn-8) | 8 |
-| 4 | [Machine Learning Paradigms (Supervised vs Unsupervised)](#machine-learning-paradigms-supervised-vs-unsupervised-6) | 6 |
-| 5 | [Model Evaluation & Datasets](#model-evaluation--datasets-5) | 5 |
-| 6 | [Supervised Learning (Decision Trees)](#supervised-learning-decision-trees-4) | 4 |
-| 7 | [Generative AI & Explainable AI (XAI)](#generative-ai--explainable-ai-xai-4) | 4 |
-| 8 | [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3) | 3 |
-| 9 | [Search Algorithms (Informed vs Uninformed Search)](#search-algorithms-informed-vs-uninformed-search-2) | 2 |
-| 10 | [Overfitting, Underfitting & Model Generalization](#overfitting-underfitting--model-generalization-1) | 1 |
-| 11 | [Association Rule Learning (Market Basket Analysis)](#association-rule-learning-market-basket-analysis-1) | 1 |
-| 12 | [Clustering & Unsupervised Learning (K-Means, Hierarchical)](#clustering--unsupervised-learning-k-means-hierarchical-1) | 1 |
+- [Artificial Intelligence & Machine Learning (23)](#artificial-intelligence--machine-learning-23)
+  - [Cybersecurity & Information Security (6)](#cybersecurity--information-security-6)
+  - [Machine Learning Concepts (4)](#machine-learning-concepts-4)
+  - [Mathematics & Aptitude (3)](#mathematics--aptitude-3)
+  - [Writing & Composition (3)](#writing--composition-3)
+  - [Software Engineering & Programming Concepts (2)](#software-engineering--programming-concepts-2)
+  - [Algorithms & Problem Solving (2)](#algorithms--problem-solving-2)
+  - [Database Concepts (1)](#database-concepts-1)
+  - [General Knowledge & Trivia (1)](#general-knowledge--trivia-1)
+  - [Digital Communication & Modulation (1)](#digital-communication--modulation-1)
+- [Artificial Intelligence & Expert Systems (8)](#artificial-intelligence--expert-systems-8)
+- [Deep Learning & Neural Networks (ANN, CNN, RNN) (8)](#deep-learning--neural-networks-ann-cnn-rnn-8)
+- [Machine Learning Paradigms (Supervised vs Unsupervised) (6)](#machine-learning-paradigms-supervised-vs-unsupervised-6)
+- [Model Evaluation & Datasets (5)](#model-evaluation--datasets-5)
+- [Supervised Learning (Decision Trees) (4)](#supervised-learning-decision-trees-4)
+- [Generative AI & Explainable AI (XAI) (4)](#generative-ai--explainable-ai-xai-4)
+- [Advanced Machine Learning & Deep Learning (RL, DL, Federated Learning) (3)](#advanced-machine-learning--deep-learning-rl-dl-federated-learning-3)
+- [Search Algorithms (Informed vs Uninformed Search) (2)](#search-algorithms-informed-vs-uninformed-search-2)
+- [Overfitting, Underfitting & Model Generalization (1)](#overfitting-underfitting--model-generalization-1)
+- [Association Rule Learning (Market Basket Analysis) (1)](#association-rule-learning-market-basket-analysis-1)
+- [Clustering & Unsupervised Learning (K-Means, Hierarchical) (1)](#clustering--unsupervised-learning-k-means-hierarchical-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Artificial Intelligence & Machine Learning (23)
+
+### Cybersecurity & Information Security (6)
+
+1. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+
+2. **What is the CIA Triad? Explain its three components with examples.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222]]*
+
+3. **Write various types of information security against cyber threats.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 321]]*
+
+4. **(b) An organization is planning to deploy a wireless network. Explain the security considerations for setting up a secure Wi-Fi network including the authentication methods, encryption protocols and best practices to prevent unauthorized access. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331-332]]*
+
+5. **(b) What are the main security vulnerabilities commonly found in web applications? How would you address them? [3 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
+
+6. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
+
+### Machine Learning Concepts (4)
+
 1. **(a) Describe the following terms: 3** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 69]]*
 (i) Supervised learning (ii) Unsupervised learning (iii) Reinforcement learning
 
@@ -28,48 +52,50 @@
 
 3. **What is the difference between Supervised and Unsupervised learning?** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
 
-4. **Explain Different types of Cyber-attack.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 84-85]]*
+4. **AI related Question [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-5. **What is the CIA Triad? Explain its three components with examples.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 222]]*
+### Mathematics & Aptitude (3)
 
-6. **AI related Question [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+1. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-7. **A banking application requires a 4-digit PIN fo. login. If a wrong PIN is entered, an error message should be displayed. Design a test case for this scenario and explain with examples. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+2. **Three friends A, B, and C invest money in a business in the ratio 3:4:5. After 1 year, the profit is Tk36,000. How much profit gain by B?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
 
-8. **Determine which pair of graphs are isomorphic. Justify your answer with reasoning or proof. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+3. **A box contains 10 red and 10 black marbles. If you close your eyes and pick 3 marbles, what is the probability that all 3 marbles will be black?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
 
-9. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+### Writing & Composition (3)
 
-10. **Write various types of information security against cyber threats.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 321]]*
+1. **Focus Witting: কৃত্রিম বুদ্ধিমত্তা (AI) দক্ষতা ও নৈতিকতা (বাংলা)** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
 
-11. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
+2. **Children's addiction to smart mobile phones has become a concern in recent years. So write a letter to the editor of an English daily expressing your views on the responsible use of smart phones. (5 \\times 1 = 5)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
 
-12. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
+3. **Letter your younger brother about the importance of vocational training.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
 
-13. **Children's addiction to smart mobile phones has become a concern in recent years. So write a letter to the editor of an English daily expressing your views on the responsible use of smart phones. (5 \\times 1 = 5)** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 329]]*
+### Software Engineering & Programming Concepts (2)
 
-14. **ক) Deep Blue কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+1. **A banking application requires a 4-digit PIN fo. login. If a wrong PIN is entered, an error message should be displayed. Design a test case for this scenario and explain with examples. [সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয়নি]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+2. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
+
+### Algorithms & Problem Solving (2)
+
+1. **The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days For example, if the given array is \{100, 180, 260, 310, 40, 535, 695\}, the maximum profit can be earned by buying on day 0, and selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.** *[ICB - Standard Aptitude Test (SAT) Post: Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Time: 1.00 Hours [bitbox it book 323]]*
+
+2. **You have 1Gb data, but your computer can handle 64 kb data at a time. No how can you sort them. Explain your answer and write the pseudocode of the sorting code.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+
+### Database Concepts (1)
+
+1. **What is trigger, explain with example. Why trigger needed?** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 322]]*
+
+### General Knowledge & Trivia (1)
+
+1. **ক) Deep Blue কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
 খ) Android কী? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
 
 গ) Vitamin D এর ঘাটতি মানবদেহে কী ধরনের প্রভাব ফেলে? __(Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written) [bitbox it book 331]__
 
-15. **(b) An organization is planning to deploy a wireless network. Explain the security considerations for setting up a secure Wi-Fi network including the authentication methods, encryption protocols and best practices to prevent unauthorized access. [4 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331-332]]*
+### Digital Communication & Modulation (1)
 
-16. **(b) What are the main security vulnerabilities commonly found in web applications? How would you address them? [3 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 332]]*
-
-17. **(a) Explain the concept of social engineering. What are the common social engineering techniques? How can you define them? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 333]]*
-
-18. **(c) What are the main components of flowchart? [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 334]]*
-
-19. **Three friends A, B, and C invest money in a business in the ratio 3:4:5. After 1 year, the profit is Tk36,000. How much profit gain by B?** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
-
-20. **Letter your younger brother about the importance of vocational training.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
-
-21. **Draw bit error rate curve and comparison between BER and SNR and QPSK with explained.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 373-374]]*
-
-22. **You have 1Gb data, but your computer can handle 64 kb data at a time. No how can you sort them. Explain your answer and write the pseudocode of the sorting code.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
-
-23. **A box contains 10 red and 10 black marbles. If you close your eyes and pick 3 marbles, what is the probability that all 3 marbles will be black?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 441]]*
+1. **Draw bit error rate curve and comparison between BER and SNR and QPSK with explained.** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 373-374]]*
 
 ## Artificial Intelligence & Expert Systems (8)
 
