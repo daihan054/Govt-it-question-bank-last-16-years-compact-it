@@ -1,18 +1,20 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 102 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Tree](#tree-27) | 27 |
-| 2 | [Stack](#stack-20) | 20 |
-| 3 | [Linked List](#linked-list-15) | 15 |
-| 4 | [Binary Search Tree (BST)](#binary-search-tree-bst-9) | 9 |
-| 5 | [Priority Queues & Heaps (Min/Max Heap)](#priority-queues--heaps-minmax-heap-8) | 8 |
-| 6 | [Hashing & Hash Tables](#hashing--hash-tables-7) | 7 |
-| 7 | [Queue](#queue-6) | 6 |
-| 8 | [Data Structure Fundamentals](#data-structure-fundamentals-6) | 6 |
-| 9 | [Tree Data Structures (BST, AVL, B-Tree, Heaps)](#tree-data-structures-bst-avl-b-tree-heaps-2) | 2 |
-| 10 | [Linear Data Structures (Arrays, Stacks, Queues, Linked Lists)](#linear-data-structures-arrays-stacks-queues-linked-lists-2) | 2 |
+- [Tree (27)](#tree-27)
+- [Stack (20)](#stack-20)
+  - [Stack Operations & Expression Conversion (15)](#stack-operations--expression-conversion-15)
+  - [Stack vs Queue / LIFO vs FIFO Comparison (5)](#stack-vs-queue--lifo-vs-fifo-comparison-5)
+- [Linked List (15)](#linked-list-15)
+  - [Linked List Fundamentals & Operations (9)](#linked-list-fundamentals--operations-9)
+  - [Array vs Linked List Comparison (6)](#array-vs-linked-list-comparison-6)
+- [Binary Search Tree (BST) (9)](#binary-search-tree-bst-9)
+- [Priority Queues & Heaps (Min/Max Heap) (8)](#priority-queues--heaps-minmax-heap-8)
+- [Hashing & Hash Tables (7)](#hashing--hash-tables-7)
+- [Tree Data Structures (BST, AVL, B-Tree, Heaps) (2)](#tree-data-structures-bst-avl-b-tree-heaps-2)
+- [Linear Data Structures (Arrays, Stacks, Queues, Linked Lists) (2)](#linear-data-structures-arrays-stacks-queues-linked-lists-2)
+- [Queue (6)](#queue-6)
+- [Data Structure Fundamentals (6)](#data-structure-fundamentals-6)
 
 <!-- TOC END -->
 
@@ -1763,6 +1765,8 @@ Answer: An expression tree is evaluated by `postorder` recursion: compute both o
 
 ## Stack (20)
 
+### Stack Operations & Expression Conversion (15)
+
 1. **Explain the push and pop operations of the stack.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1448 (ET: N/A)]*
 
 Answer: A stack is a linear data structure that follows the `LIFO` (Last In, First Out) principle: the element inserted most recently is the first to be removed. All operations happen at one end, called the `top`.
@@ -2050,59 +2054,7 @@ Answer: Checking whether parentheses are balanced is the classic application of 
    Complexity
    - `Time O(n)` — each character is examined once. `Space O(n)` — in the worst case all characters are opening brackets.
 
-4. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
-
-Answer:
-
-   Difference between stack and queue
-
-   | Point | Stack | Queue |
-   |---|---|---|
-   | Principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
-   | Insertion | At the `top` — push | At the `rear` — enqueue |
-   | Deletion | At the `top` — pop | From the `front` — dequeue |
-   | Ends used | One end only | Two ends |
-   | Pointers needed | One (`top`) | Two (`front` and `rear`) |
-   | Operations | push, pop, peek, isEmpty, isFull | enqueue, dequeue, front, isEmpty, isFull |
-   | Order of removal | Reverse of insertion order | Same as insertion order |
-   | Overflow / underflow | Stack Overflow / Underflow | Queue Full / Queue Empty |
-   | Variants | — | Circular queue, priority queue, deque |
-   | Real-world analogy | A stack of plates | A queue at a ticket counter |
-   | Recursion support | Directly supports it (the call stack) | Not used for recursion |
-
-   ```
-   STACK (LIFO)                    QUEUE (FIFO)
-
-     push ->  [ C ]  <- pop         enqueue ->  [ A | B | C ]  -> dequeue
-              [ B ]                             rear        front
-              [ A ]
-           one end                            two ends
-   ```
-
-   Two problems solved by a `stack`
-
-   1. `Balanced parentheses checking`
-   - The most recently opened bracket must be closed first, which is exactly LIFO. Push every opening bracket; on a closing bracket, pop and check that the types match. The expression is balanced only if the stack is empty at the end.
-   - Used by every compiler and code editor to report a missing bracket.
-
-   2. `Expression conversion and evaluation`
-   - Infix to postfix conversion uses a stack to hold operators until an operator of lower precedence arrives.
-   - Postfix evaluation uses a stack for operands: push each operand, and on an operator pop two, apply, and push the result.
-   ```
-   Infix: 12 / (7 − 3) + 2   ->  Postfix: 12 7 3 − / 2 +   ->  Value: 5
-   ```
-   - Related stack applications: the function call stack and recursion, undo/redo, the browser back button, backtracking, and depth-first search.
-
-   Two problems solved by a `queue`
-
-   1. `CPU and printer scheduling`
-   - Jobs must be served in the order they arrive, which is exactly FIFO. A print spooler queues documents and prints them in submission order; a round-robin CPU scheduler holds ready processes in a queue.
-
-   2. `Breadth-first search (BFS)`
-   - BFS explores a graph level by level. Nodes discovered first must be expanded first, so a queue holds the frontier. This is how the shortest path in an unweighted graph is found, and how a tree is printed level by level.
-   - Related queue applications: buffering in I/O and networking, call centre waiting lines, message queues, and the ready queue in an operating system.
-
-5. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
+4. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
 Answer:
 
@@ -2172,75 +2124,7 @@ Answer:
    ```
    - Obtained by reversing the infix (swapping brackets), converting to postfix, and reversing the result. Evaluating it right to left also gives 5.
 
-6. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.)
-
-   | Point | Stack | Queue |
-   |---|---|---|
-   | Principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
-   | Insertion | At the top (`push`) | At the rear (`enqueue`) |
-   | Deletion | At the top (`pop`) | From the front (`dequeue`) |
-   | Ends used | One end only | Two different ends |
-   | Pointers | One — `top` | Two — `front` and `rear` |
-   | Order of output | Reverse of the input order | Same as the input order |
-   | Basic operations | push, pop, peek, isEmpty, isFull | enqueue, dequeue, front, isEmpty, isFull |
-   | Empty condition | top = −1 | front = −1, or front > rear |
-   | Full condition | top = MAX − 1 | rear = MAX − 1 |
-   | Error terms | Stack Overflow / Underflow | Queue Full / Queue Empty |
-   | Variants | — | Circular queue, priority queue, double-ended queue |
-   | Analogy | A stack of plates | A line at a ticket counter |
-   | Used for recursion | Yes — the call stack | No |
-   | Typical applications | Expression evaluation, balanced parentheses, undo/redo, backtracking, DFS | CPU and printer scheduling, BFS, buffering, message queues |
-
-   ```
-   STACK (LIFO)                       QUEUE (FIFO)
-
-     push -->  [ C ]  --> pop          enqueue --> [ A | B | C ] --> dequeue
-               [ B ]                               rear       front
-               [ A ]
-         insert and delete                  insert at one end,
-           at the SAME end                  delete at the OTHER end
-   ```
-
-   - Simple memory aid: in a stack, the last plate you put down is the first you pick up. In a queue, the first person to arrive at the counter is the first to be served.
-
-7. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
-
-Answer:
-
-   | Point | Stack | Queue |
-   |---|---|---|
-   | Working principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
-   | Insertion operation | `push`, at the top | `enqueue`, at the rear |
-   | Deletion operation | `pop`, from the top | `dequeue`, from the front |
-   | Ends used | One end only | Two ends |
-   | Pointers required | One (`top`) | Two (`front` and `rear`) |
-   | Output order | Reverse of insertion | Same as insertion |
-   | Empty condition | top = −1 | front = −1 or front > rear |
-   | Full condition | top = MAX − 1 | rear = MAX − 1 |
-   | Error terms | Stack Overflow / Stack Underflow | Queue Full / Queue Empty |
-   | Peek operation | Returns the topmost element | Returns the front element |
-   | Types | Simple stack only | Simple, circular, priority, double-ended |
-   | Recursion | Directly used (the call stack) | Not applicable |
-   | Implementation | Array or linked list | Array (usually circular) or linked list |
-   | Complexity | O(1) push and pop | O(1) enqueue and dequeue |
-   | Real-life example | A pile of plates; the browser back button | A queue at a bank counter; a printer spool |
-   | Applications | Expression conversion and evaluation, parentheses matching, undo/redo, backtracking, DFS | CPU scheduling, printer spooling, BFS, buffering, message queues |
-
-   ```
-   STACK                              QUEUE
-
-    push ->  [ C ]  -> pop            enqueue -> [ A | B | C ] -> dequeue
-             [ B ]                               rear        front
-             [ A ]
-      both operations at                insertion at one end,
-         the SAME end                    deletion at the OTHER
-   ```
-
-   - The core distinction in one line: a stack reverses the order of its elements, while a queue preserves it.
-
-8. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
+5. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
 Answer:
 
@@ -2310,7 +2194,7 @@ Answer:
            * 2 3 = 6 ; + 1 6 = 7 ; + 7 4 = 11   ✓
    ```
 
-9. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
+6. **Push(200), Push(500), Push(100), S= Pop(). What is the value of S after the Operation?** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
 Answer: A stack works on the `LIFO` principle — the element pushed most recently is the first one popped.
 
@@ -2348,7 +2232,7 @@ Answer: A stack works on the `LIFO` principle — the element pushed most recent
 
    - Contrast with a `queue` (FIFO): after Enqueue(200), Enqueue(500), Enqueue(100), a Dequeue would return `200`, the element inserted first.
 
-10. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
+7. **Expalin: Infix, Prefix, Postfix notation.** *[BTCL Junior Assistant Manager 2022 compact it 639 (ET: BUET)]*
 
 Answer: These are the three ways of writing an arithmetic expression, differing only in `where the operator is placed` relative to its operands.
 
@@ -2408,98 +2292,7 @@ Answer: These are the three ways of writing an arithmetic expression, differing 
     - Postfix is preferred over prefix because it is scanned left to right, in the same direction the input arrives.
     - Conversion from infix uses a stack for the operators — the classic Shunting-Yard algorithm.
 
-11. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.)
-
-    Stack
-    - A linear data structure following `LIFO` — Last In, First Out. Insertion and deletion both take place at the same end, called the `top`.
-    - Operations: `push` (insert), `pop` (delete), `peek/top` (read the top), `isEmpty`, `isFull`. All are O(1).
-    - One pointer, `top`, is enough. Empty when top = −1; full when top = MAX − 1.
-    - Errors: Stack Overflow on pushing to a full stack; Stack Underflow on popping an empty one.
-
-    Queue
-    - A linear data structure following `FIFO` — First In, First Out. Insertion happens at the `rear` and deletion at the `front`.
-    - Operations: `enqueue` (insert at rear), `dequeue` (delete from front), `front`, `isEmpty`, `isFull`. All O(1).
-    - Two pointers are needed, `front` and `rear`.
-    - Variants: circular queue (reuses freed space at the start of the array), priority queue (served by priority rather than arrival), and deque (insertion and deletion at both ends).
-
-    Comparative discussion
-
-    | Point | Stack | Queue |
-    |---|---|---|
-    | Principle | LIFO | FIFO |
-    | Insertion | Top (push) | Rear (enqueue) |
-    | Deletion | Top (pop) | Front (dequeue) |
-    | Ends used | One | Two |
-    | Pointers | One (top) | Two (front, rear) |
-    | Output order | Reversed | Preserved |
-    | Types | One | Simple, circular, priority, deque |
-    | Recursion | Supports it directly | Does not |
-    | Errors | Overflow, Underflow | Queue Full, Queue Empty |
-    | Implementation | Array or linked list | Array (usually circular) or linked list |
-    | Applications | Expression evaluation, parentheses matching, undo/redo, backtracking, DFS, function calls | CPU and printer scheduling, BFS, buffering, message queues |
-
-    ```
-    STACK                                QUEUE
-
-      push -> [ C ] -> pop               enqueue -> [ A | B | C ] -> dequeue
-              [ B ]                                 rear       front
-              [ A ]
-       one end for both                     one end each
-    ```
-
-    - The essential difference: a stack `reverses` the order of the data passing through it, while a queue `preserves` it. That single property decides which one a problem needs — parentheses matching needs reversal, and printer scheduling needs preservation.
-
-12. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
-
-Answer:
-
-    LIFO — Last In, First Out
-    - The element inserted `most recently` is removed first.
-    - Implemented by the `stack` data structure.
-    - Insertion (`push`) and deletion (`pop`) both happen at the same end, the `top`.
-    - Only one pointer is needed, `top`.
-    - The output order is the `reverse` of the input order.
-    - Analogy: a stack of plates — you take the plate you put down last.
-
-    FIFO — First In, First Out
-    - The element inserted `first` is removed first.
-    - Implemented by the `queue` data structure.
-    - Insertion (`enqueue`) happens at the `rear`, deletion (`dequeue`) at the `front`.
-    - Two pointers are needed, `front` and `rear`.
-    - The output order is the `same` as the input order.
-    - Analogy: a queue at a ticket counter — the first person to arrive is served first.
-
-    Comparison
-
-    | Point | LIFO (Stack) | FIFO (Queue) |
-    |---|---|---|
-    | Order of removal | Last inserted, first out | First inserted, first out |
-    | Data structure | Stack | Queue |
-    | Insertion end | Top | Rear |
-    | Deletion end | Top (same end) | Front (opposite end) |
-    | Pointers | 1 (top) | 2 (front, rear) |
-    | Output order | Reversed | Preserved |
-    | Fairness | Unfair — an early element may wait forever | Fair — every element is served in turn |
-    | Errors | Overflow, Underflow | Queue Full, Queue Empty |
-    | Applications | Function calls and recursion, expression evaluation, undo/redo, backtracking, DFS | CPU and disk scheduling, printer spooling, BFS, buffering, message queues |
-
-    ```
-    LIFO                                FIFO
-
-      in -> [ 3 ] -> out                in -> [ 1 | 2 | 3 ] -> out
-            [ 2 ]                             rear      front
-            [ 1 ]
-      3 arrives last, leaves first       1 arrives first, leaves first
-    ```
-
-    Where each is the right choice
-    - Use `LIFO` when the most recent item must be handled first: undoing the last action, returning from the innermost function call, matching the innermost bracket.
-    - Use `FIFO` when fairness and order matter: serving customers, printing documents, transmitting packets, exploring a graph level by level.
-    - Related disciplines: `LILO` is another name for FIFO, and `FILO` another name for LIFO. Operating systems also use LRU and priority-based policies, which are neither.
-
-13. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
+8. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) A stack is a LIFO structure in which all operations take place at one end, the `top`.
 
@@ -2573,7 +2366,7 @@ Answer: (Answered in English, as required for IT topics.) A stack is a LIFO stru
 
     - All stack operations are `O(1)` in both array and linked-list implementations, which is why the stack is used wherever constant-time insertion and removal at one end are required: the function call stack, expression evaluation, undo/redo and backtracking.
 
-14. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
+9. **(ক) নিম্নলিখিত Expression টি evaluate করুন: 3\;2 * 2 \uparrow 5\;3 - 8\;4 / * -** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 774 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) This is a postfix expression, evaluated with a stack.
 
@@ -2621,7 +2414,7 @@ Answer: (Answered in English, as required for IT topics.) This is a postfix expr
     - At the end the stack must contain `exactly one` value. More than one means the expression was malformed.
     - Complexity: `O(n)` time and `O(n)` space, in a single left-to-right pass with no bracket parsing at all — which is precisely why compilers convert infix to postfix.
 
-15. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
+10. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
 
 Answer:
 
@@ -2728,7 +2521,7 @@ Answer:
     Complexity
     - `Time O(n)`, one pass over the string. `Space O(n)` in the worst case, when every character is an opening bracket.
 
-16. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
+11. **Write a programme in C/C++/Java to check whether an expression balanced parenthesis or not. Sample input/output:** *[RAKUB Programmer (PO) 12.10.2021 compact it 845-846 (ET: N/A)]*
 ```text
 Input: [0]{[00]0}
 Output: Balanced
@@ -2844,7 +2637,7 @@ Output: Not Balanced
     - Three failure cases: a closing bracket with an empty stack, a mismatched type, and a non-empty stack at the end.
     - `Time O(n)`, `Space O(n)`.
 
-17. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
+12. **১০. কোনটি ক্ষেত্রে আইটেম সংযোজন ও বিয়োজন একই প্রান্তে হয়।** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 941 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The structure in which insertion and deletion both take place at the `same end` is the `Stack`.
 
@@ -2875,7 +2668,7 @@ Answer: (Answered in English, as required for IT topics.) The structure in which
 
     - The special case worth noting is the `deque` (double-ended queue), which allows insertion and deletion at both ends, so it can behave as either a stack or a queue.
 
-18. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
+13. **Write a Program to check for balanced parenthesis in an expression.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1011 (ET: N/A)]*
 
 Answer:
 
@@ -2966,7 +2759,7 @@ Answer:
 
     Complexity: `Time O(n)`, `Space O(n)`.
 
-19. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
+14. **Stack এর ক্ষেত্রে Data PUSH করার Procedure লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1038 (ET: DPI)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
@@ -3043,7 +2836,7 @@ Answer: (Answered in English, as required for IT topics.)
     - Complexity: `O(1)` time and `O(1)` extra space.
     - The counterpart operation is `POP`, which reads stack[top] and then decrements top, after checking for `Stack Underflow` when top = −1.
 
-20. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
+15. **Write prefix and postfix notations from the statement like $((A+B)*C-(D-E)^F)$** *[Bangladesh Bank Assistant Programmer 2016 compact it 1264 (ET: N/A)]*
 
 Answer:
 
@@ -3129,7 +2922,222 @@ Answer:
 
     - Both machine notations give the same value as the infix expression, and neither needs a single bracket — which is exactly why compilers convert to them.
 
+### Stack vs Queue / LIFO vs FIFO Comparison (5)
+
+1. **Difference between Stack and Queue. Write about 2 problems solved by stack and queue.** *[Combined Bank Assistant Programmer 09.02.2024 compact it 297 (ET: BIBM)]*
+
+Answer:
+
+   Difference between stack and queue
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
+   | Insertion | At the `top` — push | At the `rear` — enqueue |
+   | Deletion | At the `top` — pop | From the `front` — dequeue |
+   | Ends used | One end only | Two ends |
+   | Pointers needed | One (`top`) | Two (`front` and `rear`) |
+   | Operations | push, pop, peek, isEmpty, isFull | enqueue, dequeue, front, isEmpty, isFull |
+   | Order of removal | Reverse of insertion order | Same as insertion order |
+   | Overflow / underflow | Stack Overflow / Underflow | Queue Full / Queue Empty |
+   | Variants | — | Circular queue, priority queue, deque |
+   | Real-world analogy | A stack of plates | A queue at a ticket counter |
+   | Recursion support | Directly supports it (the call stack) | Not used for recursion |
+
+   ```
+   STACK (LIFO)                    QUEUE (FIFO)
+
+     push ->  [ C ]  <- pop         enqueue ->  [ A | B | C ]  -> dequeue
+              [ B ]                             rear        front
+              [ A ]
+           one end                            two ends
+   ```
+
+   Two problems solved by a `stack`
+
+   1. `Balanced parentheses checking`
+   - The most recently opened bracket must be closed first, which is exactly LIFO. Push every opening bracket; on a closing bracket, pop and check that the types match. The expression is balanced only if the stack is empty at the end.
+   - Used by every compiler and code editor to report a missing bracket.
+
+   2. `Expression conversion and evaluation`
+   - Infix to postfix conversion uses a stack to hold operators until an operator of lower precedence arrives.
+   - Postfix evaluation uses a stack for operands: push each operand, and on an operator pop two, apply, and push the result.
+   ```
+   Infix: 12 / (7 − 3) + 2   ->  Postfix: 12 7 3 − / 2 +   ->  Value: 5
+   ```
+   - Related stack applications: the function call stack and recursion, undo/redo, the browser back button, backtracking, and depth-first search.
+
+   Two problems solved by a `queue`
+
+   1. `CPU and printer scheduling`
+   - Jobs must be served in the order they arrive, which is exactly FIFO. A print spooler queues documents and prints them in submission order; a round-robin CPU scheduler holds ready processes in a queue.
+
+   2. `Breadth-first search (BFS)`
+   - BFS explores a graph level by level. Nodes discovered first must be expanded first, so a queue holds the frontier. This is how the shortest path in an unweighted graph is found, and how a tree is printed level by level.
+   - Related queue applications: buffering in I/O and networking, call centre waiting lines, message queues, and the ready queue in an operating system.
+
+2. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
+   | Insertion | At the top (`push`) | At the rear (`enqueue`) |
+   | Deletion | At the top (`pop`) | From the front (`dequeue`) |
+   | Ends used | One end only | Two different ends |
+   | Pointers | One — `top` | Two — `front` and `rear` |
+   | Order of output | Reverse of the input order | Same as the input order |
+   | Basic operations | push, pop, peek, isEmpty, isFull | enqueue, dequeue, front, isEmpty, isFull |
+   | Empty condition | top = −1 | front = −1, or front > rear |
+   | Full condition | top = MAX − 1 | rear = MAX − 1 |
+   | Error terms | Stack Overflow / Underflow | Queue Full / Queue Empty |
+   | Variants | — | Circular queue, priority queue, double-ended queue |
+   | Analogy | A stack of plates | A line at a ticket counter |
+   | Used for recursion | Yes — the call stack | No |
+   | Typical applications | Expression evaluation, balanced parentheses, undo/redo, backtracking, DFS | CPU and printer scheduling, BFS, buffering, message queues |
+
+   ```
+   STACK (LIFO)                       QUEUE (FIFO)
+
+     push -->  [ C ]  --> pop          enqueue --> [ A | B | C ] --> dequeue
+               [ B ]                               rear       front
+               [ A ]
+         insert and delete                  insert at one end,
+           at the SAME end                  delete at the OTHER end
+   ```
+
+   - Simple memory aid: in a stack, the last plate you put down is the first you pick up. In a queue, the first person to arrive at the counter is the first to be served.
+
+3. **Write down the difference between Stack and Queue.** *[DESCO Sub-Assistant Engineer 20.05.2023 compact it 581 (ET: DESCO)], [Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 499 (ET: N/A)]*
+
+Answer:
+
+   | Point | Stack | Queue |
+   |---|---|---|
+   | Working principle | `LIFO` — Last In, First Out | `FIFO` — First In, First Out |
+   | Insertion operation | `push`, at the top | `enqueue`, at the rear |
+   | Deletion operation | `pop`, from the top | `dequeue`, from the front |
+   | Ends used | One end only | Two ends |
+   | Pointers required | One (`top`) | Two (`front` and `rear`) |
+   | Output order | Reverse of insertion | Same as insertion |
+   | Empty condition | top = −1 | front = −1 or front > rear |
+   | Full condition | top = MAX − 1 | rear = MAX − 1 |
+   | Error terms | Stack Overflow / Stack Underflow | Queue Full / Queue Empty |
+   | Peek operation | Returns the topmost element | Returns the front element |
+   | Types | Simple stack only | Simple, circular, priority, double-ended |
+   | Recursion | Directly used (the call stack) | Not applicable |
+   | Implementation | Array or linked list | Array (usually circular) or linked list |
+   | Complexity | O(1) push and pop | O(1) enqueue and dequeue |
+   | Real-life example | A pile of plates; the browser back button | A queue at a bank counter; a printer spool |
+   | Applications | Expression conversion and evaluation, parentheses matching, undo/redo, backtracking, DFS | CPU scheduling, printer spooling, BFS, buffering, message queues |
+
+   ```
+   STACK                              QUEUE
+
+    push ->  [ C ]  -> pop            enqueue -> [ A | B | C ] -> dequeue
+             [ B ]                               rear        front
+             [ A ]
+      both operations at                insertion at one end,
+         the SAME end                    deletion at the OTHER
+   ```
+
+   - The core distinction in one line: a stack reverses the order of its elements, while a queue preserves it.
+
+4. **(খ) Stack এবং Queue Data Structure সমূহের তুলনামূলক আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 706 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+    Stack
+    - A linear data structure following `LIFO` — Last In, First Out. Insertion and deletion both take place at the same end, called the `top`.
+    - Operations: `push` (insert), `pop` (delete), `peek/top` (read the top), `isEmpty`, `isFull`. All are O(1).
+    - One pointer, `top`, is enough. Empty when top = −1; full when top = MAX − 1.
+    - Errors: Stack Overflow on pushing to a full stack; Stack Underflow on popping an empty one.
+
+    Queue
+    - A linear data structure following `FIFO` — First In, First Out. Insertion happens at the `rear` and deletion at the `front`.
+    - Operations: `enqueue` (insert at rear), `dequeue` (delete from front), `front`, `isEmpty`, `isFull`. All O(1).
+    - Two pointers are needed, `front` and `rear`.
+    - Variants: circular queue (reuses freed space at the start of the array), priority queue (served by priority rather than arrival), and deque (insertion and deletion at both ends).
+
+    Comparative discussion
+
+    | Point | Stack | Queue |
+    |---|---|---|
+    | Principle | LIFO | FIFO |
+    | Insertion | Top (push) | Rear (enqueue) |
+    | Deletion | Top (pop) | Front (dequeue) |
+    | Ends used | One | Two |
+    | Pointers | One (top) | Two (front, rear) |
+    | Output order | Reversed | Preserved |
+    | Types | One | Simple, circular, priority, deque |
+    | Recursion | Supports it directly | Does not |
+    | Errors | Overflow, Underflow | Queue Full, Queue Empty |
+    | Implementation | Array or linked list | Array (usually circular) or linked list |
+    | Applications | Expression evaluation, parentheses matching, undo/redo, backtracking, DFS, function calls | CPU and printer scheduling, BFS, buffering, message queues |
+
+    ```
+    STACK                                QUEUE
+
+      push -> [ C ] -> pop               enqueue -> [ A | B | C ] -> dequeue
+              [ B ]                                 rear       front
+              [ A ]
+       one end for both                     one end each
+    ```
+
+    - The essential difference: a stack `reverses` the order of the data passing through it, while a queue `preserves` it. That single property decides which one a problem needs — parentheses matching needs reversal, and printer scheduling needs preservation.
+
+5. **Difference between LIFO and FIFO in data structure.** *[SPCB Sub-Assistant Programmer 2022 compact it 740 (ET: N/A)]*
+
+Answer:
+
+    LIFO — Last In, First Out
+    - The element inserted `most recently` is removed first.
+    - Implemented by the `stack` data structure.
+    - Insertion (`push`) and deletion (`pop`) both happen at the same end, the `top`.
+    - Only one pointer is needed, `top`.
+    - The output order is the `reverse` of the input order.
+    - Analogy: a stack of plates — you take the plate you put down last.
+
+    FIFO — First In, First Out
+    - The element inserted `first` is removed first.
+    - Implemented by the `queue` data structure.
+    - Insertion (`enqueue`) happens at the `rear`, deletion (`dequeue`) at the `front`.
+    - Two pointers are needed, `front` and `rear`.
+    - The output order is the `same` as the input order.
+    - Analogy: a queue at a ticket counter — the first person to arrive is served first.
+
+    Comparison
+
+    | Point | LIFO (Stack) | FIFO (Queue) |
+    |---|---|---|
+    | Order of removal | Last inserted, first out | First inserted, first out |
+    | Data structure | Stack | Queue |
+    | Insertion end | Top | Rear |
+    | Deletion end | Top (same end) | Front (opposite end) |
+    | Pointers | 1 (top) | 2 (front, rear) |
+    | Output order | Reversed | Preserved |
+    | Fairness | Unfair — an early element may wait forever | Fair — every element is served in turn |
+    | Errors | Overflow, Underflow | Queue Full, Queue Empty |
+    | Applications | Function calls and recursion, expression evaluation, undo/redo, backtracking, DFS | CPU and disk scheduling, printer spooling, BFS, buffering, message queues |
+
+    ```
+    LIFO                                FIFO
+
+      in -> [ 3 ] -> out                in -> [ 1 | 2 | 3 ] -> out
+            [ 2 ]                             rear      front
+            [ 1 ]
+      3 arrives last, leaves first       1 arrives first, leaves first
+    ```
+
+    Where each is the right choice
+    - Use `LIFO` when the most recent item must be handled first: undoing the last action, returning from the innermost function call, matching the innermost bracket.
+    - Use `FIFO` when fairness and order matter: serving customers, printing documents, transmitting packets, exploring a graph level by level.
+    - Related disciplines: `LILO` is another name for FIFO, and `FILO` another name for LIFO. Operating systems also use LRU and priority-based policies, which are neither.
+
 ## Linked List (15)
+
+### Linked List Fundamentals & Operations (9)
 
 1. **Explain with proper example of singly linked list.** *[DESCO Sub-Assistant Engineer 20.06.2025 compact it 1358 (ET: BUET)]*
 
@@ -3355,69 +3363,7 @@ Answer: (Answered in English, as required for IT topics.)
    | Circular singly | 1 | Forward, endless | Least | Round-robin scheduling |
    | Circular doubly | 2 | Both ways, endless | Most | Playlists, Fibonacci heap |
 
-4. **(a) Compare array and linked list with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
-
-Answer:
-
-   Diagrams
-   ```
-   ARRAY — contiguous memory, accessed by index
-
-   index :    0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           | 10  | 20  | 30  | 40  | 50  |
-           +-----+-----+-----+-----+-----+
-   address: 1000  1004  1008  1012  1016      <- fixed 4-byte steps
-            address of element i = base + i × size   -> O(1) access
-
-
-   LINKED LIST — scattered memory, joined by pointers
-
-   head
-    |
-    v
-   +----+---+     +----+---+     +----+------+
-   | 10 | *-|---->| 20 | *-|---->| 30 | NULL |
-   +----+---+     +----+---+     +----+------+
-    @2000          @5400          @1200        <- addresses unrelated
-   ```
-
-   Comparison
-
-   | Point | Array | Linked list |
-   |---|---|---|
-   | Memory allocation | `Contiguous` block | `Scattered`, joined by pointers |
-   | Size | Fixed at declaration (static) | Grows and shrinks at run time (dynamic) |
-   | Access to the ith element | `O(1)` by index | `O(n)`, must walk from the head |
-   | Insertion or deletion at the beginning | O(n) — every element must shift | `O(1)` |
-   | Insertion or deletion in the middle | O(n) — shifting | O(1) once the position is known, O(n) to find it |
-   | Insertion or deletion at the end | O(1) if space remains | O(n), or O(1) with a tail pointer |
-   | Search (unsorted) | O(n) | O(n) |
-   | Search (sorted) | `O(log n)` with binary search | O(n) — binary search is impossible |
-   | Memory overhead | None beyond the data | One or two pointers per node |
-   | Memory wastage | Unused declared slots are wasted | None; exactly what is needed |
-   | Memory usage when full | Efficient | Higher, because of the pointers |
-   | Cache performance | `Excellent` — elements are adjacent | Poor — nodes are scattered |
-   | Resizing | Requires reallocating and copying | Not needed |
-   | Ease of implementation | Simple | More complex; pointer errors are easy to make |
-   | Suited to | Fixed-size data, frequent random access, matrices | Unknown or changing size, frequent insertion and deletion |
-
-   Worked illustration
-   ```
-   Insert 15 at the beginning
-
-   ARRAY: every element must move one place right
-      [10, 20, 30, 40, 50]  ->  [15, 10, 20, 30, 40, 50]      O(n)
-
-   LINKED LIST: two pointer assignments
-      new->next = head ; head = new                            O(1)
-   ```
-
-   Choosing between them
-   - Use an `array` when the size is known, random access by index is frequent, and binary search or matrix arithmetic is required.
-   - Use a `linked list` when the size is unpredictable and insertions and deletions are frequent, particularly at the front — which is exactly why stacks, queues and hash-table chaining are built on linked lists.
-
-5. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
+4. **অথবা, (ক) Linked List কী? উদাহরণসহ বর্ণনা করুন।** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 604 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
@@ -3488,79 +3434,7 @@ Answer: (Answered in English, as required for IT topics.)
    Applications
    - Implementation of stacks and queues, chaining in hash tables, adjacency lists for graphs, undo/redo, browser history, music playlists, and dynamic memory management inside the operating system.
 
-6. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.)
-
-   Diagrams
-   ```
-   ARRAY — one contiguous block
-
-   index :    0     1     2     3     4
-           +-----+-----+-----+-----+-----+
-           | 10  | 20  | 30  | 40  | 50  |
-           +-----+-----+-----+-----+-----+
-   address: 1000  1004  1008  1012  1016
-      address of element i = base + i × size   ->  O(1) access
-
-
-   LINKED LIST — scattered nodes joined by pointers
-
-   head
-    |
-    v
-   +----+---+     +----+---+     +----+------+
-   | 10 | *-|---->| 20 | *-|---->| 30 | NULL |
-   +----+---+     +----+---+     +----+------+
-    @2000          @5400          @1200
-   ```
-
-   Differences
-
-   | Point | Array | Linked list |
-   |---|---|---|
-   | Memory | Contiguous | Scattered, joined by pointers |
-   | Size | Fixed at declaration | Dynamic, changes at run time |
-   | Access to the ith element | O(1) by index | O(n), traverse from the head |
-   | Insert or delete at the front | O(n) — all elements shift | O(1) |
-   | Insert or delete in the middle | O(n) | O(1) if the position is known |
-   | Binary search | Possible on a sorted array, O(log n) | Not possible |
-   | Extra memory | None | One or two pointers per node |
-   | Wasted memory | Unused declared slots | None |
-   | Cache performance | Excellent | Poor |
-   | Resizing | Requires reallocation and copying | Not required |
-   | Implementation | Simple | More complex |
-
-   Worked example — inserting 15 at the beginning
-   ```
-   ARRAY
-   Before: [10, 20, 30, 40, 50]
-   Step 1: shift 50 -> index 5
-   Step 2: shift 40 -> index 4
-   Step 3: shift 30 -> index 3
-   Step 4: shift 20 -> index 2
-   Step 5: shift 10 -> index 1
-   Step 6: place 15 at index 0
-   After : [15, 10, 20, 30, 40, 50]     -> 5 moves, O(n)
-
-   LINKED LIST
-   Step 1: create the node          [15|NULL]
-   Step 2: new->next = head         [15|*] -> [10|*] -> ...
-   Step 3: head = new
-                                     -> 2 assignments, O(1)
-   ```
-
-   Worked example — reading the 3rd element
-   ```
-   ARRAY       : arr[2]  -> 30 immediately                    O(1)
-   LINKED LIST : head -> node1 -> node2 -> node3, then read 30 O(n)
-   ```
-
-   When to use which
-   - `Array` — the size is known, random access is frequent, or binary search and matrix operations are needed.
-   - `Linked list` — the size varies unpredictably, and insertions or deletions are frequent, especially at the front.
-
-7. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 636 (ET: N/A)]*
+5. **What is a linked list? Given the algorithm to create a linked list and show an example graphically.** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 636 (ET: N/A)]*
 
 Answer:
 
@@ -3672,104 +3546,7 @@ Answer:
    - Creating n nodes: `O(n)` time. Each individual insertion at the tail is O(1) because a `tail` pointer is kept; without one it would be O(n) per insertion and O(n²) overall.
    - Space: `O(n)`, plus one pointer per node.
 
-8. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
-
-Answer:
-
-   Advantages of linked lists over arrays
-
-   - `Dynamic size.` The list grows and shrinks at run time, so the size need not be known in advance. An array's size is fixed at declaration, which means either wasting space or running out of it.
-   - `Efficient insertion and deletion.` Inserting or deleting at the beginning is `O(1)` — just two pointer assignments. In an array every following element must shift, which is O(n).
-   - `No memory wastage.` Exactly as many nodes are allocated as are needed. An array declared for 1000 elements but holding 10 wastes the other 990 slots.
-   - `No contiguous memory needed.` A linked list can be built even when the heap is fragmented and no single large block is free. An array of 1 MB needs 1 MB of contiguous memory.
-   - `No costly resizing.` A dynamic array must allocate a bigger block and copy everything across when it fills; a linked list simply allocates one more node.
-   - `Easy to implement other structures.` Stacks, queues, adjacency lists for graphs and chaining in hash tables are all naturally built on linked lists.
-   - `Merging and splitting are cheap` — changing a few pointers, rather than copying data.
-
-   Disadvantages of linked lists over arrays
-
-   - `No random access.` Reaching the ith element requires walking i nodes, which is `O(n)`, whereas an array gives `O(1)` by index. This is the single biggest drawback.
-   - `Binary search is impossible`, because it depends on random access. A sorted array can be searched in O(log n); a sorted linked list still takes O(n).
-   - `Extra memory for pointers.` Every node carries one pointer (singly) or two (doubly). Storing a single 4-byte integer per node may cost 12 or 20 bytes in total on a 64-bit machine.
-   - `Poor cache performance.` Array elements sit next to each other, so one cache line brings in several of them. Linked-list nodes are scattered, causing a cache miss at almost every step. In practice this often makes an array several times faster even for operations where the linked list has the better big-O.
-   - `No reverse traversal` in a singly linked list.
-   - `More complex code`, and pointer errors — dangling pointers, memory leaks, lost links — are easy to make.
-   - `Deletion needs the predecessor` in a singly linked list, so it costs O(n) to find it.
-
-   Summary
-
-   | Operation | Array | Linked list | Winner |
-   |---|---|---|---|
-   | Access ith element | O(1) | O(n) | `Array` |
-   | Insert at beginning | O(n) | O(1) | `Linked list` |
-   | Insert at end | O(1) | O(1) with a tail pointer | Tie |
-   | Delete from beginning | O(n) | O(1) | `Linked list` |
-   | Search (unsorted) | O(n) | O(n) | Tie |
-   | Search (sorted) | O(log n) | O(n) | `Array` |
-   | Memory per element | Data only | Data + pointer | `Array` |
-   | Resize | Reallocate and copy | Not needed | `Linked list` |
-
-   - Practical rule: choose an array when the size is stable and access is by index; choose a linked list when the size varies and insertions or deletions at the front are frequent.
-
-9. **(a) Computer and contrast between array and linked list.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
-
-Answer:
-
-   Comparison
-   ```
-   ARRAY                                   LINKED LIST
-
-     0     1     2     3                    head
-   +----+-----+-----+-----+                  |
-   | 10 | 20  | 30  | 40  |                  v
-   +----+-----+-----+-----+           +----+---+   +----+---+   +----+------+
-    1000 1004  1008  1012             | 10 | *-|-->| 20 | *-|-->| 30 | NULL |
-                                      +----+---+   +----+---+   +----+------+
-    contiguous, index arithmetic       scattered, joined by pointers
-   ```
-
-   | Point | Array | Linked list |
-   |---|---|---|
-   | Memory layout | Contiguous | Non-contiguous |
-   | Size | Static, fixed at declaration | Dynamic, changes at run time |
-   | Declaration | `int a[100];` | Nodes allocated with malloc / new |
-   | Access to element i | `O(1)` — base + i × size | `O(n)` — traverse from the head |
-   | Insert at beginning | O(n) | `O(1)` |
-   | Insert at end | O(1) if space remains | O(1) with a tail pointer, else O(n) |
-   | Delete from beginning | O(n) | `O(1)` |
-   | Search, unsorted | O(n) | O(n) |
-   | Search, sorted | `O(log n)` binary search | O(n); binary search impossible |
-   | Extra memory | None | 1 pointer per node (singly), 2 (doubly) |
-   | Memory wastage | Unused declared slots | None |
-   | Cache locality | `Excellent` | Poor |
-   | Resizing | Reallocate and copy everything | Not required |
-   | Merging two structures | Copy all elements, O(n) | Relink a pointer, O(1) |
-   | Ease of coding | Simple | Pointer handling; leaks and dangling pointers possible |
-
-   Contrast in one operation each
-   ```
-   Insert 5 at the front of [10, 20, 30, 40]
-
-   ARRAY:        shift 40, 30, 20, 10 one place right, then write 5 -> 4 moves, O(n)
-   LINKED LIST:  new->next = head ; head = new                        -> 2 steps, O(1)
-
-
-   Read the 3rd element
-
-   ARRAY:        a[2] -> immediate                                     O(1)
-   LINKED LIST:  head -> n1 -> n2 -> n3, then read                     O(n)
-   ```
-
-   Similarities
-   - Both are `linear` data structures storing a sequence of elements in order.
-   - Both support traversal, insertion, deletion and search.
-   - Both can implement stacks and queues.
-
-   Choosing between them
-   - Use an `array` for a known, stable size with frequent random access — lookup tables, matrices, sorting with binary search.
-   - Use a `linked list` for an unpredictable size with frequent insertion and deletion, especially at the front — queues, undo stacks, hash-table chaining, graph adjacency lists.
-
-10. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
+6. **Write a programme in C/C++/Java/Paython you are given a linked list. Write a recursive function to print the linked list in reverse order for example 1>2>3>4 output should be 4>3>2>1.** *[RAKUB Programmer (PO) 12.10.2021 compact it 851-852 (ET: N/A)]*
 
 Answer:
 
@@ -3880,87 +3657,7 @@ Answer:
     - `Space O(n)` for the recursion stack. For a very long list this risks stack overflow, so an iterative alternative would push the values onto an explicit stack and then pop them.
     - Note the difference between `printing` in reverse, which does not change the list, and actually `reversing` the list, which requires relinking every pointer and can be done iteratively in O(1) extra space.
 
-11. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
-
-Answer:
-
-    | Point | Array | Linked list |
-    |---|---|---|
-    | Memory allocation | `Contiguous` — one continuous block | `Non-contiguous` — scattered nodes joined by pointers |
-    | Size | Static; fixed when declared | Dynamic; grows and shrinks at run time |
-    | Allocation time | Compile time (static arrays) | Run time, using malloc or new |
-    | Access to element i | `O(1)` — base address + i × size | `O(n)` — walk from the head |
-    | Insert or delete at the front | O(n) — every element shifts | `O(1)` |
-    | Insert or delete in the middle | O(n) — shifting | O(1) once the position is known |
-    | Insert or delete at the end | O(1) if space remains | O(1) with a tail pointer, else O(n) |
-    | Search, unsorted | O(n) | O(n) |
-    | Search, sorted | `O(log n)` binary search | O(n); binary search impossible |
-    | Extra memory per element | None | 1 pointer (singly), 2 (doubly) |
-    | Memory wastage | Unused declared slots are wasted | None — exactly what is used |
-    | Cache performance | `Excellent`; neighbours share cache lines | Poor; every hop may be a cache miss |
-    | Resizing | Reallocate and copy the whole array | Not needed |
-    | Merging two structures | O(n), copying | O(1), relinking one pointer |
-    | Implementation | Simple | More complex; leaks and dangling pointers possible |
-    | Best suited to | Fixed size, frequent random access, matrices, lookup tables | Unknown size, frequent insertion and deletion, stacks, queues, hash chaining |
-
-    Illustration
-    ```
-    ARRAY                            LINKED LIST
-
-      0    1    2    3               head
-    +----+----+----+----+             |
-    | 10 | 20 | 30 | 40 |             v
-    +----+----+----+----+     +----+---+  +----+---+  +----+------+
-     1000 1004 1008 1012      | 10 | *-|->| 20 | *-|->| 30 | NULL |
-                              +----+---+  +----+---+  +----+------+
-    index arithmetic gives      must follow the chain from the head
-    instant access
-    ```
-
-    The trade-off in one sentence
-    - An array buys `fast access` at the cost of `expensive insertion`; a linked list buys `fast insertion` at the cost of `slow access`. Which is better depends entirely on which operation the program performs more often.
-
-12. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
-
-Answer: A linked list is better than an array for `Insert` and `Delete`, but `not` for `Search`.
-
-    Insert — `linked list is better`
-    - Inserting at the beginning of a linked list is `O(1)`: create the node, set `new->next = head`, then `head = new`. Two assignments, nothing else moves.
-    - Inserting at the beginning of an array is `O(n)`: every existing element must shift one place to the right to make room.
-    - Inserting in the middle is O(1) in a linked list once the position is known, against O(n) in an array.
-    - A linked list also never needs `resizing`. When an array fills up, a bigger block must be allocated and every element copied across.
-    ```
-    Insert 5 at the front of [10, 20, 30, 40]
-
-    ARRAY:       shift 40, 30, 20, 10 right, then write 5   -> 4 moves,  O(n)
-    LINKED LIST: new->next = head ; head = new              -> 2 steps,  O(1)
-    ```
-
-    Delete — `linked list is better`
-    - Deleting the first element of a linked list is `O(1)`: `head = head->next`, then free the old node.
-    - Deleting the first element of an array is `O(n)`: every following element shifts left to close the gap.
-    - In a `doubly` linked list, deleting any node whose address is known is O(1), because the node already knows its predecessor.
-
-    Search — `array is better`
-    - An array gives `O(1)` random access by index, so a `sorted` array can be searched with binary search in `O(log n)`.
-    - A linked list has no random access. Reaching the middle element already costs O(n), so binary search cannot be applied at all; searching is always `O(n)` even when the list is sorted.
-    - Arrays also have far better `cache locality`, so even an O(n) linear scan of an array is typically several times faster in practice than the same scan of a linked list.
-
-    Summary
-
-    | Operation | Array | Linked list | Better |
-    |---|---|---|---|
-    | Insert at beginning | O(n) | O(1) | `Linked list` |
-    | Insert in middle (position known) | O(n) | O(1) | `Linked list` |
-    | Delete from beginning | O(n) | O(1) | `Linked list` |
-    | Delete a known node | O(n) | O(1) (doubly) | `Linked list` |
-    | Access element i | O(1) | O(n) | `Array` |
-    | Search, unsorted | O(n) | O(n) | Array (cache) |
-    | Search, sorted | O(log n) | O(n) | `Array` |
-
-    - Answer in one line: `Insert` and `Delete` favour the linked list; `Search` favours the array.
-
-13. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
+7. **Linked list, doubly linked list and circular linked list explains with diagram.** *[Combined 4 Banks Assistant Programmer 2020 compact it 1004-1005 (ET: DU)]*
 
 Answer:
 
@@ -4050,7 +3747,7 @@ Answer:
     | Reaching the tail from the head | O(n) | O(n), or O(1) with a tail pointer | O(n) |
     | Typical use | Stacks, queues | Undo/redo, LRU | Round-robin scheduling, playlists |
 
-14. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+8. **In a doubly linked list write the function of Traversing from the tail.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 Answer: Traversing a doubly linked list from the tail is possible because every node stores a `prev` pointer holding the address of its predecessor. This is the operation a singly linked list cannot perform at all.
 
@@ -4145,7 +3842,7 @@ Answer: Traversing a doubly linked list from the tail is possible because every 
     - Keeping an explicit `tail` pointer makes backward traversal, and insertion at the end, immediate. Without it the list must be walked from the head first.
     - In a `circular doubly` linked list the loop condition changes: traversal continues `until the starting node is reached again`, rather than until NULL.
 
-15. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
+9. **(খ) Linked list কী?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1076 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
@@ -4194,6 +3891,319 @@ Answer: (Answered in English, as required for IT topics.)
 
     Applications
     - Implementing stacks and queues, chaining in hash tables, adjacency lists for graphs, undo/redo, browser history, music playlists, and the free-list used by dynamic memory allocators.
+
+### Array vs Linked List Comparison (6)
+
+1. **(a) Compare array and linked list with necessary diagram.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 485 (ET: N/A)]*
+
+Answer:
+
+   Diagrams
+   ```
+   ARRAY — contiguous memory, accessed by index
+
+   index :    0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           | 10  | 20  | 30  | 40  | 50  |
+           +-----+-----+-----+-----+-----+
+   address: 1000  1004  1008  1012  1016      <- fixed 4-byte steps
+            address of element i = base + i × size   -> O(1) access
+
+
+   LINKED LIST — scattered memory, joined by pointers
+
+   head
+    |
+    v
+   +----+---+     +----+---+     +----+------+
+   | 10 | *-|---->| 20 | *-|---->| 30 | NULL |
+   +----+---+     +----+---+     +----+------+
+    @2000          @5400          @1200        <- addresses unrelated
+   ```
+
+   Comparison
+
+   | Point | Array | Linked list |
+   |---|---|---|
+   | Memory allocation | `Contiguous` block | `Scattered`, joined by pointers |
+   | Size | Fixed at declaration (static) | Grows and shrinks at run time (dynamic) |
+   | Access to the ith element | `O(1)` by index | `O(n)`, must walk from the head |
+   | Insertion or deletion at the beginning | O(n) — every element must shift | `O(1)` |
+   | Insertion or deletion in the middle | O(n) — shifting | O(1) once the position is known, O(n) to find it |
+   | Insertion or deletion at the end | O(1) if space remains | O(n), or O(1) with a tail pointer |
+   | Search (unsorted) | O(n) | O(n) |
+   | Search (sorted) | `O(log n)` with binary search | O(n) — binary search is impossible |
+   | Memory overhead | None beyond the data | One or two pointers per node |
+   | Memory wastage | Unused declared slots are wasted | None; exactly what is needed |
+   | Memory usage when full | Efficient | Higher, because of the pointers |
+   | Cache performance | `Excellent` — elements are adjacent | Poor — nodes are scattered |
+   | Resizing | Requires reallocating and copying | Not needed |
+   | Ease of implementation | Simple | More complex; pointer errors are easy to make |
+   | Suited to | Fixed-size data, frequent random access, matrices | Unknown or changing size, frequent insertion and deletion |
+
+   Worked illustration
+   ```
+   Insert 15 at the beginning
+
+   ARRAY: every element must move one place right
+      [10, 20, 30, 40, 50]  ->  [15, 10, 20, 30, 40, 50]      O(n)
+
+   LINKED LIST: two pointer assignments
+      new->next = head ; head = new                            O(1)
+   ```
+
+   Choosing between them
+   - Use an `array` when the size is known, random access by index is frequent, and binary search or matrix arithmetic is required.
+   - Use a `linked list` when the size is unpredictable and insertions and deletions are frequent, particularly at the front — which is exactly why stacks, queues and hash-table chaining are built on linked lists.
+
+2. **(খ) উদাহরণসহ Array এবং Linked List এর মধ্যে পার্থক্য লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.)
+
+   Diagrams
+   ```
+   ARRAY — one contiguous block
+
+   index :    0     1     2     3     4
+           +-----+-----+-----+-----+-----+
+           | 10  | 20  | 30  | 40  | 50  |
+           +-----+-----+-----+-----+-----+
+   address: 1000  1004  1008  1012  1016
+      address of element i = base + i × size   ->  O(1) access
+
+
+   LINKED LIST — scattered nodes joined by pointers
+
+   head
+    |
+    v
+   +----+---+     +----+---+     +----+------+
+   | 10 | *-|---->| 20 | *-|---->| 30 | NULL |
+   +----+---+     +----+---+     +----+------+
+    @2000          @5400          @1200
+   ```
+
+   Differences
+
+   | Point | Array | Linked list |
+   |---|---|---|
+   | Memory | Contiguous | Scattered, joined by pointers |
+   | Size | Fixed at declaration | Dynamic, changes at run time |
+   | Access to the ith element | O(1) by index | O(n), traverse from the head |
+   | Insert or delete at the front | O(n) — all elements shift | O(1) |
+   | Insert or delete in the middle | O(n) | O(1) if the position is known |
+   | Binary search | Possible on a sorted array, O(log n) | Not possible |
+   | Extra memory | None | One or two pointers per node |
+   | Wasted memory | Unused declared slots | None |
+   | Cache performance | Excellent | Poor |
+   | Resizing | Requires reallocation and copying | Not required |
+   | Implementation | Simple | More complex |
+
+   Worked example — inserting 15 at the beginning
+   ```
+   ARRAY
+   Before: [10, 20, 30, 40, 50]
+   Step 1: shift 50 -> index 5
+   Step 2: shift 40 -> index 4
+   Step 3: shift 30 -> index 3
+   Step 4: shift 20 -> index 2
+   Step 5: shift 10 -> index 1
+   Step 6: place 15 at index 0
+   After : [15, 10, 20, 30, 40, 50]     -> 5 moves, O(n)
+
+   LINKED LIST
+   Step 1: create the node          [15|NULL]
+   Step 2: new->next = head         [15|*] -> [10|*] -> ...
+   Step 3: head = new
+                                     -> 2 assignments, O(1)
+   ```
+
+   Worked example — reading the 3rd element
+   ```
+   ARRAY       : arr[2]  -> 30 immediately                    O(1)
+   LINKED LIST : head -> node1 -> node2 -> node3, then read 30 O(n)
+   ```
+
+   When to use which
+   - `Array` — the size is known, random access is frequent, or binary search and matrix operations are needed.
+   - `Linked list` — the size varies unpredictably, and insertions or deletions are frequent, especially at the front.
+
+3. **(b) Explain the advantages and disadvantages of Linked lists over arrays.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (ICT) 13.09.2022 compact it 692 (ET: N/A)]*
+
+Answer:
+
+   Advantages of linked lists over arrays
+
+   - `Dynamic size.` The list grows and shrinks at run time, so the size need not be known in advance. An array's size is fixed at declaration, which means either wasting space or running out of it.
+   - `Efficient insertion and deletion.` Inserting or deleting at the beginning is `O(1)` — just two pointer assignments. In an array every following element must shift, which is O(n).
+   - `No memory wastage.` Exactly as many nodes are allocated as are needed. An array declared for 1000 elements but holding 10 wastes the other 990 slots.
+   - `No contiguous memory needed.` A linked list can be built even when the heap is fragmented and no single large block is free. An array of 1 MB needs 1 MB of contiguous memory.
+   - `No costly resizing.` A dynamic array must allocate a bigger block and copy everything across when it fills; a linked list simply allocates one more node.
+   - `Easy to implement other structures.` Stacks, queues, adjacency lists for graphs and chaining in hash tables are all naturally built on linked lists.
+   - `Merging and splitting are cheap` — changing a few pointers, rather than copying data.
+
+   Disadvantages of linked lists over arrays
+
+   - `No random access.` Reaching the ith element requires walking i nodes, which is `O(n)`, whereas an array gives `O(1)` by index. This is the single biggest drawback.
+   - `Binary search is impossible`, because it depends on random access. A sorted array can be searched in O(log n); a sorted linked list still takes O(n).
+   - `Extra memory for pointers.` Every node carries one pointer (singly) or two (doubly). Storing a single 4-byte integer per node may cost 12 or 20 bytes in total on a 64-bit machine.
+   - `Poor cache performance.` Array elements sit next to each other, so one cache line brings in several of them. Linked-list nodes are scattered, causing a cache miss at almost every step. In practice this often makes an array several times faster even for operations where the linked list has the better big-O.
+   - `No reverse traversal` in a singly linked list.
+   - `More complex code`, and pointer errors — dangling pointers, memory leaks, lost links — are easy to make.
+   - `Deletion needs the predecessor` in a singly linked list, so it costs O(n) to find it.
+
+   Summary
+
+   | Operation | Array | Linked list | Winner |
+   |---|---|---|---|
+   | Access ith element | O(1) | O(n) | `Array` |
+   | Insert at beginning | O(n) | O(1) | `Linked list` |
+   | Insert at end | O(1) | O(1) with a tail pointer | Tie |
+   | Delete from beginning | O(n) | O(1) | `Linked list` |
+   | Search (unsorted) | O(n) | O(n) | Tie |
+   | Search (sorted) | O(log n) | O(n) | `Array` |
+   | Memory per element | Data only | Data + pointer | `Array` |
+   | Resize | Reallocate and copy | Not needed | `Linked list` |
+
+   - Practical rule: choose an array when the size is stable and access is by index; choose a linked list when the size varies and insertions or deletions at the front are frequent.
+
+4. **(a) Computer and contrast between array and linked list.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 792 (ET: N/A)]*
+
+Answer:
+
+   Comparison
+   ```
+   ARRAY                                   LINKED LIST
+
+     0     1     2     3                    head
+   +----+-----+-----+-----+                  |
+   | 10 | 20  | 30  | 40  |                  v
+   +----+-----+-----+-----+           +----+---+   +----+---+   +----+------+
+    1000 1004  1008  1012             | 10 | *-|-->| 20 | *-|-->| 30 | NULL |
+                                      +----+---+   +----+---+   +----+------+
+    contiguous, index arithmetic       scattered, joined by pointers
+   ```
+
+   | Point | Array | Linked list |
+   |---|---|---|
+   | Memory layout | Contiguous | Non-contiguous |
+   | Size | Static, fixed at declaration | Dynamic, changes at run time |
+   | Declaration | `int a[100];` | Nodes allocated with malloc / new |
+   | Access to element i | `O(1)` — base + i × size | `O(n)` — traverse from the head |
+   | Insert at beginning | O(n) | `O(1)` |
+   | Insert at end | O(1) if space remains | O(1) with a tail pointer, else O(n) |
+   | Delete from beginning | O(n) | `O(1)` |
+   | Search, unsorted | O(n) | O(n) |
+   | Search, sorted | `O(log n)` binary search | O(n); binary search impossible |
+   | Extra memory | None | 1 pointer per node (singly), 2 (doubly) |
+   | Memory wastage | Unused declared slots | None |
+   | Cache locality | `Excellent` | Poor |
+   | Resizing | Reallocate and copy everything | Not required |
+   | Merging two structures | Copy all elements, O(n) | Relink a pointer, O(1) |
+   | Ease of coding | Simple | Pointer handling; leaks and dangling pointers possible |
+
+   Contrast in one operation each
+   ```
+   Insert 5 at the front of [10, 20, 30, 40]
+
+   ARRAY:        shift 40, 30, 20, 10 one place right, then write 5 -> 4 moves, O(n)
+   LINKED LIST:  new->next = head ; head = new                        -> 2 steps, O(1)
+
+
+   Read the 3rd element
+
+   ARRAY:        a[2] -> immediate                                     O(1)
+   LINKED LIST:  head -> n1 -> n2 -> n3, then read                     O(n)
+   ```
+
+   Similarities
+   - Both are `linear` data structures storing a sequence of elements in order.
+   - Both support traversal, insertion, deletion and search.
+   - Both can implement stacks and queues.
+
+   Choosing between them
+   - Use an `array` for a known, stable size with frequent random access — lookup tables, matrices, sorting with binary search.
+   - Use a `linked list` for an unpredictable size with frequent insertion and deletion, especially at the front — queues, undo stacks, hash-table chaining, graph adjacency lists.
+
+5. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
+
+Answer:
+
+    | Point | Array | Linked list |
+    |---|---|---|
+    | Memory allocation | `Contiguous` — one continuous block | `Non-contiguous` — scattered nodes joined by pointers |
+    | Size | Static; fixed when declared | Dynamic; grows and shrinks at run time |
+    | Allocation time | Compile time (static arrays) | Run time, using malloc or new |
+    | Access to element i | `O(1)` — base address + i × size | `O(n)` — walk from the head |
+    | Insert or delete at the front | O(n) — every element shifts | `O(1)` |
+    | Insert or delete in the middle | O(n) — shifting | O(1) once the position is known |
+    | Insert or delete at the end | O(1) if space remains | O(1) with a tail pointer, else O(n) |
+    | Search, unsorted | O(n) | O(n) |
+    | Search, sorted | `O(log n)` binary search | O(n); binary search impossible |
+    | Extra memory per element | None | 1 pointer (singly), 2 (doubly) |
+    | Memory wastage | Unused declared slots are wasted | None — exactly what is used |
+    | Cache performance | `Excellent`; neighbours share cache lines | Poor; every hop may be a cache miss |
+    | Resizing | Reallocate and copy the whole array | Not needed |
+    | Merging two structures | O(n), copying | O(1), relinking one pointer |
+    | Implementation | Simple | More complex; leaks and dangling pointers possible |
+    | Best suited to | Fixed size, frequent random access, matrices, lookup tables | Unknown size, frequent insertion and deletion, stacks, queues, hash chaining |
+
+    Illustration
+    ```
+    ARRAY                            LINKED LIST
+
+      0    1    2    3               head
+    +----+----+----+----+             |
+    | 10 | 20 | 30 | 40 |             v
+    +----+----+----+----+     +----+---+  +----+---+  +----+------+
+     1000 1004 1008 1012      | 10 | *-|->| 20 | *-|->| 30 | NULL |
+                              +----+---+  +----+---+  +----+------+
+    index arithmetic gives      must follow the chain from the head
+    instant access
+    ```
+
+    The trade-off in one sentence
+    - An array buys `fast access` at the cost of `expensive insertion`; a linked list buys `fast insertion` at the cost of `slow access`. Which is better depends entirely on which operation the program performs more often.
+
+6. **(ii) For which data structure operations, Linked List is better than Array? (Insert, Delete, Search).** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
+
+Answer: A linked list is better than an array for `Insert` and `Delete`, but `not` for `Search`.
+
+    Insert — `linked list is better`
+    - Inserting at the beginning of a linked list is `O(1)`: create the node, set `new->next = head`, then `head = new`. Two assignments, nothing else moves.
+    - Inserting at the beginning of an array is `O(n)`: every existing element must shift one place to the right to make room.
+    - Inserting in the middle is O(1) in a linked list once the position is known, against O(n) in an array.
+    - A linked list also never needs `resizing`. When an array fills up, a bigger block must be allocated and every element copied across.
+    ```
+    Insert 5 at the front of [10, 20, 30, 40]
+
+    ARRAY:       shift 40, 30, 20, 10 right, then write 5   -> 4 moves,  O(n)
+    LINKED LIST: new->next = head ; head = new              -> 2 steps,  O(1)
+    ```
+
+    Delete — `linked list is better`
+    - Deleting the first element of a linked list is `O(1)`: `head = head->next`, then free the old node.
+    - Deleting the first element of an array is `O(n)`: every following element shifts left to close the gap.
+    - In a `doubly` linked list, deleting any node whose address is known is O(1), because the node already knows its predecessor.
+
+    Search — `array is better`
+    - An array gives `O(1)` random access by index, so a `sorted` array can be searched with binary search in `O(log n)`.
+    - A linked list has no random access. Reaching the middle element already costs O(n), so binary search cannot be applied at all; searching is always `O(n)` even when the list is sorted.
+    - Arrays also have far better `cache locality`, so even an O(n) linear scan of an array is typically several times faster in practice than the same scan of a linked list.
+
+    Summary
+
+    | Operation | Array | Linked list | Better |
+    |---|---|---|---|
+    | Insert at beginning | O(n) | O(1) | `Linked list` |
+    | Insert in middle (position known) | O(n) | O(1) | `Linked list` |
+    | Delete from beginning | O(n) | O(1) | `Linked list` |
+    | Delete a known node | O(n) | O(1) (doubly) | `Linked list` |
+    | Access element i | O(1) | O(n) | `Array` |
+    | Search, unsorted | O(n) | O(n) | Array (cache) |
+    | Search, sorted | O(log n) | O(n) | `Array` |
+
+    - Answer in one line: `Insert` and `Delete` favour the linked list; `Search` favours the array.
 
 ## Binary Search Tree (BST) (9)
 
@@ -6275,4 +6285,3 @@ Answer:
    | Time efficiency | Less efficient for complex relationships | More efficient for hierarchical/networked data |
    | Examples | Array, Stack, Queue, Linked List | Tree, Graph, Heap |
    | Use cases | Sequential processing, undo-redo, print queue | File systems, social networks, routing algorithms |
-
