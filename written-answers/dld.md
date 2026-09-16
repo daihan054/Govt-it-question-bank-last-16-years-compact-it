@@ -1,24 +1,33 @@
 <!-- TOC START -->
 **Table of Contents** — 10 subtopics · 157 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Logic Gates & Universal Gates](#logic-gates--universal-gates-34) | 34 |
-| 2 | [Number Systems & Base Conversions](#number-systems--base-conversions-26) | 26 |
-| 3 | [Karnaugh Map (K-Map)](#karnaugh-map-k-map-24) | 24 |
-| 4 | [Combinational Circuits (Adders, Encoders, MUX)](#combinational-circuits-adders-encoders-mux-23) | 23 |
-| 5 | [Boolean Algebra & De Morgan’s Theorem](#boolean-algebra--de-morgans-theorem-19) | 19 |
-| 6 | [Sequential Circuits (Latches & Flip-Flops)](#sequential-circuits-latches--flip-flops-17) | 17 |
-| 7 | [Logic Families (TTL vs CMOS)](#logic-families-ttl-vs-cmos-6) | 6 |
-| 8 | [2's Complement & Binary Arithmetic](#2s-complement--binary-arithmetic-4) | 4 |
-| 9 | [Number Systems & Codes](#number-systems--codes-3) | 3 |
-| 10 | [Finite State Machines (FSM)](#finite-state-machines-fsm-1) | 1 |
+- [Logic Gates & Universal Gates (34)](#logic-gates--universal-gates-34)
+  - [Universal Gates (NAND & NOR) Proofs & Implementation (22)](#universal-gates-nand--nor-proofs--implementation-22)
+  - [Basic Logic Gates, Boolean Circuits & Digital Fundamentals (12)](#basic-logic-gates-boolean-circuits--digital-fundamentals-12)
+- [Number Systems & Base Conversions (26)](#number-systems--base-conversions-26)
+- [Karnaugh Map (K-Map) (24)](#karnaugh-map-k-map-24)
+  - [Karnaugh Map Simplification (21)](#karnaugh-map-simplification-21)
+  - [Miscellaneous Off-Topic Content (3)](#miscellaneous-off-topic-content-3)
+- [Combinational Circuits (Adders, Encoders, MUX) (23)](#combinational-circuits-adders-encoders-mux-23)
+  - [Adders & Custom Combinational Logic Design (11)](#adders--custom-combinational-logic-design-11)
+  - [Multiplexers, Decoders & Displays (12)](#multiplexers-decoders--displays-12)
+- [Boolean Algebra & De Morgan’s Theorem (19)](#boolean-algebra--de-morgans-theorem-19)
+- [Sequential Circuits (Latches & Flip-Flops) (17)](#sequential-circuits-latches--flip-flops-17)
+  - [Latch vs Flip-Flop Fundamentals (7)](#latch-vs-flip-flop-fundamentals-7)
+  - [Counters & Clock Circuits (7)](#counters--clock-circuits-7)
+  - [Combinational vs Sequential Circuits Comparison (3)](#combinational-vs-sequential-circuits-comparison-3)
+- [Logic Families (TTL vs CMOS) (6)](#logic-families-ttl-vs-cmos-6)
+- [2's Complement & Binary Arithmetic (4)](#2s-complement--binary-arithmetic-4)
+- [Number Systems & Codes (3)](#number-systems--codes-3)
+- [Finite State Machines (FSM) (1)](#finite-state-machines-fsm-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Logic Gates & Universal Gates (34)
+
+### Universal Gates (NAND & NOR) Proofs & Implementation (22)
 
 1. **Draw the circuit schematic diagrams to build an Exclusive-OR (XOR) logic function using only universal NAND gates.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
@@ -128,62 +137,7 @@ Answer: A `universal gate` is a gate that can build every other logic gate on it
    - In `CMOS` a NAND gate needs 4 transistors, while an AND gate needs 6 (a NAND plus an inverter). Building everything from NAND therefore uses fewer transistors, not more.
    - Spare gates on a NAND IC can be reused anywhere in the circuit.
 
-3. **(b) Draw the X-OR and X-NOR gate truth table diagram.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
-
-Answer: XOR gate (Exclusive-OR)
-   - Output is 1 when the inputs are `different`, 0 when they are the same.
-   ```
-   Y = A (+) B = A'B + AB'
-   ```
-   ```
-          A ---|\
-               | )>--- Y      symbol: OR shape with a second curved line
-          B ---|/             at the input side
-   ```
-   ```
-   A  B | Y = A (+) B
-   -----+------------
-   0  0 |     0
-   0  1 |     1
-   1  0 |     1
-   1  1 |     0
-   ```
-
-   XNOR gate (Exclusive-NOR)
-   - Output is 1 when the inputs are `the same`, 0 when they differ. It is the complement of XOR, so it is also called the `equivalence` gate.
-   ```
-   Y = (A (+) B)' = A'B' + AB
-   ```
-   ```
-          A ---|\
-               | )>o-- Y      the same symbol with a bubble at the output
-          B ---|/
-   ```
-   ```
-   A  B | Y = (A (+) B)'
-   -----+---------------
-   0  0 |       1
-   0  1 |       0
-   1  0 |       0
-   1  1 |       1
-   ```
-
-   Side by side
-   ```
-   A  B | AND | OR | XOR | XNOR
-   -----+-----+----+-----+-----
-   0  0 |  0  | 0  |  0  |  1
-   0  1 |  0  | 1  |  1  |  0
-   1  0 |  0  | 1  |  1  |  0
-   1  1 |  1  | 1  |  0  |  1
-   ```
-
-   Uses
-   - `XOR` — the sum bit of a half adder and a full adder, parity generation, comparing two bits for inequality, and the toggle in encryption and CRC.
-   - `XNOR` — equality comparison, so it is the building block of a digital comparator, and parity checking of even parity.
-   - For more than two inputs, XOR outputs 1 when an `odd` number of inputs are 1, which is exactly what a parity generator needs.
-
-4. **Why NAND is universal gate?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
+3. **Why NAND is universal gate?** *[BCC Assistant Programmer 18.10.2025 compact it 1442 (ET: BCC)]*
 
 Answer: A `universal gate` is one that can build every other logic gate by itself. NAND is universal because `NOT`, `AND` and `OR` can all be made from NAND gates alone — and every Boolean function can be written using only those three operations.
 
@@ -243,146 +197,7 @@ Answer: A `universal gate` is one that can build every other logic gate by itsel
    - In CMOS a NAND uses 4 transistors while an AND uses 6, so a NAND-only design is actually smaller.
    - NOR is universal for the same reason, but NAND is preferred in CMOS because it is faster — the series transistors are the fast n-channel type.
 
-5. **NOR গেইট এর দুটি ইনপুট a, b হলে আউটপুট x কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.) For a two-input NOR gate with inputs a and b, the output is
-   ```
-   x = (a + b)'          also written  x = NOT (a OR b)
-   ```
-   - The NOR gate is an `OR gate followed by a NOT gate`. The output is 1 only when `both` inputs are 0; any 1 at the input makes the output 0.
-
-   Symbol
-   ```
-      a ---|\
-           | )o--- x = (a + b)'
-      b ---|/
-   ```
-
-   Truth table
-   ```
-   a  b | a + b | x = (a+b)'
-   -----+-------+-----------
-   0  0 |   0   |     1
-   0  1 |   1   |     0
-   1  0 |   1   |     0
-   1  1 |   1   |     0
-   ```
-
-   Points to note
-   - By De Morgan's theorem, `(a + b)' = a' . b'`, so a NOR gate can equally be drawn as an AND gate with both inputs inverted. This is called the `bubbled AND` form.
-   - The output is 1 only for the single input combination `a = 0, b = 0`. That is why NOR is sometimes called the "all-zero detector".
-   - NOR is a `universal gate`: NOT = (a + a)', OR = ((a+b)')', and AND = (a' + b')'.
-
-6. **\bar{A}\bar{B}.(\overline{A+B}).C ; Write Truth Table.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1320 (ET: DU)]*
-
-Answer: The expression is
-   ```
-   F = A'B' . (A + B)' . C
-   ```
-
-   Step 1 — simplify first
-   ```
-   (A + B)' = A'B'                  De Morgan's theorem
-   F = A'B' . A'B' . C
-     = A'B' . C                     since X . X = X (idempotent law)
-   F = A'B'C
-   ```
-   - So the function is 1 only when A = 0, B = 0 and C = 1 — a single minterm, m1.
-
-   Step 2 — truth table
-   ```
-   A  B  C | A' | B' | A'B' | (A+B)' | F = A'B'.(A+B)'.C
-   --------+----+----+------+--------+------------------
-   0  0  0 | 1  | 1  |  1   |   1    |        0
-   0  0  1 | 1  | 1  |  1   |   1    |        1
-   0  1  0 | 1  | 0  |  0   |   0    |        0
-   0  1  1 | 1  | 0  |  0   |   0    |        0
-   1  0  0 | 0  | 1  |  0   |   0    |        0
-   1  0  1 | 0  | 1  |  0   |   0    |        0
-   1  1  0 | 0  | 0  |  0   |   0    |        0
-   1  1  1 | 0  | 0  |  0   |   0    |        0
-   ```
-
-   Result
-   ```
-   F = A'B'C = Sigma m(1)      -> output is 1 for exactly one row, A B C = 0 0 1
-   ```
-
-   Logic circuit
-   ```
-      A ---|>o--- A' ---+
-                        |---|\
-      B ---|>o--- B' ---+    | )--- F
-                        |    |/
-      C -----------------+   (3-input AND)
-   ```
-   - Only three inverters are not needed — two inverters (for A and B) and one 3-input AND gate build the whole circuit, because the `(A+B)'` term was absorbed by simplification.
-
-7. **Logic Circuit of Boolean algebra: Q = \bar{C} + \bar{A}B + \overline{BC(B + C)}; Where output Q and input Q(A, B, C)=(0,0,1)?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 315 (ET: N/A)]*
-
-Answer: The expression is
-   ```
-   Q = C' + A'B + (B.C.(B + C))'
-   ```
-
-   Step 1 — simplify the third term
-   ```
-   B . C . (B + C)
-      = (B.C.B) + (B.C.C)          distributive law
-      = B.C + B.C                  since B.B = B and C.C = C
-      = B.C                        (absorption : B.C is already inside B+C)
-
-   so   (B.C.(B+C))' = (B.C)' = B' + C'
-   ```
-
-   Step 2 — simplify the whole expression
-   ```
-   Q = C' + A'B + B' + C'
-     = C' + B' + A'B              since C' + C' = C'
-     = C' + B' + A'               since B' + A'B = B' + A'  (absorption)
-   Q = A' + B' + C'
-     = (A . B . C)'               De Morgan
-   ```
-   - So Q is simply a `3-input NAND` of A, B and C. It is 0 only when A = B = C = 1.
-
-   Step 3 — the required value at (A, B, C) = (0, 0, 1)
-   ```
-   Method 1 (original expression):
-      C'  = 1'      = 0
-      A'B = 1 . 0   = 0
-      (B.C.(B+C))' = (0 . 1 . 1)' = 0' = 1
-
-      Q = 0 + 0 + 1 = 1
-
-   Method 2 (simplified form):
-      Q = (A.B.C)' = (0 . 0 . 1)' = 0' = 1
-   ```
-   ```
-   Q = 1
-   ```
-
-   Full truth table
-   ```
-   A  B  C | Q = (A.B.C)'
-   --------+-------------
-   0  0  0 |      1
-   0  0  1 |      1     <- the asked row
-   0  1  0 |      1
-   0  1  1 |      1
-   1  0  0 |      1
-   1  0  1 |      1
-   1  1  0 |      1
-   1  1  1 |      0
-   ```
-
-   Logic circuit
-   ```
-      A ---|\
-      B ---| )o--- Q            a single 3-input NAND gate
-      C ---|/
-   ```
-
-8. **Implement OR gate and AND gate using minimum number of NAND and NOR gate.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
+4. **Implement OR gate and AND gate using minimum number of NAND and NOR gate.** *[PGCB Assistant Engineer (CSE) 17.05.2024 compact it 399 (ET: BUET)]*
 
 Answer: The idea in both cases is De Morgan's theorem, plus the fact that a NAND or NOR with its inputs tied together acts as an inverter.
 
@@ -452,78 +267,7 @@ Answer: The idea in both cases is De Morgan's theorem, plus the fact that a NAND
 
    - The pattern is symmetric: NAND makes AND cheaply and OR expensively; NOR does the opposite. This follows directly from De Morgan's theorem.
 
-9. **Draw the logic circuit of the Boolean Expression, Q = \bar{A}\bar{B} + BC\overline{(B+C)}; find Q as output where input (A, B, C) = (1, 0, 1).** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 307 (ET: BIBM)]*
-
-Answer: The expression is
-   ```
-   Q = A'B' + B.C.(B + C)'
-   ```
-
-   Step 1 — simplify the second term
-   ```
-   (B + C)' = B'C'                       De Morgan
-   B . C . (B + C)' = B . C . B' . C'
-                    = (B . B') . (C . C')
-                    = 0 . 0
-                    = 0                  since X . X' = 0
-   ```
-   - The second term is `always 0`, whatever the inputs. So
-   ```
-   Q = A'B' + 0 = A'B'
-   ```
-   - Note that `A'B' = (A + B)'`, which is a NOR gate.
-
-   Step 2 — required value at (A, B, C) = (1, 0, 1)
-   ```
-   Method 1 (original expression):
-      A'B'          = 1' . 0' = 0 . 1 = 0
-      B.C.(B+C)'    = 0 . 1 . (0+1)' = 0 . 1 . 0 = 0
-
-      Q = 0 + 0 = 0
-
-   Method 2 (simplified):
-      Q = A'B' = 0 . 1 = 0
-   ```
-   ```
-   Q = 0
-   ```
-   - C has no effect on the output at all, which is the point of the question.
-
-   Truth table
-   ```
-   A  B  C | Q = A'B'
-   --------+---------
-   0  0  0 |    1
-   0  0  1 |    1
-   0  1  0 |    0
-   0  1  1 |    0
-   1  0  0 |    0
-   1  0  1 |    0     <- the asked row
-   1  1  0 |    0
-   1  1  1 |    0
-   ```
-
-   Logic circuit — original form as asked
-   ```
-      A ---|>o--- A' ---|\
-                        | )--- A'B' ---|\
-      B ---|>o--- B' ---|/              |
-                                        | )--- Q
-      B ---+--------------|\            |
-           |              | )--- BC ----|/
-      C ---+--------|\    |/           (OR)
-           |        | )o- (B+C)' -------+
-      C ---+--------|/                (this branch is always 0)
-   ```
-
-   Simplified circuit
-   ```
-      A ---|\
-           | )o--- Q = (A + B)'          a single NOR gate
-      B ---|/
-   ```
-
-10. **What is Universal gate and how is constructed it?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
+5. **What is Universal gate and how is constructed it?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 405 (ET: N/A)]*
 
 Answer: A `universal gate` is a gate that can build every other logic gate on its own. `NAND` and `NOR` are the two universal gates.
 
@@ -585,7 +329,7 @@ Answer: A `universal gate` is a gate that can build every other logic gate on it
     - Spare gates on an IC can be reused anywhere in the circuit.
     - Design and testing are uniform, because every gate behaves the same way.
 
-11. **মৌলিক গেইট কী? NAND এবং NOR গেইটকে কেন সার্বজনীন গেইট বলা হয় ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
+6. **মৌলিক গেইট কী? NAND এবং NOR গেইটকে কেন সার্বজনীন গেইট বলা হয় ব্যাখ্যা করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 406 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) Basic gates
     - A `basic gate` is one of the three gates that correspond directly to the three fundamental operations of Boolean algebra. Every other gate is built from them.
@@ -645,7 +389,7 @@ Answer: (Answered in English, as required for IT topics.) Basic gates
     Practical advantage
     - Only one type of gate is manufactured, lowering cost. In CMOS, NAND (4 transistors) is cheaper than AND (6 transistors), so NAND-only design saves silicon area as well.
 
-12. **X = \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC সমীকরণটির সরলীকৃত মান NAND এবং NOR গেইট দ্বারা বাস্তবায়ন করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
+7. **X = \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC সমীকরণটির সরলীকৃত মান NAND এবং NOR গেইট দ্বারা বাস্তবায়ন করুন।** *[18th NTRCA Assistant Teacher (ICT) 12.07.2024 compact it 407 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The expression is
     ```
@@ -729,54 +473,7 @@ Answer: (Answered in English, as required for IT topics.) The expression is
     ```
     - 4 NOR gates: three 2-input NORs and one 3-input NOR. An OR-AND form becomes NOR-NOR the same way an AND-OR form becomes NAND-NAND.
 
-13. **$Y = A \cdot B + \overline{(A \cdot B)}$** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
-
-Answer: The expression is
-    ```
-    Y = A.B + (A.B)'
-    ```
-
-    Simplification
-    ```
-    Let X = A.B
-
-    Y = X + X'
-    Y = 1                    complement law :  X + X' = 1  for any X
-    ```
-    - The output is `always 1`, no matter what A and B are. Such a function is called a `tautology`, and the circuit is a `constant 1` generator.
-
-    Truth table
-    ```
-    A  B | A.B | (A.B)' | Y = A.B + (A.B)'
-    -----+-----+--------+-----------------
-    0  0 |  0  |   1    |        1
-    0  1 |  0  |   1    |        1
-    1  0 |  0  |   1    |        1
-    1  1 |  1  |   0    |        1
-    ```
-
-    Logic circuit as written
-    ```
-       A ---+---|\
-            |   | )--- A.B -------------|\
-       B ---+---|/                      | )--- Y = 1
-            |                           |/
-            +---|\                     (OR)
-            |   | )o--- (A.B)' ---------+
-            +---|/
-    ```
-
-    Simplified circuit
-    ```
-       Y = 1        (tie the output line to logic HIGH / Vcc)
-    ```
-
-    Points to note
-    - The whole circuit can be removed and replaced by a permanent connection to logic 1. This is the practical value of Boolean simplification: two gates and an inverter reduce to a wire.
-    - The same law in its dual form gives `X . X' = 0`, a constant 0 circuit.
-    - A common exam trap is to read the expression as `A.B + A'.B'`, which is `XNOR`, not a constant. Note carefully whether the bar covers the whole product `(A.B)'` or each variable separately.
-
-14. **Explain: NOR and NAND is a Universal gate.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
+8. **Explain: NOR and NAND is a Universal gate.** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
 Answer: A `universal gate` can build every other logic gate by itself. Both NAND and NOR are universal, because both can produce `NOT`, `AND` and `OR` — and every Boolean function can be written using only those three operations.
 
@@ -845,73 +542,7 @@ Answer: A `universal gate` can build every other logic gate by itself. Both NAND
     Practical note
     - NAND is preferred in CMOS design, because a CMOS NAND puts the fast n-channel transistors in series, making it quicker than a CMOS NOR of the same size.
 
-15. **Define basic logical operations with examples. (AND, OR, NOT)** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
-
-Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and gives one binary output, following a rule of Boolean algebra. `AND`, `OR` and `NOT` are the three basic operations; every other gate is built from them.
-
-    AND — logical multiplication
-    - Output is 1 only when `all` inputs are 1.
-    ```
-    Y = A . B      (also written AB or A AND B)
-
-       A ---|‾‾\
-            |   )--- Y
-       B ---|__/
-    ```
-    ```
-    A  B | Y = A.B
-    -----+--------
-    0  0 |   0
-    0  1 |   0
-    1  0 |   0
-    1  1 |   1
-    ```
-    - Example: a car buzzer sounds only when the key is in `AND` the door is open. In a circuit, two switches in `series`.
-
-    OR — logical addition
-    - Output is 1 when `any` input is 1.
-    ```
-    Y = A + B      (also written A OR B)
-
-       A ---|\
-            | )--- Y
-       B ---|/
-    ```
-    ```
-    A  B | Y = A+B
-    -----+--------
-    0  0 |   0
-    0  1 |   1
-    1  0 |   1
-    1  1 |   1
-    ```
-    - Example: a room light controlled from two switches — either one turns it on. In a circuit, two switches in `parallel`.
-
-    NOT — logical complement (inverter)
-    - Output is the opposite of the input. It has exactly one input.
-    ```
-    Y = A'        (also written Ā or NOT A)
-
-       A ---|>o--- Y
-    ```
-    ```
-    A | Y = A'
-    --+--------
-    0 |   1
-    1 |   0
-    ```
-    - Example: an alarm that sounds when a sensor is `not` detecting.
-
-    Laws worth quoting
-    ```
-    AND : A.0 = 0    A.1 = A    A.A = A    A.A' = 0
-    OR  : A+0 = A    A+1 = 1    A+A = A    A+A' = 1
-    NOT : (A')' = A
-    ```
-
-    - These three are `functionally complete`: any Boolean function can be written with them alone. That is why NAND and NOR are called universal — each can produce all three by itself.
-
-16. **(a) Implement the following expression using NAND gates only: F = AB\bar{C} + ABC + \bar{A}BC** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
+9. **(a) Implement the following expression using NAND gates only: F = AB\bar{C} + ABC + \bar{A}BC** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
 
 Answer: The function is
     ```
@@ -984,7 +615,7 @@ Answer: The function is
     - Only 3 NAND gates are needed. No inverters are required, because the simplified form contains no complemented variable — this is why the K-map step must come first.
     - If the unsimplified form were implemented directly, it would need 3 inverters plus four NAND gates, so simplification saves four gates.
 
-17. **NAND gate ব্যবহার করে OR gate তৈরি করার logic diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
+10. **NAND gate ব্যবহার করে OR gate তৈরি করার logic diagram অঙ্কন করুন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
 Answer: (Answered in English, as required for IT topics.) An OR gate needs `3 NAND gates`. The basis is De Morgan's theorem:
     ```
@@ -1033,7 +664,7 @@ Answer: (Answered in English, as required for IT topics.) An OR gate needs `3 NA
     - A NAND gate with both inputs tied together works as an inverter, because `(A.A)' = A'`.
     - Three gates is the minimum for OR from NAND. By contrast AND needs only 2 and NOT only 1 — NAND makes AND cheaply and OR expensively, while NOR does the opposite.
 
-18. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
+11. **What is Logic gate? Prove that NAND and NOR gate is Universal gate.** *[CAAB Assistant Maintenance Engineer (AME) 2022 compact it 724 (ET: N/A)]*
 
 Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and produces one binary output according to a rule of Boolean algebra. It is the basic building block of every digital circuit.
     ```
@@ -1099,7 +730,7 @@ Answer: A `logic gate` is an electronic circuit that takes one or more binary in
 
     - Practical value: only one gate type has to be manufactured, and in CMOS a NAND (4 transistors) is smaller than an AND (6 transistors), so universal-gate design is cheaper as well as simpler.
 
-19. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
+12. **Implementation the following two Boolean functions using NAND gate only: (a) F = A + (B' + C)(D' + BE') (b) F = ((A + B) + CD)E** *[NWPGCL Junior Assistant Manager (IT) 2022 compact it 731 (ET: N/A)]*
 
 Answer: The rule used throughout: an `AND` becomes a NAND, an `OR` becomes a NAND with inverted inputs, and a NAND with its inputs tied together is an inverter.
 
@@ -1186,7 +817,7 @@ Answer: The rule used throughout: an `AND` becomes a NAND, an `OR` becomes a NAN
 
     - Gate count: (a) 8 NAND gates, (b) 6 NAND gates. In both cases the trick is the identity `X + Y = (X' . Y')'`, which turns every OR into a NAND whose inputs are already available in complemented form.
 
-20. **(গ) Universal logic gate কি? 3-input এর একটি Universal logic gate এর Logic symbol এবং Truth Table দেখান।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
+13. **(গ) Universal logic gate কি? 3-input এর একটি Universal logic gate এর Logic symbol এবং Truth Table দেখান।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 770 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) A `universal logic gate` is a gate that can build every other logic gate by itself. `NAND` and `NOR` are the two universal gates, because each can produce `NOT`, `AND` and `OR` — and any Boolean function can be written using only those three.
 
@@ -1250,7 +881,7 @@ Answer: (Answered in English, as required for IT topics.) A `universal logic gat
     ```
     - Three 2-input NAND gates give one 3-input NAND.
 
-21. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** *[DMLC Assistant Teacher (ICT) 2021 compact it 827-828 (ET: N/A)]*
+14. **What is Universal gate? NAND and NOR gate কে Universal gate বলা হয় কেন?** *[DMLC Assistant Teacher (ICT) 2021 compact it 827-828 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) A `universal gate` is a gate that can build every other logic gate on its own. NAND and NOR are the two universal gates.
 
@@ -1308,7 +939,7 @@ Answer: (Answered in English, as required for IT topics.) A `universal gate` is 
     - Uniform propagation delay across the circuit, which makes timing easier to analyse.
     - Spare gates on an IC package can be reused anywhere.
 
-22. **Implement X-OR gate using NAND gate. Maximum 4 NAND gate are using.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
+15. **Implement X-OR gate using NAND gate. Maximum 4 NAND gate are using.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 862 (ET: BUET)]*
 
 Answer: XOR is 1 only when the inputs differ.
     ```
@@ -1363,7 +994,7 @@ Answer: XOR is 1 only when the inputs differ.
     - Adding one more NAND as an inverter at the output turns the circuit into `XNOR`, using 5 gates.
     - The same four-gate structure is used inside a half adder, where the XOR gives the sum bit and one extra NAND gives the carry.
 
-23. **What is basic Logic gate? Which gate are called Universal gate and write down advantages of Universal gate?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873-874 (ET: N/A)]*
+16. **What is basic Logic gate? Which gate are called Universal gate and write down advantages of Universal gate?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873-874 (ET: N/A)]*
 
 Answer: Basic logic gate
     - A `basic logic gate` is one of the three gates that match the three fundamental operations of Boolean algebra. Every other gate is built from them.
@@ -1414,7 +1045,7 @@ Answer: Basic logic gate
 
     - The one cost: a function that needs many OR operations uses more NAND gates than a mixed design would. In modern VLSI this is outweighed by the manufacturing advantage.
 
-24. **How can you Implement AND, OR and NOT gates using only NAND and NOR gates? What is the main difference between Latch and Flip-flop?** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
+17. **How can you Implement AND, OR and NOT gates using only NAND and NOR gates? What is the main difference between Latch and Flip-flop?** *[BPSC Assistant Programmer (Ministry of Health) 2021 compact it 915 (ET: N/A)]*
 
 Answer: Part 1 — building AND, OR and NOT
 
@@ -1483,7 +1114,7 @@ Answer: Part 1 — building AND, OR and NOT
 
     - The main practical difference: a flip-flop's output changes at one predictable instant, so many of them can be clocked together in a synchronous system. A latch's output can change at any time while enabled, which causes race conditions in a large design.
 
-25. **Make NAND gate using NOR gate.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
+18. **Make NAND gate using NOR gate.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
 Answer: A NAND gate needs `4 NOR gates`. The route is De Morgan's theorem.
     ```
@@ -1532,84 +1163,7 @@ Answer: A NAND gate needs `4 NOR gates`. The route is De Morgan's theorem.
     - Four gates is the minimum. The dual result also holds: a NOR gate needs 4 NAND gates, by the same argument.
     - This construction is the standard proof that NOR is a `universal gate` — if NOR can build NAND, and NAND can build everything, then so can NOR.
 
-26. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 958-959 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.) A `logic gate` is an electronic circuit that takes one or more binary inputs (0 or 1) and gives one binary output, following a rule of Boolean algebra. Gates are the basic building blocks of every digital circuit — adders, registers, memories and processors are all made of them.
-
-    - 0 and 1 are represented by two voltage levels, typically 0 V and +5 V (or +3.3 V), so a gate is really a switching circuit built from transistors.
-
-    Basic logic gates — there are `three`
-    ```
-    AND, OR, NOT
-    ```
-    - They are called basic because they match the three fundamental operations of Boolean algebra, and every other gate is built from them.
-
-    AND gate
-    ```
-    Y = A . B          output 1 only when ALL inputs are 1
-
-       A ---|‾‾\
-            |   )--- Y            like two switches in SERIES
-       B ---|__/
-    ```
-    ```
-    A  B | Y
-    -----+---
-    0  0 | 0
-    0  1 | 0
-    1  0 | 0
-    1  1 | 1
-    ```
-
-    OR gate
-    ```
-    Y = A + B          output 1 when ANY input is 1
-
-       A ---|\
-            | )--- Y              like two switches in PARALLEL
-       B ---|/
-    ```
-    ```
-    A  B | Y
-    -----+---
-    0  0 | 0
-    0  1 | 1
-    1  0 | 1
-    1  1 | 1
-    ```
-
-    NOT gate (inverter)
-    ```
-    Y = A'             output is the opposite of the input; one input only
-
-       A ---|>o--- Y
-    ```
-    ```
-    A | Y
-    --+---
-    0 | 1
-    1 | 0
-    ```
-
-    The other gates, built from these
-    ```
-    NAND : Y = (A.B)'      AND followed by NOT      universal gate
-    NOR  : Y = (A+B)'      OR followed by NOT       universal gate
-    XOR  : Y = A'B + AB'   output 1 when inputs DIFFER
-    XNOR : Y = (A(+)B)'    output 1 when inputs are the SAME
-    ```
-    ```
-    A  B | AND | OR | NAND | NOR | XOR | XNOR
-    -----+-----+----+------+-----+-----+-----
-    0  0 |  0  | 0  |  1   |  1  |  0  |  1
-    0  1 |  0  | 1  |  1   |  0  |  1  |  0
-    1  0 |  0  | 1  |  1   |  0  |  1  |  0
-    1  1 |  1  | 1  |  0   |  0  |  0  |  1
-    ```
-
-    - The three basic gates are `functionally complete`: any Boolean function can be built from them alone. NAND and NOR are called `universal` because each one by itself can produce all three.
-
-27. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
+19. **Design 3 input NAND gate and 2 input XOR gate using 2 input NAND gate.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1034 (ET: BUET)]*
 
 Answer: Part 1 — 3-input NAND from 2-input NAND gates
 
@@ -1681,7 +1235,7 @@ Answer: Part 1 — 3-input NAND from 2-input NAND gates
 
     - Total for the whole question: 3 NAND gates for the 3-input NAND and 4 NAND gates for the XOR.
 
-28. **How will realize a AND gate and OR gate using CMOS NAND and NOR gate?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1051-1052 (ET: BUET)]*
+20. **How will realize a AND gate and OR gate using CMOS NAND and NOR gate?** *[Bangladesh Bank Assistant Maintenance Engineer 2019 compact it 1051-1052 (ET: BUET)]*
 
 Answer: In CMOS the natural gates are the `inverting` ones — NAND and NOR — because a CMOS gate is built as a pull-up network of PMOS transistors and a pull-down network of NMOS transistors, and that structure always inverts. AND and OR are therefore made by adding an `inverter` at the output.
 
@@ -1746,7 +1300,7 @@ Answer: In CMOS the natural gates are the `inverting` ones — NAND and NOR — 
 
     - Practical point: because AND and OR each cost an extra inverter stage, CMOS designers keep circuits in NAND/NOR form wherever possible. NAND is usually preferred over NOR, since its series transistors are the faster n-channel type, while a NOR puts the slower p-channel transistors in series.
 
-29. **(খ) Universal Gate কাকে বলে? Universal Gate-এর সার্বজনীনতা প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
+21. **(খ) Universal Gate কাকে বলে? Universal Gate-এর সার্বজনীনতা প্রমাণ করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1074 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) A `universal gate` is a gate that can build every other logic gate by itself. `NAND` and `NOR` are the two universal gates.
 
@@ -1823,7 +1377,531 @@ Answer: (Answered in English, as required for IT topics.) A `universal gate` is 
     ```
     - By duality, a product-of-sums (OR-AND) circuit becomes NOR-NOR the same way, with no extra gates.
 
-30. **Draw a circuit to relaise the following expression using AND, OR gates and inverter: $F = \bar{A}BC + A\bar{B}C + AB\bar{C}$** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
+22. **What do you understand by universality of logic gate? Prove universality of NOR logic gate.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1280 (ET: N/A)]*
+
+**Design Basic gate using NOR gate or Show that NOR is gate Universal gate.** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 40]]*
+
+Answer: Universality of a logic gate
+    - `Universality` means that a single type of gate is enough, on its own, to build every other logic gate and therefore any Boolean function at all.
+    - The reason it is possible: every Boolean function can be written in `sum of products` form, which uses only three operations — `NOT`, `AND` and `OR`. If one gate can produce those three, it can produce anything.
+    - Only `NAND` and `NOR` have this property. AND, OR and XOR do not — none of them can produce inversion on its own.
+
+    Proof of universality for NOR
+
+    (a) NOT from NOR — 1 gate
+    ```
+       A ---+---|\
+            |   | )o--- A'                A' = (A + A)'
+            +---|/
+    ```
+    ```
+    A | (A + A)'
+    --+---------
+    0 |    1
+    1 |    0        -> the NOT truth table
+    ```
+
+    (b) OR from NOR — 2 gates
+    ```
+       A ---|\                +---|\
+            | )o--- (A+B)' ---+   | )o--- A + B      A+B = ((A+B)')'
+       B ---|/                +---|/
+    ```
+    ```
+    A  B | (A+B)' | ((A+B)')'
+    -----+--------+----------
+    0  0 |   1    |     0
+    0  1 |   0    |     1
+    1  0 |   0    |     1
+    1  1 |   0    |     1      -> the OR truth table
+    ```
+
+    (c) AND from NOR — 3 gates
+    ```
+       A --+--|\
+           +--| )o-- A' --|\
+                          | )o--- A . B      A.B = (A' + B')'  [De Morgan]
+       B --+--|\     B' --|/
+           +--| )o--
+    ```
+    ```
+    A  B | A' | B' | A'+B' | (A'+B')'
+    -----+----+----+-------+---------
+    0  0 |  1 |  1 |   1   |    0
+    0  1 |  1 |  0 |   1   |    0
+    1  0 |  0 |  1 |   1   |    0
+    1  1 |  0 |  0 |   0   |    1      -> the AND truth table
+    ```
+
+    - NOR produces NOT, OR and AND, so NOR alone is `functionally complete` — it is a universal gate.
+
+    The general conversion
+    ```
+    Any function -> product of sums -> two-level OR-AND circuit
+    F = (A+B)(C+D) = ((A+B)' + (C+D)')'      -> a pure NOR-NOR circuit
+    ```
+    - The structure does not change: every OR becomes a NOR and the final AND becomes a NOR. The same argument with De Morgan's other form turns an AND-OR circuit into NAND-NAND.
+
+    - Practical value: a whole chip can be fabricated from one repeated cell. NOR was the gate of choice in early RTL logic; CMOS designs prefer NAND, because its series transistors are the faster n-channel type.
+
+### Basic Logic Gates, Boolean Circuits & Digital Fundamentals (12)
+
+1. **(b) Draw the X-OR and X-NOR gate truth table diagram.** *[Cadet College (Combined) Lecturer ICT 11.05.2025 compact it 1445 (ET: N/A)]*
+
+Answer: XOR gate (Exclusive-OR)
+   - Output is 1 when the inputs are `different`, 0 when they are the same.
+   ```
+   Y = A (+) B = A'B + AB'
+   ```
+   ```
+          A ---|\
+               | )>--- Y      symbol: OR shape with a second curved line
+          B ---|/             at the input side
+   ```
+   ```
+   A  B | Y = A (+) B
+   -----+------------
+   0  0 |     0
+   0  1 |     1
+   1  0 |     1
+   1  1 |     0
+   ```
+
+   XNOR gate (Exclusive-NOR)
+   - Output is 1 when the inputs are `the same`, 0 when they differ. It is the complement of XOR, so it is also called the `equivalence` gate.
+   ```
+   Y = (A (+) B)' = A'B' + AB
+   ```
+   ```
+          A ---|\
+               | )>o-- Y      the same symbol with a bubble at the output
+          B ---|/
+   ```
+   ```
+   A  B | Y = (A (+) B)'
+   -----+---------------
+   0  0 |       1
+   0  1 |       0
+   1  0 |       0
+   1  1 |       1
+   ```
+
+   Side by side
+   ```
+   A  B | AND | OR | XOR | XNOR
+   -----+-----+----+-----+-----
+   0  0 |  0  | 0  |  0  |  1
+   0  1 |  0  | 1  |  1  |  0
+   1  0 |  0  | 1  |  1  |  0
+   1  1 |  1  | 1  |  0  |  1
+   ```
+
+   Uses
+   - `XOR` — the sum bit of a half adder and a full adder, parity generation, comparing two bits for inequality, and the toggle in encryption and CRC.
+   - `XNOR` — equality comparison, so it is the building block of a digital comparator, and parity checking of even parity.
+   - For more than two inputs, XOR outputs 1 when an `odd` number of inputs are 1, which is exactly what a parity generator needs.
+
+2. **NOR গেইট এর দুটি ইনপুট a, b হলে আউটপুট x কত?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) For a two-input NOR gate with inputs a and b, the output is
+   ```
+   x = (a + b)'          also written  x = NOT (a OR b)
+   ```
+   - The NOR gate is an `OR gate followed by a NOT gate`. The output is 1 only when `both` inputs are 0; any 1 at the input makes the output 0.
+
+   Symbol
+   ```
+      a ---|\
+           | )o--- x = (a + b)'
+      b ---|/
+   ```
+
+   Truth table
+   ```
+   a  b | a + b | x = (a+b)'
+   -----+-------+-----------
+   0  0 |   0   |     1
+   0  1 |   1   |     0
+   1  0 |   1   |     0
+   1  1 |   1   |     0
+   ```
+
+   Points to note
+   - By De Morgan's theorem, `(a + b)' = a' . b'`, so a NOR gate can equally be drawn as an AND gate with both inputs inverted. This is called the `bubbled AND` form.
+   - The output is 1 only for the single input combination `a = 0, b = 0`. That is why NOR is sometimes called the "all-zero detector".
+   - NOR is a `universal gate`: NOT = (a + a)', OR = ((a+b)')', and AND = (a' + b')'.
+
+3. **\bar{A}\bar{B}.(\overline{A+B}).C ; Write Truth Table.** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it 1320 (ET: DU)]*
+
+Answer: The expression is
+   ```
+   F = A'B' . (A + B)' . C
+   ```
+
+   Step 1 — simplify first
+   ```
+   (A + B)' = A'B'                  De Morgan's theorem
+   F = A'B' . A'B' . C
+     = A'B' . C                     since X . X = X (idempotent law)
+   F = A'B'C
+   ```
+   - So the function is 1 only when A = 0, B = 0 and C = 1 — a single minterm, m1.
+
+   Step 2 — truth table
+   ```
+   A  B  C | A' | B' | A'B' | (A+B)' | F = A'B'.(A+B)'.C
+   --------+----+----+------+--------+------------------
+   0  0  0 | 1  | 1  |  1   |   1    |        0
+   0  0  1 | 1  | 1  |  1   |   1    |        1
+   0  1  0 | 1  | 0  |  0   |   0    |        0
+   0  1  1 | 1  | 0  |  0   |   0    |        0
+   1  0  0 | 0  | 1  |  0   |   0    |        0
+   1  0  1 | 0  | 1  |  0   |   0    |        0
+   1  1  0 | 0  | 0  |  0   |   0    |        0
+   1  1  1 | 0  | 0  |  0   |   0    |        0
+   ```
+
+   Result
+   ```
+   F = A'B'C = Sigma m(1)      -> output is 1 for exactly one row, A B C = 0 0 1
+   ```
+
+   Logic circuit
+   ```
+      A ---|>o--- A' ---+
+                        |---|\
+      B ---|>o--- B' ---+    | )--- F
+                        |    |/
+      C -----------------+   (3-input AND)
+   ```
+   - Only three inverters are not needed — two inverters (for A and B) and one 3-input AND gate build the whole circuit, because the `(A+B)'` term was absorbed by simplification.
+
+4. **Logic Circuit of Boolean algebra: Q = \bar{C} + \bar{A}B + \overline{BC(B + C)}; Where output Q and input Q(A, B, C)=(0,0,1)?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 315 (ET: N/A)]*
+
+Answer: The expression is
+   ```
+   Q = C' + A'B + (B.C.(B + C))'
+   ```
+
+   Step 1 — simplify the third term
+   ```
+   B . C . (B + C)
+      = (B.C.B) + (B.C.C)          distributive law
+      = B.C + B.C                  since B.B = B and C.C = C
+      = B.C                        (absorption : B.C is already inside B+C)
+
+   so   (B.C.(B+C))' = (B.C)' = B' + C'
+   ```
+
+   Step 2 — simplify the whole expression
+   ```
+   Q = C' + A'B + B' + C'
+     = C' + B' + A'B              since C' + C' = C'
+     = C' + B' + A'               since B' + A'B = B' + A'  (absorption)
+   Q = A' + B' + C'
+     = (A . B . C)'               De Morgan
+   ```
+   - So Q is simply a `3-input NAND` of A, B and C. It is 0 only when A = B = C = 1.
+
+   Step 3 — the required value at (A, B, C) = (0, 0, 1)
+   ```
+   Method 1 (original expression):
+      C'  = 1'      = 0
+      A'B = 1 . 0   = 0
+      (B.C.(B+C))' = (0 . 1 . 1)' = 0' = 1
+
+      Q = 0 + 0 + 1 = 1
+
+   Method 2 (simplified form):
+      Q = (A.B.C)' = (0 . 0 . 1)' = 0' = 1
+   ```
+   ```
+   Q = 1
+   ```
+
+   Full truth table
+   ```
+   A  B  C | Q = (A.B.C)'
+   --------+-------------
+   0  0  0 |      1
+   0  0  1 |      1     <- the asked row
+   0  1  0 |      1
+   0  1  1 |      1
+   1  0  0 |      1
+   1  0  1 |      1
+   1  1  0 |      1
+   1  1  1 |      0
+   ```
+
+   Logic circuit
+   ```
+      A ---|\
+      B ---| )o--- Q            a single 3-input NAND gate
+      C ---|/
+   ```
+
+5. **Draw the logic circuit of the Boolean Expression, Q = \bar{A}\bar{B} + BC\overline{(B+C)}; find Q as output where input (A, B, C) = (1, 0, 1).** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 307 (ET: BIBM)]*
+
+Answer: The expression is
+   ```
+   Q = A'B' + B.C.(B + C)'
+   ```
+
+   Step 1 — simplify the second term
+   ```
+   (B + C)' = B'C'                       De Morgan
+   B . C . (B + C)' = B . C . B' . C'
+                    = (B . B') . (C . C')
+                    = 0 . 0
+                    = 0                  since X . X' = 0
+   ```
+   - The second term is `always 0`, whatever the inputs. So
+   ```
+   Q = A'B' + 0 = A'B'
+   ```
+   - Note that `A'B' = (A + B)'`, which is a NOR gate.
+
+   Step 2 — required value at (A, B, C) = (1, 0, 1)
+   ```
+   Method 1 (original expression):
+      A'B'          = 1' . 0' = 0 . 1 = 0
+      B.C.(B+C)'    = 0 . 1 . (0+1)' = 0 . 1 . 0 = 0
+
+      Q = 0 + 0 = 0
+
+   Method 2 (simplified):
+      Q = A'B' = 0 . 1 = 0
+   ```
+   ```
+   Q = 0
+   ```
+   - C has no effect on the output at all, which is the point of the question.
+
+   Truth table
+   ```
+   A  B  C | Q = A'B'
+   --------+---------
+   0  0  0 |    1
+   0  0  1 |    1
+   0  1  0 |    0
+   0  1  1 |    0
+   1  0  0 |    0
+   1  0  1 |    0     <- the asked row
+   1  1  0 |    0
+   1  1  1 |    0
+   ```
+
+   Logic circuit — original form as asked
+   ```
+      A ---|>o--- A' ---|\
+                        | )--- A'B' ---|\
+      B ---|>o--- B' ---|/              |
+                                        | )--- Q
+      B ---+--------------|\            |
+           |              | )--- BC ----|/
+      C ---+--------|\    |/           (OR)
+           |        | )o- (B+C)' -------+
+      C ---+--------|/                (this branch is always 0)
+   ```
+
+   Simplified circuit
+   ```
+      A ---|\
+           | )o--- Q = (A + B)'          a single NOR gate
+      B ---|/
+   ```
+
+6. **$Y = A \cdot B + \overline{(A \cdot B)}$** *[EGCB Sub-Divisional Engineer (ICT) 28.01.2023 compact it 563 (ET: BUET)]*
+
+Answer: The expression is
+    ```
+    Y = A.B + (A.B)'
+    ```
+
+    Simplification
+    ```
+    Let X = A.B
+
+    Y = X + X'
+    Y = 1                    complement law :  X + X' = 1  for any X
+    ```
+    - The output is `always 1`, no matter what A and B are. Such a function is called a `tautology`, and the circuit is a `constant 1` generator.
+
+    Truth table
+    ```
+    A  B | A.B | (A.B)' | Y = A.B + (A.B)'
+    -----+-----+--------+-----------------
+    0  0 |  0  |   1    |        1
+    0  1 |  0  |   1    |        1
+    1  0 |  0  |   1    |        1
+    1  1 |  1  |   0    |        1
+    ```
+
+    Logic circuit as written
+    ```
+       A ---+---|\
+            |   | )--- A.B -------------|\
+       B ---+---|/                      | )--- Y = 1
+            |                           |/
+            +---|\                     (OR)
+            |   | )o--- (A.B)' ---------+
+            +---|/
+    ```
+
+    Simplified circuit
+    ```
+       Y = 1        (tie the output line to logic HIGH / Vcc)
+    ```
+
+    Points to note
+    - The whole circuit can be removed and replaced by a permanent connection to logic 1. This is the practical value of Boolean simplification: two gates and an inverter reduce to a wire.
+    - The same law in its dual form gives `X . X' = 0`, a constant 0 circuit.
+    - A common exam trap is to read the expression as `A.B + A'.B'`, which is `XNOR`, not a constant. Note carefully whether the bar covers the whole product `(A.B)'` or each variable separately.
+
+7. **Define basic logical operations with examples. (AND, OR, NOT)** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+Answer: A `logic gate` is an electronic circuit that takes one or more binary inputs and gives one binary output, following a rule of Boolean algebra. `AND`, `OR` and `NOT` are the three basic operations; every other gate is built from them.
+
+    AND — logical multiplication
+    - Output is 1 only when `all` inputs are 1.
+    ```
+    Y = A . B      (also written AB or A AND B)
+
+       A ---|‾‾\
+            |   )--- Y
+       B ---|__/
+    ```
+    ```
+    A  B | Y = A.B
+    -----+--------
+    0  0 |   0
+    0  1 |   0
+    1  0 |   0
+    1  1 |   1
+    ```
+    - Example: a car buzzer sounds only when the key is in `AND` the door is open. In a circuit, two switches in `series`.
+
+    OR — logical addition
+    - Output is 1 when `any` input is 1.
+    ```
+    Y = A + B      (also written A OR B)
+
+       A ---|\
+            | )--- Y
+       B ---|/
+    ```
+    ```
+    A  B | Y = A+B
+    -----+--------
+    0  0 |   0
+    0  1 |   1
+    1  0 |   1
+    1  1 |   1
+    ```
+    - Example: a room light controlled from two switches — either one turns it on. In a circuit, two switches in `parallel`.
+
+    NOT — logical complement (inverter)
+    - Output is the opposite of the input. It has exactly one input.
+    ```
+    Y = A'        (also written Ā or NOT A)
+
+       A ---|>o--- Y
+    ```
+    ```
+    A | Y = A'
+    --+--------
+    0 |   1
+    1 |   0
+    ```
+    - Example: an alarm that sounds when a sensor is `not` detecting.
+
+    Laws worth quoting
+    ```
+    AND : A.0 = 0    A.1 = A    A.A = A    A.A' = 0
+    OR  : A+0 = A    A+1 = 1    A+A = A    A+A' = 1
+    NOT : (A')' = A
+    ```
+
+    - These three are `functionally complete`: any Boolean function can be written with them alone. That is why NAND and NOR are called universal — each can produce all three by itself.
+
+8. **(i) Logic gate কী? মৌলিক Logic gate কয়টি ও কী কী? সত্যক সারণিসহ আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 958-959 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) A `logic gate` is an electronic circuit that takes one or more binary inputs (0 or 1) and gives one binary output, following a rule of Boolean algebra. Gates are the basic building blocks of every digital circuit — adders, registers, memories and processors are all made of them.
+
+    - 0 and 1 are represented by two voltage levels, typically 0 V and +5 V (or +3.3 V), so a gate is really a switching circuit built from transistors.
+
+    Basic logic gates — there are `three`
+    ```
+    AND, OR, NOT
+    ```
+    - They are called basic because they match the three fundamental operations of Boolean algebra, and every other gate is built from them.
+
+    AND gate
+    ```
+    Y = A . B          output 1 only when ALL inputs are 1
+
+       A ---|‾‾\
+            |   )--- Y            like two switches in SERIES
+       B ---|__/
+    ```
+    ```
+    A  B | Y
+    -----+---
+    0  0 | 0
+    0  1 | 0
+    1  0 | 0
+    1  1 | 1
+    ```
+
+    OR gate
+    ```
+    Y = A + B          output 1 when ANY input is 1
+
+       A ---|\
+            | )--- Y              like two switches in PARALLEL
+       B ---|/
+    ```
+    ```
+    A  B | Y
+    -----+---
+    0  0 | 0
+    0  1 | 1
+    1  0 | 1
+    1  1 | 1
+    ```
+
+    NOT gate (inverter)
+    ```
+    Y = A'             output is the opposite of the input; one input only
+
+       A ---|>o--- Y
+    ```
+    ```
+    A | Y
+    --+---
+    0 | 1
+    1 | 0
+    ```
+
+    The other gates, built from these
+    ```
+    NAND : Y = (A.B)'      AND followed by NOT      universal gate
+    NOR  : Y = (A+B)'      OR followed by NOT       universal gate
+    XOR  : Y = A'B + AB'   output 1 when inputs DIFFER
+    XNOR : Y = (A(+)B)'    output 1 when inputs are the SAME
+    ```
+    ```
+    A  B | AND | OR | NAND | NOR | XOR | XNOR
+    -----+-----+----+------+-----+-----+-----
+    0  0 |  0  | 0  |  1   |  1  |  0  |  1
+    0  1 |  0  | 1  |  1   |  0  |  1  |  0
+    1  0 |  0  | 1  |  1   |  0  |  1  |  0
+    1  1 |  1  | 1  |  0   |  0  |  0  |  1
+    ```
+
+    - The three basic gates are `functionally complete`: any Boolean function can be built from them alone. NAND and NOR are called `universal` because each one by itself can produce all three.
+
+9. **Draw a circuit to relaise the following expression using AND, OR gates and inverter: $F = \bar{A}BC + A\bar{B}C + AB\bar{C}$** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1104 (ET: AUST)]*
 
 Answer: The function is
     ```
@@ -1884,7 +1962,7 @@ Answer: The function is
 
     - Points to note: this is the standard `two-level AND-OR` (SOP) realisation — inverters first, then one AND per product term, then a single OR. Because the expression cannot be simplified, seven gates is the minimum for this form. If NAND-only implementation were asked, the same structure would be used with every AND and the OR replaced by NAND.
 
-31. **Describe the seven basic logic gates and show their truth table.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
+10. **Describe the seven basic logic gates and show their truth table.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
 Answer: A `logic gate` takes one or more binary inputs and gives one binary output following a Boolean rule. There are seven commonly used gates: three basic, two universal and two derived.
 
@@ -1970,7 +2048,7 @@ Answer: A `logic gate` takes one or more binary inputs and gives one binary outp
     - `NOT` — complementing a signal. `NAND` and `NOR` — universal, so whole circuits are built from one of them.
     - `XOR` — the sum bit of an adder, parity generation, bit comparison. `XNOR` — equality comparison, so it forms a digital comparator.
 
-32. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
+11. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
 
 Answer: `Binary logic` uses only two values, 0 and 1, represented by two voltage levels — typically 0 V (LOW) and +5 V or +3.3 V (HIGH). Digital systems use it for the following reasons.
 
@@ -2009,74 +2087,7 @@ Answer: `Binary logic` uses only two values, 0 and 1, represented by two voltage
 
     - Summary: binary is used because it gives the `maximum reliability for the minimum hardware`. The cost is that more digits are needed to express a number — 255 needs 8 bits instead of 3 decimal digits — but that cost is trivial compared with the gain in accuracy and simplicity.
 
-33. **What do you understand by universality of logic gate? Prove universality of NOR logic gate.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1280 (ET: N/A)]*
-
-**Design Basic gate using NOR gate or Show that NOR is gate Universal gate.** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 40]]*
-
-Answer: Universality of a logic gate
-    - `Universality` means that a single type of gate is enough, on its own, to build every other logic gate and therefore any Boolean function at all.
-    - The reason it is possible: every Boolean function can be written in `sum of products` form, which uses only three operations — `NOT`, `AND` and `OR`. If one gate can produce those three, it can produce anything.
-    - Only `NAND` and `NOR` have this property. AND, OR and XOR do not — none of them can produce inversion on its own.
-
-    Proof of universality for NOR
-
-    (a) NOT from NOR — 1 gate
-    ```
-       A ---+---|\
-            |   | )o--- A'                A' = (A + A)'
-            +---|/
-    ```
-    ```
-    A | (A + A)'
-    --+---------
-    0 |    1
-    1 |    0        -> the NOT truth table
-    ```
-
-    (b) OR from NOR — 2 gates
-    ```
-       A ---|\                +---|\
-            | )o--- (A+B)' ---+   | )o--- A + B      A+B = ((A+B)')'
-       B ---|/                +---|/
-    ```
-    ```
-    A  B | (A+B)' | ((A+B)')'
-    -----+--------+----------
-    0  0 |   1    |     0
-    0  1 |   0    |     1
-    1  0 |   0    |     1
-    1  1 |   0    |     1      -> the OR truth table
-    ```
-
-    (c) AND from NOR — 3 gates
-    ```
-       A --+--|\
-           +--| )o-- A' --|\
-                          | )o--- A . B      A.B = (A' + B')'  [De Morgan]
-       B --+--|\     B' --|/
-           +--| )o--
-    ```
-    ```
-    A  B | A' | B' | A'+B' | (A'+B')'
-    -----+----+----+-------+---------
-    0  0 |  1 |  1 |   1   |    0
-    0  1 |  1 |  0 |   1   |    0
-    1  0 |  0 |  1 |   1   |    0
-    1  1 |  0 |  0 |   0   |    1      -> the AND truth table
-    ```
-
-    - NOR produces NOT, OR and AND, so NOR alone is `functionally complete` — it is a universal gate.
-
-    The general conversion
-    ```
-    Any function -> product of sums -> two-level OR-AND circuit
-    F = (A+B)(C+D) = ((A+B)' + (C+D)')'      -> a pure NOR-NOR circuit
-    ```
-    - The structure does not change: every OR becomes a NOR and the final AND becomes a NOR. The same argument with De Morgan's other form turns an AND-OR circuit into NAND-NAND.
-
-    - Practical value: a whole chip can be fabricated from one repeated cell. NOR was the gate of choice in early RTL logic; CMOS designs prefer NAND, because its series transistors are the faster n-channel type.
-
-34. **(a) Consider the following logic circuit.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75-76]]*
+12. **(a) Consider the following logic circuit.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75-76]]*
 (i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C. (ii) Use K-map to simplify these expressions F_1 and F_2, and show that they are equivalent to the ones obtained in (i).
 
 * **(i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C.**
@@ -3409,6 +3420,8 @@ Answer: Binary number system
     - Summary: `the machine needs binary, the user needs decimal, and the programmer needs hexadecimal`. Number conversion is what lets all three work on the same data.
 
 ## Karnaugh Map (K-Map) (24)
+
+### Karnaugh Map Simplification (21)
 
 1. **Simplify the following boolean expression using 4 variable K-map: F(A,B,C,D) = ∑ m(0,3,5,7,8,10,11,12,13,14,15). Draw the K-map grid, clearly show your groupings (loops), and write the final simplified Sum-of-Products (SOP) expression.** [SO IT 25-07-2026]
 
@@ -4895,7 +4908,64 @@ Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
     ```
     - The whole expression reduces to `one inverter and one OR gate`. B and C disappear completely — the output does not depend on them at all.
 
-20. **Sentence correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
+20. **Using a Karnaugh map, simplify the function (A,B,C,D) = \Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
+
+Answer:
+    Given: $F(A,B,C,D) = \Sigma m(0, 1, 2, 5, 7, 8, 9, 10, 13, 15)$
+
+    4-Variable K-Map Layout:
+    ```
+          CD  00   01   11   10
+      AB    +----+----+----+----+
+      00    |  1 |  1 |  0 |  1 |  (m0, m1, m2)
+            +----+----+----+----+
+      01    |  0 |  1 |  1 |  0 |  (m5, m7)
+            +----+----+----+----+
+      11    |  0 |  1 |  1 |  0 |  (m13, m15)
+            +----+----+----+----+
+      10    |  1 |  1 |  0 |  1 |  (m8, m9, m10)
+            +----+----+----+----+
+    ```
+
+    Grouping:
+    - Group 1 (Quad of m5, m7, m13, m15): Middle column with $C=0, D=1$ and $C=1, D=1$ for $B=1 \implies$ $B D$
+    - Group 2 (Quad of m0, m1, m8, m9): Top and bottom rows for $C=0 \implies$ $\bar{B} \bar{C}$
+    - Group 3 (Quad of 4 Corners: m0, m2, m8, m10): Four corner cells with $B=0, D=0 \implies$ $\bar{B} \bar{D}$
+
+    Minimal SOP Expression:
+    $$F(A, B, C, D) = B D + \bar{B} \bar{C} + \bar{B} \bar{D}$$
+
+21. **Simplify using K-Map/SOP F = \Sigma(1,3,5,9,11,12,13,14)** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398]]*
+
+Answer:
+    Given: $F(A,B,C,D) = \Sigma m(1, 3, 5, 9, 11, 12, 13, 14)$
+
+    4-Variable K-Map:
+    ```
+          CD  00   01   11   10
+      AB    +----+----+----+----+
+      00    |  0 |  1 |  1 |  0 |  (m1, m3)
+            +----+----+----+----+
+      01    |  0 |  1 |  0 |  0 |  (m5)
+            +----+----+----+----+
+      11    |  1 |  1 |  0 |  1 |  (m12, m13, m14)
+            +----+----+----+----+
+      10    |  0 |  1 |  1 |  0 |  (m9, m11)
+            +----+----+----+----+
+    ```
+
+    Grouping:
+    - Group 1 (Quad of m1, m3, m9, m11): Cells where $B=0$ and $D=1 \implies$ $\bar{B} D$
+    - Group 2 (Quad of m1, m5, m9, m13): Column $01$ where $C=0, D=1 \implies$ $\bar{C} D$
+    - Group 3 (Pair of m12, m13): $AB=11, CD=00, 01 \implies$ $A B \bar{C}$
+    - Group 4 (Pair of m12, m14): $AB=11, CD=00, 10 \implies$ $A B \bar{D}$
+
+    Minimal SOP Expression:
+    $$F(A, B, C, D) = \bar{B} D + \bar{C} D + A B \bar{D}$$
+
+### Miscellaneous Off-Topic Content (3)
+
+1. **Sentence correction -5** *[Bangladesh Bridge Authority Post: Assistant Programmer; Date: 12 July, 2025 Exam Taker: IBA; Written: 80 Marks Tech: 3*10=30, Non-Tech: Bangla 10, Math 10, English 15, GK 15 [bitbox it book 92]]*
 ক) (a+b)^4 - (a-b)^4 = 8ab(a^2+b^2) __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
 
 খ) একজন দোকানদার ৭ ১/২% ক্ষতিতে একটি দ্রব্য বিক্রয় করল যদি দ্রব্যটির ক্রয়মূল্য ১০% কম হতো এবংবিক্রয়মূল্য ৩১ টাকা বেশি হতো তাহলে ২০% লাভ হতো। দ্রব্যটির ক্রয়মূল্য কত? __(BARC Post: Programmer Exam Taker: BARC Time: 1 Hour; Date: 4 Oct, 2025 Full Marks: 40) [bitbox it book 161]__
@@ -4925,7 +4995,7 @@ Answer:
     - বিক্রয়মূল্য $31$ টাকা বেশি হলে ক্রয়মূল্য $= \frac{100 \times 31}{15.5} = \frac{100 \times 310}{155} = 200$ টাকা।
     - উত্তর: দ্রব্যটির ক্রয়মূল্য ২০০ টাকা।
 
-21. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
+2. **If you are CEO of a software company. You need a software from following three options:** *[North-West Power Generation Company Limited Assistant Manager (ICT); Date: 24 Feburary, 2024 Exam taker: BUET; GK:60, Written:40 [bitbox it book 372]]*
 (a) Buy: Buy a software with cost 50 Lakh. (b) Building: Developed by developer cost 30 lakhs, possibility is 30% to develop complete software. (c) Modification: Buy and small modifications cost 30 lakh, for large modifications cost 80% increase.
 
 Answer:
@@ -4938,34 +5008,7 @@ Answer:
     - Select Option (c) (Buy & Modify with bounded small customizations) if tailored features are strictly required at BDT 30–35 Lakhs.
     - Otherwise, select Option (a) (Direct Buy) to eliminate all project failure risks and ensure guaranteed production stability. Avoid Option (b) due to unacceptable failure probability (70%).
 
-22. **Using a Karnaugh map, simplify the function (A,B,C,D) = \Sigma 0,1,2,5,7,8,9,10,13,15 into Sum of Products form.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
-
-Answer:
-    Given: $F(A,B,C,D) = \Sigma m(0, 1, 2, 5, 7, 8, 9, 10, 13, 15)$
-
-    4-Variable K-Map Layout:
-    ```
-          CD  00   01   11   10
-      AB    +----+----+----+----+
-      00    |  1 |  1 |  0 |  1 |  (m0, m1, m2)
-            +----+----+----+----+
-      01    |  0 |  1 |  1 |  0 |  (m5, m7)
-            +----+----+----+----+
-      11    |  0 |  1 |  1 |  0 |  (m13, m15)
-            +----+----+----+----+
-      10    |  1 |  1 |  0 |  1 |  (m8, m9, m10)
-            +----+----+----+----+
-    ```
-
-    Grouping:
-    - Group 1 (Quad of m5, m7, m13, m15): Middle column with $C=0, D=1$ and $C=1, D=1$ for $B=1 \implies$ $B D$
-    - Group 2 (Quad of m0, m1, m8, m9): Top and bottom rows for $C=0 \implies$ $\bar{B} \bar{C}$
-    - Group 3 (Quad of 4 Corners: m0, m2, m8, m10): Four corner cells with $B=0, D=0 \implies$ $\bar{B} \bar{D}$
-
-    Minimal SOP Expression:
-    $$F(A, B, C, D) = B D + \bar{B} \bar{C} + \bar{B} \bar{D}$$
-
-23. **Traversing the tree and calculate Pre-order and post-order from below Tree.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
+3. **Traversing the tree and calculate Pre-order and post-order from below Tree.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
 
 Answer:
     For a standard binary tree with Root $R$, Left Subtree $L$, and Right Subtree $P$:
@@ -4973,105 +5016,11 @@ Answer:
     - Post-order Traversal (Left $\to$ Right $\to$ Root): Traverse left subtree recursively, traverse right subtree recursively, then visit root last.
     - In-order Traversal (Left $\to$ Root $\to$ Right): Left subtree $\to$ Root $\to$ Right subtree.
 
-24. **Simplify using K-Map/SOP F = \Sigma(1,3,5,9,11,12,13,14)** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 398]]*
-
-Answer:
-    Given: $F(A,B,C,D) = \Sigma m(1, 3, 5, 9, 11, 12, 13, 14)$
-
-    4-Variable K-Map:
-    ```
-          CD  00   01   11   10
-      AB    +----+----+----+----+
-      00    |  0 |  1 |  1 |  0 |  (m1, m3)
-            +----+----+----+----+
-      01    |  0 |  1 |  0 |  0 |  (m5)
-            +----+----+----+----+
-      11    |  1 |  1 |  0 |  1 |  (m12, m13, m14)
-            +----+----+----+----+
-      10    |  0 |  1 |  1 |  0 |  (m9, m11)
-            +----+----+----+----+
-    ```
-
-    Grouping:
-    - Group 1 (Quad of m1, m3, m9, m11): Cells where $B=0$ and $D=1 \implies$ $\bar{B} D$
-    - Group 2 (Quad of m1, m5, m9, m13): Column $01$ where $C=0, D=1 \implies$ $\bar{C} D$
-    - Group 3 (Pair of m12, m13): $AB=11, CD=00, 01 \implies$ $A B \bar{C}$
-    - Group 4 (Pair of m12, m14): $AB=11, CD=00, 10 \implies$ $A B \bar{D}$
-
-    Minimal SOP Expression:
-    $$F(A, B, C, D) = \bar{B} D + \bar{C} D + A B \bar{D}$$
-
 ## Combinational Circuits (Adders, Encoders, MUX) (23)
 
-1. **What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+### Adders & Custom Combinational Logic Design (11)
 
-Answer: A `multiplexer (MUX)` selects one of many inputs and sends it to a single output. A `demultiplexer (DEMUX)` takes one input and sends it to one of many outputs. They are exact opposites, and both are controlled by `select lines`.
-
-   Multiplexer — many to one
-   ```
-      I0 ---|\
-      I1 ---| \
-      I2 ---|  |--- Y        Y = one of I0..I3, chosen by S1 S0
-      I3 ---| /
-            |/
-             |  |
-            S1  S0
-
-      For n select lines : 2^n data inputs, 1 output
-   ```
-   ```
-   Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
-   ```
-   ```
-   S1  S0 | Y
-   -------+----
-   0   0  | I0
-   0   1  | I1
-   1   0  | I2
-   1   1  | I3
-   ```
-
-   Demultiplexer — one to many
-   ```
-                 /|--- Y0
-                / |--- Y1
-      D -------|  |--- Y2      D goes to ONE output, chosen by S1 S0
-                \ |--- Y3
-                 \|
-             |  |
-            S1  S0
-
-      For n select lines : 1 input, 2^n outputs
-   ```
-   ```
-   Y0 = S1'S0'.D    Y1 = S1'S0.D    Y2 = S1S0'.D    Y3 = S1S0.D
-   ```
-
-   Difference
-
-   | Point | Multiplexer | Demultiplexer |
-   |---|---|---|
-   | Function | Many inputs to one output | One input to many outputs |
-   | Data lines | 2^n inputs, 1 output | 1 input, 2^n outputs |
-   | Also called | Data selector | Data distributor |
-   | Select lines | Choose which input passes | Choose which output receives |
-   | Common types | 2:1, 4:1, 8:1, 16:1 | 1:2, 1:4, 1:8, 1:16 |
-   | Converts | Parallel to serial | Serial to parallel |
-   | Equivalent to | — | A decoder with an enable line |
-
-   Practical applications
-   - `Multiplexer` — in a `telephone or data communication system`, many subscriber lines share one expensive trunk line. The MUX picks one channel at a time so a single cable carries traffic from many sources. Inside a CPU, a MUX selects which register feeds the ALU. A MUX is also used to implement any Boolean function directly from its truth table.
-   - `Demultiplexer` — at the far end of that same trunk line, the DEMUX sends each arriving channel back to the correct subscriber. In a computer, a DEMUX (used as a decoder) takes an address and enables exactly one memory chip or one output device.
-
-   ```mermaid
-   flowchart LR
-       A[4 sources] --> M[MUX]
-       M -->|one shared line| D[DEMUX]
-       D --> B[4 destinations]
-   ```
-   - The pair is always used together: the MUX combines many channels onto one line, and the DEMUX separates them again at the other end. Both must be given the same select value at the same time.
-
-2. **Design a Full Adder circuit using basic logic gates (AND, OR, NOT). Draw the truth table, derive the Boolean expressions for the Sum (S) and Carry (C_{out}), and draw the complete circuit diagram.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
+1. **Design a Full Adder circuit using basic logic gates (AND, OR, NOT). Draw the truth table, derive the Boolean expressions for the Sum (S) and Carry (C_{out}), and draw the complete circuit diagram.** *[Combined Bank Senior Officer (IT) 17.10.2025 compact it 1423 (ET: E-Zone)]*
 
 Answer: A `full adder` adds three one-bit inputs — A, B and a carry from the previous stage, `Cin` — and produces two outputs, a `Sum` and a `carry out`, `Cout`.
 
@@ -5175,7 +5124,7 @@ Answer: A `full adder` adds three one-bit inputs — A, B and a carry from the p
    ```
    - The XOR form is what is used in practice, because it is smaller and has a shorter carry path — and the carry path is what limits the speed of a multi-bit adder.
 
-3. **What is half adder?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
+2. **What is half adder?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
 Answer: A `half adder` is a combinational circuit that adds `two` one-bit binary numbers and produces two outputs — a `Sum` and a `Carry`.
 
@@ -5224,7 +5173,7 @@ Answer: A `half adder` is a combinational circuit that adds `two` one-bit binary
    - Limitation: it has no `carry-in`, so half adders cannot be chained to add multi-bit numbers. Two half adders plus one OR gate make a `full adder`, which does accept a carry-in and can be chained.
    - Uses: the least significant stage of an adder, incrementers, and inside ALUs.
 
-4. **Design a full adder using NAND gates only.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
+3. **Design a full adder using NAND gates only.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
 Answer: A full adder needs `9 NAND gates`. The design is two NAND half adders plus one extra NAND to combine the carries.
 
@@ -5302,7 +5251,7 @@ Answer: A full adder needs `9 NAND gates`. The design is two NAND half adders pl
 
    - Points to note: the trick that saves gates is `reusing the internal NAND node` of each half adder instead of building a separate OR gate. A naive design — build XOR, AND and OR separately from NAND — needs far more than 9 gates.
 
-5. **Design a full adder using two half adders and an OR gate?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
+4. **Design a full adder using two half adders and an OR gate?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
 Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and a `Cout`. A `half adder` adds only two bits. Two half adders and one OR gate build a full adder.
 
@@ -5376,76 +5325,7 @@ Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and
 
    - Point worth noting: `C1 and C2 can never both be 1`, so the OR gate could equally be an XOR gate. C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0.
 
-6. **Multiplexing:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
-```
-          +-----------+
-    A ---|>|---| I_3       |
-          | I_2  4x1  |--- F(A, B, C)
-    1 --------| I_1  MUX  |
-    0 --------| I_0       |
-          +-----------+
-                 |  |
-                 B  C
-                 |  |
-                S_1 S_0
-```
-
-   Answer: The circuit is a `4x1 multiplexer` with
-   ```
-      S1 = B  ,  S0 = C          (the two selection lines)
-      I0 = 0
-      I1 = 1
-      I2 = A'      (A through an inverter)
-      I3 = A'
-   ```
-
-   The general 4x1 MUX equation
-   ```
-   F = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
-   ```
-
-   Substituting the given connections
-   ```
-   F = B'C'.(0) + B'C.(1) + BC'.(A') + BC.(A')
-
-     = 0 + B'C + A'BC' + A'BC
-
-     = B'C + A'B(C' + C)
-
-     = B'C + A'B                    since C' + C = 1
-   ```
-   ```
-   F(A, B, C) = B'C + A'B
-   ```
-
-   Truth table
-   ```
-   A  B  C | selected input | F
-   --------+----------------+---
-   0  0  0 | I0 = 0         | 0
-   0  0  1 | I1 = 1         | 1
-   0  1  0 | I2 = A' = 1    | 1
-   0  1  1 | I3 = A' = 1    | 1
-   1  0  0 | I0 = 0         | 0
-   1  0  1 | I1 = 1         | 1
-   1  1  0 | I2 = A' = 0    | 0
-   1  1  1 | I3 = A' = 0    | 0
-   ```
-   ```
-   F = Sigma m(1, 2, 3, 5)
-   ```
-
-   Check against the simplified expression
-   ```
-   B'C  is 1 at rows 001 and 101  -> m1, m5
-   A'B  is 1 at rows 010 and 011  -> m2, m3
-
-   F = m1 + m2 + m3 + m5           matches the table
-   ```
-
-   - How to read any MUX-based circuit: the `select lines carry the higher-order variables`, and the data inputs are the residues of the function for each select combination — 0, 1, the remaining variable, or its complement. Writing the four residues down and expanding the standard MUX equation gives the function in one step. <!-- verify -->
-
-7. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
+5. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
 
 Answer: A `full adder` adds three one-bit inputs — A, B and the carry from the previous stage, `Cin` — and produces a `Sum` and a `carry out`, `Cout`.
 
@@ -5498,120 +5378,7 @@ Answer: A `full adder` adds three one-bit inputs — A, B and the carry from the
 
    - Point worth noting: `n` full adders chained together, each one's Cout feeding the next one's Cin, form an `n-bit ripple carry adder`. The carry has to travel through every stage, which is why the ripple adder is slow and why carry-look-ahead adders were invented.
 
-8. **একটি 2:4 ডিকোডার ও একটি OR গেট ব্যবহার করে একটি হাফ এডার ডিজাইন কর।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
-
-Answer: (Answered in English, as required for IT topics.) A `half adder` adds two bits A and B, producing
-   ```
-   Sum   = A (+) B = A'B + AB'   = Sigma m(1, 2)
-   Carry = A . B                  = Sigma m(3)
-   ```
-
-   A `2:4 decoder` takes 2 inputs and activates exactly one of its 4 outputs — each output is one minterm of the two inputs.
-   ```
-      A  B | D0    D1    D2    D3
-      -----+-----------------------
-      0  0 |  1     0     0     0        D0 = A'B'
-      0  1 |  0     1     0     0        D1 = A'B
-      1  0 |  0     0     1     0        D2 = AB'
-      1  1 |  0     0     0     1        D3 = AB
-   ```
-
-   Design
-   - Since the decoder already produces every minterm, the function is built simply by OR-ing the minterms it needs.
-   ```
-   Sum   = m1 + m2 = D1 + D2        -> one OR gate
-   Carry = m3      = D3             -> taken directly, no gate needed
-   ```
-
-   Circuit
-   ```
-                +-----------------+
-                |                 |--- D0 = A'B'   (not used)
-      A --------|                 |
-                |   2:4 Decoder   |--- D1 = A'B  ---+
-      B --------|                 |                 |---|\
-                |                 |--- D2 = AB'  ---+   | )--- Sum
-                |                 |                     |/
-                |                 |--- D3 = AB  ------------- Carry
-                +-----------------+
-   ```
-
-   Verification
-   ```
-   A  B | D0 D1 D2 D3 | Sum = D1+D2 | Carry = D3
-   -----+-------------+-------------+-----------
-   0  0 |  1  0  0  0 |      0      |     0
-   0  1 |  0  1  0  0 |      1      |     0
-   1  0 |  0  0  1  0 |      1      |     0
-   1  1 |  0  0  0  1 |      0      |     1
-   ```
-   - This matches the half adder truth table exactly.
-
-   - Points to note: a decoder is a `minterm generator`, so any combinational function of n variables can be built from an n-to-2^n decoder plus one OR gate per output. Only `one OR gate` was needed here because the Carry is a single minterm.
-   - If the decoder has `active-low` outputs, a NAND gate is used in place of the OR gate.
-
-9. **Design 6 \times 1 MUX by using 2 \times 1 MUX** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 460 (ET: BUET)]*
-
-Answer: A `6x1 MUX` selects one of six inputs. It needs `3 select lines` (since 2^2 = 4 is too few and 2^3 = 8 covers 6), of which two combinations stay unused.
-
-   Requirement
-   ```
-      Inputs      : I0 I1 I2 I3 I4 I5
-      Select lines: S2 S1 S0
-      Output      : Y
-   ```
-
-   Design using a tree of 2x1 MUX gates
-   ```
-   Stage 1 : pair the inputs, both controlled by S0
-   Stage 2 : pair those results, controlled by S1
-   Stage 3 : pick between the two halves, controlled by S2
-   ```
-   ```
-      I0 ---|\
-            | M1 |--- P0 ---|\
-      I1 ---|/              | M4 |--- Q0 ---|\
-             S0             |/               |
-      I2 ---|\              S1               | M6 |--- Y
-            | M2 |--- P1 ---|                |/
-      I3 ---|/                               |
-             S0                              |
-                                             |
-      I4 ---|\                               |
-            | M3 |--- Q1 --------------------+
-      I5 ---|/                              S2
-             S0
-   ```
-   - `M1, M2, M3` are stage-1 2x1 MUX gates, all selected by `S0`.
-   - `M4` is a 2x1 MUX selected by `S1`, choosing between P0 and P1.
-   - `M6` is the final 2x1 MUX selected by `S2`, choosing between Q0 (the first four inputs) and Q1 (the last two).
-
-   Selection table
-   ```
-   S2 S1 S0 | selected input
-   ---------+---------------
-    0  0  0 |   I0
-    0  0  1 |   I1
-    0  1  0 |   I2
-    0  1  1 |   I3
-    1  x  0 |   I4
-    1  x  1 |   I5
-   ```
-   - When `S2 = 1`, S1 is a don't-care, because only I4 and I5 remain and S0 alone distinguishes them.
-
-   Gate count
-   ```
-      Stage 1 : 3 MUX  (M1, M2, M3)
-      Stage 2 : 1 MUX  (M4)
-      Stage 3 : 1 MUX  (M6)
-      -----------------------
-      Total   : 5 two-to-one multiplexers
-   ```
-
-   - General rule: an `N x 1` MUX built from 2x1 MUX gates needs `N - 1` of them, so 6 - 1 = 5, which matches.
-   - The same tree, extended by one more 2x1 MUX in stage 2, gives a full 8x1 MUX using 7 two-to-one multiplexers.
-
-10. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 497 (ET: N/A)]*
+6. **What is Half Adder circuit? Expalin with block diagram with logic circuit.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 497 (ET: N/A)]*
 
 Answer: A `half adder` is a combinational circuit that adds two one-bit binary numbers A and B, producing a `Sum` bit and a `Carry` bit.
 
@@ -5673,7 +5440,7 @@ Answer: A `half adder` is a combinational circuit that adds two one-bit binary n
     - Limitation: no carry-in, so half adders cannot be chained to add multi-bit numbers.
     - Uses: the least significant stage of an adder, binary incrementers, and inside the ALU of a processor.
 
-11. **Desugn a logic circuit that counts the number of 1s in 3 inputs (A, B, C) and outputs a two-bit binary number representing that count of 1s?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
+7. **Desugn a logic circuit that counts the number of 1s in 3 inputs (A, B, C) and outputs a two-bit binary number representing that count of 1s?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 683 (ET: N/A)]*
 
 Answer: The circuit counts how many of A, B, C are 1 and writes that count as a 2-bit number `Y1 Y0`. The count can be 0, 1, 2 or 3, which needs exactly two output bits.
 
@@ -5747,73 +5514,7 @@ Answer: The circuit counts how many of A, B, C are 1 and writes that count as a 
 
     - Points to note: this circuit is exactly a `full adder`, with Y0 as the Sum and Y1 as the carry out. Any circuit that counts the number of 1s in its inputs is called a `population counter`, and the 3-input case is the full adder. The 7-input version is used inside multiplier arrays.
 
-12. **একটি 4:1 Multiplexer এর Logic Diagram অঙ্কন করে দেখান?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
-
-Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`. The select value decides which input reaches the output.
-
-    Boolean expression
-    ```
-    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
-    ```
-
-    Function table
-    ```
-    S1  S0 |  Y
-    -------+-----
-     0   0 |  I0
-     0   1 |  I1
-     1   0 |  I2
-     1   1 |  I3
-    ```
-
-    Logic diagram
-    ```
-       I0 -------------------|‾‾\
-       S1' ------------------|    )----- S1'S0'I0 ---+
-       S0' ------------------|___/                   |
-                                                     |
-       I1 -------------------|‾‾\                    |
-       S1' ------------------|    )----- S1'S0 I1 ---+
-       S0  ------------------|___/                   |
-                                                     |---|\
-       I2 -------------------|‾‾\                    |   | )--- Y
-       S1  ------------------|    )----- S1 S0'I2 ---+---|/
-       S0' ------------------|___/                   |  (4-input OR)
-                                                     |
-       I3 -------------------|‾‾\                    |
-       S1  ------------------|    )----- S1 S0 I3 ---+
-       S0  ------------------|___/
-
-
-       S1 ---|>o--- S1'          S0 ---|>o--- S0'
-    ```
-
-    Symbol
-    ```
-       I0 ---|\
-       I1 ---| \
-       I2 ---|  |--- Y
-       I3 ---| /
-             |/
-              |  |
-             S1  S0
-    ```
-
-    Components
-    ```
-       2 inverters        : produce S1' and S0'
-       4 three-input AND  : one per data input, enabled by its select combination
-       1 four-input OR    : combines them, since only one AND can be 1 at a time
-    ```
-
-    How it works
-    - The two inverters give both true and complemented select signals.
-    - Each AND gate is enabled by exactly one combination of `S1 S0`. For `S1S0 = 10`, only the third AND gate has both select conditions satisfied, so it passes I2 while the other three AND gates output 0.
-    - The OR gate therefore carries whichever single input was selected.
-
-    - Uses: data selection in a CPU, sharing one transmission line among several sources, parallel-to-serial conversion, and implementing any Boolean function of 3 variables directly from its truth table.
-
-13. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
+8. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
 
 Answer: The output is high when a `majority` of the three inputs are high — that is, when two or three of them are 1.
 
@@ -5899,7 +5600,534 @@ Answer: The output is high when a `majority` of the three inputs are high — th
 
     - Point worth noting: this majority function is exactly the `carry-out` of a full adder, and it is also used in triple modular redundancy, where three copies of a circuit vote so that one failure is masked.
 
-14. **Design a 8\times 1 MUX and explain working procedure.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 720 (ET: N/A)]*
+9. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+
+Answer: Half adder — logic diagram
+    - A half adder adds two bits A and B.
+    ```
+    Sum   = A (+) B          XOR gate
+    Carry = A . B            AND gate
+    ```
+    ```
+       A ---+-----|\
+            |     | ))--- Sum = A (+) B
+       B ---+--+--|/
+            |  |
+            +--+--|‾‾\
+                  |    )--- Carry = A . B
+                  |___/
+    ```
+    ```
+    A  B | Sum | Carry
+    -----+-----+------
+    0  0 |  0  |  0
+    0  1 |  1  |  0
+    1  0 |  1  |  0
+    1  1 |  0  |  1
+    ```
+
+    Full adder — truth table
+    - A full adder adds three bits: A, B and the carry-in `Cin`.
+    ```
+    A  B  Cin | Sum | Cout
+    ----------+-----+-----
+    0  0   0  |  0  |  0
+    0  0   1  |  1  |  0
+    0  1   0  |  1  |  0
+    0  1   1  |  0  |  1
+    1  0   0  |  1  |  0
+    1  0   1  |  0  |  1
+    1  1   0  |  0  |  1
+    1  1   1  |  1  |  1
+    ```
+    ```
+    Sum  = A (+) B (+) Cin
+    Cout = AB + BCin + ACin
+    ```
+
+    Full adder from two half adders and one OR gate
+    ```
+            +-------------+                 +-------------+
+       A ---|   Half      |--- S1 ----------|   Half      |--- Sum
+            |   Adder 1   |                 |   Adder 2   |
+       B ---|             |--- C1 --+  Cin -|             |--- C2 --+
+            +-------------+         |       +-------------+         |
+                                    |                               |
+                                    +----------|\                   |
+                                               | )--- Cout          |
+                                    +----------|/                   |
+                                    |         (OR)                  |
+                                    +-------------------------------+
+    ```
+    - Half adder 1 adds A and B, giving `S1 = A (+) B` and `C1 = A.B`.
+    - Half adder 2 adds S1 and Cin, giving `Sum = S1 (+) Cin` and `C2 = S1.Cin`.
+    - The basic OR gate combines the two carries: `Cout = C1 + C2`.
+
+    Proof
+    ```
+    Sum  = (A (+) B) (+) Cin = A (+) B (+) Cin              correct
+
+    Cout = A.B + (A (+) B).Cin
+         = AB + (A'B + AB')Cin
+         = AB + A'BCin + AB'Cin
+         = AB + BCin + ACin                                 correct
+    ```
+
+    - Point worth noting: `C1 and C2 can never both be 1` — C1 = 1 requires A = B = 1, which forces S1 = 0 and hence C2 = 0. So the OR gate could equally be an XOR gate without changing the result.
+
+10. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` adds only two. Two half adders and one OR gate build a full adder.
+
+    Half adder recap
+    ```
+    Sum   = A (+) B          XOR gate
+    Carry = A . B            AND gate
+    ```
+
+    Construction
+    ```
+            +-------------+                 +-------------+
+       A ---|   Half      |--- S1 ----------|   Half      |--- Sum
+            |   Adder 1   |                 |   Adder 2   |
+       B ---|             |--- C1 --+  Cin -|             |--- C2 --+
+            +-------------+         |       +-------------+         |
+                                    |                               |
+                                    +----------|\                   |
+                                               | )--- Cout          |
+                                    +----------|/                   |
+                                    |         (OR)                  |
+                                    +-------------------------------+
+    ```
+
+    Step by step
+    ```
+    Half adder 1 :  inputs A, B
+                    S1 = A (+) B          the partial sum
+                    C1 = A . B            the carry produced by A + B
+
+    Half adder 2 :  inputs S1, Cin
+                    Sum = S1 (+) Cin = A (+) B (+) Cin
+                    C2  = S1 . Cin        the carry produced by adding Cin
+
+    OR gate      :  Cout = C1 + C2
+    ```
+
+    Gate-level circuit
+    ```
+       A ---|\                    S1
+            | ))-----+------------|\
+       B ---|/       |            | ))--- Sum = A (+) B (+) Cin
+                     |    Cin ----|/
+                     |     |
+                     +--|‾‾\
+                        |    )--- C2 ---|\
+       Cin -------------|__/            | )--- Cout
+                                        |/
+       A ---|‾‾\                        |
+            |    )--- C1 ---------------+
+       B ---|__/
+    ```
+
+    Verification
+    ```
+    A  B  Cin | S1 | C1 | Sum | C2 | Cout
+    ----------+----+----+-----+----+------
+    0  0   0  | 0  | 0  |  0  | 0  |  0
+    0  0   1  | 0  | 0  |  1  | 0  |  0
+    0  1   0  | 1  | 0  |  1  | 0  |  0
+    0  1   1  | 1  | 0  |  0  | 1  |  1
+    1  0   0  | 1  | 0  |  1  | 0  |  0
+    1  0   1  | 1  | 0  |  0  | 1  |  1
+    1  1   0  | 0  | 1  |  0  | 0  |  1
+    1  1   1  | 0  | 1  |  1  | 0  |  1
+    ```
+    - The Sum and Cout columns match the full adder truth table exactly.
+
+    - Point worth noting: `C1 and C2 are never both 1` at the same time, because C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0. The OR gate could equally be an XOR gate.
+
+11. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
+
+Answer: (Answered in English, as required for IT topics.) A 2-bit adder adds two 2-bit numbers `A1A0` and `B1B0`, with a carry-in `C0`, giving a 2-bit sum `S1S0` and a carry-out `C2`. Two 1-bit full adders chained together do this. The result is a `ripple carry adder`.
+
+    Connection
+    ```
+            A1 B1                          A0 B0
+             |  |                           |  |
+          +--v--v----+                   +--v--v----+
+          |   Full   |<--- C1 -----------|   Full   |<--- C0  (carry in, usually 0)
+     C2 <-|  Adder 1 |                   |  Adder 0 |
+          +----------+                   +----------+
+                |                              |
+                S1                             S0
+    ```
+    - `Full Adder 0` adds the least significant bits A0, B0 and C0. Its carry out `C1` becomes the carry `in` of the next stage.
+    - `Full Adder 1` adds A1, B1 and C1, giving S1 and the final carry out C2.
+    - The carry has to `ripple` from the right-hand stage to the left, which is why the circuit is named this way.
+
+    Equations
+    ```
+    Stage 0 :  S0 = A0 (+) B0 (+) C0
+               C1 = A0B0 + B0C0 + A0C0
+
+    Stage 1 :  S1 = A1 (+) B1 (+) C1
+               C2 = A1B1 + B1C1 + A1C1
+    ```
+
+    Worked example — 11 + 01 with C0 = 0
+    ```
+            A = 1 1   (3)
+            B = 0 1   (1)
+           ---------
+       result = 1 0 0 (4)
+
+    Stage 0 : A0=1, B0=1, C0=0  ->  S0 = 0 , C1 = 1
+    Stage 1 : A1=1, B1=0, C1=1  ->  S1 = 0 , C2 = 1
+
+       C2 S1 S0 = 1 0 0 = 4        correct
+    ```
+
+    Second example — 10 + 11
+    ```
+            A = 1 0   (2)
+            B = 1 1   (3)
+           ---------
+       result = 1 0 1 (5)
+
+    Stage 0 : 0 + 1 + 0  ->  S0 = 1 , C1 = 0
+    Stage 1 : 1 + 1 + 0  ->  S1 = 0 , C2 = 1
+
+       C2 S1 S0 = 1 0 1 = 5        correct
+    ```
+
+    Points to note
+    - The same idea extends directly: `n` full adders in a chain make an `n-bit ripple carry adder`. Four of them form the 7483 IC.
+    - The `drawback` is speed. Stage 1 cannot finish until stage 0's carry arrives, so the total delay grows with the number of bits. For a 32-bit adder this is unacceptable, which is why `carry look-ahead` adders compute all the carries in parallel from the equations
+    ```
+       Gi = AiBi  (generate)      Pi = Ai (+) Bi  (propagate)
+       Ci+1 = Gi + Pi.Ci
+    ```
+    - Setting `C0 = 1` turns the same circuit into a subtractor when the B inputs are complemented, since `A - B = A + B' + 1` in 2's complement.
+
+### Multiplexers, Decoders & Displays (12)
+
+1. **What is the difference between a Multiplexer and a Demultiplexer? Explain one practical application of each in digital systems.** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+
+Answer: A `multiplexer (MUX)` selects one of many inputs and sends it to a single output. A `demultiplexer (DEMUX)` takes one input and sends it to one of many outputs. They are exact opposites, and both are controlled by `select lines`.
+
+   Multiplexer — many to one
+   ```
+      I0 ---|\
+      I1 ---| \
+      I2 ---|  |--- Y        Y = one of I0..I3, chosen by S1 S0
+      I3 ---| /
+            |/
+             |  |
+            S1  S0
+
+      For n select lines : 2^n data inputs, 1 output
+   ```
+   ```
+   Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+   ```
+   ```
+   S1  S0 | Y
+   -------+----
+   0   0  | I0
+   0   1  | I1
+   1   0  | I2
+   1   1  | I3
+   ```
+
+   Demultiplexer — one to many
+   ```
+                 /|--- Y0
+                / |--- Y1
+      D -------|  |--- Y2      D goes to ONE output, chosen by S1 S0
+                \ |--- Y3
+                 \|
+             |  |
+            S1  S0
+
+      For n select lines : 1 input, 2^n outputs
+   ```
+   ```
+   Y0 = S1'S0'.D    Y1 = S1'S0.D    Y2 = S1S0'.D    Y3 = S1S0.D
+   ```
+
+   Difference
+
+   | Point | Multiplexer | Demultiplexer |
+   |---|---|---|
+   | Function | Many inputs to one output | One input to many outputs |
+   | Data lines | 2^n inputs, 1 output | 1 input, 2^n outputs |
+   | Also called | Data selector | Data distributor |
+   | Select lines | Choose which input passes | Choose which output receives |
+   | Common types | 2:1, 4:1, 8:1, 16:1 | 1:2, 1:4, 1:8, 1:16 |
+   | Converts | Parallel to serial | Serial to parallel |
+   | Equivalent to | — | A decoder with an enable line |
+
+   Practical applications
+   - `Multiplexer` — in a `telephone or data communication system`, many subscriber lines share one expensive trunk line. The MUX picks one channel at a time so a single cable carries traffic from many sources. Inside a CPU, a MUX selects which register feeds the ALU. A MUX is also used to implement any Boolean function directly from its truth table.
+   - `Demultiplexer` — at the far end of that same trunk line, the DEMUX sends each arriving channel back to the correct subscriber. In a computer, a DEMUX (used as a decoder) takes an address and enables exactly one memory chip or one output device.
+
+   ```mermaid
+   flowchart LR
+       A[4 sources] --> M[MUX]
+       M -->|one shared line| D[DEMUX]
+       D --> B[4 destinations]
+   ```
+   - The pair is always used together: the MUX combines many channels onto one line, and the DEMUX separates them again at the other end. Both must be given the same select value at the same time.
+
+2. **Multiplexing:** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
+```
+          +-----------+
+    A ---|>|---| I_3       |
+          | I_2  4x1  |--- F(A, B, C)
+    1 --------| I_1  MUX  |
+    0 --------| I_0       |
+          +-----------+
+                 |  |
+                 B  C
+                 |  |
+                S_1 S_0
+```
+
+   Answer: The circuit is a `4x1 multiplexer` with
+   ```
+      S1 = B  ,  S0 = C          (the two selection lines)
+      I0 = 0
+      I1 = 1
+      I2 = A'      (A through an inverter)
+      I3 = A'
+   ```
+
+   The general 4x1 MUX equation
+   ```
+   F = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+   ```
+
+   Substituting the given connections
+   ```
+   F = B'C'.(0) + B'C.(1) + BC'.(A') + BC.(A')
+
+     = 0 + B'C + A'BC' + A'BC
+
+     = B'C + A'B(C' + C)
+
+     = B'C + A'B                    since C' + C = 1
+   ```
+   ```
+   F(A, B, C) = B'C + A'B
+   ```
+
+   Truth table
+   ```
+   A  B  C | selected input | F
+   --------+----------------+---
+   0  0  0 | I0 = 0         | 0
+   0  0  1 | I1 = 1         | 1
+   0  1  0 | I2 = A' = 1    | 1
+   0  1  1 | I3 = A' = 1    | 1
+   1  0  0 | I0 = 0         | 0
+   1  0  1 | I1 = 1         | 1
+   1  1  0 | I2 = A' = 0    | 0
+   1  1  1 | I3 = A' = 0    | 0
+   ```
+   ```
+   F = Sigma m(1, 2, 3, 5)
+   ```
+
+   Check against the simplified expression
+   ```
+   B'C  is 1 at rows 001 and 101  -> m1, m5
+   A'B  is 1 at rows 010 and 011  -> m2, m3
+
+   F = m1 + m2 + m3 + m5           matches the table
+   ```
+
+   - How to read any MUX-based circuit: the `select lines carry the higher-order variables`, and the data inputs are the residues of the function for each select combination — 0, 1, the remaining variable, or its complement. Writing the four residues down and expanding the standard MUX equation gives the function in one step. <!-- verify -->
+
+3. **একটি 2:4 ডিকোডার ও একটি OR গেট ব্যবহার করে একটি হাফ এডার ডিজাইন কর।** *[BTCL - JAM ( Technical) 05.04.2024 compact it 382 (ET: BUET)]*
+
+Answer: (Answered in English, as required for IT topics.) A `half adder` adds two bits A and B, producing
+   ```
+   Sum   = A (+) B = A'B + AB'   = Sigma m(1, 2)
+   Carry = A . B                  = Sigma m(3)
+   ```
+
+   A `2:4 decoder` takes 2 inputs and activates exactly one of its 4 outputs — each output is one minterm of the two inputs.
+   ```
+      A  B | D0    D1    D2    D3
+      -----+-----------------------
+      0  0 |  1     0     0     0        D0 = A'B'
+      0  1 |  0     1     0     0        D1 = A'B
+      1  0 |  0     0     1     0        D2 = AB'
+      1  1 |  0     0     0     1        D3 = AB
+   ```
+
+   Design
+   - Since the decoder already produces every minterm, the function is built simply by OR-ing the minterms it needs.
+   ```
+   Sum   = m1 + m2 = D1 + D2        -> one OR gate
+   Carry = m3      = D3             -> taken directly, no gate needed
+   ```
+
+   Circuit
+   ```
+                +-----------------+
+                |                 |--- D0 = A'B'   (not used)
+      A --------|                 |
+                |   2:4 Decoder   |--- D1 = A'B  ---+
+      B --------|                 |                 |---|\
+                |                 |--- D2 = AB'  ---+   | )--- Sum
+                |                 |                     |/
+                |                 |--- D3 = AB  ------------- Carry
+                +-----------------+
+   ```
+
+   Verification
+   ```
+   A  B | D0 D1 D2 D3 | Sum = D1+D2 | Carry = D3
+   -----+-------------+-------------+-----------
+   0  0 |  1  0  0  0 |      0      |     0
+   0  1 |  0  1  0  0 |      1      |     0
+   1  0 |  0  0  1  0 |      1      |     0
+   1  1 |  0  0  0  1 |      0      |     1
+   ```
+   - This matches the half adder truth table exactly.
+
+   - Points to note: a decoder is a `minterm generator`, so any combinational function of n variables can be built from an n-to-2^n decoder plus one OR gate per output. Only `one OR gate` was needed here because the Carry is a single minterm.
+   - If the decoder has `active-low` outputs, a NAND gate is used in place of the OR gate.
+
+4. **Design 6 \times 1 MUX by using 2 \times 1 MUX** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 460 (ET: BUET)]*
+
+Answer: A `6x1 MUX` selects one of six inputs. It needs `3 select lines` (since 2^2 = 4 is too few and 2^3 = 8 covers 6), of which two combinations stay unused.
+
+   Requirement
+   ```
+      Inputs      : I0 I1 I2 I3 I4 I5
+      Select lines: S2 S1 S0
+      Output      : Y
+   ```
+
+   Design using a tree of 2x1 MUX gates
+   ```
+   Stage 1 : pair the inputs, both controlled by S0
+   Stage 2 : pair those results, controlled by S1
+   Stage 3 : pick between the two halves, controlled by S2
+   ```
+   ```
+      I0 ---|\
+            | M1 |--- P0 ---|\
+      I1 ---|/              | M4 |--- Q0 ---|\
+             S0             |/               |
+      I2 ---|\              S1               | M6 |--- Y
+            | M2 |--- P1 ---|                |/
+      I3 ---|/                               |
+             S0                              |
+                                             |
+      I4 ---|\                               |
+            | M3 |--- Q1 --------------------+
+      I5 ---|/                              S2
+             S0
+   ```
+   - `M1, M2, M3` are stage-1 2x1 MUX gates, all selected by `S0`.
+   - `M4` is a 2x1 MUX selected by `S1`, choosing between P0 and P1.
+   - `M6` is the final 2x1 MUX selected by `S2`, choosing between Q0 (the first four inputs) and Q1 (the last two).
+
+   Selection table
+   ```
+   S2 S1 S0 | selected input
+   ---------+---------------
+    0  0  0 |   I0
+    0  0  1 |   I1
+    0  1  0 |   I2
+    0  1  1 |   I3
+    1  x  0 |   I4
+    1  x  1 |   I5
+   ```
+   - When `S2 = 1`, S1 is a don't-care, because only I4 and I5 remain and S0 alone distinguishes them.
+
+   Gate count
+   ```
+      Stage 1 : 3 MUX  (M1, M2, M3)
+      Stage 2 : 1 MUX  (M4)
+      Stage 3 : 1 MUX  (M6)
+      -----------------------
+      Total   : 5 two-to-one multiplexers
+   ```
+
+   - General rule: an `N x 1` MUX built from 2x1 MUX gates needs `N - 1` of them, so 6 - 1 = 5, which matches.
+   - The same tree, extended by one more 2x1 MUX in stage 2, gives a full 8x1 MUX using 7 two-to-one multiplexers.
+
+5. **একটি 4:1 Multiplexer এর Logic Diagram অঙ্কন করে দেখান?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
+
+Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`. The select value decides which input reaches the output.
+
+    Boolean expression
+    ```
+    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+    ```
+
+    Function table
+    ```
+    S1  S0 |  Y
+    -------+-----
+     0   0 |  I0
+     0   1 |  I1
+     1   0 |  I2
+     1   1 |  I3
+    ```
+
+    Logic diagram
+    ```
+       I0 -------------------|‾‾\
+       S1' ------------------|    )----- S1'S0'I0 ---+
+       S0' ------------------|___/                   |
+                                                     |
+       I1 -------------------|‾‾\                    |
+       S1' ------------------|    )----- S1'S0 I1 ---+
+       S0  ------------------|___/                   |
+                                                     |---|\
+       I2 -------------------|‾‾\                    |   | )--- Y
+       S1  ------------------|    )----- S1 S0'I2 ---+---|/
+       S0' ------------------|___/                   |  (4-input OR)
+                                                     |
+       I3 -------------------|‾‾\                    |
+       S1  ------------------|    )----- S1 S0 I3 ---+
+       S0  ------------------|___/
+
+
+       S1 ---|>o--- S1'          S0 ---|>o--- S0'
+    ```
+
+    Symbol
+    ```
+       I0 ---|\
+       I1 ---| \
+       I2 ---|  |--- Y
+       I3 ---| /
+             |/
+              |  |
+             S1  S0
+    ```
+
+    Components
+    ```
+       2 inverters        : produce S1' and S0'
+       4 three-input AND  : one per data input, enabled by its select combination
+       1 four-input OR    : combines them, since only one AND can be 1 at a time
+    ```
+
+    How it works
+    - The two inverters give both true and complemented select signals.
+    - Each AND gate is enabled by exactly one combination of `S1 S0`. For `S1S0 = 10`, only the third AND gate has both select conditions satisfied, so it passes I2 while the other three AND gates output 0.
+    - The OR gate therefore carries whichever single input was selected.
+
+    - Uses: data selection in a CPU, sharing one transmission line among several sources, parallel-to-serial conversion, and implementing any Boolean function of 3 variables directly from its truth table.
+
+6. **Design a 8\times 1 MUX and explain working procedure.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 720 (ET: N/A)]*
 
 Answer: An `8x1 multiplexer` selects one of eight data inputs `I0-I7` and passes it to a single output `Y`. It needs `3 selection lines` `S2 S1 S0`, since 2^3 = 8.
 
@@ -5977,82 +6205,7 @@ Answer: An `8x1 multiplexer` selects one of eight data inputs `I0-I7` and passes
 
     - Uses: selecting one of eight registers in a CPU, sharing one line among eight sources in communication, parallel-to-serial conversion, and implementing any Boolean function of 4 variables (three on the select lines, the fourth fed to the data inputs).
 
-15. **(a) Draw the logic diagram of Half-Adder the truth table of Full-Adder and use half Adder (S) and basic gates to build a Full-Adder.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
-
-Answer: Half adder — logic diagram
-    - A half adder adds two bits A and B.
-    ```
-    Sum   = A (+) B          XOR gate
-    Carry = A . B            AND gate
-    ```
-    ```
-       A ---+-----|\
-            |     | ))--- Sum = A (+) B
-       B ---+--+--|/
-            |  |
-            +--+--|‾‾\
-                  |    )--- Carry = A . B
-                  |___/
-    ```
-    ```
-    A  B | Sum | Carry
-    -----+-----+------
-    0  0 |  0  |  0
-    0  1 |  1  |  0
-    1  0 |  1  |  0
-    1  1 |  0  |  1
-    ```
-
-    Full adder — truth table
-    - A full adder adds three bits: A, B and the carry-in `Cin`.
-    ```
-    A  B  Cin | Sum | Cout
-    ----------+-----+-----
-    0  0   0  |  0  |  0
-    0  0   1  |  1  |  0
-    0  1   0  |  1  |  0
-    0  1   1  |  0  |  1
-    1  0   0  |  1  |  0
-    1  0   1  |  0  |  1
-    1  1   0  |  0  |  1
-    1  1   1  |  1  |  1
-    ```
-    ```
-    Sum  = A (+) B (+) Cin
-    Cout = AB + BCin + ACin
-    ```
-
-    Full adder from two half adders and one OR gate
-    ```
-            +-------------+                 +-------------+
-       A ---|   Half      |--- S1 ----------|   Half      |--- Sum
-            |   Adder 1   |                 |   Adder 2   |
-       B ---|             |--- C1 --+  Cin -|             |--- C2 --+
-            +-------------+         |       +-------------+         |
-                                    |                               |
-                                    +----------|\                   |
-                                               | )--- Cout          |
-                                    +----------|/                   |
-                                    |         (OR)                  |
-                                    +-------------------------------+
-    ```
-    - Half adder 1 adds A and B, giving `S1 = A (+) B` and `C1 = A.B`.
-    - Half adder 2 adds S1 and Cin, giving `Sum = S1 (+) Cin` and `C2 = S1.Cin`.
-    - The basic OR gate combines the two carries: `Cout = C1 + C2`.
-
-    Proof
-    ```
-    Sum  = (A (+) B) (+) Cin = A (+) B (+) Cin              correct
-
-    Cout = A.B + (A (+) B).Cin
-         = AB + (A'B + AB')Cin
-         = AB + A'BCin + AB'Cin
-         = AB + BCin + ACin                                 correct
-    ```
-
-    - Point worth noting: `C1 and C2 can never both be 1` — C1 = 1 requires A = B = 1, which forces S1 = 0 and hence C2 = 0. So the OR gate could equally be an XOR gate without changing the result.
-
-16. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
+7. **Circuit of the following figure uses 4:1 Multiplexer, what is output of the function f?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 857 (ET: N/A)]*
 
 Answer: The question is `incomplete` — the figure showing which signals are wired to the MUX inputs and select lines is not present. The method for reading any such circuit is set out below with a worked example.
 
@@ -6133,7 +6286,7 @@ Answer: The question is `incomplete` — the figure showing which signals are wi
 
     - This is why a multiplexer is called a `universal combinational circuit`: it needs no gates at all beyond the inverters for the complemented data inputs, and it maps directly from the truth table without any algebraic simplification.
 
-17. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
+8. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
 Answer: A `2-to-4 line decoder` takes 2 input lines and activates exactly one of its 4 output lines. Each output corresponds to one `minterm` of the inputs. The same circuit with an added data line works as a `1-to-4 demultiplexer`.
 
@@ -6209,7 +6362,7 @@ Answer: A `2-to-4 line decoder` takes 2 input lines and activates exactly one of
     - `Seven-segment display driving` — a 4-to-16 (or BCD-to-7-segment) decoder turns a binary digit into the segment pattern.
     - Many real decoders have `active-low` outputs; then a NAND gate replaces each AND gate and the selected line goes to 0 while the rest stay at 1.
 
-18. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
+9. **4:1 MUX এর লজিক ডায়াগ্রাম ডিজাইন করুন এবং Selection Line দুটির কাজ লিখুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1041 (ET: DPI)]*
 
 Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` has four data inputs `I0-I3`, two selection lines `S1 S0`, and one output `Y`.
 
@@ -6264,78 +6417,7 @@ Answer: (Answered in English, as required for IT topics.) A `4:1 multiplexer` ha
 
     - Uses: choosing one register in a CPU, sharing one transmission line among several sources, parallel-to-serial conversion, and building any Boolean function of three variables straight from its truth table.
 
-19. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` adds only two. Two half adders and one OR gate build a full adder.
-
-    Half adder recap
-    ```
-    Sum   = A (+) B          XOR gate
-    Carry = A . B            AND gate
-    ```
-
-    Construction
-    ```
-            +-------------+                 +-------------+
-       A ---|   Half      |--- S1 ----------|   Half      |--- Sum
-            |   Adder 1   |                 |   Adder 2   |
-       B ---|             |--- C1 --+  Cin -|             |--- C2 --+
-            +-------------+         |       +-------------+         |
-                                    |                               |
-                                    +----------|\                   |
-                                               | )--- Cout          |
-                                    +----------|/                   |
-                                    |         (OR)                  |
-                                    +-------------------------------+
-    ```
-
-    Step by step
-    ```
-    Half adder 1 :  inputs A, B
-                    S1 = A (+) B          the partial sum
-                    C1 = A . B            the carry produced by A + B
-
-    Half adder 2 :  inputs S1, Cin
-                    Sum = S1 (+) Cin = A (+) B (+) Cin
-                    C2  = S1 . Cin        the carry produced by adding Cin
-
-    OR gate      :  Cout = C1 + C2
-    ```
-
-    Gate-level circuit
-    ```
-       A ---|\                    S1
-            | ))-----+------------|\
-       B ---|/       |            | ))--- Sum = A (+) B (+) Cin
-                     |    Cin ----|/
-                     |     |
-                     +--|‾‾\
-                        |    )--- C2 ---|\
-       Cin -------------|__/            | )--- Cout
-                                        |/
-       A ---|‾‾\                        |
-            |    )--- C1 ---------------+
-       B ---|__/
-    ```
-
-    Verification
-    ```
-    A  B  Cin | S1 | C1 | Sum | C2 | Cout
-    ----------+----+----+-----+----+------
-    0  0   0  | 0  | 0  |  0  | 0  |  0
-    0  0   1  | 0  | 0  |  1  | 0  |  0
-    0  1   0  | 1  | 0  |  1  | 0  |  0
-    0  1   1  | 1  | 0  |  0  | 1  |  1
-    1  0   0  | 1  | 0  |  1  | 0  |  0
-    1  0   1  | 1  | 0  |  0  | 1  |  1
-    1  1   0  | 0  | 1  |  0  | 0  |  1
-    1  1   1  | 0  | 1  |  1  | 0  |  1
-    ```
-    - The Sum and Cout columns match the full adder truth table exactly.
-
-    - Point worth noting: `C1 and C2 are never both 1` at the same time, because C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0. The OR gate could equally be an XOR gate.
-
-20. **(খ) Multiplexer কি? চিত্রসহ একটি Multiplexer এর গঠন ও কাজ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
+10. **(খ) Multiplexer কি? চিত্রসহ একটি Multiplexer এর গঠন ও কাজ বর্ণনা করুন।** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1098 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` is a combinational circuit that has `many data inputs and one output`. Selection lines decide which input is connected to the output at that moment. It is also called a `data selector`.
 
@@ -6403,70 +6485,7 @@ Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` 
     - Implementing any Boolean function directly from its truth table, which is why a MUX is called a universal combinational circuit.
     - The reverse circuit, the `demultiplexer`, takes one input to many outputs and is used at the far end of the shared line.
 
-21. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
-
-Answer: (Answered in English, as required for IT topics.) A 2-bit adder adds two 2-bit numbers `A1A0` and `B1B0`, with a carry-in `C0`, giving a 2-bit sum `S1S0` and a carry-out `C2`. Two 1-bit full adders chained together do this. The result is a `ripple carry adder`.
-
-    Connection
-    ```
-            A1 B1                          A0 B0
-             |  |                           |  |
-          +--v--v----+                   +--v--v----+
-          |   Full   |<--- C1 -----------|   Full   |<--- C0  (carry in, usually 0)
-     C2 <-|  Adder 1 |                   |  Adder 0 |
-          +----------+                   +----------+
-                |                              |
-                S1                             S0
-    ```
-    - `Full Adder 0` adds the least significant bits A0, B0 and C0. Its carry out `C1` becomes the carry `in` of the next stage.
-    - `Full Adder 1` adds A1, B1 and C1, giving S1 and the final carry out C2.
-    - The carry has to `ripple` from the right-hand stage to the left, which is why the circuit is named this way.
-
-    Equations
-    ```
-    Stage 0 :  S0 = A0 (+) B0 (+) C0
-               C1 = A0B0 + B0C0 + A0C0
-
-    Stage 1 :  S1 = A1 (+) B1 (+) C1
-               C2 = A1B1 + B1C1 + A1C1
-    ```
-
-    Worked example — 11 + 01 with C0 = 0
-    ```
-            A = 1 1   (3)
-            B = 0 1   (1)
-           ---------
-       result = 1 0 0 (4)
-
-    Stage 0 : A0=1, B0=1, C0=0  ->  S0 = 0 , C1 = 1
-    Stage 1 : A1=1, B1=0, C1=1  ->  S1 = 0 , C2 = 1
-
-       C2 S1 S0 = 1 0 0 = 4        correct
-    ```
-
-    Second example — 10 + 11
-    ```
-            A = 1 0   (2)
-            B = 1 1   (3)
-           ---------
-       result = 1 0 1 (5)
-
-    Stage 0 : 0 + 1 + 0  ->  S0 = 1 , C1 = 0
-    Stage 1 : 1 + 1 + 0  ->  S1 = 0 , C2 = 1
-
-       C2 S1 S0 = 1 0 1 = 5        correct
-    ```
-
-    Points to note
-    - The same idea extends directly: `n` full adders in a chain make an `n-bit ripple carry adder`. Four of them form the 7483 IC.
-    - The `drawback` is speed. Stage 1 cannot finish until stage 0's carry arrives, so the total delay grows with the number of bits. For a 32-bit adder this is unacceptable, which is why `carry look-ahead` adders compute all the carries in parallel from the equations
-    ```
-       Gi = AiBi  (generate)      Pi = Ai (+) Bi  (propagate)
-       Ci+1 = Gi + Pi.Ci
-    ```
-    - Setting `C0 = 1` turns the same circuit into a subtractor when the B inputs are complemented, since `A - B = A + B' + 1` in 2's complement.
-
-22. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
+11. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
 Answer: (Answered in English, as required for IT topics.) A `seven segment display` has seven LEDs named `a` to `g`. In a common-cathode display, a segment lights when its input is `HIGH (1)`.
 
@@ -6551,7 +6570,7 @@ Answer: (Answered in English, as required for IT topics.) A `seven segment displ
     - In a `common anode` display the logic is reversed — a segment lights when its input is `LOW`, so the same digit patterns are inverted.
     - A `BCD-to-seven-segment decoder` such as the 7447 or 7448 converts the 4-bit binary digit into these seven signals automatically, and a series resistor limits the current through each LED.
 
-23. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
+12. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
 
 Answer: The function is
     ```
@@ -7756,6 +7775,8 @@ Answer: The function is
 
 ## Sequential Circuits (Latches & Flip-Flops) (17)
 
+### Latch vs Flip-Flop Fundamentals (7)
+
 1. **What is Multiplexer? Difference between D latch and D flip-flop?** *[BCIC Assistant Programmer 14.02.2025 compact it 1328 (ET: BUET)]*
 
 Answer: Multiplexer
@@ -7802,229 +7823,7 @@ Answer: Multiplexer
 
    - In a synchronous design the flip-flop is used almost everywhere, because every stage changes at one predictable instant. A latch's transparency lets a change race through several stages in one clock period, which is the classic cause of unreliable circuits.
 
-2. **Difference between combinational and sequential circuits.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
-
-Answer: Combinational circuit
-   - The output depends `only on the present inputs`. There is no memory and no clock.
-   - Change an input and the output changes after the gate delay only.
-   ```
-           +----------------+
-      -----|                |-----
-      -----|  Logic gates   |-----   outputs = f(present inputs)
-      -----|                |-----
-           +----------------+
-   ```
-   - Examples: adder, subtractor, multiplexer, demultiplexer, encoder, decoder, comparator, code converter.
-
-   Sequential circuit
-   - The output depends on `the present inputs and the past history`, which is held in `memory elements` (flip-flops). Almost always driven by a `clock`.
-   - A feedback path carries the stored state back into the logic.
-   ```
-           +----------------+
-      -----|                |-----> outputs
-      -----|  Logic gates   |
-           |                |----+
-           +----------------+    |
-                 ^               v
-                 |        +--------------+
-                 +--------|  Flip-flops  |<--- CLK
-                  present |  (memory)    |
-                   state  +--------------+
-   ```
-   - Examples: flip-flop, register, counter, shift register, RAM, finite state machine.
-
-   Difference
-
-   | Point | Combinational | Sequential |
-   |---|---|---|
-   | Output depends on | Present inputs only | Present inputs + past state |
-   | Memory element | None | Flip-flops or latches |
-   | Clock | Not needed | Usually required |
-   | Feedback path | None | Present |
-   | Design tool | Truth table, K-map | State table, state diagram |
-   | Speed | Faster | Slower, limited by the clock |
-   | Complexity | Simpler | More complex |
-   | Examples | Adder, MUX, decoder, comparator | Counter, register, shift register, FSM |
-
-   Types of sequential circuit
-   ```
-   Synchronous  : all flip-flops share one clock, state changes together
-   Asynchronous : the output of one flip-flop clocks the next (ripple)
-   ```
-
-   - The two are used together: a real digital system is combinational logic that computes the next state, wrapped around flip-flops that remember it. That is exactly what a `finite state machine` is.
-
-3. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
-
-Answer: A `ring counter` is a shift register whose output is fed back to its input, so a single 1 circulates round the ring. A 4-bit ring counter has `4 states`, one per flip-flop.
-
-   Circuit — 4 D flip-flops in a loop
-   ```
-           +-------+     +-------+     +-------+     +-------+
-      +--->|  D  Q |---->|  D  Q |---->|  D  Q |---->|  D  Q |---+
-      |    |       |     |       |     |       |     |       |   |
-      |    | FF0   |     | FF1   |     | FF2   |     | FF3   |   |
-      |    +---^---+     +---^---+     +---^---+     +---^---+   |
-      |        |             |             |             |       |
-      |       CLK           CLK           CLK           CLK      |
-      |                                                          |
-      +----------------------------------------------------------+
-                       Q3 fed back to D0
-   ```
-   ```
-      D0 = Q3      D1 = Q0      D2 = Q1      D3 = Q2
-   ```
-   - A `PRESET` on FF0 and `CLEAR` on the other three load the starting pattern `1000`. Without this the counter can start in an all-zero state and stay there forever.
-
-   Working principle
-   - On every clock edge, each flip-flop copies its left neighbour's value. The single 1 therefore moves one place to the right, and the last output wraps round to the first.
-   ```
-   Clock | Q0 Q1 Q2 Q3
-   ------+-------------
-   init  |  1  0  0  0        loaded by PRESET / CLEAR
-     1   |  0  1  0  0
-     2   |  0  0  1  0
-     3   |  0  0  0  1
-     4   |  1  0  0  0        back to the start
-   ```
-   - `Modulus = 4` for 4 flip-flops. In general an n-bit ring counter has n states, whereas an n-bit binary counter has 2^n.
-
-   Timing diagram
-   ```
-      CLK   __|‾|__|‾|__|‾|__|‾|__|‾|__
-
-      Q0    ‾‾‾‾|___________________|‾‾‾
-
-      Q1    ____|‾‾‾‾|________________
-
-      Q2    _________|‾‾‾‾|___________
-
-      Q3    ______________|‾‾‾‾|______
-   ```
-   - Only one output is HIGH at a time, and each stays HIGH for exactly one clock period.
-
-   Points to note
-   - `Self-decoding`: each state is already a single active line, so no decoder is needed. This is why ring counters drive stepper motors and time-slot sequencers directly.
-   - `Wasteful of flip-flops`: 4 flip-flops give only 4 states instead of 16.
-   - Not `self-starting` — a wrong pattern circulates forever, so the reset circuit is essential.
-   - A `Johnson counter` (twisted ring) feeds back `Q3'` instead of Q3 and doubles the count to 2n = 8 states with the same four flip-flops.
-
-4. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.) Combinational circuit
-   - The output depends `only on the present input`. There is no memory element and no clock, so the same input always gives the same output.
-   ```
-           +--------------------+
-      A ---|                    |--- Y1
-      B ---|   Logic gates      |--- Y2
-      C ---|   (no memory)      |
-           +--------------------+
-
-      Y = f(A, B, C)          present inputs only
-   ```
-   - Examples: half adder, full adder, multiplexer, demultiplexer, encoder, decoder, comparator.
-
-   Sequential circuit
-   - The output depends on `the present input and the stored past state`. Memory elements (flip-flops) hold that state, and a `feedback` path carries it back into the logic. A clock normally decides when the state may change.
-   ```
-           +--------------------+
-      A ---|                    |------------> outputs
-      B ---|   Combinational    |
-           |   logic            |----+
-           +--------------------+    |
-                 ^                   v
-                 |            +---------------+
-                 |            |  Flip-flops   |
-                 +------------|  (memory)     |<--- CLK
-                  present     +---------------+
-                   state
-   ```
-   - Examples: flip-flop, register, shift register, counter, RAM, finite state machine.
-
-   Difference
-
-   | Point | Combinational | Sequential |
-   |---|---|---|
-   | Output depends on | Present input only | Present input + previous state |
-   | Memory | None | Flip-flops or latches |
-   | Feedback path | Absent | Present |
-   | Clock | Not needed | Normally required |
-   | Design method | Truth table and K-map | State diagram and state table |
-   | Speed | Faster | Slower, limited by the clock period |
-   | Complexity | Simple | More complex |
-   | Examples | Adder, MUX, decoder | Counter, register, FSM |
-
-   - The two are always used together. A practical digital system is combinational logic that computes the `next state` from the `present state` and the inputs, wrapped around flip-flops that remember the state — which is exactly the definition of a finite state machine.
-
-5. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823-824 (ET: BUET)]*
-
-Answer: A `T flip-flop` with T tied to logic 1 toggles on every active clock edge. Its output therefore completes one full cycle for every `two` input cycles, so it divides the frequency by 2.
-
-   Circuit — two T flip-flops in cascade
-   ```
-         T=1              T=1
-          |                |
-      +---v-----+      +---v-----+
-      | T    Q  |--+-->| T    Q  |--+--> 25 MHz
-      |         |  |   |         |  |
-      |  FF1    |  |   |  FF2    |  |
-      +----^----+  |   +----^----+  |
-           |       |        |       |
-      100 MHz      +-- 50 MHz       +-- output of FF2
-       CLK              (also feeds FF2's clock)
-   ```
-   ```
-      FF1 : clocked by 100 MHz  ->  Q1 = 50 MHz
-      FF2 : clocked by Q1 (50 MHz) -> Q2 = 25 MHz
-   ```
-
-   Frequency calculation
-   ```
-      Input clock          f0 = 100 MHz     period T0 = 10 ns
-
-      After FF1  f1 = f0 / 2 = 100 / 2 = 50 MHz     period T1 = 20 ns
-      After FF2  f2 = f1 / 2 =  50 / 2 = 25 MHz     period T2 = 40 ns
-   ```
-   - General rule: `n` toggle flip-flops in cascade divide the frequency by `2^n`.
-
-   Timing diagram
-   ```
-                 10 ns
-                |<-->|
-      100 MHz   _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
-                 ^   ^   ^   ^   ^   ^   ^   ^        rising edges
-
-      50 MHz    __|‾‾‾|___|‾‾‾|___|‾‾‾|___|‾‾‾|__
-                 |<-- 20 ns -->|
-                 toggles on every rising edge of the 100 MHz clock
-
-      25 MHz    __|‾‾‾‾‾‾‾|_______|‾‾‾‾‾‾‾|______
-                 |<------ 40 ns ------>|
-                 toggles on every rising edge of the 50 MHz signal
-   ```
-   - Each waveform is a `square wave with a 50 % duty cycle`, which is one reason toggle-based division is preferred over gating.
-
-   Building a T flip-flop if only JK or D is available
-   ```
-      JK flip-flop : tie J = K = 1                 -> toggles every edge
-      D flip-flop  : connect D to Q'                -> toggles every edge
-
-           +--------+
-      +--->| D    Q |---+---> output
-      |    |        |   |
-      |    |     Q' |---+
-      |    +---^----+   |
-      |        |        |
-      |       CLK       |
-      +-----------------+
-   ```
-
-   Points to note
-   - This two-stage circuit is exactly a `2-bit asynchronous (ripple) counter`. Q1 is the least significant bit and Q2 the most significant.
-   - Because FF2 is clocked by FF1's output, the delays `add up` — this is the ripple problem. For a 100 MHz clock and only two stages it is not a concern, but in a long chain a `synchronous` counter, where every flip-flop shares the same clock, is used instead.
-   - Adding a third stage would give 12.5 MHz, a fourth 6.25 MHz, and so on.
-
-6. **What is the difference between latch and flip-flop?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+2. **What is the difference between latch and flip-flop?** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
 Answer: Both store one bit of data. The difference is `when` each responds to its input.
 
@@ -8070,44 +7869,7 @@ Answer: Both store one bit of data. The difference is `when` each responds to it
     - Why flip-flops dominate practical design: a latch stays open for a whole half-cycle, so a new value can race forward through several stages in one clock period, giving unpredictable results. The flip-flop's edge trigger allows exactly one stage of movement per cycle, which is what makes a synchronous system analysable.
     - Latches are still used where area and power matter more than timing safety, for example in low-power pipelines — and every flip-flop is itself made of two of them.
 
-7. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
-
-Answer: The question asks which clock scheme is `cheapest` to build for a company's digital system. The answer depends on what the clock has to do.
-
-   For a digital counter or divider — use an `asynchronous (ripple) clock`
-   - In a ripple counter only the first flip-flop receives the external clock; each later stage is clocked by the previous stage's output.
-   ```
-      CLK ---> FF0 ---> FF1 ---> FF2 ---> FF3
-                Q0       Q1       Q2       Q3
-   ```
-   - Why it is cheaper:
-   ```
-   No clock distribution network is needed        -> less wiring, smaller PCB
-   No combinational next-state logic per stage    -> fewer gates
-   Lower dynamic power, since only one flip-flop
-      switches at the fastest rate                -> smaller supply, less cooling
-   Simple, standard low-cost ICs (7493, 4020)
-   ```
-   - The cost: the delays `add up` down the chain, so the counter is slow and produces short-lived wrong values (`glitches`) while the ripple settles. That is acceptable for a slow application such as an electricity meter, a display multiplexer or an event counter.
-
-   For the system clock source — use a `crystal oscillator`
-   - A quartz crystal oscillator costs very little (a few taka) and gives an accuracy of about 20-50 ppm, which is enough for almost every industrial system.
-   ```
-      RC oscillator      : cheapest, but drifts badly with temperature
-      Crystal oscillator : very cheap, accurate, the normal choice
-      TCXO / OCXO        : temperature-compensated / oven-controlled,
-                           far more accurate but much more expensive
-      GPS / atomic clock : only for time-critical or metering-grade systems
-   ```
-
-   Where the cheap option must not be used
-   - Anything that has to be `read while it is counting` — a display driven directly from a ripple counter can show a wrong value during the ripple.
-   - Anything `high speed`, where the accumulated delay exceeds the clock period.
-   - Anything requiring `traceable timekeeping`, such as billing or regulatory logs, where a TCXO or a network-synchronised clock is required.
-
-   - Practical recommendation: use a `crystal-based clock source` feeding an `asynchronous ripple counter` for the low-speed counting and dividing work, and reserve the more expensive synchronous design and temperature-compensated oscillator for the parts of the system where accuracy or speed actually matters. This gives the lowest total cost without compromising the critical functions. <!-- verify -->
-
-8. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 959-960 (ET: N/A)]*
+3. **(ii) R-S Flip-flop এর সত্যস্য সারণি ও বৈশিষ্ট আলোচনা করুন।** *[BPSC Assistant Network Engineer 2020 compact it 959-960 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) An `SR flip-flop` (Set-Reset) is the most basic memory element. `S` sets the output to 1 and `R` resets it to 0.
 
@@ -8175,7 +7937,389 @@ Answer: (Answered in English, as required for IT topics.) An `SR flip-flop` (Set
 
    - The forbidden state is the reason for the `JK flip-flop`, which feeds Q and Q' back into the input gates so that J = K = 1 makes the output `toggle` instead of becoming invalid. Tying J and K together gives the `T (toggle)` flip-flop, and tying `R = S'` gives the `D` flip-flop.
 
-9. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039 (ET: DPI)]*
+4. **(গ) Flip-Flop কী? একটি Multiplexer এর কার্যপদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1075 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Flip-flop
+    - A `flip-flop` is a `bistable` sequential circuit that stores `one bit` of information. It has two stable states, 1 and 0, and stays in one until a clock edge tells it to change.
+    - It is `edge-triggered`: it samples its inputs only at the instant the clock goes from 0 to 1 (or 1 to 0). This is what makes a synchronous system predictable.
+    - The outputs `Q` and `Q'` are always complementary.
+
+    Types
+    ```
+    SR flip-flop : S sets, R resets ; S = R = 1 is forbidden
+    D flip-flop  : Q(next) = D           , used in registers
+    JK flip-flop : like SR, but J = K = 1 toggles instead of being forbidden
+    T flip-flop  : T = 1 toggles, T = 0 holds ; used in counters
+    ```
+    ```
+       D flip-flop truth table          T flip-flop truth table
+       D | Q(next)                      T | Q(next)
+       --+--------                      --+--------
+       0 |   0                          0 |   Q     (hold)
+       1 |   1                          1 |   Q'    (toggle)
+    ```
+    ```
+            +----------+
+       D ---| D      Q |--- Q
+            |          |
+       CLK->|>      Q' |--- Q'
+            +----------+
+    ```
+    - Uses: registers, shift registers, counters, memory cells and finite state machines.
+
+    Multiplexer — working procedure
+    - A `multiplexer (MUX)` is a combinational circuit with `2^n data inputs`, `n selection lines` and `one output`. The select value decides which input reaches the output.
+    ```
+    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
+    ```
+    ```
+       I0 -------------------|‾‾\
+       S1' ------------------|    )----- S1'S0'I0 ---+
+       S0' ------------------|___/                   |
+       I1 -------------------|‾‾\                    |
+       S1' ------------------|    )----- S1'S0 I1 ---+
+       S0  ------------------|___/                   |---|\
+       I2 -------------------|‾‾\                    |   | )--- Y
+       S1  ------------------|    )----- S1 S0'I2 ---+---|/
+       S0' ------------------|___/                   |
+       I3 -------------------|‾‾\                    |
+       S1  ------------------|    )----- S1 S0 I3 ---+
+       S0  ------------------|___/
+    ```
+    ```
+    S1  S0 | Y
+    -------+----
+     0   0 | I0
+     0   1 | I1
+     1   0 | I2
+     1   1 | I3
+    ```
+    - Two inverters produce the complemented select signals. Each AND gate is wired to one unique combination of them, so `exactly one AND gate is enabled` at any time and the other three output 0. The OR gate therefore carries only the selected input, and no conflict can occur.
+    - Uses: selecting one register to feed the ALU, sharing one transmission line among several sources, parallel-to-serial conversion, and building any Boolean function directly from its truth table.
+
+5. **Difference between Register and Latch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
+
+Answer: A `latch` stores `one bit`. A `register` stores a `group of bits` — usually 8, 16, 32 or 64 — and is built from several flip-flops sharing one clock.
+
+    Latch
+    - A level-triggered 1-bit memory element made from cross-coupled gates.
+    - It is `transparent` while its enable line is active: the output follows the input.
+    - Types: SR latch, D latch, gated latch.
+    ```
+            +-----------+
+       D ---|           |--- Q
+            |  D latch  |
+       EN --|           |--- Q'
+            +-----------+
+    ```
+
+    Register
+    - A set of `n` flip-flops wired to the same clock, so all n bits are stored or read at the same instant.
+    - It is a complete storage unit inside a CPU: the accumulator, program counter, instruction register and general-purpose registers are all registers.
+    - Types: parallel-in parallel-out (PIPO), shift register (SISO, SIPO, PISO), and universal shift register.
+    ```
+            +-------+ +-------+ +-------+ +-------+
+       D0 ->| D   Q |->Q0     |         |         |
+       D1 ->| D   Q |-> Q1    |         |         |
+       D2 ->| D   Q |-> Q2    |         |         |
+       D3 ->| D   Q |-> Q3    |         |         |
+            +---^---+ +---^---+ +---^---+ +---^---+
+                |         |         |         |
+                +---------+----+----+---------+
+                               |
+                              CLK        4-bit register
+    ```
+
+    Difference
+
+    | Point | Latch | Register |
+    |---|---|---|
+    | Stores | 1 bit | n bits (8, 16, 32, 64) |
+    | Built from | Cross-coupled gates | n flip-flops |
+    | Triggering | Level (enable) | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Size and cost | Very small | n times larger |
+    | Timing | Hard to analyse | Predictable |
+    | Purpose | Hold one signal, buffering | Hold data or an address inside a CPU |
+    | Extra ability | None | Can shift, load in parallel, count |
+    | Examples | SR latch, D latch | Accumulator, PC, IR, shift register |
+
+    - Relationship between them: a flip-flop is built from two latches, and a register is built from n flip-flops. So the latch is the smallest brick and the register is the finished wall.
+    - Practical note: an unintended latch appearing in a design — usually caused by an incomplete `if` statement in HDL code — is a well-known bug, because it makes the circuit level-sensitive where the designer expected an edge-triggered register.
+
+6. **What is the difference between flip-flop and latch with figure?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190-1191 (ET: N/A)]*
+
+Answer: Both a `latch` and a `flip-flop` are 1-bit memory elements. The difference is `when` they accept new data — a latch responds to the `level` of its control signal, a flip-flop to its `edge`.
+
+    D latch — level-triggered
+    ```
+                    +---------+
+       D -----------| D     Q |----- Q
+                    |         |
+       EN ----------| EN   Q' |----- Q'
+                    +---------+
+
+       While EN = 1  ->  Q follows D  (transparent)
+       While EN = 0  ->  Q holds the last value
+    ```
+
+    D flip-flop — edge-triggered (master-slave)
+    ```
+            master latch          slave latch
+          +-----------+         +-----------+
+       D--| D       Q |----+----| D       Q |---- Q
+          |           |    |    |           |
+       +--| EN        |    | +--| EN     Q' |---- Q'
+       |  +-----------+    | |  +-----------+
+       |                   | |
+       |     +------+      | |
+       CLK --| NOT  |------+ |
+             +------+        |
+       CLK ------------------+
+
+       The master is transparent while CLK = 0, the slave while CLK = 1.
+       Since they are never open together, data moves forward by exactly
+       one stage per clock cycle  ->  the edge trigger.
+    ```
+
+    Timing comparison
+    ```
+       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+
+       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+
+       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________   follows D whenever EN is HIGH
+
+       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________   changes only at the rising edge
+                     ^                ^
+    ```
+
+    Difference
+
+    | Point | Latch | Flip-flop |
+    |---|---|---|
+    | Triggering | Level (enable HIGH or LOW) | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Clock | Not strictly needed | Required |
+    | Structure | Cross-coupled gates | Two latches, master-slave |
+    | Area and gate count | Small | About double |
+    | Speed | Faster | Slower |
+    | Power | Lower | Higher, the clock toggles every cycle |
+    | Timing analysis | Hard; data can race through | Simple and predictable |
+    | Used in | Asynchronous logic, buffering | Registers, counters, shift registers |
+    | Examples | SR latch, D latch | D, JK, T flip-flop |
+
+    - Why the flip-flop is used in real designs: in a synchronous system, all stages must update together. A latch stays open for a whole half-cycle, so a new value can `race` through two or three stages in one clock period and corrupt the state. The edge trigger closes that window.
+
+7. **What is the difference between latch and flip-flop?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
+
+Answer: Both store one bit of data. The difference is `when` each responds to its input.
+
+    Latch
+    - `Level-triggered` — it responds throughout the time its enable line is active.
+    - It is `transparent` during that period: the output follows every change of the input.
+    - Built directly from cross-coupled NAND or NOR gates, so it is small, fast and cheap.
+    - Types: SR latch, D latch, gated SR latch.
+
+    Flip-flop
+    - `Edge-triggered` — it samples the input only at the instant the clock changes from 0 to 1 (or 1 to 0), and ignores it at every other moment.
+    - It is never transparent; the output can change at only one predictable instant per clock cycle.
+    - Built from `two latches` in a master-slave arrangement, so it costs roughly twice the area.
+    - Types: D, JK, T, master-slave.
+
+    ```
+       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
+
+       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
+
+       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________
+
+       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________
+                     ^                ^
+                     rising edge      rising edge
+    ```
+
+    Difference
+
+    | Point | Latch | Flip-flop |
+    |---|---|---|
+    | Triggering | Level | Clock edge |
+    | Transparency | Transparent while enabled | Never transparent |
+    | Clock required | No | Yes |
+    | Built from | Cross-coupled gates | Two latches (master-slave) |
+    | Area and gate count | Fewer | About double |
+    | Speed | Faster | Slower |
+    | Power | Lower | Higher |
+    | Timing analysis | Difficult, data can race through | Simple and predictable |
+    | Glitch behaviour | A glitch on the input can pass | Blocked between edges |
+    | Used in | Asynchronous circuits, buffering | Registers, counters, shift registers, FSMs |
+
+    - Why flip-flops dominate practical design: a latch stays open for a whole half-cycle, so a new value can race forward through several stages in one clock period, giving unpredictable results. The flip-flop's edge trigger allows exactly one stage of movement per cycle, which is what makes a synchronous system analysable.
+    - Latches are still used where area and power matter more than timing safety, for example in low-power pipelines — and every flip-flop is itself made of two of them.
+
+### Counters & Clock Circuits (7)
+
+1. **(b) Design a 4-bit ring counter using flip-flops. Write down its working principle using.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 687 (ET: N/A)]*
+
+Answer: A `ring counter` is a shift register whose output is fed back to its input, so a single 1 circulates round the ring. A 4-bit ring counter has `4 states`, one per flip-flop.
+
+   Circuit — 4 D flip-flops in a loop
+   ```
+           +-------+     +-------+     +-------+     +-------+
+      +--->|  D  Q |---->|  D  Q |---->|  D  Q |---->|  D  Q |---+
+      |    |       |     |       |     |       |     |       |   |
+      |    | FF0   |     | FF1   |     | FF2   |     | FF3   |   |
+      |    +---^---+     +---^---+     +---^---+     +---^---+   |
+      |        |             |             |             |       |
+      |       CLK           CLK           CLK           CLK      |
+      |                                                          |
+      +----------------------------------------------------------+
+                       Q3 fed back to D0
+   ```
+   ```
+      D0 = Q3      D1 = Q0      D2 = Q1      D3 = Q2
+   ```
+   - A `PRESET` on FF0 and `CLEAR` on the other three load the starting pattern `1000`. Without this the counter can start in an all-zero state and stay there forever.
+
+   Working principle
+   - On every clock edge, each flip-flop copies its left neighbour's value. The single 1 therefore moves one place to the right, and the last output wraps round to the first.
+   ```
+   Clock | Q0 Q1 Q2 Q3
+   ------+-------------
+   init  |  1  0  0  0        loaded by PRESET / CLEAR
+     1   |  0  1  0  0
+     2   |  0  0  1  0
+     3   |  0  0  0  1
+     4   |  1  0  0  0        back to the start
+   ```
+   - `Modulus = 4` for 4 flip-flops. In general an n-bit ring counter has n states, whereas an n-bit binary counter has 2^n.
+
+   Timing diagram
+   ```
+      CLK   __|‾|__|‾|__|‾|__|‾|__|‾|__
+
+      Q0    ‾‾‾‾|___________________|‾‾‾
+
+      Q1    ____|‾‾‾‾|________________
+
+      Q2    _________|‾‾‾‾|___________
+
+      Q3    ______________|‾‾‾‾|______
+   ```
+   - Only one output is HIGH at a time, and each stays HIGH for exactly one clock period.
+
+   Points to note
+   - `Self-decoding`: each state is already a single active line, so no decoder is needed. This is why ring counters drive stepper motors and time-slot sequencers directly.
+   - `Wasteful of flip-flops`: 4 flip-flops give only 4 states instead of 16.
+   - Not `self-starting` — a wrong pattern circulates forever, so the reset circuit is essential.
+   - A `Johnson counter` (twisted ring) feeds back `Q3'` instead of Q3 and doubles the count to 2n = 8 states with the same four flip-flops.
+
+2. **Given a 100MHz clock signal derive a circuit using T-flip flops of generate 50MHz and 25MHz clock signals. Draw a timing diagram for all the three clock signal.** *[Titas Gas Assistant Engineer (CSE) 2021 compact it 823-824 (ET: BUET)]*
+
+Answer: A `T flip-flop` with T tied to logic 1 toggles on every active clock edge. Its output therefore completes one full cycle for every `two` input cycles, so it divides the frequency by 2.
+
+   Circuit — two T flip-flops in cascade
+   ```
+         T=1              T=1
+          |                |
+      +---v-----+      +---v-----+
+      | T    Q  |--+-->| T    Q  |--+--> 25 MHz
+      |         |  |   |         |  |
+      |  FF1    |  |   |  FF2    |  |
+      +----^----+  |   +----^----+  |
+           |       |        |       |
+      100 MHz      +-- 50 MHz       +-- output of FF2
+       CLK              (also feeds FF2's clock)
+   ```
+   ```
+      FF1 : clocked by 100 MHz  ->  Q1 = 50 MHz
+      FF2 : clocked by Q1 (50 MHz) -> Q2 = 25 MHz
+   ```
+
+   Frequency calculation
+   ```
+      Input clock          f0 = 100 MHz     period T0 = 10 ns
+
+      After FF1  f1 = f0 / 2 = 100 / 2 = 50 MHz     period T1 = 20 ns
+      After FF2  f2 = f1 / 2 =  50 / 2 = 25 MHz     period T2 = 40 ns
+   ```
+   - General rule: `n` toggle flip-flops in cascade divide the frequency by `2^n`.
+
+   Timing diagram
+   ```
+                 10 ns
+                |<-->|
+      100 MHz   _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
+                 ^   ^   ^   ^   ^   ^   ^   ^        rising edges
+
+      50 MHz    __|‾‾‾|___|‾‾‾|___|‾‾‾|___|‾‾‾|__
+                 |<-- 20 ns -->|
+                 toggles on every rising edge of the 100 MHz clock
+
+      25 MHz    __|‾‾‾‾‾‾‾|_______|‾‾‾‾‾‾‾|______
+                 |<------ 40 ns ------>|
+                 toggles on every rising edge of the 50 MHz signal
+   ```
+   - Each waveform is a `square wave with a 50 % duty cycle`, which is one reason toggle-based division is preferred over gating.
+
+   Building a T flip-flop if only JK or D is available
+   ```
+      JK flip-flop : tie J = K = 1                 -> toggles every edge
+      D flip-flop  : connect D to Q'                -> toggles every edge
+
+           +--------+
+      +--->| D    Q |---+---> output
+      |    |        |   |
+      |    |     Q' |---+
+      |    +---^----+   |
+      |        |        |
+      |       CLK       |
+      +-----------------+
+   ```
+
+   Points to note
+   - This two-stage circuit is exactly a `2-bit asynchronous (ripple) counter`. Q1 is the least significant bit and Q2 the most significant.
+   - Because FF2 is clocked by FF1's output, the delays `add up` — this is the ripple problem. For a 100 MHz clock and only two stages it is not a concern, but in a long chain a `synchronous` counter, where every flip-flop shares the same clock, is used instead.
+   - Adding a third stage would give 12.5 MHz, a fourth 6.25 MHz, and so on.
+
+3. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
+
+Answer: The question asks which clock scheme is `cheapest` to build for a company's digital system. The answer depends on what the clock has to do.
+
+   For a digital counter or divider — use an `asynchronous (ripple) clock`
+   - In a ripple counter only the first flip-flop receives the external clock; each later stage is clocked by the previous stage's output.
+   ```
+      CLK ---> FF0 ---> FF1 ---> FF2 ---> FF3
+                Q0       Q1       Q2       Q3
+   ```
+   - Why it is cheaper:
+   ```
+   No clock distribution network is needed        -> less wiring, smaller PCB
+   No combinational next-state logic per stage    -> fewer gates
+   Lower dynamic power, since only one flip-flop
+      switches at the fastest rate                -> smaller supply, less cooling
+   Simple, standard low-cost ICs (7493, 4020)
+   ```
+   - The cost: the delays `add up` down the chain, so the counter is slow and produces short-lived wrong values (`glitches`) while the ripple settles. That is acceptable for a slow application such as an electricity meter, a display multiplexer or an event counter.
+
+   For the system clock source — use a `crystal oscillator`
+   - A quartz crystal oscillator costs very little (a few taka) and gives an accuracy of about 20-50 ppm, which is enough for almost every industrial system.
+   ```
+      RC oscillator      : cheapest, but drifts badly with temperature
+      Crystal oscillator : very cheap, accurate, the normal choice
+      TCXO / OCXO        : temperature-compensated / oven-controlled,
+                           far more accurate but much more expensive
+      GPS / atomic clock : only for time-critical or metering-grade systems
+   ```
+
+   Where the cheap option must not be used
+   - Anything that has to be `read while it is counting` — a display driven directly from a ripple counter can show a wrong value during the ripple.
+   - Anything `high speed`, where the accumulated delay exceeds the clock period.
+   - Anything requiring `traceable timekeeping`, such as billing or regulatory logs, where a TCXO or a network-synchronised clock is required.
+
+   - Practical recommendation: use a `crystal-based clock source` feeding an `asynchronous ripple counter` for the low-speed counting and dividing work, and reserve the more expensive synchronous design and temperature-compensated oscillator for the parts of the system where accuracy or speed actually matters. This gives the lowest total cost without compromising the critical functions. <!-- verify -->
+
+4. **MOD-6 বাইনারি কাউন্টার এর Block Diagram অংকন করুন।** *[NWPGCL Assistant Manager(ICT) 2020 compact it 1039 (ET: DPI)]*
 
 Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 6 states, counting 000 to 101 and then resetting to 000. It needs `3 flip-flops`, because 2^2 = 4 is too few and 2^3 = 8 is enough.
    ```
@@ -8244,67 +8388,7 @@ Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 
    - A `synchronous` MOD-6 counter avoids the glitch entirely, by feeding the same clock to all three flip-flops and deriving each T input from combinational logic. It costs more gates but is safe to read at any time.
    - The same technique gives any modulus: MOD-10 clears on 1010 with `CLEAR = (Q3.Q1)'`, MOD-12 on 1100, and so on.
 
-10. **(গ) Flip-Flop কী? একটি Multiplexer এর কার্যপদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1075 (ET: N/A)]*
-
-Answer: (Answered in English, as required for IT topics.) Flip-flop
-    - A `flip-flop` is a `bistable` sequential circuit that stores `one bit` of information. It has two stable states, 1 and 0, and stays in one until a clock edge tells it to change.
-    - It is `edge-triggered`: it samples its inputs only at the instant the clock goes from 0 to 1 (or 1 to 0). This is what makes a synchronous system predictable.
-    - The outputs `Q` and `Q'` are always complementary.
-
-    Types
-    ```
-    SR flip-flop : S sets, R resets ; S = R = 1 is forbidden
-    D flip-flop  : Q(next) = D           , used in registers
-    JK flip-flop : like SR, but J = K = 1 toggles instead of being forbidden
-    T flip-flop  : T = 1 toggles, T = 0 holds ; used in counters
-    ```
-    ```
-       D flip-flop truth table          T flip-flop truth table
-       D | Q(next)                      T | Q(next)
-       --+--------                      --+--------
-       0 |   0                          0 |   Q     (hold)
-       1 |   1                          1 |   Q'    (toggle)
-    ```
-    ```
-            +----------+
-       D ---| D      Q |--- Q
-            |          |
-       CLK->|>      Q' |--- Q'
-            +----------+
-    ```
-    - Uses: registers, shift registers, counters, memory cells and finite state machines.
-
-    Multiplexer — working procedure
-    - A `multiplexer (MUX)` is a combinational circuit with `2^n data inputs`, `n selection lines` and `one output`. The select value decides which input reaches the output.
-    ```
-    Y = S1'S0'.I0 + S1'S0.I1 + S1S0'.I2 + S1S0.I3
-    ```
-    ```
-       I0 -------------------|‾‾\
-       S1' ------------------|    )----- S1'S0'I0 ---+
-       S0' ------------------|___/                   |
-       I1 -------------------|‾‾\                    |
-       S1' ------------------|    )----- S1'S0 I1 ---+
-       S0  ------------------|___/                   |---|\
-       I2 -------------------|‾‾\                    |   | )--- Y
-       S1  ------------------|    )----- S1 S0'I2 ---+---|/
-       S0' ------------------|___/                   |
-       I3 -------------------|‾‾\                    |
-       S1  ------------------|    )----- S1 S0 I3 ---+
-       S0  ------------------|___/
-    ```
-    ```
-    S1  S0 | Y
-    -------+----
-     0   0 | I0
-     0   1 | I1
-     1   0 | I2
-     1   1 | I3
-    ```
-    - Two inverters produce the complemented select signals. Each AND gate is wired to one unique combination of them, so `exactly one AND gate is enabled` at any time and the other three output 0. The OR gate therefore carries only the selected input, and no conflict can occur.
-    - Uses: selecting one register to feed the ALU, sharing one transmission line among several sources, parallel-to-serial conversion, and building any Boolean function directly from its truth table.
-
-11. **Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077-1078 (ET: N/A)]*
+5. **Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077-1078 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) A `ripple counter` is an `asynchronous` counter in which only the first flip-flop receives the external clock. Each following flip-flop is clocked by the output of the one before it, so the count change `ripples` from the least significant bit towards the most significant.
 
@@ -8363,7 +8447,7 @@ Answer: (Answered in English, as required for IT topics.) A `ripple counter` is 
     - While the ripple travels, the outputs show short-lived wrong values — `glitches` — so the count must not be decoded or read during that time.
     - A `synchronous` counter, where all flip-flops share one clock, removes both problems at the cost of extra logic.
 
-12. **(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
+6. **(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
 Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000, giving ten states. It needs `4 flip-flops`, since 2^3 = 8 is too few and 2^4 = 16 is enough.
     ```
@@ -8440,57 +8524,141 @@ Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000
     - The counter divides the input frequency by 10, so it is also a `decade frequency divider`. The 7490 IC is the classic implementation.
     - A `synchronous` mod-10 counter drives all four flip-flops from the same clock and derives the J and K inputs from logic, which removes the glitch and the accumulated ripple delay.
 
-13. **Difference between Register and Latch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
+7. **What is synchronous? Why sequential circuit use synchronization.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
-Answer: A `latch` stores `one bit`. A `register` stores a `group of bits` — usually 8, 16, 32 or 64 — and is built from several flip-flops sharing one clock.
+Answer: Synchronous
+    - `Synchronous` means that all the parts of a circuit change state `at the same instant`, controlled by a common `clock` signal. Every flip-flop receives the same clock and acts on the same edge.
+    - The opposite is `asynchronous`, where one element's output triggers the next, so the changes happen one after another and at unpredictable moments.
+    ```
+       Synchronous                     Asynchronous (ripple)
 
-    Latch
-    - A level-triggered 1-bit memory element made from cross-coupled gates.
-    - It is `transparent` while its enable line is active: the output follows the input.
-    - Types: SR latch, D latch, gated latch.
-    ```
-            +-----------+
-       D ---|           |--- Q
-            |  D latch  |
-       EN --|           |--- Q'
-            +-----------+
-    ```
-
-    Register
-    - A set of `n` flip-flops wired to the same clock, so all n bits are stored or read at the same instant.
-    - It is a complete storage unit inside a CPU: the accumulator, program counter, instruction register and general-purpose registers are all registers.
-    - Types: parallel-in parallel-out (PIPO), shift register (SISO, SIPO, PISO), and universal shift register.
-    ```
-            +-------+ +-------+ +-------+ +-------+
-       D0 ->| D   Q |->Q0     |         |         |
-       D1 ->| D   Q |-> Q1    |         |         |
-       D2 ->| D   Q |-> Q2    |         |         |
-       D3 ->| D   Q |-> Q3    |         |         |
-            +---^---+ +---^---+ +---^---+ +---^---+
-                |         |         |         |
-                +---------+----+----+---------+
-                               |
-                              CLK        4-bit register
+       CLK ---+---+---+                CLK --> FF0 --> FF1 --> FF2
+              |   |   |                          Q0      Q1
+              v   v   v
+            FF0  FF1  FF2              each flip-flop clocks the next
+       all flip-flops share one clock
     ```
 
-    Difference
+    Why sequential circuits use synchronization
+    - `Predictable timing.` Every state change happens at one known instant, so the designer knows exactly when the outputs are valid and safe to read.
+    - `No accumulated delay.` In a ripple counter the delays add up down the chain, so the most significant bit settles after n gate delays. With one shared clock, all outputs settle within one gate delay of the same edge.
+    - `No glitches during counting.` A ripple counter passes through short-lived wrong values while the ripple travels — reading or decoding at that moment gives a wrong result. A synchronous counter never shows an invalid state.
+    - `Race conditions are avoided.` Without a clock, two signals arriving at slightly different times can leave the circuit in the wrong state. The clock edge forces every element to sample at the same moment, so the race disappears.
+    - `Higher maximum speed.` The clock period only has to cover `the longest single path`, not the sum of all stages.
+    ```
+       f_max = 1 / (t_pd + t_setup + t_clk-to-Q)
+    ```
+    - `Simple design and verification.` Setup and hold checks, static timing analysis and simulation all assume a clock. Modern EDA tools are built entirely around synchronous design.
+    - `Reliable data exchange between blocks.` If two blocks share a clock, one can hand data to the other with no handshake at all.
 
-    | Point | Latch | Register |
-    |---|---|---|
-    | Stores | 1 bit | n bits (8, 16, 32, 64) |
-    | Built from | Cross-coupled gates | n flip-flops |
-    | Triggering | Level (enable) | Clock edge |
-    | Transparency | Transparent while enabled | Never transparent |
-    | Size and cost | Very small | n times larger |
-    | Timing | Hard to analyse | Predictable |
-    | Purpose | Hold one signal, buffering | Hold data or an address inside a CPU |
-    | Extra ability | None | Can shift, load in parallel, count |
-    | Examples | SR latch, D latch | Accumulator, PC, IR, shift register |
+    Cost of synchronisation
+    - The clock must reach every flip-flop at nearly the same time. The difference is `clock skew`, and controlling it needs a carefully balanced clock tree, which uses area and power.
+    - The clock switches every cycle, so it is often the largest single consumer of dynamic power in a chip. `Clock gating` is used to switch it off in idle blocks.
 
-    - Relationship between them: a flip-flop is built from two latches, and a register is built from n flip-flops. So the latch is the smallest brick and the register is the finished wall.
-    - Practical note: an unintended latch appearing in a design — usually caused by an incomplete `if` statement in HDL code — is a well-known bug, because it makes the circuit level-sensitive where the designer expected an edge-triggered register.
+    - Summary: synchronisation trades some power and wiring for `predictability`. In a system of thousands of flip-flops that predictability is not a convenience, it is the only way the design can be made to work at all.
 
-14. **Main difference between Combinational and Sequential circuits.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
+### Combinational vs Sequential Circuits Comparison (3)
+
+1. **Difference between combinational and sequential circuits.** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
+
+Answer: Combinational circuit
+   - The output depends `only on the present inputs`. There is no memory and no clock.
+   - Change an input and the output changes after the gate delay only.
+   ```
+           +----------------+
+      -----|                |-----
+      -----|  Logic gates   |-----   outputs = f(present inputs)
+      -----|                |-----
+           +----------------+
+   ```
+   - Examples: adder, subtractor, multiplexer, demultiplexer, encoder, decoder, comparator, code converter.
+
+   Sequential circuit
+   - The output depends on `the present inputs and the past history`, which is held in `memory elements` (flip-flops). Almost always driven by a `clock`.
+   - A feedback path carries the stored state back into the logic.
+   ```
+           +----------------+
+      -----|                |-----> outputs
+      -----|  Logic gates   |
+           |                |----+
+           +----------------+    |
+                 ^               v
+                 |        +--------------+
+                 +--------|  Flip-flops  |<--- CLK
+                  present |  (memory)    |
+                   state  +--------------+
+   ```
+   - Examples: flip-flop, register, counter, shift register, RAM, finite state machine.
+
+   Difference
+
+   | Point | Combinational | Sequential |
+   |---|---|---|
+   | Output depends on | Present inputs only | Present inputs + past state |
+   | Memory element | None | Flip-flops or latches |
+   | Clock | Not needed | Usually required |
+   | Feedback path | None | Present |
+   | Design tool | Truth table, K-map | State table, state diagram |
+   | Speed | Faster | Slower, limited by the clock |
+   | Complexity | Simpler | More complex |
+   | Examples | Adder, MUX, decoder, comparator | Counter, register, shift register, FSM |
+
+   Types of sequential circuit
+   ```
+   Synchronous  : all flip-flops share one clock, state changes together
+   Asynchronous : the output of one flip-flop clocks the next (ripple)
+   ```
+
+   - The two are used together: a real digital system is combinational logic that computes the next state, wrapped around flip-flops that remember it. That is exactly what a `finite state machine` is.
+
+2. **(খ) Combinational এবং Sequential circuit এর মধ্যে পার্থক্য ডায়াগ্রাম সহকারে লিখুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 773 (ET: N/A)]*
+
+Answer: (Answered in English, as required for IT topics.) Combinational circuit
+   - The output depends `only on the present input`. There is no memory element and no clock, so the same input always gives the same output.
+   ```
+           +--------------------+
+      A ---|                    |--- Y1
+      B ---|   Logic gates      |--- Y2
+      C ---|   (no memory)      |
+           +--------------------+
+
+      Y = f(A, B, C)          present inputs only
+   ```
+   - Examples: half adder, full adder, multiplexer, demultiplexer, encoder, decoder, comparator.
+
+   Sequential circuit
+   - The output depends on `the present input and the stored past state`. Memory elements (flip-flops) hold that state, and a `feedback` path carries it back into the logic. A clock normally decides when the state may change.
+   ```
+           +--------------------+
+      A ---|                    |------------> outputs
+      B ---|   Combinational    |
+           |   logic            |----+
+           +--------------------+    |
+                 ^                   v
+                 |            +---------------+
+                 |            |  Flip-flops   |
+                 +------------|  (memory)     |<--- CLK
+                  present     +---------------+
+                   state
+   ```
+   - Examples: flip-flop, register, shift register, counter, RAM, finite state machine.
+
+   Difference
+
+   | Point | Combinational | Sequential |
+   |---|---|---|
+   | Output depends on | Present input only | Present input + previous state |
+   | Memory | None | Flip-flops or latches |
+   | Feedback path | Absent | Present |
+   | Clock | Not needed | Normally required |
+   | Design method | Truth table and K-map | State diagram and state table |
+   | Speed | Faster | Slower, limited by the clock period |
+   | Complexity | Simple | More complex |
+   | Examples | Adder, MUX, decoder | Counter, register, FSM |
+
+   - The two are always used together. A practical digital system is combinational logic that computes the `next state` from the `present state` and the inputs, wrapped around flip-flops that remember the state — which is exactly the definition of a finite state machine.
+
+3. **Main difference between Combinational and Sequential circuits.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
 Answer: The main difference is `memory`. A combinational circuit has none; a sequential circuit has memory and therefore remembers what happened before.
 
@@ -8538,149 +8706,6 @@ Answer: The main difference is `memory`. A combinational circuit has none; a seq
 
     - Types of sequential circuit: `synchronous`, where every flip-flop shares one clock, and `asynchronous` (ripple), where one flip-flop clocks the next.
     - The two are always used together: a real system is combinational logic computing the next state, wrapped around flip-flops that remember it — the definition of a finite state machine.
-
-15. **What is synchronous? Why sequential circuit use synchronization.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
-
-Answer: Synchronous
-    - `Synchronous` means that all the parts of a circuit change state `at the same instant`, controlled by a common `clock` signal. Every flip-flop receives the same clock and acts on the same edge.
-    - The opposite is `asynchronous`, where one element's output triggers the next, so the changes happen one after another and at unpredictable moments.
-    ```
-       Synchronous                     Asynchronous (ripple)
-
-       CLK ---+---+---+                CLK --> FF0 --> FF1 --> FF2
-              |   |   |                          Q0      Q1
-              v   v   v
-            FF0  FF1  FF2              each flip-flop clocks the next
-       all flip-flops share one clock
-    ```
-
-    Why sequential circuits use synchronization
-    - `Predictable timing.` Every state change happens at one known instant, so the designer knows exactly when the outputs are valid and safe to read.
-    - `No accumulated delay.` In a ripple counter the delays add up down the chain, so the most significant bit settles after n gate delays. With one shared clock, all outputs settle within one gate delay of the same edge.
-    - `No glitches during counting.` A ripple counter passes through short-lived wrong values while the ripple travels — reading or decoding at that moment gives a wrong result. A synchronous counter never shows an invalid state.
-    - `Race conditions are avoided.` Without a clock, two signals arriving at slightly different times can leave the circuit in the wrong state. The clock edge forces every element to sample at the same moment, so the race disappears.
-    - `Higher maximum speed.` The clock period only has to cover `the longest single path`, not the sum of all stages.
-    ```
-       f_max = 1 / (t_pd + t_setup + t_clk-to-Q)
-    ```
-    - `Simple design and verification.` Setup and hold checks, static timing analysis and simulation all assume a clock. Modern EDA tools are built entirely around synchronous design.
-    - `Reliable data exchange between blocks.` If two blocks share a clock, one can hand data to the other with no handshake at all.
-
-    Cost of synchronisation
-    - The clock must reach every flip-flop at nearly the same time. The difference is `clock skew`, and controlling it needs a carefully balanced clock tree, which uses area and power.
-    - The clock switches every cycle, so it is often the largest single consumer of dynamic power in a chip. `Clock gating` is used to switch it off in idle blocks.
-
-    - Summary: synchronisation trades some power and wiring for `predictability`. In a system of thousands of flip-flops that predictability is not a convenience, it is the only way the design can be made to work at all.
-
-16. **What is the difference between flip-flop and latch with figure?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190-1191 (ET: N/A)]*
-
-Answer: Both a `latch` and a `flip-flop` are 1-bit memory elements. The difference is `when` they accept new data — a latch responds to the `level` of its control signal, a flip-flop to its `edge`.
-
-    D latch — level-triggered
-    ```
-                    +---------+
-       D -----------| D     Q |----- Q
-                    |         |
-       EN ----------| EN   Q' |----- Q'
-                    +---------+
-
-       While EN = 1  ->  Q follows D  (transparent)
-       While EN = 0  ->  Q holds the last value
-    ```
-
-    D flip-flop — edge-triggered (master-slave)
-    ```
-            master latch          slave latch
-          +-----------+         +-----------+
-       D--| D       Q |----+----| D       Q |---- Q
-          |           |    |    |           |
-       +--| EN        |    | +--| EN     Q' |---- Q'
-       |  +-----------+    | |  +-----------+
-       |                   | |
-       |     +------+      | |
-       CLK --| NOT  |------+ |
-             +------+        |
-       CLK ------------------+
-
-       The master is transparent while CLK = 0, the slave while CLK = 1.
-       Since they are never open together, data moves forward by exactly
-       one stage per clock cycle  ->  the edge trigger.
-    ```
-
-    Timing comparison
-    ```
-       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
-
-       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
-
-       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________   follows D whenever EN is HIGH
-
-       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________   changes only at the rising edge
-                     ^                ^
-    ```
-
-    Difference
-
-    | Point | Latch | Flip-flop |
-    |---|---|---|
-    | Triggering | Level (enable HIGH or LOW) | Clock edge |
-    | Transparency | Transparent while enabled | Never transparent |
-    | Clock | Not strictly needed | Required |
-    | Structure | Cross-coupled gates | Two latches, master-slave |
-    | Area and gate count | Small | About double |
-    | Speed | Faster | Slower |
-    | Power | Lower | Higher, the clock toggles every cycle |
-    | Timing analysis | Hard; data can race through | Simple and predictable |
-    | Used in | Asynchronous logic, buffering | Registers, counters, shift registers |
-    | Examples | SR latch, D latch | D, JK, T flip-flop |
-
-    - Why the flip-flop is used in real designs: in a synchronous system, all stages must update together. A latch stays open for a whole half-cycle, so a new value can `race` through two or three stages in one clock period and corrupt the state. The edge trigger closes that window.
-
-17. **What is the difference between latch and flip-flop?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1227 (ET: N/A)]*
-
-Answer: Both store one bit of data. The difference is `when` each responds to its input.
-
-    Latch
-    - `Level-triggered` — it responds throughout the time its enable line is active.
-    - It is `transparent` during that period: the output follows every change of the input.
-    - Built directly from cross-coupled NAND or NOR gates, so it is small, fast and cheap.
-    - Types: SR latch, D latch, gated SR latch.
-
-    Flip-flop
-    - `Edge-triggered` — it samples the input only at the instant the clock changes from 0 to 1 (or 1 to 0), and ignores it at every other moment.
-    - It is never transparent; the output can change at only one predictable instant per clock cycle.
-    - Built from `two latches` in a master-slave arrangement, so it costs roughly twice the area.
-    - Types: D, JK, T, master-slave.
-
-    ```
-       CLK / EN   __|‾‾‾‾‾‾‾‾|______|‾‾‾‾‾‾‾‾|____
-
-       D          ___|‾‾‾|___|‾‾‾‾‾‾‾‾‾|__________
-
-       Latch  Q   ___|‾‾‾|___|‾‾‾‾‾|______________
-
-       FF     Q   ______|‾‾‾‾‾‾‾‾‾‾‾‾‾‾|__________
-                     ^                ^
-                     rising edge      rising edge
-    ```
-
-    Difference
-
-    | Point | Latch | Flip-flop |
-    |---|---|---|
-    | Triggering | Level | Clock edge |
-    | Transparency | Transparent while enabled | Never transparent |
-    | Clock required | No | Yes |
-    | Built from | Cross-coupled gates | Two latches (master-slave) |
-    | Area and gate count | Fewer | About double |
-    | Speed | Faster | Slower |
-    | Power | Lower | Higher |
-    | Timing analysis | Difficult, data can race through | Simple and predictable |
-    | Glitch behaviour | A glitch on the input can pass | Blocked between edges |
-    | Used in | Asynchronous circuits, buffering | Registers, counters, shift registers, FSMs |
-
-    - Why flip-flops dominate practical design: a latch stays open for a whole half-cycle, so a new value can race forward through several stages in one clock period, giving unpredictable results. The flip-flop's edge trigger allows exactly one stage of movement per cycle, which is what makes a synchronous system analysable.
-    - Latches are still used where area and power matter more than timing safety, for example in low-power pipelines — and every flip-flop is itself made of two of them.
 
 ## Logic Families (TTL vs CMOS) (6)
 
