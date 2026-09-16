@@ -1,23 +1,24 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 208 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Linux / Unix Commands & Administration](#linux--unix-commands--administration-47) | 47 |
-| 2 | [CPU Scheduling Algorithms](#cpu-scheduling-algorithms-26) | 26 |
-| 3 | [OS Concepts & System Software](#os-concepts--system-software-24) | 24 |
-| 4 | [Deadlock & Resource Allocation](#deadlock--resource-allocation-23) | 23 |
-| 5 | [Memory Management & Paging](#memory-management--paging-18) | 18 |
-| 6 | [Virtual Memory & Page Replacement (Thrashing)](#virtual-memory--page-replacement-thrashing-16) | 16 |
-| 7 | [Process Management & Process States](#process-management--process-states-12) | 12 |
-| 8 | [Concurrency, Threads & Synchronization](#concurrency-threads--synchronization-11) | 11 |
-| 9 | [File Systems & Disk Management](#file-systems--disk-management-7) | 7 |
-| 10 | [OS Concepts & Process Management](#os-concepts--process-management-7) | 7 |
-| 11 | [CPU Scheduling](#cpu-scheduling-6) | 6 |
-| 12 | [Windows & System Administration](#windows--system-administration-5) | 5 |
-| 13 | [Process Synchronization & Concurrency](#process-synchronization--concurrency-4) | 4 |
-| 14 | [Deadlock & Concurrency Control](#deadlock--concurrency-control-2) | 2 |
-| 15 | [Linux, Shell & System Commands](#linux-shell--system-commands-0) | 0 |
+- [Linux / Unix Commands & Administration (47)](#linux--unix-commands--administration-47)
+- [CPU Scheduling Algorithms (26)](#cpu-scheduling-algorithms-26)
+- [OS Concepts & System Software (24)](#os-concepts--system-software-24)
+- [Deadlock & Resource Allocation (23)](#deadlock--resource-allocation-23)
+- [Memory Management & Paging (18)](#memory-management--paging-18)
+- [Virtual Memory & Page Replacement (Thrashing) (16)](#virtual-memory--page-replacement-thrashing-16)
+- [Process Management & Process States (12)](#process-management--process-states-12)
+- [Concurrency, Threads & Synchronization (11)](#concurrency-threads--synchronization-11)
+- [File Systems & Disk Management (7)](#file-systems--disk-management-7)
+- [OS Concepts & Process Management (7)](#os-concepts--process-management-7)
+  - [Process States & Multithreading (3)](#process-states--multithreading-3)
+  - [Hardware & Microprocessor Comparisons (3)](#hardware--microprocessor-comparisons-3)
+  - [Software Engineering Challenges (1)](#software-engineering-challenges-1)
+- [CPU Scheduling (6)](#cpu-scheduling-6)
+- [Windows & System Administration (5)](#windows--system-administration-5)
+- [Process Synchronization & Concurrency (4)](#process-synchronization--concurrency-4)
+- [Deadlock & Concurrency Control (2)](#deadlock--concurrency-control-2)
+- [Linux, Shell & System Commands (0)](#linux-shell--system-commands-0)
 
 <!-- TOC END -->
 
@@ -524,19 +525,26 @@ int main(int argc, char *argv[]){
 7. **Explain inode data structures in Linux OS.** *[Agrani Bank Ltd. Senior Officer (IT) 2017 compact it 1220-1221 (ET: N/A)]*
 
 ## OS Concepts & Process Management (7)
+
+### Process States & Multithreading (3)
+
 1. **(b) What is process? Describe different states of a process.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 72-73]]*
 
-2. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+2. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
 
-3. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
+3. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
 
-4. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
+### Hardware & Microprocessor Comparisons (3)
 
-5. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
+1. **Write advantages of Microcontroller over Microprocessor. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
 
-6. **What are the five states of a process in an operating system?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 439]]*
+2. **Computer A has a 2 GHz processor and takes 250 picoseconds to execute a single instruction, while Computer B has a 2.5 GHz processor and takes 500 picoseconds per instruction. Which computer is faster?** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 437]]*
 
-7. **Differentiate between 32-bit and 64-bit microprocessors. Difference between core i3, i5, i7. Please write down the configuration of the latest laptop.** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 513-514]]*
+3. **Differentiate between 32-bit and 64-bit microprocessors. Difference between core i3, i5, i7. Please write down the configuration of the latest laptop.** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 513-514]]*
+
+### Software Engineering Challenges (1)
+
+1. **What are the major challenges faced by software engineers during software development? Explain with examples how these challenges affect the development process and how they can be mitigated.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 356]]*
 
 ## CPU Scheduling (6)
 
