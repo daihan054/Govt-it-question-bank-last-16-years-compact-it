@@ -1,21 +1,25 @@
 <!-- TOC START -->
 **Table of Contents** — 7 subtopics · 79 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [HTML & Web Fundamentals](#html--web-fundamentals-32) | 32 |
-| 2 | [JavaScript & jQuery (DOM & Validation)](#javascript--jquery-dom--validation-16) | 16 |
-| 3 | [HTTP Protocol](#http-protocol-10) | 10 |
-| 4 | [Web Services & APIs (SOAP vs REST)](#web-services--apis-soap-vs-rest-8) | 8 |
-| 5 | [Full Stack & Backend Web Development](#full-stack--backend-web-development-7) | 7 |
-| 6 | [CSS & Styling (Inline, Internal, External)](#css--styling-inline-internal-external-4) | 4 |
-| 7 | [Web Security & Browser Same-Origin Policy (Iframe)](#web-security--browser-same-origin-policy-iframe-2) | 2 |
+- [HTML & Web Fundamentals (32)](#html--web-fundamentals-32)
+  - [HTML & Web Fundamentals (30)](#html--web-fundamentals-30)
+  - [Web Services (SOAP vs REST) (1)](#web-services-soap-vs-rest-1)
+  - [General English Translation (1)](#general-english-translation-1)
+- [JavaScript & jQuery (DOM & Validation) (16)](#javascript--jquery-dom--validation-16)
+- [HTTP Protocol (10)](#http-protocol-10)
+- [Web Services & APIs (SOAP vs REST) (8)](#web-services--apis-soap-vs-rest-8)
+- [Full Stack & Backend Web Development (7)](#full-stack--backend-web-development-7)
+- [CSS & Styling (Inline, Internal, External) (4)](#css--styling-inline-internal-external-4)
+- [Web Security & Browser Same-Origin Policy (Iframe) (2)](#web-security--browser-same-origin-policy-iframe-2)
 
 <!-- TOC END -->
 
 ---
 
 ## HTML & Web Fundamentals (32)
+
+### HTML & Web Fundamentals (30)
+
 1. **What is HTML Image tag?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 
 2. **What is URL? Give an Example.** *[BKSP Assistant Programmer 13.07.2024 compact it 1457 (ET: N/A)]*
@@ -94,9 +98,13 @@
 
 30. **What are the minimum HTML Tags is used web pages? How can your comments at web pages so that browser not read this?** *[Bangladesh Bank Assistant Programmer 2016 compact it 1266 (ET: N/A)]*
 
-31. **What are SOAP and RESTful APIs? Discuss the differences between them in terms of architecture, format, and usage.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 223]]*
+### Web Services (SOAP vs REST) (1)
 
-32. **Translation [Bangla to English]** *[compact it 522]*
+1. **What are SOAP and RESTful APIs? Discuss the differences between them in terms of architecture, format, and usage.** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 223]]*
+
+### General English Translation (1)
+
+1. **Translation [Bangla to English]** *[compact it 522]*
 Capacity development in banking is crucial as the industry faces evolving challenges and opportunities in a rapidly changing landscape. It encompasses enhancing the knowledge, skills, and capabilities of banking professionals to effectively navigate complex financial environments. This includes training in areas such as financial literacy, risk management, regulatory compliance, and technological proficiency. As banks integrate advanced technologies, and digital banking solutions, there is a growing need for specialized expertise to harness these tools for operational efficiency and customer service enhancement. Capacity development initiatives also focus on leadership development, fostering strategic thinking and decision-making abilities among senior executives to steer banks through economic uncertainties and competitive pressures.
 
 ## JavaScript & jQuery (DOM & Validation) (16)
