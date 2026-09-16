@@ -1,29 +1,40 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 186 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Algebra](#algebra-48) | 48 |
-| 2 | [Geometry](#geometry-27) | 27 |
-| 3 | [Percentage, Profit & Loss](#percentage-profit--loss-25) | 25 |
-| 4 | [Arithmetic & Number Series](#arithmetic--number-series-16) | 16 |
-| 5 | [Time, Work & Distance](#time-work--distance-11) | 11 |
-| 6 | [Analytical Reasoning](#analytical-reasoning-10) | 10 |
-| 7 | [Time & Work](#time--work-9) | 9 |
-| 8 | [Set Theory](#set-theory-8) | 8 |
-| 9 | [Average & Age Problems](#average--age-problems-6) | 6 |
-| 10 | [Ratio & Proportion](#ratio--proportion-6) | 6 |
-| 11 | [Permutation & Combination](#permutation--combination-5) | 5 |
-| 12 | [Trigonometry](#trigonometry-4) | 4 |
-| 13 | [Probability & Statistics](#probability--statistics-4) | 4 |
-| 14 | [Speed, Time & Distance](#speed-time--distance-4) | 4 |
-| 15 | [Basic Arithmetic](#basic-arithmetic-3) | 3 |
+- [Algebra (48)](#algebra-48)
+  - [Core Algebra & Equations (42)](#core-algebra--equations-42)
+  - [Off-topic / Misplaced (CS, OS & Security) (6)](#off-topic--misplaced-cs-os--security-6)
+- [Geometry (27)](#geometry-27)
+- [Percentage, Profit & Loss (25)](#percentage-profit--loss-25)
+  - [Percentage, Profit, Loss & Interest (22)](#percentage-profit-loss--interest-22)
+  - [Off-topic / Misplaced (GK, Web & Security) (3)](#off-topic--misplaced-gk-web--security-3)
+- [Arithmetic & Number Series (16)](#arithmetic--number-series-16)
+- [Time, Work & Distance (11)](#time-work--distance-11)
+- [Analytical Reasoning (10)](#analytical-reasoning-10)
+  - [Analytical Reasoning Puzzles (4)](#analytical-reasoning-puzzles-4)
+  - [Off-topic / Misplaced (Computer Architecture & Testing) (6)](#off-topic--misplaced-computer-architecture--testing-6)
+- [Time & Work (9)](#time--work-9)
+  - [Time & Work Rate Problems (4)](#time--work-rate-problems-4)
+  - [Off-topic / Misplaced (Networking & GK) (5)](#off-topic--misplaced-networking--gk-5)
+- [Set Theory (8)](#set-theory-8)
+- [Average & Age Problems (6)](#average--age-problems-6)
+- [Ratio & Proportion (6)](#ratio--proportion-6)
+- [Permutation & Combination (5)](#permutation--combination-5)
+- [Trigonometry (4)](#trigonometry-4)
+- [Probability & Statistics (4)](#probability--statistics-4)
+- [Speed, Time & Distance (4)](#speed-time--distance-4)
+- [Basic Arithmetic (3)](#basic-arithmetic-3)
+  - [Basic Arithmetic Problems (2)](#basic-arithmetic-problems-2)
+  - [Off-topic / Misplaced (Bangla Vocabulary) (1)](#off-topic--misplaced-bangla-vocabulary-1)
 
 <!-- TOC END -->
 
 ---
 
 ## Algebra (48)
+
+### Core Algebra & Equations (42)
+
 1. **২০ মিটার দৈর্ঘ্যের একটি মেঝেতে কার্পেট বিছাতে ৭৫০০ টাকা খরচ হয়। যদি প্রস্থ ৪ মিটার কম হতো, তাহলে ৬০০০ টাকা খরচ হতো। মেঝেটির প্রস্থ কত?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
    answer: ২০ মিটার  
@@ -405,16 +416,7 @@
    answer: A — the maximal set of numbers for which function is defined  
    explanation: The domain is the set of all inputs for which the function gives a defined value; the outputs form the range.
 
-42. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
-   (a) DFS  
-   (b) BFS  
-   (c) Hill climbing  
-   (d) A\*
-
-   answer: b — BFS  
-   explanation: Breadth First Search uses a queue to visit every node at one depth before going deeper.
-
-43. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
+42. **The number 3 divides ‘a’ with a result of ‘b’ and a remainder of 2. The number 3 divides ‘b’ with a result of 2 and a remainder of 1. What is the value of ‘a’? [ ৩ দিয়ে ‘a’-কে ভাগ করলে ভাগফল হয় ‘b’ এবং ভাগশেষ ২। ৩ দিয়ে ‘b’-কে ভাগ করলে ভাগফল ২ এবং ভাগশেষ ১। ‘a’ এর মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 13  
    (b) 17  
    (c) 23  
@@ -423,7 +425,18 @@
    answer: c — 23  
    explanation: b = 3×2 + 1 = 7, so a = 3×7 + 2 = 23.
 
-44. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+### Off-topic / Misplaced (CS, OS & Security) (6)
+
+1. **Which search algorithm expands nodes level by level before moving deeper? [ কোন সার্চ অ্যালগরিদমটি নোডগুলোকে স্তর (level) অনুযায়ী প্রসারিত করে তারপর গভীরে যায়?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 217]]*  
+   (a) DFS  
+   (b) BFS  
+   (c) Hill climbing  
+   (d) A\*
+
+   answer: b — BFS  
+   explanation: Breadth First Search uses a queue to visit every node at one depth before going deeper.
+
+2. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity? [ র‍্যান্ডম লিঙ্কড লিস্ট সর্ট করার জন্য সবচেয়ে কম টাইম কমপ্লেক্সিটির অ্যালগরিদম কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) Bubble Sort  
    (b) Quick Sort  
    (c) Heap Sort  
@@ -432,7 +445,7 @@
    answer: d — Merge Sort  
    explanation: Merge sort needs only pointer changes and no random access, so it sorts a linked list in O(n log n).
 
-45. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
+3. **Which scheduling algorithm may cause starvation? [ কোন শিডিউলিং অ্যালগরিদমে স্টারভেশন (Starvation) হতে পারে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 350]]*  
    (a) FCFS  
    (b) Round Robin  
    (c) Priority Scheduling  
@@ -441,7 +454,7 @@
    answer: c — Priority Scheduling  
    explanation: A steady stream of higher-priority processes can keep a low-priority one waiting forever; ageing is used to prevent it.
 
-46. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
+4. **A counting semaphore was initialized to 10. Then 6 wait operations and 4 signal operations were completed on the semaphore. The resulting value of the semaphore is—[ Semaphore শুরুতে ১০ ছিল। ৬টি wait এবং ৪টি signal অপারেশন হলে শেষ মান কত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 501]]*  
    (a) 0  
    (b) 10  
    (c) 8  
@@ -450,7 +463,7 @@
    answer: c — 8  
    explanation: Each wait decrements and each signal increments, so 10 - 6 + 4 = 8.
 
-47. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
+5. **Which of the items listed below is the least strong security protocol?[ নিচের তালিকায় থাকা সিকিউরিটি প্রোটোকলগুলোর মধ্যে কোনটি সবচেয়ে দুর্বল? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 503]]*  
    (a) SFTP  
    (b) SMTP  
    (c) SSL  
@@ -459,7 +472,7 @@
    answer: d — HTTP  
    explanation: HTTP sends everything in clear text with no encryption or authentication at all.
 
-48. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
+6. **Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?[ একটি র‍্যান্ডম লিঙ্কড লিস্টকে সর্বনিম্ন টাইম কমপ্লেক্সিটিতে সর্ট (Sort) করার জন্য নিচের কোন অ্যালগরিদমটি ব্যবহার করা যায়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 506]]*  
    (a) Insertion sort  
    (b) Quick sort  
    (c) Heap sort  
@@ -469,6 +482,7 @@
    explanation: Merge sort works well on linked lists because it needs only sequential access and relinking of nodes.
 
 ## Geometry (27)
+
 1. **একটি ষড়ভুজের বাহুগুলোকে একই দিকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণসমূহের সমষ্টি কত?** *[PGCB Assistant Engineer (CSE) 05.04.2024 compact it 2 (ET: BUET)]*  
    ক. ১২০°  
    খ. ১৮০°  
@@ -713,6 +727,9 @@
    explanation: The square's side is 6 and its area 36, so the rectangle is 9 by 4 and its perimeter 26 ft.
 
 ## Percentage, Profit & Loss (25)
+
+### Percentage, Profit, Loss & Interest (22)
+
 1. **৮০ লক্ষ জনসংখ্যার একটি দেশে প্রতি হাজারে ৩০ জন মানুষ জন্মগ্রহণ করে। ৩ বছর পর দেশটির মোট জনসংখ্যা কত হবে?** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1 (ET: BUET)]*
 
    answer: প্রায় ৮৭,৪১,৮১৬ জন  
@@ -903,16 +920,7 @@
    answer: ঘ — 0.0021  
    explanation: 3% of 0.07 = 0.03 × 0.07 = 0.0021.
 
-22. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. নাপাম  
-   খ. নিউট্রন  
-   গ. হাইড্রোজেন  
-   ঘ. এটম
-
-   answer: খ — নিউট্রন  
-   explanation: নিউট্রন বোমা প্রচণ্ড বিকিরণ ছড়িয়ে প্রাণ নেয়, কিন্তু বিস্ফোরণ-শক্তি কম বলে ভবন প্রায় অক্ষত থাকে।
-
-23. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+22. **১২% এর মুনাফা ২০০ টাকার মুনাফা ৯৬ টাকা হয় কত বছরে?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
    ক) ৪  
    খ) ৫  
    গ) ৬  
@@ -921,12 +929,23 @@
    answer: ক — ৪  
    explanation: সরল সুদে ৯৬ = ২০০ × ০.১২ × সময়, তাই সময় = ৪ বছর।
 
-24. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+### Off-topic / Misplaced (GK, Web & Security) (3)
+
+1. **কোন বোমায় মানুষ মরে, কিন্তু কোন স্থাপনার ক্ষতি হয় না?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. নাপাম  
+   খ. নিউট্রন  
+   গ. হাইড্রোজেন  
+   ঘ. এটম
+
+   answer: খ — নিউট্রন  
+   explanation: নিউট্রন বোমা প্রচণ্ড বিকিরণ ছড়িয়ে প্রাণ নেয়, কিন্তু বিস্ফোরণ-শক্তি কম বলে ভবন প্রায় অক্ষত থাকে।
+
+2. **একটি অফিসের কর্মচারীর ১০০০ টাকার কম সেলারে বের করার এবং ১০% কমিশন যুক্ত করার এক্সেল syntax লিখুন। HTML এর কোন tag ব্যবহার করে স্ক্রলিং text করা হয়।** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
 
    answer: এক্সেল: =IF(A2<1000, A2*1.10, A2); HTML স্ক্রলিং টেক্সট: <marquee> ট্যাগ  
    explanation: IF শর্তটি বেতন ১০০০ টাকার কম কি না দেখে, কম হলে ১০% কমিশন যোগ করে (১.১০ গুণ), নইলে অপরিবর্তিত রাখে; <marquee> ট্যাগ লেখা চলমান করে, যদিও এটি এখন অবচিত এবং CSS animation দিয়েই করা হয়।
 
-25. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
+3. **SQL ইনজেকশন Attack কি এবং এটি কিভাবে ক্ষতি করে?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 476]]*
 
    answer: SQL ইনজেকশন হলো ইনপুট ফিল্ডে দূষিত SQL কোড ঢুকিয়ে কুয়েরির অর্থ বদলে দেওয়া  
    explanation: ব্যবহারকারীর ইনপুট সরাসরি কুয়েরিতে জোড়া লাগানো হলে ' OR '1'='1 জাতীয় ইনপুট শর্তকে সবসময় সত্য বানিয়ে দেয়, ফলে লগইন বাইপাস, গোপন তথ্য চুরি বা টেবিল মুছে ফেলা সম্ভব হয়; প্রতিকার হলো প্যারামিটারাইজড কুয়েরি ও ইনপুট ভ্যালিডেশন।
@@ -1177,6 +1196,9 @@
    explanation: The train must cover 220 + 260 = 480 m at 45 km/h (12.5 m/s), which takes 480/12.5 = 38.4 seconds.
 
 ## Analytical Reasoning (10)
+
+### Analytical Reasoning Puzzles (4)
+
 1. **A went 5 meters to the north, then 3 meters to the east, and then 2 meters to the south. What is the distance from A's starting point to his final position?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxi (ET: DU)]*  
    (a) 4.24 meters  
    (b) 5.24 meters  
@@ -1236,43 +1258,7 @@
    answer: Syllogism  
    explanation: Two premises leading to a necessary conclusion about the subject is the classic form of a syllogism.
 
-4. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
-   (a) When a cache hit occurs, the CPU fetches data from ROM.  
-   (b) When a cache hit occurs, the CPU fetches data from main memory.  
-   (c) When a cache miss occurs, the CPU fetches data from cache memory.  
-   (d) When a cache miss occurs, the CPU fetches data from main memory.
-
-   answer: d — When a cache miss occurs, the CPU fetches data from main memory  
-   explanation: On a hit the data comes from cache; only on a miss does the CPU go out to the slower main memory.
-
-5. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
-   (a) DRAM requires more power than SRAM  
-   (b) SRAM requires fewer transistors per bit than DRAM  
-   (c) SRAM does not need refreshing while DRAM does  
-   (d) SRAM stores data in capacitors while DRAM uses flip-flops
-
-   answer: c — SRAM does not need refreshing while DRAM does  
-   explanation: An SRAM cell is a latch that holds its value, while a DRAM cell stores charge on a capacitor that leaks and must be refreshed.
-
-6. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
-   (a) Its content can be erased electrically in blocks  
-   (b) It requires periodin rewriting of data.  
-   (c) It can be rewritten at high speed and used as CPU cache  
-   (d) Its entire content is erased by ultraviolet light
-
-   answer: a — Its content can be erased electrically in blocks  
-   explanation: Flash is electrically erasable a block at a time, which is what separates it from EPROM (erased by ultraviolet light).
-
-7. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
-   ক. হাইড্রোজেন  
-   খ. তামা  
-   গ. কার্বন ডাই-অক্সাইড  
-   ঘ. নাইট্রোজেন
-
-   answer: খ — তামা  
-   explanation: তামার পরিবাহিতা খুব বেশি ও দাম তুলনামূলক কম, তাই বিদ্যুৎ পরিবহনে এটিই সবচেয়ে বেশি ব্যবহৃত ধাতু।
-
-8. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
+4. **Which of the following resembles OATH: PROMISE? [ নিচের কোনটি OATH : PROMISE-এর মতো সম্পর্ক প্রকাশ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 493]]*  
    (a) Contract : Agreement  
    (b) Deed : Attorney  
    (c) Title : Estate  
@@ -1281,7 +1267,45 @@
    answer: a — Contract : Agreement  
    explanation: An oath is a formal kind of promise, just as a contract is a formal kind of agreement.
 
-9. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
+### Off-topic / Misplaced (Computer Architecture & Testing) (6)
+
+1. **Which of the following is an appropriate CPU operation associated with cache memory? [ Cache memory-এর সাথে সম্পর্কিত CPU-এর কোন অপারেশনটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 213]]*  
+   (a) When a cache hit occurs, the CPU fetches data from ROM.  
+   (b) When a cache hit occurs, the CPU fetches data from main memory.  
+   (c) When a cache miss occurs, the CPU fetches data from cache memory.  
+   (d) When a cache miss occurs, the CPU fetches data from main memory.
+
+   answer: d — When a cache miss occurs, the CPU fetches data from main memory  
+   explanation: On a hit the data comes from cache; only on a miss does the CPU go out to the slower main memory.
+
+2. **Which of the following statements about SRAM and DRAM is correct? [ SRAM এবং DRAM সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 214]]*  
+   (a) DRAM requires more power than SRAM  
+   (b) SRAM requires fewer transistors per bit than DRAM  
+   (c) SRAM does not need refreshing while DRAM does  
+   (d) SRAM stores data in capacitors while DRAM uses flip-flops
+
+   answer: c — SRAM does not need refreshing while DRAM does  
+   explanation: An SRAM cell is a latch that holds its value, while a DRAM cell stores charge on a capacitor that leaks and must be refreshed.
+
+3. **Which of the following statements about flash memory is correct? [ Flash memory সম্পর্কে নিচের কোন বক্তব্যটি সঠিক?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 215]]*  
+   (a) Its content can be erased electrically in blocks  
+   (b) It requires periodin rewriting of data.  
+   (c) It can be rewritten at high speed and used as CPU cache  
+   (d) Its entire content is erased by ultraviolet light
+
+   answer: a — Its content can be erased electrically in blocks  
+   explanation: Flash is electrically erasable a block at a time, which is what separates it from EPROM (erased by ultraviolet light).
+
+4. **বিদ্যুৎধারায় সবচেয়ে বেশি প্রচলিত ধাতু কোনটি?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 404]]*  
+   ক. হাইড্রোজেন  
+   খ. তামা  
+   গ. কার্বন ডাই-অক্সাইড  
+   ঘ. নাইট্রোজেন
+
+   answer: খ — তামা  
+   explanation: তামার পরিবাহিতা খুব বেশি ও দাম তুলনামূলক কম, তাই বিদ্যুৎ পরিবহনে এটিই সবচেয়ে বেশি ব্যবহৃত ধাতু।
+
+5. **Which of the following testing strategy is related to the boundary value analysis?[ নিচের কোন টেস্টিং কৌশলটি বাউন্ডারি ভ্যালু অ্যানালাইসিস (Boundary Value Analysis)-এর সাথে সম্পর্কিত? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 504]]*  
    (a) White-box testing  
    (b) Black box testing  
    (c) Unit testing  
@@ -1290,7 +1314,7 @@
    answer: b — Black box testing  
    explanation: Boundary value analysis picks inputs at the edges of valid ranges using only the specification, without seeing the code.
 
-10. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
+6. **Data about data is also called—[ ডেটা সম্পর্কে ডেটা (Data about data)—কে কী বলা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 509]]*  
    (a) Data store  
    (b) Data bank  
    (c) Meta Data  
@@ -1300,6 +1324,9 @@
    explanation: Metadata describes other data — its names, types, sizes and constraints.
 
 ## Time & Work (9)
+
+### Time & Work Rate Problems (4)
+
 1. **যদি ৬ জন পুরুষ ও ৮ জন ছেলে একটি কাজ ১০ দিনে শেষ করতে পারে, এবং ২৬ জন পুরুষ ও ৪৮ জন ছেলে সেই একই কাজ ২ দিনে শেষ করতে পারে, তবে ১৫ জন পুরুষ ও ২০ জন ছেলে ঐ কাজ কত দিনে শেষ করতে পারবে?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 47]]*  
    ক. ৪ দিন  
    খ. ৫ দিন  
@@ -1315,16 +1342,7 @@
    answer: ক — ৪ দিন  
    explanation: সমীকরণ দুটি মিলিয়ে পাওয়া যায় ১ জন পুরুষ = ২ জন ছেলের সমান কাজ; তখন পুরুষের হার ১/১০০ ও ছেলের ১/২০০, তাই ১৫ পুরুষ + ২০ ছেলে = ০.২৫ অর্থাৎ ৪ দিন।
 
-2. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
-   (a) Switch  
-   (b) Hub  
-   (c) Router  
-   (d) Modem
-
-   answer: a — Switch  
-   explanation: A switch forwards frames using MAC addresses, which is the data link layer (layer 2).
-
-3. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
+2. **In how many ways can a group of 5 men and 2 women be made out of a total of 7 men and 3 women? [ ৭ জন পুরুষ এবং ৩ জন মহিলার মধ্য থেকে ৫ জন পুরুষ ও ২ জন মহিলার একটি দল কতভাবে গঠন করা যাবে? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 345]]*  
    (a) 45  
    (b) 90  
    (c) 63  
@@ -1333,30 +1351,7 @@
    answer: c — 63  
    explanation: C(7,5) × C(3,2) = 21 × 3 = 63 ways.
 
-4. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
-   (A) Print screen  
-   (B) File open  
-   (C) Help  
-   (D) Save
-
-   answer: C — Help  
-   explanation: F1 is the standard Help key across Windows applications.
-
-5. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
-   ক) ফজলুর রহমান  
-   খ) ইউসুফ আলী  
-   গ) তাজউদ্দিন আহমেদ  
-   ঘ) মনসুর আলী
-
-   answer: ঘ — মনসুর আলী  
-   explanation: মুজিবনগর সরকারের অর্থ, বাণিজ্য ও শিল্পমন্ত্রী ছিলেন ক্যাপ্টেন এম মনসুর আলী।
-
-6. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
-
-   answer: DHCP হলো Dynamic Host Configuration Protocol, যা নেটওয়ার্কে যুক্ত হওয়া ডিভাইসকে স্বয়ংক্রিয়ভাবে আইপি ঠিকানা দেয়  
-   explanation: ক্লায়েন্ট DISCOVER ব্রডকাস্ট করলে সার্ভার OFFER পাঠায়, ক্লায়েন্ট REQUEST করে এবং সার্ভার ACK দিয়ে নির্দিষ্ট সময়ের জন্য আইপি, সাবনেট মাস্ক, গেটওয়ে ও DNS ঠিকানা লিজ দেয় — ফলে হাতে কনফিগার করার ঝামেলা ও ঠিকানা সংঘর্ষ দুই-ই এড়ানো যায়।
-
-7. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
+3. **Math: 15 marks** *[Bangladesh Institute of Development Studies Programmer; Date: 06 July, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [bitbox it book 486]]*  
    i. যদি x^a = y^b = z^c এবং xyz = 1 হয় তবে ab + bc + ca এর মান নির্ণয় করুন।  
    ii. একটি বৃত্তের ব্যাসার্ধ ২ সেমি ঐ বৃত্তের অন্তস্থ বর্গের ক্ষেত্রফল কত?  
    iii. কোন একটি গ্রামের জনসংখ্যার ৯০% পুরুষ ৫০% যদি ৩০% পুরুষ বিবাহিত তাহলে ঐ গ্রামের মোট জনসংখ্যার কত ভাগ মহিলা অবিবাহিত।
@@ -1364,7 +1359,7 @@
    answer: i. ab + bc + ca = 0  ii. ৮ বর্গ সেন্টিমিটার  iii. প্রশ্নটি ছাপায় অসম্পূর্ণ  
    explanation: x^a = y^b = z^c = k ধরলে xyz = k^(1/a+1/b+1/c) = 1 দেয় 1/a+1/b+1/c = 0, অর্থাৎ ab+bc+ca = 0; আর ২ সেমি ব্যাসার্ধের বৃত্তে অন্তর্লিখিত বর্গের কর্ণ ৪ সেমি, তাই বাহু 2√2 ও ক্ষেত্রফল ৮ বর্গ সেমি। <!-- verify -->
 
-8. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
+4. **A man borrowed some money for 120 days. He asked the banker for the money and the banker charged Tk. 360 interest @ 6% per annum. What is the amount he borrowed?[ একজন ব্যক্তি ১২০ দিনের জন্য কিছু টাকা ধার নিলেন। ব্যাংক 6% বার্ষিক হারে 360 টাকা সুদ চার্জ করল। তিনি কত টাকা ধার নিয়েছিলেন? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 496]]*  
    (a) Tk.  
    18. 000  
    (b) Tk. 16,000  
@@ -1374,7 +1369,41 @@
    answer: a — Tk. 18,000  
    explanation: Interest = P × 6% × 120/360 = 0.02P, so 0.02P = 360 and P = 18,000 taka.
 
-9. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
+### Off-topic / Misplaced (Networking & GK) (5)
+
+1. **Which device operates at Layer 2 of OSI? [ কোন ডিভাইস OSI Layer 2-এ কাজ করে?]** *[Combined Bank Senior Officer (IT) Date: 17.10.2025 [bitbox it book 218]]*  
+   (a) Switch  
+   (b) Hub  
+   (c) Router  
+   (d) Modem
+
+   answer: a — Switch  
+   explanation: A switch forwards frames using MAC addresses, which is the data link layer (layer 2).
+
+2. **Which operation does F1 key perform for all types of application? [ সব অ্যাপ্লিকেশনে F1 কী (key) দিয়ে কোন কাজ করা হয়? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 348]]*  
+   (A) Print screen  
+   (B) File open  
+   (C) Help  
+   (D) Save
+
+   answer: C — Help  
+   explanation: F1 is the standard Help key across Windows applications.
+
+3. **মুজিবনগর সরকারের অর্থমন্ত্রী কে ছিলেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 448]]*  
+   ক) ফজলুর রহমান  
+   খ) ইউসুফ আলী  
+   গ) তাজউদ্দিন আহমেদ  
+   ঘ) মনসুর আলী
+
+   answer: ঘ — মনসুর আলী  
+   explanation: মুজিবনগর সরকারের অর্থ, বাণিজ্য ও শিল্পমন্ত্রী ছিলেন ক্যাপ্টেন এম মনসুর আলী।
+
+4. **DHCP কি এবং এর কাজ কি?** *[Petro bangla (Bangladesh Oil, Gas & Mineral Corporation) Post: Sub Assistant Enginner; Date: 07 June, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 475]]*
+
+   answer: DHCP হলো Dynamic Host Configuration Protocol, যা নেটওয়ার্কে যুক্ত হওয়া ডিভাইসকে স্বয়ংক্রিয়ভাবে আইপি ঠিকানা দেয়  
+   explanation: ক্লায়েন্ট DISCOVER ব্রডকাস্ট করলে সার্ভার OFFER পাঠায়, ক্লায়েন্ট REQUEST করে এবং সার্ভার ACK দিয়ে নির্দিষ্ট সময়ের জন্য আইপি, সাবনেট মাস্ক, গেটওয়ে ও DNS ঠিকানা লিজ দেয় — ফলে হাতে কনফিগার করার ঝামেলা ও ঠিকানা সংঘর্ষ দুই-ই এড়ানো যায়।
+
+5. **Bluetooth is a type of radio wave information transmission system that is good for about—[ ব্লুটুথ হলো রেডিও ওয়েভ ভিত্তিক তথ্য আদান-প্রদান ব্যবস্থা যা সাধারণত কত দূর পর্যন্ত কাজ করে? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 512]]*  
    (a) 30 feet  
    (b) 30 yards  
    (c) 30 miles  
@@ -1692,6 +1721,7 @@
    explanation: Odd numbers are {1,3,5} and numbers below 4 are {1,2,3}; their union {1,2,3,5} has 4 of the 6 faces, so 4/6 = 2/3.
 
 ## Speed, Time & Distance (4)
+
 1. **সান্দ্রতা (Viscosity) কী?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 46]]*  
    ক. তরলের প্রবাহের মসৃণতা  
    খ. তরলের প্রবাহের আপেক্ষিক গতি  
@@ -1731,6 +1761,9 @@
    explanation: Maximum cohesion means every method connects to every other, giving n(n-1)/2 = 10 × 9 / 2 = 45 connections.
 
 ## Basic Arithmetic (3)
+
+### Basic Arithmetic Problems (2)
+
 1. **তিন বছর আগে স্বামী, স্ত্রী ও তাদের সন্তানের গড় বয়স ছিল ২৭ বছর এবং পাঁচ বছর আগে স্ত্রী ও সন্তানের গড় বয়স ছিল ২০ বছর। স্বামীর বর্তমান বয়স কত?** *[Rural Power Company Limited (RPCL) Sub Assistant Engineer; Date: 25 April, 2025 Exam Taker: BUET; Total: MCQ:50 [bitbox it book 48]]*  
    ক. ৩৫ বছর  
    খ. ৪০ বছর  
@@ -1740,16 +1773,7 @@
    answer: খ — ৪০ বছর  
    explanation: তিন বছর আগে তিনজনের বয়সের যোগফল ৮১, এখন ৮১ + ৯ = ৯০; পাঁচ বছর আগে স্ত্রী ও সন্তানের যোগফল ৪০, এখন ৫০ — তাই স্বামীর বয়স ৯০ - ৫০ = ৪০ বছর।
 
-2. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
-   ক. প্রোষিতভর্তৃকা  
-   খ. প্রোষিতা  
-   গ. প্রবাসিনী  
-   ঘ. প্রোষিতপত্নীক
-
-   answer: ঘ — প্রোষিতপত্নীক  
-   explanation: যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে প্রোষিতপত্নীক বলে; উল্টোটি (যে স্ত্রীর স্বামী প্রবাসে) হলো প্রোষিতভর্তৃকা।
-
-3. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
+2. **M is older than N but younger than O. If m, n and o are the ages of M, N and O respectively, then which of the following is true? [ M বয়সে N থেকে বড়, O থেকে ছোট। M, N, O-এর বয়স m, n, o। কোনটি সঠিক? ]** *[Bankers' Selection Committee Secretariat Post: Senior Office (IT); Date: 04 October, 2024 Exam Taker: ANZA; Post: 222 [bitbox it book 497]]*  
    (a) m > n > o  
    (b) o > m > n  
    (c) n > m > o  
@@ -1757,3 +1781,14 @@
 
    answer: b — o > m > n  
    explanation: M is older than N and younger than O, so O is oldest and N youngest.
+
+### Off-topic / Misplaced (Bangla Vocabulary) (1)
+
+1. **যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে কী বলে?** *[Bankers' Selection Committee Secretariat Post: Senior Office (ICT); Date: 17 May, 2024 Exam Taker: ANZA; Post: 156, MCQ [compact it 405]]*  
+   ক. প্রোষিতভর্তৃকা  
+   খ. প্রোষিতা  
+   গ. প্রবাসিনী  
+   ঘ. প্রোষিতপত্নীক
+
+   answer: ঘ — প্রোষিতপত্নীক  
+   explanation: যে স্বামীর স্ত্রী প্রবাসে থাকে তাকে প্রোষিতপত্নীক বলে; উল্টোটি (যে স্ত্রীর স্বামী প্রবাসে) হলো প্রোষিতভর্তৃকা।
