@@ -350,8 +350,40 @@ NOTE: theme names with Bengali text must be copied byte-exact from the source fi
 
 ## Folder 2: written-answers/ — NOT STARTED (replay Folder 1's exact grouping per file once that file is done in Folder 1)
 
-## Folder 3: all-questions/mcq/ — NOT STARTED (needs its own fresh analysis pass, same method)
+## Folder 3: all-questions/mcq/ — IN PROGRESS
 
-## Folder 4: mcq-answers/ — NOT STARTED (replay Folder 3's grouping)
+### Files done in mcq/ (group D applied):
+- ms-office.md — DONE: MS Office & Shortcuts (4) SPLIT: General Computer & OS Knowledge (2): 1,2;
+  English Language & Literature (2): 3,4. All other subtopics NO SPLIT.
+- oop.md — DONE: Polymorphism & Overloading (16) SPLIT: Polymorphism & Overloading (13):
+  1,2,3,4,5,6,8,9,10,12,14,15,16; Destructors (2): 7,11; Abstract Classes (1): 13. All other
+  subtopics (Java Programming 48, OOP Concepts & Principles 11, Encapsulation & Access Modifiers
+  7, Inheritance 6, Constructors & Destructors 6, Exception Handling 6) NO SPLIT.
+- operating-system.md — DONE: Process Management & Scheduling (24) SPLIT: Process States &
+  Scheduling (20): 1,2,3,4,5,6,7,9,10,11,12,13,14,15,16,17,18,19,23,24; Digital Logic Circuits
+  (1): 8; Virtual Memory & Paging (1): 20; File System Mounting (1): 21; OS Kernel Concept (1):
+  22. Linux Commands & Administration (9) SPLIT: Linux/UNIX Commands & Administration (7):
+  1,2,3,4,6,7,8; Database Roles & Privileges (1): 5; Windows Networking Utilities (1): 9. All
+  other subtopics (OS Concepts & Multiprogramming 16, Virtual Memory & Paging 13, Deadlock 6,
+  File Systems & Disk Management 4, Process Synchronization 2) NO SPLIT.
+- programming-languages.md — DONE, no changes needed (Python 10, Mobile & Android Development 7,
+  Visual Basic & .NET 7 — all NO SPLIT).
+- software-engineering.md — DONE, no changes needed (Software Testing 20, SDLC Models 14,
+  Software Design & Metrics 8, Design Patterns 3, Software Requirements Engineering 1 — all NO
+  SPLIT).
+- web-technology.md — DONE: Web Services & APIs (6) SPLIT: REST APIs & Message Formats (5):
+  2,3,4,5,6; Web Application Security (1): 1. Full Stack & Web Servers (5) SPLIT: Web Servers &
+  CMS (3): 1,2,3; Cisco Telephony/Server Platforms (2): 4,5. All other subtopics (HTML XML & Web
+  Fundamentals 15, PHP & Server-Side 9, Scripting & JavaScript 8, HTTP & Status Codes 5, CSS &
+  Styling 1) NO SPLIT.
+
+### Files with a plan ready but NOT YET applied to mcq/: (waiting on groups A, B, C analysis
+agents to report back — will be filled in here once they land) covering: ai-and-ml.md,
+algorithm.md, bangla.md, c-programming.md, cloud-computing.md, compiler-and-toc.md,
+computer-fundamental.md, computer-network-security.md, computer-networks.md, data-structure.md,
+database.md, dld.md, electrical-and-electronics.md, english.md, gk.md, math.md,
+mechanical-engineering.md, microprocessor-and-computer-architecture.md
+
+## Folder 4: mcq-answers/ — NOT STARTED (replay Folder 3's grouping once Folder 3 is fully done)
 
 ## Folder 5: all-theories-with-previous-questions-attached/ — check only if written-answers/mcq-answers content changed (NOT a clustering task)
