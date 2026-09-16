@@ -1,15 +1,15 @@
 <!-- TOC START -->
 **Table of Contents** — 7 subtopics · 38 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Engineering Mechanics & Strength of Materials](#engineering-mechanics--strength-of-materials-10) | 10 |
-| 2 | [Thermodynamics & Heat Transfer](#thermodynamics--heat-transfer-10) | 10 |
-| 3 | [Engineering Materials & Manufacturing](#engineering-materials--manufacturing-7) | 7 |
-| 4 | [Machining & Workshop Practice](#machining--workshop-practice-6) | 6 |
-| 5 | [Industrial & Production Engineering](#industrial--production-engineering-3) | 3 |
-| 6 | [Engineering Drawing](#engineering-drawing-1) | 1 |
-| 7 | [Fluid Mechanics](#fluid-mechanics-1) | 1 |
+- [Engineering Mechanics & Strength of Materials (10)](#engineering-mechanics--strength-of-materials-10)
+- [Thermodynamics & Heat Transfer (10)](#thermodynamics--heat-transfer-10)
+  - [Thermodynamics & Heat Transfer (8)](#thermodynamics--heat-transfer-8)
+  - [Off-topic / Misplaced (2)](#off-topic--misplaced-2)
+- [Engineering Materials & Manufacturing (7)](#engineering-materials--manufacturing-7)
+- [Machining & Workshop Practice (6)](#machining--workshop-practice-6)
+- [Industrial & Production Engineering (3)](#industrial--production-engineering-3)
+- [Engineering Drawing (1)](#engineering-drawing-1)
+- [Fluid Mechanics (1)](#fluid-mechanics-1)
 
 <!-- TOC END -->
 
@@ -78,6 +78,9 @@
    (ঘ) সর্বনিম্ন অথবা সর্বোচ্চ
 
 ## Thermodynamics & Heat Transfer (10)
+
+### Thermodynamics & Heat Transfer (8)
+
 1. **একটি হিমায়ন চক্রের হিমায়ক কর্তৃক তাপ শোষিত হয়** *[BPSC Senior Instructor (MEW) 2021 compact it 142 (ET: N/A)]*  
    (ক) কন্ডেন্সারে  
    (খ) ইভাপোরেটরে  
@@ -132,13 +135,15 @@
    গ. \\text\{J/Kg-K\}
    ঘ. উপরের সবগুলি
 
-9. **Which one is the first search engine? [ বিশ্বের প্রথম সার্চ ইঞ্জিন কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
+### Off-topic / Misplaced (2)
+
+1. **Which one is the first search engine? [ বিশ্বের প্রথম সার্চ ইঞ্জিন কোনটি? ]** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 347]]*  
    (a) Google  
    (b) Archie  
    (c) Alta vista  
    (d) WAIS
 
-10. **'একুশ মানে মাথা নত না করা' এই প্রতিজ্ঞা কে করেছেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
+2. **'একুশ মানে মাথা নত না করা' এই প্রতিজ্ঞা কে করেছেন?** *[Titas Gas Distribution Company Limited Post: Sub Assistant Enginner; Date: 24 May, 2024 Exam Taker: BUET; Total:MCQ:20, Written:40 [compact it 447]]*  
    ক) আবুল ফজল  
    খ) শেখর আহমদ  
    গ) অর্থ অপুর্বর  
