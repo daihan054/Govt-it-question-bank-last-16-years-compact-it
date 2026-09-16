@@ -1,23 +1,25 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 157 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [SDLC Phases & Models](#sdlc-phases--models-48) | 48 |
-| 2 | [Software Testing & Evaluation](#software-testing--evaluation-41) | 41 |
-| 3 | [UML Diagrams (Class, Use Case, Sequence)](#uml-diagrams-class-use-case-sequence-14) | 14 |
-| 4 | [Software Architecture & Design Patterns (MVC)](#software-architecture--design-patterns-mvc-13) | 13 |
-| 5 | [Software Requirements Engineering](#software-requirements-engineering-10) | 10 |
-| 6 | [Software Project Management & Organization](#software-project-management--organization-9) | 9 |
-| 7 | [Software Design Principles (Coupling & Cohesion)](#software-design-principles-coupling--cohesion-5) | 5 |
-| 8 | [Software Cost Estimation & Build vs Buy Decisions](#software-cost-estimation--build-vs-buy-decisions-4) | 4 |
-| 9 | [IT Governance, Audit & Risk Management](#it-governance-audit--risk-management-4) | 4 |
-| 10 | [Data Flow Diagrams (DFD)](#data-flow-diagrams-dfd-2) | 2 |
-| 11 | [Code Smells & Refactoring](#code-smells--refactoring-2) | 2 |
-| 12 | [Open Source Software & Licensing](#open-source-software--licensing-2) | 2 |
-| 13 | [CI/CD & DevOps Methodologies](#cicd--devops-methodologies-1) | 1 |
-| 14 | [UI/UX Design](#uiux-design-1) | 1 |
-| 15 | [Software Design, Architecture & Patterns](#software-design-architecture--patterns-1) | 1 |
+- [SDLC Phases & Models (48)](#sdlc-phases--models-48)
+- [Software Testing & Evaluation (41)](#software-testing--evaluation-41)
+- [UML Diagrams (Class, Use Case, Sequence) (14)](#uml-diagrams-class-use-case-sequence-14)
+- [Software Architecture & Design Patterns (MVC) (13)](#software-architecture--design-patterns-mvc-13)
+- [Software Requirements Engineering (10)](#software-requirements-engineering-10)
+- [Software Project Management & Organization (9)](#software-project-management--organization-9)
+  - [Project Management & Team Leadership (7)](#project-management--team-leadership-7)
+  - [Version Control & Software Maintenance (2)](#version-control--software-maintenance-2)
+- [Software Design Principles (Coupling & Cohesion) (5)](#software-design-principles-coupling--cohesion-5)
+  - [Software Design Principles (4)](#software-design-principles-4)
+  - [UI Design Mistakes (1)](#ui-design-mistakes-1)
+- [Software Cost Estimation & Build vs Buy Decisions (4)](#software-cost-estimation--build-vs-buy-decisions-4)
+- [IT Governance, Audit & Risk Management (4)](#it-governance-audit--risk-management-4)
+- [Data Flow Diagrams (DFD) (2)](#data-flow-diagrams-dfd-2)
+- [Code Smells & Refactoring (2)](#code-smells--refactoring-2)
+- [Open Source Software & Licensing (2)](#open-source-software--licensing-2)
+- [CI/CD & DevOps Methodologies (1)](#cicd--devops-methodologies-1)
+- [UI/UX Design (1)](#uiux-design-1)
+- [Software Design, Architecture & Patterns (1)](#software-design-architecture--patterns-1)
 
 <!-- TOC END -->
 
@@ -6659,6 +6661,8 @@ Answer: (Answered in English, as required for IT topics.) Feasibility analysis h
 
 ## Software Project Management & Organization (9)
 
+### Project Management & Team Leadership (7)
+
 1. **সংগঠনিক নির্দেশকগুলো কী?** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) Organizational directives are the high-level rules, standards and guidelines set by an organization's management that a software project must follow — such as its chosen SDLC methodology, coding standards, security policy, and reporting structure — so that every project stays consistent with company-wide practice. <!-- verify -->
@@ -6691,7 +6695,29 @@ Answer: A `Chief Programmer Team` (or a hierarchical/centralized team structure)
    - Why: the requirements are already clear and well documented, and the project is large but similar to past work — so the risk is mainly `size and coordination`, not uncertainty about what to build. A chief programmer team, with one lead architect making key design decisions and a structured team under them, gives fast, consistent decisions and efficient reuse of the team's past experience.
    - A more democratic/self-organizing (egoless) team would be preferred instead if the requirements were unclear or the problem were novel, since that structure is better at exploring alternatives — which is not needed here. <!-- verify -->
 
-6. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+6. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
+
+Answer:
+   - Strong technical knowledge to guide and review the team's work.
+   - Good communication skills, to clearly convey goals and give constructive feedback.
+   - Ability to plan, prioritize and manage time/resources under deadlines.
+   - Conflict-resolution and people-management skills to keep the team motivated.
+   - Accountability — takes responsibility for the team's outcome, not just individual tasks.
+
+7. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
+
+Answer: (Interpreting this as: pros and cons of hiring based on formal qualifications.) <!-- verify -->
+   Pros:
+   - Easier and faster to screen large numbers of applicants.
+   - A degree/certificate gives some assurance of baseline theoretical knowledge.
+   Cons:
+   - Qualifications do not always reflect real practical/coding skill.
+   - Can filter out capable self-taught candidates who lack a formal degree.
+   - Encourages hiring for credentials rather than for actual problem-solving ability.
+
+### Version Control & Software Maintenance (2)
+
+1. **a) What is conflict in git? How to resolve it?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 Answer: A `git merge conflict` happens when Git cannot automatically combine changes from two branches because both branches edited the same lines of the same file differently.
    ```
@@ -6703,7 +6729,7 @@ Answer: A `git merge conflict` happens when Git cannot automatically combine cha
    ```
    To resolve it: open the conflicted file, manually decide which version (or a combination) to keep, remove the `<<<<<<<`, `=======`, `>>>>>>>` markers, then `git add` the file and complete the merge with `git commit`.
 
-7. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
+2. **b) Write down the difference between Patch and Upgrade.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
 Answer:
    | Point | Patch | Upgrade |
@@ -6713,27 +6739,9 @@ Answer:
    | Frequency | Released often, as needed | Released periodically (major releases) |
    | Risk | Low, targeted change | Higher, can change behavior significantly |
 
-8. **Qualification of a good team leader.** *[NESCO Manager (Software) 2018 compact it 1208-1209 (ET: N/A)]*
-
-Answer:
-   - Strong technical knowledge to guide and review the team's work.
-   - Good communication skills, to clearly convey goals and give constructive feedback.
-   - Ability to plan, prioritize and manage time/resources under deadlines.
-   - Conflict-resolution and people-management skills to keep the team motivated.
-   - Accountability — takes responsibility for the team's outcome, not just individual tasks.
-
-9. **Write down pros and cons over qualification candidate.** *[NESCO Manager (Software) 2018 compact it 1210-1211 (ET: N/A)]*
-
-Answer: (Interpreting this as: pros and cons of hiring based on formal qualifications.) <!-- verify -->
-   Pros:
-   - Easier and faster to screen large numbers of applicants.
-   - A degree/certificate gives some assurance of baseline theoretical knowledge.
-   Cons:
-   - Qualifications do not always reflect real practical/coding skill.
-   - Can filter out capable self-taught candidates who lack a formal degree.
-   - Encourages hiring for credentials rather than for actual problem-solving ability.
-
 ## Software Design Principles (Coupling & Cohesion) (5)
+
+### Software Design Principles (4)
 
 1. **Write concepts of Coupling and Cohesion with Example?** *[Bangladesh Satellite Company Limited Assistant Engineer (CSE) 23.08.2025 compact it 1431 (ET: BUET)]*
 
@@ -6764,7 +6772,9 @@ Answer: (Answered in English, as required for IT topics.) Types of software inte
    - Interface misunderstanding — one side assumes a different data format or unit than the other actually provides.
    - Timing errors — one module expects data before the other module has produced it.
 
-5. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
+### UI Design Mistakes (1)
+
+1. **What is the common mistake of UI design?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1036 (ET: BUET)]*
 
 Answer:
    - Cluttered screens that show too much information at once and overwhelm the user.
@@ -7016,4 +7026,3 @@ Answer:
     - 3. Behavioral Patterns (Object communication and algorithms):
       - Observer Pattern: Defines a one-to-many dependency where state changes in a subject automatically notify all registered observers.
       - Strategy Pattern: Encapsulates interchangeable algorithms inside separate classes.
-
