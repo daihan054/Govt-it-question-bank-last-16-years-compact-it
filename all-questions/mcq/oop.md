@@ -1,15 +1,16 @@
 <!-- TOC START -->
 **Table of Contents** — 7 subtopics · 100 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Java Programming](#java-programming-48) | 48 |
-| 2 | [Polymorphism & Overloading](#polymorphism--overloading-16) | 16 |
-| 3 | [OOP Concepts & Principles](#oop-concepts--principles-11) | 11 |
-| 4 | [Encapsulation & Access Modifiers](#encapsulation--access-modifiers-7) | 7 |
-| 5 | [Inheritance](#inheritance-6) | 6 |
-| 6 | [Constructors & Destructors](#constructors--destructors-6) | 6 |
-| 7 | [Exception Handling](#exception-handling-6) | 6 |
+- [Java Programming (48)](#java-programming-48)
+- [Polymorphism & Overloading (16)](#polymorphism--overloading-16)
+  - [Polymorphism & Overloading (13)](#polymorphism--overloading-13)
+  - [Destructors (2)](#destructors-2)
+  - [Abstract Classes (1)](#abstract-classes-1)
+- [OOP Concepts & Principles (11)](#oop-concepts--principles-11)
+- [Encapsulation & Access Modifiers (7)](#encapsulation--access-modifiers-7)
+- [Inheritance (6)](#inheritance-6)
+- [Constructors & Destructors (6)](#constructors--destructors-6)
+- [Exception Handling (6)](#exception-handling-6)
 
 <!-- TOC END -->
 
@@ -359,6 +360,8 @@
 
 ## Polymorphism & Overloading (16)
 
+### Polymorphism & Overloading (13)
+
 1. **Which of the following operators should be preferred to overload as a global function rather than a member method?** *[Bangladesh Bank Assistant Director (ICT) 07.02.2025 compact it xxii (ET: DU)]*  
    (a) Postfix ++  
    (b) Comparison Operator  
@@ -392,65 +395,69 @@
    d) Encapsulation  
    d) Method overriding
 
-7. **Which of the following is the destructor of class Vehicle?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
-   A) *Vehicle()  
-   B) ~Vehicle ()  
-   C) ~Vehicle (int value)  
-   D) *Vehicle (int value)
-
-8. **The operator that cannot be overloaded is ________.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
+7. **The operator that cannot be overloaded is ________.** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
    A) ++  
    B) ()  
    C) ~  
    D) ::
 
-9. **Which functions overloads the ">>" operator?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
+8. **Which functions overloads the ">>" operator?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) gt()  
    B) more()  
    C) ge()  
    D) None of this
 
-10. **Which of the following operator functions cannot be global i.e. must be a member function?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
+9. **Which of the following operator functions cannot be global i.e. must be a member function?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 208 (ET: AUST)]*  
    A) Conversion operator  
    B) new  
    C) delete  
    D) all of these
 
-11. **Which of the following is the destructor for class “vehicle”?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
-   A) *vehicle()  
-   B) *vehicle (int value)  
-   C) ~vehicle()  
-   D) ~vehicle (int value)
-
-12. **Which operator that can be overloaded is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
+10. **Which operator that can be overloaded is?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) ++  
    B) ::  
    C) . (dot)  
    D) 0
 
-13. **How many instances of an abstract can be created?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
-   A) 0  
-   B) 1  
-   C) 2  
-   D) 13
-
-14. **If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
+11. **If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called?** *[Combined Bank Senior Officer (IT) 2018 compact it 221 (ET: DU)]*  
    A) Inheritance  
    B) Overloading  
    C) Polymorphism  
    D) Overriding
 
-15. **What is the process of defining two or more methods within the same class that have same name but different parameters declaration?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
+12. **What is the process of defining two or more methods within the same class that have same name but different parameters declaration?** *[Combined 3 Bank Assistant Programmer 2018 compact it 232 (ET: N/A)]*  
    A) Method overriding  
    B) Method overloading  
    C) Method hiding  
    D) Method duplicating
 
-16. **Overloaded functions are ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
+13. **Overloaded functions are ________** *[Bangladesh Bank Assistant Programmer 2011 compact it 271 (ET: N/A)]*  
    a. Very long functions that can hardly run  
    b. One function containing another one or more functions inside it  
    c. Two or more functions with same name but different number of parameter or type  
    d. None of above
+
+### Destructors (2)
+
+1. **Which of the following is the destructor of class Vehicle?** *[Sonali & Janata Bank Officer (IT/ICT)- 2019 compact it 207 (ET: AUST)]*  
+   A) *Vehicle()  
+   B) ~Vehicle ()  
+   C) ~Vehicle (int value)  
+   D) *Vehicle (int value)
+
+2. **Which of the following is the destructor for class “vehicle”?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 236 (ET: N/A)]*  
+   A) *vehicle()  
+   B) *vehicle (int value)  
+   C) ~vehicle()  
+   D) ~vehicle (int value)
+
+### Abstract Classes (1)
+
+1. **How many instances of an abstract can be created?** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
+   A) 0  
+   B) 1  
+   C) 2  
+   D) 13
 
 ## OOP Concepts & Principles (11)
 
