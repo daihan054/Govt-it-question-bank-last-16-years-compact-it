@@ -1,17 +1,20 @@
 <!-- TOC START -->
 **Table of Contents** — 9 subtopics · 39 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Electrical Circuits & Protection Devices](#electrical-circuits--protection-devices-13) | 13 |
-| 2 | [Transistors (BJT & FET)](#transistors-bjt--fet-9) | 9 |
-| 3 | [Semiconductor Devices & Diodes](#semiconductor-devices--diodes-4) | 4 |
-| 4 | [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC)](#digital-to-analog--analog-to-digital-converters-dacadc-4) | 4 |
-| 5 | [AC Circuits & Power Analysis](#ac-circuits--power-analysis-2) | 2 |
-| 6 | [Operational Amplifiers (Op-Amp)](#operational-amplifiers-op-amp-2) | 2 |
-| 7 | [Sensor Circuits & Automated Control Systems](#sensor-circuits--automated-control-systems-2) | 2 |
-| 8 | [Circuit Theorems (Thevenin, Norton, Superposition)](#circuit-theorems-thevenin-norton-superposition-2) | 2 |
-| 9 | [Electrical Machines (Motors & Alternators)](#electrical-machines-motors--alternators-1) | 1 |
+- [Electrical Circuits & Protection Devices (13)](#electrical-circuits--protection-devices-13)
+  - [Circuit Analysis & Theorems (R, I, Norton calculations) (4)](#circuit-analysis--theorems-r-i-norton-calculations-4)
+  - [Protection Devices (Fuse, MCB, Relay, Breaker) (2)](#protection-devices-fuse-mcb-relay-breaker-2)
+  - [AC-DC Conversion & Transformers (3)](#ac-dc-conversion--transformers-3)
+  - [Power Systems & Frequency (3)](#power-systems--frequency-3)
+  - [Component Comparison (Battery vs Capacitor) (1)](#component-comparison-battery-vs-capacitor-1)
+- [Transistors (BJT & FET) (9)](#transistors-bjt--fet-9)
+- [Semiconductor Devices & Diodes (4)](#semiconductor-devices--diodes-4)
+- [Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)](#digital-to-analog--analog-to-digital-converters-dacadc-4)
+- [AC Circuits & Power Analysis (2)](#ac-circuits--power-analysis-2)
+- [Operational Amplifiers (Op-Amp) (2)](#operational-amplifiers-op-amp-2)
+- [Sensor Circuits & Automated Control Systems (2)](#sensor-circuits--automated-control-systems-2)
+- [Circuit Theorems (Thevenin, Norton, Superposition) (2)](#circuit-theorems-thevenin-norton-superposition-2)
+- [Electrical Machines (Motors & Alternators) (1)](#electrical-machines-motors--alternators-1)
 
 <!-- TOC END -->
 
@@ -19,53 +22,9 @@
 
 ## Electrical Circuits & Protection Devices (13)
 
-1. **Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why?** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+### Circuit Analysis & Theorems (R, I, Norton calculations) (4)
 
-Answer: Both protect a circuit from `overcurrent`. The difference is how they do it and whether they survive the event.
-
-   Fuse
-   - A thin metal wire or strip that `melts` when the current exceeds its rating, breaking the circuit.
-   - It is a `one-time` device: once blown it must be replaced.
-   - Very fast on a large short-circuit current, and very cheap.
-   - No moving parts, so nothing to wear out — but also no indication of which circuit failed beyond the blown element.
-
-   MCB (Miniature Circuit Breaker)
-   - An electromechanical switch that `trips` and opens the circuit, then is `reset` by hand.
-   - It has `two` sensing elements:
-   ```
-   Thermal (bimetallic strip) : responds to a sustained OVERLOAD, with a delay
-   Magnetic (solenoid)        : responds to a SHORT CIRCUIT, almost instantly
-   ```
-   - The handle shows clearly which circuit tripped, and the same breaker also works as an isolating switch.
-
-   Difference
-
-   | Point | Fuse | MCB |
-   |---|---|---|
-   | Operation | Wire melts | Mechanical contacts trip open |
-   | Reusable | No — replace after every fault | Yes — just reset the handle |
-   | Reset time | Minutes; a spare must be at hand | Seconds |
-   | Fault indication | Poor; must be inspected | Clear — the handle drops |
-   | Sensing | One characteristic only | Separate thermal and magnetic |
-   | Accuracy | Rating drifts with age and heat | Stable, calibrated trip curve |
-   | Acts as a switch | No | Yes, doubles as an isolator |
-   | Initial cost | Low | Higher |
-   | Long-run cost | Replacement fuses, downtime | One-time |
-   | Safety | Risk of a wrong-rated wire being fitted | Rating is fixed and cannot be tampered with |
-   | Speed on short circuit | Very fast (HRC fuses fastest) | Fast, though slightly slower than an HRC fuse |
-   | Life | Single use | Thousands of operations |
-
-   Which suits a modern office — the `MCB`
-   - `Fast recovery.` An office cannot wait while someone finds a spare fuse of the right rating; the MCB is reset in seconds and work continues.
-   - `No tampering.` The classic and dangerous habit of replacing a blown fuse with a thicker wire or a nail is impossible with an MCB, because its rating is built in.
-   - `Clear diagnosis.` The tripped handle identifies the faulty circuit at a glance, which matters in a distribution board serving many rooms.
-   - `Doubles as an isolator`, so a circuit can be switched off safely for maintenance without extra hardware.
-   - `Correct protection for electronic loads.` Computers and UPS systems draw a large `inrush current` at switch-on. A type-C MCB tolerates that inrush but still trips on a real fault, whereas a fuse sized to survive the inrush is too slow for genuine overloads.
-   - `Combines with an RCCB/RCD` in the same board to give earth-leakage protection for personnel — the standard modern arrangement.
-
-   - Fuses are still used where they are best: as HRC fuses in main incomers and in high-fault-level industrial supplies, where their extremely fast short-circuit clearing outperforms an MCB.
-
-2. **Find the Norton equivalent circuit for a DC power supply that has a 30 V terminal voltage when delivering 400mA and a 28V terminal voltage. When delivering 600mA.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1436 (ET: BUET)]*
+1. **Find the Norton equivalent circuit for a DC power supply that has a 30 V terminal voltage when delivering 400mA and a 28V terminal voltage. When delivering 600mA.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1436 (ET: BUET)]*
 
 Answer: A real DC supply behaves as an ideal source with an internal resistance. Its terminal voltage falls as the load current rises.
    ```
@@ -141,154 +100,7 @@ Answer: A real DC supply behaves as an ideal source with an internal resistance.
 
    - The relationship to remember: `Vth = IN x RN`, and the two equivalents can always be converted into each other by that one equation. Here 34 = 3.4 x 10, which confirms the working.
 
-3. **Which Transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
-
-Answer: A computer's power supply uses a `step-down transformer`.
-
-   - The mains supply in Bangladesh is `220 V AC, 50 Hz`, but the internal circuits need low DC voltages:
-   ```
-      +12 V   : drives, fans, motors
-      +5  V   : USB, older logic, drive electronics
-      +3.3 V  : motherboard logic, RAM
-   ```
-   - A step-down transformer reduces 220 V to a low AC voltage, which a rectifier, filter and regulator then convert to steady DC.
-   ```
-      Ns < Np    ->    Vs < Vp        step-down
-
-      Vs / Vp = Ns / Np
-   ```
-
-   Type used in a modern PC — a high-frequency ferrite-core transformer
-   - A modern PC uses an `SMPS` (Switched Mode Power Supply), not a plain 50 Hz iron-core transformer.
-   - In an SMPS the mains is rectified first, then chopped at `20 kHz to 100 kHz` and fed to a small ferrite-core step-down transformer.
-   ```
-      Mains 220 V AC --> rectifier --> high-frequency switch (20-100 kHz)
-           --> small ferrite step-down transformer --> rectifier --> filter
-           --> regulated +12 V, +5 V, +3.3 V DC
-   ```
-   - Why the high frequency helps: the size of a transformer core is set by the frequency. At 50 Hz the core must be large and heavy; at 100 kHz the same power passes through a core the size of a thumb. This is why a 500 W PC supply weighs about a kilogram instead of ten.
-
-   Other advantages of the SMPS transformer
-   - Efficiency of 80-90 per cent, against about 50-60 per cent for a linear supply, so far less heat.
-   - Light and compact, which is essential in a laptop adapter.
-   - The transformer also provides `galvanic isolation` between the mains and the low-voltage side, which is a safety requirement.
-
-   - Short exam answer: `a step-down transformer` — specifically a `high-frequency ferrite-core step-down transformer` inside the SMPS.
-
-4. **What is the name of AC current to DC current?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
-
-Answer: The process of converting AC to DC is called `rectification`, and the circuit that does it is a `rectifier`.
-
-   ```
-      AC input  ---->  [ RECTIFIER ]  ---->  pulsating DC
-   ```
-
-   Types of rectifier
-   ```
-   Half-wave rectifier   : 1 diode  , uses only one half of each AC cycle
-   Full-wave centre-tap  : 2 diodes , uses both halves, needs a tapped transformer
-   Full-wave bridge      : 4 diodes , uses both halves, no centre tap needed
-   ```
-   - The `bridge rectifier` is the one used in almost every practical supply.
-
-   Complete DC power supply
-   ```
-      AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> DC out
-                   (step down)     (AC to DC)   (smooth)   (steady)
-   ```
-   - `Rectifier` converts AC to pulsating DC.
-   - `Filter` (a capacitor) smooths the pulses into a nearly steady voltage.
-   - `Regulator` (7805, 7812, or an IC) holds the output fixed despite changes in load and mains voltage.
-
-   Waveforms
-   ```
-      AC input        /‾\    /‾\        sine wave, both polarities
-                 ----/   \--/   \----
-                      \_/    \_/
-
-      Half-wave       /‾\    /‾\        only the positive halves
-                 ----/   \______/   \--
-
-      Full-wave       /‾\/‾\/‾\/‾\      both halves made positive
-                 ----/  \/  \/  \/  \--
-
-      After filter    ‾‾‾\_/‾‾‾\_/‾‾    almost flat, with a small ripple
-   ```
-
-   The opposite device
-   ```
-      AC -> DC  :  RECTIFIER   (this question)
-      DC -> AC  :  INVERTER
-      DC -> DC  :  CHOPPER / DC-DC converter
-      AC -> AC  :  TRANSFORMER (voltage change) or CYCLOCONVERTER (frequency change)
-   ```
-
-   - Short answer: the conversion is called `rectification` and the device is a `rectifier`. Everyday examples are the mobile phone charger, the laptop adapter and the SMPS inside a computer, all of which contain a bridge rectifier.
-
-5. **How to AC converted into DC?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
-
-Answer: AC is converted to DC by `rectification`. A complete supply has four stages.
-   ```
-      AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> steady DC
-                   (step down)    (AC to DC)   (smooth)   (hold fixed)
-   ```
-
-   Stage 1 — Transformer
-   - Steps the 220 V mains down to a low AC voltage, say 12 V, and gives `galvanic isolation` from the mains for safety.
-   ```
-      Vs / Vp = Ns / Np
-   ```
-
-   Stage 2 — Rectifier
-   - Diodes conduct in one direction only, so they turn the alternating waveform into a one-directional (pulsating) DC.
-
-   `Half-wave rectifier` — 1 diode
-   ```
-      AC ---|>|---+------ output
-                 ###
-                 ### R(load)
-      AC --------+------
-   ```
-   - Passes only the positive half of each cycle. Output frequency = 50 Hz, and half the input is wasted.
-
-   `Full-wave bridge rectifier` — 4 diodes, the practical choice
-   ```
-                 D1        D2
-           +----|>|---+---|<|----+
-           |          |          |
-      AC ~ |          +---- + ---|--- output
-           |          |          |
-           +----|<|---+---|>|----+
-                 D3        D4            output frequency = 100 Hz
-   ```
-   - Both halves of the input are used, so the output is smoother and the transformer is used more efficiently. No centre tap is needed.
-
-   Stage 3 — Filter
-   - A large electrolytic capacitor across the output charges at each peak and discharges slowly between peaks, filling in the gaps.
-   ```
-      Before filter    /‾\/‾\/‾\/‾\        pulsating
-      After filter     ‾‾‾\_/‾‾‾\_/‾‾      nearly flat, small ripple
-   ```
-   ```
-      Ripple factor = V(rms ripple) / V(dc)
-
-      Half-wave  : 1.21          Full-wave : 0.48      (before filtering)
-   ```
-   - A bigger capacitor gives less ripple. An LC or pi filter reduces it further.
-
-   Stage 4 — Regulator
-   - Holds the output constant when the load or the mains voltage changes. A `zener diode` for small loads, or a three-terminal IC such as `7805` (+5 V) and `7812` (+12 V).
-
-   Modern method — SMPS
-   ```
-      Mains --> rectify --> chop at 20-100 kHz --> small ferrite transformer
-            --> rectify --> filter --> feedback-regulated DC output
-   ```
-   - Used in every computer power supply, mobile charger and laptop adapter. Because the transformer runs at high frequency it is tiny, and efficiency reaches 80-90 per cent instead of the 50-60 per cent of a linear supply.
-
-   - Summary: `rectifier` makes the current one-directional, `filter` smooths it, and `regulator` keeps it steady. All three are needed — a rectifier alone gives pulsating DC, not usable DC.
-
-6. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
+2. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
 Answer: The question is `incomplete` — the circuit diagram is not present. The complete method for finding an unknown resistance and current is given below with a worked example.
 
@@ -381,121 +193,7 @@ Answer: The question is `incomplete` — the circuit diagram is not present. The
       Superposition   :  one source at a time, then add the results
    ```
 
-7. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
-
-Answer: (Answered in English, as required for IT topics.) Part 1 — Audio frequency versus Radio frequency
-
-   `Audio frequency (AF)`
-   - The band of frequencies the human ear can hear: `20 Hz to 20 kHz`.
-   - It is a `mechanical` (pressure) wave in air, but the electrical signal that represents it is also called an audio-frequency signal.
-   - It cannot travel far as a radio wave, because an antenna for 1 kHz would have to be tens of kilometres long.
-
-   `Radio frequency (RF)`
-   - The band used for wireless transmission: about `3 kHz to 300 GHz`, with the practical broadcast range starting near 30 kHz.
-   - It is an `electromagnetic` wave and travels through air, vacuum and space at the speed of light.
-   - Sub-bands: LF, MF (AM radio), HF (short wave), VHF (FM radio, TV), UHF (mobile, Wi-Fi), SHF (satellite, radar).
-
-   | Point | Audio frequency | Radio frequency |
-   |---|---|---|
-   | Range | 20 Hz - 20 kHz | ~3 kHz - 300 GHz |
-   | Nature of wave | Mechanical (sound) or its electrical form | Electromagnetic |
-   | Medium needed | Air or another material | Travels in vacuum too |
-   | Speed | 343 m/s in air | 3 x 10^8 m/s |
-   | Wavelength | 17 m to 17 mm (in air) | 100 km down to 1 mm |
-   | Antenna | Not usable | Practical, since wavelength is short |
-   | Range of travel | A few metres | Kilometres to interplanetary |
-   | Devices | Microphone, speaker, amplifier | Antenna, transmitter, receiver |
-   | Uses | Music, speech, telephony | Broadcasting, mobile, Wi-Fi, radar |
-
-   - How they work together: an audio signal is too low in frequency to radiate, so it is `modulated` onto a radio carrier (AM, FM) for transmission and `demodulated` back to audio at the receiver.
-
-   Part 2 — Ten 10-ohm resistors in series
-
-   - In a `series` connection the same current flows through every element and the resistances simply add.
-   ```
-      R(total) = R1 + R2 + ... + Rn
-   ```
-   ```
-      R(total) = 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10
-               = 10 x 10
-      R(total) = 100 ohms
-   ```
-   ```
-      ---/\/\---/\/\---/\/\--- ... ---/\/\---
-        10      10      10             10
-                (ten resistors in series)
-   ```
-
-   For comparison, the same ten in parallel
-   ```
-      1/R = 1/10 + 1/10 + ... (ten times) = 10/10 = 1
-      R(parallel) = 10 / 10 = 1 ohm
-   ```
-   - General rule for `n equal resistors`: series gives `nR`, parallel gives `R/n`. Here 10 x 10 = 100 ohms and 10 / 10 = 1 ohm.
-
-8. **Write down the function of Relay, Fuse and Circuit Breaker.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
-
-Answer: All three are protection or control devices in a circuit, but each does a different job.
-
-   Relay
-   - A `relay` is an electrically operated switch. A small current through its coil creates a magnetic field that pulls an armature and closes (or opens) a separate set of contacts, switching a much larger current in another circuit.
-   ```
-           control side              switched side
-      +-------------------+      +------------------+
-      |   coil  (low      |      |   contacts       |
-      |   current, 5-12 V)|~~~~~>|  (high current,  |
-      |                   |mag   |   220 V, motor)  |
-      +-------------------+      +------------------+
-   ```
-   - Functions:
-   ```
-   Isolation      : a 5 V microcontroller safely switches a 220 V load
-   Amplification  : a small signal controls a large power circuit
-   Remote control : the control circuit can be far from the load
-   Protection     : a protective relay senses over-current, earth fault or
-                    over-voltage and commands a circuit breaker to trip
-   Logic          : one input can switch several contacts at once
-   ```
-   - It does `not` break the fault current itself in power systems; it detects the fault and tells the breaker to open.
-
-   Fuse
-   - A `fuse` is a thin metal wire or strip that `melts` when the current exceeds its rating, permanently breaking the circuit.
-   - Functions:
-   ```
-   Overcurrent protection : opens the circuit on overload or short circuit
-   Equipment protection   : saves the wiring and the appliance from burning
-   Fire prevention        : stops an overheated cable before it ignites
-   ```
-   - It is a `one-time` device — after it blows, it must be replaced. It is the cheapest and, in the HRC form, the fastest protection against a large short-circuit current.
-
-   Circuit breaker
-   - A `circuit breaker` is an automatic switch that `trips open` on a fault and can then be `reset` by hand. It combines two sensing elements:
-   ```
-   Thermal (bimetallic strip) : sustained OVERLOAD, with an inverse time delay
-   Magnetic (solenoid)        : SHORT CIRCUIT, almost instantaneous
-   ```
-   - Functions:
-   ```
-   Overcurrent and short-circuit protection, like a fuse
-   Reusable  : reset instead of replace
-   Isolation : also serves as a manual on/off switch for maintenance
-   Indication: the tripped handle shows which circuit faulted
-   ```
-
-   Comparison
-
-   | Point | Relay | Fuse | Circuit breaker |
-   |---|---|---|---|
-   | Main job | Switch or sense, then command | Break the circuit on overcurrent | Break the circuit on overcurrent |
-   | Operation | Electromagnetic coil | Melting element | Thermal + magnetic trip |
-   | Reusable | Yes | No | Yes, reset by hand |
-   | Breaks fault current | No (protective relay signals only) | Yes | Yes |
-   | Acts as a switch | Yes | No | Yes |
-   | Cost | Low to moderate | Very low | Higher |
-
-   - How they work together in a real installation: a `protective relay` detects the abnormal condition, a `circuit breaker` does the actual interruption, and a `fuse` gives simple backup protection on smaller branches.
-
-9. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
+3. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
 Answer: The question is `incomplete` — the circuit diagram is not present. The methods for finding an unknown current are given below with worked examples.
 
@@ -601,215 +299,7 @@ Answer: The question is `incomplete` — the circuit diagram is not present. The
            sum (V x I) sources = sum (I^2 R) resistors
    ```
 
-10. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
-
-Answer: The question is `incomplete` — only the topic "BREB power transmission interrupt related" was recorded, not the question itself. `BREB` is the Bangladesh Rural Electrification Board, so the subject is `interruptions in power transmission and distribution`, which is covered below.
-
-    Types of interruption
-    ```
-       MOMENTARY   : less than 5 minutes. Usually cleared automatically by
-                     a RECLOSER after a transient fault such as a branch
-                     touching a line.
-       SUSTAINED   : longer than 5 minutes. Needs a crew to attend.
-       PLANNED     : announced in advance, for maintenance or new connections.
-       UNPLANNED   : a fault, a storm, or equipment failure.
-       LOAD SHEDDING : a deliberate interruption because generation is less
-                     than demand - a managed rotation of outages.
-    ```
-
-    Causes of transmission and distribution interruption
-    ```
-       NATURAL      : storm, lightning strike, flood, fallen tree,
-                      salt or dust pollution on insulators, birds and animals
-       EQUIPMENT    : transformer failure, insulator flashover, conductor
-                      snapping, breaker or CT/PT failure, cable fault,
-                      ageing infrastructure
-       ELECTRICAL   : short circuit (line-to-line, line-to-ground), overload,
-                      over-voltage, under-frequency
-       OPERATIONAL  : switching error, wrong protection setting, maintenance
-       EXTERNAL     : vehicle hitting a pole, construction damage to an
-                      underground cable, theft of conductor, vandalism
-       SYSTEM       : generation shortfall, a cascading trip, a grid
-                      collapse such as the national blackout of 1 November 2014
-    ```
-
-    Types of electrical fault
-    ```
-       SYMMETRICAL (rare, about 5 %)
-            Three-phase (L-L-L) , three-phase-to-ground (L-L-L-G)
-            The most severe, but balanced and simplest to analyse.
-
-       UNSYMMETRICAL (about 95 %)
-            Single line-to-ground (L-G)   - the COMMONEST, about 70 %
-            Line-to-line (L-L)            - about 15 %
-            Double line-to-ground (L-L-G) - about 10 %
-    ```
-
-    The protection scheme that clears a fault
-    ```
-       RELAY detects the abnormal condition and commands the breaker
-            Over-current relay     : too much current
-            Differential relay     : current in does not equal current out -
-                                     used for transformers and generators
-            Distance relay         : impedance indicates how far the fault is -
-                                     used for transmission lines
-            Earth-fault relay      : unbalanced current to ground
-
-       CIRCUIT BREAKER interrupts the fault current
-            Oil , air-blast , SF6 , vacuum
-
-       RECLOSER automatically re-closes after a delay, in case the fault
-            was transient. Typically tries three times before locking out.
-
-       ISOLATOR provides a visible off-load disconnection for safe working
-
-       LIGHTNING ARRESTER diverts a surge to earth
-       EARTH WIRE on top of the tower shields the phase conductors
-    ```
-
-    The reliability indices BREB and every utility is measured by
-    ```
-       SAIFI = System Average Interruption FREQUENCY Index
-             = total customer interruptions / total customers served
-               -> how OFTEN the average customer loses supply
-
-       SAIDI = System Average Interruption DURATION Index
-             = sum of customer-minutes lost / total customers
-               -> how LONG the average customer is without supply
-
-       CAIDI = SAIDI / SAIFI
-               -> the average length of ONE interruption
-
-       ASAI  = Average Service Availability Index
-             = (available hours / demanded hours) x 100 %
-    ```
-
-    How interruptions are reduced
-    ```
-       PREVENTION   : tree trimming along the right of way, insulator
-                      cleaning, thermographic inspection, transformer oil
-                      testing, replacing ageing conductor
-       DESIGN       : ring-main and mesh networks instead of radial feeders,
-                      so an alternative path exists ; underground cable in
-                      storm-prone areas ; higher insulation levels
-       PROTECTION   : properly graded relay settings, so only the nearest
-                      breaker trips ; auto-reclosers on rural feeders
-       AUTOMATION   : SCADA for remote monitoring and switching ;
-                      a distribution management system ; smart meters that
-                      report an outage without a customer call
-       MANAGEMENT   : an outage management system, stocked spares, trained
-                      crews and a published restoration target
-    ```
-
-    - For BREB specifically, the network is `largely rural and radial`, with long 11 kV and 33 kV feeders, so a single fault far from the substation can black out a wide area. That is why rural electrification programmes concentrate on `auto-reclosers, feeder sectionalising and right-of-way clearance` rather than on undergrounding, which is far too costly per kilometre for a rural line.
-
-11. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
-
-Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics that such a paper almost always draws them from are worked below, so the methods are available.
-
-    Problem type 1 — DC network analysis
-    ```
-       Find the total resistance and the branch currents.
-
-            +---[ 4 ohm ]---+---[ 6 ohm ]---+
-            |               |               |
-          (+) 24 V      [ 12 ohm ]          |
-            |               |               |
-            +---------------+---------------+
-    ```
-    ```
-       Step 1 : the parallel pair
-            R(p) = (12 x 6)/(12 + 6) = 72/18 = 4 ohms
-
-       Step 2 : total resistance
-            R(total) = 4 + 4 = 8 ohms
-
-       Step 3 : total current
-            I = V/R = 24/8 = 3 A
-
-       Step 4 : voltage across the parallel section
-            V(p) = 3 x 4 = 12 V
-
-       Step 5 : branch currents
-            I(12) = 12/12 = 1 A
-            I(6)  = 12/6  = 2 A
-            Check : 1 + 2 = 3 A   (KCL)      correct
-
-       Step 6 : power
-            P = V I = 24 x 3 = 72 W
-            Check : 3^2 x 4 + 1^2 x 12 + 2^2 x 6 = 36 + 12 + 24 = 72 W
-    ```
-
-    Problem type 2 — AC series RLC circuit
-    ```
-       R = 30 ohm , L = 0.1 H , C = 100 uF , V = 230 V at 50 Hz.
-       Find the impedance, the current and the power factor.
-    ```
-    ```
-       X(L) = 2 pi f L = 2 x 3.1416 x 50 x 0.1 = 31.42 ohms
-       X(C) = 1/(2 pi f C) = 1/(2 x 3.1416 x 50 x 100e-6) = 31.83 ohms
-
-       Net reactance X = X(L) - X(C) = 31.42 - 31.83 = -0.41 ohms
-            (negative, so the circuit is slightly CAPACITIVE)
-
-       Z = sqrt(R^2 + X^2) = sqrt(900 + 0.168) = 30.003 ohms
-
-       I = V/Z = 230/30.003 = 7.666 A
-
-       pf = cos(theta) = R/Z = 30/30.003 = 0.9999 leading
-            theta = arctan(X/R) = arctan(-0.41/30) = -0.78 degrees
-
-       Real power     P = V I cos(theta) = 230 x 7.666 x 0.9999 = 1763 W
-       Apparent power S = V I = 230 x 7.666 = 1763 VA
-       Reactive power Q = V I sin(theta) = -24 VAR
-
-       Resonant frequency f(r) = 1/(2 pi sqrt(LC))
-                               = 1/(2 x 3.1416 x sqrt(0.1 x 100e-6))
-                               = 50.33 Hz
-       The supply is almost at resonance, which is why the pf is nearly 1.
-    ```
-
-    Problem type 3 — transformer or motor calculation
-    ```
-       A single-phase transformer : 2200/220 V , 50 Hz , 10 kVA.
-       Find the turns ratio and the rated currents.
-    ```
-    ```
-       Turns ratio  a = V1/V2 = 2200/220 = 10 : 1
-
-       Primary current   I1 = S/V1 = 10,000/2200 = 4.545 A
-       Secondary current I2 = S/V2 = 10,000/220  = 45.45 A
-       Check : I1/I2 = 4.545/45.45 = 1/10 = 1/a      correct
-    ```
-    ```
-       Three-phase induction motor : 12-pole alternator at 500 rpm feeding
-       an 8-pole motor, slip 3 %.
-
-       Supply frequency  f  = P N /120 = 12 x 500/120 = 50 Hz
-       Synchronous speed Ns = 120 f/P  = 120 x 50/8  = 750 rpm
-       Full-load speed   N  = Ns(1 - s) = 750 x 0.97 = 727.5 rpm
-    ```
-
-    The formulas these three problems rest on
-    ```
-       DC        : V = IR , P = VI = I^2 R = V^2/R
-                   Series R = R1+R2 ; Parallel 1/R = 1/R1+1/R2
-                   KCL : sum I(in) = sum I(out)
-                   KVL : sum V round a loop = 0
-
-       AC        : X(L) = 2 pi f L , X(C) = 1/(2 pi f C)
-                   Z = sqrt(R^2 + (XL - XC)^2)
-                   pf = cos(theta) = R/Z
-                   P = VI cos(theta) , S = VI , Q = VI sin(theta)
-                   Resonance : f(r) = 1/(2 pi sqrt(LC))
-
-       Machines  : f = PN/120 , Ns = 120f/P , s = (Ns - N)/Ns
-                   a = V1/V2 = N1/N2 = I2/I1
-                   Efficiency = output/input x 100
-    ```
-    - The habit that earns marks in all three: `write the formula, substitute the numbers with their units, compute, and then verify` — for DC by checking KCL and the power balance, for AC by checking that P = I^2 R, and for machines by checking the turns or speed ratio.
-
-12. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
+4. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) The question is `incomplete` — the circuit diagram is not present. The method for finding the total resistance and then a particular branch current is set out below with a worked example.
 
@@ -919,7 +409,530 @@ Answer: (Answered in English, as required for IT topics.) The question is `incom
           delivered equal to the power dissipated.
     ```
 
-13. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
+### Protection Devices (Fuse, MCB, Relay, Breaker) (2)
+
+1. **Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why?** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
+
+Answer: Both protect a circuit from `overcurrent`. The difference is how they do it and whether they survive the event.
+
+   Fuse
+   - A thin metal wire or strip that `melts` when the current exceeds its rating, breaking the circuit.
+   - It is a `one-time` device: once blown it must be replaced.
+   - Very fast on a large short-circuit current, and very cheap.
+   - No moving parts, so nothing to wear out — but also no indication of which circuit failed beyond the blown element.
+
+   MCB (Miniature Circuit Breaker)
+   - An electromechanical switch that `trips` and opens the circuit, then is `reset` by hand.
+   - It has `two` sensing elements:
+   ```
+   Thermal (bimetallic strip) : responds to a sustained OVERLOAD, with a delay
+   Magnetic (solenoid)        : responds to a SHORT CIRCUIT, almost instantly
+   ```
+   - The handle shows clearly which circuit tripped, and the same breaker also works as an isolating switch.
+
+   Difference
+
+   | Point | Fuse | MCB |
+   |---|---|---|
+   | Operation | Wire melts | Mechanical contacts trip open |
+   | Reusable | No — replace after every fault | Yes — just reset the handle |
+   | Reset time | Minutes; a spare must be at hand | Seconds |
+   | Fault indication | Poor; must be inspected | Clear — the handle drops |
+   | Sensing | One characteristic only | Separate thermal and magnetic |
+   | Accuracy | Rating drifts with age and heat | Stable, calibrated trip curve |
+   | Acts as a switch | No | Yes, doubles as an isolator |
+   | Initial cost | Low | Higher |
+   | Long-run cost | Replacement fuses, downtime | One-time |
+   | Safety | Risk of a wrong-rated wire being fitted | Rating is fixed and cannot be tampered with |
+   | Speed on short circuit | Very fast (HRC fuses fastest) | Fast, though slightly slower than an HRC fuse |
+   | Life | Single use | Thousands of operations |
+
+   Which suits a modern office — the `MCB`
+   - `Fast recovery.` An office cannot wait while someone finds a spare fuse of the right rating; the MCB is reset in seconds and work continues.
+   - `No tampering.` The classic and dangerous habit of replacing a blown fuse with a thicker wire or a nail is impossible with an MCB, because its rating is built in.
+   - `Clear diagnosis.` The tripped handle identifies the faulty circuit at a glance, which matters in a distribution board serving many rooms.
+   - `Doubles as an isolator`, so a circuit can be switched off safely for maintenance without extra hardware.
+   - `Correct protection for electronic loads.` Computers and UPS systems draw a large `inrush current` at switch-on. A type-C MCB tolerates that inrush but still trips on a real fault, whereas a fuse sized to survive the inrush is too slow for genuine overloads.
+   - `Combines with an RCCB/RCD` in the same board to give earth-leakage protection for personnel — the standard modern arrangement.
+
+   - Fuses are still used where they are best: as HRC fuses in main incomers and in high-fault-level industrial supplies, where their extremely fast short-circuit clearing outperforms an MCB.
+
+2. **Write down the function of Relay, Fuse and Circuit Breaker.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
+
+Answer: All three are protection or control devices in a circuit, but each does a different job.
+
+   Relay
+   - A `relay` is an electrically operated switch. A small current through its coil creates a magnetic field that pulls an armature and closes (or opens) a separate set of contacts, switching a much larger current in another circuit.
+   ```
+           control side              switched side
+      +-------------------+      +------------------+
+      |   coil  (low      |      |   contacts       |
+      |   current, 5-12 V)|~~~~~>|  (high current,  |
+      |                   |mag   |   220 V, motor)  |
+      +-------------------+      +------------------+
+   ```
+   - Functions:
+   ```
+   Isolation      : a 5 V microcontroller safely switches a 220 V load
+   Amplification  : a small signal controls a large power circuit
+   Remote control : the control circuit can be far from the load
+   Protection     : a protective relay senses over-current, earth fault or
+                    over-voltage and commands a circuit breaker to trip
+   Logic          : one input can switch several contacts at once
+   ```
+   - It does `not` break the fault current itself in power systems; it detects the fault and tells the breaker to open.
+
+   Fuse
+   - A `fuse` is a thin metal wire or strip that `melts` when the current exceeds its rating, permanently breaking the circuit.
+   - Functions:
+   ```
+   Overcurrent protection : opens the circuit on overload or short circuit
+   Equipment protection   : saves the wiring and the appliance from burning
+   Fire prevention        : stops an overheated cable before it ignites
+   ```
+   - It is a `one-time` device — after it blows, it must be replaced. It is the cheapest and, in the HRC form, the fastest protection against a large short-circuit current.
+
+   Circuit breaker
+   - A `circuit breaker` is an automatic switch that `trips open` on a fault and can then be `reset` by hand. It combines two sensing elements:
+   ```
+   Thermal (bimetallic strip) : sustained OVERLOAD, with an inverse time delay
+   Magnetic (solenoid)        : SHORT CIRCUIT, almost instantaneous
+   ```
+   - Functions:
+   ```
+   Overcurrent and short-circuit protection, like a fuse
+   Reusable  : reset instead of replace
+   Isolation : also serves as a manual on/off switch for maintenance
+   Indication: the tripped handle shows which circuit faulted
+   ```
+
+   Comparison
+
+   | Point | Relay | Fuse | Circuit breaker |
+   |---|---|---|---|
+   | Main job | Switch or sense, then command | Break the circuit on overcurrent | Break the circuit on overcurrent |
+   | Operation | Electromagnetic coil | Melting element | Thermal + magnetic trip |
+   | Reusable | Yes | No | Yes, reset by hand |
+   | Breaks fault current | No (protective relay signals only) | Yes | Yes |
+   | Acts as a switch | Yes | No | Yes |
+   | Cost | Low to moderate | Very low | Higher |
+
+   - How they work together in a real installation: a `protective relay` detects the abnormal condition, a `circuit breaker` does the actual interruption, and a `fuse` gives simple backup protection on smaller branches.
+
+### AC-DC Conversion & Transformers (3)
+
+1. **Which Transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
+
+Answer: A computer's power supply uses a `step-down transformer`.
+
+   - The mains supply in Bangladesh is `220 V AC, 50 Hz`, but the internal circuits need low DC voltages:
+   ```
+      +12 V   : drives, fans, motors
+      +5  V   : USB, older logic, drive electronics
+      +3.3 V  : motherboard logic, RAM
+   ```
+   - A step-down transformer reduces 220 V to a low AC voltage, which a rectifier, filter and regulator then convert to steady DC.
+   ```
+      Ns < Np    ->    Vs < Vp        step-down
+
+      Vs / Vp = Ns / Np
+   ```
+
+   Type used in a modern PC — a high-frequency ferrite-core transformer
+   - A modern PC uses an `SMPS` (Switched Mode Power Supply), not a plain 50 Hz iron-core transformer.
+   - In an SMPS the mains is rectified first, then chopped at `20 kHz to 100 kHz` and fed to a small ferrite-core step-down transformer.
+   ```
+      Mains 220 V AC --> rectifier --> high-frequency switch (20-100 kHz)
+           --> small ferrite step-down transformer --> rectifier --> filter
+           --> regulated +12 V, +5 V, +3.3 V DC
+   ```
+   - Why the high frequency helps: the size of a transformer core is set by the frequency. At 50 Hz the core must be large and heavy; at 100 kHz the same power passes through a core the size of a thumb. This is why a 500 W PC supply weighs about a kilogram instead of ten.
+
+   Other advantages of the SMPS transformer
+   - Efficiency of 80-90 per cent, against about 50-60 per cent for a linear supply, so far less heat.
+   - Light and compact, which is essential in a laptop adapter.
+   - The transformer also provides `galvanic isolation` between the mains and the low-voltage side, which is a safety requirement.
+
+   - Short exam answer: `a step-down transformer` — specifically a `high-frequency ferrite-core step-down transformer` inside the SMPS.
+
+2. **What is the name of AC current to DC current?** *[BRiCM Assistant Maintenance Engineer 24.02.2024 compact it 404 (ET: N/A)]*
+
+Answer: The process of converting AC to DC is called `rectification`, and the circuit that does it is a `rectifier`.
+
+   ```
+      AC input  ---->  [ RECTIFIER ]  ---->  pulsating DC
+   ```
+
+   Types of rectifier
+   ```
+   Half-wave rectifier   : 1 diode  , uses only one half of each AC cycle
+   Full-wave centre-tap  : 2 diodes , uses both halves, needs a tapped transformer
+   Full-wave bridge      : 4 diodes , uses both halves, no centre tap needed
+   ```
+   - The `bridge rectifier` is the one used in almost every practical supply.
+
+   Complete DC power supply
+   ```
+      AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> DC out
+                   (step down)     (AC to DC)   (smooth)   (steady)
+   ```
+   - `Rectifier` converts AC to pulsating DC.
+   - `Filter` (a capacitor) smooths the pulses into a nearly steady voltage.
+   - `Regulator` (7805, 7812, or an IC) holds the output fixed despite changes in load and mains voltage.
+
+   Waveforms
+   ```
+      AC input        /‾\    /‾\        sine wave, both polarities
+                 ----/   \--/   \----
+                      \_/    \_/
+
+      Half-wave       /‾\    /‾\        only the positive halves
+                 ----/   \______/   \--
+
+      Full-wave       /‾\/‾\/‾\/‾\      both halves made positive
+                 ----/  \/  \/  \/  \--
+
+      After filter    ‾‾‾\_/‾‾‾\_/‾‾    almost flat, with a small ripple
+   ```
+
+   The opposite device
+   ```
+      AC -> DC  :  RECTIFIER   (this question)
+      DC -> AC  :  INVERTER
+      DC -> DC  :  CHOPPER / DC-DC converter
+      AC -> AC  :  TRANSFORMER (voltage change) or CYCLOCONVERTER (frequency change)
+   ```
+
+   - Short answer: the conversion is called `rectification` and the device is a `rectifier`. Everyday examples are the mobile phone charger, the laptop adapter and the SMPS inside a computer, all of which contain a bridge rectifier.
+
+3. **How to AC converted into DC?** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
+
+Answer: AC is converted to DC by `rectification`. A complete supply has four stages.
+   ```
+      AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> steady DC
+                   (step down)    (AC to DC)   (smooth)   (hold fixed)
+   ```
+
+   Stage 1 — Transformer
+   - Steps the 220 V mains down to a low AC voltage, say 12 V, and gives `galvanic isolation` from the mains for safety.
+   ```
+      Vs / Vp = Ns / Np
+   ```
+
+   Stage 2 — Rectifier
+   - Diodes conduct in one direction only, so they turn the alternating waveform into a one-directional (pulsating) DC.
+
+   `Half-wave rectifier` — 1 diode
+   ```
+      AC ---|>|---+------ output
+                 ###
+                 ### R(load)
+      AC --------+------
+   ```
+   - Passes only the positive half of each cycle. Output frequency = 50 Hz, and half the input is wasted.
+
+   `Full-wave bridge rectifier` — 4 diodes, the practical choice
+   ```
+                 D1        D2
+           +----|>|---+---|<|----+
+           |          |          |
+      AC ~ |          +---- + ---|--- output
+           |          |          |
+           +----|<|---+---|>|----+
+                 D3        D4            output frequency = 100 Hz
+   ```
+   - Both halves of the input are used, so the output is smoother and the transformer is used more efficiently. No centre tap is needed.
+
+   Stage 3 — Filter
+   - A large electrolytic capacitor across the output charges at each peak and discharges slowly between peaks, filling in the gaps.
+   ```
+      Before filter    /‾\/‾\/‾\/‾\        pulsating
+      After filter     ‾‾‾\_/‾‾‾\_/‾‾      nearly flat, small ripple
+   ```
+   ```
+      Ripple factor = V(rms ripple) / V(dc)
+
+      Half-wave  : 1.21          Full-wave : 0.48      (before filtering)
+   ```
+   - A bigger capacitor gives less ripple. An LC or pi filter reduces it further.
+
+   Stage 4 — Regulator
+   - Holds the output constant when the load or the mains voltage changes. A `zener diode` for small loads, or a three-terminal IC such as `7805` (+5 V) and `7812` (+12 V).
+
+   Modern method — SMPS
+   ```
+      Mains --> rectify --> chop at 20-100 kHz --> small ferrite transformer
+            --> rectify --> filter --> feedback-regulated DC output
+   ```
+   - Used in every computer power supply, mobile charger and laptop adapter. Because the transformer runs at high frequency it is tiny, and efficiency reaches 80-90 per cent instead of the 50-60 per cent of a linear supply.
+
+   - Summary: `rectifier` makes the current one-directional, `filter` smooths it, and `regulator` keeps it steady. All three are needed — a rectifier alone gives pulsating DC, not usable DC.
+
+### Power Systems & Frequency (3)
+
+1. **Audio Frequency ও Radio Frequency এর মধ্যেকার পার্থক্য লিখুন। ১০ ওহমের ১০টি ট্রানজিস্টর কোন সিরিজে সংযুক্ত হলে তাতে রেজিস্ট্যান্স কত হবে?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 810 (ET: IBA)]*
+
+Answer: (Answered in English, as required for IT topics.) Part 1 — Audio frequency versus Radio frequency
+
+   `Audio frequency (AF)`
+   - The band of frequencies the human ear can hear: `20 Hz to 20 kHz`.
+   - It is a `mechanical` (pressure) wave in air, but the electrical signal that represents it is also called an audio-frequency signal.
+   - It cannot travel far as a radio wave, because an antenna for 1 kHz would have to be tens of kilometres long.
+
+   `Radio frequency (RF)`
+   - The band used for wireless transmission: about `3 kHz to 300 GHz`, with the practical broadcast range starting near 30 kHz.
+   - It is an `electromagnetic` wave and travels through air, vacuum and space at the speed of light.
+   - Sub-bands: LF, MF (AM radio), HF (short wave), VHF (FM radio, TV), UHF (mobile, Wi-Fi), SHF (satellite, radar).
+
+   | Point | Audio frequency | Radio frequency |
+   |---|---|---|
+   | Range | 20 Hz - 20 kHz | ~3 kHz - 300 GHz |
+   | Nature of wave | Mechanical (sound) or its electrical form | Electromagnetic |
+   | Medium needed | Air or another material | Travels in vacuum too |
+   | Speed | 343 m/s in air | 3 x 10^8 m/s |
+   | Wavelength | 17 m to 17 mm (in air) | 100 km down to 1 mm |
+   | Antenna | Not usable | Practical, since wavelength is short |
+   | Range of travel | A few metres | Kilometres to interplanetary |
+   | Devices | Microphone, speaker, amplifier | Antenna, transmitter, receiver |
+   | Uses | Music, speech, telephony | Broadcasting, mobile, Wi-Fi, radar |
+
+   - How they work together: an audio signal is too low in frequency to radiate, so it is `modulated` onto a radio carrier (AM, FM) for transmission and `demodulated` back to audio at the receiver.
+
+   Part 2 — Ten 10-ohm resistors in series
+
+   - In a `series` connection the same current flows through every element and the resistances simply add.
+   ```
+      R(total) = R1 + R2 + ... + Rn
+   ```
+   ```
+      R(total) = 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10
+               = 10 x 10
+      R(total) = 100 ohms
+   ```
+   ```
+      ---/\/\---/\/\---/\/\--- ... ---/\/\---
+        10      10      10             10
+                (ten resistors in series)
+   ```
+
+   For comparison, the same ten in parallel
+   ```
+      1/R = 1/10 + 1/10 + ... (ten times) = 10/10 = 1
+      R(parallel) = 10 / 10 = 1 ohm
+   ```
+   - General rule for `n equal resistors`: series gives `nR`, parallel gives `R/n`. Here 10 x 10 = 100 ohms and 10 / 10 = 1 ohm.
+
+2. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+
+Answer: The question is `incomplete` — only the topic "BREB power transmission interrupt related" was recorded, not the question itself. `BREB` is the Bangladesh Rural Electrification Board, so the subject is `interruptions in power transmission and distribution`, which is covered below.
+
+    Types of interruption
+    ```
+       MOMENTARY   : less than 5 minutes. Usually cleared automatically by
+                     a RECLOSER after a transient fault such as a branch
+                     touching a line.
+       SUSTAINED   : longer than 5 minutes. Needs a crew to attend.
+       PLANNED     : announced in advance, for maintenance or new connections.
+       UNPLANNED   : a fault, a storm, or equipment failure.
+       LOAD SHEDDING : a deliberate interruption because generation is less
+                     than demand - a managed rotation of outages.
+    ```
+
+    Causes of transmission and distribution interruption
+    ```
+       NATURAL      : storm, lightning strike, flood, fallen tree,
+                      salt or dust pollution on insulators, birds and animals
+       EQUIPMENT    : transformer failure, insulator flashover, conductor
+                      snapping, breaker or CT/PT failure, cable fault,
+                      ageing infrastructure
+       ELECTRICAL   : short circuit (line-to-line, line-to-ground), overload,
+                      over-voltage, under-frequency
+       OPERATIONAL  : switching error, wrong protection setting, maintenance
+       EXTERNAL     : vehicle hitting a pole, construction damage to an
+                      underground cable, theft of conductor, vandalism
+       SYSTEM       : generation shortfall, a cascading trip, a grid
+                      collapse such as the national blackout of 1 November 2014
+    ```
+
+    Types of electrical fault
+    ```
+       SYMMETRICAL (rare, about 5 %)
+            Three-phase (L-L-L) , three-phase-to-ground (L-L-L-G)
+            The most severe, but balanced and simplest to analyse.
+
+       UNSYMMETRICAL (about 95 %)
+            Single line-to-ground (L-G)   - the COMMONEST, about 70 %
+            Line-to-line (L-L)            - about 15 %
+            Double line-to-ground (L-L-G) - about 10 %
+    ```
+
+    The protection scheme that clears a fault
+    ```
+       RELAY detects the abnormal condition and commands the breaker
+            Over-current relay     : too much current
+            Differential relay     : current in does not equal current out -
+                                     used for transformers and generators
+            Distance relay         : impedance indicates how far the fault is -
+                                     used for transmission lines
+            Earth-fault relay      : unbalanced current to ground
+
+       CIRCUIT BREAKER interrupts the fault current
+            Oil , air-blast , SF6 , vacuum
+
+       RECLOSER automatically re-closes after a delay, in case the fault
+            was transient. Typically tries three times before locking out.
+
+       ISOLATOR provides a visible off-load disconnection for safe working
+
+       LIGHTNING ARRESTER diverts a surge to earth
+       EARTH WIRE on top of the tower shields the phase conductors
+    ```
+
+    The reliability indices BREB and every utility is measured by
+    ```
+       SAIFI = System Average Interruption FREQUENCY Index
+             = total customer interruptions / total customers served
+               -> how OFTEN the average customer loses supply
+
+       SAIDI = System Average Interruption DURATION Index
+             = sum of customer-minutes lost / total customers
+               -> how LONG the average customer is without supply
+
+       CAIDI = SAIDI / SAIFI
+               -> the average length of ONE interruption
+
+       ASAI  = Average Service Availability Index
+             = (available hours / demanded hours) x 100 %
+    ```
+
+    How interruptions are reduced
+    ```
+       PREVENTION   : tree trimming along the right of way, insulator
+                      cleaning, thermographic inspection, transformer oil
+                      testing, replacing ageing conductor
+       DESIGN       : ring-main and mesh networks instead of radial feeders,
+                      so an alternative path exists ; underground cable in
+                      storm-prone areas ; higher insulation levels
+       PROTECTION   : properly graded relay settings, so only the nearest
+                      breaker trips ; auto-reclosers on rural feeders
+       AUTOMATION   : SCADA for remote monitoring and switching ;
+                      a distribution management system ; smart meters that
+                      report an outage without a customer call
+       MANAGEMENT   : an outage management system, stocked spares, trained
+                      crews and a published restoration target
+    ```
+
+    - For BREB specifically, the network is `largely rural and radial`, with long 11 kV and 33 kV feeders, so a single fault far from the substation can black out a wide area. That is why rural electrification programmes concentrate on `auto-reclosers, feeder sectionalising and right-of-way clearance` rather than on undergrounding, which is far too costly per kilometre for a rural line.
+
+3. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
+
+Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics that such a paper almost always draws them from are worked below, so the methods are available.
+
+    Problem type 1 — DC network analysis
+    ```
+       Find the total resistance and the branch currents.
+
+            +---[ 4 ohm ]---+---[ 6 ohm ]---+
+            |               |               |
+          (+) 24 V      [ 12 ohm ]          |
+            |               |               |
+            +---------------+---------------+
+    ```
+    ```
+       Step 1 : the parallel pair
+            R(p) = (12 x 6)/(12 + 6) = 72/18 = 4 ohms
+
+       Step 2 : total resistance
+            R(total) = 4 + 4 = 8 ohms
+
+       Step 3 : total current
+            I = V/R = 24/8 = 3 A
+
+       Step 4 : voltage across the parallel section
+            V(p) = 3 x 4 = 12 V
+
+       Step 5 : branch currents
+            I(12) = 12/12 = 1 A
+            I(6)  = 12/6  = 2 A
+            Check : 1 + 2 = 3 A   (KCL)      correct
+
+       Step 6 : power
+            P = V I = 24 x 3 = 72 W
+            Check : 3^2 x 4 + 1^2 x 12 + 2^2 x 6 = 36 + 12 + 24 = 72 W
+    ```
+
+    Problem type 2 — AC series RLC circuit
+    ```
+       R = 30 ohm , L = 0.1 H , C = 100 uF , V = 230 V at 50 Hz.
+       Find the impedance, the current and the power factor.
+    ```
+    ```
+       X(L) = 2 pi f L = 2 x 3.1416 x 50 x 0.1 = 31.42 ohms
+       X(C) = 1/(2 pi f C) = 1/(2 x 3.1416 x 50 x 100e-6) = 31.83 ohms
+
+       Net reactance X = X(L) - X(C) = 31.42 - 31.83 = -0.41 ohms
+            (negative, so the circuit is slightly CAPACITIVE)
+
+       Z = sqrt(R^2 + X^2) = sqrt(900 + 0.168) = 30.003 ohms
+
+       I = V/Z = 230/30.003 = 7.666 A
+
+       pf = cos(theta) = R/Z = 30/30.003 = 0.9999 leading
+            theta = arctan(X/R) = arctan(-0.41/30) = -0.78 degrees
+
+       Real power     P = V I cos(theta) = 230 x 7.666 x 0.9999 = 1763 W
+       Apparent power S = V I = 230 x 7.666 = 1763 VA
+       Reactive power Q = V I sin(theta) = -24 VAR
+
+       Resonant frequency f(r) = 1/(2 pi sqrt(LC))
+                               = 1/(2 x 3.1416 x sqrt(0.1 x 100e-6))
+                               = 50.33 Hz
+       The supply is almost at resonance, which is why the pf is nearly 1.
+    ```
+
+    Problem type 3 — transformer or motor calculation
+    ```
+       A single-phase transformer : 2200/220 V , 50 Hz , 10 kVA.
+       Find the turns ratio and the rated currents.
+    ```
+    ```
+       Turns ratio  a = V1/V2 = 2200/220 = 10 : 1
+
+       Primary current   I1 = S/V1 = 10,000/2200 = 4.545 A
+       Secondary current I2 = S/V2 = 10,000/220  = 45.45 A
+       Check : I1/I2 = 4.545/45.45 = 1/10 = 1/a      correct
+    ```
+    ```
+       Three-phase induction motor : 12-pole alternator at 500 rpm feeding
+       an 8-pole motor, slip 3 %.
+
+       Supply frequency  f  = P N /120 = 12 x 500/120 = 50 Hz
+       Synchronous speed Ns = 120 f/P  = 120 x 50/8  = 750 rpm
+       Full-load speed   N  = Ns(1 - s) = 750 x 0.97 = 727.5 rpm
+    ```
+
+    The formulas these three problems rest on
+    ```
+       DC        : V = IR , P = VI = I^2 R = V^2/R
+                   Series R = R1+R2 ; Parallel 1/R = 1/R1+1/R2
+                   KCL : sum I(in) = sum I(out)
+                   KVL : sum V round a loop = 0
+
+       AC        : X(L) = 2 pi f L , X(C) = 1/(2 pi f C)
+                   Z = sqrt(R^2 + (XL - XC)^2)
+                   pf = cos(theta) = R/Z
+                   P = VI cos(theta) , S = VI , Q = VI sin(theta)
+                   Resonance : f(r) = 1/(2 pi sqrt(LC))
+
+       Machines  : f = PN/120 , Ns = 120f/P , s = (Ns - N)/Ns
+                   a = V1/V2 = N1/N2 = I2/I1
+                   Efficiency = output/input x 100
+    ```
+    - The habit that earns marks in all three: `write the formula, substitute the numbers with their units, compute, and then verify` — for DC by checking KCL and the power balance, for AC by checking that P = I^2 R, and for machines by checking the turns or speed ratio.
+
+### Component Comparison (Battery vs Capacitor) (1)
+
+1. **What is the difference between battery and capacitor?** *[Bangladesh Bank Assistant Maintenance Engineer 2017 compact it 1226 (ET: N/A)]*
 
 **Which types of transformer is used in computer?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 41]]*
 
