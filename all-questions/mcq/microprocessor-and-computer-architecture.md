@@ -1,19 +1,26 @@
 <!-- TOC START -->
 **Table of Contents** — 5 subtopics · 85 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [CPU & Registers](#cpu--registers-35) | 35 |
-| 2 | [Memory Hierarchy](#memory-hierarchy-28) | 28 |
-| 3 | [Secondary Storage (HDD & Disk Organization)](#secondary-storage-hdd--disk-organization-13) | 13 |
-| 4 | [RAID & Storage Architecture](#raid--storage-architecture-5) | 5 |
-| 5 | [Assembly Language & Machine Code](#assembly-language--machine-code-4) | 4 |
+- [CPU & Registers (35)](#cpu--registers-35)
+  - [CPU Architecture, ALU & Registers (22)](#cpu-architecture-alu--registers-22)
+  - [Bus Architecture & Interfaces (8)](#bus-architecture--interfaces-8)
+  - [Processor Generations & RISC vs CISC (5)](#processor-generations--risc-vs-cisc-5)
+- [Memory Hierarchy (28)](#memory-hierarchy-28)
+  - [Memory Hierarchy (26)](#memory-hierarchy-26)
+  - [Off-topic / Misplaced Questions (2)](#off-topic--misplaced-questions-2)
+- [Secondary Storage (HDD & Disk Organization) (13)](#secondary-storage-hdd--disk-organization-13)
+  - [Secondary Storage (HDD & Disk Organization) (12)](#secondary-storage-hdd--disk-organization-12)
+  - [Off-topic / Misplaced Questions (1)](#off-topic--misplaced-questions-1)
+- [RAID & Storage Architecture (5)](#raid--storage-architecture-5)
+- [Assembly Language & Machine Code (4)](#assembly-language--machine-code-4)
 
 <!-- TOC END -->
 
 ---
 
 ## CPU & Registers (35)
+
+### CPU Architecture, ALU & Registers (22)
 
 1. **Which of the following is temporary storage used to hold data that is used for arithmetic and logical operations and storing its results?** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*  
    (a) ALU  
@@ -39,193 +46,199 @@
    c) Memory data stores  
    d) Program counter
 
-5. **The address bus flow in——** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
-   a) Unidirectional  
-   b) Bidirectional  
-   c) Multidirectional  
-   d) Circular
-
-6. **Which one is not the flag of the 8086 Microprocessor?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
+5. **Which one is not the flag of the 8086 Microprocessor?** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 129 (ET: N/A)]*  
    a) Carry Flag  
    b) Parity Flag  
    c) Zero Flag  
    d) State Plag
 
-7. **In a memory-mapped I/O system, which one is not present?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
+6. **In a memory-mapped I/O system, which one is not present?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. LDA  
    B. IN  
    C. ADD  
    D. OUT
 
-8. **Which one is the 7$^{th}$ Generation intel processor?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*  
-   A) Intel core i7-9850HL  
-   B) Intel core i5-7200U  
-   C) Intel core i5-9400H  
-   D) Intel core i9-10900K
-
-9. **Suppose, the operating clock frequency of a typical CPU is 700 MHz and the number of clocks required for execution of three different instruction types are 4, 8, and 10. If the corresponding appearance rate of the instructions are 30%, 60% and 10%, respectively, how many MIPS does this CPU perform?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
+7. **Suppose, the operating clock frequency of a typical CPU is 700 MHz and the number of clocks required for execution of three different instruction types are 4, 8, and 10. If the corresponding appearance rate of the instructions are 30%, 60% and 10%, respectively, how many MIPS does this CPU perform?** *[Janata Bank Ltd. Assistant Network Engineer (SO) 2020 compact it 186 (ET: N/A)]*  
    a) 10  
    b) 50  
    c) 70  
    d) 100
 
-10. **Communication path between a computer microprocessor and main memory is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
-   a) System bus  
-   b) ISA bus  
-   c) PCI bus  
-   d) Local bus
-
-11. **Ice Lake CPU is intel’s code name for the processor of:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
-   a) 11^{\text{th}} generation  
-   b) 8^{\text{th}} generation  
-   c) 9^{\text{th}} generation  
-   d) 10^{\text{th}} generation
-
-12. **In core i7-8650U processor, here U means:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
-   a) Ultra low power  
-   b) Ultra high power  
-   c) Upgrade version  
-   d) Upgrade processor
-
-13. **Which is not pipeline hazard?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
+8. **Which is not pipeline hazard?** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) Resource hazard  
    b) Control hazard  
    c) Address hazard  
    d) Data hazard
 
-14. **The processor reads an instruction from memory is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
+9. **The processor reads an instruction from memory is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) Interpret instruction  
    b) Fetch instruction  
    c) Read instruction  
    d) Fetch data
 
-15. **Microprocessor reference that are available in the cache are called ________:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
+10. **Microprocessor reference that are available in the cache are called ________:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
    a) Cache hits  
    b) Cache line  
    c) Cache memory  
    d) All of these
 
-16. **Sequence Control Register আর কি নামে পরিচিত?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
+11. **Sequence Control Register আর কি নামে পরিচিত?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
    A) Program Counter  
    B) Instruction Counter  
    C) Sequence Register  
    D) Controlling Register
 
-17. **Intel 8086 microprocessor এর বহিঃস্থ Address bus এর width কত bit হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
-   A) 8-bit  
-   B) 16-bit  
-   C) 20-bit  
-   D) 32-bit
-
-18. **Microprocessor এর কোন অংশে ALU থাকে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
+12. **Microprocessor এর কোন অংশে ALU থাকে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Fetch unit  
    B) Control Unit  
    C) Processing Unit  
    D) Flags Unit
 
-19. **নিচের কোন Operation টি CPU তে দ্রুত কাজ করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
+13. **নিচের কোন Operation টি CPU তে দ্রুত কাজ করে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) Multiplication  
    B) Bitwise OR  
    C) Addition  
    D) Division
 
-20. **A hardware device that is capable of executing a sequence of instructions is known as:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
+14. **A hardware device that is capable of executing a sequence of instructions is known as:** *[BREB Assistant Junior Engineer (IT) 2019 compact it 217 (ET: N/A)]*  
    A) CPU  
    B) ALU  
    C) CU  
    D) Processor
 
-21. **What is the Address bit for an 8-bit Microprocessor?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
-   A) 4  
-   B) 8  
-   C) 16  
-   D) None
-
-22. **Intel 8086 মাইক্রোপ্রসেসর কত বিট রেজিস্টার থাকে?** *[BPSC Assistant Network Engineer 2019 compact it 194 (ET: N/A)]*  
+15. **Intel 8086 মাইক্রোপ্রসেসর কত বিট রেজিস্টার থাকে?** *[BPSC Assistant Network Engineer 2019 compact it 194 (ET: N/A)]*  
    A) 4  
    B) 8  
    C) 14  
    D) 16
 
-23. **START:MOV AX, BX একটি assembly language instruction এখানে MOV হলো-** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
+16. **START:MOV AX, BX একটি assembly language instruction এখানে MOV হলো-** *[BPSC Assistant Network Engineer 2019 compact it 195 (ET: N/A)]*  
    A) লেবেল  
    B) সোর্স  
    C) Opcode  
    D) ডেস্টিনেশন
 
-24. **Physical connection between Microprocessor Memory and other parts is called-** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
-   A) Address bus  
-   B) Data Bus  
-   C) path  
-   D) Hub
-
-25. **Register circuit is not use in-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
+17. **Register circuit is not use in-** *[Probashi Kallyan Bank Assistant Programmer 2018 compact it 237 (ET: N/A)]*  
    A) Digital clocks  
    B) Components  
    C) RAM  
    D) Amplifier
 
-26. **A single communication system that transfers and connects the data between major components inside a computer is-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
-   A) Address Bus  
-   B) Data Bus  
-   C) System Bus  
-   D) Control Bus
-
-27. **USB stands for-** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
-   A) Universal Serial Bus  
-   B) Universal Series Bus  
-   C) Universal Serial Bits  
-   D) Universal Series Bits
-
-28. **Compared to CISC and RISC, processors (at the same clock) are -----** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
-   A) Faster  
-   B) slower  
-   C) similar  
-   D) undefined
-
-29. **CPU fetches the instruction from memory according to value of-** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
+18. **CPU fetches the instruction from memory according to value of-** *[Combined 3 Bank Assistant Programmer 2018 compact it 231 (ET: N/A)]*  
    A) Program counter  
    B) status register  
    C) instruction register  
    D) program status word
 
-30. **ALU stores the computed result immediately in** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
+19. **ALU stores the computed result immediately in** *[Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 246 (ET: N/A)]*  
    A) Memory Address registers  
    B) PC  
    C) General registers  
    D) Accumulator
 
-31. **The word length of a computer is measured in-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+20. **The word length of a computer is measured in-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Bytes  
    B) Millimeters  
    C) Metes  
    D) Bits
 
-32. **Central Processing Unit is combination of-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
+21. **Central Processing Unit is combination of-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) Control Storage  
    B) Control and output unit  
    C) Arithmetic Logic and Input Unit  
    D) Arithmetic logic and control unit
 
-33. **The control unit of a microprocessor-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
+22. **The control unit of a microprocessor-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) Stores data in the memory  
    B) accepts input data from keyboard  
    C) Performs arithmetic/logic function  
    D) None of the above
 
-34. **Which bus used to connect the monitor to the CPU?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*  
+### Bus Architecture & Interfaces (8)
+
+1. **The address bus flow in——** *[Sonali, Janata & Rupali Bank Ltd. Senior Officer (AHE) / AE (IT)/ AME 25.10.2021 compact it 128 (ET: N/A)]*  
+   a) Unidirectional  
+   b) Bidirectional  
+   c) Multidirectional  
+   d) Circular
+
+2. **Communication path between a computer microprocessor and main memory is called:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
+   a) System bus  
+   b) ISA bus  
+   c) PCI bus  
+   d) Local bus
+
+3. **Intel 8086 microprocessor এর বহিঃস্থ Address bus এর width কত bit হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)]*  
+   A) 8-bit  
+   B) 16-bit  
+   C) 20-bit  
+   D) 32-bit
+
+4. **What is the Address bit for an 8-bit Microprocessor?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
+   A) 4  
+   B) 8  
+   C) 16  
+   D) None
+
+5. **Physical connection between Microprocessor Memory and other parts is called-** *[Sonali & Janata Bank Assistant Programmer 2018 compact it 240 (ET: N/A)]*  
+   A) Address bus  
+   B) Data Bus  
+   C) path  
+   D) Hub
+
+6. **A single communication system that transfers and connects the data between major components inside a computer is-** *[Combined Bank Senior Officer (IT) 2018 compact it 223 (ET: DU)]*  
+   A) Address Bus  
+   B) Data Bus  
+   C) System Bus  
+   D) Control Bus
+
+7. **USB stands for-** *[Combined Bank Senior Officer (IT) 2018 compact it 224 (ET: DU)]*  
+   A) Universal Serial Bus  
+   B) Universal Series Bus  
+   C) Universal Serial Bits  
+   D) Universal Series Bits
+
+8. **Which bus used to connect the monitor to the CPU?** *[Janata Bank Limited Assistant Engineer (IT) 2015 compact it 261 (ET: N/A)]*  
    A) PCI bus  
    B) STE bus  
    C) Memory bus  
    D) SCSI bus
 
-35. **At the same clock speed compared to CISC, RISC processor works ________.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 261 (ET: N/A)]*  
+### Processor Generations & RISC vs CISC (5)
+
+1. **Which one is the 7$^{th}$ Generation intel processor?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 158 (ET: N/A)]*  
+   A) Intel core i7-9850HL  
+   B) Intel core i5-7200U  
+   C) Intel core i5-9400H  
+   D) Intel core i9-10900K
+
+2. **Ice Lake CPU is intel’s code name for the processor of:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 172 (ET: N/A)]*  
+   a) 11^{\text{th}} generation  
+   b) 8^{\text{th}} generation  
+   c) 9^{\text{th}} generation  
+   d) 10^{\text{th}} generation
+
+3. **In core i7-8650U processor, here U means:** *[Combined 2 Banks Senior Officer (IT) 2020 compact it 173 (ET: N/A)]*  
+   a) Ultra low power  
+   b) Ultra high power  
+   c) Upgrade version  
+   d) Upgrade processor
+
+4. **Compared to CISC and RISC, processors (at the same clock) are -----** *[Combined Bank Maintenance Engineer 2018 compact it 227 (ET: N/A)], [Sonali Bank Limited Assistant Engineer (IT) 2016 compact it 249 (ET: N/A)]*  
+   A) Faster  
+   B) slower  
+   C) similar  
+   D) undefined
+
+5. **At the same clock speed compared to CISC, RISC processor works ________.** *[Bangladesh Bank Assistant Maintenance Engineer 2013 compact it 261 (ET: N/A)]*  
    a. faster  
    b. Slower  
    c. at same speed  
    d. none
 
 ## Memory Hierarchy (28)
+
+### Memory Hierarchy (26)
 
 1. **Considering computer memory speed, which one is correct order from highest to lowest?** *[Combined Bank Officer (IT) 04.10.2024 compact it 12 (ET: BIBM)]*  
    (a) RAM>Cache>Register SSD HDD  
@@ -269,133 +282,137 @@
    c) Random Access Memory  
    d) NVRAM
 
-8. **What is the typical speed of USB version 3.0?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
-   (a) 4.8G bits per second  
-   (b) 610 Mbps  
-   (c) 6Gbps  
-   (d) Both a and b
-
-9. **SSDs are more durable than HDDs in extreme and harsh environments because** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
+8. **SSDs are more durable than HDDs in extreme and harsh environments because** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
    (a) They don't have actuator arms  
    (b) They use fast electronics Memory  
    (c) They do not use 0/1 as data storage unit which is prone to crash  
    (d) All of the above statements are true
 
-10. **The term LPDDR means-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
+9. **The term LPDDR means-** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 105 (ET: N/A)]*  
    (a) Low-Power Discrete Data Rate  
    (b) Low-processing Double Data Rate  
    (c) Low-Programmable Double Data Rate  
    (d) None of the above
 
-11. **How many core/threads does the Intel Core i7-9700K processor have?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
-   (a) 6/12  
-   (b) 4/8  
-   (c) 8/8  
-   (d) 8/16
-
-12. **Which of the following uses the flip-flop circuit in a memory cell?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
+10. **Which of the following uses the flip-flop circuit in a memory cell?** *[Rupali Bank Ltd. Assistant Network Engineer (ANE) 2021 compact it 82 (ET: N/A)]*  
    a. DRAM  
    b. EEPROM  
    c. SDRAM  
    d. SRAM
 
-13. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
+11. **কোন বৈশিষ্ট্যের কারণে অজগ স্থায়ী স্মৃতি-স্টোরেজ হিসেবে ব্যবহার অনুপযোগী?** *[BTRC Sub-Assistant Director (Tech.) 2021 compact it 148 (ET: IBA)]*  
    A. Too Slow  
    B. Unreliable  
    C. Volatility  
    D. Too Bulky
 
-14. **Which of the following memory devices is not reprogrammable?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
+12. **Which of the following memory devices is not reprogrammable?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 174 (ET: N/A)]*  
    a) Flash memory  
    b) ROM  
    c) EPROM  
    d) EEPROM
 
-15. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
+13. **There is a RAM issue on a PC/laptop. Which of the following symptom(s) might be an indication of RAM issue?** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) PC frequently freezes, reboots  
    b) Wrong BIOS time  
    c) Function keys are not working properly  
    d) All of them
 
-16. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
+14. **A solid-state drive (SSD) is a newer, faster type of device that stores data on instantly-accessible ________.** *[Sonali, Janata and RAKUB AE (IT)/ AHME/ AME 2020 compact it 178 (ET: N/A)]*  
    a) Ultra Magnetic Chip  
    b) Integrated Circuit  
    c) Random Access Memory  
    d) High Bandwidth memory
 
-17. **Which factor is not affecting the processing speed of a computer system?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
+15. **Which factor is not affecting the processing speed of a computer system?** *[Sonali & Janata Bank Ltd. Officer (IT) 2020 compact it 159 (ET: N/A)]*  
    A) Cache memory  
    B) Clock speed  
    C) Monitor  
    D) RAM
 
-18. **Main Memory কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)]*  
+16. **Main Memory কোনটি?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 186 (ET: N/A)]*  
    A) RAM  
    B) ROM  
    C) HDD  
    D) Floppy
 
-19. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
+17. **নিচের কোনটি সবচেয়ে দ্রুত Data transfer করতে পারে?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 187 (ET: N/A)], [BPSC Assistant Network Engineer 2019 compact it 197 (ET: N/A)]*  
    A) RAM  
    B) Hard disk  
    C) CD ROM  
    D) Cache Memory
 
-20. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
+18. **Arithmetic and Logical operation এর ডাটা কাজের সময় কোথায় রাখা হয়?** *[BPSC Assistant Programmer (Dept. of ICT) 2020 compact it 188 (ET: N/A)]*  
    A) Arithmetic Register  
    B) Accumulator  
    C) Logical Register  
    D) Controller
 
-21. **Which one can be used for read only?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
+19. **Which one can be used for read only?** *[BREB Assistant Junior Engineer (IT) 2019 compact it 218 (ET: N/A)]*  
    A) RAM  
    B) ROM  
    C) Both A & B  
    D) None
 
-22. **Which is the faster memory?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)], [BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
+20. **Which is the faster memory?** *[DESCO Assistant Engineer (CSE) 2016 compact it 257 (ET: N/A)], [BREB Assistant General Manager (IT) 2016 compact it 253 (ET: N/A)]*  
    a. RAM  
    b. Secondary memory  
    c. DRAM  
    d. Cache
 
-23. **Which of the following terms is the most closely related to main memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
+21. **Which of the following terms is the most closely related to main memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 240 (ET: N/A)]*  
    A) Non-volatile  
    B) Permanent  
    C) Control unit  
    D) Temporary
 
-24. **Which unit holds data permanently?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+22. **Which unit holds data permanently?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Input unit  
    B) Secondary storage unit  
    C) Output unit  
    D) Primary Memory unit
 
-25. **Magnetic tape can serve as—** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+23. **Magnetic tape can serve as—** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Secondary storage media  
    B) Output media  
    C) Input media  
    D) All of them
 
-26. **Which of the following is internal memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
+24. **Which of the following is internal memory?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) Disks  
    B) Pen Drives  
    C) RAM  
    D) CDs
 
-27. **Which of the following memories needs refreshing?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
+25. **Which of the following memories needs refreshing?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 243 (ET: N/A)]*  
    A) SRAM  
    B) DRAM  
    C) ROM  
    D) All of them
 
-28. **Which memory is called as primary memory?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
+26. **Which memory is called as primary memory?** *[BREB Assistant General Manager (IT) 2016 compact it 254 (ET: N/A)]*  
    A) Hard Disk  
    B) Pen Drive  
    C) Rom  
    D) RAM
 
+### Off-topic / Misplaced Questions (2)
+
+1. **What is the typical speed of USB version 3.0?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 102 (ET: N/A)]*  
+   (a) 4.8G bits per second  
+   (b) 610 Mbps  
+   (c) 6Gbps  
+   (d) Both a and b
+
+2. **How many core/threads does the Intel Core i7-9700K processor have?** *[Sonali Bank and BDBL Senior Officer (IT) 25.09.2021 compact it 107 (ET: N/A)]*  
+   (a) 6/12  
+   (b) 4/8  
+   (c) 8/8  
+   (d) 8/16
+
 ## Secondary Storage (HDD & Disk Organization) (13)
+
+### Secondary Storage (HDD & Disk Organization) (12)
 
 1. **A hard disk is divided into tracks which are further subdivided into ______** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 41 (ET: N/A)]*  
    (a) Vectors  
@@ -433,47 +450,49 @@
    C) power consumption  
    D) shelf life
 
-7. **Which of the following is used for manufacturing chips?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
-   A) Control bus  
-   B) Control unit  
-   C) Parity unit  
-   D) Semiconductor
-
-8. **Before a disk can be used to store data, it must be-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+7. **Before a disk can be used to store data, it must be-** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Formatted  
    B) Reformatted  
    C) Addressed  
    D) None
 
-9. **Which technology is used in Compact disks?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+8. **Which technology is used in Compact disks?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Mechanical  
    B) Electrical  
    C) Electromagnetic  
    D) Laser
 
-10. **Which of the following is a storage device?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+9. **Which of the following is a storage device?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
    A) Tape  
    B) Hard Disk  
    C) Floppy Disk  
    D) All of them
 
-11. **What does the disk drive of computer do?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
+10. **What does the disk drive of computer do?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) Rotate the Disk  
    B) Read the disk  
    C) Load a program form the disk into the memory  
    D) Both B and C
 
-12. **Which of the items below are considered removable storage media?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
+11. **Which of the items below are considered removable storage media?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 242 (ET: N/A)]*  
    A) Removable hard disk cartridges  
    B) (Magneto-optical) disk  
    C) Flexible disks cartridges  
    D) All of them
 
-13. **A hard disk is divided into tracks which are further subdivided into ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
+12. **A hard disk is divided into tracks which are further subdivided into ________** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 270 (ET: N/A)]*  
    a. Clusters  
    b. Sectors  
    c. Vectors  
    d. Heads
+
+### Off-topic / Misplaced Questions (1)
+
+1. **Which of the following is used for manufacturing chips?** *[Bangladesh Bank Assistant Director (IT) 2016 compact it 241 (ET: N/A)]*  
+   A) Control bus  
+   B) Control unit  
+   C) Parity unit  
+   D) Semiconductor
 
 ## RAID & Storage Architecture (5)
 
