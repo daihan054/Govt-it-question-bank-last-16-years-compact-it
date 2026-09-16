@@ -1,16 +1,22 @@
 <!-- TOC START -->
 **Table of Contents** — 2 subtopics · 13 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Core Programming Languages](#core-programming-languages-7) | 7 |
-| 2 | [Visual Basic & .NET](#visual-basic--net-6) | 6 |
+- [Core Programming Languages (7)](#core-programming-languages-7)
+  - [Programming Exercise (Leap Year) (1)](#programming-exercise-leap-year-1)
+  - [AI Search Algorithms (1)](#ai-search-algorithms-1)
+  - [Sustainable Development Goals (SDG) (2)](#sustainable-development-goals-sdg-2)
+  - [RSA Algorithm & Cryptography (1)](#rsa-algorithm--cryptography-1)
+  - [English Grammar Correction (1)](#english-grammar-correction-1)
+  - [OS Page Replacement (LRU) (1)](#os-page-replacement-lru-1)
+- [Visual Basic & .NET (6)](#visual-basic--net-6)
 
 <!-- TOC END -->
 
 ---
 
 ## Core Programming Languages (7)
+
+### Programming Exercise (Leap Year) (1)
 
 1. **Write a C/JAVA program to determine if a given year is a leap year or not.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 81]]*
 
@@ -37,7 +43,9 @@ Answer:
     }
     ```
 
-2. **Write down the difference between informed and uninformed search algorithm.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
+### AI Search Algorithms (1)
+
+1. **Write down the difference between informed and uninformed search algorithm.** *[Dhaka Power Distribution Company (DPDC) Post: Junior Assistant Manager Exam Taker: BUET Date: 27.06.2025 [bitbox it book 82]]*
 
 Answer:
 
@@ -49,13 +57,25 @@ Answer:
     | Direction of Search | Searches blindly without knowing distance to goal | Evaluates cost and estimates remaining distance to goal state |
     | Algorithms | BFS (Breadth-First), DFS (Depth-First), Uniform Cost Search (UCS) | A* Search, Greedy Best-First Search, Hill Climbing, IDA* |
 
-3. **Number of SDGs (Sustainable Development Goals)?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
+### Sustainable Development Goals (SDG) (2)
+
+1. **Number of SDGs (Sustainable Development Goals)?** *[Bangladesh Computer Council (BCC) Post: AP/Technical Writer (TW), ANE Marks: 80; Date: 18 Oct 2025 [bitbox it book 238]]*
 
 Answer:
     - Total number of SDGs = 17 Goals (comprising 169 specific targets).
     - Adopted by the United Nations General Assembly in September 2015 under the 2030 Agenda for Sustainable Development (2016–2030).
 
-4. **Write the RSA Algorithm used for public key cryptography.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318-319]]*
+2. **SDG বা “Sustainable Development Goal” কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+
+Answer:
+    এসডিজি (SDG - Sustainable Development Goals / টেকসই উন্নয়ন অভীষ্ট):
+    - ২০১৫ সালের ২৫ সেপ্টেম্বর জাতিসংঘের সাধারণ অধিবেশনে গৃহীত বৈশ্বিক রূপরেখা, যা ২০১৬ থেকে ২০৩০ সাল পর্যন্ত বিশ্বব্যাপী দারিদ্র্য দূরীকরণ, জলবায়ু পরিবর্তন মোকাবেলা এবং অর্থনৈতিক সমৃদ্ধি ও বৈষম্যহীন সমাজ বিনির্মাণের লক্ষ্যে প্রণীত হয়েছে।
+    - মূল বৈশিষ্ট্য: ১৭টি সুনির্দিষ্ট লক্ষ্য (Goals), ১৬৯টি সহযোগী লক্ষ্যমাত্রা (Targets) এবং ২৩২টি বৈশ্বিক সূচক অন্তর্ভুক্ত।
+    - প্রধান অভীষ্টসমূহ: দারিদ্র্যমুক্তি, ক্ষুধা নিরসন, সুস্বাস্থ্য ও কল্যাণ, মানসম্মত শিক্ষা, লিঙ্গ সমতা, নিরাপদ পানি ও স্যানিটেশন, সাশ্রয়ী ও দূষণমুক্ত জ্বালানি এবং জলবায়ু কার্যক্রম।
+
+### RSA Algorithm & Cryptography (1)
+
+1. **Write the RSA Algorithm used for public key cryptography.** *[ICB Asset Management Company Ltd Assistant Programmer; Date: 01 January 2024 Exam taker: FBS, DU; Marks: Non:50 Tech:50 [bitbox it book 318-319]]*
 
 Answer:
     The RSA algorithm is an asymmetric cryptographic algorithm based on the computational difficulty of factoring the product of two large prime numbers.
@@ -75,7 +95,9 @@ Answer:
     - Decryption: Given ciphertext $C$:
       $$M = C^d \bmod n$$
 
-5. **Change the following sentences as directed:** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
+### English Grammar Correction (1)
+
+1. **Change the following sentences as directed:** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 330]]*
 (a) He is capable to do the work. (Correct the sentence) (b) It is high time he leave the place. (Use the right form of verb) (c) Honesty is the best policy. (Transform the sentence into comparative degree) (d) Man is never content with long life. (e) The player (wear) Jersey No-10 is Messy. (Use the right form of verb) (f) I had been there. (Complete the sentence) (g) John, Tom and his friends were going to the playground. (Correct the sentence) (h) Four years - long time to complete the course. (Fill in the gap) (i) He is not loyal to me. (Correct the sentence) (j) He has said to me, “When will you come?” (Change the narration)
 
 Answer:
@@ -90,15 +112,9 @@ Answer:
     - (i) Corrected: He is not loyal to me. (The sentence is already grammatically correct).
     - (j) Indirect narration: He has asked me when I would come (or would go).
 
-6. **SDG বা “Sustainable Development Goal” কী?** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 331]]*
+### OS Page Replacement (LRU) (1)
 
-Answer:
-    এসডিজি (SDG - Sustainable Development Goals / টেকসই উন্নয়ন অভীষ্ট):
-    - ২০১৫ সালের ২৫ সেপ্টেম্বর জাতিসংঘের সাধারণ অধিবেশনে গৃহীত বৈশ্বিক রূপরেখা, যা ২০১৬ থেকে ২০৩০ সাল পর্যন্ত বিশ্বব্যাপী দারিদ্র্য দূরীকরণ, জলবায়ু পরিবর্তন মোকাবেলা এবং অর্থনৈতিক সমৃদ্ধি ও বৈষম্যহীন সমাজ বিনির্মাণের লক্ষ্যে প্রণীত হয়েছে।
-    - মূল বৈশিষ্ট্য: ১৭টি সুনির্দিষ্ট লক্ষ্য (Goals), ১৬৯টি সহযোগী লক্ষ্যমাত্রা (Targets) এবং ২৩২টি বৈশ্বিক সূচক অন্তর্ভুক্ত।
-    - প্রধান অভীষ্টসমূহ: দারিদ্র্যমুক্তি, ক্ষুধা নিরসন, সুস্বাস্থ্য ও কল্যাণ, মানসম্মত শিক্ষা, লিঙ্গ সমতা, নিরাপদ পানি ও স্যানিটেশন, সাশ্রয়ী ও দূষণমুক্ত জ্বালানি এবং জলবায়ু কার্যক্রম।
-
-7. **Consider the page reference of LRU Page Replacement Algorithm string in 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3. Assume number for frame 4. Find number of page faults.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
+1. **Consider the page reference of LRU Page Replacement Algorithm string in 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3. Assume number for frame 4. Find number of page faults.** *[Jamuna Oil Company Ltd Post: Junior Officer (MIS & IT); Date: 23 May, 2024 Exam Taker: JOCL [compact it 397]]*
 
 Answer:
     Given Reference String: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3
