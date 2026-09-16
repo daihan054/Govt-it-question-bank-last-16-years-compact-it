@@ -33,12 +33,31 @@ split needed), math.md, microprocessor-and-computer-architecture.md, ms-office.m
 needed), oop.md, operating-system.md, programming-languages.md, software-engineering.md,
 web-technology.md.
 
-NEXT STEP: Folder 2 (written-answers/) — replay the IDENTICAL groupings below (same theme
-names, same original question numbers) onto each written-answers/*.md file, this time moving
-both question AND answer text together per block. The `extract_blocks`/`build_section` approach
-still applies but blocks now include the "Answer:" content — verify block count per subtopic
-still matches before regrouping, since written-answers files may have slightly different
-formatting (indentation) around each question/answer pair.
+## Folder 2: written-answers/ — ALL 24 FILES DONE ✓
+
+Replayed the identical Folder-1 groupings onto every written-answers/*.md file (18 files
+actually needed the split applied; the other 6 — c-programming.md, cloud-computing.md,
+compiler-and-toc.md, english.md, image-processing.md, ms-office.md — needed zero changes since
+every one of their subtopics was NO SPLIT in Folder 1 too).
+
+IMPORTANT BUG FOUND & FIXED while doing this folder: `extract_blocks` originally discarded any
+non-blank "preamble" text sitting between a `##` heading and its first numbered question (e.g.
+computer-networks.md's OSI section had `> Best Tutorial: [GeeksforGeeks ...]` right after the
+heading, before Q1). This was caught by the mandatory content-multiset check (git HEAD vs new
+file) after processing computer-networks.md — do NOT skip that check on any future file.
+`cluster_lib.py`'s `extract_blocks` now takes `allow_preamble=True` and returns `(blocks,
+preamble)`; `build_section` takes an optional `preamble=` list and re-inserts it right after the
+`##` heading, before any `###` theme heading. ALWAYS call `extract_blocks(..., allow_preamble=True)`
+and thread the returned preamble into `build_section(..., preamble=preamble)` going forward — the
+default (allow_preamble=False) now raises loudly instead of silently dropping content, which is a
+useful safety net but should not be relied on in place of the content-multiset check.
+
+NEXT STEP: Folder 3 (all-questions/mcq/) — this needs a FRESH clustering analysis (different
+file, different subtopic structure from written/). Same method: per-file, per-subtopic, decide
+NO SPLIT vs SPLIT with theme names + original question numbers, then apply with
+extract_blocks/build_section + rebuild_toc.py, verifying content-multiset match every time.
+After mcq/ is fully done, replay its exact grouping onto mcq-answers/ (Folder 4), the same way
+Folder 1's plan was replayed onto Folder 2.
 
 ---
 
