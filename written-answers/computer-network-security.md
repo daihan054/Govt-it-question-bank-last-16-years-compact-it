@@ -1,23 +1,31 @@
 <!-- TOC START -->
 **Table of Contents** — 15 subtopics · 198 questions
 
-| # | Subtopic | Questions |
-|---|---|---|
-| 1 | [Social Engineering & Cyber Attacks](#social-engineering--cyber-attacks-32) | 32 |
-| 2 | [Cryptography](#cryptography-31) | 31 |
-| 3 | [Firewalls & Network Defense](#firewalls--network-defense-20) | 20 |
-| 4 | [Malware & Security Threats](#malware--security-threats-20) | 20 |
-| 5 | [Web Security Vulnerabilities](#web-security-vulnerabilities-19) | 19 |
-| 6 | [Authentication & Access Control](#authentication--access-control-16) | 16 |
-| 7 | [Cryptography & Network Security](#cryptography--network-security-14) | 14 |
-| 8 | [Security Protocols (SSL/TLS, HTTPS)](#security-protocols-ssltls-https-12) | 12 |
-| 9 | [Cyber Crime & Security](#cyber-crime--security-10) | 10 |
-| 10 | [Security Principles (CIA Triad)](#security-principles-cia-triad-8) | 8 |
-| 11 | [VPN & Tunneling Protocols (IPsec, SSL VPN)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6) | 6 |
-| 12 | [Critical Information Infrastructure (CII) & Cyber Governance](#critical-information-infrastructure-cii--cyber-governance-3) | 3 |
-| 13 | [Cryptography & Network Security Scenarios](#cryptography--network-security-scenarios-3) | 3 |
-| 14 | [Email & Messaging Security (Spam, Phishing)](#email--messaging-security-spam-phishing-3) | 3 |
-| 15 | [Buffer Overflow & Software Vulnerabilities](#buffer-overflow--software-vulnerabilities-1) | 1 |
+- [Social Engineering & Cyber Attacks (32)](#social-engineering--cyber-attacks-32)
+  - [Network & Infrastructure Attacks (MITM, Spoofing, DoS/DDoS, MAC/DNS/DHCP attacks) (19)](#network--infrastructure-attacks-mitm-spoofing-dosddos-macdnsdhcp-attacks-19)
+  - [Social Engineering Attacks (Phishing & Pharming) (4)](#social-engineering-attacks-phishing--pharming-4)
+  - [Cyber Attack Overview & Classification (9)](#cyber-attack-overview--classification-9)
+- [Cryptography (31)](#cryptography-31)
+- [Firewalls & Network Defense (20)](#firewalls--network-defense-20)
+- [Malware & Security Threats (20)](#malware--security-threats-20)
+- [Web Security Vulnerabilities (19)](#web-security-vulnerabilities-19)
+- [Authentication & Access Control (16)](#authentication--access-control-16)
+  - [Two-Factor / Multi-Factor Authentication (8)](#two-factor--multi-factor-authentication-8)
+  - [Digital Signatures & Certificates (6)](#digital-signatures--certificates-6)
+  - [Other (LDAP, Password Protection) (2)](#other-ldap-password-protection-2)
+- [Cryptography & Network Security (14)](#cryptography--network-security-14)
+  - [Cryptography & Network Security Core (5)](#cryptography--network-security-core-5)
+  - [Operating System Questions (Misplaced) (2)](#operating-system-questions-misplaced-2)
+  - [Software Release Security Practices (1)](#software-release-security-practices-1)
+  - [GK / English Essay Questions (Off-topic) (6)](#gk--english-essay-questions-off-topic-6)
+- [Security Protocols (SSL/TLS, HTTPS) (12)](#security-protocols-ssltls-https-12)
+- [Cyber Crime & Security (10)](#cyber-crime--security-10)
+- [Security Principles (CIA Triad) (8)](#security-principles-cia-triad-8)
+- [VPN & Tunneling Protocols (IPsec, SSL VPN) (6)](#vpn--tunneling-protocols-ipsec-ssl-vpn-6)
+- [Critical Information Infrastructure (CII) & Cyber Governance (3)](#critical-information-infrastructure-cii--cyber-governance-3)
+- [Cryptography & Network Security Scenarios (3)](#cryptography--network-security-scenarios-3)
+- [Email & Messaging Security (Spam, Phishing) (3)](#email--messaging-security-spam-phishing-3)
+- [Buffer Overflow & Software Vulnerabilities (1)](#buffer-overflow--software-vulnerabilities-1)
 
 <!-- TOC END -->
 
@@ -25,39 +33,9 @@
 
 ## Social Engineering & Cyber Attacks (32)
 
-1. **What is a phishing attack? Explain its types and discuss methods to prevent it.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+### Network & Infrastructure Attacks (MITM, Spoofing, DoS/DDoS, MAC/DNS/DHCP attacks) (19)
 
-Answer: Phishing is a social engineering attack in which the attacker impersonates a trusted entity — a bank, a colleague, a service provider — to trick the victim into revealing credentials, card details or installing malware.
-
-   Types of phishing
-   - Email phishing — a mass email pretending to be from a bank, asking the user to "verify" the account through a fake link.
-   - Spear phishing — targeted at one specific person, using details gathered about them so the message looks personal and credible.
-   - Whaling — spear phishing aimed at senior executives (CEO, CFO), usually to authorise a fraudulent payment.
-   - Smishing — phishing over SMS, common in Bangladesh with fake bKash and prize messages.
-   - Vishing — voice phishing over a phone call, the caller posing as bank security staff asking for an OTP.
-   - Clone phishing — a real email the victim received earlier is copied, with the attachment or link replaced by a malicious one.
-   - Pharming — DNS is poisoned so that even a correctly typed address leads to a fake site.
-   - Angler phishing — fake customer-support accounts on social media that intercept complaints.
-
-   Prevention methods
-
-   Technical
-   - Email filtering with SPF, DKIM and DMARC to block spoofed sender domains.
-   - Multi-factor authentication — a stolen password alone becomes useless.
-   - Web filtering and safe browsing to block known phishing URLs.
-   - Anti-malware and endpoint protection on every machine.
-   - HTTPS and certificate checking — verify the padlock and the actual domain name.
-
-   Human
-   - Regular awareness training and simulated phishing tests — the single most effective control, because phishing targets people, not systems.
-   - Verify through a second channel — never act on an email request for payment or credentials without calling the requester on a known number.
-   - Check the sender address and the link target carefully, not just the display text.
-   - Never share OTP, PIN or password — no genuine bank ever asks for these.
-
-   Organisational
-   - Clear reporting procedure, incident response plan, and least-privilege access so a compromised account causes limited damage.
-
-2. **(b) What is an ARP poisoning attack, and how does it work?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+1. **(b) What is an ARP poisoning attack, and how does it work?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
 Answer: ARP poisoning (also called ARP spoofing) is a LAN attack in which the attacker sends forged ARP reply messages to associate their own MAC address with the IP address of another device — usually the default gateway — so that traffic meant for that device is delivered to the attacker instead.
 
@@ -90,7 +68,7 @@ Answer: ARP poisoning (also called ARP spoofing) is a LAN attack in which the at
    - Network segmentation with VLANs, so the attack surface is smaller.
    - Encryption (HTTPS, SSH, VPN) — even if traffic is intercepted, it cannot be read.
 
-3. **What is a Man-in-the-Middle (MITM) attack? Describe two countermeasures to prevent it.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+2. **What is a Man-in-the-Middle (MITM) attack? Describe two countermeasures to prevent it.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
 Answer: A Man-in-the-Middle attack is one in which the attacker secretly positions themselves between two communicating parties, relaying and possibly altering the messages, while both parties believe they are talking directly to each other.
 
@@ -122,7 +100,7 @@ Answer: A Man-in-the-Middle attack is one in which the attacker secretly positio
 
    - Additional controls: multi-factor authentication (a stolen password is not enough), DNSSEC against DNS spoofing, and user training to never click through certificate warnings.
 
-4. **What is a DoS attack? Explain the mechanism of a DDoS attack and how it differs from a simple DoS attack.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
+3. **What is a DoS attack? Explain the mechanism of a DDoS attack and how it differs from a simple DoS attack.** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
 Answer: A DoS (Denial of Service) attack aims to make a service unavailable to its legitimate users by exhausting its resources — bandwidth, CPU, memory or connection table.
 
@@ -163,7 +141,7 @@ Answer: A DoS (Denial of Service) attack aims to make a service unavailable to i
    Mitigation
    - Rate limiting and traffic filtering, a DDoS protection service or scrubbing centre (Cloudflare, Akamai), CDN to absorb volume, anycast distribution, adequate over-provisioned bandwidth, SYN cookies against SYN floods, and an incident response plan agreed with the ISP in advance.
 
-5. **What is a Man-inThe Middle (MitM) attack? How can it be prevented?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1337 (ET: N/A)]*
+4. **What is a Man-inThe Middle (MitM) attack? How can it be prevented?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1337 (ET: N/A)]*
 
 Answer: A Man-in-the-Middle attack is one where the attacker inserts themselves between two parties, intercepting and possibly altering their communication while both believe they are talking directly to each other.
 
@@ -194,26 +172,7 @@ Answer: A Man-in-the-Middle attack is one where the attacker inserts themselves 
    - Short session timeouts and secure, HttpOnly cookies.
    - User awareness — check the domain name, avoid public Wi-Fi for banking, and never ignore browser security warnings.
 
-6. **Briefly explain phishing attack and denial-of-service (DoS) attack.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
-
-Answer:
-
-   Phishing attack
-   - A social engineering attack in which the attacker impersonates a trusted organisation to trick the victim into revealing credentials, card details or OTP, or into installing malware.
-   - Delivered by email, SMS (smishing), phone call (vishing) or social media.
-   - Typical form: an email appearing to come from a bank saying "your account will be suspended — click here to verify", leading to a fake login page that captures the password.
-   - Prevention: multi-factor authentication, email filtering with SPF/DKIM/DMARC, staff awareness training, verification through a second channel, and never sharing an OTP.
-
-   Denial of Service (DoS) attack
-   - An attack that makes a service unavailable to legitimate users by exhausting its bandwidth, CPU, memory or connection table.
-   - Methods: SYN flood (half-open connections fill the table), UDP flood, ICMP flood, Ping of Death, and application-layer HTTP floods.
-   - DDoS is the distributed form, launched from thousands of compromised machines forming a botnet, which makes it far harder to block.
-   - Prevention: rate limiting, firewall and IPS filtering, DDoS scrubbing services, CDN, SYN cookies, and over-provisioned bandwidth.
-
-   Key difference between them
-   - Phishing targets the PERSON to steal information; DoS targets the SYSTEM to deny availability. Phishing breaches confidentiality, DoS breaches availability — two different corners of the CIA triad.
-
-7. **How to attack DHCP server in MIMA?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
+5. **How to attack DHCP server in MIMA?** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 416 (ET: BUET)]*
 
 Answer: The question asks how DHCP is abused to set up a Man-in-the-Middle Attack. The technique has two stages: DHCP starvation, then a rogue DHCP server.
 
@@ -247,7 +206,535 @@ Answer: The question asks how DHCP is abused to set up a Man-in-the-Middle Attac
    - Dynamic ARP Inspection, which builds on the DHCP snooping binding table.
    - 802.1X port authentication so unauthorised devices cannot join the LAN at all.
 
-8. **Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps would you take to mitigate the threats?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
+6. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
+
+Answer: Diffie-Hellman lets two parties agree a shared secret over an insecure channel, but in its basic form it provides NO AUTHENTICATION. That is exactly the weakness the attack exploits.
+
+    Normal Diffie-Hellman
+    - Public parameters: a prime `p` and a generator `g`.
+    - Alice picks a secret `a` and sends `A = gᵃ mod p`.
+    - Bob picks a secret `b` and sends `B = gᵇ mod p`.
+    - Both compute the shared key `K = gᵃᵇ mod p`.
+
+    The MITM attack with two key pairs
+    ```mermaid
+    flowchart LR
+        A[Alice<br/>secret a] -->|A = g^a| M[Mallory<br/>secrets m1, m2]
+        M -->|M1 = g^m1| B[Bob<br/>secret b]
+        B -->|B = g^b| M
+        M -->|M2 = g^m2| A
+    ```
+
+    - Step 1 — Alice sends `A = gᵃ mod p`, intended for Bob. Mallory intercepts it.
+    - Step 2 — Mallory generates her FIRST key pair with secret `m1`, and sends `M1 = g^m1 mod p` to Bob, pretending to be Alice.
+    - Step 3 — Bob sends `B = gᵇ mod p`, intended for Alice. Mallory intercepts it too.
+    - Step 4 — Mallory generates her SECOND key pair with secret `m2`, and sends `M2 = g^m2 mod p` to Alice, pretending to be Bob.
+
+    Resulting keys
+    - Alice computes `K1 = (M2)ᵃ = g^(m2·a) mod p` — she believes this is shared with Bob.
+    - Mallory computes the same `K1 = (A)^m2 = g^(a·m2) mod p`.
+    - Bob computes `K2 = (M1)ᵇ = g^(m1·b) mod p` — he believes this is shared with Alice.
+    - Mallory computes the same `K2 = (B)^m1 = g^(b·m1) mod p`.
+
+    Result
+    - Two separate secure channels now exist: Alice ↔ Mallory using K1, and Mallory ↔ Bob using K2.
+    - Mallory decrypts everything Alice sends with K1, reads or alters it, re-encrypts with K2 and forwards to Bob. Neither party notices.
+
+    Why it succeeds
+    - Plain Diffie-Hellman authenticates nobody. Alice has no way to verify that `M2` really came from Bob.
+
+    Prevention
+    - Authenticated Diffie-Hellman — sign the exchanged values with a digital signature (this is what TLS does, using the server's certificate).
+    - Station-to-Station protocol, which adds mutual signature verification.
+    - Certificates from a trusted CA to bind a public key to an identity.
+    - Pre-shared keys or a password-authenticated key exchange for closed systems.
+
+7. **What is MAC flooding? How to prevent MAC flooding?** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)], [Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
+
+Answer: MAC flooding is a Layer 2 attack in which the attacker floods a switch with frames carrying thousands of fake source MAC addresses, overflowing the switch's CAM table (MAC address table).
+
+    How it works
+    - A switch learns which MAC address is on which port and stores it in the CAM table, which has a fixed size.
+    - The attacker sends a rapid stream of frames with randomly generated source MAC addresses.
+    - The CAM table fills up, and legitimate MAC-to-port mappings are pushed out.
+    - When the switch receives a frame for a destination it no longer has in the table, it must flood it out of every port — behaving like a hub.
+    - The attacker now receives copies of traffic meant for other hosts and can sniff it.
+
+    ```mermaid
+    flowchart LR
+        A[Attacker] -->|thousands of fake<br/>source MACs| S[Switch<br/>CAM table full]
+        S -->|now floods all frames<br/>to every port| A
+        S --> V1[Victim 1]
+        S --> V2[Victim 2]
+    ```
+
+    Impact
+    - Loss of confidentiality — the attacker sniffs traffic that was previously switched privately.
+    - Performance degradation, since the switch broadcasts everything.
+    - It is often the first step towards a Man-in-the-Middle attack.
+
+    Prevention
+    - Port security — the primary defence. Limit the number of MAC addresses learned per port (`switchport port-security maximum 2`) and define a violation action (shutdown, restrict or protect).
+    - Sticky MAC — bind the first learned MAC to the port permanently.
+    - 802.1X port authentication so unauthorised devices cannot connect at all.
+    - VLAN segmentation to limit the blast radius.
+    - Disable unused ports and put them in an unused VLAN.
+    - DHCP snooping and Dynamic ARP Inspection alongside, since these attacks are usually combined.
+    - Monitoring — alert on abnormal CAM table growth.
+    - Encryption so that even sniffed traffic is unreadable.
+
+8. **What is Denial of Service (DoS) is and NAT?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
+
+Answer:
+
+    DoS (Denial of Service)
+    - An attack that makes a service unavailable to its legitimate users by exhausting bandwidth, CPU, memory or the connection table.
+    - Methods: SYN flood, UDP flood, ICMP flood, Ping of Death, Slowloris, HTTP flood.
+    - DDoS is the distributed version, launched from a botnet of thousands of machines, which makes it far harder to filter.
+    - It attacks the availability leg of the CIA triad — no data is stolen or changed, but nobody can use the service.
+    - Mitigation: rate limiting, firewall and IPS filtering, DDoS scrubbing services, CDN, SYN cookies.
+
+    NAT (Network Address Translation)
+    - A technique that maps private IP addresses inside a network to one or more public IP addresses at the router, so many internal devices can share a single public IP.
+    - Types: Static NAT (one-to-one fixed), Dynamic NAT (one-to-one from a pool), and PAT / NAT overload (many-to-one using different port numbers — the form used in every home router).
+    - Benefits: conserves scarce IPv4 addresses, and hides the internal network structure, which gives a degree of security because internal hosts are not directly reachable from the internet.
+    - Drawback: breaks end-to-end connectivity, which complicates VoIP, peer-to-peer applications and some VPNs.
+
+    - The two are unrelated topics: DoS is an attack, NAT is an addressing technique — though NAT does incidentally shield internal hosts from being targeted directly.
+
+9. **What do you understand by DOS attack and Man-in-the-middle attack? Please explain how it can be occurred?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
+
+Answer:
+
+    DoS attack
+    - An attack that denies legitimate users access to a service by exhausting its resources.
+
+    How it occurs
+    - SYN flood — the attacker sends thousands of TCP SYN packets with spoofed source addresses. The server allocates a connection entry and replies SYN-ACK, but the final ACK never arrives. The half-open connection table fills and no new connection can be accepted.
+    - UDP / ICMP flood — raw volume saturates the target's bandwidth.
+    - Amplification — a small spoofed request to a DNS or NTP server produces a large reply directed at the victim, multiplying the attacker's bandwidth many times.
+    - Application layer — Slowloris holds many connections open with partial HTTP requests, exhausting the web server's worker threads with very little traffic.
+
+    Man-in-the-Middle attack
+    - The attacker secretly relays communication between two parties who believe they are talking directly.
+
+    How it occurs
+    - ARP spoofing — forged ARP replies poison the victim's and the gateway's caches so traffic flows through the attacker.
+    - Rogue Wi-Fi access point — a fake hotspot with a familiar name; everything the victim sends passes through it.
+    - DNS spoofing — a false DNS answer sends the victim to the attacker's server.
+    - SSL stripping — the attacker silently downgrades HTTPS to HTTP so traffic can be read.
+    - Session hijacking — a stolen session cookie lets the attacker impersonate a logged-in user.
+
+    Prevention summary
+    - Against DoS: rate limiting, filtering, DDoS protection services, SYN cookies, adequate bandwidth.
+    - Against MITM: HTTPS with certificate validation, HSTS, VPN, Dynamic ARP Inspection, DHCP snooping, DNSSEC, and multi-factor authentication.
+
+10. **What do you mean by a DNS poisoning attack, and how does it work?** *[GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)]*
+
+Answer: DNS poisoning (also called DNS cache poisoning or DNS spoofing) is an attack in which false address records are inserted into a DNS resolver's cache, so that users who type a legitimate domain name are silently sent to the attacker's server.
+
+    How it works
+    ```mermaid
+    flowchart LR
+        U[User types bank.com] --> R[DNS Resolver<br/>poisoned cache]
+        R -->|returns attacker IP| U
+        U -->|connects| F[Fake bank site<br/>attacker server]
+        A[Attacker] -.->|injects forged<br/>DNS response| R
+    ```
+
+    - Step 1 — the user's resolver does not have `bank.com` in its cache, so it queries an authoritative server.
+    - Step 2 — the attacker floods the resolver with forged DNS responses, guessing the query's transaction ID and source port.
+    - Step 3 — if a forged reply arrives before the genuine one and the ID matches, the resolver accepts it and CACHES the false IP address.
+    - Step 4 — every user of that resolver is now sent to the attacker's server for the whole TTL of the record, even though they typed the correct address.
+
+    Other ways it is achieved
+    - Compromising the DNS server itself, altering the local `hosts` file with malware, or a rogue DHCP server handing out a malicious DNS server address.
+
+    Impact
+    - Credential theft through pharming (a perfect-looking fake banking site), malware distribution, traffic interception, and censorship or redirection.
+    - It is more dangerous than phishing because the victim does nothing wrong — the URL in the address bar is genuine.
+
+    Prevention
+    - DNSSEC — digitally signs DNS records so a forged response fails validation. This is the real fix.
+    - Randomised source ports and transaction IDs, making the guessing attack impractical.
+    - DNS over HTTPS (DoH) or DNS over TLS (DoT) to encrypt DNS queries.
+    - Keep resolver software patched, restrict recursion to internal clients, and use trusted resolvers.
+    - HTTPS with certificate validation — even if the DNS is poisoned, the attacker cannot present a valid certificate for the real domain.
+
+11. **What is DHCP starvation and how DHCP starvation work with diagram? Write down the related attack introduced by DHCP starvation?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
+
+Answer: DHCP starvation is a denial-of-service attack in which the attacker exhausts the DHCP server's pool of IP addresses by flooding it with requests carrying spoofed MAC addresses, so legitimate clients can no longer obtain an address.
+
+    How it works
+    ```mermaid
+    flowchart TD
+        A[Attacker] -->|1. flood DHCPDISCOVER<br/>with random spoofed MACs| D[DHCP Server]
+        D -->|2. allocates a lease to each| D
+        D -->|3. address pool exhausted| X[No addresses left]
+        C[Legitimate client] -->|4. DHCPDISCOVER| D
+        D -.->|5. no reply — pool empty| C
+    ```
+
+    - Step 1 — the attacker runs a tool (Yersinia, dhcpstarv) that sends thousands of DHCPDISCOVER messages, each with a different randomly generated source MAC address.
+    - Step 2 — the DHCP server treats each as a new client and reserves an address for it.
+    - Step 3 — within seconds the entire scope is leased out to non-existent clients.
+    - Step 4 — a real client requesting an address gets no offer, so it cannot join the network.
+
+    Related attack introduced by DHCP starvation — the Rogue DHCP Server attack
+    - Starvation alone is only a denial of service. Its real purpose is to clear the way for a rogue server.
+    - Once the legitimate server is exhausted, the attacker starts their own DHCP server on the LAN.
+    - It answers clients with a valid IP but sets the default gateway and DNS server to the attacker's machine.
+    - Every packet the client sends now passes through the attacker — a full Man-in-the-Middle attack, enabling sniffing, traffic modification and DNS-based redirection to fake sites.
+
+    Prevention
+    - DHCP snooping — mark only the port facing the real DHCP server as trusted; DHCP OFFER and ACK messages arriving on untrusted ports are dropped, blocking the rogue server.
+    - Rate limiting DHCP messages on untrusted ports (`ip dhcp snooping limit rate 15`), which stops the starvation flood itself.
+    - Port security limiting MAC addresses per port, so thousands of spoofed MACs cannot come from one port.
+    - 802.1X authentication so unauthorised devices never reach the LAN.
+    - Dynamic ARP Inspection built on the DHCP snooping binding table.
+
+12. **What is MAC flooding attack? What is the impact of this switch?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
+
+Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending a rapid stream of frames with thousands of forged source MAC addresses.
+
+    How the attack works
+    - A switch normally learns which MAC address sits on which port and stores that mapping in a fixed-size CAM table.
+    - The attacker sends frames with randomly generated source MACs, filling the table completely.
+    - Legitimate entries are evicted to make room.
+
+    Impact on the switch
+    - Fails open into hub mode — when the switch receives a frame for a destination no longer in its CAM table, it must flood the frame out of every port. The switch effectively stops switching and starts broadcasting.
+    - Loss of confidentiality — the attacker now receives copies of traffic intended for other hosts and can sniff passwords, emails and session cookies.
+    - Performance degradation — every frame is broadcast, wasting bandwidth on all ports and increasing CPU load on every connected host.
+    - CPU and memory exhaustion on the switch itself.
+    - Gateway to further attacks — sniffed traffic enables session hijacking and Man-in-the-Middle attacks; it is often combined with ARP spoofing.
+    - Possible network instability or crash in extreme cases.
+
+    Prevention
+    - Port security with a maximum MAC count per port and a violation action of `shutdown` or `restrict`.
+    - Sticky MAC learning so the first learned address is bound to the port.
+    - 802.1X port-based authentication.
+    - VLAN segmentation to limit exposure, and disabling unused ports.
+    - Traffic monitoring to alert on abnormal CAM table growth.
+    - Encryption so sniffed traffic remains unreadable even if the attack succeeds.
+
+13. **What is DDoS and SQL Injection attack?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
+
+Answer:
+
+    DDoS (Distributed Denial of Service)
+    - An attack that floods a target service from thousands of compromised machines — a botnet — so that legitimate users cannot access it.
+    - Types: volumetric (UDP flood, DNS amplification), protocol (SYN flood), application layer (HTTP flood, Slowloris).
+    - It attacks availability — nothing is stolen or altered, but the service is unusable.
+    - Mitigation: DDoS scrubbing services, CDN, rate limiting, SYN cookies, over-provisioned bandwidth.
+
+    SQL Injection
+    - A web attack in which the attacker inserts malicious SQL code into an input field, so the database executes commands the developer never intended.
+    - It works when user input is concatenated directly into a SQL query without validation.
+
+    Example
+    ```sql
+    -- Vulnerable code
+    query = "SELECT * FROM users WHERE username='" + input + "' AND password='" + pass + "'";
+
+    -- Attacker enters this as the username:
+    ' OR '1'='1' --
+
+    -- The query becomes:
+    SELECT * FROM users WHERE username='' OR '1'='1' --' AND password=''
+    ```
+    - `'1'='1'` is always true and `--` comments out the password check, so the attacker logs in without any password.
+
+    Impact
+    - Authentication bypass, reading the entire database, modifying or deleting records, and in some configurations executing operating system commands.
+
+    Prevention
+    - Parameterised queries / prepared statements — the single most effective fix, because data is never treated as code.
+    - Stored procedures with parameters, input validation and whitelisting.
+    - Least-privilege database accounts — the web application should never connect as `root` or `sa`.
+    - Web Application Firewall as an additional layer, and generic error messages so the database structure is not revealed.
+
+14. **Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
+
+Answer: ARP spoofing is an attack in which forged ARP reply messages are sent on a LAN to bind the attacker's MAC address to another host's IP address, so traffic for that host is delivered to the attacker.
+
+    Diagram
+    ```mermaid
+    flowchart TD
+        subgraph Before
+        V1[Victim 192.168.1.10] -->|direct| G1[Gateway 192.168.1.1]
+        end
+        subgraph After ARP spoofing
+        V2[Victim 192.168.1.10] --> A[Attacker 192.168.1.50]
+        A --> G2[Gateway 192.168.1.1]
+        A -.->|forged: gateway IP = my MAC| V2
+        A -.->|forged: victim IP = my MAC| G2
+        end
+    ```
+
+    How it works
+    - Step 1 — the attacker connects to the same LAN and identifies the victim and the gateway.
+    - Step 2 — sends a forged ARP reply to the victim: "192.168.1.1 is at [attacker's MAC]".
+    - Step 3 — sends a forged ARP reply to the gateway: "192.168.1.10 is at [attacker's MAC]".
+    - Step 4 — both caches are poisoned. All traffic between victim and gateway now flows through the attacker.
+    - Step 5 — the attacker enables IP forwarding, so packets still reach their destination and the victim notices nothing.
+
+    Why it is the standard way to launch a MITM attack on a LAN
+    - ARP has no authentication. Any host can send an unsolicited ARP reply and it will be believed. There is nothing to break — the protocol simply trusts.
+    - It requires no credentials — only physical or wireless access to the same broadcast domain.
+    - It is transparent — with IP forwarding enabled, connectivity is unaffected, so the user has no symptom to notice.
+    - It captures ALL traffic, not just one application, because it operates below the IP layer.
+    - It is bidirectional — poisoning both sides lets the attacker see and modify traffic in both directions.
+    - Tools are freely available — Ettercap, arpspoof, Cain & Abel make it a few keystrokes.
+
+    Prevention
+    - Dynamic ARP Inspection with DHCP snooping, static ARP entries for critical hosts, port security, VLAN segmentation, and end-to-end encryption (HTTPS, SSH, VPN) so intercepted traffic is useless.
+
+15. **Difference between spoofing and sniffing** *[Combined 4 Banks Assistant Programmer 2020 compact it 1002 (ET: DU)]*
+
+Answer:
+
+    | Point | Sniffing | Spoofing |
+    |---|---|---|
+    | Definition | Capturing and reading network traffic | Impersonating another identity |
+    | Attack type | Passive — only observes | Active — creates or alters data |
+    | Data modification | None | Yes, packets are forged |
+    | Goal | Steal information | Gain trust, redirect traffic, bypass controls |
+    | Victim awareness | Almost never detected | May be detected when something behaves oddly |
+    | Security goal breached | Confidentiality | Authentication and Integrity |
+    | Tools | Wireshark, tcpdump, Ettercap | Ettercap, hping3, arpspoof |
+    | Main defence | Encryption | Authentication, filtering, DAI, DNSSEC |
+    | Examples | Capturing packets on open Wi-Fi; MAC flooding to force a switch to broadcast | IP spoofing, ARP spoofing, MAC spoofing, DNS spoofing, email spoofing |
+
+    Relationship between the two
+    - They are usually combined. On a switched network, sniffing alone captures very little, because the switch sends traffic only to the intended port.
+    - So the attacker first SPOOFS (ARP spoofing or MAC flooding) to redirect traffic to themselves, and then SNIFFS the redirected traffic.
+    - Spoofing is the means; sniffing is the objective.
+
+16. **(d) Explain the principle of man in the middle and session hijacking attack with appropriate diagrams.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
+
+Answer:
+
+    (a) Man-in-the-Middle attack
+    - The attacker secretly positions themselves between two communicating parties, relaying and possibly altering the messages, while both believe they are talking directly to each other.
+
+    ```mermaid
+    flowchart LR
+        A[Alice] -->|1. thinks she sends to Bob| M[Attacker]
+        M -->|2. reads / modifies, forwards| B[Bob]
+        B -->|3. thinks he replies to Alice| M
+        M -->|4. reads / modifies, forwards| A
+    ```
+
+    Principle
+    - The attack succeeds because there is no authentication of the endpoints. Neither party can verify who they are actually talking to.
+    - Achieved by ARP spoofing, DNS spoofing, a rogue Wi-Fi access point, or SSL stripping.
+    - Defence: end-to-end encryption with certificate validation (HTTPS/TLS), HSTS, VPN, DAI and DHCP snooping.
+
+    (b) Session hijacking attack
+    - The attacker takes over an ALREADY AUTHENTICATED session by stealing or predicting the session identifier, so no password is ever needed.
+
+    ```mermaid
+    flowchart TD
+        U[User] -->|1. logs in with password| S[Server]
+        S -->|2. issues session cookie ABC123| U
+        A[Attacker] -.->|3. steals cookie ABC123<br/>by sniffing or XSS| U
+        A -->|4. sends requests with ABC123| S
+        S -->|5. accepts — thinks it is the user| A
+    ```
+
+    Principle
+    - HTTP is stateless, so after login the server identifies the user only by a session token. Whoever holds that token IS the user as far as the server is concerned.
+    - How the token is obtained: packet sniffing on an unencrypted connection, XSS reading `document.cookie`, session fixation (forcing a known session ID on the victim), or predicting a weakly generated ID.
+
+    Defence
+    - Always use HTTPS, so the cookie cannot be sniffed.
+    - Mark cookies HttpOnly (blocks JavaScript access, defeating XSS theft) and Secure (never sent over HTTP), with SameSite set.
+    - Regenerate the session ID on login, which defeats session fixation.
+    - Use long random session IDs, short timeouts, and re-authentication for sensitive actions.
+    - Bind the session to the client IP or device fingerprint where practical.
+
+    Difference between the two
+    - MITM intercepts the CHANNEL and can read everything from the start. Session hijacking steals the CREDENTIAL TOKEN and impersonates the user afterwards, often without ever seeing the traffic again.
+
+17. **(b) What is DHCP Starvation Attack? Explain briefly.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
+
+Answer: DHCP starvation is a denial-of-service attack in which the attacker exhausts the DHCP server's entire pool of IP addresses, so no legitimate client can obtain one.
+
+    How it works
+    - The attacker sends a rapid flood of DHCPDISCOVER messages, each carrying a different randomly generated (spoofed) source MAC address.
+    - The DHCP server treats every one as a genuine new client and reserves an address for it.
+    - Within seconds the whole scope is leased to non-existent clients.
+    - A real client requesting an address receives no offer and cannot join the network.
+
+    Why it matters — what follows
+    - Starvation is usually only stage one. Once the legitimate server cannot respond, the attacker starts a rogue DHCP server which answers clients with a valid IP but a malicious default gateway and DNS server.
+    - All client traffic then flows through the attacker, establishing a Man-in-the-Middle position for sniffing, modification and DNS redirection.
+
+    Prevention
+    - DHCP snooping — only the port facing the legitimate DHCP server is trusted; offers from any other port are dropped.
+    - Rate limiting DHCP messages on untrusted ports, which stops the flood itself.
+    - Port security limiting MAC addresses per port.
+    - 802.1X authentication so unauthorised devices cannot connect.
+
+18. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
+
+Answer:
+
+    (a) DoS — Denial of Service
+    - Makes a service unavailable to legitimate users by exhausting bandwidth, CPU, memory or the connection table.
+    - Methods: SYN flood, UDP flood, ICMP flood, Ping of Death, Slowloris.
+    - DDoS is the distributed form using a botnet of thousands of machines, which is far harder to filter because traffic comes from everywhere.
+    - Attacks availability. Mitigation: rate limiting, firewalls and IPS, DDoS scrubbing services, CDN, SYN cookies.
+
+    (b) IP address spoofing
+    - The attacker forges the source IP address in packet headers so the packet appears to come from a trusted or different host.
+    - Uses: hiding the real origin during a DoS attack; bypassing IP-based access control lists; enabling amplification attacks, where a small spoofed request to a DNS or NTP server sends a large reply to the victim.
+    - Limitation for the attacker: replies go to the spoofed address, not back to them, so spoofing suits one-way floods rather than interactive sessions.
+    - Prevention: ingress and egress filtering (BCP 38) at the ISP, reverse path forwarding checks, and authentication that does not rely on source IP alone.
+
+    (c) Man-in-the-Middle attack
+    - The attacker secretly relays and possibly alters communication between two parties who believe they are talking directly.
+    - Methods: ARP spoofing, DNS spoofing, rogue Wi-Fi access point, SSL stripping, session hijacking.
+    - Impact: credential theft, transaction modification, malware injection.
+    - Prevention: HTTPS/TLS with certificate validation, HSTS, VPN, Dynamic ARP Inspection, DHCP snooping, DNSSEC, and multi-factor authentication.
+
+    - Relationship: IP spoofing is a TECHNIQUE that supports both of the others — it hides the source in a DoS flood and helps impersonate a trusted host in a MITM setup.
+
+19. **What is MAC Flood in Switch? How attacker gets benefitted from it?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
+
+Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending thousands of frames with forged source MAC addresses, forcing the switch to abandon selective forwarding.
+
+    How it works
+    - A switch keeps a fixed-size table mapping MAC addresses to ports.
+    - The attacker floods it with random source MACs until the table is full.
+    - Legitimate mappings are evicted.
+    - With no entry for a destination, the switch must flood every frame out of all ports — it behaves like a hub.
+
+    How the attacker benefits
+    - Traffic sniffing — the attacker now receives copies of frames intended for other hosts, and can capture unencrypted passwords, emails, FTP credentials and session cookies.
+    - Session hijacking — captured session cookies allow the attacker to impersonate a logged-in user without a password.
+    - Reconnaissance — seeing all LAN traffic reveals the network layout, servers, protocols in use and naming conventions, which guides the next stage of attack.
+    - Man-in-the-Middle preparation — combined with ARP spoofing, this becomes full interception with the ability to modify traffic.
+    - Denial of Service side effect — flooding every port degrades performance for everyone and can crash the switch.
+    - Bypasses VLAN separation in some cases, if the switch fails open badly.
+
+    Prevention
+    - Port security — limit MAC addresses per port with a violation action of shutdown or restrict. This is the direct fix.
+    - Sticky MAC binding, 802.1X authentication, VLAN segmentation, disabling unused ports, monitoring CAM table size, and encryption so that captured traffic is unreadable.
+
+### Social Engineering Attacks (Phishing & Pharming) (4)
+
+1. **What is a phishing attack? Explain its types and discuss methods to prevent it.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
+
+Answer: Phishing is a social engineering attack in which the attacker impersonates a trusted entity — a bank, a colleague, a service provider — to trick the victim into revealing credentials, card details or installing malware.
+
+   Types of phishing
+   - Email phishing — a mass email pretending to be from a bank, asking the user to "verify" the account through a fake link.
+   - Spear phishing — targeted at one specific person, using details gathered about them so the message looks personal and credible.
+   - Whaling — spear phishing aimed at senior executives (CEO, CFO), usually to authorise a fraudulent payment.
+   - Smishing — phishing over SMS, common in Bangladesh with fake bKash and prize messages.
+   - Vishing — voice phishing over a phone call, the caller posing as bank security staff asking for an OTP.
+   - Clone phishing — a real email the victim received earlier is copied, with the attachment or link replaced by a malicious one.
+   - Pharming — DNS is poisoned so that even a correctly typed address leads to a fake site.
+   - Angler phishing — fake customer-support accounts on social media that intercept complaints.
+
+   Prevention methods
+
+   Technical
+   - Email filtering with SPF, DKIM and DMARC to block spoofed sender domains.
+   - Multi-factor authentication — a stolen password alone becomes useless.
+   - Web filtering and safe browsing to block known phishing URLs.
+   - Anti-malware and endpoint protection on every machine.
+   - HTTPS and certificate checking — verify the padlock and the actual domain name.
+
+   Human
+   - Regular awareness training and simulated phishing tests — the single most effective control, because phishing targets people, not systems.
+   - Verify through a second channel — never act on an email request for payment or credentials without calling the requester on a known number.
+   - Check the sender address and the link target carefully, not just the display text.
+   - Never share OTP, PIN or password — no genuine bank ever asks for these.
+
+   Organisational
+   - Clear reporting procedure, incident response plan, and least-privilege access so a compromised account causes limited damage.
+
+2. **Briefly explain phishing attack and denial-of-service (DoS) attack.** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1341 (ET: N/A)]*
+
+Answer:
+
+   Phishing attack
+   - A social engineering attack in which the attacker impersonates a trusted organisation to trick the victim into revealing credentials, card details or OTP, or into installing malware.
+   - Delivered by email, SMS (smishing), phone call (vishing) or social media.
+   - Typical form: an email appearing to come from a bank saying "your account will be suspended — click here to verify", leading to a fake login page that captures the password.
+   - Prevention: multi-factor authentication, email filtering with SPF/DKIM/DMARC, staff awareness training, verification through a second channel, and never sharing an OTP.
+
+   Denial of Service (DoS) attack
+   - An attack that makes a service unavailable to legitimate users by exhausting its bandwidth, CPU, memory or connection table.
+   - Methods: SYN flood (half-open connections fill the table), UDP flood, ICMP flood, Ping of Death, and application-layer HTTP floods.
+   - DDoS is the distributed form, launched from thousands of compromised machines forming a botnet, which makes it far harder to block.
+   - Prevention: rate limiting, firewall and IPS filtering, DDoS scrubbing services, CDN, SYN cookies, and over-provisioned bandwidth.
+
+   Key difference between them
+   - Phishing targets the PERSON to steal information; DoS targets the SYSTEM to deny availability. Phishing breaches confidentiality, DoS breaches availability — two different corners of the CIA triad.
+
+3. **(b) Distinguish between phishing and pharming. Give examples to explain.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801 (ET: N/A)]*
+
+Answer: Both send the victim to a fake website to steal credentials, but they differ in HOW the victim gets there.
+
+    | Point | Phishing | Pharming |
+    |---|---|---|
+    | Method | Tricks the user into clicking a malicious link | Redirects the user even when they type the correct address |
+    | User action required | Yes — the victim must click something | No — the victim does nothing wrong |
+    | Attack vector | Email, SMS, phone call, social media | DNS cache poisoning, compromised DNS server, altered hosts file |
+    | Scale | One message reaches one inbox at a time | One poisoned DNS server redirects thousands of users at once |
+    | URL in the address bar | Usually a slightly wrong domain, which a careful user may spot | The CORRECT domain, so nothing looks suspicious |
+    | Detection by the user | Possible, by checking the link and sender | Almost impossible without checking the certificate |
+    | Primary defence | Awareness, email filtering, MFA | DNSSEC, secure DNS, HTTPS certificate validation |
+    | Danger level | Lower — depends on the user falling for it | Higher — the user cannot detect it by care alone |
+
+    Examples
+
+    Phishing
+    - An email arrives appearing to come from a bank: "Your account will be suspended within 24 hours. Click here to verify." The link points to `www.dutch-bang1a.com` (with a digit "1" replacing the "l"). A careful user would notice the wrong domain.
+
+    Pharming
+    - The DNS resolver used by an office is poisoned. An employee correctly types `www.dutchbanglabank.com` in the browser, and the address bar shows exactly that — but the DNS answer points to the attacker's server, so a perfect replica of the login page appears. Nothing in the URL looks wrong.
+
+    - Common defence for both: always check for HTTPS and a valid certificate. A pharming site cannot produce a certificate that a browser will accept for the real domain, so a certificate warning is the last line of defence.
+
+4. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
+
+Answer:
+
+    (a) How a phishing attack is carried out
+    - Step 1 — Preparation. The attacker registers a look-alike domain and builds a pixel-perfect copy of a real login page.
+    - Step 2 — Bait. A message is sent by email, SMS or social media, impersonating a bank, employer or service provider, and creating urgency: "Your account will be blocked", "You have won a prize", "Verify immediately".
+    - Step 3 — Hook. The victim clicks the link and reaches the fake page, or opens an attachment carrying malware.
+    - Step 4 — Harvest. The victim enters username, password, card number or OTP, which goes straight to the attacker.
+    - Step 5 — Exploit. The attacker logs into the real account, transfers money, or uses the credentials elsewhere because people reuse passwords.
+    - Often the fake page then redirects to the genuine site, so the victim suspects nothing.
+
+    (b) Damage it can cause
+
+    To an individual
+    - Direct financial loss from unauthorised transfers and card use.
+    - Identity theft — loans and accounts opened in the victim's name.
+    - Loss of personal data, photographs and private messages, sometimes leading to blackmail.
+    - Account takeover of email, which then unlocks every other account through password reset.
+
+    To an organisation
+    - Large financial fraud, especially through Business Email Compromise where a finance officer is tricked into paying a fake invoice.
+    - Data breach of customer records, with regulatory penalties.
+    - Ransomware entry — most ransomware infections begin with a phishing email.
+    - Reputational damage and loss of customer trust.
+    - Operational disruption and incident response cost.
+    - Legal liability under data protection rules.
+
+    Prevention
+    - Multi-factor authentication, staff awareness training with simulated phishing, email filtering with SPF/DKIM/DMARC, verifying any payment request through a second channel, and never sharing an OTP or PIN with anyone.
+
+### Cyber Attack Overview & Classification (9)
+
+1. **Let you procure a microfinance application and host it in your office's data centre. What kind of cyber-security threats should you be aware of and what steps would you take to mitigate the threats?** *[Combined Bank Senior Officer (IT) 17.05.2024 compact it 332 (ET: BIBM)]*
 
 Answer:
 
@@ -307,7 +794,7 @@ Answer:
    Governance
    - Comply with the Bangladesh Bank ICT Security Guideline, run regular VAPT, and provide staff security awareness training.
 
-9. **Write down the 10 most Cyber attacks. Difference among Black Hat hacker, Grey hat hacker and white hat hacker.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 526 (ET: MIST)]*
+2. **Write down the 10 most Cyber attacks. Difference among Black Hat hacker, Grey hat hacker and white hat hacker.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 526 (ET: MIST)]*
 
 Answer:
 
@@ -338,7 +825,7 @@ Answer:
 
    - Other categories sometimes asked: script kiddie (uses others' tools without understanding), hacktivist (politically motivated), state-sponsored hacker, and blue team (defenders) versus red team (attack simulators).
 
-10. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
+3. **What is Cyber Security? Write down the top 10 cyber attack. Discuss about Ransomware and DDoS attack.** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 512 (ET: MIST)]*
 
 Answer:
 
@@ -367,7 +854,7 @@ Answer:
 
     - Contrast worth stating: ransomware attacks INTEGRITY and CONFIDENTIALITY (data is encrypted and stolen); DDoS attacks AVAILABILITY only (data is untouched, but nobody can reach it).
 
-11. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
+4. **What is meant by Encryption and Decryption? What is Cyber security? Write down the top 10 cyber attack.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 557 (ET: BIBM)]*
 
 Answer:
 
@@ -390,7 +877,7 @@ Answer:
     (c) Top 10 cyber attacks
     - Phishing, Malware, Ransomware, DoS/DDoS, Man-in-the-Middle, SQL Injection, Cross-Site Scripting (XSS), Password attack (brute force, credential stuffing), Zero-day exploit, Insider threat.
 
-12. **Difference between active and passive atack.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
+5. **Difference between active and passive atack.** *[BEPZA Programmer 03.11.2023 compact it 562 (ET: N/A)]*
 
 Answer:
 
@@ -408,162 +895,7 @@ Answer:
 
     - Key insight: passive attacks are hard to DETECT but easy to PREVENT with encryption. Active attacks are hard to PREVENT but easier to DETECT with integrity checks. Security design therefore uses encryption against the first and hashing plus monitoring against the second.
 
-13. **Describe a man-in the middle attack on the Diffie-Hellman key exchange protocol in which the adversary generates two public key pairs for the attack.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
-
-Answer: Diffie-Hellman lets two parties agree a shared secret over an insecure channel, but in its basic form it provides NO AUTHENTICATION. That is exactly the weakness the attack exploits.
-
-    Normal Diffie-Hellman
-    - Public parameters: a prime `p` and a generator `g`.
-    - Alice picks a secret `a` and sends `A = gᵃ mod p`.
-    - Bob picks a secret `b` and sends `B = gᵇ mod p`.
-    - Both compute the shared key `K = gᵃᵇ mod p`.
-
-    The MITM attack with two key pairs
-    ```mermaid
-    flowchart LR
-        A[Alice<br/>secret a] -->|A = g^a| M[Mallory<br/>secrets m1, m2]
-        M -->|M1 = g^m1| B[Bob<br/>secret b]
-        B -->|B = g^b| M
-        M -->|M2 = g^m2| A
-    ```
-
-    - Step 1 — Alice sends `A = gᵃ mod p`, intended for Bob. Mallory intercepts it.
-    - Step 2 — Mallory generates her FIRST key pair with secret `m1`, and sends `M1 = g^m1 mod p` to Bob, pretending to be Alice.
-    - Step 3 — Bob sends `B = gᵇ mod p`, intended for Alice. Mallory intercepts it too.
-    - Step 4 — Mallory generates her SECOND key pair with secret `m2`, and sends `M2 = g^m2 mod p` to Alice, pretending to be Bob.
-
-    Resulting keys
-    - Alice computes `K1 = (M2)ᵃ = g^(m2·a) mod p` — she believes this is shared with Bob.
-    - Mallory computes the same `K1 = (A)^m2 = g^(a·m2) mod p`.
-    - Bob computes `K2 = (M1)ᵇ = g^(m1·b) mod p` — he believes this is shared with Alice.
-    - Mallory computes the same `K2 = (B)^m1 = g^(b·m1) mod p`.
-
-    Result
-    - Two separate secure channels now exist: Alice ↔ Mallory using K1, and Mallory ↔ Bob using K2.
-    - Mallory decrypts everything Alice sends with K1, reads or alters it, re-encrypts with K2 and forwards to Bob. Neither party notices.
-
-    Why it succeeds
-    - Plain Diffie-Hellman authenticates nobody. Alice has no way to verify that `M2` really came from Bob.
-
-    Prevention
-    - Authenticated Diffie-Hellman — sign the exchanged values with a digital signature (this is what TLS does, using the server's certificate).
-    - Station-to-Station protocol, which adds mutual signature verification.
-    - Certificates from a trusted CA to bind a public key to an identity.
-    - Pre-shared keys or a password-authenticated key exchange for closed systems.
-
-14. **What is MAC flooding? How to prevent MAC flooding?** *[Teletalk Assistant Manager (IT) 2023 compact it 466 (ET: N/A)], [Telephone Shilpa Sangstha Ltd. (TSS) Assistant Programmer 2022 compact it 717 (ET: N/A)]*
-
-Answer: MAC flooding is a Layer 2 attack in which the attacker floods a switch with frames carrying thousands of fake source MAC addresses, overflowing the switch's CAM table (MAC address table).
-
-    How it works
-    - A switch learns which MAC address is on which port and stores it in the CAM table, which has a fixed size.
-    - The attacker sends a rapid stream of frames with randomly generated source MAC addresses.
-    - The CAM table fills up, and legitimate MAC-to-port mappings are pushed out.
-    - When the switch receives a frame for a destination it no longer has in the table, it must flood it out of every port — behaving like a hub.
-    - The attacker now receives copies of traffic meant for other hosts and can sniff it.
-
-    ```mermaid
-    flowchart LR
-        A[Attacker] -->|thousands of fake<br/>source MACs| S[Switch<br/>CAM table full]
-        S -->|now floods all frames<br/>to every port| A
-        S --> V1[Victim 1]
-        S --> V2[Victim 2]
-    ```
-
-    Impact
-    - Loss of confidentiality — the attacker sniffs traffic that was previously switched privately.
-    - Performance degradation, since the switch broadcasts everything.
-    - It is often the first step towards a Man-in-the-Middle attack.
-
-    Prevention
-    - Port security — the primary defence. Limit the number of MAC addresses learned per port (`switchport port-security maximum 2`) and define a violation action (shutdown, restrict or protect).
-    - Sticky MAC — bind the first learned MAC to the port permanently.
-    - 802.1X port authentication so unauthorised devices cannot connect at all.
-    - VLAN segmentation to limit the blast radius.
-    - Disable unused ports and put them in an unused VLAN.
-    - DHCP snooping and Dynamic ARP Inspection alongside, since these attacks are usually combined.
-    - Monitoring — alert on abnormal CAM table growth.
-    - Encryption so that even sniffed traffic is unreadable.
-
-15. **What is Denial of Service (DoS) is and NAT?** *[NSDA Assistant Maintenance Engineer Date: 04-03-2022 compact it 659 (ET: N/A)]*
-
-Answer:
-
-    DoS (Denial of Service)
-    - An attack that makes a service unavailable to its legitimate users by exhausting bandwidth, CPU, memory or the connection table.
-    - Methods: SYN flood, UDP flood, ICMP flood, Ping of Death, Slowloris, HTTP flood.
-    - DDoS is the distributed version, launched from a botnet of thousands of machines, which makes it far harder to filter.
-    - It attacks the availability leg of the CIA triad — no data is stolen or changed, but nobody can use the service.
-    - Mitigation: rate limiting, firewall and IPS filtering, DDoS scrubbing services, CDN, SYN cookies.
-
-    NAT (Network Address Translation)
-    - A technique that maps private IP addresses inside a network to one or more public IP addresses at the router, so many internal devices can share a single public IP.
-    - Types: Static NAT (one-to-one fixed), Dynamic NAT (one-to-one from a pool), and PAT / NAT overload (many-to-one using different port numbers — the form used in every home router).
-    - Benefits: conserves scarce IPv4 addresses, and hides the internal network structure, which gives a degree of security because internal hosts are not directly reachable from the internet.
-    - Drawback: breaks end-to-end connectivity, which complicates VoIP, peer-to-peer applications and some VPNs.
-
-    - The two are unrelated topics: DoS is an attack, NAT is an addressing technique — though NAT does incidentally shield internal hosts from being targeted directly.
-
-16. **What do you understand by DOS attack and Man-in-the-middle attack? Please explain how it can be occurred?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (CSE) 2022 compact it 667 (ET: N/A)]*
-
-Answer:
-
-    DoS attack
-    - An attack that denies legitimate users access to a service by exhausting its resources.
-
-    How it occurs
-    - SYN flood — the attacker sends thousands of TCP SYN packets with spoofed source addresses. The server allocates a connection entry and replies SYN-ACK, but the final ACK never arrives. The half-open connection table fills and no new connection can be accepted.
-    - UDP / ICMP flood — raw volume saturates the target's bandwidth.
-    - Amplification — a small spoofed request to a DNS or NTP server produces a large reply directed at the victim, multiplying the attacker's bandwidth many times.
-    - Application layer — Slowloris holds many connections open with partial HTTP requests, exhausting the web server's worker threads with very little traffic.
-
-    Man-in-the-Middle attack
-    - The attacker secretly relays communication between two parties who believe they are talking directly.
-
-    How it occurs
-    - ARP spoofing — forged ARP replies poison the victim's and the gateway's caches so traffic flows through the attacker.
-    - Rogue Wi-Fi access point — a fake hotspot with a familiar name; everything the victim sends passes through it.
-    - DNS spoofing — a false DNS answer sends the victim to the attacker's server.
-    - SSL stripping — the attacker silently downgrades HTTPS to HTTP so traffic can be read.
-    - Session hijacking — a stolen session cookie lets the attacker impersonate a logged-in user.
-
-    Prevention summary
-    - Against DoS: rate limiting, filtering, DDoS protection services, SYN cookies, adequate bandwidth.
-    - Against MITM: HTTPS with certificate validation, HSTS, VPN, Dynamic ARP Inspection, DHCP snooping, DNSSEC, and multi-factor authentication.
-
-17. **What do you mean by a DNS poisoning attack, and how does it work?** *[GTCL Assistant Engineer (CSE) 2022 compact it 685 (ET: BUET)]*
-
-Answer: DNS poisoning (also called DNS cache poisoning or DNS spoofing) is an attack in which false address records are inserted into a DNS resolver's cache, so that users who type a legitimate domain name are silently sent to the attacker's server.
-
-    How it works
-    ```mermaid
-    flowchart LR
-        U[User types bank.com] --> R[DNS Resolver<br/>poisoned cache]
-        R -->|returns attacker IP| U
-        U -->|connects| F[Fake bank site<br/>attacker server]
-        A[Attacker] -.->|injects forged<br/>DNS response| R
-    ```
-
-    - Step 1 — the user's resolver does not have `bank.com` in its cache, so it queries an authoritative server.
-    - Step 2 — the attacker floods the resolver with forged DNS responses, guessing the query's transaction ID and source port.
-    - Step 3 — if a forged reply arrives before the genuine one and the ID matches, the resolver accepts it and CACHES the false IP address.
-    - Step 4 — every user of that resolver is now sent to the attacker's server for the whole TTL of the record, even though they typed the correct address.
-
-    Other ways it is achieved
-    - Compromising the DNS server itself, altering the local `hosts` file with malware, or a rogue DHCP server handing out a malicious DNS server address.
-
-    Impact
-    - Credential theft through pharming (a perfect-looking fake banking site), malware distribution, traffic interception, and censorship or redirection.
-    - It is more dangerous than phishing because the victim does nothing wrong — the URL in the address bar is genuine.
-
-    Prevention
-    - DNSSEC — digitally signs DNS records so a forged response fails validation. This is the real fix.
-    - Randomised source ports and transaction IDs, making the guessing attack impractical.
-    - DNS over HTTPS (DoH) or DNS over TLS (DoT) to encrypt DNS queries.
-    - Keep resolver software patched, restrict recursion to internal clients, and use trusted resolvers.
-    - HTTPS with certificate validation — even if the DNS is poisoned, the attacker cannot present a valid certificate for the real domain.
-
-18. **Write down the difference between Active and Passive attack.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
+6. **Write down the difference between Active and Passive attack.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 719 (ET: N/A)]*
 
 Answer:
 
@@ -593,213 +925,7 @@ Answer:
 
     - Design principle: focus on PREVENTING passive attacks with encryption, and on DETECTING and RECOVERING from active attacks with integrity checks and monitoring.
 
-19. **What is DHCP starvation and how DHCP starvation work with diagram? Write down the related attack introduced by DHCP starvation?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
-
-Answer: DHCP starvation is a denial-of-service attack in which the attacker exhausts the DHCP server's pool of IP addresses by flooding it with requests carrying spoofed MAC addresses, so legitimate clients can no longer obtain an address.
-
-    How it works
-    ```mermaid
-    flowchart TD
-        A[Attacker] -->|1. flood DHCPDISCOVER<br/>with random spoofed MACs| D[DHCP Server]
-        D -->|2. allocates a lease to each| D
-        D -->|3. address pool exhausted| X[No addresses left]
-        C[Legitimate client] -->|4. DHCPDISCOVER| D
-        D -.->|5. no reply — pool empty| C
-    ```
-
-    - Step 1 — the attacker runs a tool (Yersinia, dhcpstarv) that sends thousands of DHCPDISCOVER messages, each with a different randomly generated source MAC address.
-    - Step 2 — the DHCP server treats each as a new client and reserves an address for it.
-    - Step 3 — within seconds the entire scope is leased out to non-existent clients.
-    - Step 4 — a real client requesting an address gets no offer, so it cannot join the network.
-
-    Related attack introduced by DHCP starvation — the Rogue DHCP Server attack
-    - Starvation alone is only a denial of service. Its real purpose is to clear the way for a rogue server.
-    - Once the legitimate server is exhausted, the attacker starts their own DHCP server on the LAN.
-    - It answers clients with a valid IP but sets the default gateway and DNS server to the attacker's machine.
-    - Every packet the client sends now passes through the attacker — a full Man-in-the-Middle attack, enabling sniffing, traffic modification and DNS-based redirection to fake sites.
-
-    Prevention
-    - DHCP snooping — mark only the port facing the real DHCP server as trusted; DHCP OFFER and ACK messages arriving on untrusted ports are dropped, blocking the rogue server.
-    - Rate limiting DHCP messages on untrusted ports (`ip dhcp snooping limit rate 15`), which stops the starvation flood itself.
-    - Port security limiting MAC addresses per port, so thousands of spoofed MACs cannot come from one port.
-    - 802.1X authentication so unauthorised devices never reach the LAN.
-    - Dynamic ARP Inspection built on the DHCP snooping binding table.
-
-20. **What is MAC flooding attack? What is the impact of this switch?** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 753 (ET: N/A)]*
-
-Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending a rapid stream of frames with thousands of forged source MAC addresses.
-
-    How the attack works
-    - A switch normally learns which MAC address sits on which port and stores that mapping in a fixed-size CAM table.
-    - The attacker sends frames with randomly generated source MACs, filling the table completely.
-    - Legitimate entries are evicted to make room.
-
-    Impact on the switch
-    - Fails open into hub mode — when the switch receives a frame for a destination no longer in its CAM table, it must flood the frame out of every port. The switch effectively stops switching and starts broadcasting.
-    - Loss of confidentiality — the attacker now receives copies of traffic intended for other hosts and can sniff passwords, emails and session cookies.
-    - Performance degradation — every frame is broadcast, wasting bandwidth on all ports and increasing CPU load on every connected host.
-    - CPU and memory exhaustion on the switch itself.
-    - Gateway to further attacks — sniffed traffic enables session hijacking and Man-in-the-Middle attacks; it is often combined with ARP spoofing.
-    - Possible network instability or crash in extreme cases.
-
-    Prevention
-    - Port security with a maximum MAC count per port and a violation action of `shutdown` or `restrict`.
-    - Sticky MAC learning so the first learned address is bound to the port.
-    - 802.1X port-based authentication.
-    - VLAN segmentation to limit exposure, and disabling unused ports.
-    - Traffic monitoring to alert on abnormal CAM table growth.
-    - Encryption so sniffed traffic remains unreadable even if the attack succeeds.
-
-21. **(b) Distinguish between phishing and pharming. Give examples to explain.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 801 (ET: N/A)]*
-
-Answer: Both send the victim to a fake website to steal credentials, but they differ in HOW the victim gets there.
-
-    | Point | Phishing | Pharming |
-    |---|---|---|
-    | Method | Tricks the user into clicking a malicious link | Redirects the user even when they type the correct address |
-    | User action required | Yes — the victim must click something | No — the victim does nothing wrong |
-    | Attack vector | Email, SMS, phone call, social media | DNS cache poisoning, compromised DNS server, altered hosts file |
-    | Scale | One message reaches one inbox at a time | One poisoned DNS server redirects thousands of users at once |
-    | URL in the address bar | Usually a slightly wrong domain, which a careful user may spot | The CORRECT domain, so nothing looks suspicious |
-    | Detection by the user | Possible, by checking the link and sender | Almost impossible without checking the certificate |
-    | Primary defence | Awareness, email filtering, MFA | DNSSEC, secure DNS, HTTPS certificate validation |
-    | Danger level | Lower — depends on the user falling for it | Higher — the user cannot detect it by care alone |
-
-    Examples
-
-    Phishing
-    - An email arrives appearing to come from a bank: "Your account will be suspended within 24 hours. Click here to verify." The link points to `www.dutch-bang1a.com` (with a digit "1" replacing the "l"). A careful user would notice the wrong domain.
-
-    Pharming
-    - The DNS resolver used by an office is poisoned. An employee correctly types `www.dutchbanglabank.com` in the browser, and the address bar shows exactly that — but the DNS answer points to the attacker's server, so a perfect replica of the login page appears. Nothing in the URL looks wrong.
-
-    - Common defence for both: always check for HTTPS and a valid certificate. A pharming site cannot produce a certificate that a browser will accept for the real domain, so a certificate warning is the last line of defence.
-
-22. **What is DDoS and SQL Injection attack?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
-
-Answer:
-
-    DDoS (Distributed Denial of Service)
-    - An attack that floods a target service from thousands of compromised machines — a botnet — so that legitimate users cannot access it.
-    - Types: volumetric (UDP flood, DNS amplification), protocol (SYN flood), application layer (HTTP flood, Slowloris).
-    - It attacks availability — nothing is stolen or altered, but the service is unusable.
-    - Mitigation: DDoS scrubbing services, CDN, rate limiting, SYN cookies, over-provisioned bandwidth.
-
-    SQL Injection
-    - A web attack in which the attacker inserts malicious SQL code into an input field, so the database executes commands the developer never intended.
-    - It works when user input is concatenated directly into a SQL query without validation.
-
-    Example
-    ```sql
-    -- Vulnerable code
-    query = "SELECT * FROM users WHERE username='" + input + "' AND password='" + pass + "'";
-
-    -- Attacker enters this as the username:
-    ' OR '1'='1' --
-
-    -- The query becomes:
-    SELECT * FROM users WHERE username='' OR '1'='1' --' AND password=''
-    ```
-    - `'1'='1'` is always true and `--` comments out the password check, so the attacker logs in without any password.
-
-    Impact
-    - Authentication bypass, reading the entire database, modifying or deleting records, and in some configurations executing operating system commands.
-
-    Prevention
-    - Parameterised queries / prepared statements — the single most effective fix, because data is never treated as code.
-    - Stored procedures with parameters, input validation and whitelisting.
-    - Least-privilege database accounts — the web application should never connect as `root` or `sa`.
-    - Web Application Firewall as an additional layer, and generic error messages so the database structure is not revealed.
-
-23. **Phishing attack এর মাধ্যমে কীভাবে attack করা হয়। উহার কারণে কি ক্ষতি হতে পারে?** *[NESCO Junior Assistant Manager (ICT) 2021 compact it 913 (ET: BUET)]*
-
-Answer:
-
-    (a) How a phishing attack is carried out
-    - Step 1 — Preparation. The attacker registers a look-alike domain and builds a pixel-perfect copy of a real login page.
-    - Step 2 — Bait. A message is sent by email, SMS or social media, impersonating a bank, employer or service provider, and creating urgency: "Your account will be blocked", "You have won a prize", "Verify immediately".
-    - Step 3 — Hook. The victim clicks the link and reaches the fake page, or opens an attachment carrying malware.
-    - Step 4 — Harvest. The victim enters username, password, card number or OTP, which goes straight to the attacker.
-    - Step 5 — Exploit. The attacker logs into the real account, transfers money, or uses the credentials elsewhere because people reuse passwords.
-    - Often the fake page then redirects to the genuine site, so the victim suspects nothing.
-
-    (b) Damage it can cause
-
-    To an individual
-    - Direct financial loss from unauthorised transfers and card use.
-    - Identity theft — loans and accounts opened in the victim's name.
-    - Loss of personal data, photographs and private messages, sometimes leading to blackmail.
-    - Account takeover of email, which then unlocks every other account through password reset.
-
-    To an organisation
-    - Large financial fraud, especially through Business Email Compromise where a finance officer is tricked into paying a fake invoice.
-    - Data breach of customer records, with regulatory penalties.
-    - Ransomware entry — most ransomware infections begin with a phishing email.
-    - Reputational damage and loss of customer trust.
-    - Operational disruption and incident response cost.
-    - Legal liability under data protection rules.
-
-    Prevention
-    - Multi-factor authentication, staff awareness training with simulated phishing, email filtering with SPF/DKIM/DMARC, verifying any payment request through a second channel, and never sharing an OTP or PIN with anyone.
-
-24. **Explain ARP Spoofing attack with diagram. Why ARP spoofing attacker used to launch Man-in-the-Middle attack.** *[SGFL Assistant General Engineer 2021 compact it 936 (ET: BUET)]*
-
-Answer: ARP spoofing is an attack in which forged ARP reply messages are sent on a LAN to bind the attacker's MAC address to another host's IP address, so traffic for that host is delivered to the attacker.
-
-    Diagram
-    ```mermaid
-    flowchart TD
-        subgraph Before
-        V1[Victim 192.168.1.10] -->|direct| G1[Gateway 192.168.1.1]
-        end
-        subgraph After ARP spoofing
-        V2[Victim 192.168.1.10] --> A[Attacker 192.168.1.50]
-        A --> G2[Gateway 192.168.1.1]
-        A -.->|forged: gateway IP = my MAC| V2
-        A -.->|forged: victim IP = my MAC| G2
-        end
-    ```
-
-    How it works
-    - Step 1 — the attacker connects to the same LAN and identifies the victim and the gateway.
-    - Step 2 — sends a forged ARP reply to the victim: "192.168.1.1 is at [attacker's MAC]".
-    - Step 3 — sends a forged ARP reply to the gateway: "192.168.1.10 is at [attacker's MAC]".
-    - Step 4 — both caches are poisoned. All traffic between victim and gateway now flows through the attacker.
-    - Step 5 — the attacker enables IP forwarding, so packets still reach their destination and the victim notices nothing.
-
-    Why it is the standard way to launch a MITM attack on a LAN
-    - ARP has no authentication. Any host can send an unsolicited ARP reply and it will be believed. There is nothing to break — the protocol simply trusts.
-    - It requires no credentials — only physical or wireless access to the same broadcast domain.
-    - It is transparent — with IP forwarding enabled, connectivity is unaffected, so the user has no symptom to notice.
-    - It captures ALL traffic, not just one application, because it operates below the IP layer.
-    - It is bidirectional — poisoning both sides lets the attacker see and modify traffic in both directions.
-    - Tools are freely available — Ettercap, arpspoof, Cain & Abel make it a few keystrokes.
-
-    Prevention
-    - Dynamic ARP Inspection with DHCP snooping, static ARP entries for critical hosts, port security, VLAN segmentation, and end-to-end encryption (HTTPS, SSH, VPN) so intercepted traffic is useless.
-
-25. **Difference between spoofing and sniffing** *[Combined 4 Banks Assistant Programmer 2020 compact it 1002 (ET: DU)]*
-
-Answer:
-
-    | Point | Sniffing | Spoofing |
-    |---|---|---|
-    | Definition | Capturing and reading network traffic | Impersonating another identity |
-    | Attack type | Passive — only observes | Active — creates or alters data |
-    | Data modification | None | Yes, packets are forged |
-    | Goal | Steal information | Gain trust, redirect traffic, bypass controls |
-    | Victim awareness | Almost never detected | May be detected when something behaves oddly |
-    | Security goal breached | Confidentiality | Authentication and Integrity |
-    | Tools | Wireshark, tcpdump, Ettercap | Ettercap, hping3, arpspoof |
-    | Main defence | Encryption | Authentication, filtering, DAI, DNSSEC |
-    | Examples | Capturing packets on open Wi-Fi; MAC flooding to force a switch to broadcast | IP spoofing, ARP spoofing, MAC spoofing, DNS spoofing, email spoofing |
-
-    Relationship between the two
-    - They are usually combined. On a switched network, sniffing alone captures very little, because the switch sends traffic only to the intended port.
-    - So the attacker first SPOOFS (ARP spoofing or MAC flooding) to redirect traffic to themselves, and then SNIFFS the redirected traffic.
-    - Spoofing is the means; sniffing is the objective.
-
-26. **Which security attacks (given) occur on client side or server side?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
+7. **Which security attacks (given) occur on client side or server side?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1033 (ET: BUET)]*
 
 Answer: The specific list was not printed with the question, so the standard classification is given.
 
@@ -833,7 +959,7 @@ Answer: The specific list was not printed with the question, so the standard cla
     Rule for deciding
     - Ask WHERE THE MALICIOUS CODE EXECUTES. If it runs in the victim's browser, it is client-side; if it runs on the server, it is server-side. XSS is client-side even though the payload is stored on the server, because it executes in another user's browser.
 
-27. **Write down ten name of different attack through internet.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105-1106 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
+8. **Write down ten name of different attack through internet.** *[Sonali & Janata Bank Officer (IT/ICT) 2019 compact it 1105-1106 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
 Answer: Ten common internet-based attacks:
 
@@ -851,73 +977,7 @@ Answer: Ten common internet-based attacks:
     Others worth naming
     - Session hijacking, ARP spoofing, drive-by download, cryptojacking, supply chain attack, social engineering, insider threat, and botnet recruitment.
 
-28. **(d) Explain the principle of man in the middle and session hijacking attack with appropriate diagrams.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1134-1136 (ET: N/A)]*
-
-Answer:
-
-    (a) Man-in-the-Middle attack
-    - The attacker secretly positions themselves between two communicating parties, relaying and possibly altering the messages, while both believe they are talking directly to each other.
-
-    ```mermaid
-    flowchart LR
-        A[Alice] -->|1. thinks she sends to Bob| M[Attacker]
-        M -->|2. reads / modifies, forwards| B[Bob]
-        B -->|3. thinks he replies to Alice| M
-        M -->|4. reads / modifies, forwards| A
-    ```
-
-    Principle
-    - The attack succeeds because there is no authentication of the endpoints. Neither party can verify who they are actually talking to.
-    - Achieved by ARP spoofing, DNS spoofing, a rogue Wi-Fi access point, or SSL stripping.
-    - Defence: end-to-end encryption with certificate validation (HTTPS/TLS), HSTS, VPN, DAI and DHCP snooping.
-
-    (b) Session hijacking attack
-    - The attacker takes over an ALREADY AUTHENTICATED session by stealing or predicting the session identifier, so no password is ever needed.
-
-    ```mermaid
-    flowchart TD
-        U[User] -->|1. logs in with password| S[Server]
-        S -->|2. issues session cookie ABC123| U
-        A[Attacker] -.->|3. steals cookie ABC123<br/>by sniffing or XSS| U
-        A -->|4. sends requests with ABC123| S
-        S -->|5. accepts — thinks it is the user| A
-    ```
-
-    Principle
-    - HTTP is stateless, so after login the server identifies the user only by a session token. Whoever holds that token IS the user as far as the server is concerned.
-    - How the token is obtained: packet sniffing on an unencrypted connection, XSS reading `document.cookie`, session fixation (forcing a known session ID on the victim), or predicting a weakly generated ID.
-
-    Defence
-    - Always use HTTPS, so the cookie cannot be sniffed.
-    - Mark cookies HttpOnly (blocks JavaScript access, defeating XSS theft) and Secure (never sent over HTTP), with SameSite set.
-    - Regenerate the session ID on login, which defeats session fixation.
-    - Use long random session IDs, short timeouts, and re-authentication for sensitive actions.
-    - Bind the session to the client IP or device fingerprint where practical.
-
-    Difference between the two
-    - MITM intercepts the CHANNEL and can read everything from the start. Session hijacking steals the CREDENTIAL TOKEN and impersonates the user afterwards, often without ever seeing the traffic again.
-
-29. **(b) What is DHCP Starvation Attack? Explain briefly.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1138 (ET: N/A)]*
-
-Answer: DHCP starvation is a denial-of-service attack in which the attacker exhausts the DHCP server's entire pool of IP addresses, so no legitimate client can obtain one.
-
-    How it works
-    - The attacker sends a rapid flood of DHCPDISCOVER messages, each carrying a different randomly generated (spoofed) source MAC address.
-    - The DHCP server treats every one as a genuine new client and reserves an address for it.
-    - Within seconds the whole scope is leased to non-existent clients.
-    - A real client requesting an address receives no offer and cannot join the network.
-
-    Why it matters — what follows
-    - Starvation is usually only stage one. Once the legitimate server cannot respond, the attacker starts a rogue DHCP server which answers clients with a valid IP but a malicious default gateway and DNS server.
-    - All client traffic then flows through the attacker, establishing a Man-in-the-Middle position for sniffing, modification and DNS redirection.
-
-    Prevention
-    - DHCP snooping — only the port facing the legitimate DHCP server is trusted; offers from any other port are dropped.
-    - Rate limiting DHCP messages on untrusted ports, which stops the flood itself.
-    - Port security limiting MAC addresses per port.
-    - 802.1X authentication so unauthorised devices cannot connect.
-
-30. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
+9. **Write down the name of different attack through internet.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*, *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 
 Answer: Internet attacks grouped by type.
 
@@ -938,52 +998,6 @@ Answer: Internet attacks grouped by type.
 
     Other
     - Zero-day exploit, supply chain attack, insider threat, drive-by download, buffer overflow, advanced persistent threat (APT).
-
-31. **Briefly describe about DoS, IP address spoofing and Man-in-the-middle attacks.** *[BPDB Assistant Engineer (CSE) 2018 compact it 1215 (ET: N/A)]*
-
-Answer:
-
-    (a) DoS — Denial of Service
-    - Makes a service unavailable to legitimate users by exhausting bandwidth, CPU, memory or the connection table.
-    - Methods: SYN flood, UDP flood, ICMP flood, Ping of Death, Slowloris.
-    - DDoS is the distributed form using a botnet of thousands of machines, which is far harder to filter because traffic comes from everywhere.
-    - Attacks availability. Mitigation: rate limiting, firewalls and IPS, DDoS scrubbing services, CDN, SYN cookies.
-
-    (b) IP address spoofing
-    - The attacker forges the source IP address in packet headers so the packet appears to come from a trusted or different host.
-    - Uses: hiding the real origin during a DoS attack; bypassing IP-based access control lists; enabling amplification attacks, where a small spoofed request to a DNS or NTP server sends a large reply to the victim.
-    - Limitation for the attacker: replies go to the spoofed address, not back to them, so spoofing suits one-way floods rather than interactive sessions.
-    - Prevention: ingress and egress filtering (BCP 38) at the ISP, reverse path forwarding checks, and authentication that does not rely on source IP alone.
-
-    (c) Man-in-the-Middle attack
-    - The attacker secretly relays and possibly alters communication between two parties who believe they are talking directly.
-    - Methods: ARP spoofing, DNS spoofing, rogue Wi-Fi access point, SSL stripping, session hijacking.
-    - Impact: credential theft, transaction modification, malware injection.
-    - Prevention: HTTPS/TLS with certificate validation, HSTS, VPN, Dynamic ARP Inspection, DHCP snooping, DNSSEC, and multi-factor authentication.
-
-    - Relationship: IP spoofing is a TECHNIQUE that supports both of the others — it hides the source in a DoS flood and helps impersonate a trusted host in a MITM setup.
-
-32. **What is MAC Flood in Switch? How attacker gets benefitted from it?** *[BTCL Assistant Manager (Technical) 2017 compact it 1255 (ET: N/A)]*
-
-Answer: MAC flooding is an attack that overflows a switch's CAM (MAC address) table by sending thousands of frames with forged source MAC addresses, forcing the switch to abandon selective forwarding.
-
-    How it works
-    - A switch keeps a fixed-size table mapping MAC addresses to ports.
-    - The attacker floods it with random source MACs until the table is full.
-    - Legitimate mappings are evicted.
-    - With no entry for a destination, the switch must flood every frame out of all ports — it behaves like a hub.
-
-    How the attacker benefits
-    - Traffic sniffing — the attacker now receives copies of frames intended for other hosts, and can capture unencrypted passwords, emails, FTP credentials and session cookies.
-    - Session hijacking — captured session cookies allow the attacker to impersonate a logged-in user without a password.
-    - Reconnaissance — seeing all LAN traffic reveals the network layout, servers, protocols in use and naming conventions, which guides the next stage of attack.
-    - Man-in-the-Middle preparation — combined with ARP spoofing, this becomes full interception with the ability to modify traffic.
-    - Denial of Service side effect — flooding every port degrades performance for everyone and can crash the switch.
-    - Bypasses VLAN separation in some cases, if the switch fails open badly.
-
-    Prevention
-    - Port security — limit MAC addresses per port with a violation action of shutdown or restrict. This is the direct fix.
-    - Sticky MAC binding, 802.1X authentication, VLAN segmentation, disabling unused ports, monitoring CAM table size, and encryption so that captured traffic is unreadable.
 
 ## Cryptography (31)
 
@@ -3715,6 +3729,8 @@ Answer:
 
 ## Authentication & Access Control (16)
 
+### Two-Factor / Multi-Factor Authentication (8)
+
 1. **Multi-Factor Authentication (MFA) is mandatory in modern banking infrastructure. (a) Define the concept of MFA and explicitly list the three globally recognized categories of authentication factors.** *[Combined Bank Officer (IT) 09.05.2026 debug it (ET: N/A)]*
 
 Answer:
@@ -3774,43 +3790,7 @@ Answer:
    - Digital signature answers "is this data genuine and unaltered?" — it protects the content and its origin.
    - A secure system needs both: 2FA stops an impostor logging in, and a digital signature ensures that even an authorised user's instructions cannot be tampered with in transit or later denied.
 
-3. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
-
-Answer: A digital signature is a cryptographic value attached to an electronic document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's private key.
-
-   How it works
-   ```mermaid
-   flowchart TD
-       M[Document] --> H[Hash function SHA-256]
-       H --> D[Message digest]
-       D --> E[Encrypt with SENDER'S PRIVATE key]
-       E --> S[Digital Signature]
-       S --> T[Send document + signature]
-       T --> V1[Receiver hashes document → Digest A]
-       T --> V2[Receiver decrypts signature with<br/>SENDER'S PUBLIC key → Digest B]
-       V1 --> C{A = B ?}
-       V2 --> C
-       C -->|Yes| OK[Valid]
-       C -->|No| NO[Invalid — tampered or forged]
-   ```
-
-   Effectiveness — the three guarantees it provides
-   - Authentication — proves the identity of the signer, since only their private key could produce that signature.
-   - Integrity — any change to the document produces a completely different hash (the avalanche effect), so tampering is detected immediately.
-   - Non-repudiation — the signer cannot deny having signed. This is legally the most valuable property, and it is what a scanned handwritten signature cannot provide.
-
-   Additional benefits
-   - Speed — signing and transmission take seconds instead of days by courier.
-   - Cost saving — no paper, printing, postage or physical archive.
-   - Legal validity — recognised under the ICT Act 2006 in Bangladesh, administered by the Controller of Certifying Authorities.
-   - Verifiability by anyone holding the public key, with no need to contact the signer.
-
-   Where it is used
-   - SSL/TLS certificates securing every HTTPS site, signed software updates, e-GP and e-tendering, income tax and VAT returns, banking instructions, and blockchain transactions.
-
-   - Important distinction: a digital signature is a cryptographic construct that can be mathematically verified. An "electronic signature" such as a scanned image of a handwritten signature is neither unique nor verifiable, and can simply be copied onto another document.
-
-4. **(a) What is 2-factor authentication? Describe it with an example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)], [BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
+3. **(a) What is 2-factor authentication? Describe it with an example.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1356 (ET: N/A)], [BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 
 Answer: Two-Factor Authentication (2FA) is a security process requiring exactly two DIFFERENT categories of credential before access is granted. It is the most common form of multi-factor authentication.
 
@@ -3841,24 +3821,7 @@ Answer: Two-Factor Authentication (2FA) is a security process requiring exactly 
    Weaknesses to note
    - SMS-based OTP is the weakest form — vulnerable to SIM swap fraud and SS7 interception. An authenticator app or hardware security key is considerably stronger.
 
-5. **Write down the full form of LDAP?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
-
-Answer: LDAP — Lightweight Directory Access Protocol.
-
-   - An application-layer protocol for accessing and maintaining distributed directory information services over a network.
-   - Default port 389; 636 for LDAPS (LDAP over SSL/TLS).
-   - It stores information in a hierarchical tree structure called a Directory Information Tree (DIT), organised as `dc` (domain component), `ou` (organisational unit) and `cn` (common name).
-   - Example distinguished name: `cn=Rahim,ou=IT,dc=bank,dc=com`
-
-   Uses
-   - Centralised authentication — one username and password works across email, file servers, VPN and applications (single sign-on).
-   - User and group management — a single directory of employees, roles and permissions.
-   - Address book services for email clients.
-
-   Implementations
-   - Microsoft Active Directory (the most widely deployed), OpenLDAP, Apache Directory Server, Novell eDirectory.
-
-6. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 306 (ET: BIBM)]*
+4. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 306 (ET: BIBM)]*
 
 Answer: SMS and email OTP alone is no longer adequate — SMS OTP is vulnerable to SIM swap and SS7 interception, and email OTP falls with the email account. Without adding biometrics, security can be strengthened substantially in the following ways.
 
@@ -3898,29 +3861,7 @@ Answer: SMS and email OTP alone is no longer adequate — SMS OTP is vulnerable 
 
    - Priority if only three things could be added: risk-based authentication, beneficiary cooling-off, and push-based transaction approval replacing SMS OTP.
 
-7. **Difference between Digital signature and Digital certificate.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 527 (ET: MIST)]*
-
-Answer:
-
-   | Point | Digital Signature | Digital Certificate |
-   |---|---|---|
-   | What it is | A cryptographic value attached to a document | An electronic document binding a public key to an identity |
-   | Purpose | Prove who signed a document and that it is unaltered | Prove that a public key genuinely belongs to a named entity |
-   | Created by | The sender, using their own private key | A Certificate Authority (CA) |
-   | Contains | An encrypted hash of the document | Owner name, public key, CA name, validity period, serial number, CA's signature |
-   | Standard | RSA, DSA, ECDSA | X.509 |
-   | Provides | Authentication, integrity, non-repudiation | Trust and identity binding |
-   | Validity | Tied to one specific document | Valid for a period, typically 1-3 years |
-   | Analogy | A signature on a letter | A passport proving who you are |
-
-   How they work together
-   - A digital signature is only meaningful if the verifier trusts the public key used to check it.
-   - The digital certificate is what supplies that trust: it is issued by a trusted CA and itself carries the CA's signature, confirming that this public key really belongs to the named person or server.
-   - In HTTPS: the server presents its certificate (proving identity), and uses its private key to create signatures during the TLS handshake (proving it actually holds the matching private key).
-
-   - In short: the certificate establishes WHO owns a key; the signature proves that the key's owner produced this particular document.
-
-8. **How to work two factor authentication?** *[Mongla Port Authority Assistant Programmer 2023 compact it 574 (ET: N/A)]*
+5. **How to work two factor authentication?** *[Mongla Port Authority Assistant Programmer 2023 compact it 574 (ET: N/A)]*
 
 Answer: 2FA works by requiring the user to prove identity twice, using two credentials from different categories.
 
@@ -3955,7 +3896,7 @@ Answer: 2FA works by requiring the user to prove identity twice, using two crede
    Weakest form to avoid where possible
    - SMS OTP — vulnerable to SIM swap fraud and SS7 network interception. Authenticator apps and FIDO2 hardware keys are considerably stronger.
 
-9. **(b) How do you define 2 factor authentication? Give example.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
+6. **(b) How do you define 2 factor authentication? Give example.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 
 Answer: Two-Factor Authentication is a security mechanism that grants access only after the user successfully presents two pieces of evidence from two DIFFERENT categories of authentication factor.
 
@@ -3985,7 +3926,127 @@ Answer: Two-Factor Authentication is a security mechanism that grants access onl
    Benefit
    - Even if the password database of a service is breached entirely, accounts protected by 2FA remain secure, because the stolen passwords alone are not enough to log in.
 
-10. **What is digital signature? Where is it used?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
+7. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
+
+Answer:
+
+    (a) Authentication
+    - The process of verifying that a user, device or system genuinely is who or what it claims to be, before granting access.
+    - It answers the question "Who are you?".
+
+    Related but distinct terms
+    - Identification — claiming an identity, such as entering a username.
+    - Authentication — proving that claim, such as entering the password.
+    - Authorisation — deciding what the authenticated user is permitted to do.
+    - Accounting / auditing — recording what they actually did.
+
+    Authentication methods
+    - Password and PIN, OTP, biometrics, smart cards, digital certificates, security tokens.
+
+    (b) Two-Factor Authentication
+    - Requiring two credentials from two DIFFERENT categories: something you know, something you have, something you are.
+    - The categories must differ — a password plus a security question is not 2FA, since both are knowledge factors.
+
+    Example — internet banking
+    - Factor 1: the customer enters their password (something they know).
+    - Factor 2: the bank sends a 6-digit OTP to the registered mobile, and the customer enters it (something they have).
+    - Access is granted only when both succeed.
+
+    Second example — ATM
+    - The card is something you have; the PIN is something you know. This is the oldest and most familiar 2FA in daily life.
+
+    Why it matters
+    - Passwords are routinely stolen through phishing, reuse and data breaches. 2FA ensures that a stolen password alone is worthless to the attacker.
+
+8. **What do you mean by two factor authentication? Explain with example.** *[BTRC Assistant Director (Technical) 2019 compact it 1147-1148 (ET: N/A)]*
+
+Answer: Two-Factor Authentication means verifying a user's identity using two independent credentials drawn from two DIFFERENT categories of authentication factor, so that compromising one does not grant access.
+
+    The three categories
+    - Something you know — password, PIN, passphrase.
+    - Something you have — mobile phone, hardware token, smart card, security key.
+    - Something you are — fingerprint, face, iris, voice.
+
+    Example 1 — mobile banking transfer
+    - The customer opens the app and enters the PIN. *(know)*
+    - The bank sends an OTP to the registered mobile number; the customer enters it. *(have)*
+    - Only then is the transfer executed.
+    - An attacker who phished the PIN cannot complete the transfer without the physical phone.
+
+    Example 2 — ATM withdrawal
+    - Insert the card *(have)*, enter the PIN *(know)*. A stolen card without the PIN, or a known PIN without the card, is useless.
+
+    Example 3 — corporate email
+    - Password *(know)* plus a code from Microsoft Authenticator *(have)*.
+
+    Why organisations mandate it
+    - Passwords fail constantly through phishing, reuse across sites, and large-scale breaches. 2FA means a leaked password database does not translate into account takeover.
+    - Both PCI DSS and the Bangladesh Bank ICT Security Guideline require MFA for administrative and remote access.
+
+    Practical caution
+    - SMS OTP is the weakest second factor, being vulnerable to SIM swap and SS7 interception. An authenticator app, push approval, or a FIDO2 hardware key provides substantially stronger protection.
+
+### Digital Signatures & Certificates (6)
+
+1. **ডিজিটাল সিগনেচার (Digital Signature) কী? এর কার্যকারিতা ব্যাখ্যা করুন।** *[Assistant Programmer - Department of Immigration & Passports 15.07.2026 compact it 1464 (ET: N/A)]*
+
+Answer: A digital signature is a cryptographic value attached to an electronic document that proves who created it and that it has not been altered since. It is created by hashing the document and encrypting that hash with the signer's private key.
+
+   How it works
+   ```mermaid
+   flowchart TD
+       M[Document] --> H[Hash function SHA-256]
+       H --> D[Message digest]
+       D --> E[Encrypt with SENDER'S PRIVATE key]
+       E --> S[Digital Signature]
+       S --> T[Send document + signature]
+       T --> V1[Receiver hashes document → Digest A]
+       T --> V2[Receiver decrypts signature with<br/>SENDER'S PUBLIC key → Digest B]
+       V1 --> C{A = B ?}
+       V2 --> C
+       C -->|Yes| OK[Valid]
+       C -->|No| NO[Invalid — tampered or forged]
+   ```
+
+   Effectiveness — the three guarantees it provides
+   - Authentication — proves the identity of the signer, since only their private key could produce that signature.
+   - Integrity — any change to the document produces a completely different hash (the avalanche effect), so tampering is detected immediately.
+   - Non-repudiation — the signer cannot deny having signed. This is legally the most valuable property, and it is what a scanned handwritten signature cannot provide.
+
+   Additional benefits
+   - Speed — signing and transmission take seconds instead of days by courier.
+   - Cost saving — no paper, printing, postage or physical archive.
+   - Legal validity — recognised under the ICT Act 2006 in Bangladesh, administered by the Controller of Certifying Authorities.
+   - Verifiability by anyone holding the public key, with no need to contact the signer.
+
+   Where it is used
+   - SSL/TLS certificates securing every HTTPS site, signed software updates, e-GP and e-tendering, income tax and VAT returns, banking instructions, and blockchain transactions.
+
+   - Important distinction: a digital signature is a cryptographic construct that can be mathematically verified. An "electronic signature" such as a scanned image of a handwritten signature is neither unique nor verifiable, and can simply be copied onto another document.
+
+2. **Difference between Digital signature and Digital certificate.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 527 (ET: MIST)]*
+
+Answer:
+
+   | Point | Digital Signature | Digital Certificate |
+   |---|---|---|
+   | What it is | A cryptographic value attached to a document | An electronic document binding a public key to an identity |
+   | Purpose | Prove who signed a document and that it is unaltered | Prove that a public key genuinely belongs to a named entity |
+   | Created by | The sender, using their own private key | A Certificate Authority (CA) |
+   | Contains | An encrypted hash of the document | Owner name, public key, CA name, validity period, serial number, CA's signature |
+   | Standard | RSA, DSA, ECDSA | X.509 |
+   | Provides | Authentication, integrity, non-repudiation | Trust and identity binding |
+   | Validity | Tied to one specific document | Valid for a period, typically 1-3 years |
+   | Analogy | A signature on a letter | A passport proving who you are |
+
+   How they work together
+   - A digital signature is only meaningful if the verifier trusts the public key used to check it.
+   - The digital certificate is what supplies that trust: it is issued by a trusted CA and itself carries the CA's signature, confirming that this public key really belongs to the named person or server.
+   - In HTTPS: the server presents its certificate (proving identity), and uses its private key to create signatures during the TLS handshake (proving it actually holds the matching private key).
+
+   - In short: the certificate establishes WHO owns a key; the signature proves that the key's owner produced this particular document.
+
+3. **What is digital signature? Where is it used?** *[BPSC (Ministry of Home Affairs) Assistant Engineer 17.05.2022 compact it 635 (ET: N/A)]*
 
 Answer:
 
@@ -4020,7 +4081,7 @@ Answer:
     - E-passports and national ID chips.
     - Document management systems and digital contracts.
 
-11. **What is a digital signature? Describe its role in digital security?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
+4. **What is a digital signature? Describe its role in digital security?** *[BPSC (Ministry of Agriculture) Assistant Programmer 15.02.2022 compact it 679 (ET: N/A)]*
 
 Answer:
 
@@ -4049,7 +4110,7 @@ Answer:
 
     - Limitation worth stating: a digital signature proves who holds the private key, not who was physically at the keyboard. Protecting the private key — in an HSM, smart card or secure enclave — is therefore essential to the whole scheme.
 
-12. **What is Digital signature? Explain shortly.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
+5. **What is Digital signature? Explain shortly.** *[Microcredit Regulatory Authority (MRA) Assistant Maintenance Engineer 2022 compact it 718 (ET: N/A)]*
 
 Answer: A digital signature is an electronic, cryptographic value attached to a document that proves who created it and that it has not been changed since signing.
 
@@ -4071,39 +4132,7 @@ Answer: A digital signature is an electronic, cryptographic value attached to a 
 
     - It is legally recognised in Bangladesh under the ICT Act 2006, and it is fundamentally different from a scanned image of a handwritten signature, which can simply be copied onto any document.
 
-13. **(খ) Authentication বলতে কি বুঝায়? Two Factor Authenticating কি? উদাহরণসহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (ICT Ministry) 2021 compact it 769 (ET: N/A)]*
-
-Answer:
-
-    (a) Authentication
-    - The process of verifying that a user, device or system genuinely is who or what it claims to be, before granting access.
-    - It answers the question "Who are you?".
-
-    Related but distinct terms
-    - Identification — claiming an identity, such as entering a username.
-    - Authentication — proving that claim, such as entering the password.
-    - Authorisation — deciding what the authenticated user is permitted to do.
-    - Accounting / auditing — recording what they actually did.
-
-    Authentication methods
-    - Password and PIN, OTP, biometrics, smart cards, digital certificates, security tokens.
-
-    (b) Two-Factor Authentication
-    - Requiring two credentials from two DIFFERENT categories: something you know, something you have, something you are.
-    - The categories must differ — a password plus a security question is not 2FA, since both are knowledge factors.
-
-    Example — internet banking
-    - Factor 1: the customer enters their password (something they know).
-    - Factor 2: the bank sends a 6-digit OTP to the registered mobile, and the customer enters it (something they have).
-    - Access is granted only when both succeed.
-
-    Second example — ATM
-    - The card is something you have; the PIN is something you know. This is the oldest and most familiar 2FA in daily life.
-
-    Why it matters
-    - Passwords are routinely stolen through phishing, reuse and data breaches. 2FA ensures that a stolen password alone is worthless to the attacker.
-
-14. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
+6. **(b) Write down the purpose of Certification Authority (CA) in Digital Signature.** *[BPSC Sub-Assistant Engineer (Ministry of Agriculture) 2021 compact it 797 (ET: N/A)]*
 
 Answer: A Certification Authority (CA) is a trusted third party that issues, manages and revokes digital certificates, binding a public key to a verified identity.
 
@@ -4135,7 +4164,26 @@ Answer: A Certification Authority (CA) is a trusted third party that issues, man
 
     - Without a CA, digital signatures would still prove that the SAME key signed two documents, but not WHOSE key it is — which is precisely what makes a man-in-the-middle attack on unauthenticated key exchange possible.
 
-15. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
+### Other (LDAP, Password Protection) (2)
+
+1. **Write down the full form of LDAP?** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
+
+Answer: LDAP — Lightweight Directory Access Protocol.
+
+   - An application-layer protocol for accessing and maintaining distributed directory information services over a network.
+   - Default port 389; 636 for LDAPS (LDAP over SSL/TLS).
+   - It stores information in a hierarchical tree structure called a Directory Information Tree (DIT), organised as `dc` (domain component), `ou` (organisational unit) and `cn` (common name).
+   - Example distinguished name: `cn=Rahim,ou=IT,dc=bank,dc=com`
+
+   Uses
+   - Centralised authentication — one username and password works across email, file servers, VPN and applications (single sign-on).
+   - User and group management — a single directory of employees, roles and permissions.
+   - Address book services for email clients.
+
+   Implementations
+   - Microsoft Active Directory (the most widely deployed), OpenLDAP, Apache Directory Server, Novell eDirectory.
+
+2. **১৮. পাসওয়ার্ড সুরক্ষা জন্য যে পদ্ধতি ব্যবহার করা হয় তার নাম কী?** *[BPSC Ministry of Women and Children Affairs Assistant Programmer (CSE) 2021 compact it 942 (ET: N/A)]*
 
 Answer: The method used to protect passwords is hashing with a salt — commonly called salted hashing.
 
@@ -4162,35 +4210,9 @@ Answer: The method used to protect passwords is hashing with a salt — commonly
     Supporting measures
     - Strong password policy, account lockout after failed attempts, multi-factor authentication, and never transmitting passwords except over TLS.
 
-16. **What do you mean by two factor authentication? Explain with example.** *[BTRC Assistant Director (Technical) 2019 compact it 1147-1148 (ET: N/A)]*
-
-Answer: Two-Factor Authentication means verifying a user's identity using two independent credentials drawn from two DIFFERENT categories of authentication factor, so that compromising one does not grant access.
-
-    The three categories
-    - Something you know — password, PIN, passphrase.
-    - Something you have — mobile phone, hardware token, smart card, security key.
-    - Something you are — fingerprint, face, iris, voice.
-
-    Example 1 — mobile banking transfer
-    - The customer opens the app and enters the PIN. *(know)*
-    - The bank sends an OTP to the registered mobile number; the customer enters it. *(have)*
-    - Only then is the transfer executed.
-    - An attacker who phished the PIN cannot complete the transfer without the physical phone.
-
-    Example 2 — ATM withdrawal
-    - Insert the card *(have)*, enter the PIN *(know)*. A stolen card without the PIN, or a known PIN without the card, is useless.
-
-    Example 3 — corporate email
-    - Password *(know)* plus a code from Microsoft Authenticator *(have)*.
-
-    Why organisations mandate it
-    - Passwords fail constantly through phishing, reuse across sites, and large-scale breaches. 2FA means a leaked password database does not translate into account takeover.
-    - Both PCI DSS and the Bangladesh Bank ICT Security Guideline require MFA for administrative and remote access.
-
-    Practical caution
-    - SMS OTP is the weakest second factor, being vulnerable to SIM swap and SS7 interception. An authenticator app, push approval, or a FIDO2 hardware key provides substantially stronger protection.
-
 ## Cryptography & Network Security (14)
+
+### Cryptography & Network Security Core (5)
 
 1. **(a) What is 2-factor authentication? Describe it with an example.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65]]*
 
@@ -4215,18 +4237,7 @@ Answer: Two-Factor Authentication means verifying a user's identity using two in
    - Hardware key (YubiKey) — plug into USB; phishing-resistant.
    - Biometric — fingerprint or Face ID on the device.
 
-2. **Focus Witting: Banking Security (English) [Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
-
-Answer: Modern banking applications operate under continuous cybersecurity threats, requiring robust defense mechanisms across data transmission, storage, and transaction processing. Core security measures include:
-
-    - End-to-End Encryption: Sensitive financial records and PINs are secured using AES-256 at rest and TLS 1.3 in transit to prevent sniffing and man-in-the-middle attacks.
-    - Multi-Factor Authentication (MFA): Financial portals mandate time-based OTPs, biometrics, or hardware tokens alongside passwords.
-    - Real-Time AI Fraud Detection: Machine learning algorithms analyze transaction anomalies, geolocation shifts, and velocity patterns to block fraudulent attempts immediately.
-    - Role-Based Access Control (RBAC): Strict least-privilege policies enforce separation of duties for bank employees and database administrators.
-    - Secure APIs and WAFs: Web Application Firewalls and signed API gateways protect core banking software from SQL injection, Cross-Site Scripting, and credential stuffing.
-    - Regular VAPT and Red Teaming: Routine vulnerability assessments and compliance audits ensure compliance with central bank cybersecurity mandates.
-
-3. **What is IPSec? Describe components of IPSec. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
+2. **What is IPSec? Describe components of IPSec. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 313]]*
 
 Answer: IPsec (Internet Protocol Security) is a framework of open standards developed by the IETF that secures communications across IP networks by providing network-layer authentication, data integrity, anti-replay, and encryption.
 
@@ -4236,7 +4247,43 @@ Answer: IPsec (Internet Protocol Security) is a framework of open standards deve
     - Internet Key Exchange (IKE / ISAKMP): An automated key management protocol that negotiates security associations (SAs), exchanges public keys, and derives shared session keys. Operates in Phase 1 (establishing a secure channel) and Phase 2 (negotiating IPsec tunnel parameters).
     - Security Association (SA): A unidirectional agreement between communicating peers defining the active encryption algorithms, keys, and security parameters identified by a Security Parameter Index (SPI).
 
-4. **What is Operating System? Describe functions of Operating System and its services. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 315]]*
+3. **What is a spoofed packet, and how can it be used in network attacks?** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
+
+Answer: A spoofed packet is an IP packet where the sender deliberately modifies the source IP address in the packet header to disguise their true identity or impersonate another legitimate network device.
+
+    Mechanisms in Network Attacks:
+    - Denial-of-Service (DoS) and DDoS Amplification: Attackers send small requests with the victim's spoofed IP to reflection servers (like open DNS or NTP resolvers), causing massive responses to flood and overwhelm the victim's bandwidth.
+    - TCP SYN Flood Attacks: Sending SYN packets with unreachable spoofed source IPs forces the target server to allocate resources and hold half-open connections until memory is exhausted.
+    - Blind Spoofing and Unauthorized Access: Attackers bypass firewall rules that trust specific internal IP addresses by forging legitimate internal addresses.
+    - Man-in-the-Middle (MitM) Attacks: Combined with ARP spoofing, forged packets intercept and alter communication between trusted endpoints.
+
+4. **(a) What is authentication? With example write a short note on “Two factor authentication”. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 335]]*
+
+Answer: Authentication is the security verification process of confirming the true identity of a user, device, or system entity before granting access to resources.
+
+    Two-Factor Authentication (2FA):
+    - 2FA is an identity verification mechanism requiring users to present two distinct authentication factors before gaining access.
+    - The three standard authentication factors are:
+      1. Knowledge factor (Something you know): Password, PIN.
+      2. Possession factor (Something you have): Smartphone OTP, hardware token, smart card.
+      3. Inherence factor (Something you are): Fingerprint, facial biometrics, retina scan.
+    - Practical Example: When logging into an internet banking portal, the user first inputs their username and password (Knowledge factor). The system then generates and transmits a 6-digit Time-based One-Time Password (TOTP) to the user's registered mobile device (Possession factor). Access is granted only when both factors are verified, rendering stolen passwords useless on their own.
+
+5. **Write the difference between WPA firewall and Network Firewall.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
+
+Answer: (Note: In network security, WPA refers to Web Application Firewall - WAF / Wireless Protected Access. In the context of firewalls, it compares Web Application Firewall vs Network Firewall):
+
+    | Feature | Web Application Firewall (WAF) | Traditional Network Firewall |
+    |---|---|---|
+    | OSI Layer | Operates at Layer 7 (Application Layer) | Operates at Layers 3 (Network) and 4 (Transport) |
+    | Traffic Inspected | Deeply inspects HTTP/HTTPS traffic, payloads, URLs, and cookies | Inspects packet IP headers, port numbers, and TCP/UDP flags |
+    | Attack Defense | Defends against SQLi, XSS, CSRF, and OWASP Top 10 vulnerabilities | Defends against port scanning, unauthorized IP access, and DoS attacks |
+    | Inspection Depth | Deep packet and content inspection (understands application logic) | Packet filtering and stateful connection tracking |
+    | Deployment Position | Positioned in front of web servers and web applications | Positioned at network perimeters, routers, and gateway boundaries |
+
+### Operating System Questions (Misplaced) (2)
+
+1. **What is Operating System? Describe functions of Operating System and its services. (05)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 315]]*
 
 Answer: An Operating System (OS) is system software that acts as an intermediary between computer hardware and user applications. It manages hardware resources, provides an execution environment, and abstract machine complexities.
 
@@ -4250,21 +4297,7 @@ Answer: An Operating System (OS) is system software that acts as an intermediary
     Key OS Services:
     - Program execution, I/O operations management, file system manipulation, inter-process communications (IPC), error detection and handling, and system resource accounting.
 
-5. **Write a paragraph on "Tourism Development in Bangladesh". (07)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
-
-Answer: Bangladesh holds immense potential for tourism with its rich cultural heritage, historical landmarks, and diverse natural landscapes. The country is home to Cox's Bazar, the world's longest unbroken sea beach, the Sundarbans, the largest mangrove forest and royal Bengal tiger habitat, the scenic hill tracts of Bandarban and Sajek Valley, and archaeological treasures like Paharpur Buddhist Vihara. Strategic tourism development requires upgrading road, rail, and air connectivity, establishing modern eco-friendly resorts, and expanding online booking and digital payment facilities. Ensuring tourist safety, simplifying visa processes, and actively promoting community-based eco-tourism through international digital campaigns can significantly accelerate foreign exchange earnings and employment generation in Bangladesh.
-
-6. **What is a spoofed packet, and how can it be used in network attacks?** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
-
-Answer: A spoofed packet is an IP packet where the sender deliberately modifies the source IP address in the packet header to disguise their true identity or impersonate another legitimate network device.
-
-    Mechanisms in Network Attacks:
-    - Denial-of-Service (DoS) and DDoS Amplification: Attackers send small requests with the victim's spoofed IP to reflection servers (like open DNS or NTP resolvers), causing massive responses to flood and overwhelm the victim's bandwidth.
-    - TCP SYN Flood Attacks: Sending SYN packets with unreachable spoofed source IPs forces the target server to allocate resources and hold half-open connections until memory is exhausted.
-    - Blind Spoofing and Unauthorized Access: Attackers bypass firewall rules that trust specific internal IP addresses by forging legitimate internal addresses.
-    - Man-in-the-Middle (MitM) Attacks: Combined with ARP spoofing, forged packets intercept and alter communication between trusted endpoints.
-
-7. **List and briefly describe five principal functions of an operating system.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
+2. **List and briefly describe five principal functions of an operating system.** *[Bangladesh Planning Commission Assistant Programmer; Date: 03 February 2024 Exam taker: BPSC; Sort Question and Broad Question:20+60 [bitbox it book 325]]*
 
 Answer: The five principal functions of an Operating System are:
 
@@ -4274,33 +4307,9 @@ Answer: The five principal functions of an Operating System are:
     - I/O and Device Management: Manages hardware peripherals using dedicated device drivers, buffering, caching, and spooling.
     - Security and Access Protection: Protects system data against unauthorized access through authentication, privilege levels (Kernel vs User mode), and access control lists.
 
-8. **(a) What is authentication? With example write a short note on “Two factor authentication”. [5 marks]** *[Bangladesh Public Service Commission Assistant Maintenance Engineer; Date: 09 February, 2024 Exam Taker: BPSC; Written [bitbox it book 335]]*
+### Software Release Security Practices (1)
 
-Answer: Authentication is the security verification process of confirming the true identity of a user, device, or system entity before granting access to resources.
-
-    Two-Factor Authentication (2FA):
-    - 2FA is an identity verification mechanism requiring users to present two distinct authentication factors before gaining access.
-    - The three standard authentication factors are:
-      1. Knowledge factor (Something you know): Password, PIN.
-      2. Possession factor (Something you have): Smartphone OTP, hardware token, smart card.
-      3. Inherence factor (Something you are): Fingerprint, facial biometrics, retina scan.
-    - Practical Example: When logging into an internet banking portal, the user first inputs their username and password (Knowledge factor). The system then generates and transmits a 6-digit Time-based One-Time Password (TOTP) to the user's registered mobile device (Possession factor). Access is granted only when both factors are verified, rendering stolen passwords useless on their own.
-
-9. **Role of computer on education system in Bangladesh.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
-
-Answer: Computers and information technology have transformed the education ecosystem in Bangladesh, democratizing learning and modernizing administrative workflows:
-
-    - Multimedia Classrooms: Digital content and smart boards simplify abstract concepts in science, technology, and mathematics for primary and secondary students.
-    - Distance Learning and MOOC Platforms: Platforms like Muktopaath, Shikkhok Batayon, and online university portals deliver courses to remote rural areas.
-    - Digital Examination and Administration: Automated student registration, result processing, e-admit cards, and digital transcripts streamline institutional management.
-    - Interactive E-Books: The National Curriculum and Textbook Board (NCTB) provides digital access to all school textbooks, ensuring uninterrupted availability.
-    - Research and Skill Development: Computer labs foster coding, software development, and freelance technical skills among tertiary students.
-
-10. **English: “50 years of bangladesh achievement and progress”** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
-
-Answer: Since gaining independence in 1971, Bangladesh has achieved remarkable socio-economic transformations across five decades. Emerging from war devastation and poverty, the nation has evolved into a rapidly growing developing economy. Key milestones include achieving food self-sufficiency, reducing maternal and infant mortality rates, and attaining near-universal primary school enrollment with gender parity. The ready-made garments (RMG) sector and remittance inflows from migrant workers serve as economic pillars. In infrastructure, mega-projects such as the Padma Multipurpose Bridge, Dhaka Metro Rail, Bangabandhu Tunnel, and Rooppur Nuclear Power Plant demonstrate growing self-reliance. In information technology, widespread mobile financial services (bKash, Nagad), submarine cable expansions, and nationwide digitisation have laid the foundation for an inclusive digital economy.
-
-11. **As a programmer when you release a software What security should you check before release your software.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376-377]]*
+1. **As a programmer when you release a software What security should you check before release your software.** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376-377]]*
 
 Answer: Before deploying software to production, a programmer must execute the following security verifications:
 
@@ -4312,7 +4321,38 @@ Answer: Before deploying software to production, a programmer must execute the f
     - Cryptographic Implementation: Confirm that sensitive data at rest is encrypted with standard algorithms (AES-256) and passwords are hashed using salted functions like bcrypt or Argon2.
     - Error Handling and Logging: Ensure detailed system error traces and stack traces are suppressed in user responses while audit logs are securely recorded.
 
-12. **“Smart Bangladesh” সংক্ষেপে আলোচনা করুন।** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 377]]*
+### GK / English Essay Questions (Off-topic) (6)
+
+1. **Focus Witting: Banking Security (English) [Discuss the key security measures used in modern banking applications to protect customer data and prevent fraud.]** *[Senior Officer (IT) Date: 17 October 2015 Full Marks: 200 Time: 2 hours [bitbox it book 229]]*
+
+Answer: Modern banking applications operate under continuous cybersecurity threats, requiring robust defense mechanisms across data transmission, storage, and transaction processing. Core security measures include:
+
+    - End-to-End Encryption: Sensitive financial records and PINs are secured using AES-256 at rest and TLS 1.3 in transit to prevent sniffing and man-in-the-middle attacks.
+    - Multi-Factor Authentication (MFA): Financial portals mandate time-based OTPs, biometrics, or hardware tokens alongside passwords.
+    - Real-Time AI Fraud Detection: Machine learning algorithms analyze transaction anomalies, geolocation shifts, and velocity patterns to block fraudulent attempts immediately.
+    - Role-Based Access Control (RBAC): Strict least-privilege policies enforce separation of duties for bank employees and database administrators.
+    - Secure APIs and WAFs: Web Application Firewalls and signed API gateways protect core banking software from SQL injection, Cross-Site Scripting, and credential stuffing.
+    - Regular VAPT and Red Teaming: Routine vulnerability assessments and compliance audits ensure compliance with central bank cybersecurity mandates.
+
+2. **Write a paragraph on "Tourism Development in Bangladesh". (07)** *[বাংলাদেশ পল্লী বিদ্যুতায়ন বোর্ড (BREB) তারিখ: ২১/১২/২০২৫ পূর্ণমান: ১০০ সময়: ২.০০ ঘণ্টা পদের নাম: সহকারী প্রোগ্রামার [bitbox it book 316]]*
+
+Answer: Bangladesh holds immense potential for tourism with its rich cultural heritage, historical landmarks, and diverse natural landscapes. The country is home to Cox's Bazar, the world's longest unbroken sea beach, the Sundarbans, the largest mangrove forest and royal Bengal tiger habitat, the scenic hill tracts of Bandarban and Sajek Valley, and archaeological treasures like Paharpur Buddhist Vihara. Strategic tourism development requires upgrading road, rail, and air connectivity, establishing modern eco-friendly resorts, and expanding online booking and digital payment facilities. Ensuring tourist safety, simplifying visa processes, and actively promoting community-based eco-tourism through international digital campaigns can significantly accelerate foreign exchange earnings and employment generation in Bangladesh.
+
+3. **Role of computer on education system in Bangladesh.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 357]]*
+
+Answer: Computers and information technology have transformed the education ecosystem in Bangladesh, democratizing learning and modernizing administrative workflows:
+
+    - Multimedia Classrooms: Digital content and smart boards simplify abstract concepts in science, technology, and mathematics for primary and secondary students.
+    - Distance Learning and MOOC Platforms: Platforms like Muktopaath, Shikkhok Batayon, and online university portals deliver courses to remote rural areas.
+    - Digital Examination and Administration: Automated student registration, result processing, e-admit cards, and digital transcripts streamline institutional management.
+    - Interactive E-Books: The National Curriculum and Textbook Board (NCTB) provides digital access to all school textbooks, ensuring uninterrupted availability.
+    - Research and Skill Development: Computer labs foster coding, software development, and freelance technical skills among tertiary students.
+
+4. **English: “50 years of bangladesh achievement and progress”** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 376]]*
+
+Answer: Since gaining independence in 1971, Bangladesh has achieved remarkable socio-economic transformations across five decades. Emerging from war devastation and poverty, the nation has evolved into a rapidly growing developing economy. Key milestones include achieving food self-sufficiency, reducing maternal and infant mortality rates, and attaining near-universal primary school enrollment with gender parity. The ready-made garments (RMG) sector and remittance inflows from migrant workers serve as economic pillars. In infrastructure, mega-projects such as the Padma Multipurpose Bridge, Dhaka Metro Rail, Bangabandhu Tunnel, and Rooppur Nuclear Power Plant demonstrate growing self-reliance. In information technology, widespread mobile financial services (bKash, Nagad), submarine cable expansions, and nationwide digitisation have laid the foundation for an inclusive digital economy.
+
+5. **“Smart Bangladesh” সংক্ষেপে আলোচনা করুন।** *[National Skills Development Authority – NSDA Post: Programmer; Date: 10 March, 2024 Exam Taker: NSDA; Total:90 GK:60, T:30 [bitbox it book 377]]*
 
 Answer: "স্মার্ট বাংলাদেশ" হলো ২০৪১ সালের মধ্যে বাংলাদেশকে একটি সাশ্রয়ী, টেকসই, জ্ঞানভিত্তিক ও উদ্ভাবনী উন্নত রাষ্ট্রে রূপান্তরের জাতীয় ভিশন। এটি মূলত চারটি মূল স্তম্ভের ওপর প্রতিষ্ঠিত:
 
@@ -4321,19 +4361,7 @@ Answer: "স্মার্ট বাংলাদেশ" হলো ২০৪১ 
     - ৩. স্মার্ট ইকোনমি (Smart Economy): ক্যাশলেস লেনদেন, ব্লকচেইন, এআই ও আইওটিভিত্তিক আধুনিক শিল্পায়ন, ফ্রিল্যান্সিং এবং স্টার্টআপ ইকোসিস্টেম গড়ে তোলা।
     - ৪. স্মার্ট সোসাইটি (Smart Society): অন্তর্ভুক্তিমূলক ও বৈষম্যহীন সমাজ যেখানে নাগরিক অধিকার, সাইবার নিরাপত্তা এবং ডিজিটাল স্বাস্থ্যসেবা নিশ্চিত থাকবে।
 
-13. **Write the difference between WPA firewall and Network Firewall.** *[BR-Powergen Post: Assistant Engineer Date: 29 March, 2024 Exam Taker: BUET Marks: GK:60; Written: 5*8=40 [bitbox it book 385]]*
-
-Answer: (Note: In network security, WPA refers to Web Application Firewall - WAF / Wireless Protected Access. In the context of firewalls, it compares Web Application Firewall vs Network Firewall):
-
-    | Feature | Web Application Firewall (WAF) | Traditional Network Firewall |
-    |---|---|---|
-    | OSI Layer | Operates at Layer 7 (Application Layer) | Operates at Layers 3 (Network) and 4 (Transport) |
-    | Traffic Inspected | Deeply inspects HTTP/HTTPS traffic, payloads, URLs, and cookies | Inspects packet IP headers, port numbers, and TCP/UDP flags |
-    | Attack Defense | Defends against SQLi, XSS, CSRF, and OWASP Top 10 vulnerabilities | Defends against port scanning, unauthorized IP access, and DoS attacks |
-    | Inspection Depth | Deep packet and content inspection (understands application logic) | Packet filtering and stateful connection tracking |
-    | Deployment Position | Positioned in front of web servers and web applications | Positioned at network perimeters, routers, and gateway boundaries |
-
-14. **Focus Writing in English “Technology and Banking Sector of Bangladesh”** *[compact it 523]*
+6. **Focus Writing in English “Technology and Banking Sector of Bangladesh”** *[compact it 523]*
 
 Answer: Technology has revolutionized the banking sector of Bangladesh, transitioning conventional branch-based banking into an agile, digital financial ecosystem. The widespread adoption of core banking solutions (CBS), automated teller machines (ATMs), and national payment switches (NPSB, BEFTN, RTGS) allows instant interbank clearing and electronic funds settlement. Moreover, Mobile Financial Services (MFS) platforms like bKash and Nagad, along with Agent Banking, have driven financial inclusion by connecting millions of unbanked rural citizens to formal financial systems. Bangladeshi commercial banks are actively deploying artificial intelligence for automated fraud detection, biometric e-KYC for instant paperless account opening, and mobile banking apps for 24/7 utility and retail payments. As digital transaction volume surges, strict adherence to cybersecurity guidelines, data privacy frameworks, and cloud infrastructure adoption remain imperative for maintaining long-term systemic stability.
 
