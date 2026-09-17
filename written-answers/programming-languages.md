@@ -145,61 +145,28 @@ Answer:
 1. **What is .NET framework? Write down the different component of .NET Framework.** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1056 (ET: AUST)]*, *[Probashi Kallyan Bank Programmer 2019 compact it 1158 (ET: AUST)]*
 
 Answer: What the .NET Framework is
-   - The `.NET Framework` is a software platform from Microsoft for building and running applications on Windows. It provides a `runtime` that executes the code and a large `class library` of ready-made functions, so the programmer does not rewrite common work.
-   ```
-      Key idea : LANGUAGE INDEPENDENCE.
-
-      C# , VB.NET , F# , C++/CLI all compile to the SAME intermediate
-      language (CIL), so a class written in VB.NET can be inherited by
-      a C# class.
-
-      C# source ---+
-      VB.NET src --+---> compiler ---> CIL + metadata ---> CLR ---> native
-      F# source ---+                   (an ASSEMBLY)       JIT      code
-   ```
+   - The `.NET Framework` is Microsoft's platform for building and running applications on Windows: a `runtime` that executes code plus a large `class library` of ready-made functionality. Its defining feature is `language independence` — C#, VB.NET, F#, C++/CLI all compile to the same intermediate language (CIL), so a VB.NET class can be inherited by a C# class.
 
    The components
    ```
-      1. CLR - COMMON LANGUAGE RUNTIME
-           The execution engine, the heart of .NET. It provides :
-             JIT compilation - CIL to native machine code
-             GARBAGE COLLECTION - automatic memory management
-             exception handling , thread management
-             type safety and code access security
-
-      2. CTS - COMMON TYPE SYSTEM
-           Defines how types are declared and used, so that an int in
-           C# and an Integer in VB.NET are the SAME type underneath.
-           This is what makes cross-language inheritance possible.
-
-      3. CLS - COMMON LANGUAGE SPECIFICATION
-           A SUBSET of CTS - the minimum rules every .NET language must
-           follow so its code can be used from any other .NET language.
-           C# is case-sensitive and VB.NET is not, so a CLS-compliant
-           public API must not rely on case alone to distinguish names.
-
-      4. BCL - BASE CLASS LIBRARY
-           The core classes : System, collections, file I/O, strings,
-           threading, networking.
-
-      5. FCL - FRAMEWORK CLASS LIBRARY
-           The wider library, which INCLUDES the BCL and adds
-           ASP.NET (web), ADO.NET (database), Windows Forms and WPF
-           (desktop UI), LINQ, XML and WCF.
-
-      6. CIL / MSIL - COMMON INTERMEDIATE LANGUAGE
-           The CPU-independent code every .NET compiler produces.
-
-      7. ASSEMBLIES
-           The unit of deployment - a .dll or .exe holding CIL,
-           metadata, a manifest and resources.
-
-      8. JIT COMPILER
-           Converts CIL to native code method by method, only when the
-           method is first called.
-
-      9. CAS - CODE ACCESS SECURITY
-           Restricts what code may do, based on where it came from.
+      1. CLR  - Common Language Runtime: execution engine - JIT
+                compilation, garbage collection, exception handling,
+                type safety, thread management, security.
+      2. CTS  - Common Type System: makes C# int / VB.NET Integer the
+                same type underneath, enabling cross-language use.
+      3. CLS  - Common Language Specification: subset of CTS - the
+                minimum rules every .NET language must follow.
+      4. BCL  - Base Class Library: System, collections, file I/O,
+                threading, networking.
+      5. FCL  - Framework Class Library: BCL + ASP.NET, ADO.NET,
+                WinForms/WPF, LINQ, XML, WCF.
+      6. CIL/MSIL - CPU-independent intermediate code every compiler
+                produces.
+      7. ASSEMBLIES - unit of deployment (.dll/.exe): CIL + metadata
+                + manifest.
+      8. JIT COMPILER - converts CIL to native code, method by method,
+                on first call.
+      9. CAS  - Code Access Security: restricts code by its origin.
    ```
 
    Architecture
@@ -215,73 +182,43 @@ Answer: What the .NET Framework is
       |               Windows Operating System          |
       +------------------------------------------------+
    ```
-   - `Managed code` is code the CLR runs and looks after: memory, type safety and security are all handled for you. `Unmanaged code` runs outside the CLR and manages its own memory.
-   - Note the successor: `.NET Core`, and now simply `.NET` (5, 6, 7 and later), is `cross-platform` and open source, running on Windows, Linux and macOS. The classic `.NET Framework` is Windows-only and is no longer given new features.
+   - `Managed code` runs under the CLR (memory, type safety, security handled for you); `unmanaged code` manages its own memory.
+   - Successor: `.NET Core`/`.NET` (5, 6, 7+) is cross-platform and open source; the classic Framework is Windows-only and gets no new features.
 
 2. **What is CLR in .NET framework? List the components of .NET Framework.** *[Bangladesh Television Assistant Programmer 2019 compact it 1066 (ET: N/A)]*, *[Investment Corporation Bangladesh Assistant Programmer 2017 compact it 1216 (ET: N/A)]*
 
 Answer: What CLR is
-   - `CLR` stands for `Common Language Runtime`. It is the execution engine of the .NET Framework — the virtual machine that actually runs .NET programs. Code that runs under it is called `managed code`, because the CLR manages its memory, type safety and security.
-   ```
-      C# source ---+
-      VB.NET src --+--> compiler --> CIL + metadata --> CLR --> native
-      F# source ---+                 (an ASSEMBLY)      JIT     code
-                                                               |
-                                                               v
-                                                             RUNS
-   ```
+   - `CLR` (Common Language Runtime) is the .NET Framework's execution engine — the virtual machine that runs .NET programs. Code running under it is `managed code`: the CLR manages its memory, type safety and security.
 
    What the CLR does
    ```
-      JIT COMPILATION
-           Converts CIL (intermediate language) into native machine
-           code, method by method, the first time each method is
-           called. The compiled result is cached, so it is compiled
-           once, not every time.
-
-      GARBAGE COLLECTION
-           Frees objects no longer referenced. The programmer never
-           calls delete, so memory leaks and dangling pointers largely
-           disappear.
-
-      MEMORY MANAGEMENT
-           Allocates on the managed heap and compacts it.
-
-      TYPE SAFETY
-           Verifies that code does not read memory it does not own -
-           no pointer arithmetic in ordinary managed code.
-
-      EXCEPTION HANDLING
-           One exception model shared by every .NET language, so a C#
-           try-catch can catch an exception thrown by VB.NET code.
-
-      THREAD MANAGEMENT
-           Thread pool, synchronisation, async support.
-
-      SECURITY
-           Code Access Security - what code may do depends on where it
-           came from.
-
-      LANGUAGE INTEROPERABILITY
-           Because all languages compile to the same CIL, a VB.NET
-           class can be inherited by a C# class.
+      JIT COMPILATION    - compiles CIL to native code per method, on
+                           first call; the result is cached.
+      GARBAGE COLLECTION - frees unreferenced objects automatically.
+      MEMORY MANAGEMENT  - allocates/compacts the managed heap.
+      TYPE SAFETY        - no raw pointer arithmetic in managed code.
+      EXCEPTION HANDLING - one model shared by every .NET language.
+      THREAD MANAGEMENT  - thread pool, sync, async support.
+      SECURITY (CAS)     - what code may do depends on its origin.
+      INTEROPERABILITY   - all languages share CIL, so a VB.NET class
+                           can be inherited by a C# class.
    ```
 
    The components of the .NET Framework
    ```
       1. CLR   Common Language Runtime - the execution engine.
-      2. CTS   Common Type System - how types are declared and used, so
-               C# int and VB.NET Integer are the same type underneath.
-      3. CLS   Common Language Specification - a SUBSET of CTS ; the
-               minimum rules a language must follow to interoperate.
+      2. CTS   Common Type System - C# int and VB.NET Integer are the
+               same type underneath.
+      3. CLS   Common Language Specification - subset of CTS; minimum
+               interoperability rules.
       4. BCL   Base Class Library - System, collections, file I/O,
-               strings, threading, networking.
-      5. FCL   Framework Class Library - includes the BCL and adds
-               ASP.NET, ADO.NET, Windows Forms, WPF, LINQ, XML, WCF.
-      6. CIL   Common Intermediate Language - the CPU-independent code
-               every .NET compiler emits.
-      7. ASSEMBLIES - the unit of deployment : a .dll or .exe holding
-               CIL, metadata, a manifest and resources.
+               threading, networking.
+      5. FCL   Framework Class Library - BCL + ASP.NET, ADO.NET,
+               WinForms, WPF, LINQ, XML, WCF.
+      6. CIL   Common Intermediate Language - CPU-independent code
+               every compiler emits.
+      7. ASSEMBLIES - unit of deployment: .dll/.exe with CIL, metadata,
+               manifest.
       8. JIT COMPILER - CIL to native code, on demand.
       9. CAS   Code Access Security.
    ```
@@ -298,54 +235,33 @@ Answer: What CLR is
       |              Windows Operating System           |
       +------------------------------------------------+
    ```
-   - The comparison usually expected: the CLR is to .NET what the `JVM` is to Java. The important difference is that the JVM was designed for one language and many platforms, while the CLR was designed for `many languages` on one platform — though `.NET Core` has since made it cross-platform too.
+   - The CLR is to .NET what the `JVM` is to Java, but the JVM targets one language on many platforms, while the CLR was designed for `many languages` on one platform (though `.NET Core` made it cross-platform too).
 
 3. **List the components of .NET Framework.** *[Combined Bank (HBFC and BKB) Assistant Programmer 2018 compact it 1162 (ET: N/A)]*
 
 Answer: The components of the .NET Framework
    ```
-      1. CLR - COMMON LANGUAGE RUNTIME
-           The execution engine, the core of .NET. It provides JIT
-           compilation, garbage collection, memory management, type
-           safety, exception handling, thread management and security.
-
-      2. CTS - COMMON TYPE SYSTEM
-           Defines how types are declared, used and managed, so C#
-           int and VB.NET Integer are the SAME type underneath. This
-           is what makes cross-language inheritance work.
-
-      3. CLS - COMMON LANGUAGE SPECIFICATION
-           A SUBSET of CTS - the minimum rules every .NET language
-           must follow to interoperate. A CLS-compliant public API,
-           for example, must not distinguish two names by CASE alone,
-           because VB.NET is not case-sensitive.
-
-      4. BCL - BASE CLASS LIBRARY
-           The core classes : System, collections, strings, file I/O,
-           threading, networking.
-
-      5. FCL - FRAMEWORK CLASS LIBRARY
-           The full library. It INCLUDES the BCL and adds ASP.NET for
-           web, ADO.NET for databases, Windows Forms and WPF for
-           desktop UI, plus LINQ, XML and WCF.
-
-      6. CIL / MSIL - COMMON INTERMEDIATE LANGUAGE
-           The CPU-independent code that every .NET compiler produces.
-
-      7. ASSEMBLIES
-           The unit of deployment - a .dll or .exe containing CIL,
-           metadata, a manifest and resources.
-
-      8. JIT COMPILER
-           Turns CIL into native machine code, method by method, the
-           first time each method is called. The result is cached.
-
-      9. CAS - CODE ACCESS SECURITY
-           Limits what code may do according to where it came from.
-
-     10. COMMON LANGUAGE INFRASTRUCTURE (CLI)
-           The published standard (ECMA-335) that the whole design
-           follows.
+      1. CLR   Common Language Runtime - execution engine: JIT
+               compilation, garbage collection, memory management,
+               type safety, exception handling, threading, security.
+      2. CTS   Common Type System - C# int and VB.NET Integer are the
+               same type underneath, enabling cross-language inheritance.
+      3. CLS   Common Language Specification - subset of CTS; minimum
+               rules every .NET language must follow to interoperate.
+      4. BCL   Base Class Library - System, collections, strings,
+               file I/O, threading, networking.
+      5. FCL   Framework Class Library - includes BCL, plus ASP.NET
+               (web), ADO.NET (database), WinForms/WPF (desktop),
+               LINQ, XML, WCF.
+      6. CIL/MSIL - Common Intermediate Language: CPU-independent code
+               every compiler produces.
+      7. ASSEMBLIES - unit of deployment: .dll/.exe with CIL, metadata,
+               manifest, resources.
+      8. JIT COMPILER - CIL to native code, method by method, cached
+               after first call.
+      9. CAS   Code Access Security - limits code by its origin.
+     10. CLI   Common Language Infrastructure - the published standard
+               (ECMA-335) the whole design follows.
    ```
 
    Architecture
@@ -361,18 +277,7 @@ Answer: The components of the .NET Framework
       |              Windows Operating System           |
       +------------------------------------------------+
    ```
-
-   How a program runs
-   ```
-      C# / VB.NET source
-           |  language compiler
-           v
-      CIL + metadata , packaged as an ASSEMBLY (.dll / .exe)
-           |  CLR loads it , JIT compiles it
-           v
-      NATIVE MACHINE CODE  ->  executes , with the GC managing memory
-   ```
-   - The two components examiners ask to be distinguished are `CTS` and `CLS`. `CTS` is the complete type system; `CLS` is the smaller set of rules that guarantees interoperability. Every CLS rule is a CTS rule, but not the reverse.
+   - The pair examiners often ask to distinguish: `CTS` is the complete type system; `CLS` is the smaller subset of rules that guarantees cross-language interoperability — every CLS rule is a CTS rule, not the reverse.
 
 4. **Write down the component of .NET Framework.** *[Pubali Bank Ltd. Senior Officer (SD) 2018 compact it 1175 (ET: N/A)]*
 
@@ -491,78 +396,48 @@ Answer: What garbage collection is
 
    The key change
    ```
-      BEFORE .NET 4 - CONCURRENT GC
-           A dedicated background thread collected Gen 2 while the
-           program ran. BUT if the program needed a Gen 0 or Gen 1
-           collection while that was in progress, the program's
-           threads were BLOCKED until the Gen 2 pass finished.
+      BEFORE .NET 4 (Concurrent GC): a background thread collected
+      Gen 2, but a needed Gen 0/1 collection during that pass BLOCKED
+      the program's threads until it finished.
 
-      .NET 4 - BACKGROUND GC
-           An EPHEMERAL collection (Gen 0 or Gen 1) can now run IN THE
-           MIDDLE of a background Gen 2 collection. The application no
-           longer has to wait for the long Gen 2 pass, so pauses are
-           much shorter.
-
-           This is why .NET 4 was a real improvement for interactive
-           and latency-sensitive applications.
+      .NET 4 (Background GC): an ephemeral Gen 0/1 collection can now
+      run IN THE MIDDLE of a background Gen 2 pass, so the app no
+      longer waits - pauses are much shorter, a real win for
+      interactive / latency-sensitive apps.
    ```
 
    Other .NET 4 additions
    ```
-      GC.Collect(gen, GCCollectionMode.Optimized)  - ask the runtime
-           to collect only if it would actually be worthwhile.
-      GCSettings.LatencyMode , including SustainedLowLatency in 4.5,
-           to suppress blocking Gen 2 collections during a critical
-           phase.
-      Better handling of the Large Object Heap , with LOH compaction
-           made available later, in .NET 4.5.1.
+      GC.Collect(gen, GCCollectionMode.Optimized) - collect only if
+           worthwhile.
+      GCSettings.LatencyMode (SustainedLowLatency in 4.5) - suppress
+           blocking Gen 2 collections during a critical phase.
+      LOH compaction added later, in .NET 4.5.1.
    ```
 
-   - Two practical points. First, the GC handles `managed memory` only — file handles, database connections and sockets are `unmanaged` and must be released by `Dispose()`, usually through a `using` block. Second, calling `GC.Collect()` by hand is almost always a mistake: it forces a full collection and usually makes performance worse, because the GC's own heuristics are better than a guess.
+   - Two practical points: the GC manages `managed memory` only — unmanaged resources (files, sockets, DB connections) still need `Dispose()`/`using`. And calling `GC.Collect()` manually is usually a mistake, since it forces a full collection that the GC's own heuristics would normally avoid.
 
 6. **What is .NET framework? Write the main components of .NET framework?** *[Agrani Bank Ltd. Officer (ICT) 2017 compact it 1224 (ET: N/A)]*
 
 Answer: What the .NET Framework is
-   - The `.NET Framework` is Microsoft's platform for building and running applications on Windows. It supplies a `runtime` that executes the code and a large `class library` of ready-made functionality, so common work is not written again from scratch.
-   ```
-      Its defining feature is LANGUAGE INDEPENDENCE :
-
-      C# source ---+
-      VB.NET src --+--> compiler --> CIL + metadata --> CLR --> native
-      F# source ---+                 (an ASSEMBLY)      JIT     code
-
-      All languages compile to the SAME intermediate language, so a
-      class written in VB.NET can be inherited by a C# class.
-   ```
-   - What it gives the developer: `automatic memory management` through garbage collection, `type safety`, a uniform `exception model` across languages, and a very large standard library.
+   - The `.NET Framework` is Microsoft's platform for building and running applications on Windows: a `runtime` that executes the code plus a large `class library` of ready-made functionality. Its defining feature is `language independence` — C#, VB.NET and F# all compile to the same intermediate language (CIL), so a VB.NET class can be inherited by a C# class. It also gives the developer automatic memory management (GC), type safety and a uniform exception model across languages.
 
    The main components
    ```
-      1. CLR - COMMON LANGUAGE RUNTIME
-           The execution engine and the heart of .NET. Provides JIT
-           compilation, garbage collection, type safety, exception
-           handling, thread management and security.
-
-      2. CTS - COMMON TYPE SYSTEM
-           How types are declared and used, so C# int and VB.NET
-           Integer are one and the same type underneath.
-
-      3. CLS - COMMON LANGUAGE SPECIFICATION
-           A SUBSET of CTS - the minimum rules a language must follow
-           so its code can be consumed from any other .NET language.
-
-      4. BCL - BASE CLASS LIBRARY
-           System, collections, strings, file I/O, threading,
-           networking.
-
-      5. FCL - FRAMEWORK CLASS LIBRARY
-           Includes the BCL and adds ASP.NET (web), ADO.NET
-           (database), Windows Forms and WPF (desktop UI), LINQ, XML
-           and WCF.
-
-      6. CIL / MSIL - the CPU-independent intermediate code.
-      7. ASSEMBLIES - the .dll or .exe unit of deployment, holding
-           CIL, metadata, a manifest and resources.
+      1. CLR - Common Language Runtime: execution engine - JIT
+               compilation, garbage collection, type safety, exception
+               handling, thread management, security.
+      2. CTS - Common Type System: C# int and VB.NET Integer are one
+               and the same type underneath.
+      3. CLS - Common Language Specification: subset of CTS - minimum
+               rules so code is consumable from any .NET language.
+      4. BCL - Base Class Library: System, collections, strings,
+               file I/O, threading, networking.
+      5. FCL - Framework Class Library: BCL + ASP.NET (web), ADO.NET
+               (database), WinForms/WPF (desktop UI), LINQ, XML, WCF.
+      6. CIL/MSIL - the CPU-independent intermediate code.
+      7. ASSEMBLIES - the .dll/.exe unit of deployment, holding CIL,
+               metadata, a manifest and resources.
       8. JIT COMPILER - CIL to native code, method by method.
       9. CAS - Code Access Security.
    ```
@@ -580,5 +455,4 @@ Answer: What the .NET Framework is
       |              Windows Operating System           |
       +------------------------------------------------+
    ```
-   - The distinction to state clearly: `managed code` runs under the CLR, which looks after its memory, types and security; `unmanaged code` runs outside it and manages its own memory.
-   - Worth one line at the end: the classic `.NET Framework` is Windows-only and receives no new features. Its successor, `.NET Core` — now simply `.NET` 5, 6, 7 and later — is open source and `cross-platform`, running on Windows, Linux and macOS.
+   - `Managed code` runs under the CLR, which handles its memory, types and security; `unmanaged code` manages its own. The classic `.NET Framework` is Windows-only with no new features; its successor `.NET Core`/`.NET` (5, 6, 7+) is open source and cross-platform.

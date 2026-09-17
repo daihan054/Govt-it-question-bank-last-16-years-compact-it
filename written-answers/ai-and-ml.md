@@ -435,7 +435,7 @@ Answer: Artificial Intelligence (AI) is the technology that lets machines perfor
 
 2. **An artificial intelligence is an agent is an entity that continuously revious its enviornment.....** *[BPDB Assistant Engineer (CSE) 24.02.2023 compact it 449 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the sentence was cut off in the paper. It is the standard definition of an `intelligent agent`, and the full statement and its explanation are given below.
+Answer: The question is `incomplete` — the sentence was cut off in the paper. It is the standard definition of an `intelligent agent` (Russell & Norvig), given below with a short explanation.
 
    The complete definition
    ```
@@ -443,9 +443,8 @@ Answer: The question is `incomplete` — the sentence was cut off in the paper. 
        environment through SENSORS and ACTS upon that environment through
        ACTUATORS, so as to achieve its goal."
    ```
-   - This is the definition given by Russell and Norvig in `Artificial Intelligence: A Modern Approach`, the standard text.
 
-   The structure of an agent
+   Structure of an agent
    ```mermaid
    flowchart LR
        E[ENVIRONMENT] -->|percepts| S[Sensors]
@@ -453,82 +452,29 @@ Answer: The question is `incomplete` — the sentence was cut off in the paper. 
        A --> AC[Actuators]
        AC -->|actions| E
    ```
+   - PERCEPT SEQUENCE — everything perceived so far; AGENT FUNCTION — maps it to an action; ACTUATOR — how the agent acts on the environment.
+
+   PEAS (used to specify any agent): **P**erformance measure, **E**nvironment, **A**ctuators, **S**ensors.
    ```
-      PERCEPT          : what the agent senses at one instant
-      PERCEPT SEQUENCE : everything it has ever perceived
-      AGENT FUNCTION   : maps the percept sequence to an action
-      AGENT PROGRAM    : the concrete implementation of that function
-      ACTUATOR         : how the agent changes the environment
+      Self-driving taxi :
+         P: safety, speed, legality, comfort   E: roads, traffic, weather
+         A: steering, brake, accelerator       S: camera, LIDAR, GPS
    ```
 
-   The PEAS description, used to specify any agent
+   Types of agent (increasing capability)
    ```
-      P - Performance measure : how success is judged
-      E - Environment         : where it operates
-      A - Actuators           : what it can do
-      S - Sensors             : what it can perceive
-   ```
-   ```
-      Example - a self-driving taxi :
-         P : safety , speed , legality , passenger comfort , profit
-         E : roads , traffic , pedestrians , weather
-         A : steering , accelerator , brake , indicator , horn
-         S : cameras , LIDAR , GPS , speedometer , engine sensors
+      1. Simple reflex     - acts on current percept only (condition-action rule)
+      2. Model-based       - keeps internal state of the unseen world
+      3. Goal-based        - also holds a goal; needs search/planning
+      4. Utility-based     - has a utility function to rank competing goals
+      5. Learning agent    - improves via learning + performance + critic + problem generator
    ```
 
-   Types of agent, in increasing order of capability
-   ```
-      1. SIMPLE REFLEX AGENT
-         Acts only on the CURRENT percept, using condition-action rules.
-         "If the car in front is braking, then brake."
-         Fails whenever the environment is partially observable.
+   Environment properties: fully/partially observable, deterministic/stochastic, episodic/sequential, static/dynamic, discrete/continuous, single/multi-agent.
 
-      2. MODEL-BASED REFLEX AGENT
-         Keeps an INTERNAL STATE representing the part of the world it
-         cannot currently see, updated by a model of how the world works.
+   **Rationality**: a rational agent picks, for every percept sequence, the action expected to maximise its performance measure given what it knows — rational is not the same as omniscient.
 
-      3. GOAL-BASED AGENT
-         Also holds a GOAL, and chooses actions that move towards it.
-         Needs search and planning.
-
-      4. UTILITY-BASED AGENT
-         Holds a UTILITY FUNCTION, so it can choose between several goal
-         states and act rationally when goals conflict or are uncertain.
-
-      5. LEARNING AGENT
-         Improves its own performance from experience. It has four parts :
-         the learning element, the performance element, the critic and
-         the problem generator.
-   ```
-
-   Properties of an environment
-   ```
-      Fully  vs Partially observable   : can the agent see everything?
-      Deterministic vs Stochastic      : is the next state predictable?
-      Episodic vs Sequential           : do past actions matter?
-      Static vs Dynamic                : does the world change while it thinks?
-      Discrete vs Continuous           : finite states, or continuous ones?
-      Single agent vs Multi agent      : are there other agents?
-   ```
-   ```
-      Chess          : fully observable , deterministic , sequential ,
-                       static , discrete , multi agent
-      Self-driving   : partially observable , stochastic , sequential ,
-                       dynamic , continuous , multi agent  - the hardest case
-   ```
-
-   Rationality
-   ```
-      A RATIONAL AGENT is one that, for every possible percept sequence,
-      selects the action expected to MAXIMISE its performance measure,
-      given the evidence it has and whatever knowledge it was built with.
-
-      Rational is NOT the same as omniscient. An agent that looks both ways
-      and is still hit by a falling object acted rationally; it simply
-      could not have known.
-   ```
-
-   - Examples of agents worth naming: a `thermostat` (simple reflex), a `robot vacuum cleaner` (model-based), a `chess program` (goal-based), a `route planner` (utility-based) and a `spam filter` (learning agent).
+   Examples: `thermostat` (simple reflex), `robot vacuum` (model-based), `chess program` (goal-based), `route planner` (utility-based), `spam filter` (learning agent).
 
 3. **Write PEAS for (a) Auto taxi (b) Automatic clinical test.** *[BIWTA Assistant Engineer (CSE) 24.02.2023 compact it 457 (ET: BUET)]*
 

@@ -17,29 +17,21 @@
 
 1. **(ক) Vector এবং Raster graphics- এর সংজ্ঞাসহ পার্থক্য লিখুন।** *[প্রাসঙ্গিক টেকনিক্যাল, বিষয় কোড: ১০৫, মান: ৮০ - পাসপোর্ট অফিস সহকারী প্রোগ্রামার এক্সাম: ২০২৪]*
 
-Answer: (Answered in English, as required for IT topics.) Vector graphics
-   - An image described by `mathematical objects` — points, lines, curves and polygons — each with its own coordinates, colour and thickness. The file stores the `instructions to draw` the picture, not the picture itself.
-   - Because the picture is redrawn from equations at whatever size is asked for, it can be scaled to any size with `no loss of quality`.
-   - Formats: `SVG, AI, EPS, PDF, CDR`.
+Answer: (Answered in English, as required for IT topics.) `Vector graphics` describes an image with `mathematical objects` — points, lines, curves and polygons — each with its own coordinates, colour and thickness. The file stores instructions to draw the picture, not the picture itself, so it is redrawn from equations at any size with `no loss of quality`. Formats: `SVG, AI, EPS, PDF, CDR`.
 
-   Raster graphics
-   - An image stored as a `grid of pixels`, each holding a colour value. Also called a bitmap.
-   - The number of pixels is fixed at creation, so enlarging the image stretches those pixels and the result looks blocky — `pixelation`.
-   - Formats: `JPEG, PNG, GIF, BMP, TIFF`.
+   `Raster graphics` stores an image as a `grid of pixels`, each holding a colour value (a bitmap). Pixel count is fixed at creation, so enlarging stretches the pixels and looks blocky — `pixelation`. Formats: `JPEG, PNG, GIF, BMP, TIFF`.
 
    ```
-      Vector : a circle stored as  centre (50,50), radius 25, red
+      Vector : a circle = centre (50,50), radius 25, red
                -> a few bytes, redrawn perfectly at any size
 
-      Raster : the same circle stored as
+      Raster : the same circle as pixel values
                +--+--+--+--+--+
                |  |##|##|  |  |
-               +--+--+--+--+--+     -> one value per pixel, fixed resolution
+               +--+--+--+--+--+     -> fixed resolution
                |##|##|##|##|  |
                +--+--+--+--+--+
    ```
-
-   Difference
 
    | Point | Vector graphics | Raster graphics |
    |---|---|---|
@@ -47,29 +39,18 @@ Answer: (Answered in English, as required for IT topics.) Vector graphics
    | Scaling | Any size, no quality loss | Enlarging causes pixelation |
    | Resolution | Independent | Fixed at creation |
    | File size | Small for simple artwork | Large, grows with resolution |
-   | Editing | Each object edited separately | Pixels edited; objects are not separable |
-   | Best for | Logos, text, icons, maps, CAD drawings | Photographs, scanned images, realistic scenes |
-   | Colour detail | Limited; hard to show subtle gradation | Excellent; every pixel has its own colour |
-   | Rendering | Must be computed each time — slower | Displayed directly — faster |
-   | Formats | SVG, AI, EPS, PDF, CDR | JPEG, PNG, GIF, BMP, TIFF |
+   | Editing | Each object edited separately | Pixels edited; not separable |
+   | Best for | Logos, text, icons, CAD drawings | Photographs, scanned images |
+   | Rendering | Computed each time — slower | Displayed directly — faster |
    | Software | Illustrator, CorelDRAW, Inkscape | Photoshop, GIMP, MS Paint |
 
-   - Practical point: a logo must be `vector`, so it prints correctly on a business card and on a billboard from the same file. A photograph must be `raster`, because no equation can describe the millions of subtly different colours in a real scene.
-   - Conversion is easy one way and hard the other: vector to raster is `rasterization` and happens whenever a vector image is displayed; raster to vector needs `tracing`, which is approximate.
+   - A logo stays `vector` so it prints sharp on a business card and a billboard from the same file; a photograph must be `raster`, since no equation can describe the millions of subtly different colours in a real scene.
 
 2. **(b) Differentiate between vector graphics and raster graphics. What are the applications of computer Graphics?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 888-889 (ET: N/A)]*
 
-Answer: Vector graphics
-   - The image is described by `mathematical objects` — points, lines, curves and polygons — each with coordinates, colour and thickness. The file stores the instructions to draw the picture.
-   - It is redrawn from those equations at whatever size is requested, so it scales to any size with `no loss of quality`.
-   - Formats: `SVG, AI, EPS, PDF, CDR`.
+Answer: `Vector graphics` describes an image with mathematical objects — points, lines, curves and polygons — each with coordinates, colour and thickness. It is redrawn from equations at any size, so it scales with `no loss of quality`. Formats: `SVG, AI, EPS, PDF, CDR`.
 
-   Raster graphics
-   - The image is a `grid of pixels`, each storing a colour value. Also called a bitmap.
-   - The pixel count is fixed at creation, so enlarging stretches the pixels and the result becomes blocky — `pixelation`.
-   - Formats: `JPEG, PNG, GIF, BMP, TIFF`.
-
-   Difference
+   `Raster graphics` stores an image as a `grid of pixels` (a bitmap), each holding a colour value. Pixel count is fixed at creation, so enlarging stretches the pixels and causes `pixelation`. Formats: `JPEG, PNG, GIF, BMP, TIFF`.
 
    | Point | Vector graphics | Raster graphics |
    |---|---|---|
@@ -79,25 +60,23 @@ Answer: Vector graphics
    | File size | Small for simple artwork | Large, grows with resolution |
    | Editing | Objects edited individually | Pixel-level editing only |
    | Best for | Logos, icons, text, maps, CAD | Photographs, scans, realistic images |
-   | Colour detail | Limited gradation | Excellent, per-pixel colour |
    | Display speed | Slower — must be computed | Faster — shown directly |
    | Software | Illustrator, CorelDRAW, Inkscape | Photoshop, GIMP |
 
    Applications of computer graphics
-   - `User interfaces` — every window, icon, menu and button on a screen is computer graphics. This is by far the largest use.
-   - `CAD and CAM` — designing buildings, machines, circuits and vehicles, with automatic dimensioning and 3D visualisation before anything is built.
-   - `Entertainment` — video games, animated films, visual effects, and the real-time 3D rendering behind them.
-   - `Medical imaging` — reconstructing CT, MRI and ultrasound scans into 2D slices and 3D models for diagnosis and surgical planning.
-   - `Scientific visualisation` — turning simulation data into pictures: weather models, fluid flow, molecular structure, finite element analysis.
-   - `Presentation graphics` — charts, graphs and infographics that make numerical data understandable.
-   - `GIS and cartography` — digital maps, satellite imagery, route planning and navigation.
-   - `Simulation and training` — flight simulators, driving simulators, and military and surgical training systems, where real practice would be dangerous or costly.
-   - `Virtual and augmented reality` — immersive environments for training, design review, retail and gaming.
-   - `Image processing` — enhancing, restoring and analysing photographs and satellite images.
-   - `Desktop publishing and advertising` — layout of books, newspapers, posters and packaging.
-   - `Textile, architecture and fashion design` — pattern design and photorealistic preview before manufacture.
+   - `User interfaces` — windows, icons, menus, buttons (the largest use).
+   - `CAD/CAM` — designing buildings, machines, circuits, vehicles.
+   - `Entertainment` — games, animated films, visual effects, real-time 3D rendering.
+   - `Medical imaging` — CT/MRI/ultrasound reconstruction for diagnosis.
+   - `Scientific visualisation` — weather models, fluid flow, molecular structure.
+   - `Presentation graphics` — charts and infographics.
+   - `GIS/cartography` — digital maps, satellite imagery, navigation.
+   - `Simulation/training` — flight and driving simulators, surgical training.
+   - `Virtual/augmented reality` — immersive training, design review, gaming.
+   - `Image processing` — enhancing and analysing photographs, satellite images.
+   - `Desktop publishing` — layout of books, posters, packaging.
 
-   - The two forms are used together in practice: an advertisement uses `vector` for the logo and text so they stay sharp at any size, and `raster` for the photograph.
+   - In practice both are combined: an advertisement uses `vector` for the sharp logo/text and `raster` for the photograph.
 
 3. **Raster Image কাকে বলে?** *[BPSC Ministry of Women and Children Affairs Computer Trainer 2021 compact it 944 (ET: N/A)]*
 
@@ -127,13 +106,8 @@ Answer: (Answered in English, as required for IT topics.) A `raster image` is an
       24 bit  :  16.7 million colours (8 bits each for R, G and B)
       32 bit  :  24-bit colour plus an 8-bit alpha (transparency) channel
    ```
-   - `File size` grows with both:
-   ```
-      Size = width x height x bit depth / 8   bytes
-
-      1920 x 1080 x 24 / 8 = 6,220,800 bytes ~= 6 MB uncompressed
-   ```
-   - `Scaling` — enlarging a raster image stretches its fixed pixels, so the result looks blocky. This is `pixelation`, the main limitation of the format.
+   - `File size` grows with both: `Size = width x height x bit depth / 8` bytes, e.g. 1920x1080x24/8 ~= 6 MB uncompressed.
+   - `Scaling` — enlarging stretches the fixed pixels, causing `pixelation`, the format's main limitation.
 
    Formats
    ```
@@ -142,13 +116,9 @@ Answer: (Answered in English, as required for IT topics.) A `raster image` is an
       GIF  : 256 colours, supports simple animation
       BMP  : uncompressed, very large
       TIFF : lossless, used in printing and scanning
-      RAW  : the sensor's unprocessed output, used in professional photography
    ```
 
-   Where raster images come from
-   - Digital cameras, scanners, screenshots, and painting programs — anything that captures or paints real-world detail.
-
-   - The alternative is `vector` graphics, which stores mathematical shapes instead of pixels and therefore scales to any size without loss. Raster is used for photographs, vector for logos and diagrams.
+   - Raster images come from digital cameras, scanners, screenshots and painting programs — anything capturing real-world detail. The alternative, `vector` graphics, stores mathematical shapes instead of pixels and scales without loss; raster suits photographs, vector suits logos and diagrams.
 
 ## Color Models (1)
 
@@ -157,58 +127,24 @@ Answer: (Answered in English, as required for IT topics.) A `raster image` is an
 Answer: (Answered in English, as required for IT topics.) A `colour model` is a mathematical way of describing a colour as a set of numbers, so a computer can store, transmit and reproduce it.
 
    Names of the main colour models
-
-   `RGB` (Red, Green, Blue)
-   - An `additive` model: colours are made by adding light. All three at full gives white; all three off gives black.
-   - Used by anything that `emits` light — monitors, TVs, cameras, scanners, projectors.
-
-   `CMY / CMYK` (Cyan, Magenta, Yellow, and Key = black)
-   - A `subtractive` model: colours are made by removing wavelengths from white light with ink. All three at full gives black; none gives white (the paper).
-   - Used by anything that `prints` — inkjet and laser printers, offset printing.
-
-   `HSV / HSI / HSB` (Hue, Saturation, Value / Intensity / Brightness)
-   - Describes colour the way people do: `hue` is the colour name, `saturation` its purity, `value` its brightness.
-   - Used in image editing tools, colour pickers, and in image processing where colour must be separated from lighting.
-
-   `YUV / YCbCr / YIQ`
-   - Separates `luminance (Y)` — the brightness — from `chrominance (U, V)` — the colour.
-   - Used in television broadcasting, JPEG and MPEG compression, because the eye is far more sensitive to brightness than to colour, so the colour channels can be compressed harder.
-
-   `CIE XYZ and CIE Lab`
-   - Device-independent models based on how the human eye actually responds. `Lab` is perceptually uniform, so equal numeric changes look like equal colour changes.
-   - Used as the reference for colour management and conversion between devices.
-
-   `Grayscale`
-   - A single intensity value per pixel, 0 to 255. Used in medical imaging, document scanning and most image-processing algorithms.
+   - `RGB` (Red, Green, Blue) — additive; light is added, so full gives white, none gives black. Used by monitors, TVs, cameras, projectors (anything that emits light).
+   - `CMY/CMYK` (Cyan, Magenta, Yellow, Key=black) — subtractive; wavelengths are removed with ink. Used by printers.
+   - `HSV/HSI/HSB` (Hue, Saturation, Value/Intensity) — describes colour as people do; used in editing tools and colour pickers.
+   - `YUV/YCbCr/YIQ` — separates luminance (Y, brightness) from chrominance (colour); used in TV broadcasting, JPEG/MPEG compression since the eye is more sensitive to brightness than colour.
+   - `CIE XYZ / CIE Lab` — device-independent, based on human eye response; `Lab` is perceptually uniform; used as the reference for colour management.
+   - `Grayscale` — a single intensity value (0-255) per pixel; used in medical imaging and document scanning.
 
    Use of the CMY colour model
-   - `Colour printing` is its purpose. Ink on paper does not emit light; it `absorbs` some wavelengths and reflects the rest, so the arithmetic is subtractive.
+   - Ink does not emit light; it `absorbs` some wavelengths and reflects the rest, so mixing is subtractive — its purpose is `colour printing`.
    ```
       Cyan    absorbs RED     ->  reflects green + blue
       Magenta absorbs GREEN   ->  reflects red + blue
       Yellow  absorbs BLUE    ->  reflects red + green
-   ```
-   - Conversion from RGB is simply the complement:
-   ```
-      C = 1 - R
-      M = 1 - G
-      Y = 1 - B          (with all values normalised to 0-1)
-   ```
-   ```
-      Additive (RGB)             Subtractive (CMY)
-         R + G = Yellow             C + M = Blue
-         G + B = Cyan               M + Y = Red
-         R + B = Magenta            C + Y = Green
-         R+G+B = White              C+M+Y = Black (in theory)
-   ```
 
-   Why printers actually use CMYK, not CMY
-   - Mixing all three inks in practice gives a `muddy dark brown`, not a true black, because real inks are not perfect.
-   - Printing three layers of ink to make black wastes expensive colour ink, soaks the paper and dries slowly.
-   - Black text would look blurred, since three plates would have to register perfectly.
-   - So a separate `K` (black) ink is added — cheaper, sharper and genuinely black. This is called `black generation` and `under-colour removal`.
-
-   - Practical consequence: a design that looks bright on an RGB monitor often looks duller when printed, because the CMYK `gamut` — the set of colours it can reproduce — is smaller than the RGB gamut. That is why designers work in CMYK for anything destined for print.
+      Conversion from RGB:  C = 1-R,  M = 1-G,  Y = 1-B   (values normalised 0-1)
+   ```
+   - Printers actually use `CMYK`, not CMY: mixing all three inks gives a muddy dark brown rather than true black, wastes costly colour ink, and blurs black text needing perfect registration. A separate `K` (black) ink is added instead — cheaper and genuinely black (`black generation`/`under-colour removal`).
+   - Consequence: a design bright on an RGB monitor looks duller printed, because the CMYK `gamut` is smaller than RGB's — so designers work in CMYK for print.
 
 ## Frequency Domain Filtering (1)
 
@@ -270,37 +206,25 @@ Answer: A `high-pass filter` in the frequency domain keeps the `high frequencies
        D --> E[Sharpened image]
    ```
 
-   Why Butterworth is preferred over the ideal filter
-   - An `ideal` high-pass filter cuts everything below D0 abruptly. That sharp cut in the frequency domain becomes a `sinc` function in the spatial domain, which produces visible `ringing` — false ripples along every edge.
-   - The Butterworth response is `smooth and monotonic`, with no ripple in either band, so ringing is greatly reduced. At n = 1 there is essentially none; it reappears mildly at n = 4 or higher.
-   - A `Gaussian` high-pass filter removes ringing completely but cuts less sharply, so Butterworth is the usual compromise.
+   Why Butterworth over the ideal filter
+   - An `ideal` HPF cuts everything below D0 abruptly, which produces visible `ringing` in the spatial domain. Butterworth's response is `smooth and monotonic`, so ringing is greatly reduced (a `Gaussian` HPF removes it fully but cuts less sharply — Butterworth is the usual compromise).
 
    Uses
-   - Sharpening blurred images and enhancing edges before edge detection.
-   - Removing slowly varying illumination or shading across a photograph.
-   - Medical and satellite image enhancement, where fine detail matters.
-   - As part of `homomorphic filtering`, which compresses brightness range and enhances contrast at the same time.
+   - Sharpening and edge enhancement, removing slow illumination variation, medical/satellite image enhancement, and `homomorphic filtering`.
 
-   - Practical point: because the DC term is set to zero, the output loses its average brightness and looks dark. A `high-frequency emphasis` filter fixes this by using `H' = a + b.H(u,v)`, which keeps some of the low frequencies while still boosting the detail.
+   - Since the DC term is zero, output loses average brightness and looks dark; a `high-frequency emphasis` filter (`H' = a + b.H(u,v)`) fixes this by retaining some low frequencies.
 
 ## Edge Detection (1)
 
 1. **What are the basic objectives of canny edge detection method?** *[BPSC (Ministry of Home Affairs) Assistant Database Administrator (ICT) 2022 compact it 674 (ET: N/A)]*
 
-Answer: The `Canny edge detector`, given by John F. Canny in 1986, was designed by first writing down mathematically what an ideal edge detector should do, and then finding the operator that satisfies it. Those three requirements are its basic objectives.
+Answer: The `Canny edge detector` (John F. Canny, 1986) was designed around three mathematical objectives, which the algorithm's steps exist to satisfy.
 
-   1. Good detection (low error rate)
-   - Find `as many real edges as possible` while producing `as few false edges as possible`.
-   - A false edge is noise mistaken for an edge; a missed edge is a real boundary the detector failed to mark. Both must be minimised.
-   - Achieved by smoothing the image with a `Gaussian filter` first, which removes the noise that would otherwise be reported as edges.
+   1. `Good detection` (low error rate) — find as many real edges as possible with as few false edges as possible. Achieved by smoothing with a `Gaussian filter` first, to remove noise that would otherwise be reported as edges.
 
-   2. Good localization
-   - The marked edge pixel should lie `as close as possible to the centre of the true edge` in the original image.
-   - Achieved by computing the gradient after smoothing, and then applying `non-maximum suppression`, which keeps only the pixel at the exact ridge of the gradient and deletes its neighbours.
+   2. `Good localization` — the marked edge pixel must lie as close as possible to the centre of the true edge. Achieved by computing the gradient after smoothing, then `non-maximum suppression`, keeping only the pixel at the exact ridge.
 
-   3. Minimal response (single response per edge)
-   - A single real edge must be marked `only once`. The detector must not return a thick band or several parallel lines for one boundary.
-   - Achieved again by `non-maximum suppression`, which thins the gradient ridge down to a one-pixel-wide line.
+   3. `Minimal response` (single response per edge) — a real edge is marked only once, not as a thick band. Achieved again by non-maximum suppression, thinning the ridge to one pixel wide.
 
    The five steps that implement these objectives
    ```mermaid
@@ -330,20 +254,8 @@ Answer: The `Canny edge detector`, given by John F. Canny in 1986, was designed 
          directly or through a chain of weak ones
    ```
 
-   Why hysteresis matters
-   - A single threshold either breaks real edges into fragments (threshold too high) or lets noise through (too low). Using two thresholds with connectivity gets both: strong evidence starts an edge, and weaker evidence is trusted only where it continues one.
-   - The usual ratio is `T(high) : T(low) = 2:1 or 3:1`.
-
-   Advantages and cost
-   ```
-      Advantages : accurate localisation, one-pixel-thin edges, strong noise
-                   immunity, adjustable through sigma and the two thresholds
-      Cost       : slower and more complex than Sobel or Prewitt;
-                   results depend on choosing sigma and the thresholds well
-   ```
-   - Choosing `sigma` is a trade-off: a large sigma removes more noise but blurs and displaces the edges; a small sigma keeps fine detail but lets noise through.
-
-   - In short: Canny's three objectives are `detect every real edge and nothing else`, `mark it in the right place`, and `mark it exactly once` — and the five processing steps above exist purely to satisfy them.
+   - Hysteresis matters because a single threshold either breaks edges (too high) or lets noise through (too low); with two thresholds, strong evidence starts an edge and weak evidence is kept only where it connects to one. Usual ratio `T(high):T(low) = 2:1 or 3:1`.
+   - Trade-off: a large `sigma` removes more noise but blurs/displaces edges; a small sigma keeps detail but lets noise through.
 
 ## Morphological Operations (1)
 
@@ -354,8 +266,8 @@ Answer: `Morphological operations` process the `shape` of objects in a binary (o
    (i) Erosion and Dilation
 
    `Erosion` — written `A (-) B`
-   - An output pixel is set to 1 only if the structuring element fits `entirely inside` the object at that position. In grayscale, the output is the `minimum` of the neighbourhood.
-   - Effect: objects `shrink`, boundaries move inward, thin connections break, and small isolated specks of noise disappear.
+   - Output pixel = 1 only if the SE fits `entirely inside` the object at that position (grayscale: `minimum` of the neighbourhood).
+   - Effect: objects `shrink`, thin connections break, small isolated specks of noise disappear.
    ```
       Before erosion              After erosion (3x3 SE)
       0 0 0 0 0 0 0               0 0 0 0 0 0 0
@@ -368,8 +280,8 @@ Answer: `Morphological operations` process the `shape` of objects in a binary (o
    - Uses: removing salt noise, separating objects that touch, and finding the boundary by `A - erosion(A)`.
 
    `Dilation` — written `A (+) B`
-   - An output pixel is set to 1 if the structuring element `overlaps` the object at all. In grayscale, the output is the `maximum` of the neighbourhood.
-   - Effect: objects `grow`, boundaries move outward, small holes and narrow gaps are filled, and broken lines are joined.
+   - Output pixel = 1 if the SE `overlaps` the object at all (grayscale: `maximum` of the neighbourhood).
+   - Effect: objects `grow`, small holes and narrow gaps are filled, broken lines are joined.
    ```
       Before dilation             After dilation (3x3 SE)
       0 0 0 0 0                   0 1 1 1 0
@@ -384,9 +296,8 @@ Answer: `Morphological operations` process the `shape` of objects in a binary (o
    (ii) Opening and Closing
 
    `Opening` — written `A o B = dilate( erode(A, B), B )`
-   - `Erosion followed by dilation`, with the same structuring element.
-   - The erosion removes small objects and thin bridges; the dilation restores the surviving objects to roughly their original size.
-   - Effect: `removes small objects, thin protrusions and narrow bridges` while keeping the shape and size of the larger objects. It smooths the outside of a contour.
+   - `Erosion followed by dilation` with the same SE: erosion removes small objects/thin bridges, dilation restores survivors to roughly original size.
+   - Effect: removes small objects, thin protrusions and narrow bridges while keeping larger objects' shape/size; smooths the outside of a contour.
    ```
       Two blobs joined by a thin neck  ->  opening separates them
       Small specks of noise            ->  opening removes them completely
@@ -394,9 +305,8 @@ Answer: `Morphological operations` process the `shape` of objects in a binary (o
    - Uses: removing salt noise, separating touching objects, size-based filtering.
 
    `Closing` — written `A . B = erode( dilate(A, B), B )`
-   - `Dilation followed by erosion`, with the same structuring element.
-   - The dilation fills small holes and gaps; the erosion shrinks the object back to its original size.
-   - Effect: `fills small holes and narrow gaps` and joins nearby objects, while keeping the overall size. It smooths the inside of a contour.
+   - `Dilation followed by erosion` with the same SE: dilation fills small holes/gaps, erosion shrinks the object back to original size.
+   - Effect: fills small holes and narrow gaps and joins nearby objects, keeping overall size; smooths the inside of a contour.
    ```
       A letter with a broken stroke    ->  closing repairs it
       Small holes inside a shape       ->  closing fills them
@@ -412,5 +322,4 @@ Answer: `Morphological operations` process the `shape` of objects in a binary (o
    | Opening | Erode then dilate | Roughly unchanged | Small objects, thin bridges, outward spikes |
    | Closing | Dilate then erode | Roughly unchanged | Small holes, narrow gaps, inward notches |
 
-   - Both opening and closing are `idempotent`: applying them twice gives the same result as applying them once. That is why they are used as shape filters rather than as repeated operations.
-   - `Top-hat transform` = A - opening(A), which extracts the small bright details that opening removed; `bottom-hat` = closing(A) - A does the same for dark details. Both are used to correct uneven illumination.
+   - Both are `idempotent` (applying twice = applying once), so they are used as shape filters. `Top-hat = A - opening(A)` extracts small bright details; `bottom-hat = closing(A) - A` does the same for dark details — both correct uneven illumination.

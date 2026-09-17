@@ -2050,42 +2050,19 @@ Answer: A `logic gate` takes one or more binary inputs and gives one binary outp
 
 11. **Why binary logic is used for digital system?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1188 (ET: N/A)]*
 
-Answer: `Binary logic` uses only two values, 0 and 1, represented by two voltage levels — typically 0 V (LOW) and +5 V or +3.3 V (HIGH). Digital systems use it for the following reasons.
+Answer: `Binary logic` uses only two values, 0 and 1, represented by two voltage levels (e.g. 0V=LOW, +5V=HIGH). Digital systems use it because:
 
-    1. Only two states are needed, so the hardware is simple
-    - A transistor has two clean, natural states: fully `off` and fully `on`. Making it hold ten distinct levels would need precise analog control, far more transistors and much more power.
-    - A switch, a relay, a punched hole and a magnetised spot are all naturally two-state as well.
-
-    2. High noise immunity
-    - Any voltage below the low threshold is read as 0 and any voltage above the high threshold as 1. The wide gap between them means small amounts of noise, temperature drift and voltage sag do not change the value.
+    1. `Simple hardware` — a transistor has two clean natural states (fully off/on); holding ten distinct levels would need precise analog control and far more power. Switches, relays and magnetic spots are also naturally two-state.
+    2. `High noise immunity` — any voltage below/above a threshold reads as 0/1, so a wide forbidden band absorbs noise, temperature drift and voltage sag; a ten-level system would need 0.5V precision and be easily corrupted.
     ```
-       +5V  ----------------  logic 1 range
-       +2.0V ---------------  threshold
-            (forbidden band)
-       +0.8V ---------------  threshold
-        0V  ----------------  logic 0 range
+       +5V --- logic 1     +0.8V-2.0V forbidden band     0V --- logic 0
     ```
-    - A ten-level system would have to distinguish 0.5 V steps, and ordinary noise would corrupt it.
+    3. `Reliable regeneration` — with only two levels, every gate restores a clean 0/1, so a signal survives thousands of gates without degrading (impossible for analog).
+    4. `Boolean algebra applies directly` — circuits can be designed, simplified and proved with truth tables/K-maps before any hardware is built.
+    5. `Easy storage/transmission and error correction` — two states are trivial to store (charge, magnetisation, pit/land) and send, and parity/CRC/Hamming codes are simple to compute with XOR gates.
+    6. `Universal representation` — numbers, text, images, audio and instructions all reduce to bits, so one circuit style handles every kind of data, and billions of identical two-state transistors can be mass-produced cheaply.
 
-    3. Reliable regeneration
-    - Because there are only two levels, every gate `restores` the signal to a clean 0 or 1. A signal can pass through thousands of gates without degrading, which is impossible in an analog chain.
-
-    4. Boolean algebra applies directly
-    - Boolean algebra, developed by George Boole, works on exactly two values. So a digital circuit can be `designed, simplified and proved mathematically` using truth tables, K-maps and De Morgan's theorem before any hardware is built.
-
-    5. Easy storage and transmission
-    - Two states are easy to store — charge present or absent in a capacitor, magnetised north or south, pit or land on a disc — and easy to send, since the receiver only has to decide between two possibilities.
-
-    6. Error detection and correction are practical
-    - With two symbols, parity, checksums, CRC and Hamming codes are simple to compute with XOR gates. Errors can be detected and often corrected.
-
-    7. Everything can be represented in binary
-    - Numbers (binary number system), text (ASCII, Unicode), images, audio and instructions all reduce to strings of bits, so one uniform circuit style handles every kind of data.
-
-    8. Low cost and easy mass production
-    - A two-state circuit is small and repeatable, which is what makes it possible to put billions of identical transistors on one chip.
-
-    - Summary: binary is used because it gives the `maximum reliability for the minimum hardware`. The cost is that more digits are needed to express a number — 255 needs 8 bits instead of 3 decimal digits — but that cost is trivial compared with the gain in accuracy and simplicity.
+    - Summary: binary gives `maximum reliability for minimum hardware` — the cost (more digits needed, e.g. 255 needs 8 bits vs 3 decimal digits) is trivial next to the gain in accuracy and simplicity.
 
 12. **(a) Consider the following logic circuit.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 75-76]]*
 (i) Derive the Boolean expression algebraically for T1 through T4. Derive F1 and F2 as function of the three inputs A, B and C. (ii) Use K-map to simplify these expressions F_1 and F_2, and show that they are equivalent to the ones obtained in (i).
@@ -3386,38 +3363,14 @@ Answer: Binary number system
    ii. $(\text{AB8C})_{16}$ to Decimal number
    iii. $(1101111010)_2$ to Hexadecimal
 
-    Answer: A computer stores and processes everything in `binary`, because a transistor has only two clean states. People, programs and peripherals, however, work in other bases. Conversion is the bridge between them.
+    Answer: A computer stores and processes everything in `binary`, because a transistor has only two clean states, while people, programs and peripherals work in other bases — conversion bridges them.
 
-    1. Human input and output are decimal
-    - A user types `543` and expects to read `543` on the screen, but the CPU can only add binary numbers. Every input must be converted to binary before processing, and every result converted back to decimal before display.
-
-    2. Machines cannot work in decimal
-    - The only reliable way to represent a value electrically is two voltage levels, `0 V` and `+5 V`. Ten distinct levels would need very tight voltage margins and would lose all noise immunity. So the internal base has to be 2, and everything else must be converted.
-
-    3. Binary is too long for people to read
-    - One 32-bit address is 32 digits long, which is impossible to read or copy without error.
-    ```
-       1010 1011 1100 1101 0001 0010 0011 0100     (32 bits)
-       =  ABCD1234                                  (8 hex digits)
-    ```
-    - `Hexadecimal` shortens it four times, and `octal` three times. This is why memory addresses, MAC addresses, colour codes (`#FF8000`) and error codes are all written in hex.
-
-    4. Hex and octal convert to binary with no arithmetic
-    - Since `16 = 2^4` and `8 = 2^3`, one hex digit is exactly 4 bits and one octal digit exactly 3 bits. Conversion is pure substitution, so a programmer can read the actual bit pattern at a glance — essential for debugging, setting flag bits and reading register dumps.
-
-    5. Different data formats need different codes
-    - Text is stored in `ASCII` or `Unicode`, decimal displays use `BCD`, and rotary encoders use `Gray code`. Moving data between these forms is conversion work.
-
-    6. Arithmetic and negative numbers
-    - Negative values are stored in `2's complement`, and real numbers in `IEEE 754 floating point`. Both are conversions from the ordinary decimal value the user supplied.
-
-    7. Communication between systems
-    - Data crossing a network, a file or a device interface must be converted between the sender's and the receiver's representations — byte order, character set and numeric format.
-
-    8. Memory efficiency and addressing
-    - Choosing the right representation decides how much space a value takes and how it is addressed. Packing decimal digits as BCD, or a number as 8 bits instead of 32, is a conversion decision.
-
-    - Summary: `the machine needs binary, the user needs decimal, and the programmer needs hexadecimal`. Number conversion is what lets all three work on the same data.
+    1. `Human I/O is decimal` — a user types/reads decimal, but the CPU only computes in binary, so every input/output is converted.
+    2. `Machines cannot work in decimal` — the only reliable electrical representation is two voltage levels, so the internal base must be 2.
+    3. `Binary is too long to read` — a 32-bit address is 32 digits long; `hexadecimal` shortens it 4x (and octal 3x), e.g. `1010101111001101...` = `ABCD1234` in hex — used for addresses, MAC addresses, colour codes.
+    4. `Hex/octal convert with no arithmetic` — since 16=2^4 and 8=2^3, one hex digit is exactly 4 bits (one octal digit 3 bits), so a programmer can read the bit pattern at a glance — essential for debugging and flag bits.
+    5. `Different formats need different codes` — text uses ASCII/Unicode, displays use BCD, encoders use Gray code, negative numbers use 2's complement, reals use IEEE 754 — all conversions from the plain decimal value supplied.
+    - Summary: `the machine needs binary, the user needs decimal, the programmer needs hexadecimal` — number conversion lets all three work on the same data.
 
 ## Karnaugh Map (K-Map) (24)
 
@@ -4400,41 +4353,7 @@ Answer: The question is `incomplete` — the two K-maps, which were printed as f
     ```
     - The four-corner group is the single most commonly missed pattern in K-map questions.
 
-    Example (iii) — a 3-variable map with don't-cares
-    ```
-       A\BC   00   01   11   10
-        0      1    1    X    0
-        1      0    X    1    1
-    ```
-    ```
-       A don't-care X may be treated as 1 if that ENLARGES a group, or
-       ignored if it does not.
-
-       Taking both X as 1 :
-           Group A'B'  -> m0, m1
-           Group C     -> m1, m3, m5, m7   (columns BC = 01 and 11)
-           Group AB    -> m6, m7
-
-       F = A'B' + C + AB      (a shorter cover than ignoring the X)
-    ```
-
-    Getting the POS form from the same map
-    ```
-       Group the ZEROS instead of the ones, and reverse the sense of each
-       variable : a variable constantly 0 appears as ITSELF, and one
-       constantly 1 appears complemented. Each group then gives a SUM term,
-       and the terms are multiplied together.
-    ```
-
-    Common errors
-    ```
-       Binary labelling (00,01,10,11) instead of Gray code
-       Missing the wrap-around groups, especially the four corners
-       Making a group smaller than it could be
-       Grouping a number of cells that is not a power of two
-       Leaving a 1 uncovered
-       Treating a don't-care as a compulsory 1
-    ```
+    - Common errors to avoid: binary instead of Gray-code labelling, missing wrap-around groups (especially the four corners), a group smaller than it could be, grouping a non-power-of-two number of cells, or leaving a 1 uncovered.
 
 14. **Draw the k-map for the equation:** *[BOF Assistant Engineer (EEE/ME/CSE) 2021 compact it 922 (ET: N/A)]*
    F = A'B'C'D' + A'B'CD' + A'BCD' + A'BCD + AB'C'D' + AB'CD' + ABCD' + ABCD
@@ -4523,7 +4442,7 @@ Answer: The question is `incomplete` — the two K-maps, which were printed as f
        Components : 2 inverters , 2 two-input AND gates , 1 two-input OR gate
     ```
 
-    - Points worth noting: the `wrap-around` grouping is what makes `B'D'` a four-cell block rather than two separate pairs — missing it would give the longer answer `B'C'D' + B'CD'` instead. The map wraps at the left and right edges and at the top and bottom, so the four corners of a 4-variable map are always mutually adjacent.
+    - Note: the `wrap-around` grouping is what makes `B'D'` a four-cell block (the four corners of a 4-variable map are always mutually adjacent) rather than the longer `B'C'D' + B'CD'`.
 
 15. **F = \bar{A}\bar{B}\bar{C} + A\bar{B}\bar{C} + \bar{A}\bar{B}C + \bar{A}BC + ABC, Simplify using K-map with logic circuit.** *[Janata Bank Ltd SO ( Assistant Network Engineer) 2020 compact it 1010-1011 (ET: N/A)]*
 
@@ -4838,15 +4757,7 @@ Answer: F(A,B,C) = A'B'C' + A'B + ABC' + AC
 
 Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
 
-    Step 1 — simplify algebraically first, as a check
-    ```
-       ACD + AC'D = AD(C + C') = AD
-       F = AD + AB + D'
-       Now  AD + D' = A + D'        since X + X'Y = X + Y
-       F = A + AB + D' = A + D'     since A + AB = A  (absorption)
-    ```
-
-    Step 2 — expand each term into minterms
+    Step 1 — expand each term into minterms
     ```
        ACD  = A=1, C=1, D=1     -> m11 , m15
        AB   = A=1, B=1          -> m12 , m13 , m14 , m15
@@ -4856,7 +4767,7 @@ Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
        F = Sigma m(0, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15)
     ```
 
-    Step 3 — K-map (rows AB, columns CD in Gray code order)
+    Step 2 — K-map (rows AB, columns CD in Gray code order)
     ```
        AB\CD   00    01    11    10
         00     1     0     0     1        m0  m1  m3  m2
@@ -4865,7 +4776,7 @@ Answer: F(A, B, C, D) = ACD + AB + D' + AC'D
         10     1     1     1     1        m8  m9  m11 m10
     ```
 
-    Step 4 — groupings
+    Step 3 — groupings
     ```
     Loop 1 : A    -> m8 to m15 , the two whole rows AB = 11 and 10 (8 cells)
              A = 1 everywhere in them
@@ -5100,29 +5011,7 @@ Answer: A `full adder` adds three one-bit inputs — A, B and a carry from the p
       Cin -+---|___/
    ```
 
-   Simpler circuit using XOR
-   ```
-      A ---|\
-           | ))--- (A(+)B) ---|\
-      B ---|/                 | ))--- Sum = A (+) B (+) Cin
-                       Cin ---|/
-
-      A ---|‾‾\
-           |   )--- AB -------------|\
-      B ---|__/                     |
-                                    | )--- Cout = AB + Cin(A (+) B)
-      (A(+)B) ---|‾‾\               |
-                 |   )--- Cin(A(+)B)|/
-      Cin -------|__/
-   ```
-
-   Gate count
-   ```
-   Basic gates (AND-OR-NOT) : 3 inverters + 4 three-input AND + 3 two-input AND
-                              + 1 four-input OR + 1 three-input OR = 12 gates
-   With XOR gates           : 2 XOR + 2 AND + 1 OR = 5 gates
-   ```
-   - The XOR form is what is used in practice, because it is smaller and has a shorter carry path — and the carry path is what limits the speed of a multi-bit adder.
+   - Gate count with basic gates: 3 inverters + 4 three-input AND + 3 two-input AND + 1 four-input OR + 1 three-input OR = 12 gates. (In practice a smaller 5-gate XOR-based design — `Sum = A⊕B⊕Cin`, `Cout = AB + Cin(A⊕B)` — is used instead, since it has a shorter carry path.)
 
 2. **What is half adder?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
@@ -5247,9 +5136,7 @@ Answer: A full adder needs `9 NAND gates`. The design is two NAND half adders pl
    1  1   0  |    0     |    0     |      1       |  0  |      1
    1  1   1  |    0     |    0     |      1       |  1  |      1
    ```
-   - The Sum and Cout columns match the full adder truth table exactly.
-
-   - Points to note: the trick that saves gates is `reusing the internal NAND node` of each half adder instead of building a separate OR gate. A naive design — build XOR, AND and OR separately from NAND — needs far more than 9 gates.
+   - The Sum and Cout columns match the full adder truth table exactly. The gate-saving trick is `reusing the internal NAND node` of each half adder instead of a separate OR gate — building XOR/AND/OR separately from NAND would need far more than 9 gates.
 
 4. **Design a full adder using two half adders and an OR gate?** *[BPSC (Ministry of Food) Network/Website Manager (CSE) 21.05.2025 compact it 1339 (ET: N/A)]*
 
@@ -5321,9 +5208,7 @@ Answer: A `full adder` adds three bits — A, B and `Cin` — giving a `Sum` and
    1  1   0  | 0  | 1  |  0  | 0  |      1
    1  1   1  | 0  | 1  |  1  | 0  |      1
    ```
-   - Matches the full adder truth table exactly.
-
-   - Point worth noting: `C1 and C2 can never both be 1`, so the OR gate could equally be an XOR gate. C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0.
+   - Matches the full adder truth table exactly. Note: `C1 and C2 can never both be 1` (C1=1 needs A=B=1, which forces S1=0 hence C2=0), so the OR gate could equally be an XOR gate.
 
 5. **Truth Table from the following circuit (2-bit input A, B full adder with carry bit C_{in}).** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 314 (ET: N/A)]*
 
@@ -5512,7 +5397,7 @@ Answer: The circuit counts how many of A, B, C are 1 and writes that count as a 
        2 XOR gates, 3 AND gates, 1 three-input OR gate = 6 gates
     ```
 
-    - Points to note: this circuit is exactly a `full adder`, with Y0 as the Sum and Y1 as the carry out. Any circuit that counts the number of 1s in its inputs is called a `population counter`, and the 3-input case is the full adder. The 7-input version is used inside multiplier arrays.
+    - Note: this circuit is exactly a `full adder` (Y0=Sum, Y1=Cout). Any circuit counting 1s in its inputs is a `population counter`, of which the 3-input case is the full adder.
 
 8. **How do you design a logic circuit that has three inputs A, B, C and whose output will be high only when majority of the inputs are high. (a) Find truth table and (b) Show SOP and POS equation.** *[EGCB Assistant Engineer (CSE) 2022 compact it 715 (ET: BUET)]*
 
@@ -5677,13 +5562,7 @@ Answer: Half adder — logic diagram
 
 10. **Half adder এর সাহায্যে Full adder বাস্তবায়ন করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1080 (ET: N/A)]*
 
-Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` adds only two. Two half adders and one OR gate build a full adder.
-
-    Half adder recap
-    ```
-    Sum   = A (+) B          XOR gate
-    Carry = A . B            AND gate
-    ```
+Answer: (Answered in English, as required for IT topics.) A `full adder` adds three bits — A, B and a carry-in `Cin` — while a `half adder` (Sum=A⊕B, Carry=A.B) adds only two. Two half adders and one OR gate build a full adder.
 
     Construction
     ```
@@ -5700,18 +5579,7 @@ Answer: (Answered in English, as required for IT topics.) A `full adder` adds th
                                     +-------------------------------+
     ```
 
-    Step by step
-    ```
-    Half adder 1 :  inputs A, B
-                    S1 = A (+) B          the partial sum
-                    C1 = A . B            the carry produced by A + B
-
-    Half adder 2 :  inputs S1, Cin
-                    Sum = S1 (+) Cin = A (+) B (+) Cin
-                    C2  = S1 . Cin        the carry produced by adding Cin
-
-    OR gate      :  Cout = C1 + C2
-    ```
+    - Half adder 1 (inputs A, B) gives `S1 = A⊕B`, `C1 = A.B`. Half adder 2 (inputs S1, Cin) gives `Sum = S1⊕Cin = A⊕B⊕Cin`, `C2 = S1.Cin`. The OR gate gives `Cout = C1 + C2`.
 
     Gate-level circuit
     ```
@@ -5742,9 +5610,7 @@ Answer: (Answered in English, as required for IT topics.) A `full adder` adds th
     1  1   0  | 0  | 1  |  0  | 0  |  1
     1  1   1  | 0  | 1  |  1  | 0  |  1
     ```
-    - The Sum and Cout columns match the full adder truth table exactly.
-
-    - Point worth noting: `C1 and C2 are never both 1` at the same time, because C1 = 1 needs A = B = 1, which makes S1 = 0 and therefore C2 = 0. The OR gate could equally be an XOR gate.
+    - The Sum and Cout columns match the full adder truth table exactly. Note: `C1 and C2 are never both 1` (C1=1 needs A=B=1, forcing S1=0 hence C2=0), so the OR gate could equally be an XOR gate.
 
 11. **দুটি 1-bit full adder এর মাধ্যমে 2-bit full adder তৈরি করুন।** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
@@ -5787,27 +5653,7 @@ Answer: (Answered in English, as required for IT topics.) A 2-bit adder adds two
        C2 S1 S0 = 1 0 0 = 4        correct
     ```
 
-    Second example — 10 + 11
-    ```
-            A = 1 0   (2)
-            B = 1 1   (3)
-           ---------
-       result = 1 0 1 (5)
-
-    Stage 0 : 0 + 1 + 0  ->  S0 = 1 , C1 = 0
-    Stage 1 : 1 + 1 + 0  ->  S1 = 0 , C2 = 1
-
-       C2 S1 S0 = 1 0 1 = 5        correct
-    ```
-
-    Points to note
-    - The same idea extends directly: `n` full adders in a chain make an `n-bit ripple carry adder`. Four of them form the 7483 IC.
-    - The `drawback` is speed. Stage 1 cannot finish until stage 0's carry arrives, so the total delay grows with the number of bits. For a 32-bit adder this is unacceptable, which is why `carry look-ahead` adders compute all the carries in parallel from the equations
-    ```
-       Gi = AiBi  (generate)      Pi = Ai (+) Bi  (propagate)
-       Ci+1 = Gi + Pi.Ci
-    ```
-    - Setting `C0 = 1` turns the same circuit into a subtractor when the B inputs are complemented, since `A - B = A + B' + 1` in 2's complement.
+    - `n` full adders in a chain make an `n-bit ripple carry adder` (four form the 7483 IC), but delay grows with bit count since each stage waits for the previous carry — solved in wide adders by `carry look-ahead` logic. Setting `C0=1` with B complemented turns the same circuit into a subtractor (`A-B = A+B'+1`).
 
 ### Multiplexers, Decoders & Displays (12)
 
@@ -5868,8 +5714,8 @@ Answer: A `multiplexer (MUX)` selects one of many inputs and sends it to a singl
    | Equivalent to | — | A decoder with an enable line |
 
    Practical applications
-   - `Multiplexer` — in a `telephone or data communication system`, many subscriber lines share one expensive trunk line. The MUX picks one channel at a time so a single cable carries traffic from many sources. Inside a CPU, a MUX selects which register feeds the ALU. A MUX is also used to implement any Boolean function directly from its truth table.
-   - `Demultiplexer` — at the far end of that same trunk line, the DEMUX sends each arriving channel back to the correct subscriber. In a computer, a DEMUX (used as a decoder) takes an address and enables exactly one memory chip or one output device.
+   - `Multiplexer` — in telephone/data communication, many subscriber lines share one trunk line; the MUX picks one channel at a time onto it. Inside a CPU it selects which register feeds the ALU.
+   - `Demultiplexer` — at the far end of that trunk line, it sends each channel back to the correct subscriber; in a computer it (as a decoder) takes an address and enables exactly one memory chip.
 
    ```mermaid
    flowchart LR
@@ -6191,10 +6037,8 @@ Answer: An `8x1 multiplexer` selects one of eight data inputs `I0-I7` and passes
     ```
 
     Working procedure
-    - The three inverters produce both true and complemented forms of every select line, so six select signals are available.
-    - Each of the eight AND gates is wired to one unique combination of those signals. For `S2S1S0 = 101`, only the gate wired to `S2, S1', S0` has all three select conditions satisfied; it passes I5, and the other seven AND gates output 0.
-    - The OR gate therefore carries exactly one value — the selected input. Only one AND gate can ever be active, so no conflict is possible.
-    - With an `enable` input, the whole MUX can be switched off, and two 8x1 MUX chips plus one extra select line can be cascaded into a 16x1 MUX.
+    - The three inverters give both true and complemented forms of each select line. Each of the eight AND gates is wired to one unique combination of these signals — e.g. for `S2S1S0=101` only the gate wired to `S2,S1',S0` is satisfied, passing I5 while the rest output 0. The OR gate therefore carries exactly the selected input, with no conflict possible.
+    - With an `enable` input the MUX can be switched off, and two 8x1 chips plus one extra select line cascade into a 16x1 MUX.
 
     Components
     ```
@@ -6266,25 +6110,7 @@ Answer: The question is `incomplete` — the figure showing which signals are wi
        A'B is 1 at rows 010 and 011  -> m2 , m3       - the table agrees
     ```
 
-    The reverse direction — implementing a function with a MUX
-    ```
-       To realise F(A,B,C) with a 4:1 MUX using B and C as select lines :
-
-       1. Split the truth table into four blocks, one per value of BC.
-       2. In each block, ask what F does as A changes :
-              always 0        ->  wire that input to 0
-              always 1        ->  wire it to 1
-              follows A       ->  wire it to A
-              opposite to A   ->  wire it to A'
-       3. Those four values are the data inputs.
-    ```
-    ```
-       A 4:1 MUX with 2 select lines can realise ANY function of 3 variables.
-       An 8:1 MUX can realise any function of 4 variables.
-       In general, a 2^n : 1 MUX realises any function of n + 1 variables.
-    ```
-
-    - This is why a multiplexer is called a `universal combinational circuit`: it needs no gates at all beyond the inverters for the complemented data inputs, and it maps directly from the truth table without any algebraic simplification.
+    - A `2^n:1` MUX can realise any function of `n+1` variables directly from its truth table (n select lines + 1 remaining variable fed to data inputs), with no gates beyond inverters — which is why a MUX is called a `universal combinational circuit`.
 
 8. **For 7 segments display the input is abcdefg. When a decimal digit or value is display then its equivalent segment is high. (i) Draw logic circuit for 2-to-4 Line Decoder/De-Multiplexer** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 927-928 (ET: CTI)]*
 
@@ -6463,9 +6289,8 @@ Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` 
      1   0 |  I2
      1   1 |  I3
     ```
-    - Each AND gate is wired to one unique combination of the select signals. When `S1S0 = 10`, only the third AND gate has both select conditions met, so it passes I2 while the other three output 0.
-    - Since only one AND gate can be active at any time, the OR gate carries exactly the selected value and no conflict occurs.
-    - Many MUX chips also have an `enable` line that forces the output low, which allows several chips to be cascaded into a larger MUX.
+    - Each AND gate is wired to one unique combination of select signals, so exactly one is enabled at a time (e.g. S1S0=10 enables only the gate passing I2); the OR gate then carries only that value with no conflict.
+    - Many MUX chips also have an `enable` line that forces the output low, allowing several chips to be cascaded into a larger MUX.
 
     Symbol
     ```
@@ -6478,12 +6303,7 @@ Answer: (Answered in English, as required for IT topics.) A `multiplexer (MUX)` 
              S1  S0
     ```
 
-    Applications
-    - Selecting one of several registers to feed the ALU inside a CPU.
-    - Sharing one expensive transmission line among many sources in communication.
-    - `Parallel to serial` conversion — cycle the select lines and the parallel inputs leave one after another.
-    - Implementing any Boolean function directly from its truth table, which is why a MUX is called a universal combinational circuit.
-    - The reverse circuit, the `demultiplexer`, takes one input to many outputs and is used at the far end of the shared line.
+    Applications: selecting one of several registers to feed the ALU, sharing one transmission line among many sources, `parallel-to-serial` conversion, and implementing any Boolean function directly from its truth table (a MUX is a universal combinational circuit). Its reverse, the `demultiplexer`, takes one input to many outputs.
 
 11. **চিত্রে প্রদর্শিত 7 segment display দেওয়া আছে এখন 7 ও 2 display এর জন্য কোন LED High হবে?** *[NPCBL Junior Technical Engineer 2019 compact it 1149 (ET: BUET)]*
 
@@ -6565,10 +6385,7 @@ Answer: (Answered in English, as required for IT topics.) A `seven segment displ
       9   | 1  1  1  1  0  1  1
     ```
 
-    Points to note
-    - The two digits share segments `a` and `b`. Digit 7 needs only three segments, the fewest of any digit except 1.
-    - In a `common anode` display the logic is reversed — a segment lights when its input is `LOW`, so the same digit patterns are inverted.
-    - A `BCD-to-seven-segment decoder` such as the 7447 or 7448 converts the 4-bit binary digit into these seven signals automatically, and a series resistor limits the current through each LED.
+    - Note: the two digits share segments `a` and `b`; digit 7 needs only 3 segments. In a `common anode` display the logic is reversed (LOW lights a segment). A `BCD-to-seven-segment decoder` (7447/7448) generates these signals automatically.
 
 12. **Design $4\times1$ MUX with two selection line & 4 input (A,B,C,D) of the following sum of product (0,3,4,5,6,7) and CD as a selection line.** *[BTCL Assistant Manager (Technical) 2017 compact it 1253-1254 (ET: N/A)]*
 
@@ -6634,19 +6451,11 @@ Answer: The function is
 
     Verification of the MUX equation
     ```
-    F = C'D'.I0 + C'D.I1 + CD'.I2 + CD.I3
-      = C'D'.A' + C'D.A'B + CD'.A'B + CD.A'
-      = A'(C'D' + CD) + A'B(C'D + CD')
-      = A'.(C XNOR D) + A'B.(C XOR D)
+    F = C'D'.I0 + C'D.I1 + CD'.I2 + CD.I3 = A'(C'D'+CD) + A'B(C'D+CD')
+    Check m5 (A=0,B=1,C=0,D=1): A'B=1, CD'-term -> F=1  correct
+    Check m9 (A=1,...)       : A'=0 everywhere  -> F=0  correct
     ```
-    ```
-    Check m5 (A=0,B=1,C=0,D=1) : XNOR=0 , XOR=1 , A'B=1  ->  F = 0 + 1 = 1    correct
-    Check m2 (A=0,B=0,C=1,D=0) : XNOR=0 , XOR=1 , A'B=0  ->  F = 0 + 0 = 0    correct
-    Check m3 (A=0,B=0,C=1,D=1) : XNOR=1 , A'=1           ->  F = 1            correct
-    Check m9 (A=1,...)         : A'=0 everywhere         ->  F = 0            correct
-    ```
-
-    - Method to remember: put the `higher-order` variables on the select lines, split the truth table into one block per select value, and read off what the output does in terms of the remaining variables — it can only be `0`, `1`, a variable, or its complement. A 4x1 MUX can therefore realise any function of 3 variables directly, and many functions of 4 variables as here.
+    - Method: put the higher-order variables on the select lines, split the truth table into one block per select value, and read off the remaining-variable pattern (`0`, `1`, a variable, or its complement) as each MUX input.
 
 ## Boolean Algebra & De Morgan’s Theorem (19)
 
@@ -6661,27 +6470,16 @@ Answer: `De Morgan's laws` say how a complement is distributed over an AND or an
    ```
    - In words: `break the bar and change the sign`. Break the long bar over the expression and swap AND with OR.
 
-   Proof of Law 1 by truth table
+   Proof by truth table (both laws)
    ```
-   A  B | A.B | (A.B)' | A' | B' | A'+B'
-   -----+-----+--------+----+----+------
-   0  0 |  0  |   1    | 1  | 1  |   1
-   0  1 |  0  |   1    | 1  | 0  |   1
-   1  0 |  0  |   1    | 0  | 1  |   1
-   1  1 |  1  |   0    | 0  | 0  |   0
+   A  B | A.B | (A.B)' | A+B | (A+B)' | A' | B' | A'+B' | A'.B'
+   -----+-----+--------+-----+--------+----+----+-------+------
+   0  0 |  0  |   1    |  0  |   1    | 1  | 1  |   1   |   1
+   0  1 |  0  |   1    |  1  |   0    | 1  | 0  |   1   |   0
+   1  0 |  0  |   1    |  1  |   0    | 0  | 1  |   1   |   0
+   1  1 |  1  |   0    |  1  |   0    | 0  | 0  |   0   |   0
    ```
-   - Columns `(A.B)'` and `A'+B'` are identical, so the law holds.
-
-   Proof of Law 2 by truth table
-   ```
-   A  B | A+B | (A+B)' | A' | B' | A'.B'
-   -----+-----+--------+----+----+------
-   0  0 |  0  |   1    | 1  | 1  |   1
-   0  1 |  1  |   0    | 1  | 0  |   0
-   1  0 |  1  |   0    | 0  | 1  |   0
-   1  1 |  1  |   0    | 0  | 0  |   0
-   ```
-   - Identical again.
+   - `(A.B)'` matches `A'+B'` in every row (Law 1); `(A+B)'` matches `A'.B'` in every row (Law 2).
 
    Example — simplify an expression
    ```
@@ -6705,10 +6503,7 @@ Answer: `De Morgan's laws` say how a complement is distributed over an AND or an
       B ---|/                 B ---|>o---|__/
    ```
 
-   Why it matters
-   - It is what makes `NAND and NOR universal gates`: `A + B = (A'.B')'` builds an OR from NAND gates alone.
-   - It converts a two-level AND-OR circuit into a NAND-NAND circuit with no structural change.
-   - The laws extend to any number of variables: `(A.B.C)' = A' + B' + C'` and `(A+B+C)' = A'.B'.C'`.
+   - Why it matters: these laws are what make `NAND and NOR universal gates` (e.g. `A+B = (A'.B')'` builds an OR from NAND alone), and they extend to any number of variables: `(A.B.C)' = A'+B'+C'`.
 
 2. **AB + (A(\overline{BC}))(AC + \overline{B}C)** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 643 (ET: BUET)]*
 
@@ -7572,16 +7367,7 @@ Answer: (Answered in English, as required for IT topics.) De Morgan's theorems f
        B ---| )o--- (A+B+C)'   B ---|>o---|    )--- A'.B'.C'
        C ---|/                 C ---|>o---|___/
     ```
-
-    Example
-    ```
-       F = (A + B'C)'
-         = A' . (B'C)'                Theorem 2
-         = A' . (B + C')              Theorem 1
-         = A'B + A'C'
-    ```
-
-    - Importance: these theorems are the reason `NAND and NOR are universal gates`, and they let a two-level AND-OR circuit be converted into an all-NAND circuit without changing its structure.
+    - Importance: these theorems are why `NAND and NOR are universal gates`, letting an AND-OR circuit be converted into an all-NAND circuit without changing its structure.
 
 17. **Simplify the following Boolean expression: $F = \bar{A}C + A\bar{B} + B\bar{C} + ABC$** *[DESCO Assistant Engineer (CSE) 2019 compact it 1118 (ET: BUET)]*
 
@@ -7928,21 +7714,16 @@ Answer: (Answered in English, as required for IT topics.) An `SR flip-flop` (Set
    ```
 
    Characteristics
-   - `Bistable` — it has two stable states, 1 and 0, and stays in one until told to change. This is what makes it a 1-bit memory.
-   - `Q and Q' are always complementary`, except in the forbidden state.
-   - `Hold state` — with S = R = 0 the previous output is retained. This is the whole point of the device.
-   - `Forbidden state` — S = R = 1 tries to set and reset at once. Both outputs go to the same value, so Q and Q' are no longer complements. Worse, when the inputs return to 0 0 the final state depends on which gate is fractionally faster, so the result is unpredictable. This is called a `race condition`.
-   - `Level-triggered` in its basic form; adding a clock and edge detection gives an edge-triggered flip-flop.
-   - Prone to `switch bounce` filtering use — one common application is debouncing a mechanical switch.
-
-   - The forbidden state is the reason for the `JK flip-flop`, which feeds Q and Q' back into the input gates so that J = K = 1 makes the output `toggle` instead of becoming invalid. Tying J and K together gives the `T (toggle)` flip-flop, and tying `R = S'` gives the `D` flip-flop.
+   - `Bistable` — two stable states (1, 0), stays in one until told to change — the basis of 1-bit memory. `Q and Q'` are always complementary except in the forbidden state.
+   - `Hold state` (S=R=0): previous output retained. `Forbidden state` (S=R=1): both outputs go to the same value; when inputs return to 0 0 the final state depends on which gate is fractionally faster — an unpredictable `race condition`.
+   - `Level-triggered` in its basic form; adding a clock and edge detection gives an edge-triggered flip-flop. Common use: debouncing a mechanical switch.
+   - The forbidden state is why the `JK flip-flop` exists — feeding Q, Q' back so J=K=1 `toggles` instead of being invalid. Tying J,K together gives `T`; tying `R=S'` gives `D`.
 
 4. **(গ) Flip-Flop কী? একটি Multiplexer এর কার্যপদ্ধতি ব্যাখ্যা করুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1075 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) Flip-flop
-    - A `flip-flop` is a `bistable` sequential circuit that stores `one bit` of information. It has two stable states, 1 and 0, and stays in one until a clock edge tells it to change.
-    - It is `edge-triggered`: it samples its inputs only at the instant the clock goes from 0 to 1 (or 1 to 0). This is what makes a synchronous system predictable.
-    - The outputs `Q` and `Q'` are always complementary.
+    - A `flip-flop` is a `bistable` sequential circuit that stores `one bit`, with two stable states (1, 0), staying in one until a clock edge tells it to change.
+    - It is `edge-triggered` — sampling inputs only when the clock transitions (0→1 or 1→0) — which is what makes a synchronous system predictable. Outputs `Q` and `Q'` are always complementary.
 
     Types
     ```
@@ -7994,8 +7775,8 @@ Answer: (Answered in English, as required for IT topics.) Flip-flop
      1   0 | I2
      1   1 | I3
     ```
-    - Two inverters produce the complemented select signals. Each AND gate is wired to one unique combination of them, so `exactly one AND gate is enabled` at any time and the other three output 0. The OR gate therefore carries only the selected input, and no conflict can occur.
-    - Uses: selecting one register to feed the ALU, sharing one transmission line among several sources, parallel-to-serial conversion, and building any Boolean function directly from its truth table.
+    - Two inverters produce the complemented selects; each AND gate matches one unique combination, so `exactly one AND gate is enabled` at a time and the OR gate carries only that selected input.
+    - Uses: selecting one register to feed the ALU, sharing one line among several sources, parallel-to-serial conversion.
 
 5. **Difference between Register and Latch.** *[WZPDCL Assistant Engineer (CSE) 2019 compact it 1151 (ET: KUET)]*
 
@@ -8044,8 +7825,7 @@ Answer: A `latch` stores `one bit`. A `register` stores a `group of bits` — us
     | Extra ability | None | Can shift, load in parallel, count |
     | Examples | SR latch, D latch | Accumulator, PC, IR, shift register |
 
-    - Relationship between them: a flip-flop is built from two latches, and a register is built from n flip-flops. So the latch is the smallest brick and the register is the finished wall.
-    - Practical note: an unintended latch appearing in a design — usually caused by an incomplete `if` statement in HDL code — is a well-known bug, because it makes the circuit level-sensitive where the designer expected an edge-triggered register.
+    - A flip-flop is built from two latches, and a register from n flip-flops — the latch is the smallest brick, the register is the finished wall.
 
 6. **What is the difference between flip-flop and latch with figure?** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1190-1191 (ET: N/A)]*
 
@@ -8278,9 +8058,7 @@ Answer: A `T flip-flop` with T tied to logic 1 toggles on every active clock edg
    ```
 
    Points to note
-   - This two-stage circuit is exactly a `2-bit asynchronous (ripple) counter`. Q1 is the least significant bit and Q2 the most significant.
-   - Because FF2 is clocked by FF1's output, the delays `add up` — this is the ripple problem. For a 100 MHz clock and only two stages it is not a concern, but in a long chain a `synchronous` counter, where every flip-flop shares the same clock, is used instead.
-   - Adding a third stage would give 12.5 MHz, a fourth 6.25 MHz, and so on.
+   - This two-stage circuit is exactly a `2-bit asynchronous (ripple) counter` (Q1 = LSB, Q2 = MSB). Since FF2 is clocked by FF1's output, delays `add up`; for two stages at 100 MHz this is not a concern, but a long chain would use a `synchronous` counter instead. A third stage would give 12.5 MHz, a fourth 6.25 MHz, and so on.
 
 3. **There are different types of clocks available in the market. What type of clock will you use to reduce the cost of SGFL Company?** *[SGFL Assistant General Engineer 2021 compact it 937 (ET: BUET)]*
 
@@ -8345,9 +8123,7 @@ Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 
                                    |       |
                                   Q1      Q2
    ```
-   - All three T inputs are tied to logic 1, so each flip-flop toggles on its clock edge.
-   - FF0 is clocked by the external clock; FF1 by Q0 and FF2 by Q1 — a `ripple` (asynchronous) connection.
-   - The NAND gate watches for the first unwanted state.
+   - All three T inputs are tied to logic 1, so each flip-flop toggles on its clock edge; FF0 is clocked externally, FF1 by Q0, FF2 by Q1 — a `ripple` (asynchronous) connection. The NAND gate watches for the first unwanted state.
 
    Reset logic
    ```
@@ -8384,16 +8160,11 @@ Answer: (Answered in English, as required for IT topics.) A `MOD-6` counter has 
    ```
 
    Points to note
-   - State 110 exists for only a few nanoseconds — long enough to fire the NAND, then cleared. This very short pulse is called a `glitch` or a `spike`, and it is the main drawback of the reset method.
-   - A `synchronous` MOD-6 counter avoids the glitch entirely, by feeding the same clock to all three flip-flops and deriving each T input from combinational logic. It costs more gates but is safe to read at any time.
-   - The same technique gives any modulus: MOD-10 clears on 1010 with `CLEAR = (Q3.Q1)'`, MOD-12 on 1100, and so on.
+   - State 110 exists only a few nanoseconds before clear — this short pulse, a `glitch`/`spike`, is the main drawback of the reset method. A `synchronous` version (same clock to all flip-flops, T derived from logic) avoids it, at the cost of more gates. The same technique gives any modulus, e.g. MOD-10 clears on 1010 with `CLEAR=(Q3.Q1)'`.
 
 5. **Ripple counter কী? একটি তিন বিটের Asynchronous up ripple counter এর গঠন লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1077-1078 (ET: N/A)]*
 
-Answer: (Answered in English, as required for IT topics.) A `ripple counter` is an `asynchronous` counter in which only the first flip-flop receives the external clock. Each following flip-flop is clocked by the output of the one before it, so the count change `ripples` from the least significant bit towards the most significant.
-
-    - It is built from `toggle` flip-flops — a JK flip-flop with J = K = 1, or a D flip-flop with D tied to Q'.
-    - An `n-bit` ripple counter has `2^n` states and divides the input frequency by 2^n.
+Answer: (Answered in English, as required for IT topics.) A `ripple counter` is an `asynchronous` counter in which only the first flip-flop receives the external clock; each later flip-flop is clocked by the output of the one before it, so the count `ripples` from LSB to MSB. It is built from `toggle` flip-flops (JK with J=K=1, or D with D tied to Q'). An `n-bit` ripple counter has `2^n` states and divides the input frequency by 2^n.
 
     3-bit asynchronous up ripple counter
     ```
@@ -8408,8 +8179,7 @@ Answer: (Answered in English, as required for IT topics.) A `ripple counter` is 
            CLK      +--------+       +--------+
          (external)   Q0 clocks FF1    Q1 clocks FF2
     ```
-    - Every flip-flop toggles on the `falling edge` of its own clock input, which gives an `up` counter.
-    - Q0 is the least significant bit and Q2 the most significant.
+    - Every flip-flop toggles on the `falling edge` of its own clock input, giving an `up` counter; Q0 is LSB and Q2 is MSB.
 
     Count sequence
     ```
@@ -8438,14 +8208,9 @@ Answer: (Answered in English, as required for IT topics.) A `ripple counter` is 
     ```
     - Each stage halves the frequency, so a ripple counter is also a `frequency divider`.
 
-    Advantages
-    - Very simple; no combinational next-state logic and no clock distribution network.
-    - Fewer gates, lower cost and lower power.
+    Advantages: simple, no combinational next-state logic, no clock distribution network, fewer gates, lower cost/power.
 
-    Disadvantages
-    - The delays `add up`: the MSB settles after `n × t_pd`. This limits the maximum counting speed.
-    - While the ripple travels, the outputs show short-lived wrong values — `glitches` — so the count must not be decoded or read during that time.
-    - A `synchronous` counter, where all flip-flops share one clock, removes both problems at the cost of extra logic.
+    Disadvantages: delays `add up` (MSB settles after `n × t_pd`, limiting speed), and outputs show short-lived `glitches` while the ripple travels, so the count must not be read during that time. A `synchronous` counter (all flip-flops share one clock) removes both problems at the cost of extra logic.
 
 6. **(c) Draw the circuit diagram of a mod-10 asynchronous ripple up counter and explain its operation.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1132-1134 (ET: N/A)]*
 
@@ -8476,9 +8241,7 @@ Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000
                              |         |
                             Q1        Q3
     ```
-    - All J and K inputs are tied to logic 1, so every flip-flop toggles on its clock edge.
-    - FF0 takes the external clock; each later flip-flop is clocked by the previous output — the `ripple` connection.
-    - The NAND gate drives the active-LOW `CLEAR` of all four flip-flops together.
+    - All J,K tied to 1, so every flip-flop toggles on its clock edge; FF0 takes the external clock and each later stage is clocked by the previous output (the `ripple` connection). The NAND gate drives the active-LOW `CLEAR` of all four flip-flops together.
 
     Reset logic
     ```
@@ -8520,9 +8283,8 @@ Answer: A `mod-10` (decade) counter counts 0000 to 1001 and then returns to 0000
     ```
 
     Points to note
-    - State 1010 exists for only a few nanoseconds before the clear takes effect. This very short `glitch` is the main drawback of the reset method, and it means the outputs must not be decoded during that instant.
-    - The counter divides the input frequency by 10, so it is also a `decade frequency divider`. The 7490 IC is the classic implementation.
-    - A `synchronous` mod-10 counter drives all four flip-flops from the same clock and derives the J and K inputs from logic, which removes the glitch and the accumulated ripple delay.
+    - State 1010 exists only a few nanoseconds before clear takes effect — this `glitch` is the main drawback, so outputs must not be decoded during that instant.
+    - The counter also acts as a `decade frequency divider` (7490 IC is the classic implementation). A `synchronous` version, deriving J/K from logic on a shared clock, removes the glitch and ripple delay.
 
 7. **What is synchronous? Why sequential circuit use synchronization.** *[Bangladesh Water Development Board Assistant Programmer 2018 compact it 1189 (ET: N/A)]*
 
@@ -8540,22 +8302,13 @@ Answer: Synchronous
     ```
 
     Why sequential circuits use synchronization
-    - `Predictable timing.` Every state change happens at one known instant, so the designer knows exactly when the outputs are valid and safe to read.
-    - `No accumulated delay.` In a ripple counter the delays add up down the chain, so the most significant bit settles after n gate delays. With one shared clock, all outputs settle within one gate delay of the same edge.
-    - `No glitches during counting.` A ripple counter passes through short-lived wrong values while the ripple travels — reading or decoding at that moment gives a wrong result. A synchronous counter never shows an invalid state.
-    - `Race conditions are avoided.` Without a clock, two signals arriving at slightly different times can leave the circuit in the wrong state. The clock edge forces every element to sample at the same moment, so the race disappears.
-    - `Higher maximum speed.` The clock period only has to cover `the longest single path`, not the sum of all stages.
-    ```
-       f_max = 1 / (t_pd + t_setup + t_clk-to-Q)
-    ```
-    - `Simple design and verification.` Setup and hold checks, static timing analysis and simulation all assume a clock. Modern EDA tools are built entirely around synchronous design.
-    - `Reliable data exchange between blocks.` If two blocks share a clock, one can hand data to the other with no handshake at all.
+    - `Predictable timing` — every state change happens at one known clock instant, so outputs are known to be valid and safe to read.
+    - `No accumulated delay / no glitches` — a ripple counter's delays add up down the chain and shows short-lived wrong values while settling; with one shared clock all outputs settle within one gate delay of the same edge, with no invalid state.
+    - `Race conditions avoided` — the clock edge forces every element to sample at the same moment, so signals arriving at slightly different times cannot leave the circuit in a wrong state.
+    - `Higher maximum speed` — the clock period only has to cover the longest single path, not the sum of all stages: `f_max = 1/(t_pd + t_setup + t_clk-to-Q)`.
+    - `Simple, tool-friendly design` — setup/hold checks, static timing analysis and EDA tools are all built around a clock, and blocks can exchange data reliably with no handshake needed.
 
-    Cost of synchronisation
-    - The clock must reach every flip-flop at nearly the same time. The difference is `clock skew`, and controlling it needs a carefully balanced clock tree, which uses area and power.
-    - The clock switches every cycle, so it is often the largest single consumer of dynamic power in a chip. `Clock gating` is used to switch it off in idle blocks.
-
-    - Summary: synchronisation trades some power and wiring for `predictability`. In a system of thousands of flip-flops that predictability is not a convenience, it is the only way the design can be made to work at all.
+    - Cost: the clock must reach every flip-flop at nearly the same time (difference = `clock skew`), needing a balanced clock tree, and the clock itself is often the largest consumer of dynamic power (mitigated by `clock gating`). This trade of power/wiring for `predictability` is worthwhile — in a system of thousands of flip-flops it is the only way the design works at all.
 
 ### Combinational vs Sequential Circuits Comparison (3)
 
@@ -8767,161 +8520,71 @@ Answer: The main difference is `memory`. A combinational circuit has none; a seq
 
 2. **Describe the important characteristics of digital IC's.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 556 (ET: BIBM)]*
 
-Answer: A `digital IC` (integrated circuit) contains many logic gates fabricated on one silicon chip. When choosing one, these are the characteristics that matter.
+Answer: A `digital IC` (integrated circuit) contains many logic gates fabricated on one silicon chip. Important characteristics considered when choosing one:
 
-   1. Propagation delay (t_pd)
-   - The time between an input change and the corresponding output change. It decides the maximum operating speed.
-   ```
-      74LS TTL  ~ 9 ns        74AC CMOS ~ 3 ns        ECL ~ 1 ns
-   ```
+   | # | Characteristic | Key point |
+   |---|---|---|
+   | 1 | Propagation delay (t_pd) | Time between input change and output change; sets max speed. 74LS TTL ~9ns, 74AC CMOS ~3ns, ECL ~1ns |
+   | 2 | Power dissipation | Power per gate; TTL draws current continuously (~10mW), CMOS near-zero static, only `P=C·Vdd²·f` while switching |
+   | 3 | Speed-power product | `t_pd × power` (pJ) — lower is better; fairest way to compare families since speed can be bought with power |
+   | 4 | Fan-in | Number of inputs a gate accepts; large fan-in slows the gate down |
+   | 5 | Fan-out | Number of similar gates one output can drive at valid levels; TTL ~10, CMOS much higher (capacitance-limited) |
+   | 6 | Noise margin | Largest unwanted voltage tolerated without misreading; `NM = VOH(min)-VIH(min)` / `VIL(max)-VOL(max)`; TTL ~0.4V, CMOS ~1.5V |
+   | 7 | Logic levels & supply voltage | Voltage ranges for 0/1 and supply needed; TTL is 5V only, CMOS 1.8–18V (mixing needs a level translator) |
+   | 8 | Operating temperature | Commercial 0–70°C, Industrial -40–85°C, Military -55–125°C |
+   | 9 | Packing density | SSI (≤12 gates) to ULSI (>1M); CMOS has the highest density, hence used in VLSI |
+   | 10 | Current parameters | IOH/IOL (output drive capability), IIH/IIL (input demand) — together set fan-out |
+   | 11 | Other | Cost, package type, ESD sensitivity (CMOS inputs need protection), voltage/current compatibility with the rest of the board |
 
-   2. Power dissipation
-   - The power one gate consumes. TTL draws current continuously (about 10 mW per gate); CMOS draws almost none when static, and only `P = C.Vdd^2.f` while switching.
-
-   3. Speed-power product (figure of merit)
-   ```
-      Speed-power product = propagation delay × power dissipation   [ pJ ]
-   ```
-   - The lower the better. It is the fair way to compare families, since speed can always be bought with power.
-
-   4. Fan-in
-   - The `number of inputs` a gate can accept. A 3-input NAND has a fan-in of 3. Very large fan-in slows the gate down.
-
-   5. Fan-out
-   - The `number of similar gates` one output can drive and still keep valid logic levels. TTL is about 10; CMOS is much higher, though limited by the capacitance the driver must charge.
-
-   6. Noise margin
-   - The largest unwanted voltage that can appear on a line without changing the logic value.
-   ```
-      NM(high) = VOH(min) - VIH(min)
-      NM(low)  = VIL(max) - VOL(max)
-
-      TTL  ~ 0.4 V        CMOS ~ 1.5 V at 5 V supply
-   ```
-
-   7. Logic levels and supply voltage
-   - The voltage ranges accepted as 0 and 1, and the supply the chip needs. TTL is 5 V only; CMOS works from 1.8 V to 18 V depending on the family. Mixing families needs a level translator.
-
-   8. Operating temperature range
-   ```
-      Commercial : 0 to 70 C
-      Industrial : -40 to 85 C
-      Military   : -55 to 125 C
-   ```
-
-   9. Packing density and scale of integration
-   ```
-      SSI  : up to 12 gates          MSI  : 12 to 100
-      LSI  : 100 to 10,000           VLSI : over 10,000
-      ULSI : over 1 million
-   ```
-   - CMOS has by far the highest density, which is why every VLSI chip uses it.
-
-   10. Current parameters
-   - `IOH, IOL` — how much current the output can source and sink; this is what limits fan-out.
-   - `IIH, IIL` — the current each input demands.
-
-   11. Other practical points
-   - `Cost` per gate, `availability`, and package type (DIP, SOIC, QFN, BGA).
-   - `Reliability` and immunity to electrostatic discharge — CMOS inputs are sensitive and need protection diodes and careful handling.
-   - `Compatibility` with the rest of the board, so that outputs and inputs meet each other's voltage and current specifications.
-
-   - In practice the choice is a trade: speed, power, noise immunity and cost cannot all be maximised at once. CMOS wins on power, density and noise margin, which is why it dominates modern design.
+   - These trade off against each other — speed, power, noise immunity and cost cannot all be maximised at once. CMOS wins on power, density and noise margin, which is why it dominates modern design.
 
 3. **Difference between Analog and Digital Circuit.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 873 (ET: N/A)]*
 
-Answer: An `analog circuit` works with signals that vary `continuously` over a range of values. A `digital circuit` works with signals that take only `two discrete` values, 0 and 1.
+Answer: An `analog circuit` works with signals that vary `continuously` over a range of values (built from R, L, C, diodes, transistors, op-amps). A `digital circuit` works with signals that take only `two discrete` values, 0 and 1 (built from logic gates, flip-flops, counters), analysed with Boolean algebra/truth tables/K-maps.
 
-   Analog circuit
-   - The signal can take any value between its limits — 0 V, 1.37 V, 2.891 V and so on.
-   - Built from resistors, capacitors, inductors, diodes, transistors and operational amplifiers.
-   - The output is a continuous function of the input, so amplification, filtering and mixing are natural operations.
    ```
-      Analog signal
-           /‾‾\      /‾‾\
-      ----/    \____/    \----     any value at any instant
+      Analog signal                     Digital signal
+           /‾‾\      /‾‾\                    __|‾‾‾|___|‾‾‾|___
+      ----/    \____/    \----          any value        only two levels
    ```
-
-   Digital circuit
-   - The signal is either LOW (about 0 V) or HIGH (about 5 V or 3.3 V). Everything between is either forbidden or resolved to the nearer level.
-   - Built from logic gates, flip-flops, counters and processors.
-   - Designed and analysed with `Boolean algebra`, truth tables and K-maps.
-   ```
-      Digital signal
-           __|‾‾‾|___|‾‾‾|___      only two levels
-   ```
-
-   Difference
 
    | Point | Analog circuit | Digital circuit |
    |---|---|---|
    | Signal | Continuous, any value | Discrete, only 0 and 1 |
    | Components | R, L, C, diode, op-amp | Logic gates, flip-flops |
    | Design method | Circuit equations, calculus | Boolean algebra, truth table, K-map |
-   | Noise immunity | Poor — noise adds to the signal permanently | Excellent — the level is restored at every gate |
-   | Accuracy | Limited by component tolerance and drift | Set by the number of bits |
-   | Storage | Difficult, degrades over time | Easy and exact |
-   | Design complexity | Needs careful, skilled analysis | Systematic, automated by CAD tools |
+   | Noise immunity | Poor — noise adds to the signal permanently | Excellent — level restored at every gate |
+   | Accuracy | Limited by component tolerance/drift | Set by the number of bits |
+   | Storage | Degrades over time | Easy and exact |
    | Power | Often continuous | Mostly only while switching (CMOS) |
    | Integration density | Low | Very high (VLSI) |
-   | Cost of reproduction | Copies degrade | Copies are exact |
-   | Examples | Amplifier, radio receiver, filter, power supply | Computer, calculator, digital watch, mobile phone |
+   | Examples | Amplifier, radio, filter, power supply | Computer, calculator, digital watch |
 
-   Why digital is preferred
-   - `Noise immunity` is the decisive advantage: every gate regenerates a clean 0 or 1, so a signal can pass through thousands of stages without degrading. An analog signal accumulates every bit of noise it meets.
-   - Data can be `stored, copied and transmitted exactly`, and errors can be detected and corrected with parity, checksums and CRC.
-   - The design is `programmable and reusable`, and integrates to billions of transistors per chip.
-
-   - The real world is analog, so practical systems are `mixed-signal`: a sensor gives an analog voltage, an `ADC` converts it to bits, digital logic processes it, and a `DAC` converts the result back to analog for a speaker or an actuator.
+   - Digital is preferred mainly for `noise immunity` (every gate regenerates a clean 0/1) and `exact storage/copying` with error detection (parity, CRC). Real-world systems are usually `mixed-signal`: an ADC converts an analog sensor signal to bits for digital processing, and a DAC converts the result back for output.
 
 4. **(c) What is fan-in and fan out?** *[BPSC (Security Services Division) Assistant Maintenance Engineer 15.12.2021 compact it 891 (ET: N/A)]*
 
 Answer: Fan-in
-   - `Fan-in` is the `number of inputs` a logic gate can accept.
-   - A 2-input NAND has a fan-in of 2; a 3-input AND has a fan-in of 3.
+   - `Fan-in` is the `number of inputs` a logic gate can accept, fixed by the gate's design.
    ```
       A ---|‾‾\
       B ---|    )--- Y          fan-in = 3
       C ---|__/
    ```
-   - It is a property of the gate itself, fixed when the gate is designed.
-   - A large fan-in makes the gate `slower` and `weaker`: in CMOS the series transistors add resistance, so charging the output takes longer. In practice fan-in is kept to 4 or fewer, and a wider function is built as a tree of small gates.
+   - A large fan-in makes the gate `slower` and `weaker` (series transistors in CMOS add resistance), so it is usually kept to 4 or fewer; a wider function is built as a tree of small gates instead.
 
    Fan-out
-   - `Fan-out` is the `number of similar gate inputs` that one output can drive while still producing valid logic levels.
+   - `Fan-out` is the `number of similar gate inputs` one output can drive while still giving valid logic levels.
    ```
                            +--> gate 1
                            +--> gate 2
       Y (one output) ------+--> gate 3          fan-out = 4
                            +--> gate 4
    ```
-   - It is calculated from the output and input current ratings:
-   ```
-      Fan-out(HIGH) = IOH(max) / IIH(max)
-      Fan-out(LOW)  = IOL(max) / IIL(max)
-
-      Fan-out = the smaller of the two
-   ```
-   - Worked example for standard TTL:
-   ```
-      IOL = 16 mA , IIL = 1.6 mA   ->  16 / 1.6 = 10
-      IOH = 400 uA , IIH = 40 uA   ->  400 / 40 = 10
-
-      Fan-out = 10
-   ```
-
-   Typical values
-   ```
-      TTL   : about 10
-      CMOS  : 50 or more in principle, because inputs draw almost no DC current
-      ECL   : about 25
-   ```
-   - CMOS fan-out is not limited by current but by `capacitance`. Every extra input adds gate capacitance, which slows the switching edge. So the real limit is the maximum acceptable propagation delay, not the logic level.
-
-   What happens if the limits are exceeded
-   - Driving more inputs than the fan-out allows makes `VOH fall` and `VOL rise`, so the noise margin shrinks and the signal may be read incorrectly.
-   - The edges become slow, which can cause a receiving gate to oscillate or draw excess current.
-   - The fix is a `buffer` or `line driver` between the source and the loads, which restores full drive strength.
+   - Calculated from current ratings: `Fan-out = min( IOH(max)/IIH(max), IOL(max)/IIL(max) )`.
+   - TTL example: IOL=16mA, IIL=1.6mA -> 10; IOH=400uA, IIH=40uA -> 10, so fan-out = 10.
+   - Typical values: TTL ≈ 10, ECL ≈ 25, CMOS ≈ 50+ (in principle, since CMOS inputs draw almost no DC current — its real limit is capacitive loading/propagation delay, not current).
+   - Exceeding fan-out makes `VOH fall` and `VOL rise` (shrinking noise margin) and slows edges; the fix is a `buffer`/line driver between source and loads.
 
    | Point | Fan-in | Fan-out |
    |---|---|---|
@@ -8991,7 +8654,7 @@ Answer: A `fault` is a defect that can make a digital system behave incorrectly.
 
 Answer: What an IC is
    - An `integrated circuit (IC)` is a complete electronic circuit — transistors, diodes, resistors and their interconnections — fabricated together on a single small piece of semiconductor, usually silicon.
-   - Invented by `Jack Kilby` (1958) and `Robert Noyce` (1959). A modern processor holds billions of transistors on a chip a few square centimetres in size.
+   - Invented by `Jack Kilby` (1958) / `Robert Noyce` (1959). Modern chips hold billions of transistors in a few square centimetres.
    ```
    Scale of integration
       SSI  : up to 12 gates            MSI  : 12 to 100 gates
@@ -9000,35 +8663,19 @@ Answer: What an IC is
    ```
 
    Advantages of an IC over a discrete-component circuit
-   - `Very small size.` Thousands of components occupy the space one discrete transistor used to take. This is what made computers, mobile phones and hearing aids possible.
-   - `Low cost.` Hundreds of identical chips are made on one wafer in the same set of steps, so the cost per circuit falls dramatically with volume.
-   - `High reliability.` Most failures in discrete circuits happen at `soldered joints and connections`. An IC has almost none — the interconnections are formed on the chip itself.
-   - `Low power consumption.` The components are tiny, so the currents, voltages and capacitances are all small.
-   - `Higher speed.` The interconnections are microns long instead of centimetres, so signals arrive sooner and stray capacitance and inductance are far lower.
-   - `Better matched characteristics.` Components made side by side on the same wafer, at the same time, have nearly identical properties and drift together with temperature. This is very hard to achieve with discrete parts.
-   - `Light weight`, so it suits portable and aerospace equipment.
-   - `Easy replacement.` A faulty IC is unplugged and swapped rather than repaired.
-   - `Simpler design and assembly` — fewer parts to buy, place and solder, so a smaller PCB and less manufacturing time.
+   - `Very small size` — thousands of components in the space one discrete transistor took.
+   - `Low cost` — many identical chips are made on one wafer in the same steps, so cost per circuit falls with volume.
+   - `High reliability` — discrete circuits mostly fail at soldered joints; an IC has almost none, since interconnections are formed on-chip.
+   - `Low power consumption` — components are tiny, so currents and voltages are small.
+   - `Higher speed` — micron-scale interconnections mean lower stray capacitance/inductance than centimetre-long wires.
+   - `Light weight, easy replacement, simpler assembly` — fewer discrete parts to buy, place and solder.
 
-   Limitations
-   - A faulty IC cannot be repaired, only replaced.
-   - Large inductors and high-value capacitors cannot be fabricated on chip.
-   - It handles only low power; heat dissipation limits the current.
-   - Design and mask costs are enormous, so it pays only in volume.
-
-   Why an IC needs so little power
-   - `Very small components.` Channel lengths are measured in nanometres, so the currents needed to switch a transistor are microamperes, not milliamperes.
-   - `Very short interconnections.` Wires microns long have tiny capacitance, and the dynamic power of a digital circuit is
-   ```
-      P = C . Vdd^2 . f
-   ```
-     so a small `C` directly means small power.
-   - `Low supply voltage.` Modern chips run at 1.0-3.3 V rather than the 5-12 V of discrete designs, and power depends on the `square` of the voltage — halving Vdd cuts power to a quarter.
-   - `CMOS technology.` In either logic state one of the two complementary transistors is off, so there is no path from supply to ground and the `static current is almost zero`. Power is drawn only during switching.
-   - `No power lost in interconnection resistance`, unlike a board full of discrete parts joined by long tracks and solder joints.
-   - `Clock gating and power gating` switch off idle blocks completely in modern designs.
-
-   - The result: a discrete gate built from transistors and resistors might dissipate tens of milliwatts, while an equivalent CMOS gate on a chip dissipates nanowatts when idle. That difference is exactly what makes a battery-powered smartphone possible.
+   Why an IC needs small power for its operation
+   - `Very small components` — nanometre channel lengths need microampere switching currents, not milliampere.
+   - `Very short interconnections` give tiny capacitance `C`, and dynamic power `P = C·Vdd²·f`, so small C means small power.
+   - `Low supply voltage` (1.0–3.3 V vs 5–12 V discrete) — power depends on `Vdd²`, so halving Vdd cuts power to a quarter.
+   - `CMOS technology` — one of the complementary transistor pair is always off, so static current is almost zero; power is drawn mainly during switching.
+   - Result: a discrete gate may dissipate tens of milliwatts, while an equivalent CMOS gate on-chip dissipates nanowatts idle — this is what makes battery-powered devices possible.
 
 ## 2's Complement & Binary Arithmetic (4)
 
@@ -9370,35 +9017,35 @@ Answer:
 
 1. **A traffic signal cycles from RED to YELLOW, YELLOW to GREEN and GREEN to RED. In each cycle RED is turned for 100 seconds, YELLOW is turned for 40 seconds and GREEN is turned for 80 seconds. The traffic has to be implemented using FSM. The only input to this FSM is a clock of 10 second period. The minimum number of flip-flops require to implement this FSM is?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1455 (ET: BUET)]*
 
-Answer: The number of flip-flops is decided by the `number of distinct states` the FSM must hold, and each clock tick is one state.
+Answer: The number of flip-flops needed depends on the number of **distinct states**, not the number of colours — the FSM must count elapsed clock ticks to know when to switch.
 
-   Step 1 — find how many clock ticks each colour lasts
+   Step 1 — ticks per colour (clock period = 10 s)
    ```
-      Clock period = 10 seconds
-
       RED    : 100 / 10 = 10 ticks
       YELLOW :  40 / 10 =  4 ticks
       GREEN  :  80 / 10 =  8 ticks
    ```
 
-   Step 2 — find the total number of states in one full cycle
+   Step 2 — total states in one full cycle
    ```
-      Total time  = 100 + 40 + 80 = 220 seconds
-      Total states = 220 / 10 = 22 states
+      Total time   = 100 + 40 + 80 = 220 s
+      Total states = 220 / 10 = 22
    ```
-   - The FSM cannot simply have 3 states (one per colour), because it must also `count how long` each colour has lasted. Every 10-second slot is therefore a separate state, and the machine walks through 22 of them before repeating.
 
-   Step 3 — find the minimum number of flip-flops
+   Step 3 — minimum flip-flops (n flip-flops give 2^n states)
    ```
-      n flip-flops give 2^n states
+      2^4 = 16  <  22   not enough
+      2^5 = 32  >= 22   enough
+      n = ceil(log2(22)) = 5
+   ```
 
-      2^4 = 16  <  22        not enough
-      2^5 = 32  >= 22        enough
+   **Minimum number of flip-flops = 5**
 
-      n = ceil( log2(22) ) = 5
+   State allocation (22 of 32 possible states used; the rest are don't-cares)
    ```
-   ```
-      Minimum number of flip-flops = 5
+      State 0  to 9   ->  RED    (10 states, 100 s)
+      State 10 to 13  ->  YELLOW ( 4 states,  40 s)
+      State 14 to 21  ->  GREEN  ( 8 states,  80 s)
    ```
 
    State diagram (compressed)
@@ -9413,20 +9060,4 @@ Answer: The number of flip-flops is decided by the `number of distinct states` t
        GREEN_1 --> GREEN_8 : ... 8 states total
        GREEN_8 --> RED_1 : clock
    ```
-
-   State allocation
-   ```
-      State 0  to 9   ->  RED    lamp on   (10 states, 100 s)
-      State 10 to 13  ->  YELLOW lamp on   ( 4 states,  40 s)
-      State 14 to 21  ->  GREEN  lamp on   ( 8 states,  80 s)
-      State 21 -> back to state 0
-   ```
-   - The output logic is simple combinational decoding of the 5-bit state:
-   ```
-      RED    = 1 when state <= 9
-      YELLOW = 1 when 10 <= state <= 13
-      GREEN  = 1 when state >= 14
-   ```
-   - Ten of the 32 possible states are unused, so they are treated as don't-cares in the K-map, or forced back to state 0 for a safe design.
-
-   - The common mistake to avoid: answering `2` flip-flops for three colours. The clock is the only input, so the machine has no way to know how long a colour has been showing except by counting, which is what forces 22 states and therefore 5 flip-flops.
+   - Common mistake: answering `3` flip-flops (one per colour) — the only input is the clock, so the FSM must count ticks within a colour, giving 22 states, not 3.

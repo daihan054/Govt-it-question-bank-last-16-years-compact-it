@@ -129,47 +129,25 @@ Answer: A `microprocessor` is a single integrated circuit that contains the comp
 3. **Microprocessor কি? এর আবিষ্কারে তথ্য ও যোগাযোগ প্রযুক্তিতে কি ধরনের অগ্রগতি সাধিত হয়েছে ব্যাখ্যা করুন।** *[DMLC Assistant Teacher (ICT) 2021 compact it 827 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) What a microprocessor is
-    - A `microprocessor` is a single integrated circuit that contains the complete central processing unit — the ALU, the control unit and the registers. It fetches instructions from memory, decodes them and executes them.
-    - The first was the `Intel 4004` in 1971: a 4-bit chip with 2,300 transistors running at 740 kHz. A modern processor has tens of billions of transistors running at several GHz.
-
-    Its parts
+    - A `microprocessor` is a single integrated circuit containing the complete CPU — ALU, control unit and registers — that fetches, decodes and executes instructions.
+    - The first was the `Intel 4004` (1971): a 4-bit chip with 2,300 transistors at 740 kHz; a modern processor has tens of billions of transistors at several GHz.
     ```
        ALU           : arithmetic and logic operations
        Control unit  : decodes instructions, generates timing signals
        Registers     : PC, IR, accumulator, flags, general purpose
     ```
 
-    Advances it brought to information and communication technology
-
-    `Miniaturisation and the personal computer`
-    - Before it, a computer filled a room and cost as much as a building. Putting the whole CPU on one chip made the `personal computer` possible, so computing moved from a few large institutions to every desk and every home.
-
-    `Falling cost, rising power`
-    - Moore's law — transistor count doubling roughly every two years — made computing power cheap enough for ordinary people and small businesses. This is the single largest reason ICT spread as fast as it did.
-
-    `The Internet and telecommunications`
-    - Routers, switches, modems and base stations are all built around microprocessors. Digital exchanges replaced mechanical ones, and packet switching became practical, which is what made the Internet possible at all.
-
-    `Mobile communication`
-    - A modern smartphone is a microprocessor with a radio attached. Mobile banking, mobile money (bKash, Nagad), video calling and messaging all rest on it.
-
-    `Embedded systems everywhere`
-    - Microcontrollers — microprocessors with memory and I/O on the same chip — now run washing machines, cars, medical equipment, industrial plants, traffic signals and smart meters. Most processors made today go into embedded systems, not computers.
-
-    `Automation and industry`
-    - Programmable logic controllers, CNC machines, robots and process control systems all became possible, raising productivity and consistency in manufacturing.
-
-    `New services and industries`
-    - E-governance, online banking, e-commerce, e-learning, telemedicine and digital media — none of them existed before cheap computing.
-    - In Bangladesh this underpins the `Digital Bangladesh` programme: national ID, online passport and tax services, and the mobile financial services used by tens of millions.
-
-    `Artificial intelligence and data processing`
-    - Modern processors and GPUs made machine learning, big data analysis and cloud computing practical.
+    Advances it brought to ICT
+    - Miniaturisation and the PC: putting the whole CPU on one chip moved computing from room-sized institutional machines to every desk and home.
+    - Falling cost, rising power: Moore's law (transistors doubling roughly every 2 years) made computing cheap enough for ordinary people — the single biggest driver of ICT's spread.
+    - Telecom and the Internet: routers, switches, modems and digital exchanges are all microprocessor-based, making packet switching and the Internet practical.
+    - Mobile and embedded computing: a smartphone is a microprocessor with a radio (mobile banking, bKash/Nagad, video calling); microcontrollers now run washing machines, cars, medical devices and industrial plants — most processors made today go into embedded systems, not PCs.
+    - Automation, new services and AI: PLCs, CNC and robots raised manufacturing productivity; e-governance, online banking, e-commerce and telemedicine emerged; in Bangladesh this underpins Digital Bangladesh (NID, e-passport, mobile financial services); modern processors/GPUs also made machine learning and big data practical.
 
     Cost of the advance
-    - New risks came with it: `cybercrime`, privacy loss, the `digital divide` between those with access and those without, `electronic waste`, and dependence on foreign chip supply chains.
+    - New risks: cybercrime, privacy loss, the digital divide, e-waste, and dependence on foreign chip supply chains.
 
-    - Summary: the microprocessor turned computing from a rare, expensive institutional resource into a cheap component that could be put inside anything. Every later ICT development — the PC, the Internet, the mobile phone, embedded automation and AI — followed from that one change.
+    - Summary: the microprocessor turned computing from a rare institutional resource into a cheap component usable anywhere — the PC, the Internet, mobile phones, embedded automation and AI all followed from that one change.
 
 4. **What is Microprocessor? Explain basic component of Microprocessor.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 868-869 (ET: N/A)]*
 
@@ -778,18 +756,11 @@ Answer: (Answered in English, as required for IT topics.) Main function of the C
 
 4. **Explain the functions of ALU and Control Unit of a Computer.** *[Multiple Ministry Assistant Programmer 2017 compact it 1229 (ET: N/A)]*
 
-Answer: The `ALU` and the `control unit` are the two working parts of the CPU. The ALU does the computing; the control unit decides what is computed and when.
+Answer: The `ALU` and the `control unit` are the two working parts of the CPU — the ALU does the computing, the control unit decides what is computed and when.
 
-    Functions of the Arithmetic Logic Unit (ALU)
-    - `Arithmetic operations` — addition, subtraction, multiplication, division, increment and decrement. Subtraction reuses the adder, since `A - B = A + (2's complement of B)`.
-    - `Logical operations` — AND, OR, NOT, XOR, used for masking, setting and testing individual bits.
-    - `Comparison` — testing whether two values are equal, greater or less. This is done by subtracting and examining the flags.
-    - `Shift and rotate` — moving bits left or right, which also multiplies or divides by powers of two.
-    - `Setting the status flags` from the result:
-    ```
-       Z (zero) , C (carry) , S (sign) , O (overflow) , P (parity) , A (auxiliary)
-    ```
-    - It is purely `combinational` — it stores nothing. Operands come from registers and results go straight back to them.
+    ALU functions
+    - Arithmetic (add, subtract, multiply, divide, inc/dec — subtraction reuses the adder via 2's complement), logical (AND/OR/NOT/XOR for masking/testing bits), comparison (via subtraction and flag checks), shift/rotate (also multiplies/divides by powers of two), and setting the status flags (`Z, C, S, O, P, A`).
+    - Purely `combinational` — stores nothing; operands come from registers, results go straight back.
     ```
           Operand A        Operand B
               |                |
@@ -802,25 +773,9 @@ Answer: The `ALU` and the `control unit` are the two working parts of the CPU. T
             Result          Flags
     ```
 
-    Functions of the Control Unit (CU)
-    - `Fetch` — read the next instruction from memory, using the address in the program counter, and place it in the instruction register.
-    - `Decode` — interpret the opcode to determine the operation, the operands and the addressing mode.
-    - `Generate control signals` — issue the exact sequence of enable, select and timing pulses that make the ALU, the registers, memory and the I/O units act in the right order.
-    - `Sequence and timing` — keep every unit in step with the clock, and insert wait states for slow devices.
-    - `Control the data flow` — decide what travels along the internal buses and when, and manage the address, data and control buses.
-    - `Control program flow` — implement jumps, branches, loops, calls and returns by changing the program counter.
-    - `Handle interrupts` — save the current state, transfer control to the service routine, and restore afterwards.
-    - It performs `no calculation of its own`; it is the traffic controller of the CPU.
-
-    Two ways a control unit is built
-    ```
-       Hardwired    : fixed logic gates and a sequencer.
-                      Fast, but hard to modify. Used in RISC designs.
-
-       Microprogrammed : each machine instruction is a small program of
-                      microinstructions held in control memory.
-                      Slower, but flexible. Used in CISC designs.
-    ```
+    Control Unit functions
+    - Fetch (read the next instruction via the PC into the IR), decode (interpret the opcode/operands/addressing mode), generate control signals (enable/select/timing pulses for ALU, registers, memory, I/O), sequence/time everything with the clock, control data flow on the buses, control program flow (jumps/branches/calls via the PC), and handle interrupts (save state, run the ISR, restore).
+    - Performs `no calculation of its own` — it is the traffic controller of the CPU, built either `hardwired` (fast, fixed logic — RISC) or `microprogrammed` (flexible, control-memory microinstructions — CISC).
 
     How they work together
     ```
@@ -1694,55 +1649,21 @@ Answer: A `GPU (Graphics Processing Unit)` is a specialised processor with thous
 
 1. **Discuss the factors that affect the Speed of a CPU.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 541 (ET: MIST)]*
 
-Answer: The `speed` of a CPU is how much work it completes per second. Clock frequency alone does not decide it — several factors act together.
+Answer: The `speed` of a CPU is how much work it completes per second — clock frequency alone doesn't decide it; several factors act together: `Real performance = clock speed x IPC x number of cores`.
 
-   1. Clock speed (frequency)
-   - The number of cycles per second, measured in GHz. A 3.0 GHz processor performs three thousand million cycles a second.
-   - Higher frequency means faster execution `only when comparing the same design`. A 2.5 GHz modern chip easily beats a 3.5 GHz ten-year-old one, because it does more work per cycle.
+   1. Clock speed (GHz) - cycles/second; only meaningful when comparing the same design (a modern 2.5GHz chip beats an old 3.5GHz one).
+   2. IPC/architecture - better pipelines, wider issue width, branch prediction and out-of-order execution raise IPC; this is where most modern gains come from.
+   3. Cores/threads - more cores run tasks truly in parallel; hyper-threading keeps a core's units busy; limited by Amdahl's law (the serial part never speeds up).
+   4. Cache memory - a hit takes a few cycles, a miss reaching RAM takes hundreds (L1~4cyc, L2~12, L3~40, RAM~200+); a larger, better-organised cache raises the hit rate and effective speed a great deal.
+   5. Word size/bus width - a 64-bit CPU moves more data per cycle and addresses far more memory than 32-bit.
+   6. Pipelining/superscalar design - overlapping fetch/decode/execute completes an instruction per cycle (or several); hazards (data dependencies, mispredicted branches) stall it.
+   7. Memory/bus speed - bus/controller bandwidth, RAM type (DDR4/5) and latency limit how fast data reaches the CPU; a starved CPU is idle.
+   8. Instruction set - RISC pipelines well, CISC packs more per instruction; special sets (SSE, AVX, AES) accelerate specific tasks.
+   9. Thermal/power - overheating triggers throttling; cooling directly affects sustained speed, and turbo boost lasts only while thermal headroom exists.
+   10. Manufacturing process - smaller nodes (7/5/3nm) switch faster and use less power, allowing higher clocks at the same heat.
+   11. Software - well-optimised, multi-threaded code uses hardware far better than poor code; background processes/unsuitable OS steal cycles.
 
-   2. Instructions per cycle (IPC) and architecture
-   ```
-      Real performance = clock speed x IPC x number of cores
-   ```
-   - A better pipeline, wider issue width, better branch prediction and out-of-order execution all raise IPC. This is where most modern gains come from.
-
-   3. Number of cores and threads
-   - More cores allow more tasks to run genuinely simultaneously. Hyper-threading lets one core run two threads and keeps its units busy.
-   - The gain is limited by `Amdahl's law`: the serial part of a program does not get faster no matter how many cores are added.
-
-   4. Cache memory
-   - Cache is small, very fast memory close to the core. A `hit` takes a few cycles; a miss that reaches RAM takes hundreds.
-   ```
-      L1 : 32-64 KB    ~4 cycles
-      L2 : 256KB-1 MB  ~12 cycles
-      L3 : 8-32 MB     ~40 cycles
-      RAM: gigabytes   ~200+ cycles
-   ```
-   - A larger, better-organised cache raises the hit rate and therefore the effective speed enormously.
-
-   5. Word size (bus width)
-   - A 64-bit CPU processes 64 bits per operation and can address far more memory than a 32-bit one, so it moves more data per cycle.
-
-   6. Pipelining and superscalar design
-   - Pipelining overlaps the fetch, decode and execute stages so an instruction completes every cycle. A superscalar CPU issues several instructions per cycle.
-   - `Hazards` — data dependencies, branch mispredictions — stall the pipeline and cost cycles.
-
-   7. Memory and bus speed
-   - The `front-side bus` or memory controller bandwidth, the RAM type (DDR4 versus DDR5) and its latency all limit how fast data reaches the CPU. A fast CPU starved of data is idle.
-
-   8. Instruction set
-   - RISC instructions are simple and pipeline well; CISC packs more work into one instruction. Special instruction sets — SSE, AVX, AES — accelerate specific tasks dramatically.
-
-   9. Thermal conditions and power
-   - If the chip gets too hot it `throttles`, dropping its clock to protect itself. Good cooling therefore directly affects sustained speed, and `turbo boost` only lasts while thermal headroom exists.
-
-   10. Manufacturing process
-   - A smaller process (7 nm, 5 nm, 3 nm) puts transistors closer together, so they switch faster and use less power, allowing a higher clock at the same heat.
-
-   11. Software factors
-   - A well-optimised, multi-threaded, compiler-optimised program uses the hardware far better than a poorly written one. Background processes and an unsuitable OS also steal cycles.
-
-   - Summary: clock speed is only one term. `Speed = clock x IPC x cores`, and all of it is limited by how fast the cache and memory can feed the processor.
+   - Summary: `Speed = clock x IPC x cores`, all bounded by how fast cache/memory can feed the processor.
 
 2. **Difference between 32 bit Microprocessor and 64 bit Microprocessor with example. What is the meaning of 2.40GHz Microprocessor? Differentiate among Core Intel i3, i5 and i7 processor. Why do you prefer SSD instead of HD?** *[Combined Bank Senior Officer (IT) 13.10.2023 compact it 508 (ET: MIST)]*
 
@@ -1934,8 +1855,7 @@ Answer: Differences between the 8086 and 8088
     | Hardware cost | Higher — needs a 16-bit board | Lower — 8-bit peripherals could be reused |
     | Used in | Later PCs and clones | The original IBM PC (1981) |
 
-    - Why IBM chose the 8088 for the first PC: the 8-bit external bus let them use the cheap and widely available 8-bit support chips and memory boards of the time. The performance loss was accepted for the lower cost.
-    - Why the queue is smaller: with an 8-bit bus the BIU cannot fill a 6-byte queue fast enough to be worth having, so 4 bytes was chosen.
+    - IBM chose the 8088 for the first PC because its 8-bit external bus let them reuse cheap, widely available 8-bit support chips and memory boards, accepting the performance loss for lower cost; its queue is only 4 bytes because an 8-bit bus can't fill a 6-byte queue fast enough to justify one.
 
     Flags of the 8086
 
@@ -1963,8 +1883,7 @@ Answer: Differences between the 8086 and 8088
                                instructions (CLD / STD)
     ```
 
-    - The register is saved and restored by `PUSHF` and `POPF`, and is pushed automatically when an interrupt occurs, so the flags survive an interrupt service routine.
-    - The distinction to state clearly: `status flags are set BY the processor to report a result; control flags are set BY the programmer to control the processor`.
+    - The register is saved/restored by `PUSHF`/`POPF` and pushed automatically on an interrupt, so flags survive an ISR; `status flags are set BY the processor to report a result, control flags are set BY the programmer to control it`.
 
 ### I/O & Peripheral Interfacing (DMA, PPI, SPI) (3)
 
@@ -2077,8 +1996,7 @@ Answer: The `8255 PPI` (Programmable Peripheral Interface) gives a microprocesso
 2. **(b) What is DMA? Why it is used for high-speed I/O devices?** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1025-1026 (ET: N/A)]*
 
 Answer: What DMA is
-    - `DMA (Direct Memory Access)` is a technique that lets an I/O device transfer data `directly to or from main memory` without the CPU handling each byte.
-    - A separate chip called the `DMA controller (DMAC)` takes over the buses and performs the transfer while the CPU gets on with other work.
+    - `DMA (Direct Memory Access)` lets an I/O device transfer data `directly to/from main memory` without the CPU handling each byte — a separate `DMA controller (DMAC)` takes over the buses and performs the transfer while the CPU does other work.
 
     How it works
     ```mermaid
@@ -2094,18 +2012,6 @@ Answer: What DMA is
         DMAC->>MEM: 5. Transfer data directly, word by word
         DMAC->>CPU: 6. Interrupt when the count reaches zero
     ```
-    ```
-       1. The CPU programs the DMAC with the memory address, the byte count
-          and the direction of transfer.
-       2. The device raises DREQ when it is ready.
-       3. The DMAC asserts HOLD to ask the CPU for the buses.
-       4. The CPU finishes its current cycle, tri-states the address, data
-          and control buses, and replies with HLDA.
-       5. The DMAC drives the buses itself and moves the data straight
-          between the device and memory.
-       6. When the count reaches zero the DMAC interrupts the CPU to say
-          the transfer is complete, and releases the buses.
-    ```
 
     Modes of transfer
     ```
@@ -2117,32 +2023,24 @@ Answer: What DMA is
                             using the bus. No CPU slowdown at all, but slowest.
     ```
 
-    Why DMA is used for high-speed I/O devices
-    - `It removes the per-byte CPU cost.` Under `programmed I/O` the CPU executes several instructions for every single byte — read the status, test it, read the data, store it, increment the pointer, loop. For a 100 MB file that is hundreds of millions of instructions spent purely on copying.
-    - `Interrupt-driven I/O is not enough either.` It avoids busy-waiting, but the CPU still runs an interrupt service routine for every byte or word, and the context switch alone costs more time than the transfer.
-    - `Speed.` The DMAC moves a word per bus cycle with no instruction fetch, decode or execute overhead. It is far faster than any software loop.
-    - `The CPU is freed for real work.` During a disk transfer the CPU can run other processes, which is exactly what multiprogramming needs.
-    - `It matches the device's data rate.` A hard disk, an SSD, a network card or a graphics card produces data continuously at tens or hundreds of megabytes per second. A software loop cannot keep up, and data would be lost.
-    - `Block-oriented devices suit it.` Disks and network cards move data in blocks of hundreds or thousands of bytes to consecutive memory addresses — precisely the pattern DMA is built for.
-    - `Lower power`, because dedicated hardware doing one job uses far less energy than a general-purpose CPU running a copy loop.
-
-    Comparison of the three I/O methods
+    Why DMA suits high-speed I/O
+    - Programmed I/O spends several CPU instructions per byte (poll status, read, store, loop) — hundreds of millions for a 100MB file; interrupt-driven I/O avoids busy-waiting but still costs an ISR per byte/word.
+    - The DMAC moves a word per bus cycle with no fetch/decode/execute overhead, is far faster than any software loop, and frees the CPU for other work (multiprogramming).
+    - It matches high-throughput devices (disk, SSD, network, GPU) that produce data continuously — a software loop would lose data — and suits their natural block-transfer pattern to consecutive addresses, at lower power than a CPU copy loop.
 
     | Point | Programmed I/O | Interrupt-driven I/O | DMA |
     |---|---|---|---|
-    | CPU involvement | Continuous polling | Once per byte or word | Once per block |
+    | CPU involvement | Continuous polling | Once per byte/word | Once per block |
     | Speed | Slowest | Medium | Fastest |
     | CPU free during transfer | No | Partly | Yes |
-    | Extra hardware | None | Interrupt controller | DMA controller |
     | Suited to | Slow devices (keyboard) | Moderate devices | Disk, network, graphics |
 
-    - One complication worth mentioning: because the DMAC writes to memory behind the CPU's back, the CPU's `cache` may hold stale copies of those locations. Systems solve this with cache-coherency hardware or by marking DMA buffers as non-cacheable.
+    - Note: since the DMAC writes to memory behind the CPU's back, the cache may hold stale copies — solved with cache-coherency hardware or non-cacheable DMA buffers.
 
 3. **What is SPI (Serial Peripheral Interface)? What are the advantages over parallel interface?** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276 (ET: N/A)]*
 
 Answer: What SPI is
-    - `SPI (Serial Peripheral Interface)` is a synchronous, full-duplex serial communication protocol developed by Motorola. It connects a `master` — usually a microcontroller — to one or more `slave` devices over a short distance on the same board.
-    - It uses `four` wires:
+    - `SPI` is a synchronous, full-duplex serial protocol (Motorola) connecting a `master` (usually a microcontroller) to one or more `slave` devices over a short on-board distance, using four wires:
     ```
        SCLK : serial clock, generated by the master
        MOSI : Master Out, Slave In   - data from master to slave
@@ -2168,27 +2066,20 @@ Answer: What SPI is
 
     How it works
     ```
-       1. The master pulls the chosen slave's SS' LOW to select it.
-       2. The master generates clock pulses on SCLK.
-       3. On each clock edge one bit goes out on MOSI and one bit comes in
-          on MISO at the same time - it is FULL DUPLEX.
-       4. Master and slave are effectively one circular shift register;
-          after 8 clocks their bytes have been exchanged.
-       5. The master raises SS' to end the transfer.
+       1. Master pulls the chosen slave's SS' LOW to select it.
+       2. Master generates clock pulses on SCLK.
+       3. On each edge one bit goes out on MOSI and one comes in on MISO
+          at the same time - FULL DUPLEX.
+       4. Master and slave act as one circular shift register; after 8
+          clocks their bytes are exchanged.
+       5. Master raises SS' to end the transfer.
     ```
-    - Four `modes` are defined by `CPOL` (clock idle level) and `CPHA` (which edge samples the data). Master and slave must be set to the same mode or the data is garbage.
+    - Four `modes` are set by `CPOL`/`CPHA` (clock idle level and sampling edge); master and slave must match or the data is garbage.
 
     Advantages over a parallel interface
-    - `Far fewer wires.` SPI needs 4 lines plus one per extra slave. An 8-bit parallel interface needs 8 data lines plus several control lines, and a 16-bit one needs 16. Fewer wires means a smaller connector, fewer PCB traces and a cheaper board.
-    - `Fewer pins on the chip.` Pins are expensive; freeing 8 or 16 pins allows a smaller, cheaper package or more I/O for other purposes.
-    - `No skew problem.` In a parallel bus all bits must arrive within a very narrow window. Small differences in trace length make them arrive at slightly different times — `clock skew` — which limits both the speed and the cable length. A serial link sends one bit at a time, so skew simply does not arise. This is why serial interfaces (SATA, PCIe, USB) replaced their parallel ancestors (PATA, PCI, parallel port).
-    - `Higher usable clock rate.` Because skew and crosstalk are absent, SPI runs comfortably at 10-50 MHz, and often faster, while a parallel bus must slow down as it widens.
-    - `Less crosstalk and EMI.` Fewer switching lines side by side means less interference and easier compliance with emission rules.
-    - `Longer usable distance` on a board, and it works over a flat cable where parallel would fail.
-    - `Simple hardware.` No addressing, no start/stop bits, no acknowledgement, no arbitration — just a shift register and a clock. It is easy to implement in software (`bit banging`) when no hardware peripheral is available.
-    - `Full duplex.` Data flows both ways at once, which a simple parallel port cannot do without doubling the wires.
-    - `Any word length.` SPI is not limited to 8 bits; 12-bit ADCs and 16-bit sensors work naturally.
-    - `Lower power`, since fewer lines are switching.
+    - Far fewer wires/pins (4 + 1 per slave, vs 8 or 16 data lines plus controls) — smaller connector, cheaper board, more pins free for other I/O.
+    - No clock-skew problem, since bits go one at a time — this is why serial links (SATA, PCIe, USB) replaced their parallel ancestors — so SPI reaches a higher usable clock rate (10-50 MHz+) with less crosstalk/EMI and works over longer cables.
+    - Simple hardware (just a shift register and clock, easy to bit-bang in software), full duplex, any word length (not limited to 8 bits), and lower power since fewer lines switch.
 
     Limitations, for balance
     ```
@@ -2240,30 +2131,10 @@ Answer: The four form a `memory hierarchy`: as you move away from the CPU, stora
          Secondary (SSD/HDD)  millions  TB             slowest, cheapest
    ```
 
-   Cache memory
-   - Very fast SRAM built on or beside the CPU chip, holding the instructions and data most recently used.
-   - Access takes about `4 cycles (L1)` to `40 cycles (L3)`.
-   - Size 32 KB to 32 MB. Volatile. Managed by hardware, not by the programmer.
-   - Purpose: hide the slowness of RAM. Without it a fast CPU would spend most of its time waiting.
-
-   RAM (Random Access Memory)
-   - The computer's `main working memory`. Holds the operating system, the running programs and their data.
-   - Access takes about `200 cycles` — roughly 50 to 100 ns. Size 4 GB to 64 GB.
-   - `Volatile` — everything is lost when power goes off.
-   - `Read and write` freely. Built as `DRAM`, which needs constant refreshing.
-
-   ROM (Read Only Memory)
-   - Holds the `firmware` that the machine needs at power-on: the BIOS/UEFI, the bootstrap loader, and the fixed program in an embedded device.
-   - Speed is comparable to RAM but slightly slower; size is small, kilobytes to a few megabytes.
-   - `Non-volatile` — the contents survive a power cut. Normally `read only`; modern EEPROM and Flash forms can be rewritten, but slowly.
-
-   Secondary storage (HDD, SSD, optical, tape)
-   - `Permanent` bulk storage for files, programs and the operating system itself.
-   - Access takes `milliseconds` for a hard disk and `tens of microseconds` for an SSD — thousands to millions of times slower than RAM.
-   - Size is terabytes; cost per gigabyte is by far the lowest. Non-volatile.
-   - The CPU cannot execute directly from it; data must first be copied into RAM.
-
-   Comparison
+   - Cache: very fast SRAM on/beside the CPU (4-40 cycles), 32KB-32MB, volatile, hardware-managed — hides RAM's latency.
+   - RAM: the main working memory holding the OS/programs (~200 cycles, ~50-100ns), 4-64GB, volatile DRAM needing constant refresh, freely read/written.
+   - ROM: holds firmware needed at power-on (BIOS/UEFI, bootstrap), comparable speed to RAM but small (KB-MB), non-volatile, normally read-only (EEPROM/Flash variants can be rewritten slowly).
+   - Secondary storage (HDD/SSD/optical/tape): permanent bulk storage; ms (HDD) to tens of µs (SSD) — thousands to millions of times slower than RAM; TB capacity, cheapest per GB, non-volatile; the CPU can't execute from it directly, data must be copied into RAM first.
 
    | Point | Cache | RAM | ROM | Secondary storage |
    |---|---|---|---|---|
@@ -2282,55 +2153,32 @@ Answer: The four form a `memory hierarchy`: as you move away from the CPU, stora
 2. **Difference between SRAM & DRAM also write Differences Cache Memory vs Flash Memory.** *[BUET Assistant Programmer 21.06.2025 compact it 1434 (ET: BUET)]*
 
 Answer: SRAM versus DRAM
-
-   `SRAM` (Static RAM)
-   - Each cell is a `flip-flop` made of `6 transistors`. It holds its value as long as power is applied, with `no refreshing`.
-   - Very fast, but large per bit and expensive.
-   - Used for `cache memory` (L1, L2, L3) and CPU registers.
-
-   `DRAM` (Dynamic RAM)
-   - Each cell is `1 transistor + 1 capacitor`. The bit is the charge on the capacitor, which leaks away, so every cell must be `refreshed` thousands of times a second.
-   - Slower, but very small and cheap per bit, so huge capacities are possible.
-   - Used for `main memory` (the RAM sticks in a computer).
+   - `SRAM`: each cell is a 6-transistor flip-flop, holds its value with no refresh needed as long as powered; fast but large/expensive per bit — used for cache and CPU registers.
+   - `DRAM`: each cell is 1 transistor + 1 capacitor; the charge leaks so every cell needs refreshing thousands of times a second; slower but tiny/cheap per bit, enabling huge capacities — used for main memory.
 
    | Point | SRAM | DRAM |
    |---|---|---|
    | Cell | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
-   | Refresh needed | No | Yes, every few milliseconds |
+   | Refresh needed | No | Yes, every few ms |
    | Speed | Very fast (1-10 ns) | Slower (50-70 ns) |
-   | Density | Low | Very high |
-   | Cost per bit | High | Low |
-   | Power (idle) | Low | Higher, refresh consumes power |
-   | Capacity per chip | Small (KB to MB) | Large (GB) |
+   | Density/cost | Low density, high cost/bit | High density, low cost/bit |
    | Used in | Cache, registers | Main memory |
-   | Volatile | Yes | Yes |
 
    Cache memory versus Flash memory
-
-   `Cache memory`
-   - Small, very fast `SRAM` on or beside the CPU, holding recently used instructions and data. Managed automatically by hardware.
-   - `Volatile` — contents vanish at power-off.
-   - Purpose: hide the latency of main memory so the CPU is not left waiting.
-
-   `Flash memory`
-   - `Non-volatile` semiconductor storage using floating-gate transistors that trap charge. It keeps its contents with no power at all.
-   - Slower than cache or RAM, and it wears out — each cell survives a limited number of write cycles (about 3,000 to 100,000).
-   - Used in SSDs, pen drives, memory cards, and for BIOS/firmware storage.
+   - `Cache`: small, very fast SRAM on/beside the CPU, hardware-managed, volatile — hides main-memory latency.
+   - `Flash`: non-volatile, floating-gate transistors trapping charge, keeps data with no power; slower than cache/RAM and wears out (~3,000-100,000 writes per cell); used in SSDs, pen drives, memory cards, BIOS storage.
 
    | Point | Cache memory | Flash memory |
    |---|---|---|
    | Technology | SRAM | Floating-gate NAND/NOR |
    | Volatile | Yes | No |
-   | Speed | Extremely fast (ns) | Much slower (microseconds) |
-   | Purpose | Speed up CPU access to RAM | Permanent storage of data |
-   | Location | Inside or next to the CPU | On an SSD, pen drive or motherboard |
+   | Speed | Extremely fast (ns) | Much slower (µs) |
+   | Purpose | Speed up CPU access to RAM | Permanent storage |
    | Capacity | KB to MB | GB to TB |
-   | Cost per byte | Very high | Low |
    | Write endurance | Unlimited | Limited, cells wear out |
-   | Erase before write | No | Yes, whole blocks at a time |
-   | Managed by | Hardware | Controller and file system |
+   | Managed by | Hardware | Controller/file system |
 
-   - Where each sits in the hierarchy: `registers -> cache (SRAM) -> main memory (DRAM) -> SSD (flash) -> hard disk`. Speed falls and capacity rises at each step, which is exactly what the hierarchy is designed to do.
+   - Where each sits in the hierarchy: registers -> cache (SRAM) -> main memory (DRAM) -> SSD (flash) -> hard disk — speed falls and capacity rises at each step, exactly what the hierarchy is designed to do.
 
 3. **DRAM stands for __________?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 
@@ -2521,49 +2369,22 @@ Answer: These four are successive levels of the `memory hierarchy`. Moving away 
       costliest per byte                              cheapest per byte
    ```
 
-   CPU register
-   - Storage `inside` the CPU itself, used to hold the operands and addresses currently being processed.
-   - Access takes about `one clock cycle` — the fastest storage that exists.
-   - Capacity is tiny: a few dozen registers of 32 or 64 bits, so a few hundred bytes in total.
-   - Managed by the `compiler and the instruction set`. Examples: PC, IR, accumulator, AX, flags.
-
-   Cache memory
-   - Small, very fast `SRAM` on or beside the CPU chip, holding recently used instructions and data.
-   ```
-      L1 : 32-64 KB   ~4 cycles
-      L2 : 256KB-1MB  ~12 cycles
-      L3 : 8-32 MB    ~40 cycles
-   ```
-   - Managed automatically by `hardware` — the programmer cannot address it directly.
-   - Purpose: hide the latency of main memory so the CPU is not left waiting.
-
-   Main memory (RAM)
-   - The working memory of the computer, holding the operating system and every running program.
-   - Access takes about `50-100 ns`, roughly 200 cycles. Capacity 4-64 GB.
-   - Built as `DRAM`; volatile; managed by the operating system through virtual memory.
-   - The CPU can address it directly, which is why a program must be loaded here before it can run.
-
-   Secondary memory
-   - Permanent bulk storage: hard disk, SSD, optical disc, pen drive.
-   - Access takes `tens of microseconds (SSD)` to `milliseconds (HDD)` — thousands to millions of times slower than RAM.
-   - Capacity is terabytes, and cost per byte is by far the lowest. `Non-volatile`.
-   - The CPU `cannot` execute from it directly; data must be copied into RAM first. Managed by the `file system`.
-
-   Comparison
+   - CPU register: storage inside the CPU for current operands/addresses; ~1 cycle access; a few dozen 32/64-bit registers; managed by the compiler/ISA (PC, IR, accumulator, AX, flags).
+   - Cache: small, very fast SRAM on/beside the CPU (L1~4cyc, L2~12, L3~40); hardware-managed; hides main-memory latency.
+   - Main memory (RAM): working memory holding the OS and running programs; ~50-100ns (~200 cycles); 4-64GB; DRAM, volatile, OS-managed via virtual memory; the CPU addresses it directly, so a program must be loaded here to run.
+   - Secondary memory: permanent bulk storage (HDD/SSD/optical/pen drive); tens of µs (SSD) to ms (HDD) — thousands to millions of times slower than RAM; TB capacity, cheapest per byte, non-volatile; the CPU can't execute from it directly, managed by the file system.
 
    | Point | CPU register | Cache | Main memory | Secondary memory |
    |---|---|---|---|---|
-   | Location | Inside the CPU | On or beside the CPU | On the motherboard | External drive |
    | Access time | ~1 cycle | 4-40 cycles | ~200 cycles | 10^4 to 10^7 cycles |
    | Capacity | Bytes | KB to MB | GB | TB |
    | Technology | Flip-flops | SRAM | DRAM | Magnetic or NAND flash |
    | Cost per byte | Highest | Very high | Moderate | Lowest |
    | Volatile | Yes | Yes | Yes | No |
-   | Managed by | Compiler / ISA | Hardware | Operating system | File system |
+   | Managed by | Compiler/ISA | Hardware | Operating system | File system |
    | CPU can execute from it | Yes | Yes | Yes | No |
-   | Holds | Current operands | Recently used data | Running programs | All files, permanently |
 
-   - Why the hierarchy works: the `principle of locality`. A program reuses the same instructions and data repeatedly (temporal locality) and accesses neighbouring addresses (spatial locality), so a small fast level satisfies most requests and the slow levels are reached only occasionally.
+   - Why the hierarchy works: the `principle of locality` — a program reuses the same instructions/data (temporal) and accesses neighbouring addresses (spatial), so a small fast level satisfies most requests and the slow levels are reached only occasionally.
 
 8. **What do you mean by memory organization? Write the different between SRAM and DRAM.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 558 (ET: BIBM)]*
 
@@ -2571,18 +2392,12 @@ Answer: Memory organization
    - `Memory organization` is how the memory of a computer is `structured, addressed and connected` to the processor so that data can be stored and retrieved efficiently.
 
    It covers
-   - `Addressing` — every location has a unique address; an n-bit address bus reaches 2^n locations.
-   ```
-      16 lines -> 64 KB      20 lines -> 1 MB      32 lines -> 4 GB
-   ```
-   - `Word size` — how many bits are read or written per access (8, 16, 32, 64).
-   - `The memory hierarchy` — registers, cache, main memory and secondary storage arranged so that speed and cost are traded against capacity.
-   - `Memory mapping and decoding` — an address decoder selects exactly one chip for each address range, so several chips share the same bus without conflict.
-   - `Memory interleaving` — consecutive addresses are spread across several banks so that they can be accessed in parallel, raising bandwidth.
-   - `Banking and organisation of a chip` — a chip described as `1K x 8` has 1024 locations of 8 bits each; several such chips are combined to widen the word or extend the address range.
-   - `Virtual memory, paging and segmentation` — the operating system's way of giving each process its own address space larger than physical RAM.
-   - `Cache organisation` — direct-mapped, set-associative or fully associative, with a replacement policy and a write policy.
-   - `Memory-mapped I/O versus isolated I/O` — whether devices share the memory address space or have their own.
+   - Addressing (an n-bit address bus reaches 2^n locations: 16 lines->64KB, 20->1MB, 32->4GB) and word size (bits per access: 8/16/32/64).
+   - The memory hierarchy (registers, cache, main memory, secondary storage trading speed against cost/capacity).
+   - Memory mapping/decoding (a decoder selects one chip per address range) and interleaving (spreading consecutive addresses across banks for parallel access).
+   - Chip organisation (e.g. a `1K x 8` chip has 1024 locations of 8 bits; several combine to widen the word or extend the address range).
+   - Virtual memory, paging and segmentation (giving each process its own address space larger than physical RAM).
+   - Cache organisation (direct-mapped/set-associative/fully associative, replacement and write policy) and memory-mapped vs isolated I/O.
 
    Example of combining chips
    ```
@@ -2597,77 +2412,47 @@ Answer: Memory organization
    ```
 
    SRAM versus DRAM
-
-   `SRAM` (Static RAM) — each cell is a `flip-flop` of `6 transistors`. It holds its value as long as power is on, with `no refreshing`. Fast but large and expensive per bit.
-
-   `DRAM` (Dynamic RAM) — each cell is `1 transistor + 1 capacitor`. The charge leaks, so every row must be `refreshed` thousands of times a second. Slower, but tiny and cheap, so huge capacities are possible.
+   - `SRAM`: 6-transistor flip-flop cell, holds its value with no refresh while powered; fast but large/expensive per bit.
+   - `DRAM`: 1 transistor + 1 capacitor cell; the charge leaks so every row needs refreshing thousands of times a second; slower but tiny/cheap per bit, enabling huge capacities.
 
    | Point | SRAM | DRAM |
    |---|---|---|
    | Cell structure | 6 transistors (flip-flop) | 1 transistor + 1 capacitor |
-   | Refresh required | No | Yes, every few milliseconds |
+   | Refresh required | No | Yes, every few ms |
    | Access time | 1-10 ns | 50-70 ns |
-   | Density | Low | Very high |
-   | Cost per bit | High | Low |
-   | Power (idle) | Low | Higher, refresh circuitry runs constantly |
+   | Density/cost | Low density, high cost/bit | High density, low cost/bit |
    | Capacity per chip | KB to MB | GB |
-   | Complexity | Simpler interface, no refresh logic | Needs a refresh controller |
    | Used in | Cache memory, registers | Main memory |
-   | Volatile | Yes | Yes |
 
-   - Both are volatile. The design trade is simple: `SRAM buys speed with area, DRAM buys capacity with refresh overhead`. That is why a computer uses a little SRAM as cache in front of a lot of DRAM.
+   - Both are volatile. The trade is simple: `SRAM buys speed with area, DRAM buys capacity with refresh overhead` — so a computer uses a little SRAM as cache in front of a lot of DRAM.
 
 9. **What is dual channel RAM? Difference between single In-Line and Dual In-Line Memory Module.** *[BITAC Assistant Programmer 27.10.2023 compact it 559 (ET: BUTEX)]*
 
 Answer: Dual channel RAM
-   - `Dual channel` is a memory configuration in which the memory controller uses `two independent 64-bit data paths` to the RAM at the same time, instead of one.
-   - This `doubles the theoretical bandwidth` between the CPU and memory — the width becomes 128 bits per transfer.
+   - `Dual channel` is a memory configuration where the memory controller uses `two independent 64-bit paths` to RAM simultaneously instead of one, doubling theoretical bandwidth (128 bits/transfer).
    ```
       Single channel : CPU <--- 64-bit path ---> RAM
       Dual channel   : CPU <--- 64-bit path ---> RAM stick A
                            <--- 64-bit path ---> RAM stick B    (in parallel)
    ```
+   - Requires two/four modules in the correct paired slots, ideally matched in capacity/speed/timings, with a controller that supports it.
+   - Gains: 10-30% more bandwidth in memory-bound work, much more for integrated GPUs (which share system RAM); little benefit for ordinary office use. `2x8GB beats 1x16GB` at the same price. Triple/quad/octa channel exist on workstation/server platforms.
 
-   Requirements to enable it
-   - `Two (or four) modules`, installed in the correct paired slots — usually the same colour, or slots 1 and 3, or 2 and 4. The motherboard manual states which.
-   - The modules should `match` in capacity, speed, timings and preferably manufacturer. Mismatched sticks usually still run, but at the slower module's timings, or fall back to single channel.
-   - The memory controller (now inside the CPU) must support it.
-
-   What it gains
-   - Higher memory bandwidth — in practice 10-30 per cent better in memory-bound work, and much more for `integrated graphics`, which shares system RAM and is starved by a single channel.
-   - Little benefit for ordinary office work, which is not memory-bound.
-   ```
-      Practical rule : 2 x 8 GB is better than 1 x 16 GB, at the same price.
-   ```
-   - `Triple`, `quad` and `octa` channel exist on workstation and server platforms.
-
-   SIMM versus DIMM
-
-   `SIMM` (Single In-line Memory Module)
-   - The contacts on the two sides of the edge connector are `electrically the same` — the two rows are joined, so there is effectively one row of contacts.
-   - 30-pin (8-bit) or 72-pin (32-bit) data path.
-   - Because a Pentium has a 64-bit bus, SIMMs had to be installed in `matched pairs`.
-   - Older technology: FPM and EDO RAM, 5 V. Obsolete.
-
-   `DIMM` (Dual In-line Memory Module)
-   - The contacts on the two sides are `electrically independent`, so the module has twice as many usable connections in the same length.
-   - 168-pin SDRAM, 184-pin DDR, 240-pin DDR2/DDR3, 288-pin DDR4/DDR5. Data path is `64 bits`.
-   - Can be installed `singly`, because one module already matches the CPU's 64-bit bus.
-   - Runs at lower voltage (3.3 V down to 1.1 V), so it uses less power.
+   SIMM vs DIMM
+   - `SIMM` (Single In-line Memory Module): the two edge-connector sides are electrically joined (one effective row of contacts); 30-pin (8-bit) or 72-pin (32-bit); needed in matched pairs for a 64-bit bus; 5V, obsolete (FPM/EDO).
+   - `DIMM` (Dual In-line Memory Module): the two sides are electrically independent, doubling usable connections; 168-288 pin, 64-bit path; installable singly; 3.3V down to 1.1V.
 
    | Point | SIMM | DIMM |
    |---|---|---|
-   | Contacts on the two sides | Connected — act as one row | Independent — two separate rows |
+   | Contacts on two sides | Connected — one row | Independent — two rows |
    | Data path width | 8 or 32 bits | 64 bits |
-   | Pins | 30 or 72 | 168 to 288 |
+   | Pins | 30 or 72 | 168-288 |
    | Installed | In matched pairs | Singly |
-   | Voltage | 5 V | 3.3 V down to 1.1 V |
-   | Memory type | FPM, EDO | SDRAM, DDR to DDR5 |
-   | Capacity | Small (up to 128 MB) | Large (up to 128 GB per module) |
+   | Voltage | 5V | 3.3V down to 1.1V |
+   | Memory type | FPM, EDO | SDRAM, DDR-DDR5 |
    | Status | Obsolete | Current standard |
 
-   - The laptop version of a DIMM is the `SO-DIMM` (Small Outline DIMM), which is shorter but works the same way.
-   - Note the difference between `dual channel` and `dual in-line`: dual channel is a `motherboard and CPU feature` about how many paths exist to memory; dual in-line describes the `physical module` and how its edge contacts are wired. They are unrelated despite the similar names.
+   - The laptop version of a DIMM is the `SO-DIMM`. Note: `dual channel` (a motherboard/CPU feature, how many paths exist) and `dual in-line` (a module's physical wiring) are unrelated despite the similar names.
 
 10. **What is the difference between Dynamic RAM and Static RAM?** *[NPCBL Junior Assistant Manager (ICT) 2022 compact it 642 (ET: BUET)]*
 
@@ -3309,14 +3094,10 @@ Answer: Both describe how long a memory or storage operation takes, but they mea
 23. **(ক) Memory address register and Memory buffer register কী? Primary memory and Secondary memory-এর মধ্যে পার্থক্য লিখুন।** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1069-1070 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) Memory Address Register (MAR)
-    - A CPU register that holds the `address` of the memory location the processor is about to read from or write to.
-    - Its contents are placed directly on the `address bus`, so its width equals the number of address lines. A 32-bit MAR can address 2^32 = 4 GB.
-    - It is `unidirectional` — the CPU only writes into it, and the address only travels outward to memory.
+    - Holds the `address` of the memory location the processor is about to read/write; its contents go directly on the `address bus` (a 32-bit MAR addresses 2^32 = 4 GB), and it is `unidirectional` — the CPU only writes into it.
 
     Memory Buffer Register (MBR), also called the Memory Data Register (MDR)
-    - A CPU register that holds the `data` just read from memory, or the data about to be written to it.
-    - It is connected to the `data bus`, so its width equals the word size — 8, 16, 32 or 64 bits.
-    - It is `bidirectional`, since data travels both to and from memory.
+    - Holds the `data` just read from memory, or about to be written; connected to the `data bus` (width = word size: 8/16/32/64 bits), and `bidirectional` since data travels both ways.
 
     How they work together
     ```
@@ -3495,9 +3276,9 @@ Answer: `ROM` holds permanent firmware — non-volatile and normally read only. 
 
 1. **Which RAID level is best and why?** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 319 (ET: N/A)], [BEPRC Assistant Programmer 08.08.2026 (ET: N/A)]*
 
-Answer: There is `no single best RAID level` — the right choice depends on whether performance, capacity or safety matters most. But for general-purpose server use, `RAID 10` is usually called the best, and `RAID 5` the best value.
+Answer: There is `no single best RAID level` — it depends on whether performance, capacity or safety matters most. For general-purpose server use, `RAID 10` is usually called best, and `RAID 5` the best value.
 
-   RAID 10 (1 + 0) — the best overall
+   RAID 10 (1+0) — best overall
    ```
       Disk 1 --+-- mirror --+-- Disk 2
                |            |
@@ -3505,39 +3286,21 @@ Answer: There is `no single best RAID level` — the right choice depends on whe
                |            |
       Disk 3 --+-- mirror --+-- Disk 4
    ```
-   - `Fastest reads and writes.` It has no parity to compute, so there is no write penalty beyond the mirroring itself.
-   - `Excellent fault tolerance.` One disk from each mirrored pair can fail, and the array survives.
-   - `Fastest rebuild.` A replaced disk is simply copied from its mirror, so there is no parity to recalculate and little extra load on the array.
-   - `No write hole` and no risk of a second failure during a long rebuild.
-   - Cost: only `50 per cent` of the raw capacity is usable, and it needs a minimum of `4` disks.
-   - Used for: database servers, transaction processing, virtualisation, and any write-heavy workload.
+   - Fastest reads/writes (no parity to compute), excellent fault tolerance (one disk per mirrored pair can fail), fastest rebuild (simple copy from the mirror, no parity math), no write hole. Cost: only 50% usable capacity, needs 4+ disks. Used for databases, transaction processing, virtualisation.
 
-   RAID 5 — the best balance of capacity and safety
-   - Striping with `distributed parity`. Usable capacity is `(n-1)/n`, so with 5 disks 80 per cent is available against RAID 10's 50 per cent.
-   - Survives `one` disk failure, and read performance is excellent.
-   - Weaknesses: the `write penalty` — every write needs read-old-data, read-old-parity, write-new-data, write-new-parity, so four operations for one logical write. Rebuilds are slow and stress every remaining disk, and a second failure during that window destroys the array.
-   - Used for: file servers, web servers, archives — read-heavy work where capacity matters.
-
-   Comparison
+   RAID 5 — best balance of capacity and safety
+   - Striping with distributed parity: usable capacity (n-1)/n (80% with 5 disks vs RAID 10's 50%). Survives one disk failure, reads are excellent, but writes suffer a 4-operation penalty (read-old-data, read-old-parity, write-new-data, write-new-parity), and rebuilds are slow and stress every disk. Used for file/web servers and archives — read-heavy, capacity-first workloads.
 
    | Level | Min disks | Usable capacity | Fault tolerance | Read | Write | Best for |
    |---|---|---|---|---|---|---|
-   | RAID 0 | 2 | 100 % | `None` | Fastest | Fastest | Scratch data, video editing |
-   | RAID 1 | 2 | 50 % | 1 disk | Fast | Normal | OS drives, small critical volumes |
-   | RAID 5 | 3 | (n-1)/n | 1 disk | Fast | Slow (4 ops) | File servers, capacity with safety |
-   | RAID 6 | 4 | (n-2)/n | `2 disks` | Fast | Slower (6 ops) | Large arrays, big slow drives |
-   | RAID 10 | 4 | 50 % | 1 per mirror | Very fast | `Very fast` | Databases, virtualisation |
+   | RAID 0 | 2 | 100% | None | Fastest | Fastest | Scratch data, video editing |
+   | RAID 1 | 2 | 50% | 1 disk | Fast | Normal | OS drives, small critical volumes |
+   | RAID 5 | 3 | (n-1)/n | 1 disk | Fast | Slow (4 ops) | File servers, capacity+safety |
+   | RAID 6 | 4 | (n-2)/n | 2 disks | Fast | Slower (6 ops) | Large arrays, big slow drives |
+   | RAID 10 | 4 | 50% | 1 per mirror | Very fast | Very fast | Databases, virtualisation |
 
-   Which to choose in practice
-   ```
-      Need maximum speed, data is disposable      -> RAID 0
-      Two disks only, need safety                 -> RAID 1
-      Need capacity and can tolerate slow writes  -> RAID 5
-      Large disks (4 TB+), long rebuild worries   -> RAID 6
-      Database or write-heavy server, budget ok   -> RAID 10   (the usual answer)
-   ```
-
-   - The point most examiners want stated: `RAID is not a backup`. It protects against `disk failure` only. It does nothing against accidental deletion, ransomware, file corruption, fire or theft, because every one of those is faithfully written to all the disks at once. A separate off-site backup is still required.
+   - In practice: max speed/disposable data -> RAID 0; two disks, need safety -> RAID 1; capacity with tolerable slow writes -> RAID 5; large disks/long rebuilds -> RAID 6; database/write-heavy, budget OK -> RAID 10 (usual answer).
+   - Key caveat: `RAID is not a backup` — it protects only against disk failure, not deletion, ransomware, corruption, fire or theft, since all of those get written to every disk at once. A separate off-site backup is still required.
 
 2. **Striping with parity is done in which level of RAID.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1452 (ET: N/A)]*
 
@@ -3642,103 +3405,46 @@ Answer: Concept of RAID
 
 4. **How to solve drive failure in RAID?** *[Bangladesh Oil Gas Mineral Corporation (PetroBangla) Assistant Manager (CSE/IT) 31.06.2024 compact it 1454 (ET: BUET)]*
 
-Answer: How a drive failure is handled depends on the RAID level and on whether the array is `degraded` or has already lost its data.
+Answer: How a drive failure is handled depends on the RAID level and whether the array is `degraded` or has already lost data.
 
-   Step 1 — detect the failure
-   - The RAID controller raises an alert, an LED on the drive bay turns amber, and the management software (or a monitoring system such as Nagios or the vendor's tool) reports the array as `degraded`.
-   - The array `keeps running` in degraded mode for RAID 1, 5, 6 and 10 — the data is still available, but with no protection left. RAID 0 has no redundancy, so a failure there means immediate total loss.
-
-   Step 2 — act at once, and do not delay
-   - A degraded array has `no fault tolerance`. A second failure in RAID 1 or 5 destroys everything. This is the most dangerous state a storage system can be in.
-
-   Step 3 — verify the backup before touching anything
-   - Confirm that a recent restorable backup exists. If the rebuild goes wrong — and it sometimes does — the backup is the only remaining copy.
-
-   Step 4 — replace the failed drive
+   1. Detect — the controller alerts (amber LED, monitoring software) and reports the array `degraded`. RAID 1/5/6/10 keep running in degraded mode (no protection left); RAID 0 has no redundancy, so failure means immediate total loss.
+   2. Act fast — a degraded array has no fault tolerance; a second failure in RAID 1/5 destroys everything.
+   3. Verify the backup exists before touching anything, in case the rebuild goes wrong.
+   4. Replace the drive — hot-swap if supported (pull and insert while running), else cold-swap (shut down first). Must be same/larger capacity and the verified correct bay — pulling the wrong drive from a degraded RAID 5 destroys the array instantly.
+   5. Rebuild:
    ```
-      Hot swap    : if the enclosure supports it, pull the failed drive and
-                    insert the new one while the system keeps running.
-                    This is the normal case in a server.
-      Cold swap   : otherwise shut down, replace, and power up.
+      RAID 1/10 : new disk COPIED from its mirror -- fast, stresses one drive
+      RAID 5    : all survivors read in full, missing blocks recomputed by
+                  XOR -- slow, stresses every drive
+      RAID 6    : same, but can still survive one more failure meanwhile
    ```
-   - The replacement must be of the `same or larger capacity` and preferably the same model, and it must be `verified as the correct bay` — pulling the wrong drive from a degraded RAID 5 destroys the array instantly.
+   - With a `hot spare`, the rebuild starts automatically the instant failure is detected — the single most valuable configuration choice. Rebuild can take hours to over a day, during which the array stays vulnerable.
+   6. Verify — confirm the controller reports `Optimal`, run a consistency check, verify the file system, replace the consumed hot spare.
 
-   Step 5 — rebuild
-   ```
-      RAID 1 / RAID 10 : the new disk is COPIED from its mirror.
-                         Fast, and it stresses only one other drive.
+   If redundancy is already exhausted (RAID 0 any failure, RAID 1/5 second failure, RAID 6 third failure) — total loss; restore from backup, or use an expensive, non-guaranteed data-recovery service.
 
-      RAID 5           : every surviving disk is read in full and the missing
-                         blocks are recomputed by XOR.
-                         Slow, and it stresses ALL the remaining drives.
-
-      RAID 6           : the same, but it can still survive one more failure
-                         during the rebuild.
-   ```
-   - With a `hot spare` installed, the controller begins the rebuild `automatically` the moment the failure is detected, without waiting for a human. This is the single most valuable configuration choice.
-   - Rebuild time for a modern large disk can be `several hours to more than a day`, and the array is vulnerable for that whole period.
-
-   Step 6 — verify and restore protection
-   - Check that the controller reports the array as `Optimal`, run a consistency check, verify the file system, and replace the hot spare that was consumed.
-
-   What happens if the redundancy is already exhausted
-   ```
-      RAID 0, any failure                -> total loss, restore from backup
-      RAID 1 or 5, second failure        -> total loss, restore from backup
-      RAID 6, third failure              -> total loss, restore from backup
-   ```
-   - At that point the only options are the backup, or a specialist data-recovery service, which is expensive and never guaranteed.
-
-   Preventing the problem in the first place
-   - Configure a `hot spare`, so the rebuild starts immediately.
-   - Monitor `SMART` attributes and replace a drive that is showing reallocated sectors `before` it fails.
-   - Use `RAID 6` rather than RAID 5 for arrays of large drives, because a rebuild is long and the chance of a second failure during it is real.
-   - Do not buy every disk from the same batch — drives from one production run tend to fail at similar times.
-   - Keep `off-site backups`, because RAID protects against disk failure and nothing else.
+   Preventing it: configure a hot spare, monitor SMART and replace drives showing reallocated sectors early, prefer RAID 6 over RAID 5 for large-drive arrays, avoid buying all disks from one batch, and keep off-site backups regardless.
 
 5. **Explain the purpose of RAID.** *[Pubali Bank Limited Hardware Engineer 18.03.2023 compact it 564 (ET: N/A)]*
 
-Answer: `RAID` (Redundant Array of Independent Disks) combines several physical disks into one logical drive. Its purpose is to improve `performance`, `fault tolerance` and `capacity` beyond what a single disk can give.
+Answer: `RAID` (Redundant Array of Independent Disks) combines several physical disks into one logical drive, to improve `performance`, `fault tolerance` and `capacity` beyond a single disk.
 
-   1. Fault tolerance and availability
-   - The main purpose. A single disk `will` fail eventually; RAID makes that failure survivable.
-   - `Mirroring` keeps a second copy; `parity` stores an XOR checksum from which a lost block can be recomputed.
-   - The system keeps running in `degraded` mode while the failed drive is replaced, and with `hot swapping` there is no downtime at all.
-
-   2. Improved performance
-   - `Striping` splits data across several disks, so they are read and written in parallel. Four disks can, in principle, deliver four times the throughput of one.
-   - Reads improve most, because a mirrored pair can serve two different requests at the same time.
-
-   3. Larger logical capacity
-   - Several physical drives appear as one large volume, so a file system can exceed the size of any single disk.
-
-   4. Continuous operation
-   - Combined with a `hot spare`, the array detects a failure and begins rebuilding on its own, with no human intervention and no service interruption. This is what a bank or a hospital needs.
-
-   5. Data integrity
-   - Parity and mirroring also allow the controller to detect and, in RAID 6 and modern implementations, correct silent data corruption.
-
-   The three techniques it uses
-   ```
-      Striping  : split data across disks       -> speed
-      Mirroring : duplicate data on two disks   -> redundancy
-      Parity    : XOR checksum                   -> redundancy, cheaper than mirroring
-   ```
-
-   The main levels
+   - Fault tolerance/availability (the main purpose): a disk will eventually fail; mirroring keeps a second copy, parity stores an XOR checksum to rebuild a lost block; the array keeps running in degraded mode, and hot-swapping means no downtime.
+   - Performance: striping splits data across disks so they're read/written in parallel (up to Nx throughput); reads improve most since a mirrored pair can serve two requests at once.
+   - Larger logical capacity: several drives appear as one volume, exceeding any single disk's size.
+   - Continuous operation: with a hot spare, the array rebuilds automatically with no human intervention or downtime — what a bank or hospital needs.
+   - Data integrity: parity/mirroring let the controller detect (and in RAID 6/modern implementations, correct) silent corruption.
 
    | Level | Technique | Min disks | Usable capacity | Survives | Purpose |
    |---|---|---|---|---|---|
-   | RAID 0 | Striping | 2 | 100 % | `Nothing` | Pure speed and capacity |
-   | RAID 1 | Mirroring | 2 | 50 % | 1 failure | Redundancy, simple |
-   | RAID 5 | Striping + distributed parity | 3 | (n-1)/n | 1 failure | Balance of capacity and safety |
+   | RAID 0 | Striping | 2 | 100% | Nothing | Pure speed/capacity |
+   | RAID 1 | Mirroring | 2 | 50% | 1 failure | Simple redundancy |
+   | RAID 5 | Striping + distributed parity | 3 | (n-1)/n | 1 failure | Capacity/safety balance |
    | RAID 6 | Double parity | 4 | (n-2)/n | 2 failures | Large arrays |
-   | RAID 10 | Mirroring + striping | 4 | 50 % | 1 per mirror | Speed with redundancy |
+   | RAID 10 | Mirroring + striping | 4 | 50% | 1 per mirror | Speed with redundancy |
 
-   Where it is used
-   - Database servers, file servers, mail servers, virtualisation hosts, NAS and SAN systems, video editing workstations, and every data centre.
-
-   - The essential caveat to state: `RAID is not a backup`. It protects only against `disk failure`. Accidental deletion, ransomware, file corruption, fire and theft are all written faithfully to every disk in the array at the same instant. A separate off-site backup is still required.
+   - Used in database/file/mail servers, virtualisation hosts, NAS/SAN, video editing, every data centre.
+   - Caveat: `RAID is not a backup` — it protects only against disk failure; accidental deletion, ransomware, corruption, fire and theft are written faithfully to every disk at once, so a separate off-site backup is still required.
 
 6. **What do you mean by RAID? Write the difference types of RAID level.** *[Ministry of Land Assistant Maintenance Engineer 2023 compact it 595 (ET: N/A)]*
 
@@ -3825,59 +3531,33 @@ Answer: What RAID is
 7. **What is RAID technology? Why it's important Server in data center?** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 555 (ET: BIBM)]*
 
 Answer: What RAID technology is
-   - `RAID` (Redundant Array of Independent Disks) combines several physical disks into `one logical drive`, using three techniques:
+   - `RAID` combines several physical disks into one logical drive using three techniques:
    ```
-      Striping  : data split across disks and accessed in parallel -> speed
-      Mirroring : the same data written to two disks -> redundancy
-      Parity    : an XOR checksum from which a lost block is rebuilt
+      Striping  : data split across disks, accessed in parallel -> speed
+      Mirroring : same data on two disks -> redundancy
+      Parity    : XOR checksum that rebuilds a lost block
    ```
-   - Common levels: `RAID 0` (striping, no redundancy), `RAID 1` (mirroring), `RAID 5` (striping with distributed parity), `RAID 6` (double parity), `RAID 10` (mirrored then striped).
-   - It may be implemented in `hardware` (a dedicated controller card with its own processor and battery-backed cache) or in `software` (by the operating system, cheaper but using host CPU time).
+   - Common levels: RAID 0 (striping only), RAID 1 (mirroring), RAID 5 (distributed parity), RAID 6 (double parity), RAID 10 (mirrored+striped) — implemented in hardware (dedicated controller) or software (OS-managed, cheaper but uses host CPU).
 
-   Why it is important for a server in a data centre
-
-   1. `High availability` — this is the reason it exists
-   - Disks are the most failure-prone component in a server, because they are mechanical. In a data centre with thousands of drives, several fail every week.
-   - RAID lets the server keep running in `degraded` mode through a failure, so the service does not stop. With a `hot spare` the rebuild starts automatically and nobody has to be called out.
-
-   2. `No downtime for replacement`
-   - `Hot swapping` allows the failed drive to be pulled and replaced while the server is running. A data centre measures availability in "nines" — 99.999 per cent uptime allows only about five minutes of outage a year, which is impossible without redundancy at the disk level.
-
-   3. `Performance under heavy load`
-   - A data centre server handles thousands of concurrent requests. Striping spreads them across several spindles, and a mirrored pair can serve two different reads at once, so throughput scales with the number of disks.
-
-   4. `Large logical volumes`
-   - Databases, virtual machine images and video archives outgrow any single drive. RAID presents many drives as one volume.
-
-   5. `Meeting SLA and regulatory requirements`
-   - Banks and government systems are held to service-level agreements and to regulator rules — in Bangladesh, Bangladesh Bank's ICT Security Guideline. Redundant storage is a stated requirement, not an option.
-
-   6. `Protecting the transaction log`
-   - Every committed database transaction must reach stable storage. Losing the log disk means losing committed work, which breaks the `durability` guarantee of ACID.
-
-   7. `Foundation for virtualisation and cloud`
-   - One physical host runs dozens of virtual machines. A single disk failure without RAID would take all of them down at once.
+   Why it matters in a data centre
+   - High availability — disks are the most failure-prone component; RAID keeps the server running in degraded mode through a failure, and a hot spare starts the rebuild automatically.
+   - No downtime for replacement — hot-swapping lets a failed drive be replaced live; a "five nines" SLA (99.999%, ~5 min/year outage) is impossible without disk-level redundancy.
+   - Performance under load — striping spreads thousands of concurrent requests across spindles, so throughput scales with disk count.
+   - Large logical volumes — databases, VM images and archives outgrow any single drive.
+   - Compliance — banks/government systems (e.g. Bangladesh Bank's ICT Security Guideline) mandate redundant storage.
+   - Protects the transaction log — losing it breaks the durability guarantee of ACID.
+   - Foundation for virtualisation/cloud — one host runs dozens of VMs; a bare disk failure would take them all down at once.
 
    Which level a data centre uses
    ```
-      Database and OLTP servers   -> RAID 10   (fast writes, fast rebuild)
-      File and web servers        -> RAID 5    (capacity with safety)
-      Large archives, big drives  -> RAID 6    (survives a second failure
-                                                during a long rebuild)
-      Boot volumes                -> RAID 1
-      Scratch and cache           -> RAID 0    (data is disposable)
+      Database/OLTP servers      -> RAID 10  (fast writes, fast rebuild)
+      File and web servers       -> RAID 5   (capacity with safety)
+      Large archives, big drives -> RAID 6   (survives a 2nd failure mid-rebuild)
+      Boot volumes               -> RAID 1
+      Scratch/cache              -> RAID 0   (data disposable)
    ```
 
-   Advantages summarised
-   ```
-      Fault tolerance, continuous operation, hot swapping
-      Higher read and write throughput
-      Larger single volumes
-      Automatic recovery with a hot spare
-      Lower cost than duplicating whole servers
-   ```
-
-   - The point that must accompany any RAID answer: `RAID is not a backup`. It protects against disk failure alone. Deletion, ransomware, corruption, fire and theft are written to every disk in the array simultaneously, so off-site backups remain essential.
+   - Caveat that must accompany any RAID answer: `RAID is not a backup` — it protects against disk failure alone. Deletion, ransomware, corruption, fire and theft hit every disk in the array simultaneously, so off-site backups remain essential.
 
 8. **(a) Compare RAID 1 and RAID 5 levels. Which one you prefer? Why?** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 691 (ET: N/A)]*
 
@@ -3891,9 +3571,7 @@ Answer: Comparison of RAID 1 and RAID 5
         B        B
         C        C
    ```
-   - Every block is written identically to both disks. Minimum `2` disks.
-   - Usable capacity is `50 per cent`. Survives one disk failure per mirror.
-   - Rebuild is a straight copy from the surviving disk — fast and low risk.
+   - Every block written identically to both disks; min 2 disks, 50% usable, survives one failure per mirror; rebuild is a straight copy — fast, low risk.
 
    `RAID 5 — striping with distributed parity`
    ```
@@ -3904,41 +3582,22 @@ Answer: Comparison of RAID 1 and RAID 5
         C1       Cp       C3       C4
         Dp       D2       D3       D4
    ```
-   - Data is striped and a parity block per stripe rotates across the disks. Minimum `3` disks.
-   - Usable capacity is `(n-1)/n` — 75 per cent with 4 disks, 80 per cent with 5.
-   - Parity is `Ap = A1 XOR A2 XOR A3`, and a lost block is recovered by XOR-ing the survivors.
+   - Data striped, parity block per stripe rotates across disks; min 3 disks, (n-1)/n usable (75-80%); parity `Ap = A1 XOR A2 XOR A3`, recovered by XOR-ing survivors.
 
    | Point | RAID 1 | RAID 5 |
    |---|---|---|
-   | Technique | Mirroring | Striping + distributed parity |
    | Minimum disks | 2 | 3 |
-   | Usable capacity | 50 % | (n-1)/n — 75 % or more |
+   | Usable capacity | 50% | (n-1)/n — 75% or more |
    | Fault tolerance | 1 disk per mirror | 1 disk |
-   | Read performance | Fast (both disks serve) | Fast (parallel stripes) |
-   | Write performance | `Normal` — 2 operations | `Slow` — 4 operations |
-   | Write penalty | 2x | 4x (read data, read parity, write both) |
-   | Rebuild speed | Fast — a simple copy | Slow — read every disk, recompute |
-   | Rebuild risk | Low | High — all disks stressed for hours |
-   | CPU / controller load | Minimal | Parity calculation needed |
+   | Write performance | Normal — 2 ops | Slow — 4 ops (write penalty) |
+   | Rebuild speed/risk | Fast copy, low risk | Slow, all disks stressed for hours |
    | Cost per usable GB | High | Lower |
-   | Expandable | Only in pairs | One disk at a time |
    | Best for | OS drives, transaction logs | File servers, archives, read-heavy work |
 
-   Which is preferred, and why
-   - For a `write-heavy` system — a database, a transaction log, a mail server — `RAID 1` (or better still RAID 10, which is RAID 1 striped) is preferred.
-   ```
-      Reason 1 : RAID 5's four-operation write penalty slows every single
-                 write. A bank's core banking log cannot afford it.
-      Reason 2 : RAID 5 rebuilds are slow and read every surviving disk in
-                 full. With modern 4 TB or 8 TB drives that takes many hours,
-                 and a second failure during the rebuild destroys the array.
-      Reason 3 : RAID 5 has a "write hole" - a power failure between writing
-                 the data and writing the parity leaves the stripe
-                 inconsistent, unless the controller has a battery-backed cache.
-   ```
-   - For a `read-heavy` system where capacity per taka matters — a file server, a document archive, a media library — `RAID 5` is preferred, because it delivers 75-80 per cent usable capacity against RAID 1's 50 per cent, with equally good read performance.
-
-   - Practical recommendation: use `RAID 1` for the operating system and the database log, and `RAID 5` (or RAID 6 on large drives) for bulk data. Where budget allows, `RAID 10` combines the strengths of both — mirroring's fast writes and fast rebuild with striping's throughput — and is the standard choice for production database servers.
+   Which is preferred
+   - Write-heavy systems (database, transaction log, mail server) -> `RAID 1` (or RAID 10): RAID 5's 4-op write penalty is too slow, its rebuilds are long and stress every disk (risking a 2nd failure), and it has a "write hole" without a battery-backed cache.
+   - Read-heavy, capacity-first systems (file server, archive, media library) -> `RAID 5`: 75-80% usable capacity vs RAID 1's 50%, with equally good reads.
+   - Practical rule: RAID 1 for OS/database log, RAID 5 (or RAID 6 on large drives) for bulk data; RAID 10 combines both strengths and is the standard for production databases where budget allows.
 
 9. **What is RAID?** *[BKSP Assistant Programmer 03.12.2022 compact it 730 (ET: N/A)]*
 
@@ -4072,117 +3731,57 @@ Answer: What RAID is
 11. **What is RAID technology? Describe about the advantages of RAID technology.** *[BITAC Assistant Maintenance Engineer (ICT) 2021 compact it 820 (ET: BUET)]*
 
 Answer: What RAID technology is
-    - `RAID` (Redundant Array of Independent Disks) combines several physical disks into `one logical drive` seen by the operating system as a single volume.
-    - It uses three techniques:
+    - `RAID` combines several physical disks into one logical drive, seen by the OS as a single volume, using three techniques:
     ```
-       Striping  : data split into blocks and spread across the disks,
-                   so they are read and written in parallel  -> speed
-       Mirroring : the same data written to two disks         -> redundancy
-       Parity    : an XOR checksum from which a lost block is recomputed
+       Striping  : data split across disks, read/written in parallel -> speed
+       Mirroring : same data on two disks -> redundancy
+       Parity    : XOR checksum from which a lost block is recomputed
     ```
-    - Levels: `RAID 0` (striping), `RAID 1` (mirroring), `RAID 5` (striping with distributed parity), `RAID 6` (double parity), `RAID 10` (mirrored then striped).
-    - Implemented either in `hardware`, on a dedicated controller card with its own processor and battery-backed cache, or in `software` by the operating system.
+    - Levels: RAID 0 (striping), RAID 1 (mirroring), RAID 5 (distributed parity), RAID 6 (double parity), RAID 10 (mirrored+striped) — hardware (dedicated controller) or software (OS-managed).
 
-    Advantages of RAID technology
-
-    1. `Fault tolerance` — the main advantage
-    - The array survives a disk failure. RAID 1 and 10 keep a full second copy; RAID 5 recomputes the lost blocks from parity; RAID 6 survives two simultaneous failures.
-
-    2. `High availability and continuous operation`
-    - The system keeps running in `degraded` mode while the failed disk is replaced. With `hot swapping` the drive is changed without shutting down, and with a `hot spare` the rebuild starts automatically with no human action at all.
-
-    3. `Improved read and write performance`
-    - Striping lets several disks work in parallel, so throughput scales roughly with the number of drives. A mirrored pair can serve two different reads simultaneously.
-
-    4. `Larger logical capacity`
-    - Several drives become one volume, so a file system, a database or a virtual machine store can exceed the size of any single disk.
-
-    5. `Reduced downtime cost`
-    - For a bank, a hospital or an e-commerce site, an hour of downtime costs far more than the extra disks. RAID converts a service-stopping event into a maintenance task.
-
-    6. `Data integrity`
-    - Parity and mirroring let the controller detect, and in RAID 6 correct, silent corruption that would otherwise go unnoticed.
-
-    7. `Scalability`
-    - A RAID 5 array can be expanded one disk at a time; capacity grows without rebuilding the file system from scratch.
-
-    8. `Flexibility of trade-off`
-    - The administrator chooses the level to match the workload — speed, capacity or safety — rather than accepting a single fixed compromise.
-
-    9. `Cost effective`
-    - Several ordinary drives give the reliability that would otherwise require duplicating the entire server.
-
-    10. `Transparent to software`
-    - The operating system and applications see one ordinary volume; no program has to be modified.
+    Advantages
+    - Fault tolerance (main advantage): RAID 1/10 keep a full copy, RAID 5 recomputes from parity, RAID 6 survives two failures.
+    - High availability: keeps running in degraded mode; hot-swap replaces a drive live, and a hot spare rebuilds automatically.
+    - Better performance: striping lets disks work in parallel, so throughput scales with drive count; a mirrored pair serves two reads at once.
+    - Larger logical capacity, exceeding any single disk.
+    - Lower downtime cost: converts a service-stopping event into routine maintenance.
+    - Data integrity: parity/mirroring detect (RAID 6 corrects) silent corruption.
+    - Scalability: RAID 5 can grow one disk at a time.
+    - Flexibility: the level is chosen to match the workload's speed/capacity/safety needs.
+    - Cost-effective and transparent: ordinary drives give server-duplication-level reliability, with no application changes needed.
 
     Disadvantages, for balance
     ```
-       Extra disks cost money and capacity (50 % lost in RAID 1 and 10)
-       RAID 5 and 6 impose a write penalty
+       Extra disks cost money/capacity (50% lost in RAID 1/10)
+       RAID 5/6 impose a write penalty
        Rebuilds are slow and risky on large drives
        A hardware controller is itself a single point of failure
-       Increased complexity in configuration and monitoring
+       Added configuration/monitoring complexity
     ```
 
-    - The point that must accompany any RAID answer: `RAID is not a backup`. It protects only against `disk failure`. A deleted table, a ransomware attack, a corrupted file, a fire or a theft is written to every disk in the array at the same instant. Off-site backups remain essential.
+    - Caveat: `RAID is not a backup` — it protects only against disk failure. Deletion, ransomware, corruption, fire or theft hits every disk at once, so off-site backups remain essential.
 
 12. **Why necessary to use RAID? If you choose a RAID level for an organization with huge data process. Justify your answer?** *[RAKUB Maintenance Engineer (PO) 05.10.2021 compact it 854 (ET: N/A)]*
 
 Answer: Why RAID is necessary
-    - `Disks fail.` A hard disk is the only mechanical part left in a server, and it is by far the most failure-prone. In a large organisation several drives fail every month.
-    - `Downtime is expensive.` For a bank, a hospital or an e-commerce site, an hour of outage costs far more than the extra disks would.
-    - `A single disk is too slow.` One drive delivers 100-200 MB/s. A busy database or file server needs many times that, which only parallel disks can supply.
-    - `A single disk is too small.` Databases, virtual machine images and video archives outgrow any one drive.
-    - `Continuity is a legal requirement.` Bangladesh Bank's ICT Security Guideline, and the service-level agreements of government systems, require redundant storage.
-    - `Durability of committed transactions.` The `D` in ACID promises that a committed transaction survives; RAID is part of how that is delivered at the hardware level.
+    - Disks fail — the only mechanical part left in a server, and the most failure-prone; in a large organisation several fail every month.
+    - Downtime is expensive — for a bank, hospital or e-commerce site, an hour of outage costs far more than the extra disks.
+    - A single disk is too slow (100-200 MB/s) and too small for a busy database, file server, or growing VM/video archive — only parallel disks and pooled capacity solve both.
+    - Continuity is often a legal requirement (e.g. Bangladesh Bank's ICT Security Guideline), and RAID is part of how the ACID `durability` guarantee is delivered at the hardware level.
 
-    Choosing a level for an organisation with huge data processing
+    Choosing a level for huge data processing
 
-    For huge data volumes with heavy processing, the recommendation is `RAID 10` for the transactional workload and `RAID 6` for the bulk archive.
+    Recommendation: `RAID 10` for the transactional workload, `RAID 6` for the bulk archive.
 
-    `RAID 10 for the live database and transaction processing`
-    ```
-       Justification
-       -------------
-       1. Write performance. Huge data processing means constant writes.
-          RAID 5 needs FOUR physical operations for one logical write
-          (read old data, read old parity, write data, write parity).
-          RAID 10 needs only two. Every transaction is faster.
+    `RAID 10` for the live database
+    - Only a 2-operation write (vs RAID 5's 4: read-old-data, read-old-parity, write-data, write-parity), so every transaction is faster; rebuild is a fast mirror copy stressing only one other drive; no "write hole"; and in degraded mode it just reads the surviving mirror instead of recomputing from parity. Cost: only 50% usable capacity, min 4 disks — small next to the cost of downtime for a large organisation.
 
-       2. Fast rebuild. A replaced disk is copied from its mirror. There is
-          no parity to recompute and only one other drive is stressed, so the
-          window of vulnerability is short.
+    `RAID 6` for archive/backup/data-warehouse volumes
+    - Far better capacity, (n-2)/n vs RAID 10's 50%, which matters at hundreds of terabytes; survives two failures, important because rebuilding 8TB+ drives takes many hours/days during which a second failure is a real risk (RAID 5 would lose everything); and the workload is read-heavy/sequential, so the write penalty matters little.
 
-       3. No write hole. RAID 5 can leave a stripe inconsistent if power fails
-          between the data write and the parity write. RAID 10 cannot.
+    - Never RAID 0 (no redundancy — with many disks, a failure becomes near-certain); avoid plain RAID 5 on large modern drives, for the rebuild risk above.
 
-       4. Predictable performance in degraded mode. A RAID 5 array with a
-          failed disk must recompute every read from parity and slows
-          dramatically; RAID 10 simply reads the surviving mirror.
-
-       Cost : only 50 % of raw capacity is usable, and a minimum of 4 disks.
-              For a large organisation this cost is small next to downtime.
-    ```
-
-    `RAID 6 for the archive, backup and data-warehouse volumes`
-    ```
-       Justification
-       -------------
-       1. Capacity. (n-2)/n usable - far better than RAID 10's 50 %,
-          which matters when the volume is hundreds of terabytes.
-
-       2. Survives TWO failures. With 8 TB or larger drives, a rebuild takes
-          many hours or days. During that time a second failure is a real
-          possibility, and RAID 5 would lose everything. RAID 6 survives it.
-
-       3. The workload here is read-heavy and sequential, so the write
-          penalty matters much less.
-    ```
-
-    `Never RAID 0` — it has no redundancy at all, and with many disks the chance that at least one fails becomes a near certainty.
-    `Avoid plain RAID 5` on large modern drives, for the rebuild reason above.
-
-    A practical layout for such an organisation
+    A practical layout
     ```
        Operating system volume  -> RAID 1     (2 disks)
        Database data files      -> RAID 10    (fast random read/write)
@@ -4193,17 +3792,15 @@ Answer: Why RAID is necessary
        Plus at least one HOT SPARE per array
     ```
 
-    Comparison of the candidates
-
     | Level | Usable | Survives | Write speed | Rebuild | Verdict for huge data |
     |---|---|---|---|---|---|
-    | RAID 0 | 100 % | Nothing | Fastest | — | `Rejected` — no redundancy |
-    | RAID 1 | 50 % | 1 disk | Normal | Fast | Good, but does not scale |
-    | RAID 5 | (n-1)/n | 1 disk | Slow | Slow and risky | Acceptable for archives only |
-    | RAID 6 | (n-2)/n | 2 disks | Slower | Slow but safe | `Chosen` for bulk storage |
-    | RAID 10 | 50 % | 1 per pair | Very fast | Very fast | `Chosen` for the live database |
+    | RAID 0 | 100% | Nothing | Fastest | — | Rejected — no redundancy |
+    | RAID 1 | 50% | 1 disk | Normal | Fast | Good, but doesn't scale |
+    | RAID 5 | (n-1)/n | 1 disk | Slow | Slow, risky | Acceptable for archives only |
+    | RAID 6 | (n-2)/n | 2 disks | Slower | Slow, safe | Chosen for bulk storage |
+    | RAID 10 | 50% | 1 per pair | Very fast | Very fast | Chosen for the live database |
 
-    - And the standing caveat: `RAID is not a backup`. It handles disk failure alone. Deletion, ransomware, corruption, fire and theft reach every disk at once, so off-site and immutable backups are still required.
+    - Standing caveat: `RAID is not a backup` — it handles disk failure alone. Deletion, ransomware, corruption, fire and theft reach every disk at once, so off-site and immutable backups are still required.
 
 13. **Your office need some storage device. Highest capacity 500GB. Two system backup of 30GB. Using RAID 1, Explain how many storage devices will need?** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1032 (ET: BUET)]*
 
@@ -4276,8 +3873,7 @@ Answer: In `RAID 1` every block is written to two disks, so the `usable capacity
 14. **What is RAID level? Write down of RAID level 0, level 1 and level 5?** *[Dutch Bangla Bank Assistant Network/Hardware Engineer 2019 compact it 1159 (ET: BUET)]*
 
 Answer: What a RAID level is
-    - A `RAID level` is a defined way of arranging data across the disks of an array. Each level is a different trade-off between `performance`, `capacity` and `fault tolerance`.
-    - The three underlying techniques are `striping` (speed), `mirroring` (redundancy) and `parity` (redundancy at lower cost).
+    - A `RAID level` is a defined way of arranging data across an array's disks — each is a different trade-off between performance, capacity and fault tolerance, built from `striping` (speed), `mirroring` (redundancy) and `parity` (cheaper redundancy).
 
     RAID level 0 — striping
     ```
@@ -4287,15 +3883,7 @@ Answer: What a RAID level is
          A3       A4
          A5       A6
     ```
-    - Data is split into blocks and written alternately across the disks, so both work in parallel.
-    - Minimum `2` disks. Usable capacity `100 per cent`.
-    - `No redundancy whatsoever` — if one disk fails, the whole array is lost, because every file is split across all of them.
-    - Fastest reads and writes of any level.
-    - Used for: scratch space, video editing, caches — data that can be regenerated.
-    ```
-       Reliability is WORSE than a single disk: with 2 disks the chance of
-       failure is roughly doubled, since either failure destroys everything.
-    ```
+    - Blocks split alternately across disks so both work in parallel; min 2 disks, 100% usable, `no redundancy` — one failure loses everything, but it's the fastest level. Used for scratch space, video editing, caches.
 
     RAID level 1 — mirroring
     ```
@@ -4305,12 +3893,7 @@ Answer: What a RAID level is
          B     ---->   B
          C     ---->   C
     ```
-    - Every block is written identically to both disks.
-    - Minimum `2` disks. Usable capacity `50 per cent`.
-    - Survives `one` disk failure per mirrored pair.
-    - Reads are fast, since either disk can serve a request. Writes are normal speed — two operations.
-    - Rebuild is a straight copy from the survivor, so it is fast and low risk.
-    - Used for: operating system drives, transaction logs, small critical volumes.
+    - Every block written identically to both disks; min 2 disks, 50% usable, survives one failure; fast reads (either disk serves), normal writes, fast/low-risk rebuild (straight copy). Used for OS drives, transaction logs.
 
     RAID level 5 — striping with distributed parity
     ```
@@ -4323,25 +3906,15 @@ Answer: What a RAID level is
 
        Ap = A1 XOR A2 XOR A3
     ```
-    - Data is striped, and one parity block per stripe is stored, `distributed` across all the disks so that no single drive becomes a bottleneck.
-    - Minimum `3` disks. Usable capacity `(n-1)/n` — 75 per cent with 4 disks.
-    - Survives `one` disk failure. The missing block is recovered by XOR:
-    ```
-       A2 = A1 XOR A3 XOR Ap
-    ```
-    - Reads are fast. Writes suffer a `four-operation penalty`: read the old data, read the old parity, write the new data, write the new parity.
-    - Rebuild is slow — every surviving disk must be read in full — and a second failure during it destroys the array.
-    - Used for: file servers, web servers, archives.
-
-    Comparison
+    - Parity distributed across all disks so no single drive bottlenecks; min 3 disks, (n-1)/n usable (75% with 4 disks), survives one failure (recovered via `A2 = A1 XOR A3 XOR Ap`); fast reads but a 4-operation write penalty, and a slow rebuild (reads every surviving disk). Used for file/web servers, archives.
 
     | Level | Technique | Min disks | Usable | Survives | Read | Write |
     |---|---|---|---|---|---|---|
-    | RAID 0 | Striping | 2 | 100 % | `Nothing` | Fastest | Fastest |
-    | RAID 1 | Mirroring | 2 | 50 % | 1 disk | Fast | Normal |
+    | RAID 0 | Striping | 2 | 100% | Nothing | Fastest | Fastest |
+    | RAID 1 | Mirroring | 2 | 50% | 1 disk | Fast | Normal |
     | RAID 5 | Striping + distributed parity | 3 | (n-1)/n | 1 disk | Fast | Slow |
 
-    - Related levels worth naming: `RAID 6` adds a second parity block and survives two failures; `RAID 10` mirrors first and then stripes, giving RAID 1's safety with RAID 0's speed, and is the usual choice for database servers.
+    - Related levels: `RAID 6` adds a second parity block (survives two failures); `RAID 10` mirrors then stripes (RAID 1's safety with RAID 0's speed) — the usual choice for database servers.
 
 15. **Describe RAID level.** *[Dutch Bangla Bank Ltd. Probationary Officer (Software) 2018 compact it 1199 (ET: N/A)]*
 
@@ -4430,48 +4003,35 @@ Answer: A `RAID level` defines how data is arranged across the disks of an array
 
 1. **Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** [SO IT 25-07-2026]
 
-Answer: Cache misses are classified into three kinds, known as the `three C's`: compulsory, capacity and conflict.
+Answer: Cache misses fall into three kinds, the `three C's`: compulsory, capacity and conflict.
 
-   Compulsory miss (cold miss, first-reference miss)
-   - Occurs when a block is accessed for the `very first time`. It cannot possibly be in the cache, because it has never been brought in.
-   - It happens even in an `infinitely large` cache — no size or organisation can avoid it.
-   - The number of compulsory misses equals the number of `distinct blocks` the program touches.
+   Compulsory miss (cold miss)
+   - Occurs on the `very first access` to a block — it can't possibly be cached yet, even in an infinitely large cache. Count = number of distinct blocks touched.
    ```
-      for (i = 0; i < 1000; i++)
-          sum += A[i];              // the FIRST access to each cache block
-                                    // of A[] is a compulsory miss
+      for (i=0;i<1000;i++) sum += A[i];   // first access to each block of A[] is a compulsory miss
    ```
-   - Reduced by: `larger block size` (one miss brings in more useful data) and `prefetching` (fetch the block before it is asked for). It cannot be eliminated.
+   - Reduced by larger blocks (one miss brings in more data) and prefetching; never eliminated.
 
    Capacity miss
-   - Occurs when the program's `working set is larger than the cache`. A block was in the cache, was evicted to make room for others, and is then needed again.
-   - It would `not` happen in an infinitely large cache — that is exactly the test that distinguishes it from a compulsory miss.
+   - Occurs when the program's `working set exceeds the cache` — a block is evicted and later needed again. Would NOT happen in an infinitely large cache (the test that distinguishes it from compulsory).
    ```
-      Cache = 1 MB , array = 10 MB , read the array twice :
-
-      Pass 1 : compulsory misses for every block
-      Pass 2 : the early blocks were evicted long ago -> CAPACITY misses
+      Cache=1MB, array=10MB, read twice: pass 1 = compulsory misses;
+      pass 2 = early blocks already evicted -> CAPACITY misses
    ```
-   - Reduced by: a `larger cache`, and by rewriting the program to improve locality — `loop blocking` (tiling) is the standard technique, which processes the data in chunks that fit the cache.
+   - Reduced by a larger cache or better locality (loop blocking/tiling).
 
-   Conflict miss, for completeness
-   - Occurs in a direct-mapped or set-associative cache when several blocks map to the `same set` and evict one another, even though the cache as a whole is not full.
-   - Eliminated by `full associativity` or reduced by raising the associativity.
+   Conflict miss (for completeness)
+   - Several blocks map to the `same set` and evict each other even though the cache overall isn't full. Reduced/eliminated by higher/full associativity.
 
-   Difference
-
-   | Point | Compulsory miss | Capacity miss |
+   | Point | Compulsory | Capacity |
    |---|---|---|
-   | Cause | The block has never been accessed before | The cache is too small to hold the working set |
-   | Happens in an infinite cache | `Yes` | `No` |
+   | Cause | Block never accessed before | Cache too small for working set |
+   | Happens in infinite cache | Yes | No |
    | Depends on cache size | No | Yes |
-   | Depends on associativity | No | No |
-   | Number of them | One per distinct block touched | Depends on the working-set size |
-   | Reduced by | Larger blocks, prefetching | Larger cache, better locality, loop blocking |
+   | Reduced by | Larger blocks, prefetching | Larger cache, better locality |
    | Can be eliminated | No | Yes, with a big enough cache |
-   | Also called | Cold-start or first-reference miss | — |
 
-   - The clean way to tell them apart in an exam: `simulate the program on an infinitely large fully associative cache`. Every miss that still occurs is compulsory. Then shrink the cache to its real size but keep full associativity — the extra misses are capacity misses. Finally apply the real associativity — the remaining extra misses are conflict misses.
+   - Exam tip: simulate on an infinite fully-associative cache — remaining misses are compulsory; shrink to real size (still fully associative) — extra misses are capacity; apply real associativity — the rest are conflict.
 
 2. **(d) What is cache memory? Explain the concepts of (i) Cache hit and (ii) Cache miss.** *[BPSC (Ministry of Power, Energy & Mineral Resources) Assistant Director (ICT) (CS/CSE) 29.05.2025 compact it 1352 (ET: N/A)]*
 
@@ -4535,71 +4095,41 @@ Answer: What cache memory is
 
 3. **Write advantage and disadvantage of direct mapping and associative mapping between cache memory and main memory.** *[BCIC Assistant Programmer 14.02.2025 compact it 1330 (ET: BUET)]*
 
-Answer: The `mapping function` decides where a block of main memory may be placed in the cache. The three schemes are direct, associative and set-associative.
+Answer: The `mapping function` decides where a block of main memory may be placed in the cache — the three schemes are direct, associative and set-associative.
 
    Direct mapping
-   - Each main-memory block can go in `exactly one` cache line, determined by
-   ```
-      cache line = (block number) MOD (number of lines)
-   ```
-   - The address is split as:
+   - Each block goes to `exactly one` line: `cache line = block number MOD number of lines`.
    ```
       +------------+---------+--------+
       |    TAG     |  INDEX  | OFFSET |
       +------------+---------+--------+
       The INDEX picks the line; the TAG confirms which block is in it.
    ```
-
-   Advantages
-   - `Simplest and cheapest` hardware — only one comparator is needed, so the chip area and cost are minimal.
-   - `Fastest lookup`, because the line is found by simple indexing with no search at all. Ideal for L1 cache, where every cycle counts.
-   - `No replacement policy needed` — there is only one possible place, so nothing has to be decided or tracked.
-   - Low power consumption.
-
-   Disadvantages
-   - `Conflict misses.` Two frequently used blocks that map to the same line evict each other repeatedly, even when the rest of the cache is empty. This is called `thrashing`.
-   - `Poor utilisation` — the cache can perform badly while most of it sits unused.
-   - Performance is `unpredictable`; it depends heavily on the addresses a particular program happens to use.
+   - Advantages: simplest/cheapest hardware (one comparator), fastest lookup (simple indexing, no search — ideal for L1), no replacement policy needed, low power.
+   - Disadvantages: conflict misses/`thrashing` (two frequently-used blocks mapping to the same line evict each other even when the cache is mostly empty), poor utilisation, and unpredictable performance depending on the addresses used.
 
    Associative mapping (fully associative)
-   - A block may be placed in `any` cache line. The address is split as:
+   - A block may go in `any` line; the tag is compared against every line in parallel.
    ```
       +----------------------+--------+
       |         TAG          | OFFSET |
       +----------------------+--------+
-      The tag must be compared against EVERY line, in parallel.
    ```
-
-   Advantages
-   - `No conflict misses at all.` A block is evicted only when the cache is genuinely full, so the only misses are compulsory and capacity misses.
-   - `Best possible hit ratio` for a given cache size.
-   - `Full utilisation` of every line.
-   - `Flexible` — the replacement policy (LRU, FIFO, random) can be chosen to suit the workload.
-
-   Disadvantages
-   - `Expensive hardware.` One comparator per line is required, all operating simultaneously. For 1024 lines that is 1024 comparators.
-   - `Slower` lookup, because of the wide parallel comparison, and `higher power` consumption.
-   - `Replacement policy needed`, which costs extra logic and per-line state (LRU counters).
-   - `Larger tag field`, since no bits are used as an index, so more storage is spent on tags.
-   - Practical only for very small caches — the TLB is the classic example.
-
-   Comparison
+   - Advantages: no conflict misses (only compulsory/capacity), best possible hit ratio for a given size, full utilisation, flexible replacement policy (LRU/FIFO/random).
+   - Disadvantages: expensive hardware (one comparator per line — 1024 for 1024 lines), slower/higher-power lookup from the wide parallel comparison, needs replacement-policy logic and per-line state, and a larger tag field. Practical only for very small caches (e.g. the TLB).
 
    | Point | Direct mapping | Associative mapping |
    |---|---|---|
    | Placement | One fixed line | Any line |
    | Comparators needed | 1 | One per line |
-   | Hardware cost | Lowest | Highest |
    | Lookup speed | Fastest | Slowest |
-   | Conflict misses | Many | `None` |
+   | Conflict misses | Many | None |
    | Hit ratio | Lower | Highest |
    | Replacement policy | Not needed | Required (LRU, FIFO) |
-   | Tag size | Smaller | Larger |
    | Power | Low | High |
-   | Cache utilisation | Poor | Full |
    | Used in | Large L2/L3 caches | Very small caches, TLB |
 
-   - The practical compromise is `set-associative mapping`, used in almost every real processor. The cache is divided into sets of `k` lines; the index selects the set, and the block may go anywhere within it. `k = 4` or `8` captures nearly all the hit-ratio benefit of full associativity at a small fraction of the hardware cost.
+   - Practical compromise: `set-associative mapping`, used in almost every real processor — the cache is divided into sets of `k` lines (index picks the set, block goes anywhere within it); k=4 or 8 captures nearly all of full associativity's hit-ratio benefit at a fraction of the hardware cost.
 
 4. **How many total bits are required for a direct mapped cache with 16KB of data and 4-word blocks? Assuming a 32 bit address?** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 421 (ET: BIBM)]*
 
@@ -4680,46 +4210,35 @@ Answer: Given
 
 5. **6.3 Explain the difference between a "Compulsory Miss" (Cold Miss) and a "Capacity Miss" in cache memory.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
-Answer: Cache misses are classified into the `three C's`: compulsory, capacity and conflict. The first two are asked here.
+Answer: Cache misses fall into the `three C's`: compulsory, capacity and conflict — the first two are asked here.
 
-   Compulsory miss (cold miss, first-reference miss)
-   - Occurs when a block is accessed for the `very first time`. It cannot be in the cache, because it has never been brought in.
-   - It happens even in an `infinitely large` cache — no size or organisation can prevent it.
-   - The count equals the number of `distinct blocks` the program touches.
+   Compulsory miss (cold miss)
+   - Occurs on the `very first access` to a block — impossible to avoid even in an infinitely large cache. Count = distinct blocks touched.
    ```
-      for (i = 0; i < 1000; i++)
-          sum += A[i];         // the FIRST access to each block of A[]
-                               // is a compulsory miss
+      for (i=0;i<1000;i++) sum += A[i];   // first access to each block of A[] is compulsory
    ```
-   - Reduced by `larger block size`, since one miss then brings in more useful neighbouring data, and by `prefetching`, which fetches a block before it is requested. It can never be eliminated.
+   - Reduced by larger blocks and prefetching; never eliminated.
 
    Capacity miss
-   - Occurs when the program's `working set is larger than the cache`. A block was present, was evicted to make room for others, and is then needed again.
-   - It would `not` occur in an infinitely large cache — that is the test that separates it from a compulsory miss.
+   - Occurs when the `working set exceeds the cache` — a block is evicted and needed again later. Would NOT happen in an infinitely large cache (the distinguishing test).
    ```
-      Cache = 1 MB , array = 10 MB , the array is read twice :
-
-      Pass 1 : every block is a compulsory miss
-      Pass 2 : the early blocks were evicted long ago -> CAPACITY misses
+      Cache=1MB, array=10MB, read twice: pass 1 = compulsory; pass 2 = early
+      blocks already evicted -> CAPACITY misses
    ```
-   - Reduced by a `larger cache`, and by improving the program's locality. The standard technique is `loop blocking` (tiling), which processes the data in chunks small enough to fit the cache.
+   - Reduced by a larger cache or better locality (loop blocking/tiling).
 
-   Conflict miss, for completeness
-   - Occurs in a direct-mapped or set-associative cache when several blocks map to the `same set` and evict one another, even though the cache as a whole is not full. Eliminated by full associativity.
+   Conflict miss (for completeness)
+   - Several blocks map to the same set and evict each other even though the cache isn't full; eliminated by full associativity.
 
-   Difference
-
-   | Point | Compulsory miss | Capacity miss |
+   | Point | Compulsory | Capacity |
    |---|---|---|
-   | Cause | First-ever access to the block | Working set exceeds the cache size |
-   | Occurs in an infinite cache | `Yes` | `No` |
+   | Cause | First-ever access to the block | Working set exceeds cache size |
+   | Occurs in infinite cache | Yes | No |
    | Depends on cache size | No | Yes |
-   | Depends on associativity | No | No |
-   | Count | One per distinct block touched | Depends on working-set size |
-   | Reduced by | Larger blocks, prefetching | Larger cache, better locality, loop blocking |
+   | Reduced by | Larger blocks, prefetching | Larger cache, better locality |
    | Can be eliminated | Never | Yes, with a large enough cache |
 
-   - How to separate them experimentally: simulate the program on an `infinite fully associative` cache — every miss that still occurs is compulsory. Then shrink it to the real size, still fully associative — the extra misses are capacity misses. Finally apply the real associativity — the remaining extra misses are conflict misses.
+   - How to separate them experimentally: simulate on an infinite fully-associative cache — remaining misses are compulsory; shrink to real size (still fully associative) — extras are capacity; apply real associativity — the rest are conflict.
 
 6. **Write Concept of cache memory in computer. How its change performance of computer?** *[BITAC Assistant Programmer 27.10.2023 compact it 559 (ET: BUTEX)]*
 
@@ -4925,62 +4444,31 @@ Answer: `Cache memory` is a small, very fast memory between the CPU and main mem
 
 Answer: Cache memory determines a large part of a computer's performance because the CPU spends most of its time `waiting for memory`, and the cache is what stops that wait.
 
-   1. The memory wall — the reason the cache matters at all
+   The memory wall
    ```
       CPU cycle       :  ~0.3 ns   (3 GHz)
       L1 cache access :  ~1-2 ns
-      Main memory     :  ~50-100 ns
+      Main memory     :  ~50-100 ns  (~200 CPU cycles)
    ```
-   - A DRAM access costs roughly `200 CPU cycles`. Without a cache, a 3 GHz processor would run at the speed of its memory, wasting almost all of its capability. This gap is called the `memory wall`, and it has widened every year because CPU speed improved far faster than DRAM latency.
+   - Without a cache, a 3 GHz processor would run at DRAM speed — the `memory wall` — a gap that widens every year since CPU speed improves faster than DRAM latency.
 
-   2. Its effect is measured directly
+   Its effect is measured directly
    ```
-      Average memory access time = hit time + (miss rate x miss penalty)
+      Average access time = hit time + (miss rate x miss penalty)
+
+      Hit ratio 99% : 5 + 1  =  6 ns
+      Hit ratio 95% : 5 + 5  = 10 ns
+      Hit ratio 90% : 5 + 10 = 15 ns
+      No cache      :          105 ns
    ```
-   ```
-      Hit time 5 ns , miss penalty 100 ns
+   - A five-point change in hit ratio changes performance by over 50%; no other single parameter has that leverage. It also keeps the pipeline fed — a miss on instruction fetch stalls the whole pipeline for hundreds of cycles — and it enters the CPI formula directly: `Effective CPI = base CPI + (mem accesses/instr x miss rate x miss penalty)`, so a base CPI of 1.0 can become 3.0 with a modest miss rate.
 
-      Hit ratio 99 % : 5 + 1  =  6 ns
-      Hit ratio 95 % : 5 + 5  = 10 ns
-      Hit ratio 90 % : 5 + 10 = 15 ns
-      No cache       :          105 ns
-   ```
-   - A five-point change in hit ratio changes performance by more than 50 per cent. No other single parameter has that leverage.
+   Other benefits
+   - Frees the memory bus (hits never reach it, which matters most when cores share one controller) and saves power (an on-die SRAM read costs far less energy than driving the external bus).
+   - Its design parameters are themselves performance decisions: larger size cuts capacity misses but costs speed; larger blocks exploit spatial locality but raise miss penalty; higher associativity cuts conflict misses but slows each access; LRU gives the best hit ratio; write-back cuts bus traffic.
 
-   3. It keeps the pipeline full
-   - A modern CPU executes several instructions per cycle only while the pipeline is fed. A cache miss on an instruction fetch stalls the whole pipeline for hundreds of cycles, and out-of-order execution can hide only a fraction of that.
-
-   4. It is why the CPI formula includes memory
-   ```
-      CPU time = Instructions x CPI x Clock cycle time
-
-      Effective CPI = base CPI + (memory accesses per instruction
-                                  x miss rate x miss penalty in cycles)
-   ```
-   - A base CPI of 1.0 becomes 3.0 if 30 per cent of instructions touch memory with a 5 per cent miss rate and a 130-cycle penalty. The processor's real speed has fallen to a third.
-
-   5. It frees the memory bus
-   - Hits never reach the bus. In a multicore system, where all cores share one memory controller, this is what prevents them from starving each other.
-
-   6. It saves power
-   - Driving the external bus and activating a DRAM row costs far more energy than an on-die SRAM read, so the cache improves performance per watt as well as raw speed.
-
-   7. Its design parameters are all performance decisions
-   ```
-      Size          : bigger reduces capacity misses, but is slower and costlier
-      Block size    : bigger exploits spatial locality, but raises the
-                      miss penalty and can waste bandwidth
-      Associativity : higher reduces conflict misses, but is slower per access
-      Replacement   : LRU gives the best hit ratio; random is cheapest
-      Write policy  : write-back reduces bus traffic; write-through is simpler
-      Levels        : L1 for speed, L2 and L3 for capacity
-   ```
-
-   8. Practical evidence
-   - Two processors with identical clock speed and core count can differ by 20-30 per cent in real work purely because of cache size and organisation. Server processors are sold largely on the size of their L3.
-   - Programs written with `cache-aware` algorithms — loop blocking, row-major traversal, data structure padding — often run several times faster than the same algorithm written without regard to locality.
-
-   - Summary: the cache does not make the CPU or the RAM faster. It decides how often the CPU has to touch the slow level at all, and since that gap is a factor of 200, the hit ratio effectively `sets` the machine's real speed.
+   - Practical evidence: two processors with identical clock and core count can differ 20-30% in real work purely from cache size/organisation — cache-aware code (loop blocking, row-major traversal) often runs several times faster than the same algorithm without regard to locality.
+   - Summary: the cache doesn't make the CPU or RAM faster — it decides how often the CPU touches the ~200x-slower level at all, so the hit ratio effectively sets the machine's real speed.
 
 10. **Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit. The average read access time in nanoseconds is ______.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 864 (ET: BUET)]*
 
@@ -5304,41 +4792,28 @@ Answer: Server A — the Core Banking Database → use `SSD` (NVMe)
    | Capacity per drive | Up to 24 TB | Up to 30 TB, but costlier |
    | Power | 6-10 W | 2-5 W |
    | Shock resistance | Poor — mechanical | Excellent |
-   | Noise and heat | Yes | Minimal |
-   | Endurance limit | None; mechanical wear | Limited program/erase cycles per cell |
+   | Endurance limit | None; mechanical wear | Limited program/erase cycles |
    | Data retention unpowered | Decades | Falls after a few years without power |
-   | Failure mode | Gradual, often warned by SMART | Sudden, once the controller or cells fail |
+   | Failure mode | Gradual, warned by SMART | Sudden, once controller/cells fail |
 
    Server A — Core Banking Database: `NVMe SSD`
    ```
-      Workload  : small RANDOM reads and writes, thousands of concurrent
+      Workload  : small RANDOM reads/writes, thousands of concurrent
                   transactions, latency-critical
       Decisive  : random IOPS and latency, not capacity
    ```
-   - A core banking system does mostly `random` 8 KB page reads and writes. An HDD delivers about 150 random IOPS; an NVMe SSD delivers hundreds of thousands. That is the difference between a transaction taking 10 ms and 0.1 ms.
-   - Every `COMMIT` must reach stable storage before it returns, so write latency directly sets the transaction rate. This is where the mechanical seek and rotational delay of an HDD are fatal.
-   - Concurrency: an HDD's single head serialises requests; an SSD serves many queues in parallel.
-   - Capacity is not the constraint — a core banking database is usually a few terabytes, which is affordable in SSD.
-   - Recommended configuration: `NVMe SSDs in RAID 10`, with the transaction log on its own array, and enterprise-grade drives with power-loss protection and high DWPD (drive writes per day) endurance.
+   - Core banking does mostly random 8 KB reads/writes: an HDD gives ~150 random IOPS, an NVMe SSD hundreds of thousands — the difference between a 10 ms and 0.1 ms transaction. Every COMMIT must reach stable storage before returning, so write latency sets the transaction rate, and an HDD's single head serialises requests while an SSD serves many in parallel. Capacity isn't the constraint (a few TB, affordable in SSD).
+   - Recommended: `NVMe SSDs in RAID 10`, transaction log on its own array, enterprise drives with power-loss protection and high DWPD endurance.
 
-   Server B — 10 years of immutable archive: `HDD`
+   Server B — 10-year immutable archive: `HDD`
    ```
       Workload  : write once, read rarely, sequential, enormous volume
       Decisive  : cost per terabyte and long-term retention, not speed
    ```
-   - The data is written once and almost never read, so the SSD's random-access advantage is worth nothing here.
-   - `Cost per terabyte` dominates. Ten years of banking archive runs to hundreds of terabytes; HDDs cost a third to a sixth as much, and that difference is the whole budget.
-   - `Long-term retention`: an unpowered SSD gradually loses charge from its floating gates and can lose data after a few years. Magnetic media holds its state for decades, which suits an archive that may sit untouched.
-   - `Endurance` is irrelevant, because the data is written once. The SSD's limited write cycles are not a factor either way.
-   - Sequential throughput of 150-200 MB/s is perfectly adequate for the occasional bulk retrieval or audit.
-   - Recommended configuration: high-capacity `nearline HDDs in RAID 6` (double parity, because rebuilds on large drives take many hours), with WORM or object-lock storage for immutability, plus tape or cloud cold storage as the off-site copy.
+   - Written once and almost never read, so SSD's random-access advantage is worth nothing; cost per TB dominates over hundreds of terabytes, and HDDs cost a third to a sixth as much. An unpowered SSD gradually loses charge and can lose data in a few years, while magnetic media holds state for decades — ideal for an untouched archive. Endurance is irrelevant (written once), and 150-200 MB/s sequential throughput is fine for occasional bulk retrieval.
+   - Recommended: high-capacity `nearline HDDs in RAID 6` (double parity, since large-drive rebuilds take hours), with WORM/object-lock for immutability plus tape or cloud cold storage off-site.
 
-   Summary
-   ```
-      Server A : NVMe SSD  -> buy IOPS and latency
-      Server B : HDD       -> buy capacity per taka and long-term retention
-   ```
-   - The reasoning to state clearly: `match the storage to the access pattern`. Random, latency-critical, high-value data justifies the SSD premium; sequential, cold, high-volume data does not. Using SSDs for the archive would waste money without improving anything, and using HDDs for the core database would throttle the whole bank.
+   - Reasoning: match storage to the access pattern — random, latency-critical data justifies the SSD premium; sequential, cold, high-volume data does not. SSDs for the archive would waste money; HDDs for the core database would throttle the bank.
 
 2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1342 (ET: N/A)]*
 
@@ -6140,44 +5615,25 @@ Answer: Stages of instruction pipelining
    * (iv) Each instruction typically executes in a single clock cycle ______
 
    Answer: (i) Pipelining is less efficient due to instruction complexity and variability — `CISC`
-   - CISC instructions vary in length (1 to 15 bytes in x86) and in how many cycles they take. A pipeline works best when every instruction is the same size and takes the same time, so this variability causes stalls and makes the pipeline control logic complicated.
+   - CISC instructions vary in length (1-15 bytes in x86) and cycle count; a pipeline works best when every instruction is the same size/time, so this variability causes stalls.
 
    (ii) Emphasis on hardware simplicity and efficiency — `RISC`
-   - RISC deliberately keeps the instruction set small and regular so that the control unit can be `hardwired` rather than microprogrammed. The saved silicon is spent on more registers, larger caches and deeper pipelines.
+   - RISC keeps the instruction set small and regular so the control unit can be hardwired rather than microprogrammed, spending the saved silicon on registers, cache and deeper pipelines.
 
    (iii) Complex decoding due to variable instruction length — `CISC`
-   - Because a CISC instruction's length is not known until part of it has been decoded, the processor cannot simply fetch a fixed number of bytes per instruction. Modern x86 chips need several decoder units working in parallel just to keep up.
+   - A CISC instruction's length isn't known until part of it is decoded, so the processor can't fetch a fixed number of bytes per instruction — modern x86 needs several parallel decoders just to keep up.
 
    (iv) Each instruction typically executes in a single clock cycle — `RISC`
-   - Fixed-length, simple instructions each complete in about one cycle. This is what makes RISC pipelines efficient, since every stage takes the same time.
-
-   Summary
+   - Fixed-length, simple instructions each complete in about one cycle, which is what makes RISC pipelines efficient.
 
    | Statement | Answer |
    |---|---|
-   | (i) Pipelining is less efficient due to instruction complexity and variability | `CISC` |
-   | (ii) Emphasis on hardware simplicity and efficiency | `RISC` |
-   | (iii) Complex decoding due to variable instruction length | `CISC` |
-   | (iv) Each instruction typically executes in a single clock cycle | `RISC` |
+   | (i) Pipelining less efficient from complexity/variability | `CISC` |
+   | (ii) Emphasis on hardware simplicity/efficiency | `RISC` |
+   | (iii) Complex decoding from variable length | `CISC` |
+   | (iv) Each instruction executes in one clock cycle | `RISC` |
 
-   Full comparison, for context
-
-   | Point | RISC | CISC |
-   |---|---|---|
-   | Instruction set | Small and simple | Large and complex |
-   | Instruction length | Fixed | Variable |
-   | Cycles per instruction | Mostly 1 | Many |
-   | Memory access | Only LOAD and STORE | Most instructions can |
-   | Registers | Many (32 or more) | Few (8 to 16) |
-   | Control unit | Hardwired | Microprogrammed |
-   | Pipelining | Easy and efficient | Difficult |
-   | Decoding | Simple | Complex |
-   | Code size | Larger | Smaller |
-   | Compiler effort | Higher | Lower |
-   | Power consumption | Low | Higher |
-   | Examples | ARM, RISC-V, MIPS, SPARC | Intel x86, AMD64, Motorola 68000 |
-
-   - Practical note: the distinction has blurred. Modern x86 processors decode their CISC instructions into RISC-like `micro-operations` internally, so they are CISC at the interface and RISC in the execution core. RISC still wins decisively on power efficiency, which is why every mobile phone uses ARM.
+   - Practical note: the distinction has blurred — modern x86 decodes CISC instructions into RISC-like micro-ops internally (CISC at the interface, RISC in the core). RISC still wins decisively on power efficiency, which is why every mobile phone uses ARM.
 
 4. **Difference between mutliprocessor system and multi computer system, Explain Shared memory; discuss the two schemes to maintain cache coherence. What is pipelining? Explain the 4 stages of the pipeline.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 299 (ET: BIBM)]*
 
@@ -7267,21 +6723,6 @@ Answer: An `addressing mode` is the way an instruction specifies where its opera
       Any of these may be overridden : MOV AX, ES:[BX]
    ```
 
-   Summary
-
-   | Mode | Example | Operand is |
-   |---|---|---|
-   | Immediate | `MOV AX, 1234H` | A constant in the instruction |
-   | Register | `MOV AX, BX` | In a register |
-   | Direct | `MOV AX, [1234H]` | In memory, address in the instruction |
-   | Register indirect | `MOV AX, [BX]` | In memory, address in a register |
-   | Based | `MOV AX, [BX+4]` | Base register + displacement |
-   | Indexed | `MOV AX, [SI+4]` | Index register + displacement |
-   | Based indexed | `MOV AX, [BX+SI]` | Base + index |
-   | Based indexed + disp | `MOV AX, [BX+SI+4]` | Base + index + displacement |
-   | Implied | `CLC` | Understood from the opcode |
-   | String | `MOVSB` | DS:SI and ES:DI, automatically |
-
    - Why so many modes exist: each maps naturally onto a programming construct — immediate for constants, register indirect for pointers, indexed for arrays, based for record fields, based indexed for two-dimensional arrays. This richness is characteristic of a `CISC` design; RISC machines typically offer only two or three.
 
 8. **Explain the instructions LDS, PUSHF, TEST and CLD.** *[Multiple Ministry Assistant Programmer 2017 compact it 1235 (ET: N/A)]*
@@ -7790,57 +7231,21 @@ Answer: Speed is judged by the `time taken per instruction`, not by clock freque
 
 6. **Write down factor of microprocessor speed?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124-1125 (ET: BREB)]*
 
-Answer: The speed of a microprocessor is decided by several factors acting together, not by clock frequency alone.
-   ```
-      Performance = Clock frequency x IPC x Number of cores
-   ```
+Answer: Microprocessor speed depends on several factors together, not clock frequency alone: `Performance = Clock frequency x IPC x Number of cores`.
 
-   1. Clock speed (frequency)
-   - The number of cycles per second, in GHz. A 3 GHz processor ticks three thousand million times a second, one tick every 0.33 ns.
-   - It sets the upper limit, but is only meaningful when comparing processors of the `same architecture`.
+   1. Clock speed (GHz) - cycles/second; sets the ceiling, but only meaningful within the same architecture.
+   2. IPC / microarchitecture - work done per cycle; pipelining, superscalar issue, out-of-order execution and branch prediction drive nearly all modern gains (`CPU time = Instructions x CPI x cycle time`).
+   3. Cores/threads - more cores run tasks truly in parallel; hyper-threading keeps a core's units busy; limited by Amdahl's law (the serial part never speeds up).
+   4. Cache memory - the biggest factor after architecture itself: L1(~4 cyc) < L2(~12) < L3(~40) < RAM(~200); a 5-point hit-ratio change can shift performance ~50%.
+   5. Word size / bus width - a 64-bit CPU moves more data per operation and addresses far more memory than 32-bit.
+   6. Pipelining/superscalar design - overlapping stages complete an instruction per cycle (or several); hazards (data dependencies, mispredicted branches) stall it.
+   7. Memory/bus speed - RAM type (DDR4/5), latency and controller bandwidth; a fast CPU starved of data just waits.
+   8. Instruction set - RISC pipelines cleanly, CISC packs more per instruction; special sets (SSE, AVX, AES-NI) accelerate specific tasks.
+   9. Manufacturing process - smaller nodes (7/5/3 nm) switch faster and use less power, allowing higher clocks at the same heat.
+   10. Thermal design/power - overheating triggers throttling; cooling directly affects sustained speed, and turbo boost lasts only while thermal headroom remains.
+   11. Software - well-optimised, multi-threaded code uses the hardware far better than poor code; background processes steal cycles.
 
-   2. Instructions per cycle (IPC) and microarchitecture
-   - How much work is completed per tick. Better pipelines, wider superscalar issue, out-of-order execution and good branch prediction all raise IPC. This is where nearly all modern gains come from.
-   ```
-      CPU time = Instruction count x CPI x Clock cycle time
-   ```
-
-   3. Number of cores and threads
-   - More cores run more tasks genuinely simultaneously; hyper-threading lets one core run two threads and keeps its units busy.
-   - Limited by `Amdahl's law` — the serial part of a program does not speed up however many cores are added.
-
-   4. Cache memory
-   - The most important single factor after the architecture itself.
-   ```
-      L1 : 32-64 KB   ~4 cycles
-      L2 : 256KB-1MB  ~12 cycles
-      L3 : 8-32 MB    ~40 cycles
-      RAM: gigabytes  ~200 cycles
-   ```
-   - A larger, better-organised cache raises the hit ratio, and a five-point change in hit ratio can change real performance by 50 per cent.
-
-   5. Word size (bus width)
-   - A 64-bit processor moves 64 bits per operation and addresses far more memory than a 32-bit one.
-
-   6. Pipelining and superscalar design
-   - Pipelining overlaps stages so an instruction completes every cycle; superscalar issue completes several. `Hazards` — data dependencies and branch mispredictions — stall the pipeline and cost cycles.
-
-   7. Memory and bus speed
-   - The RAM type (DDR4 or DDR5), its latency, and the memory controller's bandwidth. A fast processor starved of data simply waits.
-
-   8. Instruction set architecture
-   - RISC instructions pipeline cleanly; CISC packs more work into each instruction. Special instruction sets — SSE, AVX, AES-NI — accelerate particular tasks enormously.
-
-   9. Manufacturing process
-   - A smaller process (7 nm, 5 nm, 3 nm) places transistors closer together, so they switch faster and use less power, allowing a higher clock at the same heat.
-
-   10. Thermal design and power
-   - If the chip overheats it `throttles`, dropping its clock to protect itself. Cooling therefore affects sustained speed directly, and `turbo boost` lasts only while thermal headroom remains.
-
-   11. Software factors
-   - A well-optimised, multi-threaded, compiler-optimised program uses the hardware far better than a poorly written one. Background processes steal cycles.
-
-   - Summary: clock speed is only one term of three. `Speed = clock x IPC x cores`, and all of it is bounded by how quickly the cache and memory can feed the processor.
+   - Summary: `Speed = clock x IPC x cores`, all bounded by how fast the cache/memory can feed the processor.
 
 ## Multi-Core & Multi-Threading (5)
 
@@ -7901,43 +7306,7 @@ Answer: `Core` and `thread` are processor terms rather than networking ones, tho
 
 2. **Core i5 and i7 Microprocessor এর মধ্যে হার্ডওয়্যারগত মূল পার্থক্য কী?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 698 (ET: DPI)]*
 
-Answer: (Answered in English, as required for IT topics.) The `i5` and `i7` labels denote performance tiers within one generation. The hardware differences are these.
-
-   1. Number of cores and threads
-   ```
-      Core i5 : typically 6 cores , 12 threads
-      Core i7 : typically 8 or more cores , 16 or more threads
-   ```
-   - More cores means more genuinely parallel work — the largest single difference in heavy multi-threaded tasks such as video encoding, compilation and virtualisation.
-
-   2. Hyper-threading
-   - On many generations the `i5 lacks hyper-threading` while the `i7 has it`, so an i7 presents twice as many logical processors as physical cores.
-   - Hyper-threading adds roughly `20-30 per cent`, by keeping a core's execution units busy while one thread waits for memory.
-
-   3. Cache size
-   ```
-      Core i5 : 9-12 MB of L3 cache
-      Core i7 : 12-25 MB of L3 cache
-   ```
-   - A larger L3 raises the hit ratio, and since a main-memory access costs about 200 cycles against 40 for L3, this affects real performance considerably.
-
-   4. Clock speed and Turbo Boost
-   - The i7 usually has a higher base clock and a higher maximum turbo frequency, and it holds turbo for longer because of its larger power budget.
-
-   5. Thermal design power and cooling
-   ```
-      Core i5 : 65 W typical
-      Core i7 : 95-125 W typical
-   ```
-   - The higher TDP is what allows the extra cores and the higher sustained clocks, but it demands better cooling.
-
-   6. Integrated graphics
-   - Both usually have integrated graphics, but the i7's version often has more execution units and a higher graphics clock.
-
-   7. Overclocking and platform features
-   - The unlocked `K` variants are more common in the i7 line, and i7 chips more often support features such as more PCIe lanes.
-
-   Summary
+Answer: (Answered in English, as required for IT topics.) The `i5` and `i7` labels denote performance tiers within one generation; the hardware differences are:
 
    | Point | Core i5 | Core i7 |
    |---|---|---|
@@ -7945,68 +7314,47 @@ Answer: (Answered in English, as required for IT topics.) The `i5` and `i7` labe
    | Threads | 6-12 | 16 or more |
    | Hyper-threading | Often absent | Usually present |
    | L3 cache | 9-12 MB | 12-25 MB |
-   | Base clock | Lower | Higher |
-   | Turbo Boost | Yes, lower ceiling | Yes, higher ceiling |
+   | Base/turbo clock | Lower | Higher, held longer |
    | TDP | ~65 W | 95-125 W |
-   | Price | Moderate | High |
+   | iGPU | Fewer execution units | More execution units, higher clock |
+   | Overclocking | K variants less common | K variants and more PCIe lanes common |
    | Suited to | Everyday use, gaming | Video editing, CAD, development, virtualisation |
 
-   - Two important warnings. First, the tier number is `not a generation`: a newer i5 usually beats an older i7, so the generation code — the leading digits of the model number, as in `i5-13600K` — matters more than the tier. Second, the exact figures above vary by generation; the `principle` is constant — i7 means more cores, more threads, more cache and a higher clock, at higher power and price.
+   - More cores/threads give real parallelism (biggest factor for encoding, compiling, virtualisation); hyper-threading adds ~20-30% by keeping execution units busy during memory stalls; a larger L3 raises the hit ratio (an L3 hit costs ~40 cycles vs ~200 for main memory), and the higher TDP funds the extra cores/clocks but needs better cooling.
+   - Two warnings: the tier is `not a generation` — a newer i5 usually beats an older i7, so the generation digits (e.g. `i5-13600K`) matter more than the tier; and exact figures vary by generation, but the principle holds — i7 means more cores, threads, cache and clock, at higher power and price.
 
 3. **What is Hyper threading? What is the use of it?** *[BOF Assistant Programmer 2022 compact it 733 (ET: MIST)]*
 
 Answer: What hyper-threading is
-   - `Hyper-Threading Technology (HTT)` is Intel's implementation of `Simultaneous Multithreading (SMT)`. One `physical` core presents itself to the operating system as `two logical processors`, so it can hold and interleave two threads at once.
-   - It works by duplicating only the `architectural state` — the registers, the program counter and the control registers — while the two threads `share` the core's real execution hardware: the ALUs, the FPU, the caches and the branch predictor.
+   - `Hyper-Threading (HTT)` is Intel's implementation of `Simultaneous Multithreading (SMT)`. One physical core presents itself to the OS as `two logical processors`, interleaving two threads at once — only the architectural state (registers, PC) is duplicated; the ALUs, FPU, cache and branch predictor are shared.
    ```
       +-------------------------------------------+
       |            One physical core              |
-      |                                           |
       |  Thread 1 state      Thread 2 state       |  <- duplicated
-      |  (registers, PC)     (registers, PC)      |
       |            \           /                  |
       |          Shared execution units           |  <- NOT duplicated
-      |          (ALU, FPU, cache, scheduler)     |
       +-------------------------------------------+
    ```
-   ```
-      4 physical cores , hyper-threading enabled  ->  8 logical processors
-      Windows Task Manager then shows "4 cores, 8 logical processors"
-   ```
-
-   Why it helps
-   - A single thread frequently `stalls` — waiting for a cache miss, a branch misprediction or a long-latency instruction. During those cycles the core's execution units sit idle.
-   - With two threads resident, the core simply issues instructions from the `other` thread while the first is stalled. The idle slots are filled.
+   - Why it helps: a thread often stalls (cache miss, mispredicted branch), leaving execution units idle; HT fills those slots with the other thread's instructions.
    ```
       Without HT : | T1 | T1 | stall | stall | T1 |
-      With HT    : | T1 | T1 |  T2   |  T2   | T1 |     -> units stay busy
+      With HT    : | T1 | T1 |  T2   |  T2   | T1 |
    ```
 
    Uses and benefits
-   - `Higher throughput` on multi-threaded work — typically `20-30 per cent`, not 100 per cent, because the two threads share one core's real hardware.
-   - `Better responsiveness` when many programs run at once: browsing while a file compresses in the background.
-   - `Server workloads` benefit most — web servers, database servers and virtualisation hosts, where many independent requests arrive and each stalls often on memory or I/O.
-   - `Content creation` — video encoding, 3D rendering and compilation are all highly parallel.
-   - `Cost efficiency`: extra performance from a modest amount of extra silicon, far cheaper than adding real cores.
+   - Higher throughput on multi-threaded work (typically 20-30%, not 100%, since both threads share one core's hardware); better responsiveness when many programs run at once; biggest gains on server workloads (web/DB/virtualisation) and content creation (encoding, rendering, compiling) — all cheaper than adding real cores.
 
    Limitations
-   - It is `not` the same as doubling the cores. Two threads compete for one set of ALUs and one cache, so a single heavily compute-bound thread gains nothing.
-   - `Cache contention` can make some workloads slightly `slower` with HT enabled.
-   - Single-threaded programs see no benefit at all.
-   - It raises power and heat.
-   - `Security`: side-channel attacks such as `Spectre`, `Foreshadow` and `PortSmash` exploit the fact that two threads share a core. Some cloud providers and security-sensitive sites disable SMT for this reason.
-
-   Comparison
+   - Not equivalent to doubling cores — a single compute-bound thread gains nothing, and cache contention can even slow some workloads. Raises power/heat. Side-channel attacks (Spectre, Foreshadow, PortSmash) exploit the shared core, so some security-sensitive deployments disable it.
 
    | Point | Physical core | Logical (hyper-)thread |
    |---|---|---|
    | Nature | Real hardware | Duplicated register state only |
-   | Execution units | Its own | Shared with the sibling thread |
-   | Performance gain | Nearly linear | About 20-30 % |
-   | True parallelism | Yes | Interleaved on one core |
+   | Execution units | Its own | Shared with sibling thread |
+   | Performance gain | Nearly linear | ~20-30% |
    | Cost in silicon | High | Small |
 
-   - Terminology note: `Hyper-Threading` is Intel's brand name. AMD's equivalent is simply called `SMT`, and both implement the same idea. A processor described as "8 cores, 16 threads" has 8 physical cores each running 2 threads.
+   - Terminology: `Hyper-Threading` is Intel's brand name; AMD calls the same idea `SMT`. "8 cores, 16 threads" means 8 physical cores each running 2 threads.
 
 4. **Now a day, core i3, i5, i7 and i9 CPUs are aavailable. The higher the number is that means powerful processor. What is hyper threading? What does 2 core and 4 thread means?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
@@ -8173,107 +7521,49 @@ Answer: `RISC` stands for `Reduced Instruction Set Computer`.
 
 2. **Difference between RISC and CISC.** *[NPCBL Executive Trainee (IT) 2022 compact it 644 (ET: BUET)]*
 
-Answer: `RISC` (Reduced Instruction Set Computer) uses a small set of simple, uniform instructions. `CISC` (Complex Instruction Set Computer) uses a large set of powerful, varied instructions.
-
-   RISC
-   - Few instructions, all of `fixed length`, each completing in about `one clock cycle`.
-   - A `load-store` architecture: only LOAD and STORE touch memory; everything else operates on registers.
-   - Many general-purpose registers (32 or more), a `hardwired` control unit, and simple addressing modes.
-   - Because every instruction has the same shape, `pipelining` works cleanly.
-   - Examples: ARM, RISC-V, MIPS, SPARC, PowerPC, Apple M-series.
-
-   CISC
-   - Many instructions of `variable length`, some taking many cycles. One instruction can do a great deal of work — a single x86 instruction can load two operands from memory, multiply them and store the result.
-   - Instructions may operate `directly on memory`.
-   - Few registers (8 to 16), a `microprogrammed` control unit, and a rich set of addressing modes.
-   - Designed when memory was expensive, so compact code mattered more than pipeline efficiency.
-   - Examples: Intel x86, AMD64, Motorola 68000, IBM System/360.
-
-   Difference
+Answer: `RISC` (Reduced Instruction Set Computer) uses a small set of simple, uniform instructions; `CISC` (Complex Instruction Set Computer) uses a large set of powerful, varied ones.
 
    | Point | RISC | CISC |
    |---|---|---|
-   | Instruction set size | Small (about 100) | Large (several hundred) |
+   | Instruction set size | Small (~100) | Large (several hundred) |
    | Instruction length | Fixed | Variable |
-   | Cycles per instruction | Mostly 1 | 2 to 15 or more |
-   | Memory access | Only LOAD and STORE | Most instructions can |
-   | Registers | Many (32 or more) | Few (8 to 16) |
-   | Addressing modes | Few (3-5) | Many (12 or more) |
+   | Cycles per instruction | Mostly 1 | 2-15 or more |
+   | Memory access | Only LOAD/STORE | Most instructions |
+   | Registers | Many (32+) | Few (8-16) |
+   | Addressing modes | Few (3-5) | Many (12+) |
    | Control unit | Hardwired | Microprogrammed |
-   | Pipelining | Easy and efficient | Difficult |
-   | Decoding | Simple | Complex |
+   | Pipelining | Easy | Difficult |
    | Code size | Larger | Smaller |
-   | Compiler complexity | Higher — it must schedule and allocate | Lower |
-   | Transistor use | Spent on registers and cache | Spent on complex instruction logic |
-   | Power consumption | Low | Higher |
-   | Execution time | Depends on the number of instructions | Depends on instruction complexity |
-   | Used in | Mobile, embedded, Apple M-series | Desktop and server x86 |
+   | Power | Low | Higher |
+   | Examples | ARM, RISC-V, MIPS, SPARC | Intel x86, AMD64, IBM S/360 |
 
-   The design philosophy behind each
-   ```
-      CISC : make each INSTRUCTION do more, so the program needs fewer of them.
-             Sensible when memory was scarce and compilers were poor.
+   Design philosophy
+   - CISC: make each instruction do more, so fewer are needed — sensible when memory was scarce and compilers were poor.
+   - RISC: make each instruction simple and fast, and let the compiler assemble complex operations — sensible once memory got cheap and compilers improved.
 
-      RISC : make each instruction SIMPLE and FAST, and let the compiler
-             assemble complex operations from them.
-             Sensible when memory is cheap and compilers are good.
-   ```
-
-   - Practical note: the line has blurred. Modern x86 processors `decode` their CISC instructions into RISC-like `micro-operations` and execute those in a RISC-style pipeline, so they are CISC on the outside and RISC on the inside. RISC still wins clearly on `performance per watt`, which is why every mobile phone uses ARM, and why Apple moved its laptops to ARM as well.
+   - Practical note: modern x86 decodes CISC instructions into RISC-like micro-operations internally — CISC at the interface, RISC in the core. RISC wins decisively on performance/watt, hence its dominance in mobile and now Apple's M-series laptops.
 
 3. **(ক) CISC and RISC processor বলতে কি বোঝেন?** *[16th NTRCA Lecturer (ICT) (CSE): 2019 compact it 1072 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.) CISC processor
-   - `CISC` stands for `Complex Instruction Set Computer`. Its design philosophy is to make each `instruction do as much work as possible`, so that a program needs fewer of them.
-   - Characteristics:
-   ```
-      A large instruction set, several hundred instructions
-      VARIABLE-length instructions (1 to 15 bytes in x86)
-      An instruction may take many clock cycles
-      Instructions can operate DIRECTLY on memory
-      Few general-purpose registers (8 to 16)
-      Many addressing modes (12 or more)
-      MICROPROGRAMMED control unit
-      Smaller code size, but harder to pipeline
-   ```
-   - Why it was designed this way: in the 1970s memory was extremely expensive and compilers were poor, so packing more work into each instruction saved precious memory and made assembly programming easier.
-   - Examples: `Intel x86`, `AMD64`, Motorola 68000, IBM System/360.
+   - `CISC` = Complex Instruction Set Computer: each instruction does as much work as possible, so a program needs fewer of them. Large instruction set (hundreds), variable length (1-15 bytes in x86), instructions can take many cycles and operate directly on memory, few registers (8-16), many addressing modes, microprogrammed control — smaller code, harder to pipeline. Designed when memory was expensive and compilers were poor. Examples: Intel x86, AMD64, Motorola 68000.
 
    RISC processor
-   - `RISC` stands for `Reduced Instruction Set Computer`. Its philosophy is to make each instruction `simple and fast`, and let the compiler build complex operations out of them.
-   - Characteristics:
-   ```
-      A small instruction set, about 100 instructions
-      FIXED-length instructions
-      Each instruction completes in about ONE clock cycle
-      LOAD-STORE architecture : only LOAD and STORE touch memory
-      Many general-purpose registers (32 or more)
-      Few addressing modes (3 to 5)
-      HARDWIRED control unit
-      Larger code size, but very efficient pipelining
-   ```
-   - Why it works: memory became cheap and compilers became good, so the reasons for CISC disappeared. Studies also showed that compilers used only a small fraction of a CISC instruction set in practice.
-   - Examples: `ARM`, `RISC-V`, MIPS, SPARC, PowerPC, Apple M-series.
-
-   Comparison
+   - `RISC` = Reduced Instruction Set Computer: each instruction is simple and fast, and the compiler builds complex operations from them. Small instruction set (~100), fixed length, ~1 cycle each, load-store architecture (only LOAD/STORE touch memory), many registers (32+), few addressing modes, hardwired control — larger code, efficient pipelining. Examples: ARM, RISC-V, MIPS, SPARC, Apple M-series.
 
    | Point | CISC | RISC |
    |---|---|---|
-   | Instruction set | Large and complex | Small and simple |
-   | Instruction length | Variable | Fixed |
-   | Cycles per instruction | Many | About 1 |
-   | Memory access | Most instructions | Only LOAD and STORE |
+   | Instruction set | Large, complex | Small, simple |
+   | Length | Variable | Fixed |
+   | Cycles/instruction | Many | ~1 |
+   | Memory access | Most instructions | Only LOAD/STORE |
    | Registers | Few (8-16) | Many (32+) |
-   | Addressing modes | Many | Few |
    | Control unit | Microprogrammed | Hardwired |
-   | Pipelining | Difficult | Easy and efficient |
-   | Code size | Smaller | Larger |
-   | Compiler effort | Lower | Higher |
-   | Power consumption | Higher | Low |
-   | Transistors spent on | Instruction logic | Registers and cache |
-   | Used in | Desktop and server | Mobile, embedded, Apple M-series |
+   | Pipelining | Difficult | Easy |
+   | Power | Higher | Low |
+   | Used in | Desktop/server | Mobile, embedded, Apple M-series |
 
-   - The modern position: x86 processors now `decode` their CISC instructions into RISC-like `micro-operations` and execute those in a RISC-style pipeline — CISC at the interface, RISC in the core. RISC's advantage in `performance per watt` is decisive in battery-powered devices, which is why ARM dominates mobile and has now moved into laptops and servers.
+   - Modern reality: x86 decodes CISC instructions into RISC-like micro-ops internally — CISC at the interface, RISC in the core. RISC's performance-per-watt advantage is why ARM dominates mobile and has moved into laptops/servers.
 
 4. **What is CISC and RISC?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
@@ -8402,92 +7692,35 @@ Answer: `CISC` and `RISC` are the two design philosophies for a processor's inst
 
 2. **Intel 8085 ও Intel 8086 Microprocessor-এর সর্বোচ্চ ফিজিক্যাল মেমোরি ক্যাপাসিটি কত এবং কেন?** *[DESCO Sub-Assistant Engineer (CSE) 16.09.2022 compact it 697 (ET: DPI)]*
 
-Answer: (Answered in English, as required for IT topics.) The maximum physical memory a processor can address is fixed by the width of its `address bus`.
-   ```
-      Addressable memory = 2^(number of address lines) x 1 byte
-   ```
+Answer: (Answered in English, as required for IT topics.) Maximum physical memory a processor can address is fixed by its `address bus` width: `Addressable memory = 2^(address lines)` bytes.
 
-   Intel 8085
+   Intel 8085 — 16 address lines (A0-A15) -> 2^16 = 65,536 bytes = 64 KB.
+   - The 8085 is 8-bit, but its register pairs (BC, DE, HL) are 16 bits wide, so 16 bits is the natural address width, hence 16 address pins. The lower 8 lines are multiplexed with data (AD0-AD7), demultiplexed externally via the ALE signal.
+
+   Intel 8086 — 20 address lines (A0-A19) -> 2^20 = 1,048,576 bytes = 1 MB.
+   - 16-bit registers alone would give only 64 KB, too little for the software of the time, so Intel added `segmentation` to reach a 20-bit address from 16-bit registers:
    ```
-      Address bus = 16 lines (A0 - A15)
-
-      Maximum memory = 2^16 = 65,536 bytes = 64 KB
+      Physical address = Segment x 16 + Offset
+      e.g. CS=1000H, IP=2000H  ->  1000H*16 + 2000H = 12000H (20-bit)
    ```
-   - Why 16 lines: the 8085 is an 8-bit processor, and its register pairs (BC, DE, HL) are 16 bits wide. Since an address is held in a register pair, 16 bits is the natural address width, and the designers provided exactly that many pins.
-   - The lower 8 address lines are `multiplexed` with the data lines as AD0-AD7 to save pins, and are separated externally by a latch using the `ALE` signal.
+   - Four segment registers (CS, DS, SS, ES) give separate code/data/stack/extra segments, each up to 64 KB, within the 1 MB space.
 
-   Intel 8086
-   ```
-      Address bus = 20 lines (A0 - A19)
-
-      Maximum memory = 2^20 = 1,048,576 bytes = 1 MB
-   ```
-   - Why 20 lines and not 16: the 8086's registers are 16 bits, which would give only 64 KB — far too little for the software of the time. Intel therefore added the `segmentation` mechanism to reach a 20-bit address from 16-bit registers.
-   ```
-      Physical address = Segment register x 16 + Offset
-
-      Example :  CS = 1000H , IP = 2000H
-
-                 1000H x 16 = 10000H
-                 10000H + 2000H = 12000H       a 20-bit physical address
-   ```
-   - Multiplying by 16 is simply shifting the segment value left by four bits, which is what supplies the four extra address bits.
-   - Four segment registers exist — `CS, DS, SS, ES` — so the program has separate code, data, stack and extra segments, each up to 64 KB, within the 1 MB space.
-
-   Comparison
-
-   | Point | Intel 8085 | Intel 8086 |
+   | Point | 8085 | 8086 |
    |---|---|---|
    | Data bus | 8 bits | 16 bits |
    | Address bus | 16 lines | 20 lines |
-   | Maximum memory | `64 KB` | `1 MB` |
-   | Reason | 16-bit register pairs hold the address directly | Segmentation: segment x 16 + offset |
-   | Registers | 8-bit, paired to 16 | 16-bit |
-   | Segmentation | None | Yes, four segments |
-   | Instruction queue | None | 6 bytes |
+   | Max memory | 64 KB | 1 MB |
+   | Reason | Register pairs hold address directly | Segmentation: segment x16 + offset |
 
-   Wider processors, for comparison
-   ```
-      80286 : 24 address lines -> 2^24 = 16 MB
-      80386 : 32 address lines -> 2^32 = 4 GB
-      x86-64: 48 lines implemented -> 256 TB in practice
-   ```
+   For comparison: 80286 (24 lines) = 16 MB, 80386 (32 lines) = 4 GB, x86-64 (48 lines implemented) = 256 TB in practice.
 
-   - The rule to state: memory capacity is decided by the `address bus`, and word size by the `data bus`. The two are independent — the 8085 has an 8-bit data bus but a 16-bit address bus, and the 8088 has an 8-bit data bus with the 8086's full 20-bit address bus.
+   - Rule: memory capacity is set by the address bus, word size by the data bus — independently (the 8088 has an 8-bit data bus but the 8086's full 20-bit address bus).
 
 3. **What is the difference between 8-bit (8085) and 16-bit (8086) microprocessor?** *[PGCB Sub-Assistant Engineer (CSE) 30.09.2021 compact it 865-866 (ET: BUET)]*
 
-Answer: The 8085 is an 8-bit processor and the 8086 a 16-bit one. The number refers to the width of the data bus and the registers.
+Answer: The 8085 is an 8-bit processor and the 8086 a 16-bit one — the number refers to the width of the data bus and registers.
 
-   Intel 8085 (1976)
-   ```
-      Data bus    : 8 bits  (AD0-AD7, multiplexed with the low address byte)
-      Address bus : 16 bits (A0-A15)
-      Memory      : 2^16 = 64 KB
-      Registers   : 8-bit  (A, B, C, D, E, H, L), paired to form 16-bit addresses
-      Flags       : 5 (S, Z, AC, P, CY) in an 8-bit register
-      Clock       : 3 MHz
-      Instructions: 74
-      Pipelining  : none
-   ```
-
-   Intel 8086 (1978)
-   ```
-      Data bus    : 16 bits (AD0-AD15, multiplexed)
-      Address bus : 20 bits (A0-A19)
-      Memory      : 2^20 = 1 MB
-      Registers   : 16-bit (AX, BX, CX, DX, SI, DI, BP, SP)
-      Flags       : 9 used in a 16-bit register (6 status + 3 control)
-      Clock       : 5-10 MHz
-      Instructions: 117
-      Pipelining  : a 6-byte instruction QUEUE, filled by the BIU
-      Architecture: split into a Bus Interface Unit and an Execution Unit
-      Segmentation: CS, DS, SS, ES - physical address = segment x 16 + offset
-   ```
-
-   Difference
-
-   | Point | 8085 (8-bit) | 8086 (16-bit) |
+   | Point | 8085 (8-bit, 1976) | 8086 (16-bit, 1978) |
    |---|---|---|
    | Data bus | 8 bits | 16 bits |
    | Address bus | 16 lines | 20 lines |
@@ -8495,21 +7728,14 @@ Answer: The 8085 is an 8-bit processor and the 8086 a 16-bit one. The number ref
    | Register size | 8-bit, paired to 16 | 16-bit |
    | Internal architecture | Single unit | Split into BIU and EU |
    | Instruction queue | None | 6 bytes — allows pipelining |
-   | Pipelining | No | Yes |
    | Segmentation | No | Yes, four segment registers |
    | Flag register | 8-bit, 5 flags | 16-bit, 9 flags |
-   | Arithmetic | 8-bit only | 16-bit; also multiply and divide |
+   | Arithmetic | 8-bit only | 16-bit; also multiply/divide |
    | Instruction set | 74 instructions | 117 instructions |
-   | Addressing modes | 5 | 8 or more |
    | Clock speed | 3 MHz | 5-10 MHz |
-   | Multiprocessing | Not supported | Supported (minimum and maximum mode) |
-   | Speed | Slower | Much faster |
-   | Pins | 40 | 40 |
+   | Multiprocessing | Not supported | Supported (min/max mode) |
 
-   Why the 8086 is so much faster
-   - `Wider data path` — 16 bits per transfer instead of 8, so a 16-bit value takes one memory cycle rather than two.
-   - `The instruction queue` — the Bus Interface Unit fetches the next instructions while the Execution Unit is still working on the current one. The two overlap, so the bus is never idle. This is the first form of pipelining in the x86 line.
-   - `16-bit ALU` — arithmetic on 16-bit values is done directly, and multiply and divide exist as single instructions.
-   - `20-bit addressing` — sixteen times as much memory, which allowed far larger programs.
+   Why the 8086 is faster
+   - Wider 16-bit data path (fewer memory cycles), an instruction queue letting the BIU fetch ahead while the EU executes (early pipelining), a 16-bit ALU with hardware multiply/divide, and 20-bit addressing for 16x more memory.
 
-   - Historical note: the `8088` is internally identical to the 8086 but has an `8-bit external data bus`, which let IBM build the original PC using cheaper 8-bit support chips. Both run the same software.
+   - The `8088` is internally identical to the 8086 but has an 8-bit external data bus, letting IBM build the original PC with cheaper 8-bit support chips; both run the same software.

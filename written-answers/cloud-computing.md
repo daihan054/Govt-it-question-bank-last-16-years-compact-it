@@ -73,17 +73,14 @@ Answer:
    - Multi-tenancy is the architecture that makes SaaS economically viable. Without it a provider would need one full deployment per customer, and the cost per customer would never fall. Sharing one instance across thousands of tenants is what allows low subscription prices.
 
    Advantages of multi-tenancy
-   - Much lower cost per tenant, since infrastructure is shared.
-   - One codebase to maintain, so updates reach every tenant at once.
+   - Lower cost per tenant and one codebase to maintain, so updates reach everyone at once.
    - Efficient resource use — idle capacity of one tenant serves another.
-   - Easy onboarding of a new tenant, usually just a configuration record.
+   - Fast onboarding of a new tenant, usually just a configuration record.
 
    Disadvantages of multi-tenancy
    - Security risk — a bug in data isolation can leak one tenant's data to another.
    - Noisy neighbour problem — one heavy tenant can slow the others.
-   - Limited customisation, since all tenants share the same code.
-   - A single outage affects every tenant at once.
-   - Complex compliance when tenants are in different jurisdictions.
+   - Limited customisation and a single outage affects every tenant at once.
 
    (d) Database choice for a multi-vendor e-commerce application
 
@@ -93,9 +90,9 @@ Answer:
    | Separate database per vendor | Strongest isolation, easy per-vendor backup and restore, simple compliance | Expensive, hundreds of schemas to migrate, hard to run cross-vendor reports |
 
    - My choice: a single shared database with a `vendor_id` column on every table, plus row-level security enforced in the database itself.
-   - Reasons: an e-commerce marketplace expects a large and growing number of vendors, most of them small. Per-vendor databases would not scale operationally — every schema change would need to run hundreds of times. Cross-vendor features such as global search, marketplace-wide reporting and shared product catalogues are natural in one database and painful across many.
-   - The isolation risk is handled by enforcing `vendor_id` filtering at the data-access layer and with database row-level security policies, so a forgotten filter in application code cannot expose data.
-   - Exception: a very large enterprise vendor with strict regulatory requirements can be moved to its own database — a hybrid approach that keeps the shared model for the majority.
+   - Reason: a marketplace expects many, mostly small, vendors — per-vendor databases would not scale operationally, while cross-vendor features (global search, marketplace-wide reporting) are natural in one database.
+   - The isolation risk is handled by enforcing `vendor_id` filtering at the data-access layer plus database row-level security, so a forgotten filter cannot expose data.
+   - Exception: a very large enterprise vendor with strict regulatory needs can be moved to its own database.
 
 4. **6.11 A startup company wants to launch a new web application. They do not want to manage any underlying hardware, operating systems, or even the runtime environment; they only want to focus on writing and deploying their code. Based on your understanding of Cloud Service Models, which model (IaaS, PaaS, or SaaS) is most appropriate for them? Provide two real-world examples of platforms that provide this specific type of service.** *[Bangladesh Bank Senior Officer (IT), Grade-9 (Job ID-25104) 2024 (ET: N/A)]*
 
@@ -336,16 +333,14 @@ A submarine cable connects Bangladesh to an international data center. At the ca
    | Managed by | Hypervisor (VMware ESXi, KVM, Hyper-V) | Container engine (Docker, containerd) |
 
    Why VMs win for this specific case
-   - Security isolation — the station serves SEVERAL DIFFERENT ORGANIZATIONS. Each VM is fully isolated, so a compromise of the Web VM cannot reach the Database VM. With containers, a kernel-level exploit can escape to every other container on the host.
-   - Critical national infrastructure — DNS and Network Management for international connectivity must not fail together. Full OS isolation limits the blast radius.
-   - Different OS requirements — the database or the network management system may need a specific OS version or kernel module that containers cannot provide, since they must share the host kernel.
-   - Regulatory and audit needs — per-organization VMs give clean boundaries for compliance and per-tenant auditing.
-   - Stable, long-running services — DNS, database and monitoring are not deployed dozens of times a day, so the container advantage of fast start-up is not valuable here.
+   - Security isolation — the station serves SEVERAL DIFFERENT ORGANIZATIONS. A compromise of the Web VM cannot reach the Database VM; with containers, a kernel exploit can escape to every other container on the host.
+   - Critical infrastructure — DNS and Network Management must not fail together, and full OS isolation limits the blast radius.
+   - Different OS/kernel needs per service, which containers cannot satisfy since they share the host kernel.
+   - Regulatory/audit needs — per-organization VMs give clean compliance boundaries, and these are stable, long-running services, so the container's fast-startup advantage is not valuable here.
 
-   When containers would be the better choice instead
-   - If the five services all belonged to ONE organization, needed frequent redeployment, and had to be packed densely on limited hardware, containers would win on efficiency — 4 containers use far less RAM and CPU than 4 VMs and start in seconds.
-
-   - A practical middle path used in real data centres: run containers INSIDE VMs. Each organization gets its own VM boundary, and inside that VM its services run as containers for easy deployment.
+   When containers would win instead
+   - If all five services belonged to ONE organization needing frequent redeployment on limited hardware, containers would win on efficiency.
+   - Practical middle path used in real data centres: run containers INSIDE VMs — each organization keeps its VM boundary, with its services containerised inside for easy deployment.
 
 2. **What is Virtualization? Write down the benefits of Virtualization. Write down the top 5 virtual platform software.** *[Sonali & Janata Bank Officer (IT) 14.10.2023 compact it 529 (ET: MIST)]*
 
@@ -975,21 +970,16 @@ Answer:
 Answer: High availability means the service keeps running even when a component fails. For DNS at a cable landing station, redundancy is needed at BOTH the server layer and the network layer — one alone is not enough.
 
    Where VM / container technology helps
-   - Fast failover — DNS runs as a VM or container on two or more physical hosts. If one host fails, a clustered hypervisor (VMware HA, Proxmox HA) restarts the VM on the surviving host automatically within seconds.
-   - Live migration — a running VM moves to another host before planned maintenance, so patching causes zero downtime.
-   - Identical replicas — a container image guarantees every DNS instance is configured exactly the same, removing configuration drift as a failure cause.
-   - Rapid scaling — extra DNS containers start in seconds during a query flood or a DDoS attempt.
-   - Snapshot and rollback — a bad configuration change is undone instantly by reverting to a snapshot.
-   - Isolation — DNS is separated from web and database workloads, so a fault in one does not take down the others.
+   - Fast failover — DNS runs as a VM/container on two or more hosts; a clustered hypervisor (VMware HA, Proxmox HA) restarts it on a surviving host within seconds.
+   - Live migration — a running VM moves off a host before planned maintenance, so patching causes zero downtime.
+   - Identical replicas (container images) remove configuration drift; extra replicas can scale up in seconds during a query flood.
+   - Snapshot/rollback undoes a bad config instantly, and isolating DNS from web/database workloads stops one fault taking down the others.
 
    Where NETWORK redundancy is still required
-   - VM technology cannot help if the network path fails. If the single switch, single NIC or single upstream link dies, both healthy DNS servers become unreachable.
-   - Dual NICs with bonding / LACP on each server, connected to two different switches.
-   - Redundant switches in a stacked or MLAG pair, so one switch can fail.
-   - VRRP / HSRP to give a floating virtual IP that moves to the surviving gateway automatically.
-   - Anycast DNS — the same IP is advertised from multiple sites via BGP, so queries automatically route to the nearest live server. This is how real resilient DNS is built.
-   - Diverse upstream links — two different submarine cable paths or an alternative terrestrial route, so a single cable cut does not isolate the station.
-   - Redundant power — dual PSUs on separate feeds, UPS and generator.
+   - VM technology cannot help if the network path itself fails — a single switch, NIC or upstream link dying makes both DNS hosts unreachable.
+   - Needed: dual NICs (bonding/LACP) to two different switches, redundant switches (MLAG), VRRP/HSRP for a floating gateway IP.
+   - Anycast DNS — the same IP advertised from multiple sites via BGP, routing queries to the nearest live server (how real resilient DNS is built).
+   - Diverse upstream/submarine cable paths and redundant power (dual PSUs, UPS, generator).
 
    ```mermaid
    flowchart TD
@@ -1013,20 +1003,15 @@ Answer: High availability means the service keeps running even when a component 
 Answer: Assessment and audit reports turn the cloud's invisible configuration into a written, checkable record. They are the main evidence that security controls actually exist and work.
 
    How they help DETECT vulnerabilities
-   - Configuration assessment — automated scanners (AWS Security Hub, Azure Defender for Cloud, CSPM tools) compare live settings against a benchmark such as CIS, and report misconfigurations like a public S3 bucket, an open port 22 or an unencrypted database.
-   - Vulnerability scanning reports — list unpatched OS packages, outdated libraries and known CVEs in VM images and container images, ranked by severity.
-   - IAM and access review — reveal over-privileged accounts, unused keys, missing MFA and accounts that violate the least-privilege principle.
-   - Penetration test reports — show whether a vulnerability is actually exploitable, not just theoretically present.
-   - Log and configuration drift analysis — audit trails such as AWS CloudTrail show who changed what and when, exposing unauthorised changes.
-   - Prioritisation — a good report ranks findings by risk, so limited effort goes to the issues that matter most.
+   - Configuration assessment — automated scanners (AWS Security Hub, Azure Defender, CSPM tools) compare live settings against a benchmark (CIS) and flag misconfigurations like a public S3 bucket or open port.
+   - Vulnerability scanning reports — list unpatched packages and known CVEs in VM/container images, ranked by severity.
+   - IAM/access review reveals over-privileged accounts, unused keys and missing MFA; penetration tests show whether a flaw is actually exploitable.
+   - Log/drift analysis (e.g. AWS CloudTrail) exposes unauthorised changes, and a good report prioritises findings by risk.
 
    How they ensure COMPLIANCE
-   - Mapping to standards — findings are mapped to controls in ISO 27001, PCI DSS, GDPR, HIPAA or the national data-protection rules, so gaps are visible per requirement.
-   - Evidence for regulators — an audit report is the documentary proof an auditor asks for; verbal assurance is not accepted.
-   - Continuous compliance — automated CSPM tools re-check continuously instead of once a year, so drift is caught within hours.
-   - Shared-responsibility clarity — the report distinguishes what the cloud provider secures from what the customer must secure, which is a common source of gaps.
-   - Remediation tracking — each finding gets an owner, a deadline and a closure status, turning the report into an action plan rather than a document.
-   - Management reporting — trends over time show whether the security posture is improving or degrading.
+   - Mapping findings to standards (ISO 27001, PCI DSS, GDPR, HIPAA) makes gaps visible per requirement, and the report is the documentary evidence regulators require.
+   - Automated CSPM tools re-check continuously instead of once a year, catching drift within hours.
+   - The report clarifies shared responsibility (what the provider secures vs. the customer), and remediation tracking gives each finding an owner, deadline and closure status — turning it into an action plan, with trends showing whether posture is improving.
 
    Typical cycle
    ```mermaid

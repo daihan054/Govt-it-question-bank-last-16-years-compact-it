@@ -1127,9 +1127,7 @@ Answer: `Structured (procedural) programming` organises a program around `functi
 
     Advantages of OOP over structured programming
 
-    1. `Data security through encapsulation`
-    - In structured programming, global data is accessible to every function, so any function can corrupt it and finding the culprit is hard.
-    - In OOP the data is `private` inside the object, reachable only through methods that validate.
+    1. `Data security through encapsulation` — data is `private`, reachable only through validating methods, unlike structured code where globals are open to corruption.
     ```java
     class Account {
         private double balance;                 // no outside code can touch it
@@ -1137,26 +1135,19 @@ Answer: `Structured (procedural) programming` organises a program around `functi
     }
     ```
 
-    2. `Code reuse through inheritance`
-    - A subclass inherits everything from its parent, so common code is written once. Structured programming can only reuse by copying functions or calling them, with no automatic sharing of related structure.
+    2. `Code reuse through inheritance` — subclasses reuse parent code automatically; procedural code can only reuse via copy-paste or function calls.
 
-    3. `Easier maintenance`
-    - A change is confined to `one class`. In a large procedural program, changing a data structure means finding and editing every function that touches it.
+    3. `Easier maintenance & modularity` — each class is a self-contained unit, so a change stays confined to it, and several developers can work on separate classes with little interference.
 
-    4. `Modularity`
-    - Each class is a self-contained unit with a clear boundary. Several developers can work on different classes at once with little interference.
+    4. `Models the real world naturally` — `Account`, `Customer`, `Loan` map directly to real entities, instead of being translated into procedural steps.
 
-    5. `Models the real world naturally`
-    - An `Account`, a `Customer` and a `Loan` are real things, so the program structure matches the problem. Procedural design has to translate the problem into steps first.
-
-    6. `Extensibility — the open-closed principle`
-    - A new subclass can be added without touching existing code. In procedural code, adding a new case usually means editing every `switch` statement that enumerates the cases.
+    5. `Extensibility — the open-closed principle` — a new subclass can be added without touching existing code, unlike a `switch` that must be edited for every new case.
     ```java
        for (Shape s : shapes) s.area();     // works for a NEW Shape subclass
                                             // with no change to this loop
     ```
 
-    7. `Polymorphism removes long conditional chains`
+    6. `Polymorphism removes long conditional chains`
     ```
        Procedural : if (type == CIRCLE) area = ... ;
                     else if (type == RECT) area = ... ;
@@ -1165,14 +1156,9 @@ Answer: `Structured (procedural) programming` organises a program around `functi
        OOP        : shape.area();           each object knows its own formula
     ```
 
-    8. `Abstraction`
-    - The user of a class works with `what` it does, not `how`. The implementation can be replaced entirely without breaking callers.
+    7. `Abstraction` — the user works with `what` a class does, not `how`; the implementation can change without breaking callers.
 
-    9. `Better for large programs`
-    - Procedural programming works well up to a few thousand lines. Beyond that the web of functions and shared data becomes unmanageable, which is precisely the problem OOP was invented to solve.
-
-    10. `Supports design patterns and frameworks`
-    - Reusable solutions such as Factory, Observer and Strategy, and every modern framework — Spring, Django, .NET — rest on object-oriented mechanisms.
+    8. `Better for large programs, and supports design patterns/frameworks` — procedural code becomes unmanageable well beyond a few thousand lines; every modern framework (Spring, Django, .NET) and pattern (Factory, Observer, Strategy) rests on OOP mechanisms.
 
     Comparison
 
@@ -12030,7 +12016,7 @@ Answer: (Answered in English, as required for IT topics.) What a friend function
    ```
 
    Advantages
-   - `Access to private data when a member function cannot be used.` The classic case is overloading `<<`, where the left operand must be an `ostream`, so the function cannot be a member of the user's class.
+   - `Access to private data when a member function cannot be used` — e.g. overloading `<<`, where the left operand must be an `ostream`, so the function cannot be a member of the user's class.
    ```cpp
       friend ostream& operator<<(ostream &out, const Complex &c) {
           out << c.real << " + " << c.imag << "i";
@@ -12038,21 +12024,16 @@ Answer: (Answered in English, as required for IT topics.) What a friend function
       }
       // now : cout << myComplex;   works directly
    ```
-   - `Works with two different classes at once.` A function that needs the private members of both a `Matrix` and a `Vector` can be a friend of both — no member function of either could do that.
-   - `Natural syntax for symmetric operations.` `add(a, b)` reads better than `a.add(b)` for a mathematical operation where neither operand is privileged.
-   - `Allows implicit conversion on the LEFT operand.` `2 * myComplex` works with a friend `operator*`, but not with a member one, because a member's left operand must already be of the class type.
-   - `Can improve efficiency` by avoiding accessor calls in performance-critical code.
-   - `Useful for testing`, where a test class may be made a friend to inspect internal state.
+   - `Works with two different classes at once` — a function needing private members of both a `Matrix` and a `Vector` can be a friend of both.
+   - `Natural syntax for symmetric operations` — `add(a, b)` reads better than `a.add(b)` when neither operand is privileged.
+   - `Allows implicit conversion on the LEFT operand` — `2 * myComplex` works with a friend `operator*`, but not with a member one.
+   - Can also `improve efficiency` (no accessor-call overhead) and is `useful for testing` internal state.
 
    Disadvantages
-   - `It breaks encapsulation.` A friend is a deliberate hole in the class's wall. The class no longer controls all access to its own data, which is the whole point of making members private.
-   - `It increases coupling.` The friend function depends on the class's internal representation, so changing that representation breaks the friend as well as the class.
-   - `Harder to maintain.` Reading a class no longer tells you everything that can modify it; the friends must be found and read too.
-   - `Not inherited.` A friend of a base class is `not` a friend of a derived class, which surprises people.
-   - `Not reciprocal.` If A declares B a friend, B is not automatically a friend of A.
-   - `Not transitive.` A friend of a friend is not a friend.
-   - `Overuse turns a class into a struct.` If several functions need private access, the design is probably wrong.
-   - `No equivalent in Java or C#`, so code using friends does not translate.
+   - `Breaks encapsulation` — a deliberate hole in the class's private wall, and `increases coupling`, since the friend depends on the class's internal representation.
+   - `Harder to maintain` — a reader must find and check every friend to know what can modify a class.
+   - `Not inherited, not reciprocal, not transitive` — a friend of a base class isn't a friend of its derived class, friendship isn't mutual, and a friend of a friend is not a friend.
+   - `Overuse turns a class into a struct`, and there is `no equivalent in Java or C#`.
 
    Properties
    ```
@@ -12064,7 +12045,7 @@ Answer: (Answered in English, as required for IT topics.) What a friend function
       A whole class may be a friend :  friend class Manager;
    ```
 
-   - The guideline: use a friend only where a member function genuinely `cannot` do the job — chiefly for `operator<<` and `operator>>`, and for operations spanning two classes. Everywhere else, a public accessor is the better answer.
+   - Use a friend only where a member function genuinely `cannot` do the job — chiefly `operator<<`/`operator>>` and operations spanning two classes.
 
 3. **(খ) Friend Function কী? উহার সুবিধা ও অসুবিধা গুলো লিখুন?** *[16th NTRCA Lecturer (ICT) (ICT): 2019 compact it 1086 (ET: N/A)]*
 

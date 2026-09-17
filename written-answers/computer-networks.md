@@ -2437,14 +2437,7 @@ Answer: The OSI (Open Systems Interconnection) model, made by ISO in 1984, split
        end
    ```
 
-   Layer functions in short
-   - Physical – defines voltage, pin layout, cable type, data rate and topology. Devices: hub, repeater, cable, NIC connector.
-   - Data Link – builds frames, adds source and destination MAC addresses, detects errors with CRC, and controls access to the medium. Sub-layers: LLC and MAC. Devices: switch, bridge.
-   - Network – gives every host a logical IP address and chooses the best path through routers. Also handles fragmentation.
-   - Transport – breaks data into segments, numbers them, and rebuilds them in order. TCP gives reliability and flow control; UDP gives speed. Port numbers live here.
-   - Session – opens, maintains and closes a conversation; adds checkpoints so a long transfer can resume.
-   - Presentation – the "translator": character-set conversion, encryption and compression.
-   - Application – the layer the user actually touches through a browser, mail client or file transfer program.
+   Data Link has sub-layers LLC and MAC (devices: switch, bridge); Physical devices: hub, repeater, NIC. Port numbers live at Transport; TCP gives reliability/flow control, UDP gives speed.
 
    Memory aid (Layer 7 down to 1): All People Seem To Need Data Processing.
 
@@ -4968,24 +4961,9 @@ Roles of the three services
    - `DNS is the most likely cause`, because a failure limited to one domain while every other site works is the classic signature of a name-resolution or a certificate problem for that domain. DHCP can be ruled out immediately — if DHCP were broken, nothing at all would work.
 
    Possible causes, grouped
-
-   DNS related
-   - The authoritative DNS server for bd.gov is down or unreachable.
-   - The A record for BSCPL.bd.gov is missing, wrong or was mistyped after a change.
-   - The DNS zone or the domain registration has expired.
-   - Stale or poisoned entries in the local resolver cache still point to an old, dead IP.
-   - A split-horizon DNS view returns an internal address that outside users cannot reach.
-   - The TTL was long, so an old record is still cached widely after a genuine IP change.
-
-   HTTPS / certificate related
-   - The TLS certificate has expired, has the wrong common name, or is missing its intermediate chain — the browser then blocks the site.
-   - Only TLS 1.0/1.1 is supported, which modern browsers refuse.
-   - Port 443 is closed on the server or blocked by a firewall.
-
-   Server or network related
-   - The web server process is down, or the server is overloaded.
-   - A firewall or ACL is dropping traffic to that specific IP.
-   - Asymmetric routing or a black-holed route to that prefix at one of the multiple ISPs.
+   - `DNS`: authoritative server for bd.gov down/unreachable; A record missing/wrong/mistyped; zone or domain registration expired; stale/poisoned resolver cache pointing to an old IP; split-horizon DNS returning an internal address to outside users; long TTL keeping an old record cached after a genuine IP change.
+   - `HTTPS/certificate`: TLS cert expired, wrong common name, or missing intermediate chain (browser blocks the site); only old TLS 1.0/1.1 supported; port 443 closed/firewalled.
+   - `Server/network`: web server down or overloaded; firewall/ACL dropping traffic to that IP; asymmetric routing or a black-holed route at one of the ISPs.
 
    Troubleshooting steps, in order
 
@@ -4996,40 +4974,14 @@ Roles of the three services
    ```
    If no address is returned, the fault is DNS. If an address is returned, move to step 3.
 
-   - Step 2 — test with a different resolver
-   ```
-   nslookup BSCPL.bd.gov 8.8.8.8
-   ```
-   If Google's resolver answers but the local one does not, the local DNS server or its cache is at fault. Flush it with `ipconfig /flushdns` (Windows) or `systemd-resolve --flush-caches` (Linux).
+   - Step 2 — test with a different resolver: `nslookup BSCPL.bd.gov 8.8.8.8`. If Google's resolver answers but the local one doesn't, the local DNS/cache is at fault — flush with `ipconfig /flushdns` or `systemd-resolve --flush-caches`.
+   - Step 3 — test reachability of the resolved IP: `ping`, `tracert`, `telnet <IP> 443` — separates "unreachable host" from "service refused".
+   - Step 4 — bypass DNS: add a temporary hosts-file entry mapping the correct IP. If the site then loads, DNS is confirmed as the problem.
+   - Step 5 — check the certificate: `openssl s_client -connect BSCPL.bd.gov:443 -servername BSCPL.bd.gov` — check expiry, common name, chain.
+   - Step 6 — check from outside (external checker or mobile connection): works outside but not inside → problem is local (firewall, internal DNS view, proxy).
+   - Step 7 — check the server itself: confirm the web service is running, review logs, verify firewall allows 443.
 
-   - Step 3 — test reachability of the resolved IP
-   ```
-   ping <resolved IP>
-   tracert <resolved IP>
-   telnet <resolved IP> 443
-   ```
-   This separates "name resolves but host unreachable" from "host reachable but service refused".
-
-   - Step 4 — bypass DNS entirely
-   Add a temporary entry in the hosts file mapping the correct IP to the name. If the site then loads, DNS is definitively the problem.
-
-   - Step 5 — check the certificate
-   ```
-   openssl s_client -connect BSCPL.bd.gov:443 -servername BSCPL.bd.gov
-   ```
-   Look at the expiry date, the common name and the chain.
-
-   - Step 6 — check from outside
-   Use an external checking service or a mobile connection. If it works from outside but not inside, the problem is local (firewall, internal DNS view, proxy).
-
-   - Step 7 — check the server itself
-   Confirm the web service is running, review its logs, and verify the firewall allows 443.
-
-   Preventive measures
-   - Two authoritative DNS servers on separate networks.
-   - Monitoring and automatic alerts for certificate expiry and DNS record changes.
-   - Sensible TTL values — lower them before a planned IP change.
-   - DNSSEC to prevent cache poisoning, and regular external availability monitoring.
+   Preventive measures: two authoritative DNS servers on separate networks; monitoring/alerts for certificate expiry and DNS record changes; sensible TTLs (lowered before a planned IP change); DNSSEC against cache poisoning; regular external availability monitoring.
 
 2. **Write down the DNS function.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
@@ -5065,16 +5017,11 @@ Common record types
 Answer:
 
    Why DNS uses UDP rather than TCP
-   - Speed — a DNS query and its reply are a single small exchange. TCP would need a three-way handshake first, roughly tripling the delay before any answer arrives.
-   - Low overhead — a UDP header is 8 bytes against TCP's 20, and there is no connection state to set up or tear down.
-   - Small messages — a typical query and response fit inside 512 bytes, so the segmentation and reliability machinery of TCP is not needed.
-   - Server scalability — a busy resolver handles millions of queries; keeping a TCP connection open for each would exhaust memory and file descriptors. UDP is stateless, so the server just answers and forgets.
-   - Retry is cheap — if a UDP reply is lost, the resolver simply asks again, or asks a different server. That is simpler than TCP's retransmission logic for a one-shot request.
+   - Speed/low overhead — a query+reply is one small exchange; TCP's 3-way handshake would roughly triple the delay, and UDP's header (8 bytes vs TCP's 20) needs no connection setup/teardown.
+   - Small messages fit inside 512 bytes, so TCP's segmentation/reliability machinery isn't needed; a lost reply is simply retried (cheaper than TCP's retransmission logic for a one-shot request).
+   - Server scalability — UDP is stateless, so a busy resolver just answers and forgets instead of holding millions of open TCP connections.
 
-   When DNS does use TCP
-   - Zone transfers (AXFR/IXFR) between primary and secondary servers, which are large and must be reliable.
-   - Any response larger than 512 bytes: the server sets the TC (truncated) flag and the resolver retries over TCP. DNSSEC and IPv6 records often exceed this.
-   - Modern encrypted variants: DoT (DNS over TLS, port 853) and DoH (DNS over HTTPS, port 443).
+   When DNS does use TCP: zone transfers (AXFR/IXFR, must be reliable); any response over 512 bytes (server sets the TC flag, resolver retries over TCP — common with DNSSEC/IPv6); and encrypted variants DoT/DoH.
 
    Sequence of events for www.companybd.com
 
@@ -5600,10 +5547,8 @@ Assumption: The first 5 packets (2500\text{ bytes}) are sent successfully. Packe
    Answer:
 
    Setting up the numbering
-   - Total data = 4000 bytes, packet size = 500 bytes, so there are 4000 ÷ 500 = `8 packets`.
-   - The first packet's sequence number is 3001. In TCP the sequence number is the number of the FIRST byte in that segment, so each following packet's sequence number is 500 higher.
-   - The ACK number is the number of the NEXT byte the server expects, so ACK = last byte received + 1. This is what "cumulative ACK" means.
-   - The server sends only acknowledgements and no data of its own, so the server's own sequence number never advances. It is written as `y` below (the server's ISN + 1, fixed for the whole exchange).
+   - Total data = 4000 bytes ÷ 500 = `8 packets`. Sequence number = first byte of that segment, so each packet's seq is 500 higher than the last (starting at 3001).
+   - ACK = last byte received + 1 (cumulative ACK = "next byte I expect"). The server only ACKs, never sends data, so its own sequence number (`y`) never advances.
 
 Completed table
 
@@ -5618,15 +5563,9 @@ Completed table
 | 7 | 6001 (bytes 6001–6500) — `LOST` | — | no ACK sent |
 | 8 | 6501 (bytes 6501–7000) — arrives | y | `5501` (duplicate ACK) |
 
-   Explanation of the key rows
-   - Rows 1–5: 2500 bytes arrive in order. Each ACK simply advances by 500, ending at 5501, meaning "I have everything up to byte 5500, send me 5501 next."
-   - Rows 6 and 7: these segments never arrive, so the server generates nothing for them.
-   - Row 8: packet 8 arrives, but out of order. Because ACKs are cumulative, the server cannot acknowledge byte 6501 while 5501–6500 is missing. It repeats `ACK 5501`, which is a `duplicate ACK`. It stores packet 8 in its out-of-order buffer.
+   Key rows: rows 1-5 arrive in order, each ACK advancing by 500 to 5501. Rows 6-7 never arrive, so no ACK. Row 8 arrives out of order — since ACK is cumulative and 5501-6500 is missing, the server repeats `ACK 5501` (`duplicate ACK`) and buffers packet 8.
 
-   What happens next
-   - Three duplicate ACKs for 5501 trigger `fast retransmit` at the client, which resends packet 6 (seq 5501) without waiting for the retransmission timer.
-   - Once 5501–6000 arrives, the server can acknowledge only up to 6001, because 6001–6500 is still missing, so it sends ACK 6001.
-   - After packet 7 (seq 6001) is retransmitted and arrives, the server has bytes 3001–7000 complete, including the buffered packet 8, and sends `ACK 7001`.
+   What happens next: three duplicate ACKs trigger `fast retransmit` — client resends packet 6 (seq 5501); server can now ACK up to 6001 (6001-6500 still missing). After packet 7 is retransmitted, the server has bytes 3001-7000 complete (including buffered packet 8) and sends `ACK 7001`.
 
 | Retransmission | Client sends | Server ACK |
 |---|---|---|
@@ -5972,35 +5911,19 @@ Answer: The primary function of TCP is to provide reliable, ordered, error-check
 Answer:
 
    (a) Purpose of routers
-   - To connect different networks and forward packets between them, using the destination IP address and a routing table with longest prefix match.
-   - To determine the best path among several possible routes, using static entries or dynamic protocols such as RIP, OSPF, EIGRP and BGP.
-   - To separate broadcast domains — a router does not forward broadcasts, which stops a broadcast storm in one LAN affecting others.
-   - To perform NAT, translating private addresses to a public one so many hosts share one public IP.
-   - To act as the default gateway for hosts, and to provide DHCP service.
-   - To filter traffic with access control lists, and often to provide firewall and VPN functions.
-   - To fragment packets that exceed the next link's MTU and to decrement the TTL, which kills looping packets.
-   - To interconnect different media and technologies — Ethernet on one side, a serial or fibre WAN link on the other.
+   - Connect different networks and forward packets between them by destination IP, using a routing table (longest prefix match) — best path chosen via static entries or dynamic protocols (RIP, OSPF, EIGRP, BGP).
+   - Separate broadcast domains (a router doesn't forward broadcasts), act as the default gateway/DHCP server, perform NAT so many hosts share one public IP, filter traffic via ACLs (often firewall/VPN too).
+   - Fragment packets exceeding the next link's MTU, decrement TTL (kills loops), and interconnect different media (e.g. Ethernet to a WAN link).
 
    (b) How congestion control works in TCP
    - TCP has no direct signal from the network, so it infers congestion from `packet loss` and adjusts its sending rate. It keeps a congestion window (cwnd) alongside the receiver's advertised window, and sends the minimum of the two.
 
    The four phases
 
-   - 1. Slow start
-     - cwnd begins at 1 MSS and doubles every round-trip time (it increases by 1 MSS for every ACK received), so growth is exponential.
-     - It continues until cwnd reaches the slow-start threshold (ssthresh) or a loss occurs.
-     - Despite the name, this is the fastest-growing phase; it is "slow" only because it starts from 1.
-
-   - 2. Congestion avoidance
-     - Once cwnd exceeds ssthresh, growth becomes linear: cwnd increases by about 1 MSS per round-trip time.
-     - This probes carefully for extra capacity instead of doubling into congestion.
-
-   - 3. Fast retransmit
-     - Three duplicate ACKs indicate one segment was lost while later segments arrived. TCP retransmits it immediately, without waiting for the timeout.
-
-   - 4. Fast recovery
-     - After a fast retransmit, ssthresh is halved and cwnd is set to the new ssthresh, so sending continues at a reduced rate rather than collapsing to 1 MSS.
-     - A full timeout is treated as much more serious: ssthresh is halved, cwnd drops to 1 MSS, and slow start begins again.
+   - 1. Slow start — cwnd starts at 1 MSS and doubles every RTT (exponential) until it reaches ssthresh or a loss occurs.
+   - 2. Congestion avoidance — once cwnd > ssthresh, growth becomes linear (~1 MSS per RTT), probing carefully instead of doubling.
+   - 3. Fast retransmit — three duplicate ACKs mean one segment was lost; it's resent immediately without waiting for timeout.
+   - 4. Fast recovery — ssthresh is halved and cwnd set to it, so sending continues at reduced rate (not collapsing to 1 MSS). A full timeout is treated as more serious: ssthresh halved, cwnd drops to 1 MSS, slow start restarts.
 
    ```
    cwnd
@@ -6057,14 +5980,13 @@ Answer: TCP makes an unreliable IP network reliable through the following mechan
    - Every byte in the stream is numbered. The receiver can therefore place segments in the correct order no matter what order they arrive in, and can detect a gap immediately.
 
    2. Acknowledgements
-   - The receiver returns an ACK carrying the number of the next byte it expects. ACKs are cumulative, so one ACK confirms everything up to that point. Delayed and duplicate ACKs give the sender extra information about what is missing.
+   - The receiver returns a cumulative ACK carrying the number of the next byte expected; duplicate ACKs give the sender extra information about what is missing.
 
    3. Retransmission
-   - If an ACK does not arrive before the retransmission timer expires, the segment is sent again. The timer is derived from a smoothed estimate of the round-trip time, so it adapts to network conditions.
-   - `Fast retransmit`: three duplicate ACKs are taken as evidence of a single lost segment, and it is resent at once without waiting for the timer.
+   - If an ACK doesn't arrive before the (RTT-derived) retransmission timer expires, the segment is resent. `Fast retransmit`: three duplicate ACKs are treated as evidence of a lost segment and it's resent at once.
 
    4. Checksum
-   - A 16-bit checksum covers the header, the data and a pseudo-header containing the IP addresses. A corrupted segment is discarded and, being unacknowledged, is retransmitted. This also detects misdelivered segments.
+   - A 16-bit checksum over header + data + pseudo-header detects corruption; a corrupted/unacknowledged segment is retransmitted.
 
    5. Duplicate detection
    - Sequence numbers let the receiver recognise and discard a segment it has already accepted, so a spurious retransmission causes no harm.
@@ -6431,43 +6353,28 @@ Answer: Transmission media are divided into guided (wired) and unguided (wireles
 
    GUIDED MEDIA
 
-   1. Twisted pair (UTP and STP)
-   - Pairs of insulated copper wires twisted together; the twisting cancels external noise and reduces crosstalk.
-   - Categories: Cat5e (1 Gbps), Cat6 (10 Gbps to 55 m), Cat6a (10 Gbps to 100 m). Maximum run 100 m, RJ45 connector.
-   - Advantages: cheapest, easy to install and terminate, flexible, lightweight, universally supported, and adequate for almost all desk connections.
-   - Disadvantages: limited to 100 m, susceptible to EMI and crosstalk (especially UTP), lower bandwidth than fibre, and can be tapped for eavesdropping.
+   1. Twisted pair (UTP/STP) — insulated copper pairs twisted to cancel noise/crosstalk. Cat5e (1 Gbps), Cat6 (10 Gbps/55m), Cat6a (10 Gbps/100m); max run 100m, RJ45.
+   - Advantages: cheapest, easy to install, flexible, universally supported. Disadvantages: limited to 100m, susceptible to EMI/crosstalk, lower bandwidth than fibre, tappable.
 
-   2. Coaxial cable
-   - A central copper conductor, insulation, a braided metal shield and an outer jacket. The shield gives good noise immunity.
-   - Types: thinnet 10BASE2 (185 m) and thicknet 10BASE5 (500 m); also used for cable TV and cable internet.
-   - Advantages: better noise immunity and longer runs than twisted pair, higher bandwidth than early twisted pair, still widely used for CATV and HFC broadband.
-   - Disadvantages: bulky and inflexible, more expensive than UTP, harder to install, and obsolete for LANs.
+   2. Coaxial cable — copper core + insulation + braided shield + jacket; shield gives good noise immunity. Thinnet 10BASE2 (185m), thicknet 10BASE5 (500m); used for CATV/cable internet.
+   - Advantages: better noise immunity & longer runs than twisted pair. Disadvantages: bulky, costlier than UTP, harder to install, obsolete for LANs.
 
-   3. Optical fibre
-   - A glass or plastic core carrying light by total internal reflection, surrounded by cladding and a protective jacket.
-   - Single-mode (small core, laser source, tens of kilometres) and multimode (larger core, LED or VCSEL source, hundreds of metres).
-   - Advantages: by far the highest bandwidth (terabits per fibre with WDM), extremely low attenuation so runs of kilometres are routine, complete immunity to EMI and RFI, no crosstalk, very hard to tap undetected, light and thin, no electrical hazard.
-   - Disadvantages: expensive cable and equipment, fragile — it breaks if bent too sharply, splicing and termination need skilled technicians and costly tools, and it cannot carry power.
+   3. Optical fibre — glass/plastic core carrying light by total internal reflection. Single-mode (laser, tens of km) vs multimode (LED/VCSEL, hundreds of m).
+   - Advantages: highest bandwidth (Tbps with WDM), very low attenuation, immune to EMI/RFI, hard to tap. Disadvantages: expensive, fragile, needs skilled splicing, carries no power.
 
    UNGUIDED MEDIA
 
-   4. Radio waves (3 kHz – 1 GHz)
-   - Omnidirectional, pass through walls, used for Wi-Fi, Bluetooth, AM/FM radio and mobile networks.
-   - Advantages: mobility, no cabling cost, easy to deploy, covers difficult areas.
-   - Disadvantages: shared bandwidth, interference, weaker security, and range limited by obstacles.
+   4. Radio waves (3 kHz-1 GHz) — omnidirectional, passes through walls; Wi-Fi, Bluetooth, mobile networks.
+   - Advantages: mobility, no cabling. Disadvantages: shared bandwidth, interference, weaker security.
 
-   5. Microwave (1–300 GHz)
-   - Highly directional and line-of-sight, used for point-to-point links and satellite uplinks.
-   - Advantages: high bandwidth over long distances without laying cable, useful across rivers and mountains.
-   - Disadvantages: needs clear line of sight, affected by rain and atmospheric conditions, needs licences and tall towers.
+   5. Microwave (1-300 GHz) — directional, line-of-sight; point-to-point links, satellite uplinks.
+   - Advantages: high bandwidth over long distance without cabling. Disadvantages: needs clear LOS, affected by rain, needs licence/towers.
 
-   6. Infrared
-   - Short range and line of sight, blocked by walls, used for remote controls and some device-to-device links.
-   - Advantages: cheap, secure because it cannot leave the room, no licence needed. Disadvantages: very short range, no obstacle penetration, disturbed by sunlight.
+   6. Infrared — short range, line-of-sight, blocked by walls; remote controls, device links.
+   - Advantages: cheap, secure (can't leave room), no licence. Disadvantages: very short range, disturbed by sunlight.
 
-   7. Satellite
-   - Reaches anywhere on earth, including oceans and remote regions.
-   - Advantages: enormous coverage, useful for broadcast and disaster recovery. Disadvantages: very high cost, and geostationary satellites add about 250 ms one-way latency (LEO constellations reduce this greatly).
+   7. Satellite — reaches anywhere on earth including oceans/remote regions.
+   - Advantages: enormous coverage, good for broadcast/disaster recovery. Disadvantages: high cost, ~250ms one-way latency (geostationary; LEO reduces this).
 
 Choosing between them
 
@@ -6513,14 +6420,8 @@ Answer:
 | Typical use | Offices, homes, most LANs | Factories, hospitals, near heavy machinery, data centres |
 
    (c) Why UTP is preferred over STP
-   - `Lower cost` — both the cable and the connectors are significantly cheaper, and in a building with hundreds of runs this dominates the decision.
-   - `Easier installation` — thinner, lighter and more flexible, so it pulls through conduit easily and needs no grounding scheme.
-   - `No grounding risk` — an improperly earthed STP shield can pick up noise instead of blocking it, or create a ground loop, making the situation worse than plain UTP.
-   - `Sufficient performance` — in a normal office the twisting alone gives enough noise rejection for 1 Gbps and even 10 Gbps over Cat6a.
-   - `Standard connectors and tools` — ordinary RJ45 plugs and crimpers, which every technician already has.
-   - `Smaller bend radius and less conduit space`, which matters in crowded cable trays.
-
-   - STP is still the right choice where interference is genuinely severe: near motors, welding equipment, X-ray machines, or long parallel runs beside power cables.
+   - `Lower cost` (cable + connectors), `easier installation` (thinner, flexible, no grounding scheme needed), `no grounding risk` (a badly earthed STP shield can turn into an antenna or ground loop), `sufficient performance` (twisting alone gives enough noise rejection for 1-10 Gbps in a normal office), and `standard RJ45` tools every technician already has.
+   - STP is still preferred where interference is genuinely severe: near motors, welding equipment, X-ray machines, or long runs beside power cables.
 
 7. **What is the main benefit of broadband transmission system compared to baseband? What is the attenuation of transmission media? Distinguish between twisted pair, co-axial cable and fiber optics in tabular form.** *[Rupali Bank Ltd. Assistant Network Engineer 04.11.2023 compact it 530 (ET: MIST)]*
 
@@ -6536,18 +6437,12 @@ Answer:
 | Distance | Shorter; needs repeaters | Longer; uses amplifiers |
 | Example | Ethernet (10BASE-T) | Cable TV, ADSL, cable internet |
 
-   - The main benefit of broadband is that it can carry `multiple simultaneous signals over one medium` by dividing it into frequency channels. One coaxial cable can therefore carry dozens of TV channels plus internet data at the same time, and it can also reach much further because amplifiers handle analogue signals over long distances.
+   - Main benefit: broadband carries `multiple simultaneous signals over one medium` by dividing it into frequency channels — one coax can carry dozens of TV channels plus internet data at once, and reaches further since amplifiers handle analogue signals over long distances.
 
    (b) Attenuation of transmission media
-   - Attenuation is the loss of signal strength as the signal travels through a medium, caused by absorption and resistance in the material.
-   - It is measured in decibels: `Attenuation (dB) = 10 log10(P2 / P1)`, a negative value indicating loss.
-   - It increases with distance and with frequency, so higher-speed signals fade faster — this is why cable length limits exist.
-   - Remedies: amplifiers for analogue signals, and repeaters for digital signals, which regenerate a clean new signal instead of amplifying the noise as well.
-
-   Typical attenuation
-   - UTP Cat5e/Cat6: high, hence the 100 m limit.
-   - Coaxial: lower than twisted pair, so 185 m and 500 m runs were possible.
-   - Optical fibre: extremely low, about 0.2 dB per kilometre at 1550 nm, which is why fibre spans tens of kilometres without regeneration.
+   - Attenuation is the loss of signal strength through a medium (absorption + resistance), measured as `Attenuation (dB) = 10 log10(P2/P1)` (negative = loss). It increases with distance and frequency, hence cable length limits.
+   - Remedies: amplifiers (analogue) and repeaters (digital — regenerate a clean signal rather than amplifying noise too).
+   - Typical values: UTP Cat5e/6 — high (100m limit); coaxial — lower (185-500m runs); fibre — extremely low (~0.2 dB/km at 1550nm), so it spans tens of km without regeneration.
 
 (c) Twisted pair vs coaxial vs fibre optic
 
@@ -6782,58 +6677,24 @@ Answer: Transmission lines suffer from three principal problems — `attenuation
    - Related effects: jitter (timing variation), echo (reflections from impedance mismatches), fading (varying strength on radio links) and limited bandwidth.
 
    Described in detail — Attenuation
-
-   - Definition: attenuation is the loss of signal strength as the signal propagates. Electrical energy is converted to heat by the resistance of the conductor, and optical energy is absorbed and scattered in the fibre.
-
-   - Measurement, in decibels:
-   ```
-   Attenuation (dB) = 10 × log10 (P2 / P1)
-   ```
-   where P1 is the transmitted power and P2 the received power. A negative result indicates loss; −3 dB means half the power has been lost.
-
-   - Two properties that matter in practice
-     - It grows with `distance`. Every metre of cable removes some energy, which is exactly why maximum cable lengths are specified: 100 m for UTP, 185 m for thin coaxial.
-     - It grows with `frequency`. High-frequency components fade faster than low-frequency ones, so a square pulse arrives rounded and spread. This is why higher data rates are limited to shorter distances — Cat6 supports 10 Gbps at 55 m but only 1 Gbps at 100 m.
-
-   - Consequence: once the received power falls near the noise level, the receiver can no longer decide reliably between 0 and 1. Errors rise, CRC checks fail, frames are retransmitted, and throughput collapses even though the link still appears connected.
-
-   - Remedies
-     - `Amplifier` for analogue signals — but it amplifies the accumulated noise as well, so noise builds up over every span.
-     - `Repeater` for digital signals — it decides each bit and generates a completely clean new signal, discarding the noise entirely. This is the decisive advantage of digital transmission.
-     - `Equaliser`, to boost high frequencies more than low ones and flatten the response.
-     - Choosing a lower-loss medium: optical fibre loses only about 0.2 dB per kilometre, against tens of dB per hundred metres for copper.
-     - Keeping runs within the specified length, and using thicker conductors where practical.
+   - Attenuation is the loss of signal strength as it propagates — electrical energy turns to heat via conductor resistance; optical energy is absorbed/scattered in fibre. Measured as `Attenuation (dB) = 10 log10(P2/P1)` (P1 = sent, P2 = received power; negative = loss, e.g. -3dB = half the power lost).
+   - It grows with `distance` (hence max cable lengths: 100m UTP, 185m thin coax) and with `frequency` (higher data rates need shorter runs — Cat6 gives 10 Gbps at 55m but only 1 Gbps at 100m).
+   - Once received power nears the noise floor, the receiver can't reliably distinguish 0/1 — errors rise, CRC fails, throughput collapses.
+   - Remedies: `amplifier` (analogue, but also amplifies noise), `repeater` (digital — regenerates a clean signal, discarding noise), `equaliser` (boosts high frequencies to flatten response), or a lower-loss medium (fibre ~0.2 dB/km vs tens of dB/100m for copper).
 
 15. **Explain 10Base2, 10Base5, 10BaseT and Ethernet.** *[Bangladesh Bank Assistant Maintenance Engineer 2011 compact it 1276-1277 (ET: N/A)]*
 
 Answer: The naming convention is `<speed> BASE <medium or maximum segment length>`, where BASE means baseband signalling.
 
    Ethernet
-   - The dominant LAN technology, standardised as `IEEE 802.3`. It defines the frame format, 48-bit MAC addressing and, on shared media, the CSMA/CD access method.
-   - Frame: preamble, destination MAC, source MAC, type/length, data (46–1500 bytes) and FCS. Minimum frame 64 bytes, maximum 1518 bytes.
-   - Invented by Robert Metcalfe at Xerox PARC in 1973 and standardised in 1983.
-   - It has scaled from 10 Mbps to 400 Gbps while keeping the same frame format, which is the main reason it displaced every competing LAN technology.
+   - The dominant LAN technology, standardised as `IEEE 802.3`, defining the frame format, 48-bit MAC addressing and (on shared media) CSMA/CD. Frame: preamble, dest/source MAC, type/length, data (46-1500 bytes), FCS — 64-1518 bytes total.
+   - Invented by Robert Metcalfe at Xerox PARC (1973), standardised 1983; scaled from 10 Mbps to 400 Gbps while keeping the same frame format — why it displaced every competing LAN technology.
 
-   10BASE2 — Thin Ethernet, "Cheapernet"
-   - 10 Mbps, baseband, `185 m` maximum segment (the 2 stands for approximately 200 m).
-   - Medium: thin RG-58 coaxial cable, about 5 mm, flexible.
-   - Connector: BNC, with T-connectors at each station and 50-ohm terminators at both ends.
-   - Topology: bus. Maximum 30 stations per segment, minimum 0.5 m between taps.
-   - Cheaper and easier than 10BASE5, but a single break or a missing terminator brought down the whole segment.
+   10BASE2 — Thin Ethernet ("Cheapernet"): 10 Mbps, `185m` max segment, thin RG-58 coax, BNC connectors + 50-ohm terminators, bus topology, max 30 stations/segment. Cheaper/easier than 10BASE5, but one break or missing terminator downs the whole segment.
 
-   10BASE5 — Thick Ethernet, "Thicknet"
-   - 10 Mbps, baseband, `500 m` maximum segment.
-   - Medium: thick, rigid yellow coaxial cable about 10 mm in diameter.
-   - Stations attach with a `vampire tap` piercing the jacket, linked by an AUI drop cable to a transceiver.
-   - Topology: bus. Maximum 100 stations per segment, taps at least 2.5 m apart, terminators at both ends.
-   - The original Ethernet. Expensive and very hard to install, and equally vulnerable to a single cable break.
+   10BASE5 — Thick Ethernet ("Thicknet"): 10 Mbps, `500m` max segment, thick yellow coax, `vampire tap` + AUI drop cable, bus topology, max 100 stations/segment. The original Ethernet — expensive, hard to install, equally vulnerable to a single break.
 
-   10BASE-T — Twisted Pair Ethernet
-   - 10 Mbps, baseband, twisted-pair medium, `100 m` maximum from station to hub or switch.
-   - Medium: Cat3 or better UTP with RJ45 connectors, using two of the four pairs.
-   - Topology: physical `star` around a hub or switch.
-   - Encoding: Manchester, which is self-clocking.
-   - This is the version that made Ethernet universal, because a broken cable affects only one station, cabling is cheap and flexible, moves and additions are trivial, and faults are easy to isolate.
+   10BASE-T — Twisted Pair Ethernet: 10 Mbps, `100m` max (station to hub/switch), Cat3+ UTP with RJ45, physical `star` topology, Manchester encoding. Made Ethernet universal — a broken cable affects only one station, cabling is cheap/flexible, and faults are easy to isolate.
 
 Comparison
 
@@ -7996,7 +7857,7 @@ Step 2 — LOCAL_PREF (highest wins)
 | Path 3 | 200 | survives |
 | Path 4 | 200 | survives |
 
-   - Path 2 is removed here even though it has the shortest AS_PATH and the lowest MED. This is the key trap in the question: LOCAL_PREF is checked long before AS_PATH, so a lower LOCAL_PREF loses regardless of how good its other attributes are.
+   - Path 2 is removed even though it has the shortest AS_PATH and lowest MED — LOCAL_PREF is checked long before those, so a lower LOCAL_PREF loses regardless.
 
    Step 3 — Locally originated
    - None of the paths is locally originated; all are learned from neighbours. No decision.
@@ -8117,20 +7978,11 @@ Answer: OSPF (Open Shortest Path First) is a link-state, classless interior gate
    - Step 5 — Routing table. The best paths are installed. Only incremental updates are flooded afterwards, plus a full refresh every 30 minutes.
 
    Key characteristics
-   - Metric: `cost`, calculated as reference bandwidth ÷ interface bandwidth (default reference 100 Mbps). Lower is better.
-   - Runs directly over IP as protocol number 89 — it does not use TCP or UDP.
-   - Administrative distance 110.
-   - Classless, so it carries the subnet mask and supports VLSM and CIDR.
-   - Converges fast, because changes are flooded immediately rather than waiting for a periodic timer.
-   - Supports equal-cost multipath load balancing.
-   - Authentication (plain text or MD5) protects routing updates.
+   - Metric: `cost` = reference bandwidth ÷ interface bandwidth (lower is better). Runs directly over IP (protocol 89, no TCP/UDP). Administrative distance 110.
+   - Classless (carries subnet mask, supports VLSM/CIDR); converges fast since changes are flooded immediately; supports equal-cost multipath and MD5 authentication.
 
-   Areas
-   - Large networks are divided into areas to limit LSA flooding and SPF computation. Area 0 is the backbone, and every other area must connect to it, through an Area Border Router (ABR). An ASBR connects OSPF to an external routing domain.
-
-   Router types and tables
-   - Three tables: neighbour table, topology table (the LSDB) and routing table.
-   - Router IDs, DR and BDR election on broadcast networks (to avoid every router adjacent to every other), with the DR at multicast 224.0.0.6.
+   Areas: large networks are divided into areas to limit LSA flooding/SPF cost. Area 0 is the backbone; every other area connects to it via an ABR; an ASBR connects OSPF to an external domain.
+   - Three tables per router: neighbour, topology (LSDB), routing. DR/BDR are elected on broadcast networks to avoid full mesh adjacency (DR at multicast 224.0.0.6).
 
    Advantages and drawbacks
    - Advantages: fast convergence, no hop-count limit, efficient use of bandwidth, hierarchical and scalable, vendor neutral.
@@ -8569,9 +8421,7 @@ Initial tables (round 0 — direct links only)
 | C | 0 | — |
 
    After the first exchange (round 1)
-   - A learns from B that B reaches C at cost 3. A's cost to C via B = 2 + 3 = `5`, which is better than the direct 7. A updates.
-   - C learns from B that B reaches A at cost 2. C's cost to A via B = 3 + 2 = `5`, better than the direct 7. C updates.
-   - B already has the best routes to both neighbours, so B does not change.
+   - A learns from B: cost to C via B = 2+3 = `5` (better than direct 7) → A updates. C learns from B: cost to A via B = 3+2 = `5` (better than direct 7) → C updates. B already has the best routes, so no change.
 
 | From A | Cost | Next hop |
 |---|---|---|
@@ -8587,10 +8437,7 @@ Initial tables (round 0 — direct links only)
 
    - Round 2 produces no further change, so the network has converged.
 
-   Key points for the exam
-   - Each node knows only distances and next hops, never the full topology — "routing by rumour".
-   - Convergence is slow, and the count-to-infinity problem can arise when a link fails; split horizon, route poisoning, poison reverse and hold-down timers are the standard countermeasures.
-   - RIP uses hop count with a maximum of 15, so 16 means unreachable. <!-- verify -->
+   Key points: each node knows only distances/next hops, never the full topology ("routing by rumour"); convergence is slow and count-to-infinity can occur on link failure (countered by split horizon, poison reverse, hold-down timers); RIP uses hop count, max 15 (16 = unreachable). <!-- verify -->
 
 18. **What is difference between link state routing and distance vector routing?** *[Sonali Bank Ltd. Officer IT 2021 compact it 909 (ET: N/A)]*
 
@@ -8964,14 +8811,9 @@ Answer:
 
    (a) The historical IP addressing limitation that made NAT necessary
 
-   - IPv4 uses a `32-bit` address, so the entire address space is 2^32 ≈ `4.3 billion` addresses. That seemed enormous in 1981, when the internet joined a few hundred research machines.
-   - `Classful addressing wasted most of it.` Only three block sizes existed: Class A (/8, 16.7 million hosts), Class B (/16, 65,534) and Class C (/24, 254). An organisation needing 500 hosts could not use a Class C, so it received a whole Class B and wasted more than 64,000 addresses. Millions of addresses were allocated but never used.
-   - Large blocks were also handed out generously in the early years to universities, corporations and government bodies, and were never reclaimed.
-   - The internet then grew far faster than anyone predicted — commercial use from the early 1990s, then home broadband, then mobile phones, and now billions of IoT devices, several per person.
-   - By the early 1990s projections showed the address space would be exhausted within a few years. IANA's central pool ran out in `February 2011`, and the regional registries followed.
-
-   - Three responses were adopted: `CIDR` (1993) to stop the classful wastage, `NAT` (RFC 1631, 1994) to let many hosts share one public address, and `IPv6` as the permanent fix. NAT was the immediate, deployable answer, and it is the reason IPv4 has survived three decades past its predicted exhaustion.
-   - Together with RFC 1918 private addressing (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16), NAT allows an entire organisation to operate behind a single public address.
+   - IPv4's `32-bit` address gives only 2^32 ≈ `4.3 billion` addresses — plenty in 1981, but `classful addressing` wasted most of it: only 3 block sizes existed (Class A /8 = 16.7M hosts, B /16 = 65,534, C /24 = 254), so an org needing 500 hosts got a whole Class B, wasting 64,000+ addresses. Large blocks were also handed out generously early on and never reclaimed.
+   - The internet then grew far faster than predicted (commercial use, home broadband, mobile, now IoT), and by the early 1990s exhaustion was projected within years — IANA's pool ran out in `February 2011`.
+   - Three responses: `CIDR` (1993, stops classful waste), `NAT` (RFC 1631, 1994 — lets many hosts share one public address), and `IPv6` as the permanent fix. NAT, paired with RFC 1918 private addressing (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16), was the immediate deployable answer and is why IPv4 has survived three decades past its predicted exhaustion.
 
    (b) Step-by-step translation at the branch router
 
@@ -8984,8 +8826,8 @@ Answer:
    Source      192.168.1.5 : 51000   (a random ephemeral port)
    Destination 93.184.216.34 : 80
    ```
-   - Step 2 — the PC compares its own address and the destination with its subnet mask. They are on different networks, so the packet goes to the default gateway, the branch router.
-   - Step 3 — the router receives the packet on its `inside` interface and sees that the source is a private RFC 1918 address, which the internet will not route.
+   - Step 2 — different networks (per subnet mask), so the packet goes to the default gateway, the branch router.
+   - Step 3 — the router receives it on its `inside` interface; the source is a private RFC 1918 address, unroutable on the internet.
    - Step 4 — the router `rewrites the source` to its own public address and allocates a unique source port:
    ```
    Source      203.0.113.10 : 62145
@@ -8997,7 +8839,7 @@ Answer:
 |---|---|---|---|
 | 192.168.1.5:51000 | 203.0.113.10:62145 | 93.184.216.34:80 | TCP |
 
-   - Step 6 — because the IP header changed, the router recalculates the IP header checksum and the TCP checksum (which covers the addresses through the pseudo-header), then forwards the packet.
+   - Step 6 — since the IP header changed, the router recalculates the IP and TCP checksums (TCP's covers the addresses via the pseudo-header), then forwards.
 
    Inbound — response returning to the branch
 
@@ -9006,14 +8848,14 @@ Answer:
    Source      93.184.216.34 : 80
    Destination 203.0.113.10 : 62145
    ```
-   - Step 8 — the packet arrives on the router's `outside` interface. The router looks up the destination port 62145 in its translation table and finds the matching entry.
+   - Step 8 — arrives on the router's `outside` interface; the router looks up destination port 62145 in its translation table and finds the matching entry.
    - Step 9 — it `rewrites the destination` back to the original private address and port:
    ```
    Source      93.184.216.34 : 80
    Destination 192.168.1.5 : 51000
    ```
-   - Step 10 — checksums are recalculated again, and the packet is forwarded out of the inside interface to the PC, which receives a reply that appears to have come straight from the server.
-   - Step 11 — the entry is removed when the TCP connection closes, or after an idle timeout (typically 24 hours for TCP, 5 minutes for UDP).
+   - Step 10 — checksums recalculated again, packet forwarded to the PC, which sees a reply that appears to come straight from the server.
+   - Step 11 — the entry is removed on connection close or idle timeout (~24h TCP, 5min UDP).
 
    ```
       PC                    ROUTER (NAT)                      SERVER
@@ -9183,21 +9025,11 @@ Types
 | Dynamic NAT | Many private ↔ a pool of public, as available | Sharing a small block of public addresses |
 | PAT / NAT overload | Many private ↔ one public, by port number | Every home and small office router |
 
-   Advantages
-   - Conserves scarce public IPv4 addresses — hundreds of hosts behind one address.
-   - Hides the internal topology and addressing from outside.
-   - Allows internal renumbering without informing anyone externally.
-   - Provides a basic barrier: unsolicited inbound connections have no translation entry, so they are dropped.
-   - Makes changing ISP easy, since only the router's outside address changes.
+   Advantages: conserves scarce public IPv4 addresses (hundreds of hosts behind one), hides internal topology, allows internal renumbering without external impact, gives a basic inbound barrier (unsolicited connections have no translation entry), and makes changing ISP easy.
 
-   Disadvantages
-   - Breaks true end-to-end connectivity, which complicates peer-to-peer, VoIP, video calling and online gaming; STUN, TURN and port forwarding exist to work around it.
-   - Interferes with IPsec, because rewriting the header invalidates integrity checks; NAT-Traversal was created for this.
-   - Protocols that embed addresses in their payload — FTP, SIP, H.323 — need application-layer gateways.
-   - Adds CPU load and per-flow state to the router, which can be exhausted.
-   - Obscures which internal host generated traffic, complicating logging and forensics.
+   Disadvantages: breaks true end-to-end connectivity (complicates P2P, VoIP, gaming — worked around by STUN/TURN/port forwarding); interferes with IPsec (needs NAT-Traversal); protocols embedding addresses in payload (FTP, SIP) need application-layer gateways; adds router CPU/state load; obscures which internal host generated traffic.
 
-   - IPv6 removes the need for NAT entirely, because addresses are no longer scarce.
+   - IPv6 removes the need for NAT entirely, since addresses are no longer scarce.
 
 7. **(i) Network Address Translation (NAT) ছবি সহ ব্যাখ্যা করুন।** *[BPSC Assistant Programmer (Ministry of Commerce) 2021 compact it 787 (ET: N/A)]*
 
@@ -9394,14 +9226,13 @@ Answer:
    src 192.168.1.10 : 51000    dst 93.184.216.34 : 80
    ```
    - Step 2 — the router receives it on the inside interface and sees a private source address.
-   - Step 3 — it replaces the source address with its own public address and allocates a `unique source port` from its pool (typically 1024–65535):
+   - Step 3 — it replaces the source with its own public address and a `unique source port` from its pool (1024-65535):
    ```
    src 203.0.113.5 : 62001     dst 93.184.216.34 : 80
    ```
-   - Step 4 — it records the mapping in the translation table, keyed by that unique port.
-   - Step 5 — it recalculates the IP header checksum and the TCP/UDP checksum, then forwards the packet.
-   - Step 6 — the reply arrives addressed to 203.0.113.5:62001. The router looks up port 62001, finds the entry, and rewrites the destination back to 192.168.1.10:51000.
-   - Step 7 — the entry is removed when the connection closes or after an idle timeout.
+   - Step 4 — records the mapping (keyed by that port), recalculates checksums, forwards.
+   - Step 5 — reply arrives at 203.0.113.5:62001; router looks up port 62001 and rewrites the destination back to 192.168.1.10:51000.
+   - Step 6 — entry removed on connection close or idle timeout.
 
 Translation table
 
@@ -9424,8 +9255,8 @@ NAT vs PAT
 | Cost | Higher | Lowest |
 | Typical use | Servers, address pools | Home and office internet access |
 
-   - Capacity: roughly 64,000 ports are available, so in theory one public address supports tens of thousands of simultaneous connections; in practice a few thousand hosts share one address comfortably.
-   - Limitation: an internal host cannot be reached from outside unless a `port forwarding` rule (static PAT) is configured, which is why hosting a server behind PAT requires explicit setup.
+   - Capacity: ~64,000 ports available, so one public address can support thousands of simultaneous connections in practice.
+   - Limitation: an internal host can't be reached from outside unless a `port forwarding` rule (static PAT) is configured.
 
 12. **What is NAT?** *[BREB Assistant Hardware & Network Engineer 2019 compact it 1124 (ET: BREB)]*
 
@@ -9481,13 +9312,13 @@ Answer: The NAT box (router) sits between the private network and the internet a
    ```
 
    Step by step
-   - (1) The internal host sends a packet with its private source address and an ephemeral source port.
-   - (2) The NAT box sees a private source address on the inside interface, allocates a free port on its public address, and creates an entry in the translation table.
-   - (3) It rewrites the source to `public address : allocated port`, recalculates the IP header checksum and the TCP/UDP checksum (which covers the addresses through the pseudo-header), and forwards the packet.
-   - (4) The external server replies to the public address and port, since that is all it ever saw.
-   - (5) The NAT box matches the destination port against the table and finds the corresponding internal host.
-   - (6) It rewrites the destination back to the original private address and port, recalculates the checksums again, and delivers the packet inside.
-   - The entry is deleted when the TCP connection closes, or after an idle timeout — commonly 24 hours for TCP and about 5 minutes for UDP.
+   - (1) Internal host sends a packet with its private source address and an ephemeral port.
+   - (2) NAT box sees the private source on the inside interface, allocates a free public port, creates a translation table entry.
+   - (3) Rewrites source to `public address : allocated port`, recalculates checksums (IP + TCP/UDP via pseudo-header), forwards.
+   - (4) External server replies to the public address/port — all it ever saw.
+   - (5) NAT box matches destination port against the table, finds the internal host.
+   - (6) Rewrites destination back to the original private address/port, recalculates checksums, delivers inside.
+   - Entry deleted on connection close or idle timeout (~24h TCP, ~5min UDP).
 
 Translation table structure
 
@@ -10056,23 +9887,16 @@ Answer:
 Answer:
 
    (a) CMY colour model
-   - Components: Cyan, Magenta and Yellow. These are the three secondary colours of light and the primary colours of pigment.
-   - It is a subtractive model. White light falls on the paper and the ink subtracts (absorbs) part of it; what is left is reflected to the eye. Cyan absorbs red, magenta absorbs green, yellow absorbs blue.
-   - Work of the model: it is used for printing on paper — printers, plotters and press work — because ink works by absorbing light, not by emitting it. RGB, the additive model, is used for screens instead.
-   - In practice CMYK is used, with K for Key (black), because mixing all three inks gives a muddy dark brown rather than pure black, and a separate black ink is cheaper and sharper for text.
-   - Conversion: C = 1 − R, M = 1 − G, Y = 1 − B, taking R, G, B as normalised values from 0 to 1.
+   - Components: Cyan, Magenta, Yellow — secondary colours of light, primary colours of pigment.
+   - Subtractive model: white light falls on paper and ink absorbs part of it; what's left is reflected. Cyan absorbs red, magenta absorbs green, yellow absorbs blue.
+   - Work: used for printing (printers, press work), since ink absorbs rather than emits light — unlike RGB (additive), used for screens.
+   - In practice CMYK is used (K = Key/black), since mixing all 3 inks gives muddy brown, not pure black. Conversion: C=1−R, M=1−G, Y=1−B (R,G,B normalised 0-1).
 
    (b) Work of CRC
-   - CRC (Cyclic Redundancy Check) is an error detection method used at the data link layer. It checks whether a frame was damaged in transmission.
-   - The sender treats the data as a binary number, appends (L − 1) zeros where L is the number of bits in the divisor, divides by an agreed generator polynomial using modulo-2 (XOR) division, and sends the remainder as the CRC.
-   - The receiver divides the whole received frame by the same divisor. Remainder 0 means no error, so the frame is accepted; any other remainder means the frame is rejected.
-   - CRC detects all single-bit errors, all double-bit errors, all odd numbers of errors, and all burst errors shorter than the CRC length, which is why it is used in Ethernet, Wi-Fi, ZIP files and disk sectors.
-
-   CRC-16
-   - CRC-16 produces a 16-bit checksum, so 16 zeros are appended before the division and the remainder is 16 bits.
-   - Common generator polynomials: CRC-16-IBM (also called CRC-16-ANSI) x^16 + x^15 + x^2 + 1, used in Modbus and USB; and CRC-16-CCITT x^16 + x^12 + x^5 + 1, used in HDLC, X.25 and Bluetooth.
-   - It catches every burst error up to 16 bits long, and about 99.997 percent of longer bursts, which is enough for frames of a few hundred bytes.
-   - It is used where frames are short and the processing cost must stay low — industrial protocols, smart cards, modems. Ethernet uses the stronger CRC-32 instead.
+   - CRC (Cyclic Redundancy Check) is a data-link-layer error detection method checking whether a frame was damaged in transit.
+   - Sender: treats data as a binary number, appends (L−1) zeros (L = divisor length), divides by an agreed generator polynomial via modulo-2 (XOR) division, sends the remainder as CRC. Receiver divides the whole frame by the same divisor — remainder 0 = accept, else reject.
+   - Detects all single/double-bit errors, all odd-count errors, and all burst errors shorter than the CRC length — used in Ethernet, Wi-Fi, ZIP files, disk sectors.
+   - CRC-16: 16-bit checksum (16 zeros appended). Common polynomials: CRC-16-IBM (Modbus, USB), CRC-16-CCITT (HDLC, X.25, Bluetooth). Catches every burst error up to 16 bits (~99.997% of longer ones) — used where frames are short and processing cost must stay low; Ethernet uses the stronger CRC-32 instead.
 
    (c) Bandwidth vs throughput
 
@@ -10517,11 +10341,9 @@ Answer:
 | Data flow | Broadcast on the shared line | Token passes node to node | Down the hierarchy | Through the central device |
 
    How bus topology works
-   - All nodes are attached to a single backbone cable through a drop line and a tap. Both ends of the backbone carry a terminator, which absorbs the signal so it does not reflect back.
-   - When a node transmits, the signal travels in both directions along the backbone and reaches every other node.
-   - Every node reads the destination MAC address in the frame. Only the node that matches keeps the frame; all others discard it.
-   - Because the cable is shared, two nodes transmitting together cause a collision, so bus Ethernet uses CSMA/CD — listen before sending, and on a collision stop, wait a random backoff and retry.
-   - Only one node can transmit at a time, so the bandwidth is shared and performance drops sharply as nodes are added. This is why bus topology is obsolete today.
+   - All nodes attach to a single backbone cable via a drop line and tap; both ends carry a terminator to absorb the signal (stop reflection).
+   - A transmitted signal travels both directions along the backbone and reaches every node; each node checks the destination MAC and only the match keeps the frame.
+   - Since the cable is shared, simultaneous transmissions collide, so bus Ethernet uses CSMA/CD (listen before sending; on collision, stop, random backoff, retry). Only one node transmits at a time, so bandwidth is shared and performance drops as nodes are added — why bus topology is obsolete today.
 
 5. **What is Personal Area Network? What is needed component and explain?** *[Mongla Port Authority Assistant Programmer 2023 compact it 572 (ET: N/A)]*
 
@@ -12845,32 +12667,30 @@ Answer:
 Answer:
 
    (i) SONET / SDH
-   - SONET (Synchronous Optical Network, the American standard) and SDH (Synchronous Digital Hierarchy, the international standard) are standards for carrying many digital streams over optical fiber in a synchronised way.
-   - The basic unit is STS-1 / OC-1 at 51.84 Mbps in SONET and STM-1 at 155.52 Mbps in SDH, and higher rates are exact multiples: OC-3 at 155.52, OC-12 at 622, OC-48 at 2.5 Gbps, OC-192 at 10 Gbps.
-   - Every node is locked to one master clock, so a low-speed tributary can be added or dropped without demultiplexing the whole stream.
-   - Normally built as a dual ring so that a fiber cut is healed in under 50 ms by switching to the protection path.
-   - Used as the transport backbone of telecom carriers, under ATM, IP and Ethernet traffic.
+   - SONET (American standard) / SDH (international standard) carry many digital streams over optical fiber in a synchronised way.
+   - Basic unit: STS-1/OC-1 (51.84 Mbps) in SONET, STM-1 (155.52 Mbps) in SDH; higher rates are exact multiples (OC-3, OC-12, OC-48...).
+   - All nodes lock to one master clock, so a low-speed tributary can be added/dropped without demultiplexing the whole stream.
+   - Built as a dual ring — a fiber cut is healed in under 50 ms via the protection path.
+   - Used as the transport backbone of telecom carriers, under ATM/IP/Ethernet traffic.
 
    (ii) IP telephony
-   - IP telephony, also called VoIP, carries voice as data packets over an IP network instead of over a dedicated circuit in the PSTN.
-   - The voice is sampled, compressed by a codec such as G.711 or G.729, packed into RTP packets and sent over UDP.
-   - Signalling — setting up and ending the call — uses SIP or the older H.323.
-   - Advantages: much cheaper, especially for international calls, one network for voice and data, and easy extra features such as voicemail to email and video.
-   - Drawbacks: it depends on the quality of the IP network, so delay, jitter and packet loss degrade the call, and it needs power and internet, unlike a classic telephone line.
-   - Examples: Skype, WhatsApp calls, Zoom, and IP-PBX systems in offices.
+   - Also called VoIP — carries voice as IP packets instead of over a dedicated PSTN circuit.
+   - Voice is sampled, compressed by a codec (G.711/G.729), packed into RTP over UDP; SIP (or older H.323) handles call signalling.
+   - Advantages: much cheaper (esp. international calls), one network for voice+data, easy extras (voicemail-to-email, video).
+   - Drawback: quality depends on the IP network — delay/jitter/loss degrade calls; needs power+internet. Examples: Skype, WhatsApp, Zoom, IP-PBX.
 
    (iii) WDM technology
-   - WDM (Wavelength Division Multiplexing) sends several signals down one optical fiber at the same time, each on a different wavelength of light. It is frequency division multiplexing applied to light.
-   - A multiplexer combines the wavelengths at one end and a demultiplexer separates them at the other. EDFA amplifiers boost all wavelengths together.
-   - CWDM (Coarse WDM) uses about 18 channels spaced 20 nm apart and is cheap; DWDM (Dense WDM) packs 40 to 160 channels with 0.8 nm or 0.4 nm spacing in the C band and is used for long haul.
-   - It multiplies the capacity of an existing fiber many times without laying any new cable, which is why it is the backbone of submarine and national networks.
+   - Sends several signals down one fiber simultaneously, each on a different light wavelength — FDM applied to light.
+   - A multiplexer combines wavelengths at one end, demultiplexer separates at the other; EDFA amplifiers boost all wavelengths together.
+   - CWDM: ~18 channels, 20 nm spacing, cheap. DWDM: 40-160 channels, 0.8/0.4 nm spacing, used for long haul.
+   - Multiplies existing fiber capacity many times without laying new cable — backbone of submarine/national networks.
 
    (iv) ATM network
-   - ATM (Asynchronous Transfer Mode) is a connection-oriented, cell-switching WAN technology designed to carry voice, video and data on one network.
-   - It uses a fixed-size cell of 53 bytes — a 5-byte header and a 48-byte payload. The fixed size makes switching fast and predictable in hardware.
-   - It is connection oriented: a virtual circuit is set up first, identified by VPI and VCI in the cell header, and all cells then follow the same path in order.
-   - It offers real QoS classes — CBR, VBR, ABR and UBR — so voice can be guaranteed a constant rate while data uses what is left.
-   - It was widely used in carrier backbones and ADSL in the 1990s and 2000s, but has now been replaced by IP over MPLS and Carrier Ethernet, mainly because the 5-byte header on a 48-byte payload wastes about 10 percent of the bandwidth.
+   - Connection-oriented, cell-switching WAN technology carrying voice/video/data on one network.
+   - Fixed 53-byte cell (5-byte header + 48-byte payload) — fixed size makes hardware switching fast and predictable.
+   - Connection-oriented: virtual circuit set up first (VPI/VCI in header), all cells follow the same path in order.
+   - Offers real QoS classes (CBR, VBR, ABR, UBR).
+   - Widely used in 1990s-2000s carrier backbones/ADSL, now replaced by IP-over-MPLS/Carrier Ethernet, mainly because the 5-byte header on a 48-byte payload wastes ~10% bandwidth.
 
 2. **(c) Explain IPTV and VOIP.** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 794 (ET: N/A)]*
 
@@ -13478,21 +13298,12 @@ Answer:
 | Flexibility | Tied to physical location and cabling | Fully logical, a department spread over three floors is still one VLAN |
 
    Which one is more appropriate — VLAN
-   - The requirement is to isolate departments that share the SAME physical network. That is exactly what a VLAN does: one switch, or one set of switches, is divided into several independent logical networks.
-   - Subnetting alone does not isolate anything at layer 2. Two subnets on the same switch still share one broadcast domain, so broadcasts still reach everyone and a host can simply be re-addressed to reach the other group.
-   - In practice both are used together — each VLAN is given its own subnet — but VLAN is the technique that actually creates the isolation.
+   - The requirement is isolation within the SAME physical network — exactly what VLAN does at layer 2. Subnetting alone doesn't isolate anything at layer 2: two subnets on the same switch still share one broadcast domain, and a host can simply be re-addressed into the other group.
+   - In practice both are used together (each VLAN given its own subnet), but VLAN is the technique that actually creates the isolation.
 
-   How VLANs improve security
-   - Traffic of one VLAN never reaches another VLAN at layer 2, so a compromised PC in Sales cannot sniff Finance traffic or ARP-spoof its gateway.
-   - All inter-VLAN traffic must pass through a router or L3 switch, which gives a single enforcement point for ACLs and firewall rules.
-   - Sensitive servers can be placed in their own VLAN with a strict access list; guests can be given an isolated VLAN with internet access only.
-   - It limits the blast radius of malware, because a worm spreading by broadcast or local scanning is confined to one VLAN.
+   How VLANs improve security: traffic of one VLAN never reaches another at layer 2 (a compromised Sales PC cannot sniff Finance traffic); all inter-VLAN traffic passes through a router/L3 switch, giving one enforcement point for ACLs/firewall rules; sensitive servers or guests can be isolated to their own VLAN; malware blast radius is limited to one VLAN.
 
-   How VLANs improve traffic management
-   - Each VLAN is its own broadcast domain, so ARP and DHCP broadcasts are confined to a small group instead of flooding the whole organisation. This directly reduces wasted bandwidth and CPU on every host.
-   - Smaller broadcast domains mean better performance and easier troubleshooting.
-   - QoS policy can be applied per VLAN — for example a voice VLAN given priority over a data VLAN.
-   - Users can be moved or reorganised by changing a port setting, with no re-cabling and no re-addressing.
+   How VLANs improve traffic management: each VLAN is its own broadcast domain, so ARP/DHCP broadcasts stay confined instead of flooding the whole org — better performance and easier troubleshooting; QoS can be applied per VLAN (e.g. voice VLAN prioritized); users can be moved by changing a port setting, with no re-cabling or re-addressing.
 
 2. **What is VLAN? Difference between static and dynamic VLAN.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 550 (ET: BIBM)]*
 

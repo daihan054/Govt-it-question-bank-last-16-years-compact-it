@@ -362,8 +362,7 @@ Answer: (Answered in English, as required for IT topics.) What web design is
        C -->|generated HTML| A
    ```
 
-   - When each is the right choice: a `static` site is correct for a small brochure, a portfolio or documentation — it is fast, cheap and almost impossible to attack. A `dynamic` site is necessary the moment the content changes often, users must log in, or the same page must show different data to different people.
-   - Two modern qualifications worth adding. A `static site generator` such as Jekyll or Hugo builds static HTML from templates and content files, giving the maintainability of a dynamic site with the speed and security of a static one. And a `single-page application` blurs the line further — the HTML file is static, but it fetches data from an `API` and rewrites the page in the browser.
+   - When each is the right choice: `static` suits a small brochure, portfolio or documentation — fast, cheap, almost impossible to attack. `Dynamic` is necessary once content changes often, users must log in, or the same page must show different data to different people.
 
 6. **What is the popular way of linking many documents?** *[BCC Assistant Programmer 11.11.2023 compact it 547 (ET: N/A)]*
 
@@ -1075,35 +1074,23 @@ Answer: (Answered in English, as required for IT topics.) What HTML is
 
     Limitations of building a website with HTML and CSS only
 
-    1. No server-side processing
-    - HTML and CSS run entirely in the `browser`. Nothing can be executed on the server, so nothing can be computed, stored or decided there.
+    1. No server-side processing or database
+    - HTML and CSS run entirely in the `browser`; nothing can be computed, stored or decided server-side, so content cannot be saved or retrieved — every page is a separate hand-written file.
 
-    2. No database
-    - Content cannot be stored or retrieved. Every page must be written as a separate file by hand, so a hundred product pages means a hundred files to create and maintain.
+    2. Static only, no personalization
+    - The page sent is the page stored — `the same for every visitor` — and it cannot show one user their own data.
 
-    3. The site can only be static
-    - The page sent is the page stored. It is `the same for every visitor`, and it cannot show one user their own data.
+    3. No authentication, sessions or form handling
+    - Login and registration are impossible without server-side code, and a `<form>` can be displayed but nothing can `receive` the submitted data.
 
-    4. No user authentication
-    - `Login, registration and sessions are impossible.` A password cannot be checked without server-side code, and there is no secure place to keep it.
+    4. No real search/filter/sort, no CMS
+    - These need a database query; a non-technical person cannot update the site without editing HTML directly, since there's no admin panel.
 
-    5. No form processing
-    - A `<form>` can be `displayed`, but nothing can `receive` the submitted data. Without a server-side script the form has nowhere to send it, so a contact form cannot deliver a message.
+    5. No dynamic interactivity or business logic
+    - CSS gives hover effects and animations, but `no logic` — no calculations, validation, or reacting to data.
 
-    6. No search, no filtering, no sorting of real data
-    - These need a database query. Client-side JavaScript can sort what is already on the page, but not search a catalogue that is not there.
-
-    7. No content management
-    - A non-technical person cannot update the site. Every change means editing HTML, so there is no admin panel and no `CMS`.
-
-    8. No dynamic interactivity
-    - CSS can produce hover effects, transitions and animations, and modern CSS can do a surprising amount. But `no logic` — no calculation, no validation of business rules, no reaction to data.
-
-    9. No e-commerce
-    - A cart, a payment gateway and an order record all need server-side code and a database.
-
-    10. Poor content scalability and maintainability
-    - A change to the navigation menu must be repeated in every single file, because there are no templates and no includes.
+    6. No e-commerce, poor scalability
+    - A cart, payment gateway and order record all need server-side code and a database; a navigation change must be repeated in every file, with no templates or includes.
 
     What can still be built with HTML and CSS alone
     ```
@@ -2602,17 +2589,7 @@ Answer: `localStorage` and `sessionStorage` are the two parts of the HTML5 `Web 
     | Sent to the server | `No` | `No` |
     | API | Identical | Identical |
 
-    Both compared with cookies
-
-    | Point | Web Storage | Cookies |
-    |---|---|---|
-    | Capacity | `5–10 MB` | About `4 KB` |
-    | Sent with every HTTP request | `No` | `Yes` — added to every request |
-    | Expiry | localStorage never; sessionStorage on tab close | A `set expiry date` |
-    | Read by the server | `No` — client only | `Yes` |
-    | Accessible to JavaScript | Yes | Yes, unless `HttpOnly` |
-    | Intended for | Client-side data and preferences | `Session management`, server-read state |
-    - Why cookies still exist: only a cookie is `sent to the server automatically`, which is what session authentication needs, and only a cookie can be marked `HttpOnly` so JavaScript cannot read it.
+    - Compared with cookies: Web Storage holds far more (`5–10 MB` vs `~4 KB`) and is never sent to the server, whereas a cookie is sent with every request and can be marked `HttpOnly` — which is why session authentication still relies on cookies, not Web Storage.
 
     The important warnings
     ```

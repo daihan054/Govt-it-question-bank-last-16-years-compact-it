@@ -1611,30 +1611,20 @@ Write a Python program to calculate the tax based on the given income slabs.
 Answer:
 
    (a) Positive impacts on Bangladeshi banking
-   - Fraud detection — ML models flag unusual card and MFS transactions in real time, cutting losses.
-   - Credit scoring — alternative data (mobile wallet history, utility payments) lets banks lend to customers with no formal credit record, widening financial inclusion.
-   - Chatbots and virtual assistants — handle routine balance, statement and account queries in Bangla around the clock, easing call-centre load.
-   - Automated back office (RPA) — cheque clearing, KYC verification, account opening and reconciliation are processed faster with fewer errors.
-   - AML compliance — automated transaction monitoring meets Bangladesh Bank reporting requirements more reliably than manual review.
-   - Personalised products — customer segmentation drives targeted loan and deposit offers.
-   - Cost reduction — fewer manual steps means lower operating cost per transaction, which matters in a low-margin market.
+   - Fraud detection — ML flags unusual card/MFS transactions in real time.
+   - Credit scoring from alternative data (wallet history, utility payments) widens financial inclusion.
+   - Chatbots handle routine queries around the clock; RPA speeds up KYC, cheque clearing and reconciliation.
+   - Better AML compliance monitoring, and lower operating cost per transaction.
 
    (b) Negative impacts and risks
-   - Job displacement — tellers, data entry operators and back-office clerks are the most exposed roles.
-   - Skill gap — existing staff lack data science and cloud skills.
-   - Algorithmic bias — a model trained on past lending data can systematically reject rural or female applicants.
-   - Cybersecurity risk — greater automation widens the attack surface.
-   - Digital divide — customers without smartphones or literacy are left behind.
-   - Regulatory gap — Bangladesh has no comprehensive AI governance framework yet.
+   - Job displacement of tellers, data-entry and back-office staff, and a skill gap in existing employees.
+   - Algorithmic bias against rural/female applicants, wider cybersecurity attack surface, and a digital divide for less literate customers.
 
    (c) Strategies to balance technology and employment
-   - Reskill rather than retrench — retrain tellers as relationship managers, digital advisors and fraud analysts. This is cheaper than hiring and preserves institutional knowledge.
-   - Redeploy to advisory roles — automation removes routine work, freeing staff for sales, complaint handling and elderly or rural customer support, which machines handle poorly.
-   - Phased adoption — automate gradually so attrition absorbs most of the reduction, avoiding mass layoffs.
-   - Human-in-the-loop — keep human approval for loan rejections and large transactions, which protects both jobs and customers.
-   - Create new roles — data engineers, ML engineers, cybersecurity analysts, AI ethics and compliance officers.
-   - Partner with universities — internship and training pipelines with local institutions.
-   - Policy support — Bangladesh Bank should issue AI governance guidelines covering model explainability, bias testing and data protection.
+   - Reskill rather than retrench — retrain tellers as relationship managers, digital advisors and fraud analysts (cheaper than hiring, preserves institutional knowledge).
+   - Redeploy staff to advisory/sales roles that automation cannot handle, and adopt automation in phases so attrition absorbs the reduction.
+   - Keep human-in-the-loop approval for loan rejections and large transactions.
+   - Create new roles (data/ML engineers, AI ethics officers) and push Bangladesh Bank to issue AI governance guidelines.
 
    - Balanced conclusion: AI in Bangladeshi banking is best treated as augmentation, not replacement. The realistic outcome is a change in the JOB MIX rather than a fall in total employment, provided reskilling begins before automation, not after.
 
@@ -2132,29 +2122,17 @@ Answer:
 Answer:
 
     (a) Advantages of the internet in a business organisation
-    - Global market reach — a small firm can sell worldwide without opening foreign offices.
-    - Low-cost communication — email, VoIP and video conferencing replace expensive travel and long-distance calls.
-    - 24/7 operation — the online storefront and self-service portal never close.
-    - Faster information access — market research, competitor data and supplier catalogues available instantly.
-    - Cheaper marketing — search, social media and email marketing cost a fraction of print and television.
-    - Improved customer service — chat, ticket systems, FAQs and self-service reduce cost while improving response time.
-    - Supply chain efficiency — suppliers and logistics partners connected through extranets and EDI.
-    - Remote work and collaboration — cloud documents and video calls let teams work across locations.
-    - Cloud services — computing and storage rented on demand instead of bought.
-    - Data-driven decisions — web and sales analytics guide pricing, stocking and marketing.
+    - Global market reach at low cost — email/VoIP replace travel, and the online storefront runs 24/7.
+    - Faster access to market research, competitor and supplier data.
+    - Cheaper marketing (search/social/email) and improved customer service (chat, tickets, self-service).
+    - Supply-chain efficiency via extranets/EDI, and remote work/collaboration through cloud documents.
+    - Cloud services rented on demand, and analytics-driven pricing/stocking decisions.
 
     (b) How a legacy system is included in the intranet
-    - A legacy system is an old but business-critical application — typically a mainframe or a decades-old database — that cannot simply be discarded because it holds essential data and logic.
-
-    Integration methods
-    - Web front-end (screen scraping / terminal emulation) — a browser-based interface is placed in front of the legacy green-screen application, so intranet users reach it through a normal web page.
-    - Middleware / integration layer — software such as an ESB (Enterprise Service Bus) sits between the intranet and the legacy system, translating between formats and protocols.
-    - API wrapper — the legacy functions are exposed as REST or SOAP web services, so modern intranet applications can call them without knowing the old technology.
-    - Database gateway — the intranet application reads and writes the legacy database directly through an ODBC or JDBC connector.
-    - Data replication / ETL — legacy data is extracted, transformed and loaded into a modern database or data warehouse that the intranet uses, with periodic synchronisation.
-    - Gradual migration (strangler pattern) — new modules are built on the intranet and take over legacy functions one at a time, until the old system can finally be switched off.
-
-    - Why this matters: replacing a working legacy system outright is expensive and risky. Wrapping it and exposing it through the intranet gives users a modern interface while the proven core keeps running.
+    - A legacy system is an old but business-critical application (e.g. a mainframe) that cannot simply be discarded since it holds essential data/logic.
+    - Integration methods: a web front-end (screen scraping) placed in front of it; a middleware/ESB layer translating protocols; an API wrapper exposing its functions as REST/SOAP; a database gateway (ODBC/JDBC); or ETL replication into a modern data warehouse.
+    - Long term, a gradual "strangler pattern" migration builds new intranet modules that take over legacy functions one at a time until the old system is retired.
+    - This matters because replacing a working legacy system outright is expensive and risky — wrapping it gives a modern interface while the proven core keeps running.
 
 24. **What is E-Commerce? What are the types of E-commerce?** *[NESCO Assistant Manager (MIS & ICT) 2018 compact it 1177 (ET: N/A)]*
 
@@ -2232,17 +2210,12 @@ Answer:
        K --> L[Kernel initialises drivers and starts the OS]
    ```
 
-   - Step 1 — Power on. The power supply stabilises and sends a "Power Good" signal to the motherboard.
-   - Step 2 — CPU reset vector. The CPU begins executing at a fixed address that points into the BIOS ROM.
-   - Step 3 — POST (Power-On Self-Test). BIOS tests the essential hardware: CPU, RAM, keyboard, display adapter and storage controller. Failure is reported by beep codes or an on-screen message, because the display may not be available yet.
-   - Step 4 — Device initialisation. BIOS initialises the video card, disks and other devices, and reads its saved configuration from CMOS.
-   - Step 5 — Boot device selection. BIOS follows the configured boot order — hard disk, SSD, USB, network — and picks the first bootable device found.
-   - Step 6 — Load the MBR. It reads the first sector (512 bytes) of that device, the Master Boot Record, into RAM.
-   - Step 7 — Run the bootloader. The MBR code locates and starts the bootloader (GRUB on Linux, Windows Boot Manager on Windows).
-   - Step 8 — Load the kernel. The bootloader loads the operating system kernel into memory and transfers control to it.
-   - Step 9 — OS initialisation. The kernel initialises drivers, mounts the file system, starts system services and presents the login screen.
+   - Power on → PSU sends "Power Good" → CPU starts executing from BIOS ROM (reset vector).
+   - POST tests essential hardware (CPU, RAM, keyboard, display, storage); failure gives beep codes since the display may not be ready.
+   - BIOS initialises devices from saved CMOS settings, then follows the boot order to pick the first bootable device and loads its MBR (first 512-byte sector) into RAM.
+   - The MBR starts the bootloader (GRUB/Windows Boot Manager), which loads the OS kernel; the kernel initialises drivers, mounts the file system and starts services.
 
-   - Modern machines use UEFI in place of BIOS. UEFI skips the MBR and reads an `.efi` executable directly from the EFI System Partition, which is faster and supports disks larger than 2 TB.
+   - Modern machines use UEFI instead of BIOS: it skips the MBR and reads an `.efi` executable directly from the EFI System Partition — faster, and supports disks larger than 2 TB.
 
 3. **Explain BIOS in Server. How does affect booting configuration in Hardware maintenance.** *[RAKUB Assistant Network System Engineer 03.11.2023 compact it 552 (ET: BIBM)]*
 
@@ -3621,16 +3594,11 @@ Answer: Server purchase decisions should start from the WORKLOAD, then match har
 Answer: A structured incident-handling approach should be described, since the exact scenario varies.
 
    (a) Immediate response
-   - Identify and assess — what exactly failed, which services are affected, how many users, is data at risk.
-   - Communicate — inform management and users with an initial estimate; silence causes more damage than bad news.
-   - Contain — isolate the failing server, fail over to the standby node or DR site to restore service first. Restoring service and finding the root cause are separate activities.
+   - Identify and assess what failed and its impact, communicate an initial estimate to management/users, and contain by failing over to a standby/DR node — restoring service comes before finding the root cause.
 
    (b) Diagnosis
-   - Check hardware indicators: front-panel LEDs, iDRAC/iLO system log, POST errors.
-   - Check system logs: Event Viewer on Windows, `/var/log` and `dmesg` on Linux.
-   - Check resources: CPU, RAM, disk space, disk I/O, network utilisation.
-   - Check services and dependencies: database, application, network path, DNS, storage array.
-   - Check recent changes — a large share of incidents follow a change made in the previous 24 hours.
+   - Check hardware indicators (LEDs, iDRAC/iLO log, POST errors) and system logs (Event Viewer, `/var/log`, `dmesg`).
+   - Check resource usage (CPU, RAM, disk, network) and dependencies (DB, app, DNS, storage) — and check for a recent change, since most incidents follow one.
 
    (c) Common scenarios and their handling
 
@@ -3836,18 +3804,13 @@ Answer:
    | Better suited to | Complex advice, large cash handling | Everyday transactions, payments, transfers |
 
    (c) How digital banking promotes financial inclusion
-   - Removes the distance barrier — a villager 30 km from the nearest branch can transact from a mobile phone or a local agent point. This is the single largest inclusion effect.
-   - Removes the cost barrier — no minimum balance and negligible transaction cost make small accounts viable for the bank, which branch banking never was.
-   - Agent banking — a local shop acts as a bank outlet with a POS device, bringing deposits, withdrawals and remittance to rural areas without the cost of a branch.
-   - Mobile Financial Services (bKash, Nagad, Rocket) — bring payments to people with no bank account at all, needing only a basic phone.
-   - Simplified e-KYC — NID-based digital verification removes the paperwork barrier for people with limited literacy.
-   - Government-to-Person transfers — social safety-net allowances, stipends and disaster relief paid directly to a wallet, eliminating leakage.
-   - Remittance — overseas workers send money directly to a family wallet within minutes, at far lower cost than informal channels.
-   - Credit access — transaction history in a wallet becomes an alternative credit score for people with no formal credit record, enabling nano-loans.
-   - Women's inclusion — an account controlled from a personal phone gives women financial privacy and control that a shared branch visit does not.
+   - Removes the distance barrier — a villager far from any branch can transact from a mobile phone or a local agent point (POS device) — the single largest inclusion effect.
+   - Removes the cost barrier — no minimum balance and negligible transaction cost make small accounts viable, which branch banking never was.
+   - Mobile Financial Services (bKash, Nagad, Rocket) bring payments to people with no bank account, needing only a basic phone; e-KYC removes the paperwork barrier for limited-literacy users.
+   - Government-to-Person transfers and remittance reach a wallet directly and cheaply, and wallet transaction history becomes an alternative credit score enabling nano-loans.
 
    Barriers that remain
-   - Smartphone and internet cost, digital and financial literacy, weak rural network coverage, agent trust and fraud, and the gender gap in phone ownership.
+   - Smartphone/internet cost, digital and financial literacy, weak rural coverage, agent trust/fraud, and the gender gap in phone ownership.
 
 2. **(a) Define Electronic Payment System (EPS) with necessary diagram. Name 5 types of EPS.** *[BPSC (Multiple Ministry) Assistant Programmer (CSE) 19.07.2023 compact it 486 (ET: N/A)]*
 

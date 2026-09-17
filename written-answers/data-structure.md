@@ -120,9 +120,7 @@ Answer: A binary tree can be reconstructed uniquely from its `preorder` and `ino
    - `Postorder` (left, right, root) for this tree is `7, 6, 5, 4, 2, 3, 1`.
 
    Why this works, and when it does not
-   - Preorder alone or inorder alone cannot determine a tree uniquely — many different trees share the same preorder.
-   - `Preorder + inorder` or `postorder + inorder` always give a unique tree.
-   - `Preorder + postorder` does not, unless the tree is known to be a full binary tree (every node having 0 or 2 children).
+   - Preorder or inorder alone cannot determine a tree uniquely. `Preorder + inorder` or `postorder + inorder` always give a unique tree; `preorder + postorder` does not, unless the tree is known to be full (every node has 0 or 2 children).
 
 3. **You have to right the traversal order for the new algorithm which will traverse the following tree right child first, then left child and finally the root.** *[DPDC Assistant Manager (ICT) 27.06.2025 compact it 1363 (ET: BUET)]*
 
@@ -219,15 +217,6 @@ Answer: The property to prove is:
    Therefore  L = I + 1
    ```
 
-   Proof by induction (alternative)
-
-   - `Base case`: a tree with a single node. It is the root and also a leaf, so I = 0 and L = 1. Then L = I + 1 = 1 ✓.
-
-   - `Inductive step`: assume the property holds for a proper binary tree T. The only way to extend a proper binary tree is to take an existing leaf and give it two children — anything else would create a node with one child.
-     - That leaf becomes an internal node, so `I increases by 1`.
-     - It loses its leaf status but gains two new leaves, so `L increases by 2 − 1 = 1`.
-     - Both sides of L = I + 1 increase by 1, so the equality is preserved. ∎
-
    Verification with an example
    ```
                    A
@@ -323,7 +312,7 @@ Answer: The specific data was not printed, so a complete worked example is given
 
 6. **Consider the two given arrays as pre[]={1,2,4,8,9,5,3,6,7} and post[]={8,9,4,5,2,6,7,3,1}; Draw a binary tree from above array.** *[BPDB Assistant Engineer (CSE) 10.05.2024 compact it 390 (ET: BUET)]*
 
-Answer: A binary tree cannot generally be reconstructed from preorder and postorder alone, but it can if the tree is `full` (every node has 0 or 2 children). The arrays given here describe such a tree.
+Answer: A binary tree can be reconstructed from preorder and postorder alone only if the tree is `full` (every node has 0 or 2 children) — which these arrays describe.
 
    Given
    ```
@@ -332,9 +321,7 @@ Answer: A binary tree cannot generally be reconstructed from preorder and postor
    ```
 
    The method
-   - The first element of `preorder` is the root; the last element of `postorder` is the same root.
-   - The `second` element of preorder is the root of the left subtree. Find it in postorder — everything up to and including it belongs to the left subtree, and the rest (excluding the overall root) is the right subtree.
-   - Repeat recursively.
+   - Preorder's first element is the root (matching postorder's last). Preorder's second element is the left subtree's root — find it in postorder: everything up to and including it is the left subtree, the rest (excluding the overall root) is the right subtree. Repeat recursively.
 
    Step-by-step construction
 
@@ -375,8 +362,7 @@ Answer: A binary tree cannot generally be reconstructed from preorder and postor
    - `Inorder` for this tree: 8, 4, 9, 2, 5, 1, 6, 3, 7
 
    Why the "full tree" condition is needed
-   - Consider preorder `A, B` and postorder `B, A`. B could be either the left child or the right child of A, and both trees produce those same traversals. The ambiguity disappears only when every node is known to have 0 or 2 children, because then a single child cannot exist.
-   - By contrast, `preorder + inorder` and `postorder + inorder` always give a unique tree for any binary tree.
+   - Preorder `A, B` and postorder `B, A` fit either child of A being B — ambiguous unless every node is known to have 0 or 2 children. `Preorder + inorder` or `postorder + inorder` always give a unique tree regardless.
 
 7. **How to represent binary tree using array?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
@@ -936,8 +922,7 @@ Answer: (Answered in English, as required for IT topics.)
     - Searching for 50: compare with 30 and 60 → take the middle child → find 50 in [40|50]. Two node reads only.
 
     Why it is shaped this way — the key insight
-    - A disk read fetches an entire `block` (typically 4 KB), and the cost is dominated by the seek, not by how many bytes are read. So it is far better to read one block containing 200 keys than to read 8 blocks containing 1 key each.
-    - With a branching factor of a few hundred, the height stays tiny: a B-tree holding a million records has a height of only about 3, meaning `3 disk reads` to find any record. A binary search tree would need about 20.
+    - A disk read fetches an entire `block`, and the cost is dominated by the seek, not the bytes read — so one block of 200 keys beats 8 blocks of 1 key each. With a branching factor of a few hundred, a B-tree holding a million records has height only about 3 (`3 disk reads`), vs ~20 for a binary search tree.
 
     Complexity
     - Search, insert and delete are all `O(log n)`, and crucially the number of `disk accesses` is O(log_m n), which is very small.
@@ -945,21 +930,7 @@ Answer: (Answered in English, as required for IT topics.)
     Applications
     - `Database indexes` — MySQL InnoDB, PostgreSQL, Oracle and SQL Server all use B-trees or B+ trees for their primary and secondary indexes.
     - `File systems` — NTFS, HFS+, ext4 (HTree), XFS, Btrfs.
-    - Key-value stores and any large sorted index that does not fit in memory.
-    - Multilevel indexing in DBMS, and range queries.
-
-    B-tree vs B+ tree
-
-    | Point | B-tree | B+ tree |
-    |---|---|---|
-    | Data stored | In both internal nodes and leaves | Only in the `leaves` |
-    | Internal nodes | Hold keys and data pointers | Hold keys only, so more keys fit per block |
-    | Leaves linked | No | `Yes`, in a linked list |
-    | Range queries | Slower; requires traversal | `Very fast`; follow the leaf chain |
-    | Height | Slightly greater | Smaller, because internal nodes are denser |
-    | Used by | Some file systems | Almost all modern database indexes |
-
-    - The B+ tree's linked leaf level is why databases answer a range query like `WHERE age BETWEEN 25 AND 40` so efficiently: find the first leaf, then walk sideways.
+    - Key-value stores and any large sorted index that does not fit in memory; multilevel indexing and range queries in a DBMS.
 
 17. **(গ) নিচের ছবির Tree এর Inorder, Preorder এবং Postorder Traversal লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 622 (ET: N/A)]*
 
@@ -1383,8 +1354,7 @@ Answer: The convention stated is that a tree with a single node has height `1`, 
     ```
 
     Why this matters
-    - Search, insert and delete in a binary search tree cost `O(h)`. With the minimum height that is `O(log n)`, but with the maximum height it degrades to `O(n)` — no better than a linked list.
-    - Inserting already-sorted data into an ordinary BST produces exactly the skewed worst case. This is precisely why `self-balancing` trees — AVL and Red-Black — exist: they guarantee that h stays O(log n) after every operation.
+    - BST search/insert/delete cost `O(h)` — `O(log n)` at minimum height, but `O(n)` (no better than a linked list) at maximum height, exactly the skewed case produced by inserting already-sorted data. This is why `self-balancing` trees (AVL, Red-Black) exist.
 
 23. **(iii) Maximum and Minimum no of Nodes for a binary tree of height 7 where the root is considered as height 0.** *[NESCO Assistant Manager (ICT) 2021 compact it 908 (ET: BUET)]*
 
@@ -1515,7 +1485,7 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
     - `Postorder` (Left, Right, Root): B, D, F, J, K, H, I, G, E, C, A
 
     Note on the wording
-    - The question calls this a "full binary tree", but the tree that these traversals actually produce is not full: node C has two children, yet the shape is heavily right-leaning and the branch A → B is a single child on one side. The traversals given determine the tree uniquely, and this is the tree they determine. <!-- verify -->
+    - The question calls this a "full binary tree", but the tree these traversals actually produce isn't full — it's heavily right-leaning, with A→B a single child. The traversals still determine the tree uniquely, and this is that tree. <!-- verify -->
 
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
@@ -1582,24 +1552,6 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
         IF root = NULL THEN RETURN 0
         RETURN root.data + sumNodes(root.left) + sumNodes(root.right)
     END
-    ```
-
-    Iterative version, avoiding recursion depth limits
-    ```c
-    int sumNodesIterative(struct Node* root) {
-        if (root == NULL) return 0;
-        int sum = 0;
-        struct Node* stack[100];
-        int top = -1;
-        stack[++top] = root;
-        while (top >= 0) {
-            struct Node* node = stack[top--];
-            sum += node->data;
-            if (node->right) stack[++top] = node->right;
-            if (node->left)  stack[++top] = node->left;
-        }
-        return sum;
-    }
     ```
 
     Result for this tree
@@ -1760,8 +1712,7 @@ Answer: An expression tree is evaluated by `postorder` recursion: compute both o
     ```
 
     Why prefix and postfix are used
-    - Neither needs brackets or precedence rules — the order is fixed by the notation itself, which is why compilers convert infix to postfix and stack machines execute it directly.
-    - Postfix is the natural output of a postorder traversal, and is evaluated left to right; prefix is the preorder traversal, and is evaluated right to left.
+    - Neither needs brackets or precedence rules — the notation itself fixes the order, which is why compilers convert infix to postfix. Postfix is the postorder traversal (evaluated left to right); prefix is the preorder traversal (evaluated right to left).
 
 ## Stack (20)
 
@@ -1949,16 +1900,12 @@ Answer: A stack (LIFO) can be simulated with two queues (FIFO). There are two st
    | Best when | Pops are frequent | Pushes are frequent |
    | Space | O(n) | O(n) |
 
-   - It can also be done with a `single queue`: push x, then rotate the queue by dequeuing and re-enqueuing the preceding n − 1 elements. That gives O(n) push and O(1) pop with only one queue.
-
 3. **Correct of correct parentheses if it is written proper show matched if it does not show unmatched.** *[Titas Gas Assistant Engineer (CSE) 24.05.2024 compact it 418 (ET: BUET)]*
 
 Answer: Checking whether parentheses are balanced is the classic application of a stack, because the most recently opened bracket must be the first one closed — exactly LIFO behaviour.
 
    Rules for a balanced expression
-   - Every opening bracket has a matching closing bracket of the `same type`.
-   - Brackets are closed in the `correct order` — no crossing, so `([)]` is invalid.
-   - No closing bracket appears before its opening bracket.
+   - Every opening bracket has a matching closing bracket of the `same type`, closed in the `correct order` (no crossing — `([)]` is invalid), and no closing bracket appears before its opener.
 
    Algorithm
    ```
@@ -2047,12 +1994,10 @@ Answer: Checking whether parentheses are balanced is the classic application of 
    ```
 
    The three failure cases to remember
-   - A closing bracket arrives with an `empty stack` — e.g. `)(`
-   - The popped bracket is of the `wrong type` — e.g. `{]`
-   - The stack is `not empty` at the end — e.g. `((`
+   - A closing bracket with an `empty stack` (`)(`), a popped bracket of the `wrong type` (`{]`), or the stack `not empty` at the end (`((`).
 
    Complexity
-   - `Time O(n)` — each character is examined once. `Space O(n)` — in the worst case all characters are opening brackets.
+   - `Time O(n)`, `Space O(n)` worst case (all opening brackets).
 
 4. **Convert the infix expression P = 12 / (7 - 3) + 2 to postfix expression and evaluate it.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 420 (ET: BIBM)]*
 
@@ -2066,12 +2011,7 @@ Answer:
    Part 1 — convert infix to postfix using a stack
 
    Rules
-   - Operands go straight to the output.
-   - `(` is pushed onto the stack.
-   - On `)`, pop and output until the matching `(` is found, then discard both brackets.
-   - For an operator, pop and output all stack operators of `higher or equal` precedence (for left-associative operators), then push it.
-   - At the end, pop and output everything remaining.
-   - Precedence: `^` highest, then `* /`, then `+ −`.
+   - Operands go straight to output; `(` is pushed; on `)`, pop/output until the matching `(`, discarding both. For an operator, pop/output stack operators of `higher or equal` precedence, then push it; at the end, pop and output everything remaining. Precedence: `^` > `* /` > `+ −`.
 
    Trace
 
@@ -2117,12 +2057,6 @@ Answer:
    = 3 + 2
    = 5    ✓
    ```
-
-   For completeness — the prefix form
-   ```
-   Prefix P = + / 12 − 7 3 2
-   ```
-   - Obtained by reversing the infix (swapping brackets), converting to postfix, and reversing the result. Evaluating it right to left also gives 5.
 
 5. **Prefix Conversion A+ B * C+D expression?** *[BCC Assistant Programmer 11.11.2023 compact it 545 (ET: N/A)]*
 
@@ -2237,30 +2171,22 @@ Answer: A stack works on the `LIFO` principle — the element pushed most recent
 Answer: These are the three ways of writing an arithmetic expression, differing only in `where the operator is placed` relative to its operands.
 
     Infix notation
-    - The operator sits `between` its two operands — the normal human way of writing arithmetic.
+    - The operator sits `between` its operands — the normal human way of writing arithmetic — but needs `precedence`, `associativity` and `brackets` rules, making it harder for a machine to parse directly.
     ```
     A + B          (a + b) * c          A + B * C
     ```
-    - It requires `precedence rules` (`^` before `* /` before `+ −`), `associativity rules`, and `brackets` to override them.
-    - Easy for people to read, but harder for a machine: a compiler must parse precedence and brackets before it can evaluate anything. That is why expressions are converted to postfix internally.
 
     Prefix notation (Polish notation)
-    - The operator comes `before` its two operands. Invented by Jan Łukasiewicz.
+    - The operator comes `before` its operands (Jan Łukasiewicz); no brackets or precedence are ever needed. Evaluated `right to left` with a stack: push operands, and on an operator pop two, apply, push the result. It is the `preorder` traversal of the expression tree.
     ```
     + A B         * + a b c            + A * B C
     ```
-    - No brackets and no precedence rules are ever needed — the position of the operator fixes the order completely.
-    - Evaluated by scanning `right to left` with a stack: push operands; on an operator, pop two, apply, push the result.
-    - It is the `preorder` traversal of the expression tree.
 
     Postfix notation (Reverse Polish notation, RPN)
-    - The operator comes `after` its two operands.
+    - The operator comes `after` its operands; again no brackets or precedence needed. Evaluated `left to right` with a stack — the natural input direction, which is why compilers and calculators use it. It is the `postorder` traversal of the expression tree.
     ```
     A B +         a b + c *            A B C * +
     ```
-    - Again no brackets or precedence are needed.
-    - Evaluated by scanning `left to right` with a stack, which is the natural direction — this is why compilers, calculators and stack machines use it.
-    - It is the `postorder` traversal of the expression tree.
 
     Comparison
 
@@ -2288,9 +2214,7 @@ Answer: These are the three ways of writing an arithmetic expression, differing 
     ```
 
     Why the machine forms are used
-    - Prefix and postfix need `no brackets and no precedence table`, so evaluation is a single pass with a stack and no parsing.
-    - Postfix is preferred over prefix because it is scanned left to right, in the same direction the input arrives.
-    - Conversion from infix uses a stack for the operators — the classic Shunting-Yard algorithm.
+    - Both need no brackets or precedence table, so evaluation is a single stack pass; postfix is preferred since it scans left to right, the direction input arrives. Conversion from infix uses a stack — the Shunting-Yard algorithm.
 
 8. **(খ) Stack এর operation গুলি সংক্ষেপে বর্ণনা করুন।** *[BPSC Sub-Assistant Engineer (Ministry of Food) 2021 compact it 772 (ET: N/A)]*
 
@@ -2410,9 +2334,7 @@ Answer: (Answered in English, as required for IT topics.) This is a postfix expr
     ```
 
     Points to be careful about
-    - The order of the operands matters for `−`, `/` and `↑`. The value popped `second` is the left operand: for `8 4 /` the result is 8 ÷ 4 = 2, not 4 ÷ 8.
-    - At the end the stack must contain `exactly one` value. More than one means the expression was malformed.
-    - Complexity: `O(n)` time and `O(n)` space, in a single left-to-right pass with no bracket parsing at all — which is precisely why compilers convert infix to postfix.
+    - Operand order matters for `−`, `/`, `↑`: the value popped `second` is the left operand (`8 4 /` = 8÷4 = 2, not 4÷8). The stack must hold `exactly one` value at the end, or the expression was malformed. Complexity: `O(n)` time and space.
 
 10. **Write a C/C++ program to check Balanced parentheses in an Expression.** *[6 Banks & Financial Institutions Assistant Programmer 2021 compact it 830-831 (ET: N/A)]*
 
@@ -2481,34 +2403,7 @@ Answer:
     Not Balanced
     ```
 
-    C++ version using the standard library
-    ```cpp
-    #include <iostream>
-    #include <stack>
-    #include <string>
-    using namespace std;
-
-    bool isBalanced(const string &exp) {
-        stack<char> st;
-        for (char c : exp) {
-            if (c == '(' || c == '{' || c == '[') st.push(c);
-            else if (c == ')' || c == '}' || c == ']') {
-                if (st.empty()) return false;
-                char open = st.top(); st.pop();
-                if ((c == ')' && open != '(') ||
-                    (c == '}' && open != '{') ||
-                    (c == ']' && open != '[')) return false;
-            }
-        }
-        return st.empty();
-    }
-
-    int main() {
-        string exp;
-        cin >> exp;
-        cout << (isBalanced(exp) ? "Balanced" : "Not Balanced") << endl;
-    }
-    ```
+    (In C++, `std::stack<char>` with `push`/`top`/`pop` replaces the manual array — the same logic otherwise.)
 
     Why a stack is the right structure
     - The bracket opened most recently must be the first one closed — exactly `LIFO` behaviour. No other data structure captures that nesting requirement so directly.
@@ -2604,33 +2499,7 @@ Output: Not Balanced
      )     pop '[' — MISMATCH           -> NOT BALANCED
     ```
 
-    Java version
-    ```java
-    import java.util.*;
-
-    public class BalancedParenthesis {
-        static boolean isBalanced(String exp) {
-            Deque<Character> st = new ArrayDeque<>();
-            for (char c : exp.toCharArray()) {
-                if (c == '(' || c == '{' || c == '[') st.push(c);
-                else if (c == ')' || c == '}' || c == ']') {
-                    if (st.isEmpty()) return false;
-                    char open = st.pop();
-                    if ((c == ')' && open != '(') ||
-                        (c == '}' && open != '{') ||
-                        (c == ']' && open != '[')) return false;
-                }
-            }
-            return st.isEmpty();
-        }
-
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            while (sc.hasNext())
-                System.out.println(isBalanced(sc.next()) ? "Balanced" : "Not Balanced");
-        }
-    }
-    ```
+    (In Java, `Deque<Character>` used as a stack via `push`/`pop` gives the identical logic.)
 
     Key points
     - A stack is the right structure because the bracket opened `most recently` must be closed first — exactly LIFO.
@@ -2920,7 +2789,7 @@ Answer:
       − -> 14−16 = −2              ✓
     ```
 
-    - Both machine notations give the same value as the infix expression, and neither needs a single bracket — which is exactly why compilers convert to them.
+    - Both machine notations match the infix value and need no brackets — why compilers convert to them.
 
 ### Stack vs Queue / LIFO vs FIFO Comparison (5)
 
@@ -2965,16 +2834,16 @@ Answer:
    ```
    Infix: 12 / (7 − 3) + 2   ->  Postfix: 12 7 3 − / 2 +   ->  Value: 5
    ```
-   - Related stack applications: the function call stack and recursion, undo/redo, the browser back button, backtracking, and depth-first search.
+   - Related stack applications: the function call stack and recursion, undo/redo, the browser back button, backtracking, DFS.
 
    Two problems solved by a `queue`
 
    1. `CPU and printer scheduling`
-   - Jobs must be served in the order they arrive, which is exactly FIFO. A print spooler queues documents and prints them in submission order; a round-robin CPU scheduler holds ready processes in a queue.
+   - Jobs are served in arrival order, exactly FIFO: a print spooler prints in submission order, and a round-robin CPU scheduler holds ready processes in a queue.
 
    2. `Breadth-first search (BFS)`
-   - BFS explores a graph level by level. Nodes discovered first must be expanded first, so a queue holds the frontier. This is how the shortest path in an unweighted graph is found, and how a tree is printed level by level.
-   - Related queue applications: buffering in I/O and networking, call centre waiting lines, message queues, and the ready queue in an operating system.
+   - BFS explores a graph level by level — nodes discovered first must be expanded first, so a queue holds the frontier. This is how shortest path in an unweighted graph is found.
+   - Related queue applications: I/O buffering, message queues, the OS ready queue.
 
 2. **(খ) Stack ও Queue এর মধ্যে পার্থক্য লিখুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 410 (ET: N/A)]*
 
@@ -3092,20 +2961,10 @@ Answer: (Answered in English, as required for IT topics.)
 Answer:
 
     LIFO — Last In, First Out
-    - The element inserted `most recently` is removed first.
-    - Implemented by the `stack` data structure.
-    - Insertion (`push`) and deletion (`pop`) both happen at the same end, the `top`.
-    - Only one pointer is needed, `top`.
-    - The output order is the `reverse` of the input order.
-    - Analogy: a stack of plates — you take the plate you put down last.
+    - The `most recently` inserted element is removed first. Implemented by the `stack`: push/pop at the same `top` end, one pointer. Analogy: a stack of plates.
 
     FIFO — First In, First Out
-    - The element inserted `first` is removed first.
-    - Implemented by the `queue` data structure.
-    - Insertion (`enqueue`) happens at the `rear`, deletion (`dequeue`) at the `front`.
-    - Two pointers are needed, `front` and `rear`.
-    - The output order is the `same` as the input order.
-    - Analogy: a queue at a ticket counter — the first person to arrive is served first.
+    - The `first` inserted element is removed first. Implemented by the `queue`: enqueue at `rear`, dequeue at `front`, two pointers. Analogy: a ticket counter line.
 
     Comparison
 
@@ -3131,9 +2990,8 @@ Answer:
     ```
 
     Where each is the right choice
-    - Use `LIFO` when the most recent item must be handled first: undoing the last action, returning from the innermost function call, matching the innermost bracket.
-    - Use `FIFO` when fairness and order matter: serving customers, printing documents, transmitting packets, exploring a graph level by level.
-    - Related disciplines: `LILO` is another name for FIFO, and `FILO` another name for LIFO. Operating systems also use LRU and priority-based policies, which are neither.
+    - Use `LIFO` when the most recent item must be handled first: undo, function returns, bracket matching.
+    - Use `FIFO` when fairness and order matter: serving customers, printing, packet transmission, level-by-level graph traversal.
 
 ## Linked List (15)
 
@@ -3218,15 +3076,10 @@ Answer: A singly linked list is a linear data structure in which elements, calle
    ```
 
    Advantages
-   - `Dynamic size` — it grows and shrinks at run time, so no memory is wasted and no maximum has to be fixed in advance.
-   - Insertion and deletion are `O(1)` when the position is already known, with no shifting of elements as an array requires.
-   - Memory need not be contiguous, so a large list can be built even in a fragmented heap.
+   - `Dynamic size` — grows/shrinks at run time, with no maximum fixed in advance, and insertion/deletion are `O(1)` at a known position, with no element shifting or need for contiguous memory.
 
    Disadvantages
-   - `No random access` — reaching the nth element requires walking n nodes, so search is O(n).
-   - Extra memory for the pointer in every node.
-   - It can only be traversed `forward`; going back requires restarting from the head.
-   - Poorer cache performance than an array, because the nodes are scattered in memory.
+   - `No random access` — reaching the nth element is O(n); extra memory is needed for the pointer in every node; traversal is `forward only`; and cache performance is poorer since nodes are scattered.
 
 2. **Explain the difference between a singly linked list and a doubly linked list data structure.** *[Combined 2 Bank (Sonali & Janata) Officer IT 04.10.2024 compact it 426 (ET: BIBM)]*
 
@@ -3285,20 +3138,17 @@ Answer:
    ```
 
    Why the extra pointer is worth its cost
-   - Deleting a node whose address is already known takes `O(1)` in a doubly linked list, because `node->prev->next = node->next` and `node->next->prev = node->prev` are enough. In a singly linked list the predecessor must be found first, which costs O(n).
-   - That single property is why an `LRU cache` uses a doubly linked list together with a hash map: the map gives the node's address instantly, and the list then removes and re-inserts it in constant time.
+   - Deleting a known node is `O(1)` in a doubly linked list (`prev->next` and `next->prev` relink directly) vs O(n) in a singly linked list, where the predecessor must first be found. This is why an `LRU cache` pairs a doubly linked list with a hash map for O(1) removal and re-insertion.
 
    Circular variants
-   - Either list can be made `circular` by pointing the last node's `next` back to the head (and in the doubly linked case, the head's `prev` back to the tail). A circular doubly linked list allows traversal to begin at any node and continue indefinitely in either direction, which suits round-robin scheduling and music playlists.
+   - Either list can be made `circular` by linking the last node's `next` back to the head, letting traversal begin anywhere and continue indefinitely — useful for round-robin scheduling and playlists.
 
 3. **(ক) Linked list কী? উহার প্রকারভেদ চিত্রসহ বর্ণনা করুন।** *[18th NTRCA - College Lecturer (ICT) 13.07.2024 compact it 408 (ET: N/A)]*
 
 Answer: (Answered in English, as required for IT topics.)
 
    What is a linked list
-   - A linked list is a linear data structure in which elements, called `nodes`, are stored at scattered memory locations and joined together by `pointers`. Each node holds the data and the address of the next node.
-   - Unlike an array, the memory is not contiguous, so the list can grow and shrink at run time without any fixed maximum size.
-   - Access to the list is through a `head` pointer that holds the address of the first node.
+   - A linked list is a linear data structure whose elements (`nodes`) sit at scattered memory locations joined by `pointers`; each node holds data plus the next node's address. Unlike an array it needs no contiguous memory, so it grows/shrinks at run time with no fixed size, reached via a `head` pointer.
 
    Types of linked list
 
@@ -3609,48 +3459,7 @@ Answer:
 
     Output: 4 3 2 1
     ```
-    - Placing `printf` `before` the recursive call would print 1 2 3 4 — the normal forward order. That single line's position is the whole trick.
-
-    Java version
-    ```java
-    class Node {
-        int data; Node next;
-        Node(int d) { data = d; }
-    }
-
-    public class ReverseList {
-        static void printReverse(Node head) {
-            if (head == null) return;
-            printReverse(head.next);
-            System.out.print(head.data + " ");
-        }
-        public static void main(String[] args) {
-            Node head = new Node(1);
-            head.next = new Node(2);
-            head.next.next = new Node(3);
-            head.next.next.next = new Node(4);
-            printReverse(head);        // 4 3 2 1
-        }
-    }
-    ```
-
-    Python version
-    ```python
-    class Node:
-        def __init__(self, data):
-            self.data = data
-            self.next = None
-
-    def print_reverse(head):
-        if head is None:
-            return
-        print_reverse(head.next)
-        print(head.data, end=' ')
-
-    head = Node(1); head.next = Node(2)
-    head.next.next = Node(3); head.next.next.next = Node(4)
-    print_reverse(head)                # 4 3 2 1
-    ```
+    - Placing `printf` `before` the recursive call would print 1 2 3 4 — the normal forward order. That single line's position is the whole trick. (The same logic ports directly to C++, Java or Python — only the syntax changes.)
 
     Complexity
     - `Time O(n)` — every node is visited once.
@@ -3731,9 +3540,8 @@ Answer:
        ^                                                          |
        +----------------------------------------------------------+
     ```
-    - Advantages: traversal can begin at any node and continue indefinitely; the whole list is reachable from any single node; ideal for anything cyclic.
-    - Disadvantages: traversal must be stopped deliberately by comparing against the starting node, or it loops forever; slightly more complex insertion and deletion.
-    - Uses: round-robin CPU scheduling, music and video playlists on repeat, multiplayer turn management, buffering, the Fibonacci heap.
+    - Advantages: traversal can begin at any node and continue indefinitely; ideal for anything cyclic. Disadvantages: must stop deliberately by comparing against the start node, or it loops forever.
+    - Uses: round-robin CPU scheduling, playlists on repeat, buffering.
 
     Comparison
 
@@ -4034,23 +3842,16 @@ Answer:
 
    Advantages of linked lists over arrays
 
-   - `Dynamic size.` The list grows and shrinks at run time, so the size need not be known in advance. An array's size is fixed at declaration, which means either wasting space or running out of it.
-   - `Efficient insertion and deletion.` Inserting or deleting at the beginning is `O(1)` — just two pointer assignments. In an array every following element must shift, which is O(n).
-   - `No memory wastage.` Exactly as many nodes are allocated as are needed. An array declared for 1000 elements but holding 10 wastes the other 990 slots.
-   - `No contiguous memory needed.` A linked list can be built even when the heap is fragmented and no single large block is free. An array of 1 MB needs 1 MB of contiguous memory.
-   - `No costly resizing.` A dynamic array must allocate a bigger block and copy everything across when it fills; a linked list simply allocates one more node.
-   - `Easy to implement other structures.` Stacks, queues, adjacency lists for graphs and chaining in hash tables are all naturally built on linked lists.
-   - `Merging and splitting are cheap` — changing a few pointers, rather than copying data.
+   - `Dynamic size` — grows/shrinks at run time; an array's size is fixed at declaration, wasting space or running out of it.
+   - `Cheap insert/delete at the front` — O(1), two pointer assignments, vs O(n) for an array's shift.
+   - `No memory waste, no contiguous block needed` — exactly as many nodes as used, and works even when the heap is fragmented; no costly resizing either, since a full dynamic array must reallocate and copy everything.
+   - `Natural base for other structures` — stacks, queues, graph adjacency lists, hash-table chaining, all built on linked lists cheaply.
 
    Disadvantages of linked lists over arrays
 
-   - `No random access.` Reaching the ith element requires walking i nodes, which is `O(n)`, whereas an array gives `O(1)` by index. This is the single biggest drawback.
-   - `Binary search is impossible`, because it depends on random access. A sorted array can be searched in O(log n); a sorted linked list still takes O(n).
-   - `Extra memory for pointers.` Every node carries one pointer (singly) or two (doubly). Storing a single 4-byte integer per node may cost 12 or 20 bytes in total on a 64-bit machine.
-   - `Poor cache performance.` Array elements sit next to each other, so one cache line brings in several of them. Linked-list nodes are scattered, causing a cache miss at almost every step. In practice this often makes an array several times faster even for operations where the linked list has the better big-O.
-   - `No reverse traversal` in a singly linked list.
-   - `More complex code`, and pointer errors — dangling pointers, memory leaks, lost links — are easy to make.
-   - `Deletion needs the predecessor` in a singly linked list, so it costs O(n) to find it.
+   - `No random access` — reaching the ith element is `O(n)` vs an array's `O(1)`; this is the single biggest drawback, and it also rules out `binary search` (still O(n) even when sorted).
+   - `Extra memory per node` for the pointer(s) (singly or doubly), and `poor cache locality` since nodes are scattered — in practice often slower than an array despite equal or better big-O.
+   - `More complex, error-prone code` — dangling pointers, memory leaks, lost links; a singly linked list also can't traverse backward, and deleting a node needs its predecessor found first.
 
    Summary
 
@@ -4117,13 +3918,10 @@ Answer:
    ```
 
    Similarities
-   - Both are `linear` data structures storing a sequence of elements in order.
-   - Both support traversal, insertion, deletion and search.
-   - Both can implement stacks and queues.
+   - Both are `linear` structures supporting traversal, insertion, deletion and search, and both can implement stacks and queues.
 
    Choosing between them
-   - Use an `array` for a known, stable size with frequent random access — lookup tables, matrices, sorting with binary search.
-   - Use a `linked list` for an unpredictable size with frequent insertion and deletion, especially at the front — queues, undo stacks, hash-table chaining, graph adjacency lists.
+   - Use an `array` for a known, stable size with frequent random access; use a `linked list` for an unpredictable size with frequent insertion/deletion at the front.
 
 5. **(a) What are the differences between linked list and array data structure?** *[BPSC (Security Services Division) Assistant Programmer 13.12.2021 compact it 887 (ET: N/A)]*
 
@@ -4169,27 +3967,18 @@ Answer:
 
 Answer: A linked list is better than an array for `Insert` and `Delete`, but `not` for `Search`.
 
-    Insert — `linked list is better`
-    - Inserting at the beginning of a linked list is `O(1)`: create the node, set `new->next = head`, then `head = new`. Two assignments, nothing else moves.
-    - Inserting at the beginning of an array is `O(n)`: every existing element must shift one place to the right to make room.
-    - Inserting in the middle is O(1) in a linked list once the position is known, against O(n) in an array.
-    - A linked list also never needs `resizing`. When an array fills up, a bigger block must be allocated and every element copied across.
+    Insert / Delete — `linked list is better`
+    - Inserting or deleting at the front is `O(1)` in a linked list (just re-point `head`) vs `O(n)` in an array (every element shifts). Inserting in the middle is O(1) once the position is known, vs O(n) for an array. A linked list also never needs `resizing`; a full array must reallocate and copy everything.
     ```
     Insert 5 at the front of [10, 20, 30, 40]
 
     ARRAY:       shift 40, 30, 20, 10 right, then write 5   -> 4 moves,  O(n)
     LINKED LIST: new->next = head ; head = new              -> 2 steps,  O(1)
     ```
-
-    Delete — `linked list is better`
-    - Deleting the first element of a linked list is `O(1)`: `head = head->next`, then free the old node.
-    - Deleting the first element of an array is `O(n)`: every following element shifts left to close the gap.
-    - In a `doubly` linked list, deleting any node whose address is known is O(1), because the node already knows its predecessor.
+    - In a `doubly` linked list, deleting any node whose address is already known is also O(1).
 
     Search — `array is better`
-    - An array gives `O(1)` random access by index, so a `sorted` array can be searched with binary search in `O(log n)`.
-    - A linked list has no random access. Reaching the middle element already costs O(n), so binary search cannot be applied at all; searching is always `O(n)` even when the list is sorted.
-    - Arrays also have far better `cache locality`, so even an O(n) linear scan of an array is typically several times faster in practice than the same scan of a linked list.
+    - An array's `O(1)` random access lets a `sorted` array use binary search, `O(log n)`. A linked list has no random access, so search stays `O(n)` even when sorted, and an array's better `cache locality` makes even a linear scan faster in practice.
 
     Summary
 
@@ -4358,11 +4147,7 @@ Answer:
 Answer: (Answered in English, as required for IT topics.)
 
    What is a binary search tree
-   - A BST is a binary tree in which, for `every` node:
-     - all values in the `left` subtree are `smaller` than the node's value, and
-     - all values in the `right` subtree are `larger`.
-   - The property must hold at every node, not just the root — that is the most common mistake.
-   - Consequence: the `inorder traversal always produces the values in sorted order`, which is the standard test of validity.
+   - A BST is a binary tree where, at `every` node (not just the root), all `left`-subtree values are smaller and all `right`-subtree values are larger. Consequence: `inorder traversal always produces sorted order` — the standard validity test.
 
    Example
    ```
@@ -4722,7 +4507,6 @@ Answer: Every BST operation walks down a single path from the root, so its cost 
    n = 7, height = 2, so at most 3 comparisons.
    ```
    - Each comparison discards half the remaining nodes, exactly as in binary search, giving `O(log n)`.
-   - For a million nodes, only about 20 comparisons are needed.
 
    Worst case — a `skewed` tree
    - Occurs when the data is inserted in `sorted` (or reverse-sorted) order, so every new node hangs off the same side.
@@ -4742,7 +4526,6 @@ Answer: Every BST operation walks down a single path from the root, so its cost 
    n = 5, height = 4. Searching for 50 needs 5 comparisons.
    ```
    - The tree has degenerated into a `linked list`, so search, insert and delete all become `O(n)` — no better than sequential search.
-   - For a million nodes, a million comparisons.
 
    Why the difference is so large
    ```
@@ -4766,11 +4549,7 @@ Answer: Every BST operation walks down a single path from the root, so its cost 
 Answer:
 
    What is a binary search tree
-   - A BST is a binary tree in which, for `every` node:
-     - every value in the `left` subtree is `smaller` than the node's value, and
-     - every value in the `right` subtree is `larger`.
-   - The rule must hold at every node, not merely at the root.
-   - Duplicates are normally not allowed, or are pushed consistently to one side.
+   - A BST is a binary tree where, at `every` node (not just the root), left-subtree values are smaller and right-subtree values are larger. Duplicates are normally disallowed, or pushed consistently to one side.
 
    Example
    ```
@@ -4799,8 +4578,8 @@ Answer:
    | Space | O(n) | O(n) |
 
    Why the two extremes exist
-   - `Balanced case` — the height is about log2 n. Every comparison halves the search space, exactly as in binary search. For a million nodes, about 20 comparisons.
-   - `Worst case` — inserting `sorted` data makes every node the right child of the previous one, so the tree becomes a chain of height n − 1 and behaves like a linked list. For a million nodes, a million comparisons.
+   - `Balanced case` — height ≈ log2 n; every comparison halves the search space, as in binary search.
+   - `Worst case` — inserting `sorted` data makes every node the right child of the previous one, so the tree becomes a chain of height n − 1, behaving like a linked list.
    ```
    Sorted input 10, 20, 30, 40, 50 gives:
 
@@ -4818,9 +4597,6 @@ Answer:
    Remedy
    - `Self-balancing` trees rebalance with rotations after every insertion and deletion, guaranteeing O(log n) in all cases: `AVL` (strict height balance), `Red-Black` (used by C++ `std::map` and Java `TreeMap`), and `B-trees` for disk-based indexes.
 
-   Applications
-   - Sorted-order storage and retrieval, dictionaries and symbol tables in compilers, database indexing, range queries, priority scheduling, and any situation where both fast search and sorted output are required.
-
 ## Priority Queues & Heaps (Min/Max Heap) (8)
 
 1. **Max heap:** *[Dhaka Mass Transit Company Limited (DMTCL) Assistant Engineer (ICT) 27.01.2023 compact it 476 (ET: N/A)]*
@@ -4828,8 +4604,8 @@ Answer:
 Answer: A `max heap` is a `complete binary tree` in which every parent node is greater than or equal to both of its children, so the largest element is always at the root.
 
    The two defining properties
-   - `Structural property` — the tree is complete: every level is filled from the left, and only the last level may be partly filled. This is what allows an array representation with no gaps.
-   - `Ordering property` — for every node i: `parent(i) >= child(i)`. Note that this says nothing about left versus right, which is what distinguishes a heap from a BST.
+   - `Structural property` — complete tree: every level filled from the left, only the last level partly filled, allowing an array representation with no gaps.
+   - `Ordering property` — `parent(i) >= child(i)` for every node; says nothing about left vs. right, which is what distinguishes a heap from a BST.
 
    Array representation (0-based)
    ```
@@ -4900,10 +4676,10 @@ Answer: A `max heap` is a `complete binary tree` in which every parent node is g
 
 2. **Max Heap Operation [a-j] show heap.** *[Combined Bank Assistant Programmer 09.06.2023 compact it 497 (ET: N/A)]*
 
-Answer: The ten letters `a` to `j` are inserted one at a time into a max heap. Since a heap stores comparable items, the alphabetical order applies, so `j` is the largest and `a` the smallest.
+Answer: The letters `a`–`j` are inserted one at a time into a max heap, using alphabetical order (`j` largest, `a` smallest).
 
    Rule for insertion
-   - Place the new item at the next free position (keeping the tree complete), then `sift up`: while it is greater than its parent, swap with the parent.
+   - Place the new item at the next free position, then `sift up`: swap with the parent while it is greater.
 
    Step-by-step
 
@@ -5004,11 +4780,10 @@ Answer: The ten letters `a` to `j` are inserted one at a time into a max heap. S
    j >= i, f   ✓        i >= g, h   ✓        f >= b, e   ✓
    g >= a, d   ✓        h >= c      ✓
    ```
-   - Every parent is greater than or equal to its children, and the tree is complete (all levels full except the last, which is filled from the left) ✓
+   - Every parent >= its children, and the tree stays complete ✓
 
    Complexity
-   - Each insertion is `O(log n)`, so building the heap by ten successive insertions costs `O(n log n)`.
-   - Building a heap from an existing array with the bottom-up heapify method would cost only `O(n)`, which is the faster route when all the data is available at once.
+   - Ten successive insertions cost `O(log n)` each, `O(n log n)` total — a bottom-up heapify from an existing array would cost only `O(n)`.
 
 3. **অথবা, (ক) Heap data structure কী? কোন ক্ষেত্রে Heap ব্যবহার করা হয়?** *[17th NTRCA Lecturer (ICT) (CSE): 2023 compact it 606 (ET: N/A)]*
 
@@ -5036,8 +4811,7 @@ Answer: (Answered in English, as required for IT topics.)
    ```
 
    Important distinction from a BST
-   - A heap is ordered `only vertically` — parent versus child. It says nothing about left versus right, so it cannot be searched efficiently for an arbitrary value (that is O(n)).
-   - What it does give is `O(1)` access to the maximum or minimum, which is exactly what a priority queue needs.
+   - A heap is ordered `only vertically` (parent vs. child), so it cannot be searched efficiently for an arbitrary value (O(n)) — but it gives `O(1)` access to the maximum or minimum, exactly what a priority queue needs.
 
    Complexity
 
@@ -5050,15 +4824,10 @@ Answer: (Answered in English, as required for IT topics.)
    | Search an arbitrary value | O(n) |
 
    Where heaps are used
-
-   - `Priority queue` — the primary use. Items are served by priority rather than arrival order, which is what emergency-room triage, print scheduling and operating-system process scheduling require.
-   - `Heap sort` — build a max heap, then repeatedly extract the root. `O(n log n)` in every case, and it sorts in place with O(1) extra space.
-   - `Dijkstra's shortest path` and `Prim's minimum spanning tree` — a min heap supplies the next nearest vertex in O(log n), which is what reduces Dijkstra from O(V²) to O(E log V).
-   - `Huffman coding` — a min heap repeatedly supplies the two least frequent symbols while the code tree is built.
-   - `Kth largest or smallest element` — keep a heap of size k, giving O(n log k) instead of sorting everything.
-   - `Median maintenance in a stream` — a max heap for the lower half and a min heap for the upper half.
-   - `Memory management` — the "heap" region in a program is a different concept, but heap structures are used inside some allocators and garbage collectors.
-   - `Job and event scheduling`, load balancing, and merging k sorted lists.
+   - `Priority queue` — the primary use: items served by priority rather than arrival order (OS scheduling, print queues, triage).
+   - `Heap sort` — build a max heap, repeatedly extract the root; `O(n log n)` in every case, in place.
+   - `Dijkstra` and `Prim` — a min heap supplies the next nearest vertex in O(log n), reducing Dijkstra from O(V²) to O(E log V).
+   - `Huffman coding`, `kth largest/smallest element`, and `median maintenance in a stream` (two heaps, one per half).
 
 4. **Write down the properties of Max heap. Also write down the heapsort algorithm.** *[BPSC (Ministry of Home Affairs) Senior Computer Operator (CSE) 13.09.2022 compact it 686 (ET: N/A)]*
 
@@ -5066,28 +4835,25 @@ Answer:
 
    Properties of a max heap
 
-   1. `Structural property — it is a complete binary tree.`
-   - Every level is completely filled except possibly the last, and the last level is filled from `left to right` with no gaps.
-   - This is what allows the heap to be stored in a plain array with no wasted slots.
+   1. `Structural property` — a complete binary tree: every level full except possibly the last, which fills `left to right` with no gaps. This lets the heap live in a plain array with no wasted slots.
 
-   2. `Ordering property — parent >= children.`
-   - For every node, `A[parent(i)] >= A[i]`. The property is `vertical only`; it says nothing about the relationship between a left child and a right child.
+   2. `Ordering property` — `A[parent(i)] >= A[i]` for every node. This order is `vertical only`; it says nothing about left vs. right child.
 
-   3. `The root holds the maximum` of the whole heap. It follows from the ordering property applied repeatedly.
+   3. `The root holds the maximum` — follows from the ordering property applied repeatedly.
 
-   4. `Array representation` (0-based indexing)
+   4. `Array representation` (0-based)
    ```
    Left child  = 2i + 1
    Right child = 2i + 2
    Parent      = (i − 1) / 2
    ```
-   - For n elements, the leaves occupy indices from `⌊n/2⌋` to `n − 1`, so heapify need only be applied to the first ⌊n/2⌋ nodes.
+   Leaves occupy indices `⌊n/2⌋` to `n − 1`, so heapify need only touch the first ⌊n/2⌋ nodes.
 
-   5. `Height` of a heap with n nodes is `⌊log2 n⌋`, which bounds the cost of insertion and deletion at O(log n).
+   5. `Height` = `⌊log2 n⌋`, bounding insert/delete at O(log n).
 
-   6. `Every subtree is itself a max heap`, which is what makes the recursive heapify correct.
+   6. `Every subtree is itself a max heap` — what makes recursive heapify correct.
 
-   7. `It is not a search structure.` Finding an arbitrary value requires scanning all n elements.
+   7. `Not a search structure` — finding an arbitrary value needs O(n).
 
    Example
    ```
@@ -5103,7 +4869,7 @@ Answer:
 
    Heap sort algorithm
 
-   The idea: build a max heap, then repeatedly swap the root (the largest remaining value) with the last element of the heap and shrink the heap by one.
+   The idea: build a max heap, then repeatedly swap the root with the last element and shrink the heap by one.
 
    ```
    ALGORITHM heapSort(A, n)
@@ -5185,7 +4951,7 @@ Answer:
    | `Space` | `O(1)` — sorts in place |
    | Stable? | No |
 
-   - Heap sort's guarantee of O(n log n) in the `worst` case, with O(1) extra space, is its advantage over quick sort (O(n²) worst case) and merge sort (O(n) extra space). In practice quick sort is usually faster because of better cache behaviour.
+   - Heap sort guarantees `O(n log n)` worst case with `O(1)` extra space — better worst case than quick sort (O(n²)) and better space than merge sort (O(n)), though quick sort is usually faster in practice.
 
 5. **Given an array of 6 elements: \{15, 19, 10, 7, 17, 16\}. Draw heap tree and again draw the tree after deletion of element 7 from this tree.** *[PGCB Assistant Engineer (CSE) 30.09.2021 compact it 863 (ET: BUET)]*
 
@@ -5240,10 +5006,7 @@ Answer:
    Part 2 — delete the element 7
 
    - 7 sits at array index 3, a leaf on the last level.
-   - Standard procedure for deleting an arbitrary element from a heap:
-     - Step 1 — replace it with the `last` element of the heap, so the tree stays complete.
-     - Step 2 — reduce the heap size by one.
-     - Step 3 — restore the heap property by sifting the replacement `up` or `down` as needed.
+   - General procedure: replace the deleted node with the heap's `last` element, shrink the heap by one, then sift the replacement `up` or `down` to restore the heap property.
 
    ```
    Step 1: the last element is 10. Move 10 into index 3 (where 7 was).
@@ -5271,13 +5034,13 @@ Answer:
    - Verification: 19 >= 17 and 16 ✓ ; 17 >= 10 and 15 ✓ ; complete tree ✓
 
    Points to note
-   - The `last` element must be used as the replacement, not simply the removed node's child. Anything else would break the completeness of the tree, and completeness is what makes the array representation valid.
-   - After the replacement, the new value may be too large (sift up) or too small (sift down); both must be considered when deleting an arbitrary node. When deleting the `root`, only sifting down is possible.
-   - Complexity of deletion: `O(log n)` for the sift, plus `O(n)` to locate an arbitrary element in the first place — a heap cannot be searched efficiently.
+   - The `last` element replaces the deleted node — never just a child — or the tree loses completeness, which the array form depends on.
+   - The replacement may need to sift `up` (too large) or `down` (too small); deleting the `root` only ever needs sifting down.
+   - Deletion costs `O(log n)` for the sift, plus `O(n)` to locate an arbitrary element — a heap cannot be searched efficiently.
 
 6. **Binary tree টিকে heapify করুন যেন maximum heap -এ রূপান্তরিত হয়:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
-Answer: (Answered in English, as required for IT topics.) The figure was not printed, so a standard example is used and the full heapify method is shown so that any tree can be converted the same way.
+Answer: (Answered in English, as required for IT topics.) The figure was not printed, so a standard example illustrates the general heapify method.
 
    What heapify means
    - Converting an arbitrary binary tree (stored as a complete tree) into a `max heap`, in which every parent is greater than or equal to both of its children.
@@ -5354,16 +5117,14 @@ Answer: (Answered in English, as required for IT topics.) The figure was not pri
    - Verification: 10 >= 5 and 3 ✓ ; 5 >= 4 and 1 ✓ ; the tree is complete ✓
 
    Complexity
-   - Building a heap this way is `O(n)`, not O(n log n). The reason is that most nodes are near the bottom and sift down only a short distance: the sum over all levels works out to O(n).
-   - Building the same heap by n successive insertions would cost O(n log n), so the bottom-up method is preferred whenever all the data is available at once.
+   - Building bottom-up this way is `O(n)`, not O(n log n), since most nodes sit near the bottom and sift down only a short distance. Building via n successive insertions would instead cost O(n log n).
 
 7. **Heapify the MAX heap tree.** *[PGCB Sub-Assistant Engineer (CSE) 2020 compact it 1043, 1045 (ET: BUET)]*
 
-Answer: The tree was not printed, so a standard example is used, with the general method shown so any tree can be converted.
+Answer: The tree was not printed, so a standard example illustrates the general method.
 
    What heapifying to a max heap means
-   - Rearranging a complete binary tree so that `every parent is greater than or equal to both of its children`. The largest value then sits at the root.
-   - The tree's `shape` never changes — only the values are swapped, so the tree remains complete.
+   - Rearranging a complete binary tree so `every parent >= both children`, putting the largest value at the root. Only the values move — the tree's `shape` never changes and it remains complete.
 
    Method — bottom-up build heap
    - Apply `sift down` starting at the last non-leaf node, index `⌊n/2⌋ − 1`, and work backwards to index 0.
@@ -5456,7 +5217,7 @@ Answer: A heap with 11 nodes has 4 levels: levels 0, 1 and 2 are full (1 + 2 + 4
            /   \      /  \
       index 7 index 8 index 9 index 10
    ```
-   - Levels 0–2 are complete; the last level holds indices 7, 8, 9 and 10, filled left to right with no gaps. This is the `completeness` requirement.
+   - The last level (indices 7–10) is filled left to right with no gaps — the `completeness` requirement.
 
    MAX HEAP with 11 nodes — using values 1 to 11
    ```
@@ -5536,34 +5297,16 @@ Answer:
                                      +-------+---------------+
    ```
 
-   Hash function
-   - Maps a key of any size to a fixed range of indices. A good hash function is fast to compute, distributes keys uniformly, and is deterministic.
-   - Common methods: `division` (h(k) = k mod m, with m prime), `mid-square`, `folding`, and `multiplication`.
-
-   Collisions
-   - Two different keys may hash to the same index. Two families of solutions:
-     - `Separate chaining` — each slot holds a linked list of all keys that hash there.
-     - `Open addressing` — probe for the next free slot: linear probing, quadratic probing or double hashing.
+   Hash function and collisions
+   - A good hash function is fast, deterministic, and distributes keys uniformly. Common methods: `division` (k mod m), `mid-square`, `folding`.
+   - Collisions (two keys hashing to the same index) are resolved by `separate chaining` (linked list per slot) or `open addressing` (probe the next free slot).
 
    Advantages of a hash table
-
-   - `O(1) average time` for search, insert and delete. No other general-purpose structure achieves this — a balanced BST needs O(log n), an unsorted array O(n).
-   - `Direct access by key`, computed rather than searched, so the cost is independent of how many items are stored.
-   - `Fast even for very large data sets`: looking up one key among a million costs the same as among a hundred.
+   - `O(1) average time` for search, insert and delete — a balanced BST needs O(log n), an unsorted array O(n).
+   - `Direct access by key`, computed rather than searched, so cost doesn't grow with the number of items stored.
    - `Flexible keys` — strings, objects and composite values can all be hashed, not just integers.
-   - `Efficient duplicate detection and set membership testing`, which is why hash sets are used for de-duplication.
-   - `Simple interface and wide language support` — Python `dict`, Java `HashMap`, C++ `unordered_map`, JavaScript objects.
-   - `Dynamic sizing` through rehashing when the load factor grows too high.
-   - `Good space–time balance` when the load factor is kept around 0.7.
-
-   Limitations, for balance
-   - `No ordering` — the keys come out in arbitrary order, so range queries and sorted traversal are impossible. A BST is used when order matters.
-   - `Worst case O(n)` if the hash function is poor and every key collides.
-   - Performance depends on the `load factor` α = n/m; rehashing is an expensive O(n) operation when it happens.
-   - Some memory is always left empty by design.
-
-   Applications
-   - Database indexing, compiler symbol tables, caches (including CPU caches and web caches), password storage, dictionaries and sets in every modern language, blockchains, and duplicate detection.
+   - `Wide language support` — Python `dict`, Java `HashMap`, C++ `unordered_map`.
+   - `Dynamic sizing` via rehashing, keeping the load factor (ideally ≤ 0.7) low for a good space–time balance.
 
 2. **Consider a hash table of size 13 strong entries with integer keys. Suppose the hash function is h(k) = k \bmod 13. Insert in the given order entries with keys 10, 3, 6, 16, 17, 19 in to the hash table using linear probing to resolve collisions. Show all the work.** *[Bangladesh Bank Assistant Programmer 03.02.2023 compact it 434 (ET: BIBM)]*
 
@@ -5638,8 +5381,8 @@ Answer:
    Observations
    - `Load factor` α = 6 / 13 = 0.46, comfortably below the 0.7 threshold at which open addressing degrades.
    - Total probes: 3 collisions, each resolved in one extra step.
-   - Notice the `primary clustering` beginning to form at indices 3–7: linear probing places colliding keys next to one another, and those blocks then attract further collisions. Key 17 collided not with another key that shared its hash, but with 16, which had itself been displaced. This is the characteristic weakness of linear probing, and it is why `quadratic probing` (offset i²) or `double hashing` (offset i·h₂(k)) are preferred for heavily loaded tables.
-   - Deletion in an open-addressed table must place a `tombstone` marker rather than simply emptying the slot, or the probe chain would break and later keys would become unreachable.
+   - `Primary clustering` is forming at indices 3–7 — linear probing packs colliding keys together, and that block attracts further collisions (17 collided with the already-displaced 16). `Quadratic probing` or `double hashing` avoid this.
+   - Deletion needs a `tombstone` marker, not an empty slot, or the probe chain breaks.
 
 3. **অথবা, Hashing বলতে কী বোঝায়? Hash ফাংশন গঠনের জন্যে যে কোনো তিনটি পদ্ধতি বিস্তারিত লিখুন।** *[17th NTRCA Lecturer (ICT) (ICT): 2023 compact it 623 (ET: N/A)]*
 
@@ -5689,17 +5432,13 @@ Answer: (Answered in English, as required for IT topics.)
    ```
    - Advantage: every digit of the key influences the result, and it handles very long keys such as account numbers and phone numbers well. Disadvantage: the part size must be chosen to suit the table size.
 
-   Two further methods worth naming
-   - `Multiplication method`: `h(k) = ⌊ m × (k·A mod 1) ⌋`, with A ≈ 0.618 (the golden ratio). The table size is unrestricted, which is its advantage over the division method.
-   - `Digit extraction`: choose specific digit positions from the key, discarding those known to be poorly distributed — for example dropping a common area-code prefix from a set of phone numbers.
-
    Collision resolution, in brief
-   - `Separate chaining` — each slot holds a linked list of all keys hashing there. Simple, tolerates a load factor above 1, and deletion is easy.
-   - `Open addressing` — probe for the next free slot: linear (i), quadratic (i²), or double hashing (i·h₂(k)). Saves the pointer memory, but the load factor must stay below about 0.7.
+   - `Separate chaining` — each slot holds a linked list of keys hashing there; simple, and deletion is easy.
+   - `Open addressing` — probe for the next free slot (linear, quadratic, or double hashing); saves pointer memory but needs load factor below ~0.7.
 
 4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 
-Answer: The specific data was not printed, so separate chaining is explained and worked through with a complete example.
+Answer: The specific data was not printed, so a complete worked example is used.
 
    What separate chaining is
    - Each slot of the hash table holds a `pointer to a linked list` (a "chain") containing every key that hashes to that index. Collisions are therefore never a problem — the new key is simply appended to the chain.
@@ -5764,21 +5503,7 @@ Answer: The specific data was not printed, so separate chaining is explained and
    | Average | `O(1 + α)` |
    | Worst | `O(n)` — every key hashes to the same slot |
 
-   - The average chain length is exactly α, which is why keeping α near 1 keeps chaining efficient. Doubling the table size and rehashing restores performance when α grows too large.
-
-   Separate chaining vs open addressing
-
-   | Point | Separate chaining | Open addressing |
-   |---|---|---|
-   | Storage | Linked lists outside the table | All keys inside the table |
-   | Load factor | May exceed 1 | Must stay below about 0.7 |
-   | Deletion | Simple — unlink the node | Needs a tombstone marker |
-   | Clustering | None | Primary and secondary clustering |
-   | Extra memory | Pointers for every node | None |
-   | Cache performance | Poorer, nodes are scattered | Better, contiguous array |
-   | Behaviour when full | Never truly full | Insertion fails |
-
-   - Refinement used in practice: Java's `HashMap` converts a chain into a `balanced tree` once it exceeds eight nodes, which caps the worst case at O(log n) instead of O(n) and defends against deliberate hash-collision attacks.
+   - The average chain length is exactly α, so keeping α near 1 keeps chaining efficient; doubling the table size and rehashing restores performance when α grows too large.
 
 5. **You are giving to store a set of objects and you want to use a data structure. Where the expected running time to search an item is O(1). Which data structure is suitable to serve your purpose?** *[BCC Assistant Programmer 12.02.2021 compact it 815 (ET: BUET)]*
 
@@ -5909,10 +5634,9 @@ Answer:
    | 32 | 10 | 31, 22, 44, 55 | `4` | 3 |
 
    Observations
-   - `Load factor` α = 8/11 = 0.73, already at the level where open addressing starts to degrade.
-   - Two large `clusters` have formed, at indices 0–3 and 7–10, with only 4, 5 and 6 free. This is `primary clustering`, the characteristic weakness of linear probing: once a block forms, any key hashing anywhere into it must probe past the whole block. Key 32 needed 4 probes for exactly this reason.
-   - `Quadratic probing` (offset i²) or `double hashing` (offset i·h₂(x)) would spread the probes out and avoid these long runs.
-   - Deletion must use a `tombstone` marker rather than emptying the slot, or the probe chains through that slot would break and later keys would become unfindable.
+   - `Load factor` α = 8/11 = 0.73 — already at the level where open addressing degrades.
+   - Two `clusters` have formed (indices 0–3 and 7–10): classic `primary clustering` — once a block forms, any key hashing into it must probe past the whole block (32 needed 4 probes for this reason).
+   - `Quadratic probing` or `double hashing` would avoid these long runs; deletion needs a `tombstone` marker, not an empty slot.
 
 7. **(b) What is hash table? What are the advantages of using hash table.** *[Bangladesh Public Service Commission Ministry of Power, Energy and Mineral Resources Assistant Maintenance Engineer; Date: 30 May, 2025 Exam Taker: BPSC; Written [bitbox it book 65-66]]*
 

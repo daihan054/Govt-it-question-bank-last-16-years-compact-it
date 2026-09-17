@@ -1271,16 +1271,13 @@ Answer:
     - Modern: AES, RSA, ECC — based on computational hardness.
 
     (d) Factors affecting cryptographic strength
-    - Key length — the most important single factor. Each extra bit doubles the brute-force effort. AES-128 requires 2¹²⁸ attempts.
-    - Algorithm strength — a peer-reviewed, standardised algorithm. Never invent your own.
-    - Key randomness — keys must come from a cryptographically secure random source, not a predictable one.
-    - Key management — generation, storage, rotation and destruction. Most real breaches come from stolen keys, not broken maths.
-    - Mode of operation — ECB mode leaks patterns and must be avoided; GCM provides both confidentiality and integrity.
-    - Initialization Vector (IV) — must be random and never reused with the same key.
-    - Salting for password hashes, and a slow hash function (bcrypt, Argon2) to resist brute force.
-    - Implementation quality — side-channel attacks on timing and power can defeat perfect maths.
-    - Resistance to known attacks — differential and linear cryptanalysis, birthday attacks.
-    - Future proofing — quantum resistance, since Shor's algorithm threatens RSA and ECC.
+    - Key length — the most important factor; each extra bit doubles brute-force effort (AES-128 needs 2¹²⁸ attempts).
+    - Algorithm strength and randomness — use a peer-reviewed standard algorithm with keys/IVs from a cryptographically secure random source (an IV must never repeat with the same key).
+    - Key management — generation, storage, rotation, destruction; most real breaches come from stolen keys, not broken maths.
+    - Mode of operation — ECB leaks patterns and must be avoided; GCM gives confidentiality and integrity together.
+    - Password hashing — salting plus a slow function (bcrypt, Argon2) to resist brute force.
+    - Implementation quality and known-attack resistance — side-channel (timing/power), differential/linear cryptanalysis, birthday attacks.
+    - Future-proofing — quantum resistance, since Shor's algorithm threatens RSA and ECC.
 
 11. **What is Symmetric and Asymmetric Encryption? Explain with example.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*
 
@@ -1877,38 +1874,21 @@ Answer: A digital signature is a cryptographic value attached to a digital docum
 
 1. **As a cybersecurity analyst at a nuclear power plant, what IDS strategies and steps are required to prevent cyberattacks?** *[NPCBL Sub Assistant Engineer: Cyber Security Analyst Date: 11 July 2026 (ET: N/A)]*
 
-Answer: A nuclear plant is Critical Information Infrastructure with an OT (Operational Technology) network controlling physical processes. A safety failure here is not a data loss but a physical hazard, so the IDS strategy must be built around that.
+Answer: A nuclear plant is Critical Information Infrastructure with an OT network controlling physical processes — a failure here is a physical hazard, not just data loss, so the IDS strategy is built around that.
 
-   (a) IDS placement strategy
-   - Network IDS (NIDS) at the IT/OT boundary, inside the DMZ, and on each control-network segment — deployed on a SPAN/mirror port or a network TAP so it is passive and cannot itself disturb the process.
-   - Host IDS (HIDS) on engineering workstations, HMIs and historian servers.
-   - Protocol-aware IDS that understands industrial protocols — Modbus, DNP3, IEC 61850, OPC-UA — because a generic IT IDS cannot read them.
-   - Passive monitoring only on the safety instrumented system. Nothing active may ever be placed inline with a safety loop.
+   (a) IDS placement
+   - NIDS at the IT/OT boundary, in the DMZ, and on each control-network segment, via a SPAN/TAP so it stays passive; HIDS on engineering workstations, HMIs and historian servers; protocol-aware IDS understanding Modbus, DNP3, IEC 61850, OPC-UA (a generic IT IDS can't read them); passive-only monitoring on the safety instrumented system — nothing active goes inline with a safety loop.
 
-   (b) Detection methods to combine
-   - Signature-based — catches known malware and exploits, including ICS-specific families such as Stuxnet, Industroyer and TRITON.
-   - Anomaly-based — the strongest method in OT, because industrial traffic is highly repetitive and predictable. A deviation from the learned baseline is far more meaningful than in an office network.
-   - Protocol whitelisting — define exactly which commands each device may issue; anything else is an alert.
-   - Behavioural — detect an unusual sequence such as an engineering workstation writing to a PLC outside a maintenance window.
+   (b) Detection methods
+   - Signature-based (catches known ICS malware — Stuxnet, Industroyer, TRITON); anomaly-based (strongest in OT, since industrial traffic is highly repetitive/predictable); protocol whitelisting (only approved commands per device); behavioural (e.g. a workstation writing to a PLC outside a maintenance window).
 
-   (c) Architectural steps
-   - Purdue model segmentation — Level 0/1 (field devices and controllers) up to Level 4/5 (enterprise IT), with strict boundaries between levels.
-   - Data diode at the IT/OT boundary for one-way data flow out of the plant, so no traffic can physically enter.
-   - Air gap or tightly controlled DMZ between corporate IT and the control network.
-   - No direct internet access from any OT device.
+   (c) Architecture
+   - Purdue model segmentation (Level 0/1 field devices up to Level 4/5 enterprise IT) with strict boundaries; a data diode at the IT/OT boundary for one-way outbound data; air-gapped/tightly controlled DMZ between IT and control network; no direct internet access from any OT device.
 
    (d) Operational steps
-   - Establish a baseline of normal traffic over a long observation period before enabling anomaly alerting.
-   - Asset inventory — every device, firmware version and communication path documented. You cannot protect what you have not catalogued.
-   - 24/7 SOC with staff trained in ICS, not just IT.
-   - SIEM correlation of IDS alerts with physical process data — an alert that coincides with an unexpected valve movement is a very different matter.
-   - Incident response plan tested by drill, with a defined safe-shutdown procedure.
-   - Regular patching in maintenance windows, with virtual patching by IPS where a device cannot be patched.
-   - Strict removable media control — Stuxnet entered through a USB drive.
-   - Vendor and supply chain vetting, and controlled remote-access sessions with recording.
-   - Personnel security and insider-threat monitoring, plus regular awareness training.
+   - Baseline normal traffic over a long observation period before enabling anomaly alerts; full asset inventory (device, firmware, comms path); 24/7 SOC trained in ICS, not just IT; SIEM correlation of IDS alerts with physical process data; tested incident-response/safe-shutdown drills; patching in maintenance windows (virtual patching via IPS where a device can't be patched); strict removable-media control (Stuxnet entered via USB); vendor/supply-chain vetting and recorded remote-access sessions; insider-threat monitoring and awareness training.
 
-   - Governing principle: in IT the priority order is Confidentiality-Integrity-Availability; in a nuclear plant it is Safety-Availability-Integrity-Confidentiality. Every control must be judged against whether it could itself endanger the process.
+   - Governing principle: IT prioritises Confidentiality-Integrity-Availability; a nuclear plant prioritises Safety-Availability-Integrity-Confidentiality — every control is judged on whether it could itself endanger the process.
 
 2. **What is Packet Filter of Firewall?** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1450 (ET: N/A)]*
 
@@ -3823,43 +3803,27 @@ Answer: Two-Factor Authentication (2FA) is a security process requiring exactly 
 
 4. **Your bank has an online banking system and this process is performed by sending OTP in mobile or OTP in mail when a customer transfers money from a mobile banking app or online. This is a secured policy. Without this biometric policy, how can you more secure your online banking? Explain your strategy.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Engineer (IT) 24.02.2024 compact it 306 (ET: BIBM)]*
 
-Answer: SMS and email OTP alone is no longer adequate — SMS OTP is vulnerable to SIM swap and SS7 interception, and email OTP falls with the email account. Without adding biometrics, security can be strengthened substantially in the following ways.
+Answer: SMS/email OTP alone is inadequate — SMS is vulnerable to SIM swap/SS7 interception, and email OTP falls with the account. Without biometrics, security can be strengthened as follows.
 
-   (a) Replace or supplement SMS OTP with stronger possession factors
-   - Authenticator app TOTP (Google Authenticator, Microsoft Authenticator) — generated on the device, never transmitted, so it cannot be intercepted.
-   - Push-based approval in the bank's own app, showing the transaction details, so the customer approves a specific transfer rather than typing a code that could be relayed by a phisher.
-   - Hardware security key (FIDO2/WebAuthn) — phishing-resistant by design, because the key verifies the site's domain before responding.
-   - Transaction signing — the OTP is derived from the transaction amount and beneficiary, so an intercepted code cannot authorise a different transfer.
+   (a) Stronger possession factors
+   - Authenticator app TOTP (never transmitted, so it can't be intercepted); push-based approval showing transaction details (so the customer approves a specific transfer, not a relayable code); FIDO2/WebAuthn hardware key (verifies the site's domain, so it's phishing-resistant); transaction signing (OTP derived from amount+beneficiary).
 
    (b) Device and session controls
-   - Device binding / registration — new devices require additional verification.
-   - Device fingerprinting to detect a login from an unrecognised device.
-   - Short session timeouts and automatic logout.
-   - Certificate pinning in the mobile app to defeat man-in-the-middle attacks.
-   - Root/jailbreak detection and refusal to run on a compromised device.
+   - Device binding/registration for new devices, device fingerprinting, short session timeouts, certificate pinning, and root/jailbreak detection.
 
    (c) Risk-based (adaptive) authentication
-   - Score each transaction on amount, beneficiary history, location, device, time of day and velocity.
-   - Low risk → proceed; medium risk → step-up authentication; high risk → block and call the customer.
-   - This is the single highest-value addition, because it applies friction only where it is warranted.
+   - Score each transaction on amount, beneficiary history, location, device, time, velocity: low risk → proceed, medium → step-up auth, high → block and call. Highest-value addition, since it applies friction only where warranted.
 
    (d) Transaction-level controls
-   - Beneficiary cooling-off period — a newly added beneficiary cannot receive a large transfer for a defined number of hours. This alone defeats most account-takeover fraud.
-   - Per-transaction and daily limits, adjustable by the customer with verification.
-   - Dual authorisation for corporate accounts above a threshold.
-   - Immediate notification by SMS, email and push for every debit, so the customer can report fraud within minutes.
+   - Cooling-off period for new beneficiaries (defeats most account-takeover fraud), per-transaction/daily limits, dual authorisation above a threshold, and instant debit notifications.
 
    (e) Backend controls
-   - Fraud detection engine with machine learning on transaction patterns.
-   - Velocity checks — several transfers in quick succession trigger review.
-   - WAF, rate limiting and bot detection on the login endpoint.
-   - Full audit logging into a SIEM with 24/7 monitoring.
+   - ML-based fraud detection, velocity checks, WAF/rate-limiting/bot detection on login, and SIEM logging with 24/7 monitoring.
 
    (f) Customer-side measures
-   - Awareness campaigns — the bank will never ask for an OTP; most fraud in Bangladesh succeeds through vishing, not technical compromise.
-   - Self-service controls — the customer can disable online transfer, set limits, or lock the card from the app.
+   - Awareness campaigns (the bank never asks for an OTP — most fraud is vishing, not technical), and self-service controls to disable transfers or lock the card.
 
-   - Priority if only three things could be added: risk-based authentication, beneficiary cooling-off, and push-based transaction approval replacing SMS OTP.
+   - If only three could be added: risk-based authentication, beneficiary cooling-off, and push-based approval replacing SMS OTP.
 
 5. **How to work two factor authentication?** *[Mongla Port Authority Assistant Programmer 2023 compact it 574 (ET: N/A)]*
 
@@ -4992,36 +4956,32 @@ Answer:
 
 10. **Employee causes the most risk of fraud and computer compromises- do you agree with the statement. Justify your answer.** *[Combined Bank Senior Officer (IT/ICT) 2019 compact it 1113 (ET: DU)]*
 
-Answer: Broadly yes — but with an important qualification. Employees are the largest source of risk, though most of that risk comes from NEGLIGENCE rather than malice.
+Answer: Broadly yes — but with a qualification: employees are the largest risk source, though most of that risk is NEGLIGENCE rather than malice.
 
     (a) Arguments supporting the statement
-
-    - Legitimate access — employees already hold valid credentials and are inside the perimeter, so firewalls, IPS and perimeter controls simply do not apply to them.
-    - Knowledge of the system — an insider knows where the valuable data is, when monitoring is weak, and which controls can be avoided. An outsider must discover all of this.
+    - Legitimate access — employees already hold valid credentials inside the perimeter, so firewalls/IPS don't apply to them.
+    - Insider knowledge — they know where data is, when monitoring is weak, and which controls to avoid; an outsider must discover all this.
     - Trust — their activity looks normal, so detection is far harder than for an external intruder.
-    - Phishing entry point — the overwhelming majority of successful breaches begin with an employee clicking a link or opening an attachment. Technically the attacker is external, but the employee is the door.
-    - Negligence at scale — weak or reused passwords, sharing credentials, losing an unencrypted laptop, misdirected email, using unauthorised cloud services, and leaving workstations unlocked.
-    - Privileged users — system administrators and DBAs can bypass application-level controls entirely, and can often delete the logs that would record it.
-    - Departing employees — data theft is common in the weeks before resignation, and orphaned accounts are frequently left active.
-    - Industry breach studies consistently attribute a large share of incidents to an internal element.
+    - Phishing entry point — most breaches begin with an employee clicking a link; the attacker is external, but the employee is the door.
+    - Negligence at scale — weak/reused passwords, credential sharing, lost devices, misdirected email, unauthorised cloud use.
+    - Privileged users (admins/DBAs) can bypass application controls and erase the logs that would record it.
+    - Departing employees — theft is common before resignation; orphaned accounts often stay active.
 
-    (b) Qualifications to the statement
-    - External attacks are more numerous, even if individual insider incidents cause more damage per event.
-    - Most insider incidents are accidental, not criminal — which changes the appropriate response from punishment to training and control design.
-    - Third parties and vendors with system access represent a comparable risk that the statement omits.
-    - Blaming employees can obscure a real failure of CONTROL DESIGN. If one person can move a large sum unchecked, that is a process failure, not merely a personnel failure.
+    (b) Qualifications
+    - External attacks are more numerous, even if insider incidents cause more damage per event.
+    - Most insider incidents are accidental, which changes the response from punishment to training/control design.
+    - Third-party/vendor access is a comparable, often-omitted risk.
+    - Blaming employees can mask a real CONTROL DESIGN failure — if one person can move a large sum unchecked, that's a process failure.
 
-    (c) Controls that follow from this
-    - Least privilege and regular access review; immediate revocation on departure.
-    - Segregation of duties and maker-checker approval for financial transactions.
-    - Privileged Access Management with session recording, so administrators are also accountable.
-    - DLP and monitoring of large or unusual data movements.
-    - UEBA to detect behaviour that deviates from a user's own baseline.
-    - Mandatory leave and job rotation — a long-running fraud usually surfaces when the person is away.
-    - Security awareness training with simulated phishing, which addresses the negligence majority.
-    - Background verification at recruitment and a clear acceptable use policy.
+    (c) Controls that follow
+    - Least privilege with regular access review and immediate revocation on departure.
+    - Segregation of duties / maker-checker approval for financial transactions.
+    - Privileged Access Management with session recording.
+    - DLP and monitoring of unusual data movement; UEBA for behavioural deviations.
+    - Mandatory leave / job rotation — long-running fraud usually surfaces when the person is away.
+    - Security awareness training with simulated phishing (addresses the negligence majority).
 
-    - Balanced conclusion: agree that the employee is the single greatest risk vector, but the correct response is better control design and training rather than distrust of staff.
+    - Conclusion: agree the employee is the single greatest risk vector, but the fix is better control design and training, not distrust of staff.
 
 ## Security Principles (CIA Triad) (8)
 
@@ -5539,41 +5499,26 @@ Answer: Bangladesh's cyber law has changed repeatedly, so the sequence matters.
 
 Answer:
 
-   (a) and (e) Is there a digital signature? — NO.
-   - The hash is computed and sent, but it is encrypted with Kuakata's PUBLIC key (Ku), not with Cox's Bazar's PRIVATE key (Kc⁻¹).
-   - A digital signature requires the SENDER's private key. Since Ku is public, ANYONE could have produced this ciphertext while pretending to be Cox's Bazar.
-   - The hash here provides integrity only — it detects accidental or malicious corruption, but proves nothing about who sent the message.
+   (a) and (e) Is there a digital signature? — No.
+   - The hash is encrypted with Kuakata's PUBLIC key (Ku), not Cox's Bazar's PRIVATE key (Kc⁻¹). A signature requires the sender's private key; since Ku is public, anyone could have produced this ciphertext. The hash only gives integrity, not proof of origin.
 
-   How to add a proper digital signature
-   - Cox's Bazar computes `h = H(Message)`.
-   - Cox's Bazar encrypts that hash with its own private key: `Signature = E(h, Kc⁻¹)`.
-   - The message plus this signature is then encrypted with Ku for confidentiality and transmitted.
-   - Kuakata decrypts with `Ku⁻¹`, then decrypts the signature with Cox's Bazar's public key Kc to recover `h`, hashes the received message independently, and compares.
-   - A match now proves origin, integrity AND non-repudiation.
+   How to add a proper signature
+   - Cox's Bazar computes `h = H(Message)`, signs it with its own private key: `Signature = E(h, Kc⁻¹)`, then encrypts message+signature with Ku.
+   - Kuakata decrypts with Ku⁻¹, decrypts the signature with Cox's Bazar's public key Kc to recover h, re-hashes the message, and compares — a match now proves origin, integrity and non-repudiation.
 
-   (b) Identify the attack — Denial of Service (an INTERRUPTION attack).
-   - The attacker captures and BLOCKS the ciphertext so it never reaches Kuakata.
-   - This is an active attack of the interruption type. It is not interception in the harmful sense, because the attacker cannot read the content.
-   - It attacks AVAILABILITY, not confidentiality or integrity.
-   - The attacker's position also constitutes a Man-in-the-Middle placement, but the action taken is denial of service.
+   (b) Attack — Denial of Service (an interruption attack).
+   - The attacker blocks the ciphertext so it never reaches Kuakata; this is active, attacks AVAILABILITY (not confidentiality/integrity), though the attacker's position is also a Man-in-the-Middle placement.
 
-   (c) How to identify the origin of the message
-   - As described, the origin CANNOT be identified — there is no sender authentication of any kind.
-   - To identify origin, add a digital signature with Cox's Bazar's private key Kc⁻¹, verified with the public key Kc obtained from a certificate issued by a trusted CA.
-   - Supporting mechanisms: MAC with a shared secret key, mutual TLS authentication, and a nonce or timestamp to prevent replay.
+   (c) Identifying the origin
+   - As described, origin cannot be verified — there's no sender authentication. Fix: add a digital signature with Kc⁻¹/Kc verified via a CA certificate; supporting mechanisms: MAC with a shared key, mutual TLS, nonce/timestamp against replay.
 
-   (d) and (g) How to manage the attack
-   - Acknowledgement and timeout — Kuakata should acknowledge receipt. If Cox's Bazar receives no ACK within a timeout, it retransmits. This is exactly what TCP does.
-   - Sequence numbers — a gap reveals that a message was dropped.
-   - Redundant / multiple paths — send over more than one route, so blocking one path does not stop delivery.
-   - Heartbeat / keep-alive monitoring so a blocked link is detected quickly.
-   - Network redundancy — dual ISP links following physically separate routes.
-   - IPsec with anti-replay and integrity protection to secure the channel itself.
-   - IDS/IPS and traffic monitoring to detect the interception point.
-   - Out-of-band confirmation for critical messages.
-   - Note the limitation: a DoS attack cannot be PREVENTED by cryptography. Encryption protects content, never delivery. Only redundancy and detection address availability.
+   (d) and (g) Managing the attack
+   - Acknowledgement + timeout + retransmission (as TCP does), with sequence numbers to detect drops.
+   - Redundant paths / dual-ISP routes, so blocking one link doesn't stop delivery.
+   - Heartbeat/keep-alive and IDS/IPS monitoring to detect the interception point; IPsec for anti-replay/integrity of the channel; out-of-band confirmation for critical messages.
+   - Note: cryptography cannot PREVENT a DoS — encryption protects content, not delivery; only redundancy and detection address availability.
 
-   (f) Security services provided by the system as described
+   (f) Security services provided
 
    | Service | Provided? | Reason |
    |---|---|---|
@@ -5610,57 +5555,39 @@ Answer:
    | Signature (MISSING, should be added) | Kc⁻¹ — Cox's Bazar's private key | Authentication and non-repudiation |
    | Signature verification (MISSING) | Kc — Cox's Bazar's public key | Confirm origin |
 
-   - Summary of the design flaw: the scheme achieves confidentiality and integrity but omits authentication entirely, and it has no defence against interruption. Adding a signature with Kc⁻¹ fixes the first gap; acknowledgement plus path redundancy addresses the second.
+   - Design flaw summary: the scheme gives confidentiality and integrity but no authentication, and no defence against interruption. A signature with Kc⁻¹ fixes the first gap; acknowledgement plus path redundancy addresses the second.
 
 2. **Explain Cyber Attack Scenario-** *[DPDC Junior Assistant Manager (JAM) 27.06.2025 compact it 1441 (ET: BUET)]*
 
-Answer: The specific scenario was not printed with the question, so a representative attack scenario for a power distribution utility is described, following the standard Cyber Kill Chain.
+Answer: The specific scenario wasn't given with the question, so a representative ransomware attack on a power-distribution utility is described, following the Cyber Kill Chain.
 
-   Scenario — ransomware attack on a distribution utility
-
-   Stage 1 — Reconnaissance
-   - The attacker gathers information from the company website, LinkedIn and public tender documents: employee names, email format, technologies in use, and vendor relationships.
-
-   Stage 2 — Weaponisation and Delivery
-   - A spear-phishing email is crafted, appearing to come from a known equipment vendor, with a malicious invoice attachment. It is sent to finance and procurement staff.
-
-   Stage 3 — Exploitation
-   - An employee opens the attachment. A macro executes and exploits an unpatched vulnerability, downloading the payload.
-
-   Stage 4 — Installation
-   - Malware establishes persistence through a scheduled task and a registry run key, and disables the antivirus.
-
-   Stage 5 — Command and Control
-   - The infected machine beacons out to the attacker's C2 server over HTTPS, blending with normal web traffic.
-
-   Stage 6 — Lateral movement and privilege escalation
-   - The attacker harvests credentials with Mimikatz, moves across the flat network using RDP and SMB, and eventually obtains domain administrator rights. Weeks may pass at this stage.
-
-   Stage 7 — Actions on objectives
-   - Sensitive data — customer records, billing data, SCADA configuration — is EXFILTRATED first.
-   - Backups and shadow copies are deleted.
-   - Ransomware is deployed across all servers simultaneously, encrypting billing, CRM and file systems.
-   - A ransom note demands payment, with a threat to publish the stolen data.
+   Stage 1 — Reconnaissance: attacker gathers employee names, email formats and vendor relationships from the company website, LinkedIn and public tenders.
+   Stage 2 — Weaponisation & Delivery: a spear-phishing email with a malicious invoice attachment, impersonating a known vendor, is sent to finance/procurement staff.
+   Stage 3 — Exploitation: an employee opens it; a macro exploits an unpatched vulnerability and downloads the payload.
+   Stage 4 — Installation: malware persists via a scheduled task/registry run key and disables antivirus.
+   Stage 5 — Command & Control: the infected host beacons to the attacker's C2 server over HTTPS, blending with normal traffic.
+   Stage 6 — Lateral movement: credentials harvested (Mimikatz), attacker moves via RDP/SMB across the flat network to domain admin — often over weeks.
+   Stage 7 — Actions on objectives: sensitive data (billing, customer records, SCADA config) is exfiltrated, backups/shadow copies deleted, ransomware deployed across all servers, and a ransom note issued threatening data leak.
 
    Impact
-   - Billing and customer service halted, financial loss, regulatory reporting obligations, reputational damage, and — if the OT network were reached — risk to power distribution itself.
+   - Service disruption, financial loss, regulatory reporting duties, reputational damage, and — if OT was reached — risk to power distribution itself.
 
    Where it could have been stopped
 
-   | Stage | Control that would have blocked it |
+   | Stage | Control |
    |---|---|
-   | Delivery | Email filtering, attachment sandboxing, user awareness training |
-   | Exploitation | Patch management, macro blocking by policy |
+   | Delivery | Email filtering, attachment sandboxing, user awareness |
+   | Exploitation | Patch management, macro blocking |
    | Installation | EDR, application whitelisting, least privilege |
-   | C2 | Egress filtering, DNS monitoring, threat intelligence feeds |
-   | Lateral movement | Network segmentation, MFA, privileged access management |
+   | C2 | Egress filtering, DNS monitoring, threat intel |
+   | Lateral movement | Network segmentation, MFA, PAM |
    | Objectives | Offline immutable backups, DLP, IT/OT separation |
 
-   - Key lesson: an attack has many stages, and defence in depth means any one layer can break the chain. The most valuable single control here is network segmentation, which prevents one compromised workstation from becoming a company-wide outage.
+   - Key lesson: defence in depth means any single layer can break the chain — network segmentation is the single most valuable control, since it stops one compromised workstation from becoming a company-wide outage.
 
 3. **Imagine yu should design a secure transmission protocol for sending data from one node to another node. You should divide the message in the multiple packets and this packets will be using different path so that any one cannot decrypt the message.** *[BDCCL Assistant Manager (Cyber Security) 14.10.2022 compact it 756 (ET: N/A)]*
 
-Answer: The design combines secret sharing / message splitting with multipath routing, so that capturing traffic on any single path yields nothing useful.
+Answer: The design combines secret sharing / message splitting with multipath routing, so capturing traffic on any single path yields nothing useful.
 
    Design overview
    ```mermaid
@@ -5679,31 +5606,13 @@ Answer: The design combines secret sharing / message splitting with multipath ro
    ```
 
    Protocol steps
-
-   Step 1 — Key establishment
-   - Sender and receiver perform an authenticated key exchange (ECDHE with certificates) to agree a symmetric session key. Mutual authentication prevents a man-in-the-middle at this stage.
-
-   Step 2 — Encrypt
-   - Encrypt the whole message with AES-256-GCM, which provides confidentiality AND integrity in one operation.
-
-   Step 3 — Split using threshold secret sharing
-   - Apply Shamir's Secret Sharing to produce `n` shares such that any `k` of them reconstruct the message, but `k−1` shares reveal absolutely nothing — not even partial information.
-   - This is the crucial property. Simply cutting the ciphertext into pieces would leak partial data; secret sharing does not.
-
-   Step 4 — Multipath routing
-   - Send each share over a DIFFERENT network path — different ISPs, different physical routes, or different overlay circuits.
-   - An attacker must compromise at least `k` independent paths simultaneously to learn anything.
-
-   Step 5 — Per-share protection
-   - Each share carries a sequence number, a nonce and a timestamp (anti-replay), plus its own HMAC so tampering is detected per share.
-   - Pad every share to the same length so traffic analysis cannot infer structure.
-
-   Step 6 — Reassembly
-   - The receiver collects any `k` valid shares, reconstructs the ciphertext, verifies the AES-GCM authentication tag, and decrypts.
-   - Because only `k` of `n` are needed, the scheme also survives the loss or blocking of some paths — it provides availability as well as confidentiality.
-
-   Step 7 — Acknowledgement and retransmission
-   - The receiver acknowledges. Missing shares are retransmitted, ideally over a different path.
+   - **Key establishment** — authenticated key exchange (ECDHE with certificates) to agree a session key; mutual authentication blocks a man-in-the-middle.
+   - **Encrypt** — the whole message with AES-256-GCM (confidentiality + integrity in one step).
+   - **Split** — apply Shamir's Secret Sharing to produce `n` shares such that any `k` reconstruct the message, but `k−1` reveal nothing (unlike simply cutting the ciphertext, which would leak partial data).
+   - **Multipath routing** — send each share over a different network path (different ISP/route/circuit); an attacker needs `k` independent paths compromised at once.
+   - **Per-share protection** — each share gets a sequence number, nonce, timestamp and its own HMAC (anti-replay, tamper detection), padded to uniform length against traffic analysis.
+   - **Reassembly** — receiver collects any `k` valid shares, verifies the GCM tag, and decrypts; because only `k` of `n` are needed, the scheme also tolerates lost/blocked paths.
+   - **ACK/retransmit** — missing shares are re-sent, ideally over a different path.
 
    Security properties achieved
 
@@ -5716,7 +5625,7 @@ Answer: The design combines secret sharing / message splitting with multipath ro
    | Traffic analysis resistance | Uniform padding, multiple paths, optional dummy traffic |
    | Replay protection | Nonce and timestamp per share |
 
-   - Practical basis: this is essentially how onion routing (Tor), multipath TCP and distributed storage systems approach the same problem. The cost is added latency and complexity, so it suits high-value low-volume traffic rather than bulk data.
+   - This mirrors how onion routing (Tor), multipath TCP and distributed storage handle the same problem; the cost is added latency/complexity, so it suits high-value, low-volume traffic.
 
 ## Email & Messaging Security (Spam, Phishing) (3)
 
@@ -5805,64 +5714,40 @@ Answer:
 
 1. **Explain buffer overflow attack with an example.** *[BTCL Assistant Manager (Technical) 2023 compact it 592 (ET: BUET)]*
 
-Answer: A buffer overflow occurs when a program writes more data into a fixed-size memory buffer than it can hold, so the excess spills into ADJACENT memory. An attacker exploits this to overwrite critical values and take control of execution.
+Answer: A buffer overflow occurs when a program writes more data into a fixed-size buffer than it can hold, so the excess spills into adjacent memory — an attacker exploits this to overwrite critical values and hijack execution.
 
    Why it happens
-   - Languages such as C and C++ do not perform automatic bounds checking. Functions like `gets()`, `strcpy()` and `scanf("%s")` copy until they find a terminator, regardless of the destination size.
+   - C/C++ do no automatic bounds checking. Functions like `gets()`, `strcpy()`, `scanf("%s")` copy until a terminator, regardless of destination size.
 
    Vulnerable example
    ```c
-   #include <stdio.h>
-   #include <string.h>
-
    void vulnerable(char *input) {
        char buffer[10];        // only 10 bytes reserved
-       strcpy(buffer, input);  // NO length check — the flaw
-       printf("Input: %s\n", buffer);
-   }
-
-   int main(int argc, char *argv[]) {
-       vulnerable(argv[1]);
-       return 0;
+       strcpy(buffer, input);  // no length check -- the flaw
    }
    ```
-   - Passing a 10-character string is fine. Passing 100 characters writes 90 bytes past the end of `buffer`.
+   - A 100-character input writes 90 bytes past the end of `buffer`.
 
-   What lies beyond the buffer — the stack layout
+   Stack layout
    ```
    Higher addresses
    +---------------------------+
-   |  Return address           |  <-- overwriting THIS hijacks execution
+   |  Return address           |  <-- overwriting this hijacks execution
    +---------------------------+
    |  Saved base pointer (EBP) |
    +---------------------------+
-   |  buffer[10]               |  <-- overflow starts here and grows upward
+   |  buffer[10]               |  <-- overflow starts here, grows upward
    +---------------------------+
    Lower addresses
    ```
 
    How the attack works
-   - Step 1 — the attacker supplies input longer than the buffer.
-   - Step 2 — the excess overwrites the saved base pointer and then the return address.
-   - Step 3 — the attacker sets the return address to point at their own injected code (shellcode) placed elsewhere in the input.
-   - Step 4 — when the function returns, the CPU jumps to that address and executes the attacker's code, typically spawning a shell with the program's privileges.
+   - The attacker supplies input longer than the buffer; the excess overwrites the saved base pointer, then the return address, pointing it at injected shellcode. When the function returns, the CPU jumps there and runs the attacker's code — typically spawning a shell with the program's privileges.
 
    Consequences
-   - Arbitrary code execution, privilege escalation (critical if the program runs as root), program crash (denial of service), and data corruption.
-   - Historic examples: the Morris Worm (1988), Code Red, and SQL Slammer all used buffer overflows.
+   - Arbitrary code execution, privilege escalation, denial of service (crash), data corruption. Classic examples: the Morris Worm, Code Red, SQL Slammer.
 
    Prevention
-
-   Coding practices
-   - Use bounded functions: `strncpy()` instead of `strcpy()`, `fgets()` instead of `gets()`, `snprintf()` instead of `sprintf()`.
-   - Always validate input length before copying.
-   - Prefer memory-safe languages — Java, Python, Rust, C# perform bounds checking automatically.
-
-   Compiler and OS protections
-   - Stack canaries — a random value placed before the return address; if it is altered, the program aborts before returning.
-   - ASLR (Address Space Layout Randomisation) — randomises memory addresses so the attacker cannot predict where to jump.
-   - DEP / NX bit — marks the stack non-executable, so injected shellcode cannot run.
-   - Fortify Source and compiler warnings (`-Wall -Wextra -fstack-protector`).
-
-   Process
-   - Static analysis tools, fuzzing, and code review focused on all memory-copy operations.
+   - Use bounded functions (`strncpy`, `fgets`, `snprintf`), validate input length, and prefer memory-safe languages (Java, Python, Rust, C#) that bounds-check automatically.
+   - Compiler/OS defenses: stack canaries (detect an altered return address before returning), ASLR (randomises addresses), DEP/NX bit (marks the stack non-executable), plus `-fstack-protector` warnings.
+   - Process: static analysis, fuzzing, and code review of memory-copy operations.

@@ -9022,9 +9022,7 @@ Answer: (Answered in English, as required for IT topics.) The statement is corre
     - Check `Teacher → Course`: Teacher is `not` a superkey, and BCNF offers no escape clause. `BCNF is violated`.
 
     The anomaly this permits
-    - The fact "Dr. Ali teaches DBMS" is stored in `every row` in which Dr. Ali appears — redundancy that 3NF failed to eliminate.
-    - `Insertion anomaly`: a new teacher's subject cannot be recorded until some student is assigned to them.
-    - `Deletion anomaly`: if Sumi withdraws, the fact that Dr. Chan teaches DBMS is lost entirely.
+    - "Dr. Ali teaches DBMS" is stored in `every row` Dr. Ali appears in — redundancy 3NF failed to eliminate. `Insertion anomaly`: a new teacher's subject can't be recorded until a student is assigned. `Deletion anomaly`: if Sumi withdraws, "Dr. Chan teaches DBMS" is lost entirely.
 
     Decomposing into BCNF
     ```
@@ -9718,19 +9716,7 @@ Answer: The properties a database gains from normalisation are the guarantees th
     - If a dependency spans two tables, the constraint cannot be checked by any single-table constraint, so the application must enforce it — which is fragile.
     - `Every relation can be decomposed into 3NF with both properties. BCNF guarantees lossless join but not always dependency preservation` — this is the classic trade-off and the usual reason designers stop at 3NF.
 
-    The other properties normalisation delivers
-
-    3. `Minimal redundancy` — each fact stored exactly once.
-
-    4. `Freedom from anomalies` — insertion, update and deletion anomalies are eliminated.
-
-    5. `Data integrity and consistency` — one stored copy cannot contradict itself.
-
-    6. `Atomicity of attribute values` (from 1NF) — every cell holds one indivisible value, so it can be compared, indexed and joined.
-
-    7. `Full functional dependency on the key` (from 2NF and 3NF) — every non-key attribute depends on the key, the whole key, and nothing but the key.
-
-    8. `Flexibility and extensibility` — new attributes and entities can be added without restructuring existing tables.
+    Other properties normalisation delivers: `minimal redundancy` (each fact stored once), `freedom from anomalies` (insertion/update/deletion), `data integrity and consistency`, `atomicity of attribute values` (1NF — one indivisible value per cell), `full functional dependency on the key` (2NF/3NF — the key, the whole key, nothing but the key), and `flexibility/extensibility` for adding new attributes without restructuring.
 
     Illustration of the two decomposition properties
     ```
@@ -10057,14 +10043,11 @@ Answer: A `transaction` is a single logical unit of work made up of one or more 
    ```
 
    `A — Atomicity` (all or nothing)
-   - A transaction is `indivisible`. Either every statement takes effect, or none does.
-   - If the system crashes after the debit but before the credit, the debit is `undone` during recovery. Money is never destroyed by a failure.
-   - Implemented by the `transaction log` and the `undo` mechanism: `COMMIT` makes the whole unit permanent, `ROLLBACK` reverses all of it.
-   - Without atomicity, a crash mid-transfer would leave 5,000 taka missing from the bank.
+   - A transaction is `indivisible` — either every statement takes effect, or none does. A crash after the debit but before the credit is `undone` during recovery, so money is never destroyed by a failure.
+   - Implemented via the `transaction log` and `undo` mechanism: `COMMIT` makes the unit permanent, `ROLLBACK` reverses all of it.
 
    `C — Consistency` (valid state to valid state)
-   - A transaction moves the database from one `consistent` state to another. Every integrity constraint — primary key, foreign key, CHECK, NOT NULL — and every business rule holds before it starts and after it finishes.
-   - In the transfer, the total money in the two accounts must be the same afterwards as before. If a `CHECK (balance >= 0)` would be violated, the whole transaction is rejected.
+   - A transaction moves the database from one `consistent` state to another — every constraint (PK, FK, CHECK, NOT NULL) and business rule holds before and after. If `CHECK (balance >= 0)` would be violated, the whole transaction is rejected.
    - Enforced jointly by the DBMS's constraints and by the application writing correct transactions.
 
    `I — Isolation` (concurrent transactions do not interfere)
@@ -10100,8 +10083,8 @@ Answer: A `transaction` is a single logical unit of work made up of one or more 
    ```
 
    Why they matter together
-   - A bank transfer needs all four simultaneously. Atomicity stops the money vanishing, consistency stops the balances becoming invalid, isolation stops another transaction reading a half-completed transfer, and durability stops a power failure losing a committed deposit. Any one of them missing makes the system untrustworthy for financial data.
-   - The trade-off is performance: strict isolation in particular reduces concurrency, which is why NoSQL systems often relax these guarantees to `BASE` — Basically Available, Soft state, Eventual consistency — accepting temporary inconsistency in exchange for scale.
+   - A bank transfer needs all four at once: atomicity stops money vanishing, consistency stops invalid balances, isolation stops reading a half-completed transfer, durability stops a power failure losing a committed deposit.
+   - Trade-off: strict isolation reduces concurrency, which is why NoSQL systems often relax these guarantees to `BASE` (Basically Available, Soft state, Eventual consistency) for scale.
 
 2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 
@@ -10266,7 +10249,7 @@ Answer: (Answered in English, as required for IT topics.)
    ```
 
    The trade-off worth stating
-   - Strict isolation in particular costs concurrency, because locks make transactions wait. This is why many distributed and NoSQL systems relax ACID to `BASE` — Basically Available, Soft state, Eventual consistency — accepting temporary inconsistency in exchange for scale and availability. For financial data, that trade is not acceptable, which is why banks stay with ACID.
+   - Strict isolation costs concurrency (locks make transactions wait), which is why many distributed/NoSQL systems relax ACID to `BASE` (Basically Available, Soft state, Eventual consistency) for scale — a trade banks cannot accept for financial data.
 
 5. **Case Study type Database-related problem (Solve: ACID)** *[Sonali Bank PLC Assistant Database Administrator 23.02.2024 compact it 321 (ET: N/A)]*
 
@@ -10392,8 +10375,8 @@ Answer: The `ACID` properties are the four guarantees a DBMS gives about every t
    | Durability | Permanent once committed | Losing committed work | Write-ahead log, redo |
 
    Why all four are needed together
-   - Take away `atomicity` and money disappears in a crash. Take away `consistency` and balances become negative. Take away `isolation` and two ATMs withdraw the same funds twice. Take away `durability` and a committed deposit is lost in a power cut. No three of them are sufficient.
-   - The cost is performance, particularly from isolation, which is why some distributed systems adopt `BASE` instead — accepting eventual rather than immediate consistency in exchange for availability and scale.
+   - Drop `atomicity` and money disappears in a crash; drop `consistency` and balances go negative; drop `isolation` and two ATMs withdraw the same funds twice; drop `durability` and a committed deposit is lost in a power cut. No three are sufficient.
+   - The cost is performance (mainly from isolation), which is why some distributed systems adopt `BASE` instead — eventual rather than immediate consistency, for availability and scale.
 
 7. **(a) What is ACID mean in database system?** *[BPSC (Multiple Ministry) Assistant Programmer (ICT) 19.07.2023 compact it 492 (ET: N/A)]*
 
@@ -10781,15 +10764,11 @@ Answer: Part 1 — the ACID properties
     | `Wait-Die` (non-preemptive) | T1 waits | T2 dies — aborts and restarts with its old timestamp |
     | `Wound-Wait` (preemptive) | T1 wounds T2 — T2 is aborted | T2 waits |
 
-    Other practical methods:
-    - `Lock ordering` — every transaction acquires locks in the same fixed order, for example always Account then Loan. A cycle then cannot form. This is the simplest and most effective fix in application code.
-    - `Acquire all locks at once` at the start, which removes the hold-and-wait condition.
-    - `Lock timeout` — a transaction that waits longer than a set time is rolled back automatically. Simple, but it can abort transactions that were not deadlocked.
-    - `Keep transactions short` and touch the fewest rows possible, so the window for a conflict is small.
+    Other practical methods: `lock ordering` (every transaction acquires locks in the same fixed order, e.g. Account then Loan — simplest fix in application code), `acquire all locks at once` (removes hold-and-wait), `lock timeout` (auto-rollback after a wait limit, though it can abort non-deadlocked transactions), and `keep transactions short` to shrink the conflict window.
 
     Detection instead of prevention
-    - Most real systems (Oracle, SQL Server, PostgreSQL, MySQL InnoDB) let deadlocks happen and then detect them. The DBMS builds a `wait-for graph` with one node per transaction and an edge Ti → Tj when Ti waits for a lock held by Tj. A `cycle` in the graph means a deadlock.
-    - The system then picks a `victim` — usually the transaction with the least work done or the fewest locks — rolls it back, releases its locks and lets the others proceed. The application should catch the deadlock error and simply retry.
+    - Most real systems (Oracle, SQL Server, PostgreSQL, MySQL InnoDB) let deadlocks happen and detect them via a `wait-for graph` (node per transaction, edge Ti→Tj when Ti waits on Tj) — a `cycle` means deadlock.
+    - The system picks a `victim` (usually least work done), rolls it back and lets others proceed; the application should catch the error and retry.
 
 14. **Describe the ACID properties of database.** *[Bangladesh Development Bank Senior Officer (IT) 2017 compact it 1219 (ET: N/A)]*
 

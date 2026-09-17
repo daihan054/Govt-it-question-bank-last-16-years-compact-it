@@ -3678,29 +3678,12 @@ Answer: `CPU scheduling` is the activity of deciding which process in the `ready
    ```
 
    The main algorithms
-
-   `FCFS (First Come First Served)`
-   - Non-preemptive; processes run in arrival order. Simple and fair, but suffers the `convoy effect`: one long process at the front makes every short one wait.
-
-   `SJF (Shortest Job First)`
-   - Picks the process with the smallest burst time. It is `provably optimal` for average waiting time, but the burst time must be predicted, and long processes can `starve`.
-
-   `SRTF (Shortest Remaining Time First)`
-   - The preemptive form of SJF. A newly arrived shorter job preempts the running one.
-
-   `Priority scheduling`
-   - The highest-priority process runs first. Available in preemptive and non-preemptive forms. Low-priority processes may starve, which is cured by `ageing` — raising a process's priority the longer it waits.
-
-   `Round Robin (RR)`
-   - Preemptive; each process gets a fixed `time quantum`, then goes to the back of the queue. Fair, and the best `response time`, which is why interactive systems use it.
-   ```
-      Quantum too LARGE  -> behaves like FCFS
-      Quantum too SMALL  -> too many context switches, high overhead
-      Rule of thumb : 80 % of bursts should be shorter than the quantum
-   ```
-
-   `Multilevel Queue` and `Multilevel Feedback Queue`
-   - Several queues with different priorities and different algorithms. In the feedback version a process can `move between queues`, so a CPU-bound process sinks to a lower priority while an interactive one rises. This is what real systems use.
+   - `FCFS`: non-preemptive, arrival order; simple but suffers the `convoy effect` (one long process delays all short ones).
+   - `SJF`: picks smallest burst time; `provably optimal` average waiting time, but needs predicted burst times and can starve long processes.
+   - `SRTF`: preemptive form of SJF — a shorter arrival preempts the running process.
+   - `Priority`: highest priority runs first (pre/non-preemptive); low-priority starvation is cured by `ageing`.
+   - `Round Robin`: preemptive, fixed `time quantum` then back of queue; fair with best response time (quantum too large behaves like FCFS, too small adds context-switch overhead — rule of thumb: 80% of bursts shorter than the quantum).
+   - `Multilevel (Feedback) Queue`: several queues with different priorities/algorithms; in the feedback version a process can move between queues (CPU-bound sinks, interactive rises) — what real systems use.
 
    Comparison
 
@@ -5448,19 +5431,7 @@ Answer: `Scheduling` is what makes multiprogramming work: it decides which of th
     | Controls | Degree of multiprogramming | CPU allocation | Memory pressure |
     | Present in | Batch systems | `All systems` | Time-sharing systems |
 
-    Other kinds of scheduling in an operating system
-    ```
-       I/O scheduling   : the order in which disk requests are served -
-                          FCFS, SSTF, SCAN, C-SCAN, LOOK
-
-       Thread scheduling: user-level versus kernel-level threads,
-                          and how they are mapped
-
-       Real-time        : Rate Monotonic, Earliest Deadline First -
-                          guarantees deadlines rather than fairness
-    ```
-
-    - The essential point: the `short-term scheduler` is the one that determines responsiveness and is invoked thousands of times a second; the `long-term scheduler` sets how much work is in the system at all; and the `medium-term scheduler` is the safety valve that relieves memory pressure.
+    - Essential point: the `short-term scheduler` determines responsiveness (invoked thousands of times/sec); the `long-term scheduler` sets how much work is in the system at all; the `medium-term scheduler` is the safety valve that relieves memory pressure.
 
 23. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
 
@@ -7012,16 +6983,7 @@ Answer: (Answered in English, as required for IT topics.) What swapping is
     (e) In `hibernation`
     - The whole memory image of the system is written to disk so the machine can be powered off and resume from the same state.
 
-    The cost, and what replaced it
-    ```
-       Swap time is dominated by TRANSFER TIME :
-
-            a 100 MB process on a disk giving 50 MB per second
-            = 2 seconds out + 2 seconds in = 4 SECONDS
-
-       That is enormous. So classic whole-process swapping is rare today.
-    ```
-    - Modern systems swap `pages` rather than whole processes — `demand paging`. Only the individual pages that are not in use are written out, which is far cheaper. Linux still calls the disk area the `swap partition`, but what it actually does is page.
+    - Cost: swap time is dominated by transfer time (e.g. a 100MB process at 50MB/s = 4 seconds total) — enormous, so whole-process swapping is rare today. Modern systems swap `pages` instead (`demand paging`), writing out only unused pages; Linux still calls the disk area the `swap partition` but actually pages.
 
 15. **(a) What do you mean by page table for memory management? Explain with example.** *[BPSC Assistant Programmer (CSE) 2019 compact it 1129 (ET: N/A)]*
 
@@ -7083,21 +7045,7 @@ Answer: What a page table is
             sets valid = 1, and restarts the instruction.
     ```
 
-    Two practical problems, and their fixes
-    ```
-       1. SPEED - the table is in RAM, so every reference would need TWO
-          memory accesses (one for the table, one for the data).
-          FIX : the TLB , a small associative cache of recent
-          translations. With a 98 per cent hit ratio the extra cost is
-          almost nil.
-
-       2. SIZE - a 32-bit space with 4 KB pages has 2^20 pages ; at
-          4 bytes per entry that is 4 MB PER PROCESS.
-          FIX : MULTI-LEVEL page tables (page the page table itself, so
-          only the parts in use are resident) , or an INVERTED page table
-          (one entry per FRAME, so the size depends on RAM, not on the
-          address space).
-    ```
+    Two practical problems and fixes: (1) `Speed` — the table is in RAM, so every reference needs two memory accesses; fixed by the `TLB`, a small associative cache of recent translations (≈98% hit ratio). (2) `Size` — a 32-bit space with 4KB pages needs 4MB per process; fixed by `multi-level` page tables (page the page table itself) or an `inverted page table` (one entry per frame, sized by RAM not address space).
 
 16. **Why page are sizes always powers of 2?** *[BCC-4TDC Assistant Programmer 2019 compact it 1161 (ET: BCC)]*
 
@@ -7808,9 +7756,7 @@ Answer: What a process is
                            scheduled again.
       Running -> Terminated  exit() , or it was killed.
    ```
-   - The distinction examiners look for: `Running -> Ready` is involuntary and the process could still run; `Running -> Waiting` is voluntary and the process cannot run until the event completes. There is `no Waiting -> Running` edge.
-
-   - Two more states appear in systems that swap: `Suspended-Ready` and `Suspended-Blocked`, entered when the `medium-term scheduler` swaps a process out to disk to free memory.
+   - Key distinction: `Running -> Ready` is involuntary (process could still run); `Running -> Waiting` is voluntary (cannot run until the event completes). There is `no Waiting -> Running` edge. Systems that swap also have `Suspended-Ready`/`Suspended-Blocked` states, entered when the `medium-term scheduler` swaps a process to disk.
 
 2. **Why is multithreading used in programming? Explain the advantages of using multithreads in software development.** *[Bankers' Selection Committee Secretariat Post: Assistant Programmer; Date: 15 Feb, 2024 Exam Taker: ANZA; Post: 35 [bitbox it book 354]]*
 

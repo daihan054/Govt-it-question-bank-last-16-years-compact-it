@@ -102,31 +102,11 @@ Answer: A real DC supply behaves as an ideal source with an internal resistance.
 
 2. **Find R and I from a circuit.** *[Petrobangla Assistant Manager (IT) 16.09.2022 compact it 714 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the circuit diagram is not present. The complete method for finding an unknown resistance and current is given below with a worked example.
-
-   The three laws every such problem uses
+Answer: The question is `incomplete` — the circuit diagram is not present. The method for finding an unknown resistance and current, with a worked example, is given below.
    ```
-      OHM'S LAW        V = I R          ,  I = V/R  ,  R = V/I
-
-      KIRCHHOFF'S CURRENT LAW (KCL)
-           The sum of currents ENTERING a node equals the sum LEAVING it.
-           sum I(in) = sum I(out)
-
-      KIRCHHOFF'S VOLTAGE LAW (KVL)
-           Round any closed loop, the sum of all voltages is zero.
-           sum V = 0
-   ```
-
-   Series and parallel combination
-   ```
-      SERIES   :  R(eq) = R1 + R2 + R3 + ...
-                  the SAME current flows through each
-                  the voltage DIVIDES
-
-      PARALLEL :  1/R(eq) = 1/R1 + 1/R2 + 1/R3 + ...
-                  two resistors :  R(eq) = R1 R2 / (R1 + R2)
-                  the SAME voltage across each
-                  the current DIVIDES
+      OHM'S LAW  V = IR                KCL: sum I(in) = sum I(out)          KVL: sum V round a loop = 0
+      SERIES   : R(eq) = R1+R2+...     same current, voltage divides
+      PARALLEL : 1/R(eq) = 1/R1+1/R2+...  same voltage, current divides ; two resistors: R1R2/(R1+R2)
    ```
 
    Worked example
@@ -137,81 +117,40 @@ Answer: The question is `incomplete` — the circuit diagram is not present. The
            |                      |                 |
            +----------------------+-----------------+
 
-      Given : the total current drawn from the source is I = 3 A
-      Find  : R , and the current through each branch
+      Given : total current I = 3 A.   Find : R, and the current through each branch.
    ```
-   Step 1 — total resistance from Ohm's law
+   Step 1 — total resistance
    ```
       R(total) = V / I = 24 / 3 = 8 ohms
    ```
-   Step 2 — express R(total) in terms of the unknown
+   Step 2 — R2 in parallel with R, that combination in series with R1
    ```
-      R2 is in parallel with R , and that combination is in series with R1 :
-
-      R(total) = R1 + (R2 R)/(R2 + R)
-
-           8 = 4 + (12 R)/(12 + R)
-           4 = 12R / (12 + R)
-           4(12 + R) = 12R
-           48 + 4R = 12R
-           48 = 8R
-           R = 6 ohms
+      8 = 4 + (12 R)/(12 + R)
+      4(12 + R) = 12R
+      48 + 4R = 12R  ->  48 = 8R  ->  R = 6 ohms
    ```
-   Step 3 — the branch currents
+   Step 3 — branch currents
    ```
-      Parallel combination = (12 x 6)/(12 + 6) = 72/18 = 4 ohms
-      Voltage across the parallel section = I x 4 = 3 x 4 = 12 V
-
-      I through R2 = 12 / 12 = 1 A
-      I through R  = 12 / 6  = 2 A
-      Check : 1 + 2 = 3 A = total current       correct  (KCL)
+      Parallel section = (12 x 6)/(12 + 6) = 4 ohms ; V = 3 x 4 = 12 V
+      I(R2) = 12/12 = 1 A ,  I(R) = 12/6 = 2 A
+      Check (KCL) : 1 + 2 = 3 A       correct
    ```
    Step 4 — verify with KVL
    ```
-      Round the loop :  24 - (3 x 4) - 12 = 24 - 12 - 12 = 0     correct
+      24 - (3 x 4) - 12 = 0     correct
    ```
-
-   The general procedure
-   ```
-      1. Label every node and assume a direction for every current.
-      2. Reduce any obvious series and parallel groups first.
-      3. Apply KCL at each node and KVL round each independent loop.
-      4. Solve the simultaneous equations for the unknowns.
-      5. VERIFY : substitute the answers back and confirm that KCL holds
-         at every node and KVL round every loop, and that the power
-         delivered equals the power dissipated.
-   ```
-
-   Other techniques for a harder network
-   ```
-      Voltage divider :  V(R2) = V x R2/(R1 + R2)
-      Current divider :  I(R1) = I x R2/(R1 + R2)
-      Mesh analysis   :  KVL round each mesh, solve for the mesh currents
-      Node analysis   :  KCL at each node, solve for the node voltages
-      Thevenin        :  replace the network by V(th) in series with R(th)
-      Norton          :  replace it by I(N) in parallel with R(N)
-      Superposition   :  one source at a time, then add the results
-   ```
+   - General procedure: label nodes, reduce series/parallel groups, apply KCL/KVL, solve, then verify. For a harder network use the voltage/current divider, mesh, node, Thevenin, Norton or superposition methods.
 
 3. **Find the Value of I.** *[BMA Signal Assistant Engineer (Computer) 2021 compact it 933 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the circuit diagram is not present. The methods for finding an unknown current are given below with worked examples.
+Answer: The question is `incomplete` — the circuit diagram is not present. The methods for finding an unknown current are given below with one worked example.
 
-   Method 1 — Ohm's law, for a single branch
+   Method 1 — Ohm's law (single branch)
    ```
-      I = V / R
-   ```
-   ```
-      A 12 V source across a 4 ohm resistor :   I = 12/4 = 3 A
+      I = V/R          e.g. 12 V across 4 ohm :  I = 12/4 = 3 A
    ```
 
-   Method 2 — series and parallel reduction
-   ```
-      SERIES   : R(eq) = R1 + R2 + ...        same current through each
-      PARALLEL : 1/R(eq) = 1/R1 + 1/R2 + ...  same voltage across each
-                 two resistors : R(eq) = R1 R2/(R1 + R2)
-   ```
-   Worked example
+   Method 2 — series/parallel reduction
    ```
            +---[ 4 ohm ]---+---[ 6 ohm ]---+
            |               |               |
@@ -223,110 +162,41 @@ Answer: The question is `incomplete` — the circuit diagram is not present. The
       Total         : 4 + 4 = 8 ohms
       Total current : I = 24/8 = 3 A
 
-      Voltage across the parallel section = 3 x 4 = 12 V
-      I through 12 ohm = 12/12 = 1 A
-      I through 6  ohm = 12/6  = 2 A
+      V across parallel section = 3 x 4 = 12 V
+      I(12 ohm) = 12/12 = 1 A ,  I(6 ohm) = 12/6 = 2 A
       Check (KCL) : 1 + 2 = 3 A       correct
    ```
 
-   Method 3 — the current divider rule
+   Method 3 — current divider rule (two resistors in parallel)
    ```
-      For two resistors in parallel carrying a total current I :
+      I(R1) = I x R2/(R1+R2)      I(R2) = I x R1/(R1+R2)
 
-           I(R1) = I x  R2/(R1 + R2)
-           I(R2) = I x  R1/(R1 + R2)
-
-      Note the CROSS multiplication - the current prefers the SMALLER
-      resistance, so R1's share is proportional to R2.
-   ```
-   ```
-      I = 3 A into 12 ohm parallel 6 ohm :
-           I(12) = 3 x 6/18 = 1 A
-           I(6)  = 3 x 12/18 = 2 A       same as above
+      I = 3 A into 12||6 :  I(12) = 3x6/18 = 1 A ,  I(6) = 3x12/18 = 2 A   (same as above)
    ```
 
    Method 4 — Kirchhoff's laws, for a network that will not reduce
-   ```
-      KCL : sum of currents into a node = sum out
-      KVL : sum of voltages round any closed loop = 0
-   ```
-   Worked example — two loops
-   ```
-          I1 ->  [ 2 ohm ]        I2 ->  [ 3 ohm ]
-        +-------/\/\/\------+-------/\/\/\-------+
-        |                   |                    |
-      (+) 10 V          [ 5 ohm ]              (+) 5 V
-        |                 I3 |                    |
-        +-------------------+--------------------+
+   - Apply `KCL` (sum of currents into a node = sum out) at every node and `KVL` (sum of voltages round a closed loop = 0) round every independent loop, then solve the simultaneous equations for the unknown currents.
 
-      KCL at the middle node :   I1 = I2 + I3
-      KVL loop 1 :  10 - 2 I1 - 5 I3 = 0
-      KVL loop 2 :   5 - 3 I2 - 5 I3 = 0        (traversed appropriately)
-
-      Substituting I1 = I2 + I3 and solving the two equations gives the
-      three currents. Always finish by checking KCL at the node and KVL
-      round both loops.
-   ```
-
-   Method 5 — mesh or nodal analysis, for anything larger
-   ```
-      MESH  : assign a circulating current to each mesh, write KVL for
-              each, and solve the simultaneous equations.
-      NODAL : choose a reference node, write KCL at every other node in
-              terms of the node voltages, and solve.
-
-      Nodal is usually easier when there are more loops than nodes.
-   ```
+   Method 5 — mesh/nodal analysis, for a larger network
+   - Mesh: assign a circulating current to each mesh and write KVL for each. Nodal: write KCL at every node in terms of node voltages. Nodal is usually faster when there are more loops than nodes.
 
    Method 6 — Thevenin, when only one branch current is wanted
    ```
-      1. REMOVE the branch whose current is wanted.
-      2. Find V(th) - the open-circuit voltage across those terminals.
-      3. Find R(th) - the resistance looking back in, with all
-         independent sources set to zero (voltage sources shorted,
-         current sources opened).
-      4. Reconnect the branch :
+      Remove the branch -> find Vth (open-circuit voltage) and Rth (sources zeroed)
+      -> reconnect :   I = Vth / (Rth + R(branch))
+   ```
+   - Fastest route when the network is large but only one current matters.
 
-           I = V(th) / (R(th) + R(branch))
-   ```
-   - This is the fastest route when the network is large but only one current matters.
-
-   The verification that should always be done
-   ```
-      KCL holds at every node
-      KVL holds round every loop
-      Power delivered by the sources = power dissipated in the resistors
-           sum (V x I) sources = sum (I^2 R) resistors
-   ```
+   - Always finish by verifying: KCL at every node, KVL round every loop, and power delivered = power dissipated.
 
 4. **নিচের সার্কিটের মোট রেজিস্ট্যান্স বের করে, I_3 এর কারেন্ট বের কর।** *[BREB Junior Assistant Manager (ICT) 2021 compact it 949 (ET: N/A)]*
 
-Answer: (Answered in English, as required for IT topics.) The question is `incomplete` — the circuit diagram is not present. The method for finding the total resistance and then a particular branch current is set out below with a worked example.
-
-    Step 1 — reduce the network to find the total resistance
+Answer: (Answered in English, as required for IT topics.) The question is `incomplete` — the circuit diagram is not present. The method for finding the total resistance and a branch current is set out below with a worked example.
     ```
-       SERIES   : R(eq) = R1 + R2 + R3 + ...
-                  the same current flows through each
-
-       PARALLEL : 1/R(eq) = 1/R1 + 1/R2 + ...
-                  two resistors : R(eq) = R1 R2/(R1 + R2)
-                  the same voltage across each
-    ```
-
-    Step 2 — find the total current from Ohm's law
-    ```
+       SERIES   : R(eq) = R1+R2+...            same current through each
+       PARALLEL : 1/R(eq) = 1/R1+1/R2+...      same voltage across each ; two resistors: R1R2/(R1+R2)
        I(total) = V / R(total)
-    ```
-
-    Step 3 — work back through the network to the branch wanted, using the current divider rule
-    ```
-       For two resistors in parallel carrying a total current I :
-
-            I(R1) = I x R2/(R1 + R2)
-            I(R2) = I x R1/(R1 + R2)
-
-       The CROSS multiplication is the point : current prefers the smaller
-       resistance, so R1's share is proportional to R2.
+       Current divider : I(R1) = I x R2/(R1+R2)
     ```
 
     Worked example
@@ -379,90 +249,39 @@ Answer: (Answered in English, as required for IT topics.) The question is `incom
                    = 96 + 48 + 144 = 288 W           correct
     ```
 
-    A mixed series-parallel example, which is the harder case
-    ```
-            +---[ R1 = 2 ]---+---[ R2 = 6 ]---+
-            |                |                |
-          (+) 24 V       [ R3 = 3 ]           |
-            |                |                |
-            +----------------+----------------+
-
-       R2 in parallel with R3 : (6 x 3)/(6 + 3) = 2 ohms
-       R(total) = R1 + 2 = 4 ohms
-       I(total) = 24/4 = 6 A
-
-       Voltage across the parallel section = 6 x 2 = 12 V
-       I(R2) = 12/6 = 2 A
-       I(R3) = 12/3 = 4 A
-       Check : 2 + 4 = 6 A                            correct
-    ```
-
-    The general procedure to state
-    ```
-       1. Redraw the circuit, marking every node.
-       2. Reduce the innermost series and parallel groups first, working
-          outward until a single resistance remains.
-       3. Find the total current with Ohm's law.
-       4. Expand back outward, using the voltage divider for series
-          sections and the current divider for parallel ones.
-       5. VERIFY : KCL at every node, KVL round every loop, and the power
-          delivered equal to the power dissipated.
-    ```
+    - General procedure for any such network: redraw and mark every node, reduce the innermost series and parallel groups first working outward to a single resistance, find the total current from Ohm's law, then expand back outward using the voltage divider for series sections and the current divider for parallel ones — and verify with KCL, KVL and the power balance.
 
 ### Protection Devices (Fuse, MCB, Relay, Breaker) (2)
 
 1. **Differentiate between a Fuse and a Miniature Circuit Breaker (MCB). Which one is more suitable for modern office electrical installations and why?** *[Officer (IT) 31 Jul 2026 bscs 02 (ET: N/A)]*
 
-Answer: Both protect a circuit from `overcurrent`. The difference is how they do it and whether they survive the event.
+Answer: Both protect a circuit from `overcurrent`, but differ in how they act and whether they survive the event.
 
-   Fuse
-   - A thin metal wire or strip that `melts` when the current exceeds its rating, breaking the circuit.
-   - It is a `one-time` device: once blown it must be replaced.
-   - Very fast on a large short-circuit current, and very cheap.
-   - No moving parts, so nothing to wear out — but also no indication of which circuit failed beyond the blown element.
-
-   MCB (Miniature Circuit Breaker)
-   - An electromechanical switch that `trips` and opens the circuit, then is `reset` by hand.
-   - It has `two` sensing elements:
-   ```
-   Thermal (bimetallic strip) : responds to a sustained OVERLOAD, with a delay
-   Magnetic (solenoid)        : responds to a SHORT CIRCUIT, almost instantly
-   ```
-   - The handle shows clearly which circuit tripped, and the same breaker also works as an isolating switch.
-
-   Difference
+   - `Fuse` — a thin wire/strip that `melts` on overcurrent, breaking the circuit. A `one-time` device that must be replaced after it blows. Very fast on a large short-circuit current, cheap, no moving parts, but gives no indication of which circuit failed.
+   - `MCB` — an electromechanical switch that `trips` and is `reset` by hand. Has two sensing elements: thermal (bimetallic strip — sustained overload, with a delay) and magnetic (solenoid — short circuit, almost instant). The tripped handle shows which circuit faulted and the breaker also serves as an isolating switch.
 
    | Point | Fuse | MCB |
    |---|---|---|
    | Operation | Wire melts | Mechanical contacts trip open |
-   | Reusable | No — replace after every fault | Yes — just reset the handle |
+   | Reusable | No — replace after every fault | Yes — reset the handle |
    | Reset time | Minutes; a spare must be at hand | Seconds |
    | Fault indication | Poor; must be inspected | Clear — the handle drops |
    | Sensing | One characteristic only | Separate thermal and magnetic |
-   | Accuracy | Rating drifts with age and heat | Stable, calibrated trip curve |
    | Acts as a switch | No | Yes, doubles as an isolator |
-   | Initial cost | Low | Higher |
-   | Long-run cost | Replacement fuses, downtime | One-time |
-   | Safety | Risk of a wrong-rated wire being fitted | Rating is fixed and cannot be tampered with |
-   | Speed on short circuit | Very fast (HRC fuses fastest) | Fast, though slightly slower than an HRC fuse |
+   | Cost | Low initial, recurring replacement | Higher initial, one-time |
    | Life | Single use | Thousands of operations |
 
    Which suits a modern office — the `MCB`
-   - `Fast recovery.` An office cannot wait while someone finds a spare fuse of the right rating; the MCB is reset in seconds and work continues.
-   - `No tampering.` The classic and dangerous habit of replacing a blown fuse with a thicker wire or a nail is impossible with an MCB, because its rating is built in.
-   - `Clear diagnosis.` The tripped handle identifies the faulty circuit at a glance, which matters in a distribution board serving many rooms.
-   - `Doubles as an isolator`, so a circuit can be switched off safely for maintenance without extra hardware.
-   - `Correct protection for electronic loads.` Computers and UPS systems draw a large `inrush current` at switch-on. A type-C MCB tolerates that inrush but still trips on a real fault, whereas a fuse sized to survive the inrush is too slow for genuine overloads.
-   - `Combines with an RCCB/RCD` in the same board to give earth-leakage protection for personnel — the standard modern arrangement.
-
-   - Fuses are still used where they are best: as HRC fuses in main incomers and in high-fault-level industrial supplies, where their extremely fast short-circuit clearing outperforms an MCB.
+   - Resets in seconds, so work is not held up waiting for a spare fuse, and its rating cannot be tampered with by fitting a thicker wire.
+   - The tripped handle gives instant fault diagnosis and also isolates the circuit safely for maintenance.
+   - A type-C MCB tolerates the `inrush current` of computers/UPS at switch-on without nuisance tripping, and pairs with an RCCB/RCD for earth-leakage protection — the standard modern arrangement.
+   - Fuses (especially HRC types) remain the better choice in main incomers and high-fault-level industrial supplies, where their faster short-circuit clearing outperforms an MCB.
 
 2. **Write down the function of Relay, Fuse and Circuit Breaker.** *[SPCBL Assistant Maintenance Engineer 20.11.2021 compact it 874 (ET: N/A)]*
 
-Answer: All three are protection or control devices in a circuit, but each does a different job.
+Answer: All three are protection or control devices, but each does a different job.
 
-   Relay
-   - A `relay` is an electrically operated switch. A small current through its coil creates a magnetic field that pulls an armature and closes (or opens) a separate set of contacts, switching a much larger current in another circuit.
+   `Relay` — an electrically operated switch: a small coil current creates a magnetic field that closes (or opens) a separate set of contacts, switching a much larger current elsewhere.
    ```
            control side              switched side
       +-------------------+      +------------------+
@@ -471,53 +290,24 @@ Answer: All three are protection or control devices in a circuit, but each does 
       |                   |mag   |   220 V, motor)  |
       +-------------------+      +------------------+
    ```
-   - Functions:
-   ```
-   Isolation      : a 5 V microcontroller safely switches a 220 V load
-   Amplification  : a small signal controls a large power circuit
-   Remote control : the control circuit can be far from the load
-   Protection     : a protective relay senses over-current, earth fault or
-                    over-voltage and commands a circuit breaker to trip
-   Logic          : one input can switch several contacts at once
-   ```
-   - It does `not` break the fault current itself in power systems; it detects the fault and tells the breaker to open.
+   - Functions: isolation (5 V logic safely switches a 220 V load), amplification, remote control, protection (senses a fault and commands a breaker to trip), and logic (one input switches several contacts). It does `not` break the fault current itself — it detects and signals.
 
-   Fuse
-   - A `fuse` is a thin metal wire or strip that `melts` when the current exceeds its rating, permanently breaking the circuit.
-   - Functions:
-   ```
-   Overcurrent protection : opens the circuit on overload or short circuit
-   Equipment protection   : saves the wiring and the appliance from burning
-   Fire prevention        : stops an overheated cable before it ignites
-   ```
-   - It is a `one-time` device — after it blows, it must be replaced. It is the cheapest and, in the HRC form, the fastest protection against a large short-circuit current.
+   `Fuse` — a thin wire/strip that `melts` on overcurrent, permanently breaking the circuit.
+   - Functions: overcurrent protection, saves the wiring/appliance from burning, and prevents fire from an overheated cable. A `one-time` device that must be replaced; cheapest, and in HRC form the fastest against a large short-circuit current.
 
-   Circuit breaker
-   - A `circuit breaker` is an automatic switch that `trips open` on a fault and can then be `reset` by hand. It combines two sensing elements:
-   ```
-   Thermal (bimetallic strip) : sustained OVERLOAD, with an inverse time delay
-   Magnetic (solenoid)        : SHORT CIRCUIT, almost instantaneous
-   ```
-   - Functions:
-   ```
-   Overcurrent and short-circuit protection, like a fuse
-   Reusable  : reset instead of replace
-   Isolation : also serves as a manual on/off switch for maintenance
-   Indication: the tripped handle shows which circuit faulted
-   ```
-
-   Comparison
+   `Circuit breaker` — an automatic switch that `trips` on a fault and is `reset` by hand, combining thermal (bimetallic strip — delayed overload trip) and magnetic (solenoid — instant short-circuit trip) sensing.
+   - Functions: overcurrent/short-circuit protection like a fuse, but reusable (reset, not replaced), also serves as a manual isolator, and its tripped handle indicates the faulted circuit.
 
    | Point | Relay | Fuse | Circuit breaker |
    |---|---|---|---|
-   | Main job | Switch or sense, then command | Break the circuit on overcurrent | Break the circuit on overcurrent |
+   | Main job | Switch/sense, then command | Break circuit on overcurrent | Break circuit on overcurrent |
    | Operation | Electromagnetic coil | Melting element | Thermal + magnetic trip |
    | Reusable | Yes | No | Yes, reset by hand |
-   | Breaks fault current | No (protective relay signals only) | Yes | Yes |
+   | Breaks fault current | No (signals only) | Yes | Yes |
    | Acts as a switch | Yes | No | Yes |
-   | Cost | Low to moderate | Very low | Higher |
+   | Cost | Low-moderate | Very low | Higher |
 
-   - How they work together in a real installation: a `protective relay` detects the abnormal condition, a `circuit breaker` does the actual interruption, and a `fuse` gives simple backup protection on smaller branches.
+   - In practice: a `protective relay` detects the fault, a `circuit breaker` interrupts it, and a `fuse` gives simple backup protection on smaller branches.
 
 ### AC-DC Conversion & Transformers (3)
 
@@ -613,25 +403,9 @@ Answer: AC is converted to DC by `rectification`. A complete supply has four sta
                    (step down)    (AC to DC)   (smooth)   (hold fixed)
    ```
 
-   Stage 1 — Transformer
-   - Steps the 220 V mains down to a low AC voltage, say 12 V, and gives `galvanic isolation` from the mains for safety.
-   ```
-      Vs / Vp = Ns / Np
-   ```
+   `Transformer` — steps the 220 V mains down to a low AC voltage (say 12 V) and gives `galvanic isolation` for safety (Vs/Vp = Ns/Np).
 
-   Stage 2 — Rectifier
-   - Diodes conduct in one direction only, so they turn the alternating waveform into a one-directional (pulsating) DC.
-
-   `Half-wave rectifier` — 1 diode
-   ```
-      AC ---|>|---+------ output
-                 ###
-                 ### R(load)
-      AC --------+------
-   ```
-   - Passes only the positive half of each cycle. Output frequency = 50 Hz, and half the input is wasted.
-
-   `Full-wave bridge rectifier` — 4 diodes, the practical choice
+   `Rectifier` — diodes conduct in one direction only, turning AC into pulsating DC. A half-wave rectifier (1 diode) uses only the positive half of each cycle; the practical choice is the `full-wave bridge rectifier` (4 diodes), which uses both halves and needs no centre tap:
    ```
                  D1        D2
            +----|>|---+---|<|----+
@@ -641,32 +415,26 @@ Answer: AC is converted to DC by `rectification`. A complete supply has four sta
            +----|<|---+---|>|----+
                  D3        D4            output frequency = 100 Hz
    ```
-   - Both halves of the input are used, so the output is smoother and the transformer is used more efficiently. No centre tap is needed.
 
-   Stage 3 — Filter
-   - A large electrolytic capacitor across the output charges at each peak and discharges slowly between peaks, filling in the gaps.
+   `Filter` — a large electrolytic capacitor charges at each peak and discharges slowly between peaks, smoothing the pulses.
    ```
       Before filter    /‾\/‾\/‾\/‾\        pulsating
       After filter     ‾‾‾\_/‾‾‾\_/‾‾      nearly flat, small ripple
-   ```
-   ```
-      Ripple factor = V(rms ripple) / V(dc)
 
-      Half-wave  : 1.21          Full-wave : 0.48      (before filtering)
+      Ripple factor = V(rms ripple) / V(dc)   :  half-wave 1.21 , full-wave 0.48
    ```
-   - A bigger capacitor gives less ripple. An LC or pi filter reduces it further.
+   - A bigger capacitor, or an LC/pi filter, gives less ripple.
 
-   Stage 4 — Regulator
-   - Holds the output constant when the load or the mains voltage changes. A `zener diode` for small loads, or a three-terminal IC such as `7805` (+5 V) and `7812` (+12 V).
+   `Regulator` — holds the output constant despite load or mains changes: a `zener diode` for small loads, or an IC such as `7805` (+5 V) / `7812` (+12 V).
 
    Modern method — SMPS
    ```
       Mains --> rectify --> chop at 20-100 kHz --> small ferrite transformer
             --> rectify --> filter --> feedback-regulated DC output
    ```
-   - Used in every computer power supply, mobile charger and laptop adapter. Because the transformer runs at high frequency it is tiny, and efficiency reaches 80-90 per cent instead of the 50-60 per cent of a linear supply.
+   - Used in every computer power supply, mobile charger and laptop adapter; the high-frequency transformer is tiny, and efficiency reaches 80-90% versus 50-60% for a linear supply.
 
-   - Summary: `rectifier` makes the current one-directional, `filter` smooths it, and `regulator` keeps it steady. All three are needed — a rectifier alone gives pulsating DC, not usable DC.
+   - Summary: `rectifier` makes the current one-directional, `filter` smooths it, `regulator` keeps it steady — all three are needed.
 
 ### Power Systems & Frequency (3)
 
@@ -674,261 +442,112 @@ Answer: AC is converted to DC by `rectification`. A complete supply has four sta
 
 Answer: (Answered in English, as required for IT topics.) Part 1 — Audio frequency versus Radio frequency
 
-   `Audio frequency (AF)`
-   - The band of frequencies the human ear can hear: `20 Hz to 20 kHz`.
-   - It is a `mechanical` (pressure) wave in air, but the electrical signal that represents it is also called an audio-frequency signal.
-   - It cannot travel far as a radio wave, because an antenna for 1 kHz would have to be tens of kilometres long.
+   `Audio frequency (AF)` — the band the human ear hears: `20 Hz to 20 kHz`. A `mechanical` (pressure) wave in air; too low to radiate as a radio wave (a 1 kHz antenna would need to be tens of km long).
 
-   `Radio frequency (RF)`
-   - The band used for wireless transmission: about `3 kHz to 300 GHz`, with the practical broadcast range starting near 30 kHz.
-   - It is an `electromagnetic` wave and travels through air, vacuum and space at the speed of light.
-   - Sub-bands: LF, MF (AM radio), HF (short wave), VHF (FM radio, TV), UHF (mobile, Wi-Fi), SHF (satellite, radar).
+   `Radio frequency (RF)` — used for wireless transmission: about `3 kHz to 300 GHz`. An `electromagnetic` wave, travelling through air, vacuum and space at the speed of light. Sub-bands: LF, MF (AM radio), HF (short wave), VHF (FM/TV), UHF (mobile, Wi-Fi), SHF (satellite, radar).
 
    | Point | Audio frequency | Radio frequency |
    |---|---|---|
    | Range | 20 Hz - 20 kHz | ~3 kHz - 300 GHz |
-   | Nature of wave | Mechanical (sound) or its electrical form | Electromagnetic |
+   | Nature of wave | Mechanical (sound) | Electromagnetic |
    | Medium needed | Air or another material | Travels in vacuum too |
-   | Speed | 343 m/s in air | 3 x 10^8 m/s |
-   | Wavelength | 17 m to 17 mm (in air) | 100 km down to 1 mm |
-   | Antenna | Not usable | Practical, since wavelength is short |
-   | Range of travel | A few metres | Kilometres to interplanetary |
+   | Antenna | Not usable | Practical (short wavelength) |
+   | Range of travel | A few metres | Km to interplanetary |
    | Devices | Microphone, speaker, amplifier | Antenna, transmitter, receiver |
    | Uses | Music, speech, telephony | Broadcasting, mobile, Wi-Fi, radar |
 
-   - How they work together: an audio signal is too low in frequency to radiate, so it is `modulated` onto a radio carrier (AM, FM) for transmission and `demodulated` back to audio at the receiver.
+   - They work together: an audio signal is `modulated` onto a radio carrier (AM/FM) for transmission and `demodulated` back to audio at the receiver.
 
    Part 2 — Ten 10-ohm resistors in series
+   ```
+      R(total) = R1 + R2 + ... + R10 = 10 x 10 ohm = 100 ohms
 
-   - In a `series` connection the same current flows through every element and the resistances simply add.
+      For comparison, in parallel : 1/R = 10 x (1/10) = 1   ->   R = 1 ohm
    ```
-      R(total) = R1 + R2 + ... + Rn
-   ```
-   ```
-      R(total) = 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10 + 10
-               = 10 x 10
-      R(total) = 100 ohms
-   ```
-   ```
-      ---/\/\---/\/\---/\/\--- ... ---/\/\---
-        10      10      10             10
-                (ten resistors in series)
-   ```
-
-   For comparison, the same ten in parallel
-   ```
-      1/R = 1/10 + 1/10 + ... (ten times) = 10/10 = 1
-      R(parallel) = 10 / 10 = 1 ohm
-   ```
-   - General rule for `n equal resistors`: series gives `nR`, parallel gives `R/n`. Here 10 x 10 = 100 ohms and 10 / 10 = 1 ohm.
+   - General rule for `n` equal resistors: series gives `nR`, parallel gives `R/n`.
 
 2. **BREB power transmission interrupt related.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
 Answer: The question is `incomplete` — only the topic "BREB power transmission interrupt related" was recorded, not the question itself. `BREB` is the Bangladesh Rural Electrification Board, so the subject is `interruptions in power transmission and distribution`, which is covered below.
 
-    Types of interruption
     ```
-       MOMENTARY   : less than 5 minutes. Usually cleared automatically by
-                     a RECLOSER after a transient fault such as a branch
-                     touching a line.
-       SUSTAINED   : longer than 5 minutes. Needs a crew to attend.
-       PLANNED     : announced in advance, for maintenance or new connections.
-       UNPLANNED   : a fault, a storm, or equipment failure.
-       LOAD SHEDDING : a deliberate interruption because generation is less
-                     than demand - a managed rotation of outages.
-    ```
+       Types   : MOMENTARY (<5 min, cleared by a RECLOSER) , SUSTAINED (>5 min, needs a crew) ,
+                 PLANNED (announced) , UNPLANNED (fault/storm/failure) ,
+                 LOAD SHEDDING (deliberate, generation less than demand)
 
-    Causes of transmission and distribution interruption
-    ```
-       NATURAL      : storm, lightning strike, flood, fallen tree,
-                      salt or dust pollution on insulators, birds and animals
-       EQUIPMENT    : transformer failure, insulator flashover, conductor
-                      snapping, breaker or CT/PT failure, cable fault,
-                      ageing infrastructure
-       ELECTRICAL   : short circuit (line-to-line, line-to-ground), overload,
-                      over-voltage, under-frequency
-       OPERATIONAL  : switching error, wrong protection setting, maintenance
-       EXTERNAL     : vehicle hitting a pole, construction damage to an
-                      underground cable, theft of conductor, vandalism
-       SYSTEM       : generation shortfall, a cascading trip, a grid
-                      collapse such as the national blackout of 1 November 2014
+       Causes  : NATURAL (storm, lightning, flood, fallen tree, pollution) ,
+                 EQUIPMENT (transformer/insulator/conductor/breaker failure, ageing) ,
+                 ELECTRICAL (short circuit, overload, over/under-voltage) ,
+                 OPERATIONAL (switching error, maintenance) ,
+                 EXTERNAL (vehicle hit, cable damage, theft) ,
+                 SYSTEM (generation shortfall, cascading trip / grid collapse)
+
+       Faults  : SYMMETRICAL (3-phase, ~5%, most severe but simplest) ;
+                 UNSYMMETRICAL (~95%) - L-G commonest (~70%), L-L (~15%), L-L-G (~10%)
     ```
 
-    Types of electrical fault
+    Protection that clears a fault
     ```
-       SYMMETRICAL (rare, about 5 %)
-            Three-phase (L-L-L) , three-phase-to-ground (L-L-L-G)
-            The most severe, but balanced and simplest to analyse.
-
-       UNSYMMETRICAL (about 95 %)
-            Single line-to-ground (L-G)   - the COMMONEST, about 70 %
-            Line-to-line (L-L)            - about 15 %
-            Double line-to-ground (L-L-G) - about 10 %
+       RELAY (over-current, differential, distance, earth-fault) detects the fault and commands the breaker
+       CIRCUIT BREAKER (oil, air-blast, SF6, vacuum) interrupts the fault current
+       RECLOSER re-closes automatically after a transient fault (tries about 3 times)
+       ISOLATOR gives visible off-load disconnection ; LIGHTNING ARRESTER diverts surges ; EARTH WIRE shields phase conductors
     ```
 
-    The protection scheme that clears a fault
+    Reliability indices
     ```
-       RELAY detects the abnormal condition and commands the breaker
-            Over-current relay     : too much current
-            Differential relay     : current in does not equal current out -
-                                     used for transformers and generators
-            Distance relay         : impedance indicates how far the fault is -
-                                     used for transmission lines
-            Earth-fault relay      : unbalanced current to ground
-
-       CIRCUIT BREAKER interrupts the fault current
-            Oil , air-blast , SF6 , vacuum
-
-       RECLOSER automatically re-closes after a delay, in case the fault
-            was transient. Typically tries three times before locking out.
-
-       ISOLATOR provides a visible off-load disconnection for safe working
-
-       LIGHTNING ARRESTER diverts a surge to earth
-       EARTH WIRE on top of the tower shields the phase conductors
+       SAIFI = interruptions / customers served      -> how OFTEN supply is lost
+       SAIDI = customer-minutes lost / customers     -> how LONG it is lost
+       CAIDI = SAIDI / SAIFI                          -> average length of one interruption
+       ASAI  = available hours / demanded hours x 100 %
     ```
 
-    The reliability indices BREB and every utility is measured by
-    ```
-       SAIFI = System Average Interruption FREQUENCY Index
-             = total customer interruptions / total customers served
-               -> how OFTEN the average customer loses supply
+    - Reducing interruptions: `prevention` (tree trimming, insulator cleaning, replacing ageing conductor), `design` (ring-main/mesh instead of radial feeders, underground cable in storm-prone areas), `protection` (graded relay settings, auto-reclosers), `automation` (SCADA, smart meters), and `management` (outage management system, stocked spares, trained crews).
 
-       SAIDI = System Average Interruption DURATION Index
-             = sum of customer-minutes lost / total customers
-               -> how LONG the average customer is without supply
-
-       CAIDI = SAIDI / SAIFI
-               -> the average length of ONE interruption
-
-       ASAI  = Average Service Availability Index
-             = (available hours / demanded hours) x 100 %
-    ```
-
-    How interruptions are reduced
-    ```
-       PREVENTION   : tree trimming along the right of way, insulator
-                      cleaning, thermographic inspection, transformer oil
-                      testing, replacing ageing conductor
-       DESIGN       : ring-main and mesh networks instead of radial feeders,
-                      so an alternative path exists ; underground cable in
-                      storm-prone areas ; higher insulation levels
-       PROTECTION   : properly graded relay settings, so only the nearest
-                      breaker trips ; auto-reclosers on rural feeders
-       AUTOMATION   : SCADA for remote monitoring and switching ;
-                      a distribution management system ; smart meters that
-                      report an outage without a customer call
-       MANAGEMENT   : an outage management system, stocked spares, trained
-                      crews and a published restoration target
-    ```
-
-    - For BREB specifically, the network is `largely rural and radial`, with long 11 kV and 33 kV feeders, so a single fault far from the substation can black out a wide area. That is why rural electrification programmes concentrate on `auto-reclosers, feeder sectionalising and right-of-way clearance` rather than on undergrounding, which is far too costly per kilometre for a rural line.
+    - For BREB specifically, the network is `largely rural and radial`, with long 11 kV/33 kV feeders, so one fault far from the substation can black out a wide area — which is why rural electrification concentrates on `auto-reclosers, feeder sectionalising and right-of-way clearance` rather than costly undergrounding.
 
 3. **EEE related 3 math question.** *[BREB Assistant General Manager (IT) 2021 compact it 935 (ET: N/A)]*
 
-Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics that such a paper almost always draws them from are worked below, so the methods are available.
+Answer: The question is `incomplete` — only "EEE related 3 math question" was recorded, not the three problems. The three topics such a paper usually draws from are worked below.
 
-    Problem type 1 — DC network analysis
+    Problem 1 — DC network: find the total resistance and branch currents
     ```
-       Find the total resistance and the branch currents.
-
             +---[ 4 ohm ]---+---[ 6 ohm ]---+
             |               |               |
           (+) 24 V      [ 12 ohm ]          |
             |               |               |
             +---------------+---------------+
-    ```
-    ```
-       Step 1 : the parallel pair
-            R(p) = (12 x 6)/(12 + 6) = 72/18 = 4 ohms
 
-       Step 2 : total resistance
-            R(total) = 4 + 4 = 8 ohms
-
-       Step 3 : total current
-            I = V/R = 24/8 = 3 A
-
-       Step 4 : voltage across the parallel section
-            V(p) = 3 x 4 = 12 V
-
-       Step 5 : branch currents
-            I(12) = 12/12 = 1 A
-            I(6)  = 12/6  = 2 A
-            Check : 1 + 2 = 3 A   (KCL)      correct
-
-       Step 6 : power
-            P = V I = 24 x 3 = 72 W
-            Check : 3^2 x 4 + 1^2 x 12 + 2^2 x 6 = 36 + 12 + 24 = 72 W
+       R(p) = (12 x 6)/(12 + 6) = 4 ohms          R(total) = 4 + 4 = 8 ohms
+       I = V/R = 24/8 = 3 A                       V(p) = 3 x 4 = 12 V
+       I(12) = 12/12 = 1 A ,  I(6) = 12/6 = 2 A   Check (KCL) : 1 + 2 = 3 A
+       P = V I = 24 x 3 = 72 W                    Check : 3^2x4 + 1^2x12 + 2^2x6 = 72 W
     ```
 
-    Problem type 2 — AC series RLC circuit
+    Problem 2 — AC series RLC: R = 30 ohm, L = 0.1 H, C = 100 uF, V = 230 V at 50 Hz. Find Z, I, pf.
     ```
-       R = 30 ohm , L = 0.1 H , C = 100 uF , V = 230 V at 50 Hz.
-       Find the impedance, the current and the power factor.
-    ```
-    ```
-       X(L) = 2 pi f L = 2 x 3.1416 x 50 x 0.1 = 31.42 ohms
-       X(C) = 1/(2 pi f C) = 1/(2 x 3.1416 x 50 x 100e-6) = 31.83 ohms
-
-       Net reactance X = X(L) - X(C) = 31.42 - 31.83 = -0.41 ohms
-            (negative, so the circuit is slightly CAPACITIVE)
-
-       Z = sqrt(R^2 + X^2) = sqrt(900 + 0.168) = 30.003 ohms
-
-       I = V/Z = 230/30.003 = 7.666 A
-
-       pf = cos(theta) = R/Z = 30/30.003 = 0.9999 leading
-            theta = arctan(X/R) = arctan(-0.41/30) = -0.78 degrees
-
-       Real power     P = V I cos(theta) = 230 x 7.666 x 0.9999 = 1763 W
-       Apparent power S = V I = 230 x 7.666 = 1763 VA
-       Reactive power Q = V I sin(theta) = -24 VAR
-
-       Resonant frequency f(r) = 1/(2 pi sqrt(LC))
-                               = 1/(2 x 3.1416 x sqrt(0.1 x 100e-6))
-                               = 50.33 Hz
-       The supply is almost at resonance, which is why the pf is nearly 1.
+       X(L) = 2 pi f L = 31.42 ohms            X(C) = 1/(2 pi f C) = 31.83 ohms
+       X = X(L) - X(C) = -0.41 ohms (slightly capacitive)
+       Z = sqrt(R^2 + X^2) = 30.003 ohms       I = V/Z = 230/30.003 = 7.666 A
+       pf = R/Z = 0.9999 leading ,  theta = arctan(X/R) = -0.78 deg
+       P = VI cos(theta) = 1763 W ,  S = VI = 1763 VA ,  Q = VI sin(theta) = -24 VAR
+       f(r) = 1/(2 pi sqrt(LC)) = 50.33 Hz  -> supply is almost at resonance, hence pf near 1
     ```
 
-    Problem type 3 — transformer or motor calculation
+    Problem 3 — transformer: 2200/220 V, 50 Hz, 10 kVA. Find turns ratio and rated currents.
     ```
-       A single-phase transformer : 2200/220 V , 50 Hz , 10 kVA.
-       Find the turns ratio and the rated currents.
-    ```
-    ```
-       Turns ratio  a = V1/V2 = 2200/220 = 10 : 1
-
-       Primary current   I1 = S/V1 = 10,000/2200 = 4.545 A
-       Secondary current I2 = S/V2 = 10,000/220  = 45.45 A
-       Check : I1/I2 = 4.545/45.45 = 1/10 = 1/a      correct
-    ```
-    ```
-       Three-phase induction motor : 12-pole alternator at 500 rpm feeding
-       an 8-pole motor, slip 3 %.
-
-       Supply frequency  f  = P N /120 = 12 x 500/120 = 50 Hz
-       Synchronous speed Ns = 120 f/P  = 120 x 50/8  = 750 rpm
-       Full-load speed   N  = Ns(1 - s) = 750 x 0.97 = 727.5 rpm
+       a = V1/V2 = 2200/220 = 10 : 1
+       I1 = S/V1 = 10000/2200 = 4.545 A       I2 = S/V2 = 10000/220 = 45.45 A
+       Check : I1/I2 = 1/10 = 1/a       correct
     ```
 
-    The formulas these three problems rest on
+    Formulas these rest on
     ```
-       DC        : V = IR , P = VI = I^2 R = V^2/R
-                   Series R = R1+R2 ; Parallel 1/R = 1/R1+1/R2
-                   KCL : sum I(in) = sum I(out)
-                   KVL : sum V round a loop = 0
-
-       AC        : X(L) = 2 pi f L , X(C) = 1/(2 pi f C)
-                   Z = sqrt(R^2 + (XL - XC)^2)
-                   pf = cos(theta) = R/Z
-                   P = VI cos(theta) , S = VI , Q = VI sin(theta)
-                   Resonance : f(r) = 1/(2 pi sqrt(LC))
-
-       Machines  : f = PN/120 , Ns = 120f/P , s = (Ns - N)/Ns
-                   a = V1/V2 = N1/N2 = I2/I1
-                   Efficiency = output/input x 100
+       DC       : V=IR , P=VI=I^2R=V^2/R , series R=R1+R2 , parallel 1/R=1/R1+1/R2 , KCL/KVL
+       AC       : X(L)=2 pi f L , X(C)=1/(2 pi f C) , Z=sqrt(R^2+X^2) , pf=R/Z , P=VIcos(theta) , f(r)=1/(2 pi sqrt(LC))
+       Machines : f=PN/120 , Ns=120f/P , s=(Ns-N)/Ns , a=V1/V2=N1/N2=I2/I1
     ```
-    - The habit that earns marks in all three: `write the formula, substitute the numbers with their units, compute, and then verify` — for DC by checking KCL and the power balance, for AC by checking that P = I^2 R, and for machines by checking the turns or speed ratio.
+    - The habit that earns marks: write the formula, substitute with units, compute, then verify — KCL/power balance for DC, P=I^2R for AC, ratio check for machines.
 
 ### Component Comparison (Battery vs Capacitor) (1)
 
@@ -938,47 +557,31 @@ Answer: The question is `incomplete` — only "EEE related 3 math question" was 
 
 **What is the name of components which convert AC current to DC current?** *[BRiCM Assistant Maintenance Engineer; Date: 24 Feburary, 2025 Exam Taker: BRiCM; Exam Type: Written [bitbox it book 41]]*
 
-Answer: Both store electrical energy, but in completely different ways — a `battery` stores it chemically, a `capacitor` stores it in an electric field.
+Answer: Both store electrical energy, but in different ways — a `battery` stores it chemically, a `capacitor` stores it in an electric field.
 
-    Battery
-    - Two electrodes and an electrolyte. Energy is stored as `chemical` energy and released by a chemical reaction that drives electrons through the external circuit.
-    - It supplies a `steady voltage` for a long time, and the voltage stays nearly constant until the cell is almost exhausted.
-    - Charging and discharging are slow, because a chemical reaction has to take place.
-    - The chemistry wears out, so a rechargeable battery lasts only a few hundred to a few thousand cycles.
+    `Battery` — two electrodes and an electrolyte; energy is stored as `chemical` energy, released by a reaction that drives electrons round the circuit. Supplies a nearly `steady voltage` for a long time; charges and discharges slowly; the chemistry wears out after a few hundred to a few thousand cycles.
     ```
        Energy stored = capacity (Ah) x voltage (V)
     ```
 
-    Capacitor
-    - Two conducting plates separated by a dielectric. Energy is stored `physically`, as charge separated across an electric field. No chemical reaction takes place.
-    - It charges and discharges in `microseconds`, so it can deliver very high power for a very short time.
-    - Its voltage `falls continuously` as it discharges, following an exponential curve.
-    - Because nothing is consumed, it survives millions of cycles.
+    `Capacitor` — two conducting plates separated by a dielectric; energy is stored `physically` as separated charge in an electric field, with no chemical reaction. Charges/discharges in `microseconds`, so it can deliver very high power briefly; voltage falls exponentially as it discharges; survives millions of cycles.
     ```
        Q = C . V              Energy = (1/2) C V^2
     ```
 
-    Difference
-
     | Point | Battery | Capacitor |
     |---|---|---|
     | Form of storage | Chemical energy | Electric field (separated charge) |
-    | Energy density | High — stores far more per unit volume | Very low |
-    | Power density | Low — releases energy slowly | Very high — releases it instantly |
+    | Energy density | High | Very low |
+    | Power density | Low — releases slowly | Very high — releases instantly |
     | Charge / discharge time | Minutes to hours | Microseconds to seconds |
     | Output voltage | Nearly constant until exhausted | Falls exponentially at once |
-    | Internal resistance | Higher | Very low |
     | Cycle life | Hundreds to a few thousand | Millions; essentially unlimited |
     | Self-discharge | Slow, weeks or months | Fast, minutes to hours |
-    | Effect of temperature | Strong | Small |
     | Used in | Powering a device for hours | Smoothing, filtering, timing, coupling, camera flash |
-    | Symbol | `--\|\|---` (long and short plates) | `--\|\|---` (two equal plates) |
 
-    Where each is used
-    - `Battery` — phone, laptop, UPS, vehicle starting, backup power. Anything that must run for hours.
-    - `Capacitor` — smoothing the ripple in a power supply, coupling and decoupling in amplifiers, timing in a 555 circuit, tuning a radio, the flash in a camera, and motor starting.
-
-    - A `supercapacitor` sits between the two: energy density far above an ordinary capacitor but still below a battery, with the capacitor's fast charging and near-unlimited cycle life. It is used for regenerative braking and short-term backup, where a battery would wear out too quickly.
+    - `Battery` powers phones, laptops, UPS and vehicle starting; `capacitor` smooths ripple, couples/decouples amplifier stages, times a 555 circuit, tunes a radio and fires a camera flash.
+    - A `supercapacitor` sits between the two: energy density well above an ordinary capacitor but still below a battery, with the capacitor's fast charging and near-unlimited cycle life — used for regenerative braking and short-term backup, where a battery would wear out too quickly.
 
 ## Transistors (BJT & FET) (9)
 
@@ -1160,67 +763,33 @@ Answer: The collector current is related to the base current by the `current gai
 
 Answer: An NMOS transistor in the `linear` (triode) region behaves like a voltage-controlled resistor. The drain current is
    ```
-      ID = mu_n Cox (W/L) [ (VGS - Vt) VDS - VDS^2 / 2 ]
-
-   valid while  VDS < VGS - Vt   (the linear / triode condition)
+      ID = mu_n Cox (W/L) [ (VGS - Vt) VDS - VDS^2 / 2 ]      valid while VDS < VGS - Vt (triode condition)
    ```
 
-   Given
-   ```
-      mu_n Cox (W/L) = 1.3 mA/V^2
-      VGS            = 2.5 V
-      Vt             = 0.95 V
-      VDS            = not given -> assume 0.1 V, a small value typical of the
-                       deep linear region
-   ```
+   Given: mu_n Cox (W/L) = 1.3 mA/V^2, VGS = 2.5 V, Vt = 0.95 V. VDS is not given, so assume a small value typical of deep triode: VDS = 0.1 V.
 
-   Step 1 — find the overdrive voltage
+   Step 1 — overdrive voltage
    ```
       V(ov) = VGS - Vt = 2.5 - 0.95 = 1.55 V
    ```
 
-   Step 2 — check that the device really is in the linear region
+   Step 2 — check the region
    ```
-      VDS = 0.1 V  <  V(ov) = 1.55 V        yes, linear region confirmed
+      VDS = 0.1 V  <  V(ov) = 1.55 V        linear region confirmed
    ```
 
    Step 3 — substitute into the formula
    ```
       ID = 1.3 mA/V^2 x [ (1.55)(0.1) - (0.1)^2 / 2 ]
-         = 1.3 x [ 0.155 - 0.005 ]
-         = 1.3 x 0.150
-         = 0.195 mA
-   ```
-   ```
-      ID = 0.195 mA = 195 microamperes
+         = 1.3 x [ 0.155 - 0.005 ] = 1.3 x 0.150 = 0.195 mA
    ```
 
-   Check with the small-signal (deep triode) approximation
+   Check (deep-triode approximation, VDS^2/2 negligible)
    ```
-      When VDS is very small, the VDS^2/2 term is negligible :
-
-      ID ~= mu_n Cox (W/L) (VGS - Vt) VDS
-          = 1.3 x 1.55 x 0.1
-          = 0.2015 mA
-
-      Close to the exact 0.195 mA, so the working is consistent.
+      ID ~= mu_n Cox (W/L) (VGS - Vt) VDS = 1.3 x 1.55 x 0.1 = 0.2015 mA
+      close to the exact 0.195 mA, so the working is consistent
    ```
-
-   Equivalent channel resistance
-   ```
-      r(DS) = VDS / ID = 0.1 / 0.195 mA = 513 ohms
-   ```
-   - This is the useful property of the linear region: the MOSFET acts as a resistor whose value is set by VGS. It is the basis of the CMOS transmission gate and the analogue switch.
-
-   For comparison — the same device at the edge of saturation
-   ```
-      If VDS >= V(ov) = 1.55 V the device saturates :
-
-      ID = (1/2) mu_n Cox (W/L) (VGS - Vt)^2
-         = 0.5 x 1.3 x (1.55)^2
-         = 0.5 x 1.3 x 2.4025
-         = 1.562 mA
-   ```
+   - Equivalent channel resistance: r(DS) = VDS/ID = 0.1/0.195 mA = 513 ohms — the MOSFET behaves as a VGS-controlled resistor, the basis of the CMOS transmission gate.
 
    Output characteristic
    ```
@@ -1239,7 +808,7 @@ Answer: An NMOS transistor in the `linear` (triode) region behaves like a voltag
 
 Answer: Part 1 — the three regions of BJT operation
 
-   The region is decided by how the `two junctions` are biased.
+   The region depends on how the `two junctions` are biased.
    ```
    Region      | Emitter-Base | Collector-Base | Behaviour
    ------------+--------------+----------------+---------------------------
@@ -1247,21 +816,9 @@ Answer: Part 1 — the three regions of BJT operation
    Active      | Forward      | Reverse        | Amplifier, IC = beta . IB
    Saturation  | Forward      | Forward        | ON, acts as a closed switch
    ```
-
-   `Cut-off region`
-   - Both junctions reverse biased, `V(BE) < 0.7 V`, so `IB = 0` and `IC = 0` (only a tiny leakage).
-   - `V(CE) = Vcc`, the full supply appears across the transistor.
-   - The transistor is an `open switch` — logic 1 at the collector.
-
-   `Active region`
-   - Emitter-base forward, collector-base reverse. `IC = beta . IB`, independent of V(CE).
-   - Used for `amplification`, because the output faithfully follows the input.
-   - `0.2 V < V(CE) < Vcc`.
-
-   `Saturation region`
-   - Both junctions forward biased. The base current is so large that the collector cannot take any more current, so `IC < beta . IB`.
-   - `V(CE,sat) is about 0.2 V`, essentially zero.
-   - The transistor is a `closed switch` — logic 0 at the collector.
+   - `Cut-off`: both junctions reverse biased, IB = IC = 0 (only leakage), V(CE) = Vcc — an open switch, logic 1.
+   - `Active`: emitter-base forward, collector-base reverse; IC = beta.IB, independent of V(CE); used for `amplification`; 0.2 V < V(CE) < Vcc.
+   - `Saturation`: both junctions forward biased; base current is so large the collector cannot take more, so IC < beta.IB; V(CE,sat) ~ 0.2 V — a closed switch, logic 0.
 
    Output characteristics
    ```
@@ -1277,11 +834,9 @@ Answer: Part 1 — the three regions of BJT operation
        |/____|_________________________________ VCE
        0    0.2 V                      Vcc
    ```
-   - A switching circuit works only at the two ends — cut-off and saturation. An amplifier is biased in the middle of the active region.
+   - Switching circuits work at the two ends — cut-off and saturation; an amplifier is biased in the middle of the active region.
 
    Part 2 — n-channel JFET operation
-
-   Structure
    ```
          Drain (D)
            |
@@ -1293,34 +848,13 @@ Answer: Part 1 — the three regions of BJT operation
            |
          Source (S)
    ```
-   - The `gate-source junction is always reverse biased`, so gate current is essentially zero. This is why a JFET has a very high input impedance, unlike a BJT.
-   - It is a `voltage-controlled` device: V(GS) widens or narrows the depletion region, which changes the width of the channel.
-
-   Effect of V(GS) with V(DS) fixed and small
+   - The gate-source junction is always reverse biased, so gate current is essentially zero — giving a very high input impedance, unlike a BJT. It is `voltage-controlled`: V(GS) widens or narrows the depletion region, changing the channel width. For an n-channel JFET, V(GS) stays `zero or negative`.
    ```
-      VGS = 0        : depletion region thin, channel widest, ID maximum = I(DSS)
-      VGS = -1 V     : depletion region grows, channel narrows, ID falls
-      VGS = -2 V     : channel narrower still, ID smaller
-      VGS = V(P)     : the two depletion regions meet, channel PINCHED OFF,
-                       ID = 0.  V(P) is the pinch-off (cut-off) voltage,
-                       negative for an n-channel JFET
+      VGS = 0     : depletion thin, channel widest, ID maximum = I(DSS)
+      VGS = -1,-2 V : channel narrows, ID falls
+      VGS = V(P)  : depletion regions meet, channel PINCHED OFF, ID = 0  (VP negative for n-channel)
    ```
-   - For an n-channel JFET, V(GS) is always `zero or negative`. Making it positive would forward-bias the gate junction and destroy the high input impedance.
-
-   Effect of V(DS) with V(GS) fixed at 0
-   ```
-      Small VDS (0 to VP)   : OHMIC region. The channel behaves as a resistor,
-                              ID rises almost linearly with VDS.
-
-      VDS = |VP|            : PINCH-OFF point. The depletion region touches near
-                              the drain end.
-
-      VDS > |VP|            : SATURATION (constant-current) region. ID stays
-                              almost constant at I(DSS) even as VDS rises.
-
-      VDS very large        : BREAKDOWN. The junction breaks down and ID rises
-                              sharply; the device is damaged.
-   ```
+   - With V(GS) fixed at 0, as V(DS) rises: `ohmic region` (0 to |VP|, channel acts as a resistor, ID rises ~linearly) -> `pinch-off` at VDS = |VP| -> `saturation` (VDS > |VP|, ID nearly constant at I(DSS)) -> `breakdown` at very high VDS (junction fails, ID rises sharply, device damaged).
 
    Drain characteristics
    ```
@@ -1366,60 +900,13 @@ Answer: An `NMOS` transistor is a MOSFET whose channel carries `electrons`. It h
       Source (S)          Drain (D)
                         Body (B) -> tied to source
    ```
-   - Two heavily doped `N+` regions (source and drain) sit in a lightly doped `P` substrate.
-   - The gate is a metal or polysilicon plate `insulated` from the substrate by a very thin silicon-dioxide layer, so the gate draws `no DC current` at all. That is why a MOSFET's input impedance is enormous — about 10^12 ohms.
-   - It is an `enhancement-type` device: with no gate voltage there is no channel and the transistor is off.
+   - Two heavily doped `N+` regions (source, drain) sit in a lightly doped `P` substrate. The gate is insulated from the substrate by a thin SiO2 layer, so it draws `no DC current` — input impedance ~10^12 ohms. It is `enhancement-type`: with no gate voltage there is no channel, so the device is off.
 
    Operation
-
-   Case 1 — V(GS) = 0 : cut-off
-   ```
-      No channel exists. The source and drain are two back-to-back PN junctions,
-      one of which is always reverse biased.
-
-      ID = 0   ->  the transistor is OFF (an open switch)
-   ```
-
-   Case 2 — 0 < V(GS) < Vt : still off
-   ```
-      The positive gate voltage pushes holes away from the surface, leaving a
-      depletion region, but not enough electrons have been attracted yet.
-
-      ID is still essentially 0
-   ```
-
-   Case 3 — V(GS) > Vt : the channel forms
-   ```
-      The positive gate attracts minority electrons from the P substrate to the
-      surface. They form a thin layer of N-type material joining source to drain
-      -- the INVERSION LAYER or CHANNEL.
-
-      Vt = threshold voltage, typically 0.4 to 1 V.
-      V(ov) = VGS - Vt is the overdrive voltage; it sets how thick the channel is.
-   ```
-
-   Case 4 — apply V(DS), small : linear (triode) region
-   ```
-      Condition : VDS < VGS - Vt
-
-      ID = mu_n Cox (W/L) [ (VGS - Vt) VDS - VDS^2 / 2 ]
-
-      The channel is a uniform resistor whose value is set by VGS,
-      so ID rises almost linearly with VDS. This is the region used by the
-      CMOS transmission gate and the analogue switch.
-   ```
-
-   Case 5 — V(DS) >= V(GS) - Vt : saturation region
-   ```
-      The voltage across the oxide at the drain end falls to Vt, so the channel
-      PINCHES OFF near the drain. Raising VDS further does not widen the channel;
-      it only extends the pinch-off point.
-
-      ID = (1/2) mu_n Cox (W/L) (VGS - Vt)^2
-
-      ID is now almost independent of VDS -- a constant-current source.
-      This is the region used for amplification.
-   ```
+   - `VGS = 0` or `0 < VGS < Vt` : no channel exists yet (source/drain are back-to-back PN junctions, one always reverse biased) or not enough electrons have been attracted — `cut-off`, ID ~ 0.
+   - `VGS > Vt` : the gate attracts electrons from the substrate, forming a thin N-type `inversion layer/channel` joining source to drain. Vt (threshold, typically 0.4-1 V) is the channel-forming voltage; V(ov) = VGS - Vt sets its thickness.
+   - `VDS < VGS - Vt` — `linear (triode)` region: ID = mu_n Cox (W/L) [(VGS-Vt)VDS - VDS^2/2]; the channel is a VGS-set resistor, so ID rises almost linearly with VDS. Used by the CMOS transmission gate.
+   - `VDS >= VGS - Vt` — `saturation` region: the channel pinches off at the drain end; ID = (1/2) mu_n Cox (W/L) (VGS-Vt)^2, almost independent of VDS — this is the region used for amplification.
 
    Output characteristics
    ```
@@ -1498,13 +985,7 @@ Answer: (Answered in English, as required for IT topics.) For a transistor, Kirc
 
 Answer: A `PN junction diode` is formed by joining a `P-type` semiconductor (rich in holes) to an `N-type` semiconductor (rich in free electrons) on the same crystal. It conducts current in `one direction only`.
 
-   Formation of the depletion region
-   - At the moment of joining, electrons from the N side diffuse across and fill holes on the P side.
-   - This leaves fixed positive ions on the N side and fixed negative ions on the P side, forming a `depletion region` empty of free carriers.
-   - The exposed ions set up an internal `barrier potential` that stops further diffusion.
-   ```
-      Barrier potential :  Silicon 0.7 V ,  Germanium 0.3 V
-   ```
+   Formation of the depletion region — electrons from the N side diffuse across and fill holes on the P side, leaving fixed positive ions on the N side and fixed negative ions on the P side: a `depletion region` empty of free carriers. The exposed ions set up an internal `barrier potential` (Silicon 0.7 V, Germanium 0.3 V) that stops further diffusion.
    ```
            P side                 N side
       +  +  +  +  |- - + +|  -  -  -  -
@@ -1520,28 +1001,11 @@ Answer: A `PN junction diode` is formed by joining a `P-type` semiconductor (ric
          P ----|>|---- N
 
       Current flows in the direction the triangle points, from anode to cathode.
-      The bar marks the cathode; on a real diode it is the painted ring.
    ```
 
-   Forward bias
-   - The `positive` terminal of the supply is connected to the `P` side and the negative to the N side.
-   ```
-      +  ---| P | N |--- -
-   ```
-   - The applied voltage `opposes` the barrier potential, so the depletion region narrows.
-   - Once the supply exceeds about `0.7 V` (silicon), the barrier collapses and a large current flows.
-   - The diode acts almost like a `closed switch` with a small fixed drop of 0.7 V.
-   - Resistance is very low, a few ohms.
+   `Forward bias` — P side to `+`, N side to `-`. The applied voltage `opposes` the barrier potential, narrowing the depletion region; past about `0.7 V` (silicon) the barrier collapses and a large current flows. The diode behaves like a `closed switch`, resistance very low.
 
-   Reverse bias
-   - The `positive` terminal is connected to the `N` side and the negative to the P side.
-   ```
-      -  ---| P | N |--- +
-   ```
-   - The applied voltage `adds` to the barrier potential, so the depletion region widens.
-   - Almost no current flows — only a tiny `reverse saturation current` of nanoamperes, caused by minority carriers.
-   - The diode acts like an `open switch`. Resistance is very high, megohms.
-   - If the reverse voltage is raised too far, the junction `breaks down` (avalanche or Zener breakdown) and a large current flows, usually destroying an ordinary diode.
+   `Reverse bias` — P side to `-`, N side to `+`. The applied voltage `adds` to the barrier potential, widening the depletion region; almost no current flows, only a tiny nanoampere `reverse saturation current`. The diode behaves like an `open switch`, resistance very high. Too high a reverse voltage causes `breakdown` (avalanche or Zener), usually destroying an ordinary diode.
 
    V-I characteristic
    ```
@@ -1558,20 +1022,16 @@ Answer: A `PN junction diode` is formed by joining a `P-type` semiconductor (ric
              | (uA)
    ```
 
-   Difference
-
    | Point | Forward bias | Reverse bias |
    |---|---|---|
    | Connection | P to +, N to - | P to -, N to + |
    | Depletion region | Narrows | Widens |
-   | Barrier potential | Reduced | Increased |
    | Current | Large, in mA | Negligible, in uA or nA |
    | Resistance | Very low | Very high |
    | Behaves as | Closed switch | Open switch |
-   | Voltage drop | About 0.7 V (Si) | Nearly the whole supply |
    | Carriers involved | Majority carriers | Minority carriers only |
 
-   - Uses: rectification (AC to DC), clipping and clamping, protection against reverse polarity, and — in special forms — the `Zener` diode for voltage regulation and the `LED` for light emission.
+   - Uses: rectification (AC to DC), clipping/clamping, reverse-polarity protection, and special forms — the `Zener` diode (voltage regulation) and the `LED` (light emission).
 
 2. **Determine the current passing through a 10\text{ k}\Omega resistor. Assume a forward voltage drop of 0.75\text{ V} across the diode.** *[Dhaka WASA Assistant Maintenance Engineer (Network) 04.07.2025 compact it 1439 (ET: BUET)]*
 
@@ -1640,100 +1100,60 @@ Answer: A diode in series with a resistor forms a simple series circuit. The dio
 
 3. **What is Diode and Inductor?** *[Bangladesh Livestock Research Institute Assistant Maintenance Engineer 20.05.2023 compact it 498 (ET: N/A)]*
 
-Answer: Diode
-   - A `diode` is a two-terminal semiconductor device that lets current flow in `one direction only`. It is made by joining a P-type and an N-type semiconductor to form a `PN junction`.
+Answer: `Diode` — a two-terminal semiconductor device that lets current flow in `one direction only`, formed by joining a P-type and an N-type semiconductor (a `PN junction`).
    ```
            anode          cathode
          P ----|>|---- N
    ```
-   - `Forward bias` (P to +, N to -): once the supply exceeds about `0.7 V` for silicon, the depletion region collapses and a large current flows. The diode acts as a closed switch.
-   - `Reverse bias` (P to -, N to +): the depletion region widens and only a few nanoamperes of leakage flow. The diode acts as an open switch.
-   - Types and uses:
-   ```
-   Rectifier diode : converts AC to DC in every power supply
-   Zener diode     : deliberately operated in reverse breakdown, for voltage regulation
-   LED             : emits light when forward biased
-   Photodiode      : converts light into current
-   Schottky diode  : very fast switching, low forward drop (0.3 V)
-   Varactor diode  : acts as a voltage-controlled capacitor, used for tuning
-   ```
-   - Other uses: clipping, clamping, protection against reverse polarity, and free-wheeling across a relay coil.
+   - Forward biased (P to +, N to -): past about `0.7 V` (silicon) it conducts, acting as a closed switch. Reverse biased (P to -, N to +): it blocks, acting as an open switch (only nanoamperes leak).
+   - Types: rectifier (AC to DC), Zener (voltage regulation via reverse breakdown), LED (emits light), photodiode (light to current), Schottky (fast, low drop), varactor (voltage-controlled capacitor). Also used for clipping, clamping and reverse-polarity/free-wheeling protection.
 
-   Inductor
-   - An `inductor` is a passive two-terminal component — usually a coil of wire, often on a magnetic core — that stores energy in a `magnetic field` when current flows through it.
+   `Inductor` — a passive coil (often on a magnetic core) that stores energy in a `magnetic field` when current flows through it.
    ```
-      ---(((((---            symbol : a coil, sometimes with core lines
+      ---(((((---     symbol
+      V = L (dI/dt)          Energy = (1/2) L I^2          Unit : henry (H)
    ```
+   - Opposes any change in current: resists a rising current with a back EMF, and generates a voltage spike when the current is cut off.
    ```
-      V = L . (dI / dt)              Faraday's law of induction
-      Energy stored = (1/2) L I^2
-      Unit : henry (H)
+      DC (steady) : acts as a plain wire, impedance = 0
+      AC          : impedance XL = 2 pi f L, rises with frequency
+      High freq   : acts as an open circuit -> blocks AC, passes DC
    ```
-   - Its defining behaviour: an inductor `opposes any change in current`. When the current tries to rise, the inductor generates a back EMF that resists it; when the current is cut off, it generates a large voltage spike trying to keep it flowing.
-   ```
-      DC (steady)    : acts as a plain wire, impedance = 0
-      AC             : impedance XL = 2 pi f L , rises with frequency
-      High frequency : acts as an open circuit -> it blocks AC, passes DC
-   ```
-   - Uses: filters and chokes in power supplies, tuned circuits in radios (with a capacitor), transformers, relays, motors, and energy storage in switching converters.
-
-   Difference
+   - Uses: filters/chokes, tuned circuits (with a capacitor), transformers, relays, motors, and energy storage in switching converters.
 
    | Point | Diode | Inductor |
    |---|---|---|
    | Type | Active semiconductor | Passive component |
-   | Terminals | 2 (anode, cathode) | 2 |
    | Polarity | Polarised — direction matters | Not polarised |
    | Stores | Nothing | Energy in a magnetic field |
    | Main property | Conducts one way only | Opposes a change in current |
-   | Behaviour with DC | Conducts or blocks by polarity | Acts as a wire |
    | Behaviour with AC | Rectifies | Impedance rises with frequency |
-   | Unit | Volt drop (0.7 V) | Henry (H) |
    | Main use | Rectification, protection | Filtering, tuning, energy storage |
 
-   - The two are often used together: in a switching power supply the inductor stores energy while the switch is on, and the diode gives that energy a path to the load when the switch turns off.
+   - Used together in a switching power supply: the inductor stores energy while the switch is on, and the diode gives it a path to the load when the switch turns off.
 
 4. **How does LED differ from Laser Diod? What are the function of Diode?** *[BTRC Assistant Director (Technical) 2021 compact it 808 (ET: IBA)]*
 
-Answer: Both an `LED` and a `laser diode` are forward-biased PN junctions that emit light when electrons and holes recombine. The difference is `how` the light is produced.
+Answer: Both an `LED` and a `laser diode` are forward-biased PN junctions that emit light when electrons and holes recombine, but they differ in `how` the light is produced.
 
-   LED (Light Emitting Diode)
-   - Light is produced by `spontaneous emission`: each electron falls across the band gap at a random moment and in a random direction.
-   - The result is `incoherent`, spread over a `wide spectrum` (about 30-50 nm) and emitted in all directions.
-   - It has no optical cavity and no threshold current — it starts glowing as soon as it conducts, and brightness rises smoothly with current.
+   `LED` — light by `spontaneous emission`: each electron falls across the band gap at a random moment and direction, giving `incoherent` light over a wide spectrum (~30-50 nm), spread in all directions. No optical cavity or threshold current — it glows as soon as it conducts.
 
-   Laser diode
-   - Light is produced by `stimulated emission`: one photon triggers the release of an identical photon, in the same direction and phase.
-   - The chip has a `resonant cavity` formed by two mirrored end facets, which reflects photons back and forth so the effect multiplies.
-   - It needs a minimum `threshold current`; below it the device behaves like a poor LED, above it the output rises steeply and becomes laser light.
-   - The result is `coherent`, `monochromatic` (about 1-2 nm wide) and a narrow directional beam.
+   `Laser diode` — light by `stimulated emission`: one photon triggers an identical one (same direction and phase), amplified by a `resonant cavity` (two mirrored facets). Needs a minimum `threshold current` — below it, poor LED-like output; above it, laser action. Result: `coherent`, `monochromatic` (~1-2 nm), a narrow directional beam.
 
    | Point | LED | Laser diode |
    |---|---|---|
    | Emission | Spontaneous | Stimulated |
    | Light | Incoherent | Coherent |
    | Spectral width | Wide, 30-50 nm | Very narrow, 1-2 nm |
-   | Beam | Spreads in all directions | Narrow, highly directional |
+   | Beam | Spreads in all directions | Narrow, directional |
    | Threshold current | None | Yes — lases only above it |
    | Optical cavity | None | Two mirrored facets |
-   | Output power | Low, a few mW | High, tens of mW to watts |
    | Modulation speed | Up to ~200 Mbps | Several Gbps |
    | Fibre used with | Multimode, short distance | Single-mode, long distance |
-   | Cost | Very low | High |
-   | Temperature sensitivity | Low | High, needs a controlled circuit |
    | Safety | Safe to look at | Can damage the eye |
-   | Uses | Indicators, displays, lighting, remote controls, short-haul fibre | Long-haul fibre, CD/DVD, barcode readers, printers, surgery |
+   | Uses | Indicators, displays, lighting, short-haul fibre | Long-haul fibre, CD/DVD, barcode readers, surgery |
 
-   Functions of a diode
-   - `Rectification` — converting AC to DC. This is the main use, in half-wave, full-wave and bridge rectifiers.
-   - `Voltage regulation` — a Zener diode held in reverse breakdown keeps a fixed voltage.
-   - `Clipping` — cutting off part of a waveform above or below a set level, used to protect inputs.
-   - `Clamping` — shifting a waveform up or down to a chosen DC level.
-   - `Protection` — a diode in series blocks a reversed supply; a `free-wheeling` diode across a relay or motor coil absorbs the inductive spike when the current is switched off.
-   - `Switching` — a fast diode acts as an electronic on/off element in logic and converter circuits.
-   - `Light emission and detection` — LED and laser diode emit; photodiode and solar cell absorb.
-   - `Tuning` — a varactor diode acts as a voltage-controlled capacitor in radio tuners and PLLs.
-   - `Demodulation` — recovering the audio signal from an AM radio carrier.
+   Functions of a diode: `rectification` (AC to DC — the main use), `voltage regulation` (Zener, held in reverse breakdown), `clipping`/`clamping` (shaping a waveform), `protection` (blocks a reversed supply; a free-wheeling diode absorbs an inductive spike), `switching` (fast on/off element), `light emission/detection` (LED, laser diode, photodiode, solar cell), `tuning` (varactor as a voltage-controlled capacitor), and `demodulation` (recovering audio from an AM carrier).
 
 ## Digital-to-Analog & Analog-to-Digital Converters (DAC/ADC) (4)
 
@@ -1911,35 +1331,15 @@ Answer: An `ADC` converts a continuously varying analogue voltage into a binary 
                                    ^
                                 V(ref)
    ```
+   - Sample-and-hold freezes Vin; the SAR sets each bit from MSB to LSB, the DAC converts the trial code to a voltage, and the comparator keeps the bit as 1 if Vin exceeds it, else clears it to 0. It performs a `binary search`, so an n-bit conversion takes exactly n clock cycles.
 
-   How it works
+   Worked example — 8-bit ADC, Vref = 2.56 V, Vin = 1.7 V (step = 2.56/256 = 10 mV)
    ```
-      1. The sample-and-hold freezes the input voltage so it cannot change
-         while the conversion runs.
-      2. The SAR sets the MSB to 1 and clears the rest    ->  1000 0000
-      3. The DAC turns that code into a voltage, and the comparator asks
-         "is Vin greater than the DAC output?"
-            YES -> keep the bit as 1
-            NO  -> clear it back to 0
-      4. Move to the next bit and repeat.
-      5. After n comparisons, the register holds the answer.
-   ```
-   - It performs a `binary search`, so an 8-bit conversion needs exactly 8 clock cycles, and a 12-bit one exactly 12.
+      bit7 1000 0000=1.28V keep    bit6 1100 0000=1.92V clear   bit5 1010 0000=1.60V keep
+      bit4 1011 0000=1.76V clear   bit3 1010 1000=1.68V keep    bit2 1010 1100=1.72V clear
+      bit1 1010 1010=1.70V keep (equal)   bit0 1010 1011=1.71V clear
 
-   Worked example — 8-bit ADC, Vref = 2.56 V, Vin = 1.7 V
-   ```
-      Step = 2.56 / 256 = 10 mV
-
-      bit 7 : try 1000 0000 = 1.28 V   -> 1.7 > 1.28  keep 1
-      bit 6 : try 1100 0000 = 1.92 V   -> 1.7 < 1.92  clear to 0
-      bit 5 : try 1010 0000 = 1.60 V   -> 1.7 > 1.60  keep 1
-      bit 4 : try 1011 0000 = 1.76 V   -> 1.7 < 1.76  clear to 0
-      bit 3 : try 1010 1000 = 1.68 V   -> 1.7 > 1.68  keep 1
-      bit 2 : try 1010 1100 = 1.72 V   -> 1.7 < 1.72  clear to 0
-      bit 1 : try 1010 1010 = 1.70 V   -> equal        keep 1
-      bit 0 : try 1010 1011 = 1.71 V   -> 1.7 < 1.71  clear to 0
-
-      Result = 1010 1010 = 170       and 170 x 10 mV = 1.70 V     correct
+      Result = 1010 1010 = 170  ->  170 x 10 mV = 1.70 V     correct
    ```
 
    Simplest circuit — the flash (parallel) ADC
@@ -1963,10 +1363,7 @@ Answer: An `ADC` converts a continuously varying analogue voltage into a binary 
        GND        |
                  Vin
    ```
-   - A resistor ladder creates `2^n - 1` reference levels, one comparator per level, and a priority encoder turns the comparator outputs into a binary code.
-   - It converts in a `single clock cycle` — the fastest type — but needs 255 comparators for 8 bits, so it is used only for very high speed video and radar work.
-
-   Comparison of ADC types
+   - A resistor ladder creates `2^n - 1` reference levels, one comparator per level, and a priority encoder turns the comparator outputs into a binary code. It converts in a `single clock cycle` — the fastest type — but needs 255 comparators for 8 bits, so it is used only for very high speed video and radar work.
 
    | Type | Speed | Resolution | Cost | Used in |
    |---|---|---|---|---|
@@ -1987,30 +1384,11 @@ Answer: (Answered in English, as required for IT topics.) An `A/D converter` tur
        D --> E[Digital output]
    ```
 
-   Stage 1 — Sampling
-   - The continuous signal is measured at regular intervals, `f(s)` times per second, and a sample-and-hold circuit freezes each value while it is converted.
-   - `Nyquist theorem`: the sampling rate must be at least twice the highest frequency present.
-   ```
-      f(s) >= 2 . f(max)
-   ```
-   - Example: speech up to 4 kHz is sampled at 8 kHz; CD audio up to 20 kHz is sampled at 44.1 kHz.
-   - If this rule is broken, high frequencies fold back and appear as false low frequencies — `aliasing` — so an anti-aliasing low-pass filter is placed before the sampler.
+   `Sampling` — the signal is measured at regular intervals, `f(s)` times per second, and a sample-and-hold circuit freezes each value while it is converted. `Nyquist theorem`: f(s) >= 2.f(max) (e.g. speech to 4 kHz sampled at 8 kHz; CD audio to 20 kHz at 44.1 kHz). Breaking this rule makes high frequencies fold back as false low ones — `aliasing` — so an anti-aliasing low-pass filter precedes the sampler.
 
-   Stage 2 — Quantization
-   - Each sample is rounded to the nearest of `2^n` fixed levels.
-   ```
-      Step size = (V(max) - V(min)) / 2^n
-   ```
-   - The rounding introduces `quantization error`, at most half a step. More bits give smaller steps and less error:
-   ```
-      SNR(dB) = 6.02 n + 1.76
-   ```
+   `Quantization` — each sample is rounded to the nearest of `2^n` levels, step size = (Vmax - Vmin)/2^n. This introduces `quantization error` (at most half a step); more bits reduce it: SNR(dB) = 6.02n + 1.76.
 
-   Stage 3 — Encoding
-   - Each level is written as an `n-bit binary number`.
-
-   Stage 4 — Output
-   - The bits are delivered in parallel or serially to the processor.
+   `Encoding` — each level is written as an `n-bit binary number`, then delivered (`output`) in parallel or serially to the processor.
 
    Circuit — successive approximation ADC
    ```
@@ -2062,153 +1440,72 @@ Answer: A `leading` power factor means the current leads the voltage, so the cir
 
    Given
    ```
-      P    = 940 W
-      pf   = 0.707 leading   ->  theta = -45 degrees  (current leads)
-      v(t) = 99 cos(600t + 30) V
-
+      P = 940 W ,  pf = 0.707 leading -> theta = -45 degrees ,  v(t) = 99 cos(600t + 30) V
       Vm = 99 V ,  omega = 600 rad/s
    ```
 
-   Step 1 — RMS voltage and frequency
+   Step 1 — RMS voltage
    ```
       V(rms) = Vm / sqrt(2) = 99 / 1.4142 = 70.00 V
-
-      omega = 600 rad/s
-      f = omega / (2 pi) = 600 / 6.2832 = 95.49 Hz
    ```
 
    Step 2 — magnitude of the impedance
    ```
-      P = V(rms)^2 . cos(theta) / |Z|
-
-      |Z| = V(rms)^2 . cos(theta) / P
-          = (70.00)^2 x 0.707 / 940
-          = 4900 x 0.707 / 940
-          = 3464.3 / 940
-      |Z| = 3.686 ohms
+      |Z| = V(rms)^2 . cos(theta) / P = (70.00)^2 x 0.707 / 940 = 3464.3 / 940 = 3.686 ohms
    ```
 
    Step 3 — RMS current, as a check
    ```
       I(rms) = V(rms) / |Z| = 70.00 / 3.686 = 18.99 A
-
       check : P = V I cos(theta) = 70.00 x 18.99 x 0.707 = 940 W      correct
    ```
 
    Step 4 — resistance
    ```
-      R = |Z| . cos(theta)
-        = 3.686 x 0.707
-      R = 2.606 ohms
+      R = |Z| . cos(theta) = 3.686 x 0.707 = 2.606 ohms
    ```
 
-   Step 5 — capacitive reactance
+   Step 5 — capacitive reactance (at 45 degrees, X = R)
    ```
-      sin(45) = 0.707 , so for a 45 degree angle  X = R
-
-      Xc = |Z| . sin(theta)
-         = 3.686 x 0.707
-      Xc = 2.606 ohms
+      Xc = |Z| . sin(theta) = 3.686 x 0.707 = 2.606 ohms
    ```
 
    Step 6 — the capacitance
    ```
-      Xc = 1 / (omega C)
-
-      C = 1 / (omega . Xc)
-        = 1 / (600 x 2.606)
-        = 1 / 1563.6
-      C = 0.0006395 F
-   ```
-   ```
-      C = 639.5 microfarads
+      C = 1 / (omega . Xc) = 1 / (600 x 2.606) = 0.0006395 F = 639.5 microfarads
    ```
 
    Answer
    ```
-      The two elements are
+      R = 2.61 ohms (resistor) ,  C = 639.5 uF (capacitor) , connected in series.
 
-         R = 2.61 ohms          (resistor)
-         C = 639.5 uF           (capacitor)
-
-      connected in series.
+      Check : Z = R - j Xc = 2.606 - j 2.606 = 3.686 angle -45 degrees ; pf = cos(-45) = 0.707 leading ;
+              P = I(rms)^2 . R = (18.99)^2 x 2.606 = 940 W        all correct
    ```
 
-   Verification
-   ```
-      Z = R - j Xc = 2.606 - j 2.606 = 3.686 angle -45 degrees      correct
-      pf = cos(-45) = 0.707 leading                                 correct
-      P  = I(rms)^2 . R = (18.99)^2 x 2.606 = 940 W                 correct
-   ```
-
-   - Points to note: a `leading` power factor always means a capacitive circuit; a `lagging` one would mean an inductor, and step 6 would then use `L = XL / omega`. At exactly 0.707 the phase angle is 45 degrees, so `R and X are equal` — a useful shortcut worth spotting immediately.
+   - A `leading` power factor always means a capacitive circuit; a `lagging` one would mean an inductor, with step 6 using `L = XL / omega` instead. At exactly 0.707 the phase angle is 45 degrees, so `R and X are equal` — a useful shortcut worth spotting immediately.
 
 2. **RLC সার্কিট কী? বৈদ্যুতিক সার্কিটে ট্রানজিস্টরের ভূমিকা কী?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809-810 (ET: IBA)]*
 
 Answer: (Answered in English, as required for IT topics.) RLC circuit
-   - An `RLC circuit` contains a `resistor (R)`, an `inductor (L)` and a `capacitor (C)` connected together. It is the basic circuit for tuning, filtering and oscillation.
+   - An `RLC circuit` contains a `resistor (R)`, `inductor (L)` and `capacitor (C)` together — the basic circuit for tuning, filtering and oscillation.
    ```
       Series RLC
       ---/\/\/\---(((((---||---
            R         L      C
    ```
-   - Each element behaves differently with frequency:
-   ```
-      R  : opposition = R              , independent of frequency
-      L  : reactance  X(L) = 2 pi f L  , rises with frequency
-      C  : reactance  X(C) = 1/(2 pi f C) , falls with frequency
-   ```
-   - Total opposition is the `impedance`:
-   ```
-      Z = sqrt( R^2 + (XL - XC)^2 )
+   - Each element's opposition varies with frequency: R is constant; X(L) = 2 pi f L rises with frequency; X(C) = 1/(2 pi f C) falls with frequency. Total impedance Z = sqrt(R^2 + (XL-XC)^2), phase theta = arctan((XL-XC)/R).
 
-      phase angle  theta = arctan( (XL - XC) / R )
-   ```
-
-   Resonance
-   - At one particular frequency the two reactances cancel exactly.
-   ```
-      XL = XC   ->   2 pi f L = 1 / (2 pi f C)
-
-      f(r) = 1 / (2 pi sqrt(LC))
-   ```
-   - At resonance in a `series` RLC circuit: `Z = R` (minimum), current is `maximum`, and the power factor is 1. In a `parallel` RLC circuit the opposite happens — impedance is maximum and current minimum.
-   - `Quality factor` measures how sharp the resonance is:
+   Resonance — at `f(r) = 1/(2 pi sqrt(LC))` the two reactances cancel (XL = XC). In a `series` RLC at resonance, Z = R (minimum), current is maximum, pf = 1; in a `parallel` RLC the opposite holds (Z maximum, current minimum).
    ```
       Q = (1/R) sqrt(L/C)          Bandwidth = f(r) / Q
    ```
-
-   Uses
-   - Tuning a radio or television to one station, band-pass and band-stop filters, oscillators, and impedance matching.
+   - Uses: tuning a radio/TV to a station, band-pass/band-stop filters, oscillators, impedance matching.
 
    Role of a transistor in an electrical circuit
-   - A `transistor` is a three-terminal semiconductor device that uses a small input signal to control a much larger current. Its two fundamental roles are `switching` and `amplification`.
-
-   `Switching`
-   ```
-      Cut-off region    : the transistor is OFF -> an open switch  -> logic 1 at output
-      Saturation region : the transistor is ON  -> a closed switch -> logic 0 at output
-   ```
-   - A 5 V microcontroller pin can therefore control a relay, a motor or a lamp. This on/off behaviour is the basis of every logic gate, and hence of every processor and memory chip.
-
-   `Amplification`
-   - Biased in the `active region`, the transistor makes the collector current a faithful, magnified copy of the base current.
-   ```
-      IC = beta . IB           beta is 50 to 300
-   ```
-   - Used in audio amplifiers, radio receivers, sensor signal conditioning and instrumentation.
-
-   Other roles
-   ```
-   Oscillator      : with an RLC or crystal feedback network, it generates a waveform
-   Voltage regulator : a series-pass transistor holds the output steady
-   Current source  : supplies a fixed current regardless of load
-   Buffer          : an emitter follower matches a high-impedance source
-                     to a low-impedance load
-   Modulation and demodulation in communication circuits
-   ```
-
-   - The two meet in a `tuned amplifier`: an RLC circuit selects one frequency, and the transistor amplifies it. That combination is what makes a radio receiver work.
+   - A `transistor` is a three-terminal semiconductor device that uses a small input signal to control a much larger current. Its two fundamental roles are `switching` (cut-off = OFF/open switch, saturation = ON/closed switch — the basis of every logic gate) and `amplification` (biased in the active region, `IC = beta.IB` makes the collector current a magnified copy of the base current, beta ~50-300 — used in audio amplifiers, radio receivers, instrumentation).
+   - Other roles: `oscillator` (with an RLC or crystal feedback network), `voltage regulator` (series-pass transistor), `current source`, `buffer` (emitter follower), and modulation/demodulation in communication circuits.
+   - The two meet in a `tuned amplifier`: an RLC circuit selects one frequency and the transistor amplifies it — the basis of a radio receiver.
 
 ## Operational Amplifiers (Op-Amp) (2)
 
@@ -2216,15 +1513,9 @@ Answer: (Answered in English, as required for IT topics.) RLC circuit
 
 Answer: The question is `incomplete` — the op-amp circuit diagram is not present. The gain of every standard ideal op-amp configuration is derived below, so the right formula can be applied to whichever circuit was printed.
 
-   The two golden rules for an ideal op-amp
-   ```
-      1. NO CURRENT flows into either input     (input impedance is infinite)
-      2. The two inputs are at the SAME voltage (a VIRTUAL SHORT), whenever
-         negative feedback is present
-   ```
-   - Every gain formula below follows from these two rules alone.
+   Two golden rules for an ideal op-amp: (1) no current flows into either input (infinite input impedance); (2) with negative feedback, the two inputs sit at the same voltage (a `virtual short`). Every gain formula below follows from these two rules alone.
 
-   1. Inverting amplifier
+   Inverting amplifier
    ```
            Rf
       +---/\/\/\---+
@@ -2246,7 +1537,7 @@ Answer: The question is `incomplete` — the op-amp circuit diagram is not prese
    ```
    - The minus sign is a `180 degree phase inversion`.
 
-   2. Non-inverting amplifier
+   Non-inverting amplifier
    ```
       Vi ---|+\
             |  \
@@ -2270,79 +1561,29 @@ Answer: The question is `incomplete` — the op-amp circuit diagram is not prese
    ```
    - Always `positive` and always `at least 1`.
 
-   3. Voltage follower (buffer)
+   Other standard configurations, from the same two rules
    ```
-      Vi ---|+\
-            |  \
-            |   >---+--- Vo
-            |  /    |
-         +--|-/     |
-         |          |
-         +----------+
-   ```
-   ```
-      Rf = 0 and Rin = infinity , so
-
-      Av = 1 + 0/inf = 1        Vo = Vi
-   ```
-   - Gain of 1, but it converts a high-impedance source into a low-impedance output — the whole point of it.
-
-   4. Summing amplifier
-   ```
-      V1 --/\/\/\--+
-           R1      |         Rf
-      V2 --/\/\/\--+---+---/\/\/\---+
-           R2      |   |            |
-      V3 --/\/\/\--+---+---|-\      |
-           R3              |  \     |
-                           |   >----+--- Vo
-                    GND ---|+/
-   ```
-   ```
-      Vo = -Rf ( V1/R1 + V2/R2 + V3/R3 )
-
-      If R1 = R2 = R3 = R :   Vo = -(Rf/R)(V1 + V2 + V3)
-      If also Rf = R      :   Vo = -(V1 + V2 + V3)
-   ```
-
-   5. Difference (differential) amplifier
-   ```
-      Vo = (Rf/R1)(V2 - V1)        when R1 = R3 and R2 = Rf
-   ```
-
-   6. Integrator and differentiator
-   ```
-      INTEGRATOR   : Rin in , C in the feedback path
-           Vo = -(1/(Rin C)) integral of Vi dt
-
-      DIFFERENTIATOR : C in , Rf in the feedback path
-           Vo = -(Rf C) dVi/dt
-   ```
-
-   7. Cascaded stages
-   ```
-      Overall gain = the PRODUCT of the individual gains
-
-      Av(total) = Av1 x Av2 x Av3 ...
-   ```
-   ```
-      Example : an inverting stage of -10 followed by a non-inverting
-      stage of +5 gives  -10 x 5 = -50
+      Voltage follower (buffer)   : Rf=0, Rin=inf  ->  Av = 1                (impedance conversion only)
+      Summing amplifier           : Vo = -Rf (V1/R1 + V2/R2 + V3/R3)
+      Difference amplifier        : Vo = (Rf/R1)(V2 - V1)   when R1=R3, R2=Rf
+      Integrator (C in feedback)  : Vo = -(1/(Rin C)) integral of Vi dt
+      Differentiator (C at input) : Vo = -(Rf C) dVi/dt
+      Cascaded stages             : Av(total) = Av1 x Av2 x Av3 ...   (product of individual gains)
    ```
 
    How to identify which formula applies
    ```
-      Is the input fed to the '-' terminal ?      -> INVERTING , -Rf/Rin
-      Is the input fed to the '+' terminal ?      -> NON-INVERTING , 1+Rf/Rin
-      Is the output tied straight back to '-' ?   -> FOLLOWER , gain 1
-      Are several inputs joined at '-' ?          -> SUMMING
-      Are inputs at BOTH terminals ?              -> DIFFERENTIAL
-      Is there a capacitor in the feedback path ? -> INTEGRATOR
-      Is there a capacitor at the input ?         -> DIFFERENTIATOR
-      Are there several op-amps in a chain ?      -> MULTIPLY the gains
+      Input fed to the '-' terminal only     -> INVERTING , -Rf/Rin
+      Input fed to the '+' terminal only     -> NON-INVERTING , 1+Rf/Rin
+      Output tied straight back to '-'       -> FOLLOWER , gain 1
+      Several inputs joined at '-'           -> SUMMING
+      Inputs at BOTH terminals               -> DIFFERENTIAL
+      Capacitor in the feedback path         -> INTEGRATOR
+      Capacitor at the input                 -> DIFFERENTIATOR
+      Several op-amps in a chain             -> MULTIPLY the gains
    ```
 
-   - Ideal characteristics to state alongside the answer: infinite open-loop gain, infinite input impedance, zero output impedance, infinite bandwidth and infinite CMRR. Real devices have gain around 10^5, input impedance in megohms and a finite gain-bandwidth product, but the ideal assumptions give answers accurate to a fraction of a per cent in any ordinary feedback circuit.
+   - Ideal characteristics to state alongside the answer: infinite open-loop gain, infinite input impedance, zero output impedance, infinite bandwidth and infinite CMRR — real devices approach this closely enough that these formulas stay accurate to a fraction of a per cent.
 
 2. **একটি Operational Amplifier এর প্রধান বৈশিষ্ট কী কী? AC Power কিভাবে DC পাওয়ারে রূপান্তরিত হয়?** *[BTRC Sub-Assistant Director (Technical) 2021 compact it 809 (ET: IBA)]*
 
@@ -2356,49 +1597,18 @@ Answer: (Answered in English, as required for IT topics.) Main characteristics o
       V2 ---|+/
    ```
 
-   Ideal characteristics
+   Ideal characteristics (real-world value in brackets)
    ```
-      Open-loop voltage gain  A   : infinite            (real: 10^5 to 10^6)
-      Input impedance         Zin : infinite            (real: 1 M to 10^12 ohm)
-      Output impedance        Zo  : zero                (real: 20 to 100 ohm)
-      Bandwidth                   : infinite            (real: limited by GBW)
-      Common-mode rejection ratio : infinite            (real: 90 to 120 dB)
-      Slew rate                   : infinite            (real: 0.5 to 20 V/us)
-      Offset voltage and current  : zero                (real: small but non-zero)
-      Drift with temperature      : zero
+      Open-loop gain A : infinite (10^5-10^6)       Input impedance Zin : infinite (1M-10^12 ohm)
+      Output impedance Zo : zero (20-100 ohm)       Bandwidth : infinite (limited by GBW)
+      CMRR : infinite (90-120 dB)                   Offset voltage/current, drift : zero
    ```
-
-   The two golden rules used in every analysis
-   ```
-      1. No current flows into either input      (input impedance is infinite)
-      2. The two inputs are at the same voltage  (virtual short, when negative
-                                                  feedback is present)
-   ```
-
-   Practical characteristics that matter
-   - `Very high gain` — so high that the op-amp is almost never used open loop. Negative feedback sets the gain instead, which makes it stable and predictable.
-   - `Differential input` — it amplifies the difference between the inputs and rejects any signal common to both, which is what kills noise picked up on both wires.
-   - `Wide supply range`, typically +/-5 V to +/-18 V, or single supply in modern parts.
-   - `Slew rate` limits how fast the output can change; exceeding it distorts a fast signal.
-   - `Gain-bandwidth product` is constant, so raising the closed-loop gain reduces the usable bandwidth.
-
-   Common configurations
-   ```
-      Inverting amplifier      : Av = -Rf / Rin
-      Non-inverting amplifier  : Av = 1 + Rf / Rin
-      Voltage follower         : Av = 1        (buffer)
-      Summing amplifier, difference amplifier, integrator, differentiator,
-      comparator, active filter, oscillator
-   ```
+   - Two golden rules used in every analysis: (1) no current flows into either input; (2) with negative feedback, the two inputs sit at the same voltage (`virtual short`).
+   - Practical points: the gain is so high the op-amp is almost never used open loop — negative feedback sets a stable, predictable gain instead; `differential input` rejects any signal common to both inputs (kills common noise); wide supply range (+/-5 to +/-18 V, or single-supply); `slew rate` limits how fast the output can change; `gain-bandwidth product` is constant, so more closed-loop gain means less usable bandwidth.
+   - Common configurations: inverting (Av = -Rf/Rin), non-inverting (Av = 1+Rf/Rin), follower (Av = 1), plus summing, difference, integrator, differentiator, comparator, active filter and oscillator.
 
    How AC power is converted to DC power
-   - The process is `rectification`, and a complete supply has four stages.
-   ```
-      AC 220 V --> Transformer --> Rectifier --> Filter --> Regulator --> DC out
-                   (step down)    (AC to DC)   (smooth)   (hold steady)
-   ```
-   - `Transformer` steps 220 V down to a low AC voltage and isolates the load from the mains.
-   - `Rectifier` — diodes conduct one way only, so the alternating waveform becomes one-directional (pulsating DC). A `bridge rectifier` of four diodes uses both halves of each cycle.
+   - `Rectification`, in four stages: `transformer` (steps 220 V down, isolates from mains) -> `rectifier` -> `filter` -> `regulator`. A `bridge rectifier` of four diodes uses both halves of each cycle:
    ```
                  D1        D2
            +----|>|---+---|<|----+
@@ -2408,14 +1618,12 @@ Answer: (Answered in English, as required for IT topics.) Main characteristics o
            +----|<|---+---|>|----+
                  D3        D4
    ```
-   - `Filter` — a large electrolytic capacitor charges at each peak and discharges slowly between peaks, filling in the gaps.
+   - The `filter` (a large electrolytic capacitor) charges at each peak and discharges slowly between peaks:
    ```
       Before filter   /‾\/‾\/‾\      pulsating
       After filter    ‾‾‾\_/‾‾‾      nearly flat, with a small ripple
    ```
-   - `Regulator` — a zener diode or an IC such as `7805` or `7812` holds the output fixed despite changes in load current and mains voltage.
-
-   - Modern equipment uses an `SMPS` instead: the mains is rectified, chopped at 20-100 kHz, passed through a small ferrite transformer and rectified again. Because the transformer runs at high frequency it is tiny, and efficiency reaches 80-90 per cent against 50-60 per cent for the linear supply above.
+   - The `regulator` (a zener diode or an IC such as 7805/7812) then holds the output fixed. Modern equipment uses an `SMPS` instead: rectify, chop at 20-100 kHz, pass through a small ferrite transformer, rectify again — tiny and 80-90% efficient versus 50-60% for a linear supply.
 
 ## Sensor Circuits & Automated Control Systems (2)
 
@@ -2467,25 +1675,7 @@ Answer: The system must turn the street light `off in daylight` and `on in darkn
       Relay contacts (NO) switch the 220 V mains to the street lamp.
    ```
 
-   How it works
-   ```
-      1. LDR and R1 form a voltage divider. The voltage at their junction
-         depends on how much light falls on the LDR.
-
-            Daylight  : LDR resistance low  -> junction voltage HIGH
-            Night     : LDR resistance high -> junction voltage LOW
-
-      2. The comparator compares that voltage with a threshold set by the preset RV.
-
-            Junction voltage > threshold (day)   -> output LOW  -> Q1 off
-            Junction voltage < threshold (night) -> output HIGH -> Q1 on
-
-      3. Q1 energises the relay coil, whose normally-open contacts close and
-         connect the 220 V mains to the lamp.
-
-      4. At sunrise the LDR resistance falls again, the comparator flips back,
-         Q1 turns off and the lamp goes out.
-   ```
+   How it works: LDR and R1 form a divider whose junction voltage is HIGH in daylight (LDR resistance low) and LOW at night (LDR resistance high). The comparator compares this to a threshold set by preset RV — output LOW (Q1 off) in daylight, output HIGH (Q1 on) at night. Q1 energises the relay, closing its normally-open contacts to feed the lamp; at sunrise the process reverses and the lamp turns off.
 
    Microcontroller version (Arduino)
    ```c
@@ -2510,12 +1700,10 @@ Answer: The system must turn the street light `off in daylight` and `on in darkn
    ```
 
    Design points that earn marks
-   - `Hysteresis` is essential. Without it the lamp flickers on and off at dusk as the light hovers around the threshold. A Schmitt trigger, or positive feedback around the comparator, gives two separate switching levels — turn on below 380, turn off above 420.
-   - A `flyback diode` must be fitted across the relay coil, otherwise the inductive spike destroys the transistor when the coil is switched off.
-   - Add a `delay of a few seconds` before acting, so a passing headlight or a lightning flash does not switch the lamp.
-   - A `PIR motion sensor` can be added so the lamp runs at low brightness all night and goes to full brightness only when someone approaches — the standard energy-saving design.
-   - An `SSR` (solid-state relay) or a triac can replace the mechanical relay for silent operation and a much longer life.
-   - The mains side must be `isolated` from the low-voltage side, which the relay or an opto-triac provides.
+   - `Hysteresis` (via a Schmitt trigger) prevents flicker at dusk as the light hovers near the threshold — e.g. turn on below 380, turn off above 420.
+   - A `flyback diode` across the relay coil protects the transistor from the inductive spike at switch-off.
+   - A short `delay` before acting avoids false triggers from a passing headlight or lightning.
+   - A `PIR motion sensor` can dim the lamp all night and brighten it only when someone approaches — the standard energy-saving design; an `SSR`/triac can replace the mechanical relay for silent, longer-life operation; and the mains side must stay `isolated` from the low-voltage side (which the relay/opto-triac provides).
 
 2. **Which signal a sensor could to send the signal to microcontroller if the sensor finds any gas leakage point?** *[JGTDSL Assistant Engineer (CSE) 08.10.2021 compact it 861 (ET: N/A)]*
 
@@ -2523,21 +1711,11 @@ Answer: A gas sensor sends the microcontroller either an `analogue voltage` or a
 
    The two output signals
    ```
-      AO  (analogue out) : a voltage that RISES as the gas concentration rises
-                           Typically 0 to 5 V, read by the microcontroller's ADC.
-                           Gives the actual concentration, not just present/absent.
-
-      DO  (digital out)  : a single bit, produced by an on-board LM393 comparator
-                           that compares AO with a threshold set by a preset.
-                           Usually ACTIVE LOW - it goes LOW when gas is detected.
+      AO (analogue) : voltage that RISES with gas concentration, 0-5 V, read by the ADC — gives the actual level.
+      DO (digital)  : a single bit from an on-board LM393 comparator vs a preset threshold — usually ACTIVE LOW (LOW when gas is detected).
    ```
 
-   How the sensor works
-   - The MQ-series sensor uses a heated `tin dioxide (SnO2)` element. In clean air its resistance is high; when a combustible gas such as LPG, methane or CO adsorbs on the surface, its `resistance falls`. A load resistor turns that change into a voltage.
-   ```
-      No gas     ->  high sensor resistance ->  low  AO voltage , DO = HIGH
-      Gas leak   ->  low  sensor resistance ->  high AO voltage , DO = LOW
-   ```
+   How it works: the MQ-series sensor uses a heated `tin dioxide (SnO2)` element whose resistance is high in clean air and `falls` when a combustible gas (LPG, methane, CO) adsorbs on it; a load resistor converts that change to a voltage — no gas: high resistance, low AO, DO=HIGH; gas leak: low resistance, high AO, DO=LOW.
 
    Connection
    ```
@@ -2566,12 +1744,9 @@ Answer: A gas sensor sends the microcontroller either an `analogue voltage` or a
        int level = analogRead(AO);            // 0 to 1023, gas concentration
        int alarm = digitalRead(DO);           // LOW when gas is detected
 
-       Serial.println(level);
-
        if (level > THRESHOLD || alarm == LOW) {
            digitalWrite(BUZZER, HIGH);        // sound the alarm
            digitalWrite(VALVE, HIGH);         // close the solenoid valve
-           // send an SMS or MQTT message here
        } else {
            digitalWrite(BUZZER, LOW);
        }
@@ -2579,19 +1754,15 @@ Answer: A gas sensor sends the microcontroller either an `analogue voltage` or a
    }
    ```
 
-   Which output to use
-
    | Point | Analogue (AO) | Digital (DO) |
    |---|---|---|
    | Signal | Continuous voltage | Single bit, HIGH or LOW |
-   | Read by | ADC pin | Any digital pin |
-   | Information | The actual concentration | Only "gas present / absent" |
+   | Information | Actual concentration | Only "gas present / absent" |
    | Threshold set by | Software, changeable | Hardware preset on the module |
    | Can trigger an interrupt | No | Yes |
-   | Best for | Monitoring, logging, graded alarms | A simple alarm, waking the MCU from sleep |
+   | Best for | Monitoring, graded alarms | Simple alarm, waking the MCU from sleep |
 
-   - Best practice for a gas-leak system: use `both`. Wire `DO` to an interrupt pin so the microcontroller wakes and reacts instantly, and read `AO` to log the concentration and distinguish a small leak from a dangerous one.
-   - Practical points: MQ sensors need a `warm-up` of 20 seconds to a few minutes before their reading is valid, they are `not gas-selective`, and they drift with temperature and humidity — so a proper installation calibrates them and, in a real gas plant, uses an industrial `4-20 mA` transmitter instead of a hobby module.
+   - Best practice: use `both` — wire `DO` to an interrupt so the microcontroller reacts instantly, and read `AO` to log concentration and distinguish a small leak from a dangerous one. MQ sensors need a `warm-up` (20 s to a few minutes), are `not gas-selective`, and drift with temperature/humidity — a real installation calibrates them or uses an industrial `4-20 mA` transmitter instead of a hobby module.
 
 ## Circuit Theorems (Thevenin, Norton, Superposition) (2)
 

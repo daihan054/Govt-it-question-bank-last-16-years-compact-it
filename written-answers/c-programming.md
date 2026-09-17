@@ -4494,7 +4494,7 @@ Answer:
 
 1. **C output problem.** *[DPDC Assistant Engineer (CSE) 17.10.2025 compact it 1453 (ET: N/A)]*
 
-Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific program cannot be traced. The traps that C output questions test are set out below, with worked examples, so the method is available whatever the missing code was.
+Answer: The question is `incomplete` — the paper's code snippet was not captured. The common traps such questions test are set out below with worked examples.
 
    1. Integer division truncates
    ```c
@@ -4582,7 +4582,7 @@ Answer: The question is `incomplete` — the paper printed a code snippet that w
       f(); f(); f();               // 1 1  2 1  3 1
    ```
 
-   - The general method for any such question: `evaluate the expression exactly as C does` — apply the precedence table, note every side effect and its sequence point, watch for implicit type conversion, and check whether the format specifier matches the argument's type. Most output questions are built on one of the ten traps above.
+   - General method: evaluate exactly as C does — apply precedence, watch side effects and sequence points, and check the format specifier matches the argument's type.
 
 2. **What will be the output of following program?**
 ```c
@@ -4772,7 +4772,7 @@ return 0;
 
 7. **Explain following program while part in step for the input 1221 and 3456 and also write the output of the program. (সম্পূর্ণ প্রশ্ন সংগ্রহ করা সম্ভব হয় নি!!)** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the paper itself records that the full program could not be collected. Without the loop body the exact output cannot be produced. The standard program that this question describes is the `digit-processing while loop`, traced below for the two given inputs, `1221` and `3456`.
+Answer: The question is `incomplete` — the paper notes the full program could not be collected. The likely program is the `digit-processing while loop` (reverse-and-check-palindrome), traced below for the two given inputs, `1221` and `3456`.
 
    The usual program — reverse a number, or test it for a palindrome
    ```c
@@ -4803,23 +4803,11 @@ Answer: The question is `incomplete` — the paper itself records that the full 
 
    Step-by-step trace for input `1221`
    ```
-      n = 1221 , rev = 0 , original = 1221
-
-      Iteration 1 : digit = 1221 % 10 = 1
-                    rev   = 0*10 + 1   = 1
-                    n     = 1221 / 10  = 122
-
-      Iteration 2 : digit = 122 % 10  = 2
-                    rev   = 1*10 + 2   = 12
-                    n     = 122 / 10   = 12
-
-      Iteration 3 : digit = 12 % 10   = 2
-                    rev   = 12*10 + 2  = 122
-                    n     = 12 / 10    = 1
-
-      Iteration 4 : digit = 1 % 10    = 1
-                    rev   = 122*10 + 1 = 1221
-                    n     = 1 / 10     = 0     -> loop ends
+      n=1221, rev=0
+      Iter 1: digit=1, rev=1,    n=122
+      Iter 2: digit=2, rev=12,   n=12
+      Iter 3: digit=2, rev=122,  n=1
+      Iter 4: digit=1, rev=1221, n=0   -> loop ends
 
       Output : Reversed: 1221
                It is a PALINDROME
@@ -4845,26 +4833,18 @@ Answer: The question is `incomplete` — the paper itself records that the full 
       3456      6543        NO
    ```
 
-   The three lines that do all the work
+   Core loop, once per digit — O(log n):
    ```
-      digit = n % 10        extract the LAST digit
-      rev   = rev*10 + digit  shift the result left and append the digit
-      n     = n / 10        remove the last digit (integer division)
-
-      The loop runs once per digit, so it is O(number of digits) = O(log n).
-   ```
-
-   - If the intended program was instead `digit sum` or `counting digits`, the same trace applies with `sum = sum + digit` or `count++` in place of the middle line:
-   ```
-      1221 -> digit sum 6 , 4 digits
-      3456 -> digit sum 18 , 4 digits
+      digit = n % 10          extract the LAST digit
+      rev   = rev*10 + digit  shift left and append the digit
+      n     = n / 10          remove the last digit
    ```
 
 8. **Write the function for which the output is 1 for that input.** *[BAPEX Assistant General Manager (ICT) 20.01.2023 compact it 463 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the input for which the function must return 1 was printed with the previous question and is not present here. The answer below covers the functions that this question normally asks for, all of which return `1` (true) for a matching input and `0` otherwise.
+Answer: The question is `incomplete` — the required input is not present here. Common candidates are covered below, all returning `1` (true) for a matching input and `0` otherwise.
 
-   If the required test is `palindrome number` — which follows from the 1221 and 3456 inputs of the previous question
+   If the test is `palindrome number` (matching the previous question's inputs)
    ```c
    int isPalindrome(int n) {
        int rev = 0, original = n;
@@ -4938,7 +4918,7 @@ Answer: The question is `incomplete` — the input for which the function must r
       isStringPalindrome("hello") -> 0
    ```
 
-   - The pattern every such function follows: `return 1 when the property holds and 0 otherwise`, exiting early the moment a counter-example is found. C has no built-in boolean type in C89, so `int` with 0 and 1 is the convention; `<stdbool.h>` in C99 adds `bool`, `true` and `false`, which compile to the same values.
+   - Pattern: return 1 when the property holds, 0 otherwise, exiting early on a counter-example. C89 has no bool, so int 0/1 is the convention; C99's `<stdbool.h>` adds `bool`/`true`/`false` (same values).
 
 9. **In the below C code. Write the Output on below table based on code and left side. And also explain the line 7-11 in below code.**
 ```c
@@ -4988,7 +4968,7 @@ int main() {
 
 10. **C programming output problem.** *[Teletalk Assistant Manager (IT) 2023 compact it 468 (ET: N/A)]*
 
-Answer: The question is `incomplete` — the paper printed a code snippet that was not captured, so the specific output cannot be produced. The traps that C output questions are built on are set out below with worked examples.
+Answer: The question is `incomplete` — the paper's code snippet was not captured. The common traps such questions are built on are set out below with worked examples.
 
     1. Operator precedence and associativity
     ```c
@@ -5077,11 +5057,11 @@ Answer: The question is `incomplete` — the paper printed a code snippet that w
        void swap(int *a, int *b) { int t=*a; *a=*b; *b=t; }  // works
     ```
 
-    - The method for any output question: work through the code `line by line, keeping a table of every variable`, and apply C's rules exactly — precedence, integer truncation, implicit conversion, and the match between the format specifier and the argument type. Most such questions are one of the ten traps above.
+    - Method: trace line by line with a variable table, applying precedence, truncation, and matching the format specifier to the argument type.
 
 11. **What is the output of code snippet?** *[BICIC Assistant Programmer 2022 compact it 631 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the code snippet it refers to was not captured. The commonest snippets used in such questions are traced below, so the method is available whichever one was intended.
+Answer: The question is `incomplete` — the code snippet was not captured. The commonest snippets used in such questions are traced below.
 
     Snippet type 1 — pointer and array
     ```c
@@ -5090,11 +5070,7 @@ Answer: The question is `incomplete` — the code snippet it refers to was not c
        printf("%d %d %d", *p, *(p+2), p[4]);
     ```
     ```
-       Output : 1 3 5
-
-       *p       = a[0] = 1
-       *(p+2)   = a[2] = 3          pointer arithmetic scales by sizeof(int)
-       p[4]     = *(p+4) = a[4] = 5
+       Output : 1 3 5   (*p=a[0]=1, *(p+2)=a[2]=3, p[4]=a[4]=5)
     ```
 
     Snippet type 2 — increment operators
@@ -5134,9 +5110,8 @@ Answer: The question is `incomplete` — the code snippet it refers to was not c
     ```
     ```
        Output : TwoThree
-
-       Without a break, execution FALLS THROUGH into the following cases
-       until a break or the end of the switch is reached.
+       (no break, so execution falls through into the next case until
+       a break or the end of the switch.)
     ```
 
     Snippet type 5 — static variable
@@ -5151,9 +5126,7 @@ Answer: The question is `incomplete` — the code snippet it refers to was not c
     ```
     ```
        Output : 1 1 | 2 1 | 3 1 |
-
-       'static' is initialised ONCE and keeps its value between calls;
-       the ordinary local d is created and destroyed every call.
+       (static c persists across calls; local d resets to 0 every call.)
     ```
 
     Snippet type 6 — integer division and type
@@ -5175,13 +5148,12 @@ Answer: The question is `incomplete` — the code snippet it refers to was not c
     ```
     ```
        Output : 5
-
-       The semicolon after the for statement makes the loop body EMPTY.
-       The printf is not part of the loop and runs once, after i has
-       reached 5.
+       (the semicolon makes the loop body empty; printf runs once, after
+       i reaches 5.)
     ```
 
-    - The method for any snippet: `keep a table of every variable and update it line by line`, watching for integer truncation, the difference between prefix and postfix increment, missing `break` statements, and whether the `printf` format specifier matches the argument's actual type.
+    - Method: keep a variable table, watch integer truncation, prefix vs
+      postfix increment, missing `break`, and format-specifier mismatches.
 
 12. **নিচের পাইথন program এর Output বের কর:** *[BTCL Junior Assistant Manager 2022 compact it 641 (ET: BUET)]*
 ```python
@@ -5911,7 +5883,7 @@ int main(){
 
 31. **After compilation and execution, what will be output in the following code:** *[DPDC ( Technical part) JAM (ICT) 2020 compact it 972 (ET: BUET)]*
 
-Answer: The question is `incomplete` — the code that was to be compiled and executed is not present. The classes of behaviour that "after compilation and execution" questions test are set out below with worked examples.
+Answer: The question is `incomplete` — the code is not present. Common classes of behaviour such questions test are set out below.
 
     Case 1 — the program does not compile
     ```c
@@ -5922,10 +5894,9 @@ Answer: The question is `incomplete` — the code that was to be compiled and ex
        }
     ```
     ```
-       Output : COMPILATION ERROR. No output is produced at all.
-
-       Common compile errors : missing semicolon , undeclared variable ,
-       type mismatch , missing header , wrong number of arguments.
+       Output : COMPILATION ERROR — no output at all.
+       (common causes: missing semicolon, undeclared variable, type
+       mismatch, missing header, wrong argument count.)
     ```
 
     Case 2 — it compiles but the behaviour is undefined
@@ -5939,9 +5910,8 @@ Answer: The question is `incomplete` — the code that was to be compiled and ex
        }
     ```
     ```
-       Output : UNDEFINED. It may print garbage, or crash with a
-       segmentation fault, or appear to work. The standard imposes no
-       requirement, so "undefined behaviour" is the correct answer.
+       Output : UNDEFINED — garbage, a crash, or apparent success; the
+       standard imposes no requirement.
     ```
 
     Case 3 — it compiles with a warning and prints something surprising
@@ -5953,8 +5923,8 @@ Answer: The question is `incomplete` — the code that was to be compiled and ex
        }
     ```
     ```
-       Output : garbage. %d reads four bytes as an int, but a float is
-       passed as a double and laid out differently.
+       Output : garbage — %d reads 4 bytes as an int, but a float argument
+       is passed differently (promoted to double).
     ```
 
     Case 4 — it works, and the trick is in the logic
@@ -5968,12 +5938,8 @@ Answer: The question is `incomplete` — the code that was to be compiled and ex
     ```
     ```
        Output : 1 2 3
-
-       i++ < 3 : the CURRENT value is compared, then i is incremented.
-       i = 0 -> 0<3 true , i becomes 1 , print 1
-       i = 1 -> 1<3 true , i becomes 2 , print 2
-       i = 2 -> 2<3 true , i becomes 3 , print 3
-       i = 3 -> 3<3 false , loop ends
+       (i++ < 3 compares the CURRENT value then increments: i goes
+       0->1->2->3, printing after each step; loop stops when 3<3 is false.)
     ```
 
     Case 5 — a runtime error
@@ -6011,11 +5977,11 @@ Answer: The question is `incomplete` — the code that was to be compiled and ex
        A bad pointer is caught at RUN TIME, or not at all
     ```
 
-    - The habit that answers such questions correctly: first ask `does it compile`, then `is any behaviour undefined`, and only then trace the logic. Many exam snippets are designed so that the answer is "compilation error" rather than a value.
+    - Habit: first ask does it compile, then is any behaviour undefined, and only then trace the logic — many such snippets are designed so the answer is "compilation error", not a value.
 
 32. **Write down the output of following program:** *[NACTAR Assistant Instructor (ICT) 2020 compact it 991 (ET: N/A)]*
 
-Answer: The question is `incomplete` — the program whose output was to be written is not present. The programs that appear most often in this position are traced below.
+Answer: The question is `incomplete` — the program is not present. The programs that appear most often in this position are traced below.
 
     Program type 1 — nested loop pattern
     ```c
@@ -6051,13 +6017,7 @@ Answer: The question is `incomplete` — the program whose output was to be writ
     }
     ```
     ```
-       Output : 120
-
-       fact(5) = 5 * fact(4)
-               = 5 * 4 * fact(3)
-               = 5 * 4 * 3 * fact(2)
-               = 5 * 4 * 3 * 2 * fact(1)
-               = 5 * 4 * 3 * 2 * 1 = 120
+       Output : 120   (5*4*3*2*1 = 120, unwinding from fact(1) up)
     ```
 
     Program type 3 — array and pointer
@@ -6107,10 +6067,8 @@ Answer: The question is `incomplete` — the program whose output was to be writ
     ```
     ```
        Output : 10 20 | 20 10
-
-       C passes arguments BY VALUE. swapVal receives copies and changes
-       only those copies. Only passing the ADDRESS lets a function alter
-       the caller's variables.
+       (C passes by value: swapVal only changes its own copies; swapRef
+       takes addresses, so it modifies the caller's variables.)
     ```
 
     Program type 6 — Fibonacci
@@ -6135,7 +6093,7 @@ Answer: The question is `incomplete` — the program whose output was to be writ
 
 33. **What will be the output in C and java code? (i) C program:** *[Combined 4 Banks Assistant Programmer 2020 compact it 1003 (ET: DU)]*
 
-Answer: The question is `incomplete` — the C program and the Java program it refers to were not captured. The comparison the question is built on is set out below, with the snippets that appear most often in this position.
+Answer: The question is `incomplete` — the actual C/Java code was not captured. The comparison it is testing is set out below.
 
     Case 1 — integer division
     ```c
@@ -6148,7 +6106,7 @@ Answer: The question is `incomplete` — the C program and the Java program it r
        System.out.println(5/2);    // 2
        System.out.println(5/2.0);  // 2.5
     ```
-    - Both truncate integer division. Java prints `2.5`, C prints `2.500000`, because `%f` defaults to six decimal places.
+    - Both truncate; Java prints `2.5`, C prints `2.500000` (`%f` defaults to six decimals).
 
     Case 2 — array size
     ```c
@@ -6161,7 +6119,7 @@ Answer: The question is `incomplete` — the C program and the Java program it r
        int[] a = {1,2,3,4,5};
        System.out.println(a.length);            // 5
     ```
-    - C has no length field, so the size must be computed. Java stores the length with the array, and checks every index at run time.
+    - C computes size via `sizeof`; Java stores `.length` and bounds-checks every access.
 
     Case 3 — out-of-bounds access
     ```c
@@ -6204,7 +6162,7 @@ Answer: The question is `incomplete` — the C program and the Java program it r
        System.out.println(x);      // COMPILE ERROR: variable x might not
                                    // have been initialized
     ```
-    - A `field` in Java is zero-initialised; a `local variable` must be assigned before use, and the compiler enforces it.
+    - Java fields auto zero-initialise; locals must be assigned before use, enforced by the compiler.
 
     Case 6 — integer overflow
     ```c
@@ -6233,7 +6191,7 @@ Answer: The question is `incomplete` — the C program and the Java program it r
     | Output | `printf` with format specifiers | `System.out.println` |
     | Platform | Compiled to machine code | Compiled to bytecode, runs on the JVM |
 
-    - The general rule that answers most of these: `C trusts the programmer and checks nothing at run time; Java checks everything and throws an exception instead of corrupting memory`. Where a C snippet prints garbage or crashes, the Java equivalent usually refuses to compile or throws.
+    - Rule of thumb: `C trusts the programmer and checks nothing at run time; Java checks everything and throws instead of corrupting memory`.
 
 34. **a) Using Pseudocode give an example of run time error.** *[Microcredit Regulatory Authority Assistant Maintenance Engineer 2020 compact it 1035-1036 (ET: BUET)]*
 
@@ -6282,7 +6240,7 @@ Answer: A run-time error is an error that the compiler cannot detect. The progra
 
 35. **Find the Output:** *[Sundharban Gas Assistant Programmer 2020 compact it 1047 (ET: N/A)]*
 
-Answer: The question is `incomplete` — the code whose output was to be found is not present. The snippets that appear most often in this position are traced below.
+Answer: The question is `incomplete` — the code is not present. Common snippets in this position are traced below.
 
     Snippet 1 — prefix and postfix in one expression
     ```c
@@ -6291,11 +6249,9 @@ Answer: The question is `incomplete` — the code whose output was to be found i
     ```
     ```
        Output : UNDEFINED BEHAVIOUR.
-
-       'i' is modified more than once between sequence points, and the
-       order in which printf's arguments are evaluated is unspecified.
-       Different compilers print different results. The correct exam
-       answer is "undefined", not a number.
+       ('i' is modified more than once between sequence points, and printf's
+       argument evaluation order is unspecified — the correct exam answer
+       is "undefined", not a number.)
     ```
 
     Snippet 2 — the comma operator
@@ -6330,15 +6286,10 @@ Answer: The question is `incomplete` — the code whose output was to be found i
            printf("B");
     ```
     ```
-       Output : nothing.
-
-       The 'else' binds to the NEAREST unmatched 'if', which is the inner
-       one, not the outer one as the indentation suggests. Since a > 3 is
-       true and b > 20 is false, control reaches the else - but the else
-       belongs to the inner if, so "B" is printed.
-
-       Corrected reading : the output is B.
-       The lesson : indentation means nothing to the compiler. Use braces.
+       Output : B
+       (else binds to the NEAREST unmatched if — the inner one, not the
+       outer one the indentation suggests. a>3 is true, b>20 is false, so
+       the inner else runs. Indentation means nothing to the compiler.)
     ```
 
     Snippet 5 — the size of things
@@ -6364,10 +6315,7 @@ Answer: The question is `incomplete` — the code whose output was to be found i
     ```
     ```
        Output : 10
-
-       A do-while ALWAYS executes its body at least once, because the
-       condition is tested at the END. This is the whole point of the
-       construct, and the usual trick in such questions.
+       (do-while always runs its body once before testing the condition.)
     ```
 
     Snippet 7 — bitwise operators
@@ -6383,7 +6331,7 @@ Answer: The question is `incomplete` — the code whose output was to be found i
        Output : 8 14 6 24 6
     ```
 
-    - The method for any "find the output" question: `keep a table of every variable and update it after each statement`, and before writing the answer ask three checks — is any behaviour undefined, does any integer division truncate, and does every format specifier match its argument's type.
+    - Method: keep a variable table updated after each statement; check for undefined behaviour, integer truncation, and format-specifier mismatches.
 
 36. **Find the error of given code** *[Combined 5 Banks Assistant Maintenance Engineer 2019 compact it 1055 (ET: AUST)]*
 ```c
@@ -6637,13 +6585,7 @@ Answer: The question is `incomplete` — the program is not present. The snippet
     ```
     ```
        Output : 3 2 1 1 2 3
-
-       Going down : 3 , 2 , 1
-       Base case  : n = 0 , returns
-       Coming up  : 1 , 2 , 3
-
-       The second printf runs AFTER the recursive call returns, which is
-       why the sequence is symmetrical.
+       (down: 3,2,1 before the recursive call; up: 1,2,3 after it returns.)
     ```
 
     Snippet 2 — a function that cannot swap
@@ -6659,9 +6601,8 @@ Answer: The question is `incomplete` — the program is not present. The snippet
     ```
     ```
        Output : 5 10
-
-       C passes arguments BY VALUE. swap works on copies, so the caller's
-       variables are untouched. Passing &x and &y and taking int* fixes it.
+       (C passes by value: swap works on copies. Passing &x, &y with int*
+       params would fix it.)
     ```
 
     Snippet 3 — array decay in a function
@@ -6677,10 +6618,8 @@ Answer: The question is `incomplete` — the program is not present. The snippet
     ```
     ```
        Output : 40 8
-
-       An array passed to a function DECAYS to a pointer, so its size
-       information is lost. This is why array functions in C always take
-       an extra length parameter.
+       (an array decays to a pointer when passed to a function, so sizeof
+       inside f gives the pointer size, not the array size.)
     ```
 
     Snippet 4 — static versus automatic storage
@@ -6696,13 +6635,9 @@ Answer: The question is `incomplete` — the program is not present. The snippet
     }
     ```
     ```
-       The three values are 1, 2 and 3 - but the ORDER in which printf's
-       arguments are evaluated is UNSPECIFIED in C. Many compilers evaluate
-       right to left and print "3 2 1".
-
-       The safe answer : the counter returns 1, 2, 3 in call order, but the
-       printed order depends on the compiler. Written as three separate
-       printf statements it is unambiguously 1 2 3.
+       counter() returns 1, 2, 3 in call order, but printf's argument
+       evaluation order is unspecified in C - most compilers go right to
+       left, printing "3 2 1" (compiler dependent).
     ```
 
     Snippet 5 — the goto and label pattern
@@ -6735,12 +6670,10 @@ Answer: The question is `incomplete` — the program is not present. The snippet
     ```
     ```
        Output : B
-
-       The ternary operator is RIGHT associative, so the chain reads as a
-       nested if-else and stops at the first true condition.
+       (ternary is right-associative: 75>=80 false, 75>=70 true -> 'B'.)
     ```
 
-    - The general method: `trace the program line by line with a variable table`, and check three things before answering — whether anything is undefined (multiple modification between sequence points, unspecified argument order), whether any integer division truncates, and whether each format specifier matches its argument.
+    - Method: trace line by line with a variable table; watch for undefined behaviour, integer truncation, and format-specifier mismatches.
 
 44. **Find the output of following program.** *[Palli Sanchay Bank Assistant Programmer 2018 compact it 1169 (ET: N/A)]*
    i)
