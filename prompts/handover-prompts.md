@@ -17,12 +17,29 @@ audited `written-answers/*.md` (3,422 questions across 24 files) and found many 
 longer than what's realistically handwritable, then ran a multi-agent trimming pass.
 
 **That trimming work is DONE and already COMMITTED + PUSHED** to `main` as commit
-`6f3d484` ("written-answers: trim over-long answers to fit exam page/time constraints") — **run
-`git pull` first thing** to get it onto this machine. Your job is a **QA pass + safety audit +
-one follow-up commit** for anything your QA pass changes — not a fresh trimming job, and not
-expected to be the only commit for this whole effort (the trimming itself is already committed
-as `6f3d484`; yours will be a second, smaller commit on top, only if you actually change
-something). Read the status below carefully before doing anything.
+`6f3d484dade0198df0a96b6940f3e4b68b0dbe54` ("written-answers: trim over-long answers to fit exam
+page/time constraints") — **run `git pull` first thing** to get it onto this machine. Your job
+is a **QA pass + safety audit + one follow-up commit** for anything your QA pass changes — not a
+fresh trimming job, and not expected to be the only commit for this whole effort (the trimming
+itself is already committed as `6f3d484`; yours will be a second, smaller commit on top, only if
+you actually change something). Read the status below carefully before doing anything.
+
+### Reference commits — study these before starting
+
+Two commit hashes matter for this task, and it's worth actually looking at both before you touch
+anything, so you internalize the exact editing pattern already used rather than reinventing it:
+
+- **`4478647ea92fc578bf5db44007b90bc6135c49cf`** — the baseline, i.e. the state of
+  `written-answers/` right before any trimming happened. This is what "safety audit" step 3 below
+  diffs against.
+- **`6f3d484dade0198df0a96b6940f3e4b68b0dbe54`** — the trimming commit itself, applied on top of
+  that baseline.
+
+Run `git show 6f3d484dade0198df0a96b6940f3e4b68b0dbe54 -- written-answers/oop.md` (or any of the
+other 19 files) to see real before/after examples of the pattern: prose sentences and redundant
+bullet points removed or condensed, while every table, mermaid block, ASCII diagram, and code
+fence is left byte-for-byte untouched. That diff IS the pattern — match its style and scope in
+your own QA-pass edits (step 2 below), don't introduce a different editing style.
 
 ## What was actually done (so you know exactly where things stand)
 
