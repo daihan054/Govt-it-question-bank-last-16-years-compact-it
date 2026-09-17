@@ -833,11 +833,10 @@ Answer: The linker and the loader are the last two system programs in the path f
 
    Tasks of the LINKER
    - Combine object files — merges several `.o` files produced from different source files into one executable.
-   - Resolve external references — if `main.c` calls `add()` defined in `math.c`, the compiler leaves the address blank. The linker fills in the real address.
+   - Resolve external references — if `main.c` calls `add()` defined in `math.c`, the compiler leaves the address blank and the linker fills it in, or reports "undefined reference" if the symbol is never defined anywhere.
    - Link libraries — attaches library code such as `printf` from the C standard library.
    - Relocation of addresses — adjusts the addresses in each object file so they do not overlap when combined.
    - Build the symbol table — records every function and global variable name with its final address.
-   - Report unresolved symbols — if a function is called but never defined anywhere, the linker reports "undefined reference".
 
    Example
    ```bash

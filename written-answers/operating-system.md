@@ -5381,9 +5381,7 @@ Answer: `Scheduling` is what makes multiprogramming work: it decides which of th
        Moves   : NEW  ->  READY
        Runs    : rarely - seconds or minutes apart
     ```
-    - It controls the `degree of multiprogramming`, meaning how many processes are in memory at once. Admitting too few wastes the CPU; admitting too many causes thrashing.
-    - It aims for a good `mix` of CPU-bound and I/O-bound processes, so that the CPU and the devices are both kept busy.
-    - Because it runs rarely, it can afford to be slow and careful.
+    - It controls the `degree of multiprogramming` — admitting too few processes wastes the CPU, admitting too many causes thrashing — and aims for a good `mix` of CPU-bound and I/O-bound jobs so both the CPU and devices stay busy.
     - Present in `batch systems`. Modern interactive systems such as Linux and Windows have effectively no long-term scheduler — every submitted process is admitted immediately.
 
     2. Short-term scheduler (CPU scheduler / dispatcher)
@@ -5431,7 +5429,7 @@ Answer: `Scheduling` is what makes multiprogramming work: it decides which of th
     | Controls | Degree of multiprogramming | CPU allocation | Memory pressure |
     | Present in | Batch systems | `All systems` | Time-sharing systems |
 
-    - Essential point: the `short-term scheduler` determines responsiveness (invoked thousands of times/sec); the `long-term scheduler` sets how much work is in the system at all; the `medium-term scheduler` is the safety valve that relieves memory pressure.
+    - Essential point: the `short-term scheduler` determines responsiveness; the `long-term scheduler` sets how much work is in the system; the `medium-term scheduler` is the safety valve that relieves memory pressure.
 
 23. **(c) Explain the following Scheduling algorithm: (i) Round Robin (ii) FCFS (iii) Priority scheduling** *[BPSC Assistant Maintenance Engineer (ICT) 2020 compact it 1026 (ET: N/A)]*
 

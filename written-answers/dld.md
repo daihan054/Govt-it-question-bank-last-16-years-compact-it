@@ -8477,7 +8477,6 @@ Answer: The main difference is `memory`. A combinational circuit has none; a seq
       74LS (TTL)    ~9  ns          74HC  (CMOS)      ~8  ns
       74F  (TTL)    ~3  ns          74AC  (CMOS)      ~3  ns
    ```
-   - CMOS speed also depends on the supply voltage and the load capacitance: raising Vdd makes it faster, and a heavy capacitive load makes it slower.
 
    (ii) Noise immunity
    - `CMOS is far better` — its noise margin is roughly `2 to 3 times` that of TTL.
@@ -8515,8 +8514,6 @@ Answer: The main difference is `memory`. A combinational circuit has none; a seq
    | Packing density | Low | Very high — the reason for VLSI |
    | Cost per gate | Higher | Lower |
    | Used in | Legacy and some interface circuits | Everything modern: CPU, memory, ASIC |
-
-   - Practical note: CMOS inputs must never be left floating, because a high-impedance input picks up noise and can make both transistors conduct at once. Unused CMOS inputs are always tied to Vdd or ground.
 
 2. **Describe the important characteristics of digital IC's.** *[Combined Bank Assistant Maintenance Engineer/ Assistant Hardware Engineer 23.11.2023 compact it 556 (ET: BIBM)]*
 

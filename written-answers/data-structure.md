@@ -45,7 +45,6 @@ Answer:
    (ii) Leaf node
    - A leaf (also called an external or terminal node) is a node with `no children`, so its degree is 0.
    - In the example the leaves are `G, H, E and F`.
-   - In a binary tree of n nodes, leaves are where the recursion of a traversal stops.
 
    (iii) Internal node
    - An internal node (also called a non-terminal node) is a node that has `at least one child`.
@@ -56,7 +55,6 @@ Answer:
    - The height of a node is the number of edges on the `longest path from that node down to a leaf`. The height of the tree is the height of its root.
    - In the example, the longest path is A → B → D → G (or H), which has `3 edges`, so the height of the tree is `3`.
    - Convention matters: some books count nodes instead of edges, which would make the height 4. Always state which convention is used.
-   - Related term: the `depth` (or level) of a node is the number of edges from the root down to it. G has depth 3.
 
    Other terms often asked with these
 
@@ -361,8 +359,7 @@ Answer: A binary tree can be reconstructed from preorder and postorder alone onl
    - `Postorder` (left, right, root): 8, 9, 4, 5, 2, 6, 7, 3, 1 ✓
    - `Inorder` for this tree: 8, 4, 9, 2, 5, 1, 6, 3, 7
 
-   Why the "full tree" condition is needed
-   - Preorder `A, B` and postorder `B, A` fit either child of A being B — ambiguous unless every node is known to have 0 or 2 children. `Preorder + inorder` or `postorder + inorder` always give a unique tree regardless.
+   - Note: reconstruction from `pre + post` alone needs the "full tree" guarantee — `A, B` (pre) / `B, A` (post) fits either child of A being B, ambiguous otherwise. `Pre + inorder` or `post + inorder` always give a unique tree regardless.
 
 7. **How to represent binary tree using array?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
@@ -1433,32 +1430,21 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
 
     Step-by-step construction
 
-    Step 1 — root
-    - Preorder begins with `A`. In inorder: `B | A | D C F E J H K G I`
-    - Left subtree = {B}; right subtree = {D, C, F, E, J, H, K, G, I}.
+    Step 1 — root: preorder begins with `A`; inorder splits as `B | A | D C F E J H K G I` → left = {B}, right = {D, C, F, E, J, H, K, G, I}.
 
-    Step 2 — left subtree
-    - Only one element, `B`. It becomes the left child of A, a leaf.
+    Step 2 — left subtree: only one element, `B`, becomes the left child of A, a leaf.
 
-    Step 3 — right subtree of A
-    - Next preorder element is `C`. In inorder: `D | C | F E J H K G I`
-    - Left of C = {D}; right of C = {F, E, J, H, K, G, I}.
+    Step 3 — right subtree of A: next preorder element is `C`; inorder splits as `D | C | F E J H K G I` → left = {D}, right = {F, E, J, H, K, G, I}.
 
     Step 4 — D is a leaf, the left child of C.
 
-    Step 5 — right subtree of C
-    - Next preorder element is `E`. In inorder: `F | E | J H K G I`
-    - Left of E = {F}; right of E = {J, H, K, G, I}.
+    Step 5 — right subtree of C: next preorder element is `E`; inorder splits as `F | E | J H K G I` → left = {F}, right = {J, H, K, G, I}.
 
     Step 6 — F is a leaf, the left child of E.
 
-    Step 7 — right subtree of E
-    - Next preorder element is `G`. In inorder: `J H K | G | I`
-    - Left of G = {J, H, K}; right of G = {I}.
+    Step 7 — right subtree of E: next preorder element is `G`; inorder splits as `J H K | G | I` → left = {J, H, K}, right = {I}.
 
-    Step 8 — subtree {J, H, K}
-    - Next preorder element is `H`. In inorder: `J | H | K`
-    - So J is the left child of H and K is the right child.
+    Step 8 — subtree {J, H, K}: next preorder element is `H`; inorder splits as `J | H | K` → J is the left child of H, K is the right child.
 
     Step 9 — I is a leaf, the right child of G.
 
@@ -1484,8 +1470,7 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
     Additional result
     - `Postorder` (Left, Right, Root): B, D, F, J, K, H, I, G, E, C, A
 
-    Note on the wording
-    - The question calls this a "full binary tree", but the tree these traversals actually produce isn't full — it's heavily right-leaning, with A→B a single child. The traversals still determine the tree uniquely, and this is that tree. <!-- verify -->
+    Note: the question calls this a "full binary tree", but it is actually right-leaning (A→B is a single child) — the traversals still fix it uniquely, and this is that tree. <!-- verify -->
 
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
@@ -5431,10 +5416,6 @@ Answer: (Answered in English, as required for IT topics.)
    h(k)  = 657 mod 1000 = 657
    ```
    - Advantage: every digit of the key influences the result, and it handles very long keys such as account numbers and phone numbers well. Disadvantage: the part size must be chosen to suit the table size.
-
-   Collision resolution, in brief
-   - `Separate chaining` — each slot holds a linked list of keys hashing there; simple, and deletion is easy.
-   - `Open addressing` — probe for the next free slot (linear, quadratic, or double hashing); saves pointer memory but needs load factor below ~0.7.
 
 4. **Separate chaining hash function math.** *[Sonali & Janata Bank Ltd. Assistant Database Administrator 2022 compact it 663 (ET: N/A)]*
 

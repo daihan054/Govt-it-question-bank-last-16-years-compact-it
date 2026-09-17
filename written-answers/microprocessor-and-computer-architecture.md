@@ -270,17 +270,9 @@ Answer: What a microcontroller is
 
    RISC versus CISC
 
-   `RISC` (Reduced Instruction Set Computer)
-   - A small set of simple, fixed-length instructions, each completing in about one clock cycle.
-   - A `load-store` architecture: only LOAD and STORE touch memory, and everything else works on registers.
-   - Many registers, simple hardwired control, and easy pipelining.
-   - Examples: ARM, RISC-V, MIPS, SPARC, PowerPC.
+   `RISC` (Reduced Instruction Set Computer) — a small set of simple, fixed-length instructions, each completing in about one clock cycle, in a `load-store` architecture (only LOAD and STORE touch memory); many registers, hardwired control, easy pipelining. Examples: ARM, RISC-V, MIPS, SPARC, PowerPC.
 
-   `CISC` (Complex Instruction Set Computer)
-   - A large set of powerful, variable-length instructions, some taking many clock cycles. One instruction can do a lot of work.
-   - Instructions can operate directly on memory.
-   - Fewer registers, complex microcoded control.
-   - Examples: Intel x86, AMD64, Motorola 68000.
+   `CISC` (Complex Instruction Set Computer) — a large set of powerful, variable-length instructions, some taking many clock cycles and able to operate directly on memory; fewer registers, complex microcoded control. Examples: Intel x86, AMD64, Motorola 68000.
 
    | Point | RISC | CISC |
    |---|---|---|
@@ -1714,9 +1706,8 @@ Answer: 32-bit versus 64-bit microprocessor
    Why SSD is preferred over HDD
    - `Speed.` An SSD has no moving parts and no seek time. Sequential read is 500 MB/s for SATA and 3,000-7,000 MB/s for NVMe, against 100-150 MB/s for a hard disk. Random access is where the gap is largest — microseconds against milliseconds — and random access is what an operating system does most.
    - `Boot and load times` fall from a minute to a few seconds.
-   - `Durability` — no spinning platter or moving head, so it survives shock and vibration. This matters most in a laptop.
-   - `Silent`, `cooler` and much lower power, which extends battery life.
-   - `Lighter and smaller`, and available in the tiny M.2 form factor.
+   - `Durability` — no spinning platter or moving head, so it survives shock and vibration, matters most in a laptop.
+   - `Silent, cooler and lighter`, with much lower power extending battery life, and available in the tiny M.2 form factor.
 
    - The case for keeping a hard disk: `cost per gigabyte` is still far lower, and capacities are larger, so the usual arrangement is an `SSD for the operating system and applications` and an `HDD for bulk storage and backups`.
 
@@ -3926,9 +3917,7 @@ Answer: A `RAID level` defines how data is arranged across the disks of an array
          A1       A2
          A3       A4
     ```
-    - Minimum 2 disks, `100 %` usable, `no redundancy`.
-    - Fastest reads and writes. One failure destroys the whole array.
-    - Used for: scratch data, video editing, caches.
+    - Minimum 2 disks, `100 %` usable, `no redundancy` — fastest reads and writes, but one failure destroys the whole array.
 
     RAID 1 — mirroring
     ```
@@ -3936,9 +3925,7 @@ Answer: A `RAID level` defines how data is arranged across the disks of an array
          A     ---->   A
          B     ---->   B
     ```
-    - Minimum 2 disks, `50 %` usable, survives one failure per pair.
-    - Fast reads, normal writes, fast and safe rebuild.
-    - Used for: OS drives, transaction logs.
+    - Minimum 2 disks, `50 %` usable, survives one failure per pair — fast reads, normal writes, fast and safe rebuild.
 
     RAID 2 — bit-level striping with Hamming code
     - Minimum 3 disks. Bits are striped and error-correcting Hamming codes are stored on dedicated disks.
@@ -3963,9 +3950,7 @@ Answer: A `RAID level` defines how data is arranged across the disks of an array
 
        Ap = A1 XOR A2 XOR A3
     ```
-    - Minimum 3 disks, `(n-1)/n` usable, survives one failure.
-    - Excellent reads; writes cost four operations. Rebuild is slow and stresses every disk.
-    - Used for: file servers, archives, read-heavy work.
+    - Minimum 3 disks, `(n-1)/n` usable, survives one failure — excellent reads, but writes cost four operations and rebuild is slow, stressing every disk; suits file servers, archives and other read-heavy work.
 
     RAID 6 — double distributed parity
     - Minimum 4 disks, `(n-2)/n` usable, survives `two` simultaneous failures.
@@ -3977,9 +3962,7 @@ Answer: A `RAID level` defines how data is arranged across the disks of an array
             |                               |
             +---------- stripe -------------+
     ```
-    - Minimum 4 disks, `50 %` usable, survives one failure per mirrored pair.
-    - Fastest redundant level, with no parity computation and a fast rebuild.
-    - Used for: databases, transaction processing, virtualisation.
+    - Minimum 4 disks, `50 %` usable, survives one failure per mirrored pair — the fastest redundant level, with no parity computation and a fast rebuild; used for databases, transaction processing and virtualisation.
 
     Other nested levels
     ```
@@ -4548,15 +4531,9 @@ Answer: (Answered in English, as required for IT topics.) Uses of cache memory
 
     Both translate a high-level program into machine-executable form. The difference is `when` and `how much` they translate.
 
-    `Compiler`
-    - Translates the `entire` source program into machine code `once`, producing an executable file. The program then runs directly on the CPU with no translator present.
-    - Errors are reported for the whole program at the end of compilation.
-    - Examples: C, C++, Go, Rust.
+    `Compiler` — translates the `entire` source program into machine code `once`, producing an executable file that runs directly with no translator present; errors are reported together at the end. Examples: C, C++, Go, Rust.
 
-    `Interpreter`
-    - Translates and executes the program `line by line, at run time`. No separate executable is produced, and the interpreter must be present every time the program runs.
-    - Execution stops at the first error, so a bug is reported immediately with its line number.
-    - Examples: Python, Ruby, PHP, JavaScript, shell scripts.
+    `Interpreter` — translates and executes the program `line by line, at run time`, with no separate executable, so the interpreter must be present every run; execution stops at the first error, reported immediately with its line number. Examples: Python, Ruby, PHP, JavaScript, shell scripts.
 
     | Point | Compiler | Interpreter |
     |---|---|---|
@@ -4812,8 +4789,6 @@ Answer: Server A — the Core Banking Database → use `SSD` (NVMe)
    ```
    - Written once and almost never read, so SSD's random-access advantage is worth nothing; cost per TB dominates over hundreds of terabytes, and HDDs cost a third to a sixth as much. An unpowered SSD gradually loses charge and can lose data in a few years, while magnetic media holds state for decades — ideal for an untouched archive. Endurance is irrelevant (written once), and 150-200 MB/s sequential throughput is fine for occasional bulk retrieval.
    - Recommended: high-capacity `nearline HDDs in RAID 6` (double parity, since large-drive rebuilds take hours), with WORM/object-lock for immutability plus tape or cloud cold storage off-site.
-
-   - Reasoning: match storage to the access pattern — random, latency-critical data justifies the SSD premium; sequential, cold, high-volume data does not. SSDs for the archive would waste money; HDDs for the core database would throttle the bank.
 
 2. **a) Define the term "SSD". Briefly describe the working principle of "SSD".** *[BPSC (Ministry of Food) Network/Website Manager (ICT) 21.05.2025 compact it 1342 (ET: N/A)]*
 

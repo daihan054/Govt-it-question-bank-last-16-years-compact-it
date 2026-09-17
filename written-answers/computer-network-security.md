@@ -1252,7 +1252,6 @@ Answer:
 
     (b) Example algorithms
     - Symmetric: AES (128/192/256-bit, the current standard), DES (56-bit, broken), 3DES (deprecated), Blowfish, Twofish, ChaCha20.
-    - Asymmetric: RSA, ECC, Diffie-Hellman, DSA, ElGamal.
     - Hash (no key): SHA-256, SHA-512, MD5, bcrypt, Argon2.
 
     (c) Types of cipher
@@ -1267,16 +1266,14 @@ Answer:
     - Stream cipher — encrypts one bit or byte at a time (RC4, ChaCha20). Faster, used where data arrives continuously.
 
     Classical vs modern
-    - Classical: Caesar, Playfair, Hill, Vigenère — all broken by frequency analysis.
-    - Modern: AES, RSA, ECC — based on computational hardness.
+    - Classical ciphers (Caesar, Playfair, Hill, Vigenère) are all broken by frequency analysis; modern ones (AES, RSA, ECC) rely on computational hardness instead.
 
     (d) Factors affecting cryptographic strength
     - Key length — the most important factor; each extra bit doubles brute-force effort (AES-128 needs 2¹²⁸ attempts).
-    - Algorithm strength and randomness — use a peer-reviewed standard algorithm with keys/IVs from a cryptographically secure random source (an IV must never repeat with the same key).
+    - Algorithm strength, randomness & implementation quality — use a peer-reviewed standard algorithm with keys/IVs from a cryptographically secure random source (an IV must never repeat with the same key), resistant to side-channel, differential/linear cryptanalysis and birthday attacks.
     - Key management — generation, storage, rotation, destruction; most real breaches come from stolen keys, not broken maths.
     - Mode of operation — ECB leaks patterns and must be avoided; GCM gives confidentiality and integrity together.
     - Password hashing — salting plus a slow function (bcrypt, Argon2) to resist brute force.
-    - Implementation quality and known-attack resistance — side-channel (timing/power), differential/linear cryptanalysis, birthday attacks.
     - Future-proofing — quantum resistance, since Shor's algorithm threatens RSA and ECC.
 
 11. **What is Symmetric and Asymmetric Encryption? Explain with example.** *[NPCBL Executive Trainee (Software) 26.05.2023 compact it 499 (ET: IBA)]*

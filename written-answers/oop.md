@@ -980,13 +980,10 @@ Answer: Encapsulation
     ```
 
     Advantages of encapsulation
-    - `Data security.` The field cannot be set to an invalid value from outside. Without it, `acc.balance = -50000;` would be legal and would corrupt the account.
-    - `Controlled access.` The class decides what may be read and what may be written. `accountNumber` can have a getter but no setter, making it read-only.
+    - `Data security & controlled access.` The field cannot be set to an invalid value from outside (`acc.balance = -50000;` would be illegal), and the class decides what may be read vs written — e.g. `accountNumber` can be read-only with no setter.
     - `Validation in one place.` Every deposit passes through the same check, so the rule cannot be forgotten by a caller.
-    - `Freedom to change the implementation.` The balance could later be stored as an integer number of paisa, or moved to a database, without breaking a single caller — because nobody outside ever touched the field.
-    - `Reduced coupling.` Classes depend on each other's `interfaces`, not their internals, so a change in one does not ripple through the program.
-    - `Easier maintenance and debugging.` If the balance is wrong, only the few methods of `Account` could have caused it, so the search is small.
-    - `Reusability.` A well-encapsulated class is a self-contained unit that can be dropped into another program.
+    - `Freedom to change the implementation & reduced coupling.` The balance's storage can change later (e.g. moved to a database) without breaking a single caller, because classes depend only on each other's `interfaces`, not their internals.
+    - `Easier maintenance, debugging & reuse.` If the balance is wrong, only `Account`'s own methods could have caused it, so the search is small; a well-encapsulated class is also a self-contained unit that can be dropped into another program.
 
     Inheritance
     - `Inheritance` lets a new class acquire the fields and methods of an existing one, expressing an `is-a` relationship.
@@ -1011,13 +1008,10 @@ Answer: Encapsulation
     ```
 
     Advantages of inheritance
-    - `Code reuse.` `name`, `basic` and `display()` are written once and used by every subclass. Without inheritance each class would repeat them.
-    - `Less code to maintain.` Fixing a bug in `display()` fixes it for every subclass at once.
-    - `Natural hierarchy.` The class structure mirrors the real world, so the design is easier to understand — Manager and Officer really are kinds of Employee.
-    - `Enables polymorphism.` Because a `Manager` is an `Employee`, one array of `Employee` can hold all staff and one loop can pay them all correctly. This is inheritance's most valuable consequence.
-    - `Extensibility.` A new `Director` class needs only its own `calculateSalary()`; nothing else in the program changes — the `open-closed principle`.
-    - `Method overriding` lets a subclass specialise inherited behaviour without touching the superclass.
-    - `Consistent interface.` Every subclass is guaranteed to provide the superclass's methods, so callers can rely on them.
+    - `Code reuse & less maintenance.` `name`, `basic` and `display()` are written once and used by every subclass; fixing a bug in `display()` fixes it for every subclass at once.
+    - `Natural hierarchy.` The class structure mirrors the real world — Manager and Officer really are kinds of Employee — so the design is easier to understand.
+    - `Enables polymorphism.` Because a `Manager` is an `Employee`, one array of `Employee` can hold all staff and one loop can pay them all correctly — inheritance's most valuable consequence.
+    - `Extensibility & consistent interface.` A new `Director` class needs only its own `calculateSalary()` (the `open-closed principle`); `method overriding` lets a subclass specialise inherited behaviour while callers can still rely on every subclass providing the superclass's methods.
 
     Cautions worth stating
     ```

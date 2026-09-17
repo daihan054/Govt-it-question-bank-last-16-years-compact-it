@@ -8092,13 +8092,9 @@ Answer:
    - Exterior Gateway Protocol — BGP, a path vector protocol used between autonomous systems.
 
    Benefits of ad hoc routing
-   - Ad hoc routing is used in MANETs and sensor networks, where there is no fixed infrastructure and nodes move.
-   - No infrastructure needed — the network can be created anywhere, instantly, which is why it suits disaster relief, military operations and temporary field deployments.
-   - Self-organising and self-healing — nodes discover neighbours and repair routes automatically when a node moves or fails.
-   - Multi-hop reach — a node can reach a distant node through intermediate nodes, extending range far beyond one radio hop.
-   - Low cost and rapid deployment, with no towers, cabling or central controller.
-   - Fault tolerance, because there is no single point of failure.
-   - Protocol families: reactive (AODV, DSR — routes found on demand, low overhead), proactive (DSDV, OLSR — tables kept current, low latency) and hybrid (ZRP).
+   - Used in MANETs and sensor networks with no fixed infrastructure and moving nodes — ideal for disaster relief, military and temporary field deployment.
+   - Self-organising and self-healing (nodes discover neighbours, repair routes on failure/movement), multi-hop reach via intermediate nodes, low cost and rapid deployment (no towers/cabling/controller), and no single point of failure.
+   - Protocol families: reactive (AODV, DSR — on-demand, low overhead), proactive (DSDV, OLSR — always-current tables, low latency), hybrid (ZRP).
 
    Shortest path algorithm
    - The classic shortest-path algorithm used in routing is `Dijkstra's algorithm`, employed by the link-state protocols OSPF and IS-IS.
