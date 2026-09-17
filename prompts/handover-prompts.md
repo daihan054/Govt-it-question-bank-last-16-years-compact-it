@@ -210,15 +210,21 @@ for line_no, wc, q in results:
    `git show --stat 6f3d484` to confirm it's there and touched exactly the 20 files listed above
    under "what was done" (all under `written-answers/`), nothing else.
 
-2. **QA pass:** for every one of the ~44 remaining answers listed above (grouped by file and
-   subtopic), jump to it, read the full question + current answer, and independently judge
-   whether it's really a justified composite/table-dominated case, or whether the prior agent
-   was too lenient and it can genuinely be trimmed further without losing marks-bearing content.
-   Trim any you find are not actually justified. Don't force cuts that would remove diagrams/
-   tables/code or genuinely necessary sub-answers — when in doubt, leave it and note why in your
-   own summary. `computer-networks.md` (13 remaining) and
-   `microprocessor-and-computer-architecture.md` (10 remaining) have the most — give those extra
-   scrutiny.
+2. **QA pass — use multiple agents in parallel to go faster**, the same way the original
+   trimming pass was done: split the 14 files with remaining flagged answers into a few disjoint
+   groups (e.g. by rough answer-count balance — `computer-networks.md` (13) and
+   `microprocessor-and-computer-architecture.md` (10) are the biggest, so each probably deserves
+   its own agent; group the smaller ones together) and run one background agent per group, all
+   at once, each editing only its own assigned files. Give each agent this same context: for
+   every remaining flagged answer in its files, jump to it, read the full question + current
+   answer, and independently judge whether it's really a justified composite/table-dominated
+   case, or whether the prior agent was too lenient and it can genuinely be trimmed further
+   without losing marks-bearing content. Trim any found not actually justified. Don't force cuts
+   that would remove diagrams/tables/code or genuinely necessary sub-answers — when in doubt,
+   leave it and note why. **Tell every agent explicitly: do not run any git commands** (no add,
+   no commit, no push) — just edit files and leave them modified in the working tree. Commit and
+   push happen exactly once, by you, after every agent has finished and you've done the safety
+   audit below — not per agent, not per file.
 
 3. **Safety audit** across all 20 modified files (not just the 14 with remaining flags — this is
    a structural/content-loss check, not a word-count check):
