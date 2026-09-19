@@ -4529,11 +4529,8 @@ Answer: `CPU scheduling` decides which process in the ready queue gets the CPU n
     8. `Efficient resource use`
     - Mixing CPU-bound and I/O-bound processes keeps both the CPU and the devices busy at the same time, instead of one waiting for the other.
 
-    9. `Predictability for real-time systems`
-    - Algorithms such as `Rate Monotonic` and `Earliest Deadline First` guarantee that deadlines are met, which is essential where a late answer is a wrong answer.
-
-    10. `Adaptability`
-    - A `multilevel feedback queue` moves a process between queues according to its behaviour, so interactive processes rise and CPU-bound ones sink automatically, with no manual tuning.
+    9. `Predictability and adaptability`
+    - `Rate Monotonic` and `Earliest Deadline First` guarantee real-time deadlines are met, while a `multilevel feedback queue` moves a process between queues by its behaviour, so interactive processes rise and CPU-bound ones sink automatically.
 
     The criteria it optimises
     ```
@@ -4542,7 +4539,7 @@ Answer: `CPU scheduling` decides which process in the ready queue gets the CPU n
        ENSURE   : fairness , no starvation
     ```
 
-    Costs, for balance
+    Costs
     ```
        Context-switch overhead - saving and restoring state is pure waste
        Algorithm complexity in the kernel
@@ -4551,7 +4548,7 @@ Answer: `CPU scheduling` decides which process in the ready queue gets the CPU n
        Starvation is possible in SJF and priority scheduling without ageing
     ```
 
-    - The essential point: scheduling does not make any individual process faster. It makes the `system as a whole` more productive and more responsive by never letting the CPU idle while work is waiting.
+    - Scheduling does not make any single process faster; it makes the `system as a whole` more productive and responsive by never letting the CPU idle while work is waiting.
 
 12. **What type of RR Scheduling Algorithm: Preemtive/ Non-Preemtive?** *[BARI Assistant Maintenance Engineer 10.05.2024 compact it 1461 (ET: N/A)]*
 

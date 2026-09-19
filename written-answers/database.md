@@ -10047,8 +10047,7 @@ Answer: A `transaction` is a single logical unit of work made up of one or more 
    - Implemented via the `transaction log` and `undo` mechanism: `COMMIT` makes the unit permanent, `ROLLBACK` reverses all of it.
 
    `C — Consistency` (valid state to valid state)
-   - A transaction moves the database from one `consistent` state to another — every constraint (PK, FK, CHECK, NOT NULL) and business rule holds before and after. If `CHECK (balance >= 0)` would be violated, the whole transaction is rejected.
-   - Enforced jointly by the DBMS's constraints and by the application writing correct transactions.
+   - A transaction moves the database from one `consistent` state to another — every constraint (PK, FK, CHECK, NOT NULL) and business rule holds before and after. If `CHECK (balance >= 0)` would be violated, the whole transaction is rejected. Enforced jointly by the DBMS's constraints and by correctly written transactions.
 
    `I — Isolation` (concurrent transactions do not interfere)
    - Transactions running at the same time must produce the same result as if they had run `one after another` — a property called `serializability`.
@@ -10067,7 +10066,7 @@ Answer: A `transaction` is a single logical unit of work made up of one or more 
    | Repeatable Read | Prevented | Prevented | Possible |
    | `Serializable` | Prevented | Prevented | Prevented |
 
-   - Higher isolation gives more correctness and less concurrency. Most systems default to `Read Committed`; MySQL InnoDB defaults to `Repeatable Read`.
+   - Higher isolation costs concurrency. Most systems default to `Read Committed`; MySQL InnoDB uses `Repeatable Read`.
 
    `D — Durability` (committed means permanent)
    - Once a transaction has committed, its changes `survive` any subsequent failure — power loss, crash, or disk error.
@@ -10082,9 +10081,7 @@ Answer: A `transaction` is a single logical unit of work made up of one or more 
    Durability  : committed is permanent     -> protects against CRASH after commit
    ```
 
-   Why they matter together
-   - A bank transfer needs all four at once: atomicity stops money vanishing, consistency stops invalid balances, isolation stops reading a half-completed transfer, durability stops a power failure losing a committed deposit.
-   - Trade-off: strict isolation reduces concurrency, which is why NoSQL systems often relax these guarantees to `BASE` (Basically Available, Soft state, Eventual consistency) for scale.
+   - Trade-off: strict isolation costs concurrency, which is why NoSQL systems often relax these guarantees to `BASE` (Basically Available, Soft state, Eventual consistency) for scale.
 
 2. **How many process of Transaction complete?** *[BREB Assistant Programmer (AP) 21.02.2025 compact it 1336 (ET: N/A)]*
 

@@ -4981,8 +4981,6 @@ Roles of the three services
    - Step 6 — check from outside (external checker or mobile connection): works outside but not inside → problem is local (firewall, internal DNS view, proxy).
    - Step 7 — check the server itself: confirm the web service is running, review logs, verify firewall allows 443.
 
-   Preventive measures: two authoritative DNS servers on separate networks; monitoring/alerts for certificate expiry and DNS record changes; sensible TTLs (lowered before a planned IP change); DNSSEC against cache poisoning; regular external availability monitoring.
-
 2. **Write down the DNS function.** *[National Legal Aid Services Organization Assistant Maintenance Engineer 18.10.2025 compact it 1449 (ET: N/A)]*
 
 Answer: DNS (Domain Name System) is the internet's naming service. Its main function is to translate human-readable domain names into machine-readable IP addresses.
@@ -8807,9 +8805,9 @@ Answer:
 
    (a) The historical IP addressing limitation that made NAT necessary
 
-   - IPv4's `32-bit` address gives only 2^32 ≈ `4.3 billion` addresses — plenty in 1981, but `classful addressing` wasted most of it: only 3 block sizes existed (Class A /8 = 16.7M hosts, B /16 = 65,534, C /24 = 254), so an org needing 500 hosts got a whole Class B, wasting 64,000+ addresses. Large blocks were also handed out generously early on and never reclaimed.
-   - The internet then grew far faster than predicted (commercial use, home broadband, mobile, now IoT), and by the early 1990s exhaustion was projected within years — IANA's pool ran out in `February 2011`.
-   - Three responses: `CIDR` (1993, stops classful waste), `NAT` (RFC 1631, 1994 — lets many hosts share one public address), and `IPv6` as the permanent fix. NAT, paired with RFC 1918 private addressing (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16), was the immediate deployable answer and is why IPv4 has survived three decades past its predicted exhaustion.
+   - IPv4's `32-bit` address gives only ≈ `4.3 billion` addresses, and `classful addressing` wasted most of them: an organisation needing 500 hosts was handed a whole Class B of 65,534, and early blocks were never reclaimed.
+   - Growth then far outran predictions (commercial use, home broadband, mobile, now IoT), and IANA's pool finally ran out in `February 2011`.
+   - Three responses followed: `CIDR` (1993) stopped classful waste, `NAT` (RFC 1631, 1994) let many hosts share one public address, and `IPv6` is the permanent fix. NAT plus RFC 1918 private addressing (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) was the immediately deployable answer.
 
    (b) Step-by-step translation at the branch router
 
@@ -8835,7 +8833,7 @@ Answer:
 |---|---|---|---|
 | 192.168.1.5:51000 | 203.0.113.10:62145 | 93.184.216.34:80 | TCP |
 
-   - Step 6 — since the IP header changed, the router recalculates the IP and TCP checksums (TCP's covers the addresses via the pseudo-header), then forwards.
+   - Step 6 — the IP header changed, so the router recalculates the IP and TCP checksums, then forwards.
 
    Inbound — response returning to the branch
 
@@ -8844,14 +8842,14 @@ Answer:
    Source      93.184.216.34 : 80
    Destination 203.0.113.10 : 62145
    ```
-   - Step 8 — arrives on the router's `outside` interface; the router looks up destination port 62145 in its translation table and finds the matching entry.
+   - Step 8 — it arrives on the `outside` interface; the router looks up port 62145 in the translation table and finds the entry.
    - Step 9 — it `rewrites the destination` back to the original private address and port:
    ```
    Source      93.184.216.34 : 80
    Destination 192.168.1.5 : 51000
    ```
-   - Step 10 — checksums recalculated again, packet forwarded to the PC, which sees a reply that appears to come straight from the server.
-   - Step 11 — the entry is removed on connection close or idle timeout (~24h TCP, 5min UDP).
+   - Step 10 — checksums recalculated, packet forwarded to the PC, which sees a reply apparently straight from the server.
+   - Step 11 — the entry is removed on connection close or idle timeout.
 
    ```
       PC                    ROUTER (NAT)                      SERVER
@@ -8863,7 +8861,7 @@ Answer:
         |<-- dst 192.168.1.5:51000 ---|                          |
    ```
 
-   - The port number is the key. Hundreds of internal hosts can share one public address because each conversation is given a different source port, and that port is what identifies the return path. This form of NAT is called `PAT` or NAT overload.
+   - The port number is the key: hundreds of internal hosts share one public address because each conversation gets a different source port, and that port identifies the return path. This form of NAT is called `PAT` or NAT overload.
 
 2. **Connection between Public IP to Private IP is called __________.** *[BARI Assistant Maintenance Engineer 15.11.2025 compact it 1451 (ET: N/A)]*
 

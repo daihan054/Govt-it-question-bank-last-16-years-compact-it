@@ -359,7 +359,7 @@ Answer: A binary tree can be reconstructed from preorder and postorder alone onl
    - `Postorder` (left, right, root): 8, 9, 4, 5, 2, 6, 7, 3, 1 ✓
    - `Inorder` for this tree: 8, 4, 9, 2, 5, 1, 6, 3, 7
 
-   - Note: reconstruction from `pre + post` alone needs the "full tree" guarantee — `A, B` (pre) / `B, A` (post) fits either child of A being B, ambiguous otherwise. `Pre + inorder` or `post + inorder` always give a unique tree regardless.
+   - Note: `pre + post` needs the full-tree guarantee — `A, B` / `B, A` fits B as either child of A. `Pre + inorder` or `post + inorder` is always unique.
 
 7. **How to represent binary tree using array?** *[BGDCL Assistant Manager (CSE) 15.03.2024 compact it 378 (ET: BUET)]*
 
@@ -1434,19 +1434,15 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
 
     Step 2 — left subtree: only one element, `B`, becomes the left child of A, a leaf.
 
-    Step 3 — right subtree of A: next preorder element is `C`; inorder splits as `D | C | F E J H K G I` → left = {D}, right = {F, E, J, H, K, G, I}.
+    Step 3 — right subtree of A: next preorder element is `C`; inorder splits as `D | C | F E J H K G I` → D is a leaf, the left child of C; right = {F, E, J, H, K, G, I}.
 
-    Step 4 — D is a leaf, the left child of C.
+    Step 4 — right subtree of C: next preorder element is `E`; inorder splits as `F | E | J H K G I` → F is a leaf, the left child of E; right = {J, H, K, G, I}.
 
-    Step 5 — right subtree of C: next preorder element is `E`; inorder splits as `F | E | J H K G I` → left = {F}, right = {J, H, K, G, I}.
+    Step 5 — right subtree of E: next preorder element is `G`; inorder splits as `J H K | G | I` → left = {J, H, K}, right = {I}.
 
-    Step 6 — F is a leaf, the left child of E.
+    Step 6 — subtree {J, H, K}: next preorder element is `H`; inorder splits as `J | H | K` → J is the left child of H, K is the right child.
 
-    Step 7 — right subtree of E: next preorder element is `G`; inorder splits as `J H K | G | I` → left = {J, H, K}, right = {I}.
-
-    Step 8 — subtree {J, H, K}: next preorder element is `H`; inorder splits as `J | H | K` → J is the left child of H, K is the right child.
-
-    Step 9 — I is a leaf, the right child of G.
+    Step 7 — I is a leaf, the right child of G.
 
     The complete tree
     ```
@@ -1467,10 +1463,7 @@ Answer: The convention stated is that the `root is at height 0`, so height is co
     - `Inorder` (Left, Root, Right): B, A, D, C, F, E, J, H, K, G, I ✓
     - `Preorder` (Root, Left, Right): A, B, C, D, E, F, G, H, J, K, I ✓
 
-    Additional result
-    - `Postorder` (Left, Right, Root): B, D, F, J, K, H, I, G, E, C, A
-
-    Note: the question calls this a "full binary tree", but it is actually right-leaning (A→B is a single child) — the traversals still fix it uniquely, and this is that tree. <!-- verify -->
+    Note: the question calls this a "full binary tree", but A has a single child — the two traversals still fix the tree uniquely, and this is it. <!-- verify -->
 
 25. **Preorder and In-order sequence is given, Draw the binary tree and write a procedure sum Nodes (Node* root) to find out summation of all nodes of that tree.** *[Rupali Bank Limited Assistant Network Engineer (ANE) 2021 compact it 925-926 (ET: CTI)]*
    In order: 20, 30, 35, 40, 45, 50, 55, 65, 70
@@ -5382,7 +5375,7 @@ Answer: (Answered in English, as required for IT topics.)
    - Two different keys mapping to the same index is called a `collision`, and every hash table needs a strategy to resolve it — separate chaining or open addressing.
 
    Properties of a good hash function
-   - Fast to compute; distributes keys `uniformly` across the table; deterministic; and uses every part of the key, so that similar keys do not cluster.
+   - Fast to compute, deterministic, distributes keys `uniformly`, and uses every part of the key so similar keys do not cluster.
 
    Three methods of constructing a hash function
 
@@ -5391,9 +5384,9 @@ Answer: (Answered in English, as required for IT topics.)
    h(k) = k mod m
    ```
    - The key is divided by the table size m and the remainder is the index.
-   - `Choice of m matters greatly.` It should be a `prime` number not close to a power of 2. If m = 2^p, the hash uses only the lowest p bits of the key and ignores the rest, which clusters badly.
+   - `m` should be a `prime` not close to a power of 2 — if m = 2^p the hash uses only the lowest p bits of the key and clusters badly.
    - Example: m = 13, keys 10, 3, 6, 16 → h = 10, 3, 6, 3. Key 16 collides with 3.
-   - Advantages: extremely simple and fast, only one operation. Disadvantage: consecutive keys map to consecutive slots, which produces clustering under linear probing.
+   - Advantage: extremely simple and fast. Disadvantage: consecutive keys map to consecutive slots, which clusters under linear probing.
 
    2. `Mid-square method`
    - Square the key, then take a fixed number of digits from the `middle` of the result.

@@ -1112,7 +1112,6 @@ Answer: (Answered in English, as required for IT topics.) What HTML is
        A CMS or FRAMEWORK      WordPress , Laravel , Django - content
             management and templates
     ```
-    - The qualification worth adding: a `static site generator` such as Jekyll or Hugo removes the maintainability problem without any server-side code — templates and content files are compiled into plain HTML. That gives a static site the maintainability of a dynamic one, and it is why static sites remain a genuine choice rather than merely a beginner's one.
 
 14. **(খ) Static Web Page এবং Dynamic Web Page এর মধ্যে পার্থক্য আলোচনা করুন।** *[BPSC Sub-Assistant Maintenance Engineer 13.10.2022 compact it 705 (ET: N/A)]*
 
@@ -6719,14 +6718,11 @@ Answer: (Answered in English, as required for IT topics.) What PHP is
    5. Client-side validation, for the user's convenience
    - Mistakes are caught before the form is submitted, which saves the user a round trip and saves the server a request. The same checks must still be repeated in PHP, because JavaScript can be disabled.
 
-   6. Modern front-end applications
-   - `React`, `Angular` and `Vue` are all JavaScript, and single-page applications exist only because of it.
+   6. Modern front-end applications, and JavaScript on the server
+   - `React`, `Angular` and `Vue` are all JavaScript, and single-page applications exist only because of it. `Node.js` now runs JavaScript on the server too, so one language can serve both ends.
 
-   7. It now runs on the server too
-   - `Node.js` allows JavaScript on the server, so one language can serve both ends of the application.
-
-   8. Facilities PHP cannot reach
-   - Geolocation, the camera and microphone, `localStorage`, `canvas` for graphics, drag and drop, notifications, `WebSocket` for real-time updates, and offline working through service workers. All of these are browser capabilities, and only JavaScript can use them.
+   7. Facilities PHP cannot reach
+   - Geolocation, camera and microphone, `localStorage`, `canvas`, drag and drop, notifications, `WebSocket` and offline service workers are browser capabilities, and only JavaScript can use them.
 
    How the two work together
    ```
@@ -6748,7 +6744,7 @@ Answer: (Answered in English, as required for IT topics.) What PHP is
        B -->|JSON| A
        A -->|update the DOM| A
    ```
-   - The division to state clearly: `PHP is authoritative, JavaScript is advisory`. Every decision that matters — who is logged in, what price is charged, what may be deleted — is made in PHP, because the user can edit or disable JavaScript at will. JavaScript's job is to make the application `responsive`, not to make it `correct`.
+   - The division: `PHP is authoritative, JavaScript is advisory`. Every decision that matters — who is logged in, what price is charged, what may be deleted — is made in PHP, because the user can disable JavaScript. JavaScript makes the application `responsive`, not `correct`.
 
 4. **(b) What are the resources you need to access a web enabled application?** *[BPSC Workshop Maintenance Engineer (CSE) 2021 compact it 796 (ET: N/A)]*
 

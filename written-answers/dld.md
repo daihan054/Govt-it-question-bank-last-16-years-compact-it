@@ -8608,18 +8608,15 @@ Answer: A `fault` is a defect that can make a digital system behave incorrectly.
    - `Cosmic rays and alpha particles` hitting a memory cell and flipping a bit — the classic `single event upset (SEU)`, the reason servers use ECC RAM.
    - `Power supply fluctuation`, brownouts, voltage droop and ground bounce.
    - `Electromagnetic interference` from a motor, a relay or a nearby radio transmitter.
-   - `Crosstalk` between adjacent PCB tracks, and reflections on an unterminated line.
-   - `Electrostatic discharge` from a person touching the board.
    - `Metastability` — a flip-flop sampled too close to the clock edge settles unpredictably.
-   - `Temperature spikes` and loose or oxidised connectors that momentarily open.
-   - Example: a bit flips in RAM during a lightning-induced surge, the program reads a wrong value, and the system works normally again after a reboot.
+   - Example: a lightning surge flips a bit in RAM, the program misreads it, and a reboot clears it.
 
    Software
    - `Race condition` — two threads reach the same data in an unexpected order, so the bug appears only occasionally.
    - `Deadlock` or `livelock` that clears when one process times out.
    - `Memory leak` or temporary exhaustion of a buffer or a connection pool under peak load.
    - `Timing and synchronisation` errors that show up only under a particular load.
-   - Example: a web application fails once during a traffic spike because two threads updated the same counter at the same instant, and works correctly afterwards.
+   - Example: a web app fails once during a traffic spike because two threads updated the same counter at the same instant.
 
    Sources of permanent faults
 
@@ -8627,10 +8624,8 @@ Answer: A `fault` is a defect that can make a digital system behave incorrectly.
    - `Manufacturing defects` — a broken track, a short between layers, a bad solder joint.
    - `Wear-out mechanisms` — electromigration thinning a metal line, gate-oxide breakdown, hot-carrier degradation.
    - `Physical damage` — a burnt IC, a cracked board, a connector broken off.
-   - `Component ageing` — dried-out electrolytic capacitors, worn NAND flash cells that no longer hold charge.
-   - `Overvoltage or overheating` that destroys a transistor permanently.
    - Modelled in testing as `stuck-at-0` and `stuck-at-1` faults, where a line is permanently held at one value.
-   - Example: a data line on a memory bus is shorted to ground, so that bit reads 0 in every location, every time.
+   - Example: a data line on a memory bus is shorted to ground, so that bit reads 0 everywhere, every time.
 
    Software
    - `Logic error` in the code — a wrong formula, an off-by-one loop bound, a missing case.
@@ -8645,7 +8640,7 @@ Answer: A `fault` is a defect that can make a digital system behave incorrectly.
    | Transient | Parity, ECC, checksum, CRC, watchdog timer | Retry, correct with ECC, reset, re-transmit |
    | Permanent | Built-in self-test, stuck-at test vectors, diagnostics | Replace the part, use a redundant spare, patch the code |
 
-   - Practical distinction to state in the exam: a transient fault `goes away when you retry`, so the correct response is redundancy in time — retry, ECC, re-transmission. A permanent fault does not, so the correct response is redundancy in space — a spare unit, triple modular redundancy, or repair.
+   - A transient fault `goes away on retry`, so the cure is redundancy in time — retry, ECC, re-transmission. A permanent fault does not, so the cure is redundancy in space — a spare unit or repair.
 
 6. **What is IC? Advantages of IC over discrete component circuit. Why do IC's need small power for their operation?** *[BTRC Assistant Director (Technical) 2019 compact it 1147 (ET: N/A)]*
 

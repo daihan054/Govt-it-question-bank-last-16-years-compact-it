@@ -5081,13 +5081,11 @@ Answer: A `floating-gate transistor` is the storage cell of NAND flash. It is an
    - The more levels are packed into the same voltage range, the narrower the margin between them, so speed, endurance and reliability all fall as density rises.
 
    Why the cells wear out
-   - Every program and erase cycle drives electrons through the `tunnel oxide` at high voltage, and each passage damages it slightly. After thousands of cycles the oxide leaks and the cell can no longer hold charge reliably.
+   - Every program/erase cycle forces electrons through the `tunnel oxide` at high voltage and damages it slightly, so after thousands of cycles the cell can no longer hold charge reliably.
    ```
       SLC : ~100,000 cycles     MLC : ~10,000
       TLC : ~3,000              QLC : ~1,000
    ```
-   - This is why the SSD controller performs `wear levelling`, spreading writes evenly across all blocks so that no small area is exhausted while the rest of the drive is untouched.
-   - It is also why an `unpowered` SSD gradually loses data: the trapped charge slowly leaks away over a few years, whereas magnetic media holds its state for decades.
 
 7. **Which of the following is the unit of Hard Disk Drive? (a) Megaharz (b) Kiloharz (c) Gigabyte (d) None** *[BCC Assistant Programmer 12.02.2021 compact it 812 (ET: BUET)]*
 
@@ -5923,11 +5921,6 @@ Answer: A `superscalar` processor can `issue and execute more than one instructi
    - `Register renaming`, to remove false (WAR and WAW) dependencies.
    - `Out-of-order execution and a reorder buffer` in later designs, so an instruction waiting for data does not block the ones behind it.
    - `Branch prediction`, since a mispredicted branch now wastes several instructions per cycle rather than one.
-
-   Limits
-   - `Instruction-level parallelism` in ordinary code is limited — typically 4 to 8 independent instructions can be found, and beyond that the extra units sit idle.
-   - The dependency-checking logic grows roughly as the square of the issue width, so it becomes expensive and power-hungry.
-   - This diminishing return is precisely why the industry moved from ever-wider single cores to `multicore` processors.
 
    - Summary of the statement: saying the Pentium is superscalar means it has `more than one instruction pipeline` and can start two instructions in the same cycle, so its instructions-per-cycle can exceed 1 — the first x86 processor able to do so.
 
